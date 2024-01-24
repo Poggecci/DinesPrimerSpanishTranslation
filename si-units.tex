@@ -1,0 +1,275 @@
+\nbbbb{Physics Attributes}\label{si}\label{si.1}\pos{\normalsize}{}
+
+\begynd
+\pind In this section we shall muse 
+\begynd
+\pind about the kind of attributes that
+      are typical of natural parts,
+\pind but which may also be relevant as attributes of artefacts.
+\afslut
+
+\pind Typically, when physicists write computer programs,
+\begynd
+\pind intended for calculating physics behaviours,
+\pind they ``lump'' all of these into the \sort{type} \sort{Real},
+\pind thereby hiding some important physics 'dimensions'.
+\pind In this section we shall review that which is missing\,!
+\afslut
+\afslut
+
+\pos{\psno}{\mnewfoil}
+\begynd
+\pind The subject of physical dimensions in programming languages \nyl
+      is rather decisively treated in David Kennedy's 1996 PhD Thesis
+      \cite{Kennedy96} ---
+\pind so there really is no point in trying to cast new light on this subject
+\pind other than to remind the reader of what these physical
+      dimensions are all about.
+\afslut
+
+\nbbb{SI: The International System of Quantities}\label{si-1}
+
+\begynd
+\pind In physics we operate on \nyl values of attributes of manifest,
+      i.e., physical phenomena. \pos{
+\pind The type of some of these attributes are recorded \nyl in well
+      known tables, cf.\,Tables\,\ref{table:1}--\ref{table:3}.}{}
+\afslut
+%\mnewfoil
+\pos{Table\,\vref{table:1} shows the base units of physics.}{}
+
+\pos{\footnotesize}{\HHHH}
+\begin{table}[h]\HHHH
+  \centering
+\begin{tabular}{|lll|} \hline
+Base quantity     &          Name   &      Type \\ \hline
+length            &          meter   &     m \\
+mass              &          kilogram   &  kg \\
+time              &          second  &     s \\
+electric current     &       ampere   &    A \\
+thermodynamic temperature &  kelvin  &     K \\
+amount of substance    &     mole    &     mol \\
+luminous intensity     &     candela &     cd \\ \hline
+\end{tabular} \caption{\HHHH Base SI Units} \label{table:1}
+\end{table}
+\normalsize\HHHH
+\mnewfoil
+\noindent
+\pos{Table\,\vref{table:2} shows the units of physics derived from the base units.}{}
+\pos{\footnotesize}{\HHHH\LLLL}%%%
+\begin{table}[h]\LLLL\LLll
+  \centering
+\begin{tabular}{|llll|} \hline
+         Name   &      Type & Derived Quantity & Derived Type \\ \hline
+         radian & rad & angle & m/m  \\ 
+         steradian & sr & solid angle & m$^2\times$m$^{-2}$ \\  
+         Hertz  & Hz  & frequency & s$^{-1}$ \\
+         newton & N   & force, weight   & kg{$\times$}m{$\times$}s$^{-2}$ \\
+         pascal & Pa & pressure, stress & N/m$^2$ \\
+         joule  & J & energy, work, heat & N$\times$m \\
+         watt   & W & power, radiant flux &     J/s \\
+         coulomb & C & electric charge & s$\times$A \\
+volt &  V & electromotive force &  W/A (kg$\times$m$^2\times$s$^{-3}\times$A$^{-1}$) \\
+farad & F & capacitance & C/V (kg$^{-1}\times$·m$^{-2}\times$s$^4\times$A$^2$) \\
+ohm & $\Omega$ &  electrical resistance & V/A (kg$\times$m$^2\times$s$^{−3}\times$A$^{−2}$) \\
+siemens & S & electrical conductance & A/V (kg${−1}\times$m$^{−2}\times$s$^3\times$A$^2$)\\
+weber & Wb & magnetic flux &  V$\times$s  (kg$\times$m$^2\times$s$^{-2}\times$A$^{-1}$)\\
+tesla   & T &  magnetic flux density   & Wb/m$^2$ (kg$\times$s$^{−2}\times$A$^{-1}$) \\
+henry   & H &  inductance    &   Wb/A (kg$\times$m$^2\times$s$^{-2}\times$A$^2$) \\
+degree Celsius    &     $^o$C    &   temp.\ rel.\ to 273.15 K & K \\
+lumen &  lm  &   luminous flux   & cd$\times$sr   (cd) \\
+lux   &  lx  & illuminance   &   lm/m$^2$   (m$^{−2}\times$cd) \\ \hline
+\end{tabular}  \caption{\HHHH Derived SI Units} \label{table:2}
+\end{table}
+\mnewfoil 
+\noindent\pos{\normalsize}{\HHHH\LLLL}
+\pos{Table\,\ref{table:3} shows further units of physics derived from the base units.}{}
+ \pos{\footnotesize}{\large\HHHH}
+\begin{table}[h]\HHHH\LLLL
+  \centering
+\begin{tabular}{|lll|} \hline
+Name   &  Explanation & Derived Type \\ \hline
+area                               & square meter                &    m$^2$ \\
+volume                             & cubic meter                 &    m$^3$ \\
+speed                              & meter per second            &    m/s \\
+wave number                        & reciprocal meter            &    m-1 \\
+mass density                       & kilogram per cubic meter    &    kg/m$^3$ \\
+specific volume                    & cubic meter per kilogram    &    m3/kg \\
+current density                    & ampere per square meter     &    A/m$^2$ \\
+magnetic field strength            & ampere per meter            &    A/m \\
+substance concentration            & mole per cubic meter        &    mol/m$3$ \\
+luminance                          & candela per square meter    &    cd/m$^2$ \\
+mass fraction                      & kilogram per kilogram       &    kg/kg = 1 \\ \hline
+\end{tabular}
+  \caption{\HHHH Further SI Units}
+  \label{table:3}
+\end{table}
+\mnewfoil
+\noindent
+\pos{\sfsl{velocity} is speed with three dimensional direction and is,
+  for example, given as
+\begin{itemize}
+\item \sfsl{velocity}, \sf meter per second \rm with \sf direction\rm: \hfill $m/s$
+\item \sfsl{acceleration},  \sf meter per second squared\rm, \hfill  $ m/s^2$
+\item \sfsl{(longitude,latitude,azimuth)} measured in \sf radian\rm: \hfill  $(r,r,r)$ 
+\end{itemize}}{}
+
+\noindent
+\pos{\normalsize Table\,\ref{table:4} shows standard
+prefixes for SI units of measure 
+and Tables\,\ref{table:6} show
+fractions of SI units.}{}
+
+\pos{\scriptsize}{\large\HHHH\LLLL}
+%\pos{\begin{multicols}{2}}{}
+
+\begin{table}[h]\HHHH\center
+\begin{tabular}{|lllllll|} \hline
+Prefix name   &      & deca  &  hecto &  kilo &   mega &   giga \\
+Prefix symbol &      & da    &  h  &     k   &    M   &    G  \\
+Factor        & 10$^0$ & 10$^1$ & 10$^2$ & 10$^3$ & 10$^6$  & 10$^9$\\ \hline
+Prefix name   &      &   tera  &  peta  &  exa  &   zetta &  yotta\\
+Prefix symbol &      &    T  &     P &      E &      Z &     Y\\
+Factor        &&  10$^{12}$  & 10$^{15}$ & 10$^{18}$ & 10$^{21}$ & 10$^{24}$\\ \hline
+\end{tabular} \ \ \
+  \caption{\HHHH Standard Prefixes for SI Units of Measure}
+  \label{table:4}
+\end{table}
+
+\dbeat{
+\pos{\psno}{\mnewfoil}
+\begin{table}[h]\LLLL\HHHH\center
+\begin{tabular}{|lllllll|} \hline
+Prefix name      &    &   deci  &  centi  & milli &  micro &  nano   \\
+Prefix symbol     &   &   d   &    c  &     m   &    $\mu$ &       n   \\
+Factor        & 10$^0$ & 10$^{-1}$ & 10$^{-2}$ & 10$^{-3}$ & 10$^{-6}$ & 
+10$^{-9}$   \\ \hline
+Prefix name      &    &     pico &   femto &  atto &   zepto  & yocto\\
+Prefix symbol     &   &          p &      f &      a &      z    &   y\\
+Factor        &  &  10$^{-12}$  & 10$^{-15}$ & 10$^{-18}$ & 10$^{-21}$ &
+10$^{-24}$\\ \hline
+\end{tabular}
+  \caption{\HHHH Fractions}
+  \label{table:5}
+\end{table}
+%\pos{\end{multicols}}{}
+}
+
+
+\normalsize
+\mnewfoil
+%\fest{%\begin{multicols}{2}
+\begin{table}[h]\LLll\center
+\begin{tabular}{|lllllll|} \hline %\hline
+Prefix name   &      & deca  &  hecto &  kilo &   mega &   giga \\
+Prefix symbol &      & da    &  h  &     k   &    M   &    G  \\
+Factor        & 10$^0$ & 10$^1$ & 10$^2$ & 10$^3$ & 10$^6$  & 10$^9$\\ \hline
+Prefix name   &      &   tera  &  peta  &  exa  &   zetta &  yotta\\
+Prefix symbol &      &    T  &     P &      E &      Z &     Y\\
+Factor        &&  10$^{12}$  & 10$^{15}$ & 10$^{18}$ & 10$^{21}$ & 10$^{24}$\\ \hline\hline
+Prefix name      &    &   deci  &  centi  & milli &  micro &  nano   \\
+Prefix symbol     &   &   d   &    c  &     m   &    $\mu$ &       n   \\
+Factor        & 10$^0$ & 10$^{-1}$ & 10$^{-2}$ & 10$^{-3}$ & 10$^{-6}$ & 
+10$^{-9}$   \\ \hline
+Prefix name      &    &     pico &   femto &  atto &   zepto  & yocto\\
+Prefix symbol     &   &          p &      f &      a &      z    &   y\\
+Factor        &  &  10$^{-12}$  & 10$^{-15}$ & 10$^{-18}$ & 10$^{-21}$ &
+10$^{-24}$\\ \hline
+\end{tabular}
+  \caption{\HHHH SI Units of Measure and Fractions}
+  \label{table:6}
+\end{table}
+\normalsize\HHHH
+\mnewfoil
+\treprikker
+\noindent
+\begynd
+\pind The point in \ysfchg{including } this material is
+\begynd
+\pind that when modelling, i.e., describing domains
+\pind we must be extremely careful in not falling into the trap
+\pind of modelling physics types, etc.,  as we do in programming --
+\pind by simple \sort{Real}s.
+\afslut
+\pind We claim, without evidence, 
+\begynd
+\pind that many trivial programming mistakes
+\pind are due to confusions between especially 
+\pind derived SI units, fractions and prefixes.
+\afslut
+\afslut
+
+\nbbb{Units are Indivisible}
+\begynd
+\pind A volt, kg$\times$m$^2\times$s$^{-3}\times$A$^{-1}$, 
+\begynd
+\pind see Table\,\ref{table:2}, is ``indivisible''.
+\pind It is not a composite structure of
+\begynd
+\pind mass, % kilos,
+\pind length, % meters,
+\pind time, and % seconds, and
+\pind electric current -- % amperes --
+\afslut in some intricate relationship.
+\afslut
+\afslut
+
+\pos{\psno}{\mnewfoil}
+
+\noindent
+\treprikker
+\begynd
+\pind Physical attributes may ascribe mass and volume to endurants.
+\begynd
+\pind But they do not reveal the substance,
+\pind i.e., the material from which the endurant is made.
+\pind That is done by chemical attributes.
+\afslut
+\afslut
+
+\nbbb{Chemical Elements}
+\begynd
+\pind The chemical elements are, to us, what makes up 
+      $\mathbb{MATTER}$.
+      \index{defind}{matter@$\mathbb{MATTER}$}%
+\pind The \textsl{mole}, \textsf{mol}, substance is about chemical
+molecules. 
+\begynd
+\pind A \textsf{mole} contains exactly $6.022\-14\-076{\times}10^{23}$
+(the Avogadro 
+      number) constituent particles, usually
+      atoms, molecules, or ions -- of the elements,
+\pind cf.\,\textsf{'The Periodic Table',} 
+      \bcolor{\texttt{en.\-wi\-ki\-pe\-di\-a.\-org\-wi\-ki/\-Pe\-ri\-o\-dic\-\_tab\-le}},
+      \nyl cf.\,Fig.\,\ref{period}.
+\afslut
+\afslut
+\mnewfoil
+\pos{}{.}
+\hDBfigure{pte}{\pos{10.4}{10}cm}{Periodic Table}{period}\LLLL
+                                %periodic
+
+\noindent%
+\begynd
+\pind Any specific molecule is then a compound of two or more elements,
+      \nyl for example, \textsf{cal\-ci\-um\-phos\-phat: Ca3(PO4)2}.
+\afslut
+
+\mnewfoil%
+\begynd%
+\pind Moles bring substance to endurants.
+\begynd
+\pind The physics attributes may ascribe weight and volume
+      to endurants,
+\pind but they do not explain what it is that gives weight, \nyl
+      i.e., fills out the volume.
+\afslut
+\afslut
+
+\label{si.n}
+%%  LocalWords:  behaviours lll mol candela cd llll radian steradian
+%%  LocalWords:  sr siemens weber Wb tesla henry lumen lm lux lx deca
+%%  LocalWords:  illuminance luminance lllllll hecto giga da tera exa
+%%  LocalWords:  peta zetta yotta deci centi milli nano pico femto wi
+%%  LocalWords:  atto zepto yocto modelling artefacts endurants ki pe
+%%  LocalWords:  endurant di Pe ri dic le ci phos pte adian defind

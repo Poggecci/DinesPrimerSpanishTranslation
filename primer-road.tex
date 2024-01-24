@@ -1,0 +1,2015 @@
+
+\renewcommand{\domkap}{\sort{\brcolor{Roads}}}
+\nbbbbbb{Road Transport}\label{p-ch:Road Transport}\label{Chapter:Road Transport}
+\pos{\minitoc}{}
+
+\bbbbb{The Road Transport Domain}
+
+\begynd
+\pind Our universe of discourse in this \pos{chapter}{example} is \nyl the road
+transport domain. 
+\pind Not a specific one, but ``a generic road transport domain''.
+\afslut
+
+\fotoiv{50mm}{rts1}{rts2}{rts3}{rts4}{Road System
+  Components}{rts-figs}
+
+\nbbbb{Naming}
+ 
+%\RSLatex
+%   type RTS
+%\endRSLatex
+\bp
+\>\ \kw{type} RTS
+\ep
+\vspace*{2mm}
+
+\nbbbb{Rough Sketch}
+\begynd
+\pind The generic road transport domain that we have in mind consists of
+\begynd
+\pind a road net (aggregate) and
+\pind an aggregate of vehicles
+\pind such that the road net serves to convey vehicles.
+\afslut
+\pind We consider the road net to consist of
+\begynd
+\pind hubs, i.e., street intersections, \nyl or just street segment
+      connection points, and
+\pind links, i.e., street segments between adjacent hubs.
+\afslut
+\pos{\psno}{\mnewfoil}
+\pind We consider the aggregate of vehicles to include
+\begynd
+\pind in addition to vehic\ysfchg{l}es, i.e., automobiles,
+\pind a department of motor vehicles (DMVs),
+\pind zero or more bus companies, each with zero, one or more buses, and
+\pind vehicle associations, each with 
+\begynd
+\pind zero, one or more members 
+\pind who are owners of zero, one or more vehicles\finalchanges{\footnotemark}\ \eox\
+\afslut
+\afslut
+\afslut
+\footnotetext{\LLLL \finalchanges{This ``rough'' narrative fails to narrate what
+  \pos{hubs, links, vehicles, DMVs, bus companies, buses and  vehicle
+    associations are. In presenting it here, as we are, we rely on
+    your a priori understanding of these terms. But that is
+    dangerous\,! The danger, if we do not painstakingly narrate and
+    formalise what we mean by all these terms, then readers (software
+    designers, etc.) may make erroneous assumptions.}{...}}}
+\noindent
+
+\nbbbbb{External Qualities}\HHHH\label{p-chapter3-external-qualities}
+
+\noindent
+\sort{A Road Transport System, I -- Manifest External Qualities:}{ 
+\begynd
+\pind Our intention is that the manifest external qualities of a road
+      transport system are those of its
+\begynd
+\pind roads, 
+\begynd
+\pind their \sort{hub}s\pos{\footnotemark}{} i.e., road (or street) intersections, and
+\pind their \sort{link}s, i.e., the roads (streets) between hubs, and
+\afslut
+\pind \sort{vehicle}s, i.e., automobiles -- that ply the roads --
+\begynd
+\pind the buses, trucks, private cars, bicycles, etc. \eox\
+\afslut
+\afslut
+\afslut}\pos{\footnotetext{\LLLL We have \sort{highlighted}
+  certain endurant sort names -- as they will re-appear in rather many
+  upcoming examples.}}{}
+
+\nbbbb{A Road Transport System, II -- Abstract External Qualities}{%
+\begynd
+\pind Examples of what could be considered abstract external qualities
+      of a road transport domain are:
+\begynd
+\pind the aggregate of all hubs and all links, 
+\pind the aggregate of all buses, say into bus companies,
+\pind the aggregate of all bus companies into public transport, and
+\pind the aggregate of all vehicles into a department of vehicles.
+\afslut
+\pind Some of these aggregates may, at first be treated as abstract.
+\pind Subsequently, in our further analysis \& description we may
+      decide \nyl to consider some of them as concretely manifested in, for
+      example, actual
+\begynd
+\pind departments of roads.
+\afslut
+\afslut}
+
+\nbbbb{Transport System Structure}{%
+\begynd
+\pind A transport system is modeled as structured into
+\begynd
+\pind a \sfsl{road net structure} and 
+\pind an \sfsl{automobile structure}.
+\afslut
+\pind The \sfsl{road net structure} is then structured as a pair:
+\begynd
+\pind a \sfsl{structure of hubs} and
+\pind a \sfsl{structure of links}.
+\afslut
+\pind These latter structures are then modeled as set of hubs, \nyl
+      respectively links.
+\afslut
+}
+
+\mnewfoil
+
+\begynd
+\pind We could have modeled the road net \sfsl{structure}
+\begynd
+\pind as a \sfsl{composite part}
+\pind with \sfsl{unique identity, mereology} and \sfsl{attributes}
+\pind which could then serve to model 
+\pind a \texttt{road net authority}.
+\afslut
+\pind And we could have modeled the automobile \sfsl{structure}
+\begynd
+\pind as a \sfsl{composite part}
+\pind with \sfsl{unique identity, mereology} and \sfsl{attributes}
+\pind which could then serve to model 
+\pind a \texttt{department of vehicles} \eox
+\afslut
+\afslut
+
+\nbbbb{Atomic Road Transport Parts}\HHHH
+\noindent
+\begynd
+\pind From one point of view all of the following can be considered
+      atomic parts:
+\begynd
+\pind hubs, 
+\pind links\footnote{\LLLL Hub {\IS} street intersection; link
+      {\IS} street segments with no intervening hubs.}, and
+\pind automobiles.
+\afslut
+\afslut
+
+
+\nbbbb{Compound Road Transport Parts}
+\bbb{The Composites}\HHHH
+
+\pos{\begin{multicols}{2}}{}
+\begin{enumerate}\setei
+\item \label{p-x-pts-000} There is the \sfsl{universe of discourse},
+      \textsf{UoD}.
+\savei\end{enumerate}
+\noindent
+It is structured into \ptsidxi{UoD}{x-pts-000}
+\begin{enumerate}\setei  
+\item \label{p-x-pts-020} a \sfsl{road net}, \textsf{RN}, and
+  \ptsidxi{RN}{x-pts-020} 
+\item \label{p-x-pts-030} a \sfsl{fleet of vehicles},
+  \textsf{FV}. \ptsidxi{FV}{x-pts-030} 
+  \savei\end{enumerate}
+\pos{\end{multicols}}{}
+\noindent
+Both are structures. \dotfill %\footsize
+\pos{\begin{multicols}{2}}{}
+%\RSLatex
+%type
+%&\ref{p-x-pts-000}&  UoD  axiom all uod:UoD :- is_structure(uod).
+%&\ref{p-x-pts-020}&  RN   axiom all rn:RN :- is_structure(rn).
+%&\ref{p-x-pts-030}&  FV   axiom all fv:FV :- is_structure(fv).
+%value
+%&\ref{p-x-pts-020}&  obs_RN: UoD -> RN &\psfidxi{obs\_RN}{x-pts-020}&
+%&\ref{p-x-pts-030}&  obs_FV: UoD -> FV &\psfidxi{obs\_FV}{x-pts-030}\eox&
+%\endRSLatex
+\bp
+\kw{type}\\
+\ref{p-x-pts-000}\ \ UoD\ \ \kw{axiom} {\ALL} uod:UoD {\RDOT} is\_structure(uod).\\
+\ref{p-x-pts-020}\ \ RN\ \ \ \kw{axiom} {\ALL} rn:RN {\RDOT} is\_structure(rn).\\
+\ref{p-x-pts-030}\ \ FV\ \ \ \kw{axiom} {\ALL} fv:FV {\RDOT} is\_structure(fv).\\
+\kw{value}\\
+\ref{p-x-pts-020}\ \ obs\_RN: UoD {\RIGHTARROW} RN \psfidxi{obs\_RN}{x-pts-020}\\
+\ref{p-x-pts-030}\ \ obs\_FV: UoD {\RIGHTARROW} FV \psfidxi{obs\_FV}{x-pts-030}\eox
+\ep
+\pos{\end{multicols}}{}
+\normalsize\rm 
+%%  LocalWords:  UoD pts FV uod rn fv DMVs priori formalise endurant
+
+\mnewfoil
+
+\hDBfigure{rts}{\pos{6}{10}cm}{A Road Transport System Compounds and Structures}{rts.fig}
+
+\nbbb{The Part Parts}\HHHH
+\begin{enumerate}\setei
+\item \label{p-x-pts-060} The structure of hubs is a set, \textsf{sH}, \ptsidxi{sH}{x-pts-060} 
+                        of atomic hubs, \textsf{H}. \ptsidxi{H}{x-pts-060} 
+\item \label{p-x-pts-070} The structure of links is a set, \textsf{sL}, of atomic
+                        links, \textsf{L}.  \ptsidxi{sL}{x-pts-070}  \ptsidxi{L}{x-pts-070} 
+\item \label{p-x-pts-080} The structure of buses is a set, \textsf{sBC},
+                        of composite bus companies, \textsf{BC}.
+                        \ptsidxi{sBC}{x-pts-080}   \ptsidxi{BC}{x-pts-080}
+\item \label{p-x-pts-085} The composite bus companies, \textsf{BC}, are sets of
+                        buses, \textsf{sB}. \ptsidxi{BC}{x-pts-085} \ptsidxi{B}{x-pts-085} 
+\item \label{p-x-pts-090} The structure of private automobiles is a set, \textsf{sA},
+                        of atomic automobiles, \textsf{A}.\ptsidxi{sA}{x-pts-090} \ptsidxi{A}{x-pts-090} 
+\savei\end{enumerate}\footsize\HHHH
+\pos{\psno}{\mnewfoil} 
+%\RSLatex
+%type
+%&\ref{p-x-pts-060}&  H, sH = H-set  axiom all h:H :- is_atomic(h)
+%&\ref{p-x-pts-070}&  L, sL = L-set  axiom all l:L :- is_atomic(l)   
+%&\ref{p-x-pts-080}&  BC, BCs = BC-set  axiom all bc:BC :- is_composite(bc)
+%&\ref{p-x-pts-085}&  B, Bs = B-set  axiom all b:B :- is_atomic(b)
+%&\ref{p-x-pts-090}&  A, sA = A-set  axiom all a:A :- is_atomic(a)
+%value
+%&\ref{p-x-pts-060}&  obs_sH: SH -> sH &\psfidxi{obs\_sH}{x-pts-060}&
+%&\ref{p-x-pts-070}&  obs_sL: SL -> sL      &\psfidxi{obs\_sL}{x-pts-070}&
+%&\ref{p-x-pts-080}&  obs_sBC: SBC -> BCs   &\psfidxi{obs\_sBC}{x-pts-080}&
+%&\ref{p-x-pts-085}&  obs_Bs: BCs -> Bs    &\psfidxi{obs\_Ms}{x-pts-085}&
+%&\ref{p-x-pts-090}&  obs_sA: SA -> sA &\psfidxi{obs\_sA}{x-pts-090}\eox&
+%\endRSLatex \RSLatex
+\bp
+\kw{type}\\
+\ref{p-x-pts-060}\ \ H, sH {\EQ} H\kw{-set}\ \ \kw{axiom} {\ALL} h:H {\RDOT} is\_atomic(h)\\
+\ref{p-x-pts-070}\ \ L, sL {\EQ} L\kw{-set}\ \ \kw{axiom} {\ALL} l:L {\RDOT} is\_atomic(l)\ \ \ \\
+\ref{p-x-pts-080}\ \ BC, BCs {\EQ} BC\kw{-set}\ \ \kw{axiom} {\ALL} bc:BC {\RDOT} is\_composite(bc)\\
+\ref{p-x-pts-085}\ \ B, Bs {\EQ} B\kw{-set}\ \ \kw{axiom} {\ALL} b:B {\RDOT} is\_atomic(b)\\
+\ref{p-x-pts-090}\ \ A, sA {\EQ} A\kw{-set}\ \ \kw{axiom} {\ALL} a:A {\RDOT} is\_atomic(a)\\
+\kw{value}\\
+\ref{p-x-pts-060}\ \ obs\_sH: SH {\RIGHTARROW} sH \psfidxi{obs\_sH}{x-pts-060}\\
+\ref{p-x-pts-070}\ \ obs\_sL: SL {\RIGHTARROW} sL\ \ \ \ \ \ \psfidxi{obs\_sL}{x-pts-070}\\
+\ref{p-x-pts-080}\ \ obs\_sBC: SBC {\RIGHTARROW} BCs\ \ \ \psfidxi{obs\_sBC}{x-pts-080}\\
+\ref{p-x-pts-085}\ \ obs\_Bs: BCs {\RIGHTARROW} Bs\ \ \ \ \psfidxi{obs\_Ms}{x-pts-085}\\
+\ref{p-x-pts-090}\ \ obs\_sA: SA {\RIGHTARROW} sA \psfidxi{obs\_sA}{x-pts-090}\eox
+\ep
+\normalsize\rm
+%%  LocalWords:  sH pts sL busses sBC sB sA BCs bc Bs xpui et nique
+
+\nbbbb{The Transport System State}
+
+\pos{\vspace*{1.5mm}\smallish}{} \LLLL\HHHH
+
+\begin{enumerate}\setei
+\item \label{p-srares-000} Let there be given a universe of discourse,
+                         $rts$ \ysfchg{(road transport system)}. It is an example of a state.
+\savei\end{enumerate}
+\noindent From that state we can calculate other states.
+
+\begin{enumerate}\setei
+\item \label{p-srares-020} The set of all hubs, $hs$. \vidxi{$hs$}{srares-020} 
+\item \label{p-srares-030} The set of all links, $ls$. \vidxi{$ls$}{srares-030} 
+\item \label{p-srares-040} The set of all hubs and links, $hls$. \vidxi{$hls$}{srares-040} 
+\item \label{p-srares-050} The set of all bus companies, $bcs$. \vidxi{$bcs$}{srares-050} 
+\item \label{p-srares-060} The set of all buses, $bs$. \vidxi{$bs$}{srares-060}
+\item \label{p-srares-080} The set of all private automobiles, $as$. \vidxi{$as$}{srares-080} 
+\item \label{p-srares-090} The set of all parts, $ps$.\vidxi{$ps$}{srares-090} 
+\savei\end{enumerate}\pos{\footsize}{}
+\pos{\psno}{\mnewfoil}
+%\RSLatex
+%value
+%&\ref{p-srares-000}&   &$rts$&:UoD &\cf{srares-000}&
+%&\ref{p-srares-020}&   &$hs$&:H-set is:H-set is obs_sH(obs_SH(obs_RN(&$rts$&)))
+%&\ref{p-srares-030}&   &$ls$&:L-set is:L-set is obs_sL(obs_SL(obs_RN(&$rts$&)))
+%&\ref{p-srares-040}&   &$hls$&:(H|L)-set is &$hs$&union&$ls$& 
+%&\ref{p-srares-050}&   &$bcs$&:BC-set is obs_BCs(obs_SBC(obs_FV(obs_RN(&$rts$&))))
+%&\ref{p-srares-060}&   &$bs$&:B-set is union{obs_Bs(bc)|bc:BC:-bc isin &$bcs$&} 
+%&\ref{p-srares-080}&   &$as$&:A-set is obs_BCs(obs_SBC(obs_FV(obs_RN(&$rts$&))))  
+%&\ref{p-srares-090}&   &$ps$&:(UoB|H|L|BC|B|A)-set is &$rts$&union&$hls$&union&$bcs$&union&$bs$&union&$as$&  
+%\endRSLatex    
+\bp
+\kw{value}\\
+\ref{p-srares-000}\ \ \ $rts$:UoD \cf{srares-000}\\
+\ref{p-srares-020}\ \ \ $hs$:H\kw{-set} {\IS}:H\kw{-set} {\IS} obs\_sH(obs\_SH(obs\_RN($rts$)))\\
+\ref{p-srares-030}\ \ \ $ls$:L\kw{-set} {\IS}:L\kw{-set} {\IS} obs\_sL(obs\_SL(obs\_RN($rts$)))\\
+\ref{p-srares-040}\ \ \ $hls$:(H{\BAR}L)\kw{-set} {\IS} $hs${\UNION}$ls$ \\
+\ref{p-srares-050}\ \ \ $bcs$:BC\kw{-set} {\IS} obs\_BCs(obs\_SBC(obs\_FV(obs\_RN($rts$))))\\
+\ref{p-srares-060}\ \ \ $bs$:B\kw{-set} {\IS} {\UNION}{\LBRACE}obs\_Bs(bc){\BAR}bc:BC{\RDOT}bc {\ISIN} $bcs${\RBRACE} \\
+\ref{p-srares-080}\ \ \ $as$:A\kw{-set} {\IS} obs\_BCs(obs\_SBC(obs\_FV(obs\_RN($rts$))))\ \ \\
+\ref{p-srares-090}\ \ \ $ps$:(UoB{\BAR}H{\BAR}L{\BAR}BC{\BAR}B{\BAR}A)\kw{-set} {\IS} $rts${\UNION}$hls${\UNION}$bcs${\UNION}$bs${\UNION}$as$\ \ 
+\ep
+
+\dbeat{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\bmcolor{Indexed States:}
+\dotfill\label{p-example-states}\pos{\footnotesize}{\HHHH}
+
+\noindent
+\begynd
+\pind We shall
+\afslut
+\begin{enumerate}\setei
+\item \label{p-x.state-000} index bus companies,
+\item \label{p-x.state-010} index buses, and
+\item \label{p-x.state-020} index automobiles
+\savei\end{enumerate} using the unique identifiers of these
+parts.\pos{\smallish}{\LLLL}
+\pos{\psno}{\mnewfoil}
+%\RSLatex
+%type
+%&\ref{p-x.state-000}&  BC&$_{ui}$&
+%&\ref{p-x.state-010}&  B&$_{ui}$&
+%&\ref{p-x.state-020}&  A&$_{ui}$& 
+%value 
+%&\ref{p-x.state-000}&  &$ibcs$&:BC&$_{ui}&$-set is { bc&$_{ui}$& | bc:BC,bc:BC&$_{ui}$&:BC&$_{ui}$& :- &bc&isin&$bcs$&/\&$ui$&=uid_BC(bc) }
+%&\ref{p-x.state-010}&  &$ibs$&:B&$_{ui}&$-set is { b&$_{ui}$& | b:B,b:B&$_{ui}$&:B&$_{ui}$& :- &b&isin&$bs$&/\&$ui$&=uid_B(b) }
+%&\ref{p-x.state-020}&  &$ias$&:A&$_{ui}&$-set is { a&$_{ui}$& | a:A,a:A&$_{ui}$&:A&$_{ui}$& :- &a&isin&$as$&/\&$ui$&=uid_A(a) }
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-x.state-000}\ \ BC$_{ui}$\\
+\ref{p-x.state-010}\ \ B$_{ui}$\\
+\ref{p-x.state-020}\ \ A$_{ui}$ \\
+\kw{value} \\
+\ref{p-x.state-000}\ \ $ibcs$:BC$_{ui}$\kw{-set} {\IS} {\LBRACE} bc$_{ui}$ {\BAR} bc:BC,bc:BC$_{ui}$:BC$_{ui}$ {\RDOT} bc{\ISIN}$bcs${\WEDGE}$ui${\EQ}uid\_BC(bc) {\RBRACE}\\
+\ref{p-x.state-010}\ \ $ibs$:B$_{ui}$\kw{-set} {\IS} {\LBRACE} b$_{ui}$ {\BAR} b:B,b:B$_{ui}$:B$_{ui}$ {\RDOT} b{\ISIN}$bs${\WEDGE}$ui${\EQ}uid\_B(b) {\RBRACE}\\
+\ref{p-x.state-020}\ \ $ias$:A$_{ui}$\kw{-set} {\IS} {\LBRACE} a$_{ui}$ {\BAR} a:A,a:A$_{ui}$:A$_{ui}$ {\RDOT} a{\ISIN}$as${\WEDGE}$ui${\EQ}uid\_A(a) {\RBRACE}
+\ep
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\normalsize\rm
+%%  LocalWords:  rts hs srares hls bcs busses bs ui bc ps UoD sH sL
+%%  LocalWords:  BCs SBC FV ibcs uid ibs ias UoB ub dentifiers uic ap
+
+
+\nbbbbb{Internal Qualities}
+
+\bbbb{Unique Identifiers}\label{p-ch2.Unique Identifiers}\label{p-ch2.uid.1}
+
+\pos{\begin{multicols}{2}}{}
+\smallish\LLLL\HHHH\begin{enumerate}\setei
+\item \label{p-x-ui-000} We assign unique identifiers to all parts.
+\item \label{p-x-ui-004} By a road identifier we shall mean a link or a
+                       hub identifier.
+  \utidxi{R\_UI}{x-ui-004}\utidxi{L\_UI}{x-ui-004}\utidxi{H\_UI}{x-ui-004}   
+\item \label{p-x-ui-006} By a vehicle identifier we shall mean a bus or an
+                       automobile identifier.
+                       \utidxi{V\_UI}{x-ui-006}\utidxi{B\_UI}{x-ui-006}\utidxi{A\_UI}{x-ui-006}  
+\item \label{p-x-ui-010} Unique identifiers uniquely identify all parts. 
+\begin{enumerate}
+\item \label{p-x-ui-020} All hubs have distinct [unique] identifiers.
+\item \label{p-x-ui-030} All links have distinct identifiers. 
+\item \label{p-x-ui-040} All bus companies have distinct
+                       identifiers. 
+\item \label{p-x-ui-050} All buses of all bus companies have distinct 
+                       identifiers.
+\item \label{p-x-ui-060} All automobiles have distinct identifiers.
+\item \label{p-x-ui-070} All parts have  distinct identifiers.
+\end{enumerate}
+\savei\end{enumerate}
+\pos{\end{multicols}}{}
+\pos{\psno}{\mnewfoil}\HHHH
+\pos{\begin{multicols}{2}}{}
+%\RSLatex
+%type  
+%&\ref{p-x-ui-000}&   H_UI, L_UI, BC_UI, B_UI, A_UI &\utidxi{H\_UI}{x-ui-000}\utidxi{L\_UI}{x-ui-006}\utidxi{BC\_UI}{x-ui-006}\utidxi{B\_UI}{x-ui-006}\utidxi{A\_UI}{x-ui-006}&
+%&\ref{p-x-ui-004}&   R_UI = H_UI | L_UI &\utidxi{R\_UI{\EQ}H\_UI\protect{\BAR}L\_UI}{x-ui-004}&
+%&\ref{p-x-ui-006}&   V_UI = B_UI | A_UI &\utidxi{V\_UI{\EQ}B\_UI\protect{\BAR}A\_UI}{x-ui-006}&
+%value
+%&\ref{p-x-ui-020}&   uid_H: H -> H_UI &\ufidxi{uid\_H}{x-ui-020}&
+%&\ref{p-x-ui-030}&   uid_L: H -> L_UI  &\ufidxi{uid\_L}{x-ui-030}& 
+%&\ref{p-x-ui-040}&   uid_BC: H -> BC_UI    &\ufidxi{uid\_BC}{x-ui-040}&
+%&\ref{p-x-ui-050}&   uid_B: H -> B_UI   &\ufidxi{uid\_B}{x-ui-050}&
+%&\ref{p-x-ui-060}&   uid_A: H -> A_UI  &\ufidxi{uid\_A}{x-ui-060}&
+%\endRSLatex \RSLatex
+\bp
+\kw{type}\ \ \\
+\ref{p-x-ui-000}\ \ \ H\_UI, L\_UI, BC\_UI, B\_UI, A\_UI \utidxi{H\_UI}{x-ui-000}\utidxi{L\_UI}{x-ui-006}\utidxi{BC\_UI}{x-ui-006}\utidxi{B\_UI}{x-ui-006}\utidxi{A\_UI}{x-ui-006}\\
+\ref{p-x-ui-004}\ \ \ R\_UI {\EQ} H\_UI {\BAR} L\_UI \utidxi{R\_UI{\EQ}H\_UI\protect{\BAR}L\_UI}{x-ui-004}\\
+\ref{p-x-ui-006}\ \ \ V\_UI {\EQ} B\_UI {\BAR} A\_UI \utidxi{V\_UI{\EQ}B\_UI\protect{\BAR}A\_UI}{x-ui-006}\\
+\kw{value}\\
+\ref{p-x-ui-020}\ \ \ uid\_H: H {\RIGHTARROW} H\_UI \ufidxi{uid\_H}{x-ui-020}\\
+\ref{p-x-ui-030}\ \ \ uid\_L: H {\RIGHTARROW} L\_UI\ \ \ufidxi{uid\_L}{x-ui-030} \\
+\ref{p-x-ui-040}\ \ \ uid\_BC: H {\RIGHTARROW} BC\_UI\ \ \ \ \ufidxi{uid\_BC}{x-ui-040}\\
+\ref{p-x-ui-050}\ \ \ uid\_B: H {\RIGHTARROW} B\_UI\ \ \ \ufidxi{uid\_B}{x-ui-050}\\
+\ref{p-x-ui-060}\ \ \ uid\_A: H {\RIGHTARROW} A\_UI\ \ \ufidxi{uid\_A}{x-ui-060}
+\ep
+\pos{\end{multicols}}{}
+
+\nbbb{Extract Parts from Their Unique Identifiers}
+\begin{enumerate}\setei
+\item \label{p-xpui-000} From the unique identifier of a part we can
+                       retrieve, $\wp$, the part having that
+                       identifier.\xfidxi{$\wp$}{xpui-000} 
+\savei\end{enumerate}\label{p-wp}\footsize\HHHH
+%\RSLatex
+%type 
+%&\ref{p-xpui-000}& P = H | L | BC | B | A
+%value
+%&\ref{p-xpui-000}&  &$\wp$&: H_UI->H | L_UI->L | BC_UI->BC | B_UI->B | A_UI->A
+%&\ref{p-xpui-000}&  &$\wp$&(ui) is let p:(H|L|BC|B|A):-&p&isin&$ps$&/\uid_P(p)=ui in p end 
+%\endRSLatex 
+\bp
+\kw{type} \\
+\ref{p-xpui-000} P {\EQ} H {\BAR} L {\BAR} BC {\BAR} B {\BAR} A\\
+\kw{value}\\
+\ref{p-xpui-000}\ \ $\wp$: H\_UI{\RIGHTARROW}H {\BAR} L\_UI{\RIGHTARROW}L {\BAR} BC\_UI{\RIGHTARROW}BC {\BAR} B\_UI{\RIGHTARROW}B {\BAR} A\_UI{\RIGHTARROW}A\\
+\ref{p-xpui-000}\ \ $\wp$(ui) {\IS} \kw{let} p:(H{\BAR}L{\BAR}BC{\BAR}B{\BAR}A){\RDOT}p{\ISIN}$ps${\WEDGE}uid\_P(p){\EQ}ui \kw{in} p \kw{end} 
+\ep
+\noindent
+
+\nbbb{All Unique Identifiers of a Domain}\label{p-All Unique Identifiers of a Domain}\label{p-ui-sets}\LLll
+We can calculate:
+\begin{enumerate}\setei
+\item \label{p-uic-000} the $s$et, $h_{ui}s$, of $u$nique $h$ub
+                      $i$dentifiers; \uividxi{$h_{ui}s$}{uic-000}
+\item \label{p-uic-010} the $s$et, $l_{ui}s$, of $u$nique $l$ink
+                      $i$dentifiers; \uividxi{$l_{ui}s$}{uic-010}
+\item \label{p-uic-011a} the $m$ap, $hl_{ui}m$, from $u$nique $h$ub
+                      $i$dentifiers to the $s$et of $u$nique $l$ink
+                      $i$identifiers of the links connected to the
+                      zero, one or more identified hubs,
+                      \uividxi{$hl_{ui}m$}{uic-011a}  
+\item \label{p-uic-011b} the $m$ap, $lh_{ui}m$, from $u$nique $l$ink
+                      $i$dentifiers to the $s$et of $u$nique $h$ub
+                      $i$identifiers of the two hubs connected to the 
+                      identified link; \uividxi{$lh_{ui}m$}{uic-011b}
+\item \label{p-uic-011} the $s$et, $r_{ui}s$, of all $u$nique hub and
+                      link, i.e., 
+                      $r$oad $i$dentifiers;
+                      \uividxi{$r_{ui}s$}{uic-011} 
+\item \label{p-uic-020} the $s$et, $bc_{ui}s$, of $u$nique $b$us
+                      $c$ompany
+                      $i$dentifiers;\uividxi{$bc_{ui}s$}{uic-020}
+%\pos{\psno}{\mnewfoil}
+\item \label{p-uic-030} the $s$et, $b_{ui}s$, of $u$nique $b$us
+  $i$dentifiers;\uividxi{$b_{ui}s$}{uic-030} 
+\item \label{p-uic-040} the $s$et, $a_{ui}s$, of $u$nique private
+                      $a$utomobile
+                      $i$dentifiers;\uividxi{$a_{ui}s$}{uic-040}
+\item \label{p-uic-041} the $s$et, $v_{ui}s$, of $u$nique bus and
+                      automobile, i.e., \uividxi{$v_{ui}s$}{uic-041}
+                      $v$ehicle $i$dentifiers; 
+\item \label{p-uic-042} the $m$ap, $bcb_{ui}m$, from $u$nique $b$us
+                      $c$ompany $i$dentifiers to the $s$et 
+                      of its  $u$nique $b$us $i$dentifiers;
+                      and \uividxi{$bcb_{ui}m$}{uic-042} 
+\item \label{p-uic-043} the ($b$ijective) $m$ap, $bbc_{ui}bm$, from
+                      $u$nique $b$us $i$dentifiers to 
+                      their $u$nique $b$us $c$ompany
+                      $i$dentifiers.\uividxi{$bbc_{ui}bm$}{uic-043} 
+\savei\end{enumerate}
+\pos{\psno}{\mnewfoil}\LLLL
+%\RSLatex  
+%value
+%&\ref{p-uic-000}&   &$h_{ui}s$&:H_UI-set is {uid_H(h)|h:H:-h isin &$hs$&}
+%&\ref{p-uic-010}&   &$l_{ui}s$&:L_UI-set is {uid_L(l)|l:L:-l isin &$ls$&} 
+%&\ref{p-uic-011}&   &$r_{ui}s$&:R_UI-set is &$h_{ui}s$&union&$l_{ui}s$&
+%&\ref{p-uic-011a}&   &$hl_{ui}m$&:(H_UI-m->L_UI-set) is 
+%&\ref{p-uic-011a}&       [h_ui+>luis|h_ui:H_UI,luis:L_UI-set:-h_&ui&isin&$h_{ui}s$&/\(_,luis,_)=mereo_H(`eta(h_ui))]  &[cf.\,Item\,\ref{p-mereo-000}]&
+%&\ref{p-uic-011b}&   &$lh_{ui}m$&:(L+UI-m->H_UI-set) is 
+%&\ref{p-uic-011b}&       [l_ui+>huis | h_ui:L_UI,huis:H_UI-set :- l_&ui&isin&$l_{ui}s$& /\ (_,huis,_)=mereo_L(`eta(l_ui))]  &[cf.\,Item\,\ref{p-mereo-010}]&
+%&\ref{p-uic-020}&   &$bc_{ui}s$&:BC_UI-set is {uid_BC(bc)|bc:BC:-bc isin &$bcs$&}  
+%&\ref{p-uic-030}&   &$b_{ui}s$&:B_UI-set is union{uid_B(b)|b:B:-b isin &$bs$&}
+%&\ref{p-uic-040}&   &$a_{ui}s$&:A_UI-set is {uid_A(a)|a:A:-a isin &$as$&}
+%&\ref{p-uic-041}&   &$v_{ui}s$&:V_UI-set is &$b_{ui}s$& union &$a_{ui}s$&
+%&\ref{p-uic-042}&   &$bcb_{ui}m$&:(BC_UI-m->B_UI-set) is 
+%&\ref{p-uic-042}&      [ bc_ui +> buis | bc_ui:BC_UI, bc:BC :- &bc&isin&$bcs$& /\ bc_ui=uid_BC(bc) /\ (_,_,buis)=mereo_BC(bc) ]  
+%&\ref{p-uic-043}&   &$bbc_{ui}bm$&:(B_UI-m->BC_UI) is 
+%&\ref{p-uic-043}&      [ b_ui +> bc_ui | b_ui:B_UI,bc_ui:BC_ui :- bc_ui=dom&$bcb_{ui}m$&/\b_&ui&isin&$bcb_{ui}m$&(bc_ui) ]
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{p-uic-000}\ \ \ $h_{ui}s$:H\_UI\kw{-set} {\IS} {\LBRACE}uid\_H(h){\BAR}h:H{\RDOT}h {\ISIN} $hs${\RBRACE}\\
+\ref{p-uic-010}\ \ \ $l_{ui}s$:L\_UI\kw{-set} {\IS} {\LBRACE}uid\_L(l){\BAR}l:L{\RDOT}l {\ISIN} $ls${\RBRACE} \\
+\ref{p-uic-011}\ \ \ $r_{ui}s$:R\_UI\kw{-set} {\IS} $h_{ui}s${\UNION}$l_{ui}s$\\
+\ref{p-uic-011a}\ \ \ $hl_{ui}m$:(H\_UI{\MARROW}L\_UI\kw{-set}) {\IS} \\
+\ref{p-uic-011a}\ \ \ \ \ \ \ {\LBRACKET}h\_ui{\MAPSTO}luis{\BAR}h\_ui:H\_UI,luis:L\_UI\kw{-set}{\RDOT}h\_ui{\ISIN}$h_{ui}s${\WEDGE}({\UNDERLINE},luis,{\UNDERLINE}){\EQ}mereo\_H($\eta$(h\_ui)){\RBRACKET}\ \ [cf.\,Item\,\ref{p-mereo-000}]\\
+\ref{p-uic-011b}\ \ \ $lh_{ui}m$:(L{\PLUS}UI{\MARROW}H\_UI\kw{-set}) {\IS} \\
+\ref{p-uic-011b}\ \ \ \ \ \ \ {\LBRACKET}l\_ui{\MAPSTO}huis {\BAR} h\_ui:L\_UI,huis:H\_UI\kw{-set} {\RDOT} l\_ui{\ISIN}$l_{ui}s$ {\WEDGE} ({\UNDERLINE},huis,{\UNDERLINE}){\EQ}mereo\_L($\eta$(l\_ui)){\RBRACKET}\ \ [cf.\,Item\,\ref{p-mereo-010}]\\
+\ref{p-uic-020}\ \ \ $bc_{ui}s$:BC\_UI\kw{-set} {\IS} {\LBRACE}uid\_BC(bc){\BAR}bc:BC{\RDOT}bc {\ISIN} $bcs${\RBRACE}\ \ \\
+\ref{p-uic-030}\ \ \ $b_{ui}s$:B\_UI\kw{-set} {\IS} {\UNION}{\LBRACE}uid\_B(b){\BAR}b:B{\RDOT}b {\ISIN} $bs${\RBRACE}\\
+\ref{p-uic-040}\ \ \ $a_{ui}s$:A\_UI\kw{-set} {\IS} {\LBRACE}uid\_A(a){\BAR}a:A{\RDOT}a {\ISIN} $as${\RBRACE}\\
+\ref{p-uic-041}\ \ \ $v_{ui}s$:V\_UI\kw{-set} {\IS} $b_{ui}s$ {\UNION} $a_{ui}s$\\
+\ref{p-uic-042}\ \ \ $bcb_{ui}m$:(BC\_UI{\MARROW}B\_UI\kw{-set}) {\IS} \\
+\ref{p-uic-042}\ \ \ \ \ \ {\LBRACKET} bc\_ui {\MAPSTO} buis {\BAR} bc\_ui:BC\_UI, bc:BC {\RDOT} bc{\ISIN}$bcs$ {\WEDGE} bc\_ui{\EQ}uid\_BC(bc) {\WEDGE} ({\UNDERLINE},{\UNDERLINE},buis){\EQ}mereo\_BC(bc) {\RBRACKET}\ \ \\
+\ref{p-uic-043}\ \ \ $bbc_{ui}bm$:(B\_UI{\MARROW}BC\_UI) {\IS} \\
+\ref{p-uic-043}\ \ \ \ \ \ {\LBRACKET} b\_ui {\MAPSTO} bc\_ui {\BAR} b\_ui:B\_UI,bc\_ui:BC\_ui {\RDOT} bc\_ui{\EQ}\kw{dom}$bcb_{ui}m${\WEDGE}b\_ui{\ISIN}$bcb_{ui}m$(bc\_ui) {\RBRACKET}
+\ep
+
+\pos{\normalsize}{\HHHH}
+
+\nbbb{Uniqueness of Road Net Identifiers}\LLLL
+\begynd
+\pind We must express the following axioms:
+\afslut
+\begin{enumerate}\setei
+\item \label{p-x-ui-020d} All hub identifiers are distinct.
+\item \label{p-x-ui-030d} All link identifiers are distinct.
+\item \label{p-x-ui-040d} All bus company identifiers are distinct.
+\item \label{p-x-ui-050d} All bus identifiers are distinct.
+\item \label{p-x-ui-060d} All private automobile identifiers are distinct.
+\item \label{p-x-ui-070d} All part identifiers are distinct.
+\savei\end{enumerate}\HHHH
+%\RSLatex
+%axiom
+%&\ref{p-x-ui-020d}&   card&\,$hs$& = card&\,$h_{ui}s$&
+%&\ref{p-x-ui-030d}&   card&\,$ls$& = card&\,$l_{ui}s$&  
+%&\ref{p-x-ui-040d}&   card&\,$bcs$& = card&\,$bc_{ui}s$& 
+%&\ref{p-x-ui-050d}&   card&\,$bs$& = card&\,$b_{ui}s$&
+%&\ref{p-x-ui-060d}&   card&\,$as$& = card&\,$a_{ui}s$&
+%&\ref{p-x-ui-070d}&   card&\,&{&$h_{ui}s$&union&$l_{ui}s$&union&$bc_{ui}s$&union&$b_{ui}s$&union&$a_{ui}s$&} 
+%&\ref{p-x-ui-070d}&      = card&\,$h_{ui}s$&+card&\,$l_{ui}s$&+card&\,$bc_{ui}s$&+card&\,$b_{ui}s$&+card&\,$a_{ui}s$  \eox&
+%\endRSLatex
+\bp
+\kw{axiom}\\
+\ref{p-x-ui-020d}\ \ \ \kw{card}\,$hs$ {\EQ} \kw{card}\,$h_{ui}s$\\
+\ref{p-x-ui-030d}\ \ \ \kw{card}\,$ls$ {\EQ} \kw{card}\,$l_{ui}s$\ \ \\
+\ref{p-x-ui-040d}\ \ \ \kw{card}\,$bcs$ {\EQ} \kw{card}\,$bc_{ui}s$ \\
+\ref{p-x-ui-050d}\ \ \ \kw{card}\,$bs$ {\EQ} \kw{card}\,$b_{ui}s$\\
+\ref{p-x-ui-060d}\ \ \ \kw{card}\,$as$ {\EQ} \kw{card}\,$a_{ui}s$\\
+\ref{p-x-ui-070d}\ \ \ \kw{card}\,{\LBRACE}$h_{ui}s${\UNION}$l_{ui}s${\UNION}$bc_{ui}s${\UNION}$b_{ui}s${\UNION}$a_{ui}s${\RBRACE} \\
+\ref{p-x-ui-070d}\ \ \ \ \ \ {\EQ} \kw{card}\,$h_{ui}s${\PLUS}\kw{card}\,$l_{ui}s${\PLUS}\kw{card}\,$bc_{ui}s${\PLUS}\kw{card}\,$b_{ui}s${\PLUS}\kw{card}\,$a_{ui}s$  \eox
+\ep
+
+\nbbbb{Mereology}\label{p-ch2.Mereology}\label{p-refMereology of Parts}\label{p-m1}
+\bbb{Mereology Types and Observers}
+\rm\smallish\LLLL\rm
+\begin{enumerate}\setei
+\item \label{p-mereo-000} The mereology of hubs is a pair: (i) the set  
+  of all bus and automobile identifiers\footnotemark, and (ii) the set of unique
+  identifiers of the links that it is connected to and the set of all
+  unique identifiers of all vehicles (buses and private
+  automobiles).\footnotemark
+\item \label{p-mereo-010} The mereology of links is a pair: (i) the 
+  set of all bus and automobile identifiers, and  (ii)  the
+  set of the two distinct hubs they are connected to. 
+\item \label{p-mereo-020} The mereology of a bus company is a set the
+  unique identifiers of the buses operated by 
+  that company. 
+\item \label{p-mereo-030} The mereology of a bus is  a pair: (i) 
+  the set of the one single
+  unique identifier of the bus company it is operating for, and (ii)
+  the unique 
+  identifiers of all links and hubs\footnotemark.  
+\item \label{p-mereo-040} The mereology of an automobile is the set of
+  the unique 
+  identifiers of all links and hubs\footnotemark. 
+  \savei\end{enumerate}
+\mnewfoil
+\begin{multicols}{2}
+%\RSLatex 
+%type
+%&\ref{p-mereo-000}&   H_Mer = V_UI-set><L_UI-set   &\mtidxi{H\_Mer{\EQ}V\_UI\kw{-set}{\TIMES}L\_UI\kw{-set}}{mereo-000}& 
+%&\ref{p-mereo-010}&   L_Mer = V_UI-set><H_UI-set   &\mtidxi{L\_Mer{\EQ}V\_UI\kw{-set}{\TIMES}H\_UI\kw{-set}}{mereo-010}&
+%&\ref{p-mereo-020}&   BC_Mer = B_UI-set      &\mtidxi{BC\_Mer{\EQ}B\_UI\kw{-set}}{mereo-020}&
+%&\ref{p-mereo-030}&   B_Mer = BC_UI><R_UI-set  &\mtidxi{B\_Mer{\EQ}BC\_UI{\TIMES}R\_UI\kw{-set}}{mereo-030}&
+%&\ref{p-mereo-040}&   A_Mer = R_UI-set &\mtidxi{A\_Mer{\EQ}R\_UI\kw{-set}}{mereo-040}&
+%value
+%&\ref{p-mereo-000}&   mereo_H: H -> H_Mer &\mfidxi{mereo\_H}{mereo-000}&
+%&\ref{p-mereo-010}&   mereo_L: L -> L_Mer &\mfidxi{mereo\_L}{mereo-010}&   
+%&\ref{p-mereo-020}&   mereo_BC: BC -> BC_Mer &\mfidxi{mereo\_BC}{mereo-020}&   
+%&\ref{p-mereo-030}&   mereo_B: B -> B_Mer &\mfidxi{mereo\_B}{mereo-030}&   
+%&\ref{p-mereo-040}&   mereo_A: A -> A_Mer  &\mfidxi{mereo\_A}{mereo-040}& 
+%\endRSLatex
+\bp
+\kw{type}\\
+\ref{p-mereo-000}\ \ \ H\_Mer {\EQ} V\_UI\kw{-set}{\TIMES}L\_UI\kw{-set}\ \ \ \mtidxi{H\_Mer{\EQ}V\_UI\kw{-set}{\TIMES}L\_UI\kw{-set}}{mereo-000} \\
+\ref{p-mereo-010}\ \ \ L\_Mer {\EQ} V\_UI\kw{-set}{\TIMES}H\_UI\kw{-set}\ \ \ \mtidxi{L\_Mer{\EQ}V\_UI\kw{-set}{\TIMES}H\_UI\kw{-set}}{mereo-010}\\
+\ref{p-mereo-020}\ \ \ BC\_Mer {\EQ} B\_UI\kw{-set}\ \ \ \ \ \ \mtidxi{BC\_Mer{\EQ}B\_UI\kw{-set}}{mereo-020}\\
+\ref{p-mereo-030}\ \ \ B\_Mer {\EQ} BC\_UI{\TIMES}R\_UI\kw{-set}\ \ \mtidxi{B\_Mer{\EQ}BC\_UI{\TIMES}R\_UI\kw{-set}}{mereo-030}\\
+\ref{p-mereo-040}\ \ \ A\_Mer {\EQ} R\_UI\kw{-set} \mtidxi{A\_Mer{\EQ}R\_UI\kw{-set}}{mereo-040}\\
+\kw{value}\\
+\ref{p-mereo-000}\ \ \ mereo\_H: H {\RIGHTARROW} H\_Mer \mfidxi{mereo\_H}{mereo-000}\\
+\ref{p-mereo-010}\ \ \ mereo\_L: L {\RIGHTARROW} L\_Mer \mfidxi{mereo\_L}{mereo-010}\ \ \ \\
+\ref{p-mereo-020}\ \ \ mereo\_BC: BC {\RIGHTARROW} BC\_Mer \mfidxi{mereo\_BC}{mereo-020}\ \ \ \\
+\ref{p-mereo-030}\ \ \ mereo\_B: B {\RIGHTARROW} B\_Mer \mfidxi{mereo\_B}{mereo-030}\ \ \ \\
+\ref{p-mereo-040}\ \ \ mereo\_A: A {\RIGHTARROW} A\_Mer\ \ \mfidxi{mereo\_A}{mereo-040} 
+\ep
+\end{multicols}
+\addtocounter{footnote}{-3}
+\footnotetext{This is just another
+  way of saying that the meaning of hub mereologies involves
+  the unique identifiers of all the vehicles that might pass through the hub
+  \texttt{is\_of\_interest} to it.}
+\addtocounter{footnote}{1}
+\footnotetext{The link identifiers designate the
+  links, zero, one or more,  that a hub is connected to
+  \texttt{is\_of\_interest} to both the hub and that these links is
+  \texttt{interested} in the hub.}
+\addtocounter{footnote}{1}
+\footnotetext{--- that the bus might pass through}
+\addtocounter{footnote}{1}
+\footnotetext{--- that the automobile might pass through}
+
+\nbbb{Invariance of Mereologies}\HHHH
+\begynd
+\pind For mereologies one can usually express some invariants.
+\begynd
+\pind Such invariants express \sfsl{``law-like properties''}, 
+\pind facts which are indisputable.
+\afslut
+\afslut
+
+\nbb{Invariance of Road Nets}{ %
+\begynd
+\pind The observed mereologies must express identifiers of the state
+of such for road nets:
+\afslut
+%\RSLatex 
+%axiom 
+%&\ref{p-mereo-000}&   all (vuis,luis):H_Mer :- luis<<=&$l_{ui}s$& /\ vuis=&$v_{ui}s$&
+%&\ref{p-mereo-010}&   all (vuis,huis):L_Mer :- vuis=&$v_{ui}s$& /\ huis<<=&$h_{ui}s$& /\ card&\ysfchg{ }huis\,=\,&2
+%&\ref{p-mereo-020}&   all buis:H_Mer :- buis = &$b_{ui}s$&
+%&\ref{p-mereo-030}&   all (bc_ui,ruis):H_Mer:-bc_&ui&isin&$bc_{ui}s$&/\ruis=&$r_{ui}s$&
+%&\ref{p-mereo-040}&   all ruis:A_Mer :- ruis=&$r_{ui}s$&
+%\endRSLatex
+\bp
+\kw{axiom} \\
+\ref{p-mereo-000}\ \ \ {\ALL} (vuis,luis):H\_Mer {\RDOT} luis{\SUBSETEQ}$l_{ui}s$ {\WEDGE} vuis{\EQ}$v_{ui}s$\\
+\ref{p-mereo-010}\ \ \ {\ALL} (vuis,huis):L\_Mer {\RDOT} vuis{\EQ}$v_{ui}s$ {\WEDGE} huis{\SUBSETEQ}$h_{ui}s$ {\WEDGE} \kw{card}\ysfchg{ }huis\,=\,2\\
+\ref{p-mereo-020}\ \ \ {\ALL} buis:H\_Mer {\RDOT} buis {\EQ} $b_{ui}s$\\
+\ref{p-mereo-030}\ \ \ {\ALL} (bc\_ui,ruis):H\_Mer{\RDOT}bc\_ui{\ISIN}$bc_{ui}s${\WEDGE}ruis{\EQ}$r_{ui}s$\\
+\ref{p-mereo-040}\ \ \ {\ALL} ruis:A\_Mer {\RDOT} ruis{\EQ}$r_{ui}s$
+\ep
+\pos{\psno}{\mnewfoil}
+\begin{enumerate}\setei
+\item \label{p-mereo-axiom-000} For all hubs, $h$, and links, $l$, in the same road net,
+\item \label{p-mereo-axiom-010} if the hub $h$ connects to link $l$ then link $l$ connects to hub $h$. 
+\savei\end{enumerate}
+%\RSLatex
+%axiom
+%&\ref{p-mereo-axiom-000}&   all h:H,l:L :- h isin &$hs$& /\ l isin &$ls$& =>
+%&\ref{p-mereo-axiom-000}&      let (_,luis)=mereo_H(h), (_,huis)=mereo_L(l)
+%&\ref{p-mereo-axiom-010}&      in uid_L(l)isin&luis& is uid_H(h)isin&huis& end 
+%\endRSLatex
+\bp
+\kw{axiom}\\
+\ref{p-mereo-axiom-000}\ \ \ {\ALL} h:H,l:L {\RDOT} h {\ISIN} $hs$ {\WEDGE} l {\ISIN} $ls$ {\DBLRIGHTARROW}\\
+\ref{p-mereo-axiom-000}\ \ \ \ \ \ \kw{let} ({\UNDERLINE},luis){\EQ}mereo\_H(h), ({\UNDERLINE},huis){\EQ}mereo\_L(l)\\
+\ref{p-mereo-axiom-010}\ \ \ \ \ \ \kw{in} uid\_L(l){\ISIN}luis {\IS} uid\_H(h){\ISIN}huis \kw{end} 
+\ep
+\pos{\psno}{\mnewfoil}
+\HHHH
+\vspace*{2mm}
+\begin{enumerate}\setei
+\item \label{p-mereo-axiom-200} For all links, $l$, and hubs, $h_a, h_b$, in the same road net,
+\item \label{p-mereo-axiom-210} if the $l$ connects to hubs $h_a$
+  and $h_b$, then  $h_a$ and $h_b$ both connects to link $l$.
+\savei\end{enumerate}\footsize\HHHH
+%\RSLatex
+%axiom
+%&\ref{p-mereo-axiom-200}&   all h_a,h_b:H,l:L :- {h_a,h_b} <<= &$hs$& /\ l isin &$ls$& =>
+%&\ref{p-mereo-axiom-200}&      let (_,luis)=mereo_H(h), (_,huis)=mereo_L(l)
+%&\ref{p-mereo-axiom-210}&      in uid_L(l)isin&luis& is uid_H(h)isin&huis& end 
+%\endRSLatex
+\bp
+\kw{axiom}\\
+\ref{p-mereo-axiom-200}\ \ \ {\ALL} h\_a,h\_b:H,l:L {\RDOT} {\LBRACE}h\_a,h\_b{\RBRACE} {\SUBSETEQ} $hs$ {\WEDGE} l {\ISIN} $ls$ {\DBLRIGHTARROW}\\
+\ref{p-mereo-axiom-200}\ \ \ \ \ \ \kw{let} ({\UNDERLINE},luis){\EQ}mereo\_H(h), ({\UNDERLINE},huis){\EQ}mereo\_L(l)\\
+\ref{p-mereo-axiom-210}\ \ \ \ \ \ \kw{in} uid\_L(l){\ISIN}luis {\IS} uid\_H(h){\ISIN}huis \kw{end} 
+\ep
+}
+
+\nbb{Possible Consequences of a Road Net Mereology}{%
+\begin{enumerate}\setei
+%\item \label{p-eks-mereo-000} are the nets acyclic\,? 
+\item \label{p-eks-mereo-010} Are there [isolated] units from which one
+  can not ``reach'' other units\,? 
+\item \label{p-eks-mereo-020} Does the net consist of two or more
+  ``disjoint'' nets\,?
+\item \label{p-eks-mereo-030} Et cetera.
+\savei\end{enumerate}
+\noindent
+\begynd
+\pind We leave it to the reader to narrate and formalise the above properly.
+\afslut
+}
+
+\nbb{Fixed and Varying Mereology}%{%
+\begynd
+\pind Let us consider a road net. 
+\begynd
+\pind If hubs and links never change ``affiliation'', that is:
+\begynd
+\pind hubs are in fixed relation to zero one or more links, and
+\pind links are in a fixed relation to exactly two hubs
+\pind then the mereology is
+      a \sfsl{fixed mereology}. 
+\afslut
+\pos{\psno}{\mnewfoil}      
+\pind If, on the other hand
+\begynd
+\pind hubs may be inserted into or removed from the net, and/or
+\pind links may be removed from or inserted between any two existing hubs,
+\pind then the mereology  is
+      a \sfsl{varying mereology}. 
+\afslut
+\afslut
+\afslut
+%}
+ 
+\nbbbb{Attributes}\label{p-road-Attributes}\label{p-Attributes.1}
+\bbb{Hub Attributes}{ %\input{eks-attrs}
+\noindent\LLLL\HHHH
+\begynd
+\pind We treat some attributes of the hubs of a road net.
+\afslut
+\begin{enumerate}\setei
+\item \label{p-h-attr-000} There is a hub state.
+\begynd
+\pind  It is a set of pairs, \textsf{(l$_f$,l$_t$)}, of link identifiers,
+\begynd
+\pind  where these link identifiers are in the mereology of the hub. 
+\afslut
+\pind The meaning of the hub  state
+\begynd
+\pind in which, e.g., \textsf{(l$_f$,l$_t$)} is an element, 
+\pind is that the hub is open,  \bgcolor{``green''}, 
+\pind for traffic $f$rom link \textsf{l$_f$} $t$o link \textsf{l$_t$}.  
+\pind If a hub state is empty
+\pind then the hub is closed, i.e., \brcolor{``red''} 
+\pind for traffic from any
+                         connected links to any other connected links.
+\afslut
+\afslut
+\mnewfoil
+\item \label{p-h-attr-010} There is a hub state space.
+\begynd
+\pind It is a set of hub states. 
+\pind The current hub state must be in its state space.
+\pind The meaning of the hub state space is 
+\begynd
+\pind that its states are all those the hub can attain.
+\afslut
+\afslut
+\item \label{p-hub-traffic} Since we can think rationally about it,
+\begynd
+\pind it can be described, hence we can model, as an
+                          attribute of hubs, a history of its traffic:
+\begynd
+\pind the recording, per unique bus  and automobile identifier, 
+\pind of the time ordered presence in the hub of these vehicles.   
+\afslut
+\pind Hub history is an \sfsl{event history}.
+\afslut
+\savei\end{enumerate}
+\pos{\psno}{\mnewfoil}\LLll
+%\RSLatex
+%type
+%&\ref{p-h-attr-000}&  H`Sigma = (L_UI><L_UI)-set
+%axiom
+%&\ref{p-h-attr-000}&  all h:H :- obs_H`Sigma(h) isin obs_H`Omega(h)
+%type
+%&\ref{p-h-attr-010}&  H`Omega = H`Sigma-set
+%&\ref{p-hub-traffic}&  H_Traffic
+%&\ref{p-hub-traffic}&  H_Traffic = (A_UI|B_UI) -m-> (&$\mathbb{TIME}$& >< VPos)-list
+%axiom
+%&\ref{p-hub-traffic}&  all ht:H_Traffic,ui:(A_UI|B_UI) :- 
+%&\ref{p-hub-traffic}&     ui isin dom ht => time_ordered(ht(ui))
+%value 
+%&\ref{p-h-attr-000}&  attr_H`Sigma: H -> H`Sigma
+%&\ref{p-h-attr-010}&  attr_H`Omega: H -> H`Omega 
+%&\ref{p-hub-traffic}&  attr_H_Traffic: H -> H_Traffic
+%value
+%&\ref{p-hub-traffic}&   time_ordered: (&$\mathbb{TIME}$& >< VPos)-list -> Bool
+%&\ref{p-hub-traffic}&   time_ordered(tvpl) is ...
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-h-attr-000}\ \ H$\Sigma$ {\EQ} (L\_UI{\TIMES}L\_UI)\kw{-set}\\
+\kw{axiom}\\
+\ref{p-h-attr-000}\ \ {\ALL} h:H {\RDOT} obs\_H$\Sigma$(h) {\ISIN} obs\_H$\Omega$(h)\\
+\kw{type}\\
+\ref{p-h-attr-010}\ \ H$\Omega$ {\EQ} H$\Sigma$\kw{-set}\\
+\ref{p-hub-traffic}\ \ H\_Traffic\\
+\ref{p-hub-traffic}\ \ H\_Traffic {\EQ} (A\_UI{\BAR}B\_UI) {\MARROW} ($\mathbb{TIME}$ {\TIMES} VPos)$^{\ast}$\\
+\kw{axiom}\\
+\ref{p-hub-traffic}\ \ {\ALL} ht:H\_Traffic,ui:(A\_UI{\BAR}B\_UI) {\RDOT} \\
+\ref{p-hub-traffic}\ \ \ \ \ ui {\ISIN} \kw{dom} ht {\DBLRIGHTARROW} time\_ordered(ht(ui))\\
+\kw{value} \\
+\ref{p-h-attr-000}\ \ attr\_H$\Sigma$: H {\RIGHTARROW} H$\Sigma$\\
+\ref{p-h-attr-010}\ \ attr\_H$\Omega$: H {\RIGHTARROW} H$\Omega$ \\
+\ref{p-hub-traffic}\ \ attr\_H\_Traffic: H {\RIGHTARROW} H\_Traffic\\
+\kw{value}\\
+\ref{p-hub-traffic}\ \ \ time\_ordered: ($\mathbb{TIME}$ {\TIMES} VPos)$^{\ast}$ {\RIGHTARROW} \kw{Bool}\\
+\ref{p-hub-traffic}\ \ \ time\_ordered(tvpl) {\IS} {\DOTDOTDOT}
+\ep
+\noindent
+\begynd
+\pind In Item\,\vref{p-hub-traffic} we model the time-ordered sequence
+      of traffic as a discrete sampling, i.e., {\MARROW}, rather than as a
+      continuous function, {\RIGHTARROW}.
+\afslut
+}
+
+\nbbb{Invariance of Traffic States}{%
+\begin{enumerate}\setei
+\item \label{p-h-attr-030} The link identifiers of hub states must be in
+                         the set, $l_{ui}s$, of the road net's link
+                         identifiers.
+\savei\end{enumerate}
+%\RSLatex
+%axiom
+%&\ref{p-h-attr-030}&  all h:H :- h isin &$hs$& => 
+%&\ref{p-h-attr-030}&      let h`sigma = attr_H`Sigma(h) in 
+%&\ref{p-h-attr-030}&      all (l&$_{ui}i$&,li&$_{ui}i'$&):(L_UI><L_UI) :- (l&$_{ui}i$&,l&$_{ui}i'$&) isin h`sigma => {l&$_{ui_i}$&,l&$_{ui_i}'$&} <<= l&$_{ui}s$& end
+%\endRSLatex
+\bp
+\kw{axiom}\\
+\ref{p-h-attr-030}\ \ {\ALL} h:H {\RDOT} h {\ISIN} $hs$ {\DBLRIGHTARROW} \\
+\ref{p-h-attr-030}\ \ \ \ \ \ \kw{let} h$\sigma$ {\EQ} attr\_H$\Sigma$(h) \kw{in} \\
+\ref{p-h-attr-030}\ \ \ \ \ \ {\ALL} (l$_{ui}i$,li$_{ui}i'$):(L\_UI{\TIMES}L\_UI) {\RDOT} (l$_{ui}i$,l$_{ui}i'$) {\ISIN} h$\sigma$ {\DBLRIGHTARROW} {\LBRACE}l$_{ui_i}$,l$_{ui_i}'${\RBRACE} {\SUBSETEQ} l$_{ui}s$ \kw{end}
+\ep
+
+%%  LocalWords:  ui hs attr li fh th BPos atHub onLink RegNo vel acc
+  
+}%
+
+\nbbb{Link Attributes}{%%%%%%%%
+We show just a few attributes.
+
+\pos{\bmcii}{}
+\begin{enumerate}\setei
+\item \label{p-l-attr-000} There is a link state. It is a set of pairs,
+                         \textsf{(h$_f$,h$_t$)}, of distinct hub identifiers,
+                         where these hub identifiers are in the
+                         mereology of the link. The meaning of a link
+                         state in which \textsf{(h$_f$,h$_t$)} is an
+                         element is that the link is open, 
+                         \bgcolor{``green''}, for traffic $f$rom hub
+                         \textsf{h$_f$} $t$o hub \textsf{h$_t$}.  Link
+                         states can have either 0, 1 or 2 elements.
+\item \label{p-l-attr-010} There is a link state space. It is a set of
+                         link states.  The meaning of the link state
+                         space is that its states are all those the
+                         which the link can attain. The current link state must be
+                         in its state space. If a link state space is
+                         empty then the link is (permanently)
+                         closed. If it has one element then it is a
+                         one-way link. If a one-way link, $l$, is imminent
+                         on a hub whose mereology designates that
+                         link, then the link is a ``trap'', i.e., a
+                         ``blind cul-de-sac''. 
+\mnewfoil
+\item \label{p-link-traffic} Since we can think rationally about it, it
+                          can be described, hence it can model, as an
+                          attribute of links a  history of its traffic:
+                          the recording, per unique bus  and
+                          automobile identifier, of the time ordered
+                          positions along the link (from one hub to
+                          the next) of these vehicles.  
+\item \label{p-l-attr-030} The hub identifiers of link states must be in
+                         the set, $h_{ui}s$, of the road net's hub
+                         identifiers. 
+\savei\end{enumerate}
+\mnewfoil\LLLL
+%\RSLatex
+%type
+%&\ref{p-l-attr-000}&  L`Sigma = H_UI-set
+%axiom
+%&\ref{p-l-attr-000}&  all l`sigma:L`Sigma:-card l`sigma=2
+%&\ref{p-l-attr-000}&  all l:L :- obs_L`Sigma(l) isin obs_L`Omega(l)
+%type
+%&\ref{p-l-attr-010}&  L`Omega = L`Sigma-set
+%&\ref{p-link-traffic}&  L_Traffic
+%&\ref{p-link-traffic}&  L_Traffic = (A_UI|B_UI) -m-> (&$\mathbb{T}$&><(H_UI><Frac><H_UI))-list      
+%&\ref{p-link-traffic}&  Frac = Real, axiom frac:Fract :- 0<frac<1
+%value 
+%&\ref{p-l-attr-000}&  attr_L`Sigma: L -> L`Sigma
+%&\ref{p-l-attr-010}&  attr_L`Omega: L -> L`Omega
+%&\ref{p-link-traffic}&  attr_L_Traffic: : -> L_Traffic
+%axiom
+%&\ref{p-link-traffic}&  all lt:L_Traffic,ui:(A_UI|B_UI):-ui isin dom ht => time_ordered(ht(ui))
+%&\ref{p-l-attr-030}&  all l:L :- l isin &$ls$& => 
+%&\ref{p-l-attr-030}&     let l`sigma = attr_L`Sigma(l) in all (h&$_{ui}i$&,h&$_{ui}i'$&):(H_UI><K_UI) :- 
+%&\ref{p-l-attr-030}&        (h&$_{ui}i$&,h&$_{ui}i'$&) isin l`sigma => {h&$_{ui_i}$&,h&$_{ui_i}'$&} <<= h&$_{ui}s$& end  
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-l-attr-000}\ \ L$\Sigma$ {\EQ} H\_UI\kw{-set}\\
+\kw{axiom}\\
+\ref{p-l-attr-000}\ \ {\ALL} l$\sigma$:L$\Sigma${\RDOT}\kw{card} l$\sigma${\EQ}2\\
+\ref{p-l-attr-000}\ \ {\ALL} l:L {\RDOT} obs\_L$\Sigma$(l) {\ISIN} obs\_L$\Omega$(l)\\
+\kw{type}\\
+\ref{p-l-attr-010}\ \ L$\Omega$ {\EQ} L$\Sigma$\kw{-set}\\
+\ref{p-link-traffic}\ \ L\_Traffic\\
+\ref{p-link-traffic}\ \ L\_Traffic {\EQ} (A\_UI{\BAR}B\_UI) {\MARROW} ($\mathbb{T}${\TIMES}(H\_UI{\TIMES}Frac{\TIMES}H\_UI))$^{\ast}$\ \ \ \ \ \ \\
+\ref{p-link-traffic}\ \ Frac {\EQ} \kw{Real}, \kw{axiom} frac:Fract {\RDOT} 0{\LT}frac{\LT}1\\
+\kw{value} \\
+\ref{p-l-attr-000}\ \ attr\_L$\Sigma$: L {\RIGHTARROW} L$\Sigma$\\
+\ref{p-l-attr-010}\ \ attr\_L$\Omega$: L {\RIGHTARROW} L$\Omega$\\
+\ref{p-link-traffic}\ \ attr\_L\_Traffic: : {\RIGHTARROW} L\_Traffic\\
+\kw{axiom}\\
+\ref{p-link-traffic}\ \ {\ALL} lt:L\_Traffic,ui:(A\_UI{\BAR}B\_UI){\RDOT}ui {\ISIN} \kw{dom} ht {\DBLRIGHTARROW} time\_ordered(ht(ui))\\
+\ref{p-l-attr-030}\ \ {\ALL} l:L {\RDOT} l {\ISIN} $ls$ {\DBLRIGHTARROW} \\
+\ref{p-l-attr-030}\ \ \ \ \ \kw{let} l$\sigma$ {\EQ} attr\_L$\Sigma$(l) \kw{in} {\ALL} (h$_{ui}i$,h$_{ui}i'$):(H\_UI{\TIMES}K\_UI) {\RDOT} \\
+\ref{p-l-attr-030}\ \ \ \ \ \ \ \ (h$_{ui}i$,h$_{ui}i'$) {\ISIN} l$\sigma$ {\DBLRIGHTARROW} {\LBRACE}h$_{ui_i}$,h$_{ui_i}'${\RBRACE} {\SUBSETEQ} h$_{ui}s$ \kw{end}\ \ 
+\ep
+\pos{\emcii}{}
+
+\bbb{Bus Company Attributes}\HHHH
+\begynd
+\pind Bus companies operate a number of lines that service passenger
+      transport along routes of the road net. Each line being serviced
+      by a number of buses.
+\afslut
+\begin{enumerate}\setei
+\item \label{p-bc-attr-011} Bus companies create, maintain, revise and
+                          distribute \nyl [to the public (not modeled
+                          here), and to buses] \nyl
+                          bus time tables, not further defined.
+\savei\end{enumerate}
+%\mnewfoil
+%\RSLatex
+%type
+%&\ref{p-bc-attr-011}&   BusTimTbl 
+%value   
+%&\ref{p-bc-attr-011}&   attr_BusTimTbl: BC -> BusTimTbl
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-bc-attr-011}\ \ \ BusTimTbl \\
+\kw{value}\ \ \ \\
+\ref{p-bc-attr-011}\ \ \ attr\_BusTimTbl: BC {\RIGHTARROW} BusTimTbl
+\ep
+
+\noindent
+\begynd
+\pind There are two notions of time at play here:
+\begynd
+\pind the indefinite ``real'' or ``actual'' time; and
+\pind the definite calendar, hour, minute and second time designation occurring
+      in some textual form in, e.g., time tables.
+\afslut
+\afslut
+
+\nbbb{Bus Attributes} We show just a few attributes.
+
+\begin{enumerate}\setei
+\item \label{p-b-attr-000} Buses run routes, according to their line
+                         number, \textsf{ln:LN}, in the 
+\item \label{p-b-attr-010} bus time table, \textsf{btt:BusTimTbl}  obtained from their bus
+                         company, and and keep, as inert attributes,
+                         their segment of that time table.
+\item \label{p-b-attr-020} Buses occupy positions on the road
+                         net:
+\begin{enumerate}
+\item \label{p-b-attr-030} either \sfsl{at a hub} identified by some
+                         \textsf{h\_ui}, %\tidxi{B: atHub::H\_UI}{b-attr-030} 
+\item \label{p-b-attr-040} or \sfsl{on a link}, some \sfsl{fraction},
+                         \textsf{f:Fract}, %\tidxi{B: Fract\EQ\kw{Real}}{b-attr-040}
+                         down an \sfsl{identified link, l\_ui}, from one of
+                         its \sfsl{identified connecting hub}s, \textsf{fh\_ui}, in the 
+                         direction of the other \sfsl{identified hub},
+                         \textsf{th\_ui}.
+\end{enumerate}
+\item \label{p-b-attr-050} Et cetera.
+\savei\end{enumerate}
+\mnewfoil
+
+%\RSLatex
+%type
+%&\ref{p-b-attr-000}&    LN
+%&\ref{p-b-attr-010}&    BusTimTbl 
+%&\ref{p-b-attr-020}&    BPos   == atHub | onLink
+%&\ref{p-b-attr-030}&  &\,&atHub    &\,&:: h_ui:H_UI
+%&\ref{p-b-attr-040}&  &\,&onLink    :: fh_ui:H_UI><l_ui:L_UI><frac:Fract><th_ui:H_UI
+%&\ref{p-b-attr-040}&  &\,&Fract     = Real, axiom frac:Fract :- 0<frac<1
+%&\ref{p-b-attr-050}&    ...
+%value   
+%&\ref{p-b-attr-010}&    attr_BusTimTbl: B -> BusTimTbl
+%&\ref{p-b-attr-020}&    attr_BPos: B -> BPos
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-b-attr-000}\ \ \ \ LN\\
+\ref{p-b-attr-010}\ \ \ \ BusTimTbl \\
+\ref{p-b-attr-020}\ \ \ \ BPos\ \ \ {\EQ}{\EQ} atHub {\BAR} onLink\\
+\ref{p-b-attr-030}\ \ \,atHub\ \ \ \ \,:: h\_ui:H\_UI\\
+\ref{p-b-attr-040}\ \ \,onLink\ \ \ \ :: fh\_ui:H\_UI{\TIMES}l\_ui:L\_UI{\TIMES}frac:Fract{\TIMES}th\_ui:H\_UI\\
+\ref{p-b-attr-040}\ \ \,Fract\ \ \ \ \ {\EQ} \kw{Real}, \kw{axiom} frac:Fract {\RDOT} 0{\LT}frac{\LT}1\\
+\ref{p-b-attr-050}\ \ \ \ {\DOTDOTDOT}\\
+\kw{value}\ \ \ \\
+\ref{p-b-attr-010}\ \ \ \ attr\_BusTimTbl: B {\RIGHTARROW} BusTimTbl\\
+\ref{p-b-attr-020}\ \ \ \ attr\_BPos: B {\RIGHTARROW} BPos
+\ep
+
+\nbbb{Private Automobile Attributes} 
+
+\begynd
+\pind We illustrate but a few attributes:
+\afslut
+\begin{enumerate}\setei
+\item \label{p-a-attr-000} Automobiles have static number plate
+                         registration numbers.
+\item \label{p-a-attr-005} Automobiles have dynamic positions on the road net:
+\begin{enumerate}
+\item[] [\ref{p-b-attr-030}] either \sfsl{at a hub} identified by some \textsf{h\_ui}, 
+\item[] [\ref{p-b-attr-040}] or \sfsl{on a link}, some \sfsl{fraction, frac:Fract} down an
+                         \sfsl{identified link, l\_ui}, from one of
+                         its \sfsl{identified connecting hub}s, \textsf{fh\_ui}, in the 
+                         direction of the other \sfsl{identified hub},
+                         \textsf{th\_ui}. 
+\end{enumerate}
+\savei\end{enumerate}
+\mnewfoil
+%\RSLatex
+%type
+%&\ref{p-a-attr-000}&   RegNo& \atidxi{A: RegNo [static]}{a-attr-000}&
+%&\ref{p-a-attr-005}&   APos   == atHub | onLink &\atidxi{A: APos{\EQ}{\EQ}atHub\protect{\BAR}onLink [programmable]}{a-attr-005}&
+%&\ref{p-b-attr-030}&  atHub    &\,&:: h_ui:H_UI &\tidxi{A: atHub::H\_UI}{b-attr-030}&
+%&\ref{p-b-attr-040}&  onLink    :: fh_ui:H_UI >< l_ui:L_UI >< frac:Fract >< th_ui:H_UI&\tidxi{A: onLink::H\_UI{\TIMES}L\_UI{\TIMES}Fract{\TIMES}H\_UI}{b-attr-040}&
+%&\ref{p-b-attr-040}&  Fract     = Real, axiom frac:Fract :- 0<frac<1 &\tidxi{A: Frac{\EQ}\kw{Real}}{b-attr-040}&
+%value  
+%&\ref{p-a-attr-000}&   attr_RegNo: A -> RegNo&\afidxi{A: attr\_RegNo}{a-attr-000}& 
+%&\ref{p-a-attr-005}&   attr_APos: A -> APos&\afidxi{A: attr\_APos}{a-attr-005}& 
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-a-attr-000}\ \ \ RegNo \atidxi{A: RegNo [static]}{a-attr-000}\\
+\ref{p-a-attr-005}\ \ \ APos\ \ \ {\EQ}{\EQ} atHub {\BAR} onLink \atidxi{A: APos{\EQ}{\EQ}atHub\protect{\BAR}onLink [programmable]}{a-attr-005}\\
+\ref{p-b-attr-030}\ \ atHub\ \ \ \ \,:: h\_ui:H\_UI \tidxi{A: atHub::H\_UI}{b-attr-030}\\
+\ref{p-b-attr-040}\ \ onLink\ \ \ \ :: fh\_ui:H\_UI {\TIMES} l\_ui:L\_UI {\TIMES} frac:Fract {\TIMES} th\_ui:H\_UI\tidxi{A: onLink::H\_UI{\TIMES}L\_UI{\TIMES}Fract{\TIMES}H\_UI}{b-attr-040}\\
+\ref{p-b-attr-040}\ \ Fract\ \ \ \ \ {\EQ} \kw{Real}, \kw{axiom} frac:Fract {\RDOT} 0{\LT}frac{\LT}1 \tidxi{A: Frac{\EQ}\kw{Real}}{b-attr-040}\\
+\kw{value}\ \ \\
+\ref{p-a-attr-000}\ \ \ attr\_RegNo: A {\RIGHTARROW} RegNo\afidxi{A: attr\_RegNo}{a-attr-000} \\
+\ref{p-a-attr-005}\ \ \ attr\_APos: A {\RIGHTARROW} APos\afidxi{A: attr\_APos}{a-attr-005} 
+\ep
+\mnewfoil
+\noindent
+\begynd
+\pind Obvious attributes that are not illustrated are those of
+\begynd
+\pind velocity and acceleration, 
+\pind forward or backward movement, 
+\pind turning right, left or going straight, 
+\pind etc.
+\afslut
+\afslut
+\mnewfoil
+\noindent
+\begynd
+\pind The \sfsl{acceleration, deceleration, even velocity,} or \sfsl{turning 
+      right, turning left, moving straight}, or \sfsl{forward} or
+      \sfsl{backward} are seen as \sfsl{command actions}. 
+\begynd
+\pind As such they denote actions by the automobile ---
+\pind such as \textsf{pressing the accelerator}, or \textsf{lifting
+      accelerator pressure} or 
+      \sfsl{braking}, or \sfsl{turning the wheel} in one direction or
+      another, etc.
+\pind As actions they have a kind of counterpart in the
+      \textsf{vel}ocity, the \textsf{acc}eleration, etc. attributes.
+\afslut
+\afslut
+\pos{\emcii}{}
+\mnewfoil
+\begynd
+\pind Observe that bus companies each have their own distinct
+      \sfsl{bus time table}, and that these are modeled as
+      \sfsl{programmable}, Item\,\vref{p-bc-attr-011}, page
+      \pageref{p-bc-attr-011}.  
+\pind Observe then that buses each have their own distinct \sfsl{bus
+      time table}, and that these are model-led as \sfsl{inert},
+      Item\,\vref{p-b-attr-010}, page \pageref{p-b-attr-010}.
+\dbeat{\pind In Items\,\ref{p-p-c00}--\psref{p-c50}
+      we shall see how the buses communicate with
+      their respective bus companies in order for the buses to obtain
+      the \sfsl{programmed} bus time tables ``in lieu'' of their
+      \sfsl{inert} one\,!}
+\mnewfoil
+\pind In Items\,\psref{hub-traffic} and \psref{link-traffic}, 
+      we illustrated an aspect of domain 
+      analysis \& description that may seem, and at least some decades
+      ago would have seemed, strange: namely that if we can think,
+      hence speak, about it, then we can model it ``as a fact'' in the
+      domain. The case in point is that we include among hub and link
+      attributes their histories of the timed whereabouts of buses and
+      automobiles.\footnotemark
+\afslut
+}\footnotetext{In this day and age of road cameras and
+        satellite surveillance these traffic recordings may not appear
+        so strange: We now know, at least in principle, of
+        technologies that can record approximations to the hub and
+        link traffic attributes.} 
+\pos{\psno}{\mnewfoil}
+
+\nbbb{Intentionality}\label{p-chap2.Intentionality}
+
+\begin{enumerate}\setei
+\item \label{p-pull020} Seen from the point of view of an automobile
+  there is its own traffic history, \textsf{A\_Hist},
+  which is a (time ordered) sequence of timed automobile's positions; 
+\item \label{p-pull030} seen from the point of view of a hub
+  there is its own traffic history, \textsf{H\_Traffic} Item\,\psref{hub-traffic},
+  which is a (time ordered) sequence of timed maps from automobile
+  identities into automobile positions; and 
+\item \label{p-pull040} seen from the point of view of a link
+  there is its own traffic history, \textsf{L\_Traffic} Item\,\psref{link-traffic},
+  which is a (time ordered) sequence of timed maps from automobile
+  identities into automobile positions. 
+  \savei\end{enumerate}
+%\pos{\psno}{\mnewfoil}
+\begynd
+\pind The \sfsl{intentional ``pull''} of these manifestations is this:
+\afslut
+\begin{enumerate}\setei
+\item \label{p-pull050} The union, i.e. proper merge of all automobile
+  traffic histories, \textsf{AllATH}, must now be identical to the
+  same  proper merge of all hub, \textsf{AllHTH}, 
+  and all link traffic histories, \textsf{AllLTH}.
+\savei\end{enumerate}\sf%
+\pos{\psno}{\mnewfoil}
+%\RSLatex
+%type
+%&\ref{p-pull020}&    A_Hi  = (&$\mathbb{T}$& >< APos)-list &\atidxi{A: A\_Hi}{pull020}&       
+%&\ref{p-hub-traffic}&    H_Trf = A_UI -m-> (&$\mathbb{TIME}$& >< APos)-list&\atidxi{H: H\_Trf [programmable]}{hub-traffic}&
+%&\ref{p-link-traffic}&    L_Trf = A_UI-m-> (&$\mathbb{TIME}$&><APos)-list &\atidxi{L: L\_Trf [programmable]}{link-traffic}& 
+%&\ref{p-pull050}&    AllATH=&$\mathbb{TIME}$&-m->(AUI-m->APos) 
+%&\ref{p-pull050}&    AllHTH=&$\mathbb{TIME}$&-m->(AUI-m->APos) 
+%&\ref{p-pull050}&    AllLTH&\,&=&$\mathbb{TIME}$&-m->(AUI-m->APos) 
+%axiom
+%&\ref{p-pull050}&    let allA=mrg_AllATH({(a,attr_A_Hi(a))|a:A:-a isin &$as$&}),
+%&\ref{p-pull050}&        allH=mrg_AllHTH({attr_H_Trf(h)|h:H:-h isin &$hs$&}),
+%&\ref{p-pull050}&        allL&\,&=mrg_AllLTH({attr_L_Trf(l)|l:L:-h isin &$ls$&}) in
+%&\ref{p-pull050}&    allA = mrg_HLT(allH,allL) end
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-pull020}\ \ \ \ A\_Hi\ \ {\EQ} ($\mathbb{T}$ {\TIMES} APos)$^{\ast}$ \atidxi{A: A\_Hi}{pull020}\ \ \ \ \ \ \ \\
+\ref{p-hub-traffic}\ \ \ \ H\_Trf {\EQ} A\_UI {\MARROW} ($\mathbb{TIME}$ {\TIMES} APos)$^{\ast}$\atidxi{H: H\_Trf [programmable]}{hub-traffic}\\
+\ref{p-link-traffic}\ \ \ \ L\_Trf {\EQ} A\_UI{\MARROW} ($\mathbb{TIME}${\TIMES}APos)$^{\ast}$ \atidxi{L: L\_Trf [programmable]}{link-traffic} \\
+\ref{p-pull050}\ \ \ \ AllATH{\EQ}$\mathbb{TIME}${\MARROW}(AUI{\MARROW}APos) \\
+\ref{p-pull050}\ \ \ \ AllHTH{\EQ}$\mathbb{TIME}${\MARROW}(AUI{\MARROW}APos) \\
+\ref{p-pull050}\ \ \ \ AllLTH\,{\EQ}$\mathbb{TIME}${\MARROW}(AUI{\MARROW}APos) \\
+\kw{axiom}\\
+\ref{p-pull050}\ \ \ \ \kw{let} allA{\EQ}mrg\_AllATH({\LBRACE}(a,attr\_A\_Hi(a)){\BAR}a:A{\RDOT}a {\ISIN} $as${\RBRACE}),\\
+\ref{p-pull050}\ \ \ \ \ \ \ \ allH{\EQ}mrg\_AllHTH({\LBRACE}attr\_H\_Trf(h){\BAR}h:H{\RDOT}h {\ISIN} $hs${\RBRACE}),\\
+\ref{p-pull050}\ \ \ \ \ \ \ \ allL\,{\EQ}mrg\_AllLTH({\LBRACE}attr\_L\_Trf(l){\BAR}l:L{\RDOT}h {\ISIN} $ls${\RBRACE}) \kw{in}\\
+\ref{p-pull050}\ \ \ \ allA {\EQ} mrg\_HLT(allH,allL) \kw{end}
+\ep
+
+\mnewfoil
+\noindent%
+\normalsize\HHHH\rm
+\begynd%
+\pind We leave the definition of the \pos{four}{} \textsf{merge} functions
+      to the \pos{reader}{listener}\,!
+\begynd
+\pind We endow 
+\begynd
+\pind each automobile with its history of timed positions and
+\pind each hub and link with  their histories of timed automobile positions.
+\afslut 
+\pind These histories  are facts\,!
+\pind They are not something that is laboriously recorded, \nyl 
+      where such recordings may be imprecise or cumbersome\footnote{\LLLL or
+      thought technologically in-feasible -- at least some decades
+      ago!}.
+\pind The facts are there, so we can (but may not necessarily) \nyl talk
+      about these histories as facts.
+\mnewfoil
+\pind It is in that sense that the purpose (\texttt{`transport'})
+\begynd
+\pind for which man let automobiles, hubs and link be made 
+\pind with their \texttt{`transport'} intent
+\pind are subject to an \sfsl{intentional ``pull''.}
+\afslut
+\afslut
+\pind \sfsl{It can be no other way:  if automobiles ``record''
+      their history, then hubs and links must together ``record''
+      identically the same history\,!}.
+\afslut
+\normalsize\HHHH\rm
+
+\mnewfoil
+   
+\vspace{2mm}
+ 
+\noindent
+\sort{Intentional Pull -- General Transport:}{
+\begynd
+\pind These are examples of human intents:
+\begynd
+\pind they create \sfsl{roads} and \sfsl{automobiles} \nyl  with the
+intent of \sfsl{transport}, 
+\pind they create \sfsl{houses} \nyl  with the intents of
+\sfsl{living, offices, 
+      production}, etc., and
+\pind they create \sfsl{pipelines} \nyl with the intent of  \sfsl{oil}
+      or \sfsl{gas transport} \eod\ \ \ 
+\afslut
+\afslut
+}
+
+
+\nbbbbb{Perdurants}
+
+\noindent
+\begynd
+\pind In this section we transcendentally ``morph'' \nyl \sort{parts} into \sort{behaviours.}
+\pind We analyse that notion and its constituent notions of
+\begynd
+\pind \sort{actors},
+\pind \sort{channels} and \sort{communication},
+\pind \sort{actions} and
+\pind \sort{events}.
+\afslut 
+\afslut
+
+\begynd
+\pind The main transcendental deduction of this chapter
+\begynd
+\pind is that of associating 
+\pind with each part
+\pind a behaviour.
+\afslut
+\pind This section shows the details of that association.
+\mnewfoil
+\pind Perdurants are understood in terms of
+\begynd 
+\pind a notion of \pcindextermi{state} and 
+\pind a notion of \pcindextermi{time}.
+\afslut
+\afslut
+\label{p-kapitel6.eoi}
+
+\mnewfoil
+
+\pos{\vspace{2mm}}{}
+ 
+\noindent
+\sort{State Values versus State Variables:}{
+\begynd
+\pind Item \vref{p-srares-090} expresses the \bbcolor{value} of all parts of a
+      road transport system:
+\afslut
+%\RSLatex
+%&\ref{p-srares-090}.&  &$ps$&:(UoB|H|L|BC|B|A)-set is &$rts$&union&$hls$&union&$bcs$&union&$bs$&union&$as$&.
+%\endRSLatex 
+\bp
+\ref{p-srares-090}.\ \ $ps$:(UoB{\BAR}H{\BAR}L{\BAR}BC{\BAR}B{\BAR}A)\kw{-set} {\IS} $rts${\UNION}$hls${\UNION}$bcs${\UNION}$bs${\UNION}$as$.
+\ep
+\begin{enumerate}\setei
+\item \label{p-variable-000} We now introduce the set of variables, one
+  for each part value of the domain being modeled.
+\savei\end{enumerate}
+%\RSLatex
+%&\ref{p-variable-000}.& { variable &$vp$&:(UoB|H|L|BC|B|A) | &$vp$&:(UoB|H|L|BC|B|A) :- &$vp$&isin&$ps$& }
+%\endRSLatex 
+\bp
+\ref{p-variable-000}. {\LBRACE} \kw{variable} $vp$:(UoB{\BAR}H{\BAR}L{\BAR}BC{\BAR}B{\BAR}A) {\BAR} $vp$:(UoB{\BAR}H{\BAR}L{\BAR}BC{\BAR}B{\BAR}A) {\RDOT} $vp${\ISIN}$ps$ {\RBRACE}
+\ep
+\vspace*{-3mm}
+}
+
+
+
+\mnewfoil
+
+\pos{\vspace{2mm}}{}
+ 
+\noindent
+\sort{Buses and Bus Companies}{ %
+\begynd%
+\pind A bus company is like a ``root'' for its fleet of ``sibling'' buses.
+\pind But a bus company may cease to exist without the buses therefore
+      necessarily also ceasing to exist.
+\pind They may continue to operate, probably illegally, without,
+      possibly. \nyl a valid bus driving certificate.
+\pind Or they may be passed on to either private owners or to other bus companies.
+\pind We use this example as a reason for not endowing a ``block
+      structure'' concept on behaviours.
+\afslut
+}
+
+\nbbbb{Channels and Communication}\label{p-mono.Channels}\label{p-kap6.Channels}
+
+\bbb{Channel Message Types}
+
+\begynd
+\pind We ascribe types to the messages offered on channels. 
+\begin{enumerate}\setei
+\item \label{p-chmsg-000} Hubs and links communicate, both ways, with
+                        one another, over channels, \texttt{hl\_ch},
+                        whose indexes are determined by their mereologies.
+\item \label{p-chmsg-010} Hubs send one kind of messages, links another.
+\item \label{p-chmsg-020} Bus companies offer timed bus time tables to
+                        buses, one way.
+\item \label{p-chmsg-030} Buses and automobiles offer their current,
+                        timed positions to the road element, hub or
+                        link they are on, one way. 
+\savei\end{enumerate}\footsize
+\afslut
+
+\LLLL %\pos{\psno}{\mnewfoil}
+
+%\RSLatex
+%type
+%&\ref{p-chmsg-010}&  H_L_Msg, L_H_Msg &\ctidxi{H\_L\_Msg}{chmsg-000}\ctidxi{L\_H\_Msg}{chmsg-000}&
+%&\ref{p-chmsg-000}&  HL_Msg = H_L_Msg | L_F_Msg &\ctidxi{HL\_Msg{\EQ}H\_L\_Msg\protect{\BAR}L\_F\_Msg}{chmsg-000}&
+%&\ref{p-chmsg-020}&  BC_B_Msg = T >< BusTimTbl &\ctidxi{BC\_B\_Msg{\EQ}(T{\TIMES}BusTimTbl)}{chmsg-010}&
+%&\ref{p-chmsg-030}&  V_R_Msg = T >< (BPos|APos) &\ctidxi{V\_R\_Msg{\EQ}(T{\TIMES}(BPos\protect{\BAR}APos))}{chmsg-020}&
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-chmsg-010}\ \ H\_L\_Msg, L\_H\_Msg \ctidxi{H\_L\_Msg}{chmsg-000}\ctidxi{L\_H\_Msg}{chmsg-000}\\
+\ref{p-chmsg-000}\ \ HL\_Msg {\EQ} H\_L\_Msg {\BAR} L\_F\_Msg \ctidxi{HL\_Msg{\EQ}H\_L\_Msg\protect{\BAR}L\_F\_Msg}{chmsg-000}\\
+\ref{p-chmsg-020}\ \ BC\_B\_Msg {\EQ} T {\TIMES} BusTimTbl \ctidxi{BC\_B\_Msg{\EQ}(T{\TIMES}BusTimTbl)}{chmsg-010}\\
+\ref{p-chmsg-030}\ \ V\_R\_Msg {\EQ} T {\TIMES} (BPos{\BAR}APos) \ctidxi{V\_R\_Msg{\EQ}(T{\TIMES}(BPos\protect{\BAR}APos))}{chmsg-020}
+\ep
+\smallish
+
+\pos{\psno}{\mnewfoil}
+
+\nbbb{Channel Declarations}
+\begin{enumerate}\setei
+\item \label{p-ch-dcl-00} This justifies the channel declaration which
+                        is calculated to be:
+                        \cidxi{hl\_ch[i,j]:HL\_Msg}{ch-dcl-00} 
+\savei\end{enumerate}\footsize\LLLL\HHHH
+%\RSLatex 
+%channel
+%&\ref{p-ch-dcl-00}&   { hl_ch[h_ui,l_ui]:H_L_Msg | h_ui:H_UI,l_ui:L_UI:-i isin &$h_{ui}s$&/\j isin &$lh_{ui}m$&(h_ui) }
+%&\ref{p-ch-dcl-00}&   union
+%&\ref{p-ch-dcl-00}&   { hl_ch[h_ui,l_ui]:L_H_Msg | h_ui:H_UI,l_ui:L_UI:-l_ui isin &$l_{ui}s$&/\i isin &$lh_{ui}m$&(l_ui) }
+%\endRSLatex 
+\bp
+\kw{channel}\\
+\ref{p-ch-dcl-00}\ \ \ {\LBRACE} hl\_ch{\LBRACKET}h\_ui,l\_ui{\RBRACKET}:H\_L\_Msg {\BAR} h\_ui:H\_UI,l\_ui:L\_UI{\RDOT}i {\ISIN} $h_{ui}s${\WEDGE}j {\ISIN} $lh_{ui}m$(h\_ui) {\RBRACE}\\
+\ref{p-ch-dcl-00}\ \ \ {\UNION}\\
+\ref{p-ch-dcl-00}\ \ \ {\LBRACE} hl\_ch{\LBRACKET}h\_ui,l\_ui{\RBRACKET}:L\_H\_Msg {\BAR} h\_ui:H\_UI,l\_ui:L\_UI{\RDOT}l\_ui {\ISIN} $l_{ui}s${\WEDGE}i {\ISIN} $lh_{ui}m$(l\_ui) {\RBRACE}
+\ep
+\smallish
+\pos{\psno}{\mnewfoil}
+
+\noindent
+\begynd
+\pind We shall argue for bus company-to-bus channels
+      based on the mereologies of those parts. 
+\begynd
+\pind Bus companies need communicate to all its buses, but not the
+      buses of other bus companies.
+\pind Buses of a bus company need communicate to their bus company,
+      but not to other bus companies. 
+\afslut
+\afslut
+\begin{enumerate}\setei
+\item \label{p-ch-dcl-10} This justifies the channel declaration which
+                        is calculated to be:
+                        \cidxi{bc\_b\_ch[i,j]:BC\_B\_Msg}{ch-dcl-10} 
+\savei\end{enumerate}\footsize\LLLL%\HHHH
+%\RSLatex
+%channel
+%&\ref{p-ch-dcl-10}&   { bc_b_ch[bc_ui,b_ui] | bc_ui:BC_UI, b_ui:B_UI :- bc_ui isin &$bc_{ui}s$& /\ b_ui isin &$b_{ui}s$& }: BC_B_Msg
+%\endRSLatex 
+\bp
+\kw{channel}\\
+\ref{p-ch-dcl-10}\ \ \ {\LBRACE} bc\_b\_ch{\LBRACKET}bc\_ui,b\_ui{\RBRACKET} {\BAR} bc\_ui:BC\_UI, b\_ui:B\_UI {\RDOT} bc\_ui {\ISIN} $bc_{ui}s$ {\WEDGE} b\_ui {\ISIN} $b_{ui}s$ {\RBRACE}: BC\_B\_Msg
+\ep
+\smallish
+\pos{\psno}{\mnewfoil}
+
+\noindent
+\begynd
+\pind We shall argue for vehicle to road element channels
+      based on the mereologies of those parts. 
+\begynd
+\pind Buses and automobiles need communicate to
+\begynd
+\pind all hubs and
+\pind all links.
+\afslut
+\afslut
+\afslut
+\begin{enumerate}\setei
+\item \label{p-ch-dcl-20} This justifies the channel declaration
+                        which is calculated to be:
+                        \cidxi{v\_r\_ch[i,j]:V\_R\_Msg}{ch-dcl-20}   
+\savei\end{enumerate}\footsize\HHHH\LLLL                  
+%\RSLatex
+%channel
+%&\ref{p-ch-dcl-20}&   { v_r_ch[v_ui,r_ui] | v_ui:V_UI,r_ui:R_UI :- v_&ui&isin&\,$v_{ui}s$&/\r_&ui&isin&\,$r_{ui}s$& }: V_R_Msg 
+%\endRSLatex 
+\bp
+\kw{channel}\\
+\ref{p-ch-dcl-20}\ \ \ {\LBRACE} v\_r\_ch{\LBRACKET}v\_ui,r\_ui{\RBRACKET} {\BAR} v\_ui:V\_UI,r\_ui:R\_UI {\RDOT} v\_ui{\ISIN}\,$v_{ui}s${\WEDGE}r\_ui{\ISIN}\,$r_{ui}s$ {\RBRACE}: V\_R\_Msg 
+\ep
+\normalsize\rm\HHHH
+\label{p-mono.Channels.n}
+
+\nbbbb{Behaviours}
+
+\bbb{Road Transport Behaviour Signatures}{
+\noindent
+\begynd
+\pind We first decide on names of behaviours.
+\begynd
+\pind In the translation schemas
+\pind we gave schematic names to behaviours 
+\pind of the form $\mathcal{M}{_{P}}$.
+\afslut
+\pind We now assign mnemonic names: 
+\begynd
+\pind from part names to names of
+      transcendentally interpreted behaviours
+\pind and then we assign signatures to these behaviours.
+\afslut
+\afslut
+\pos{\psno}{\mnewfoil}
+
+\nbb{Hub Behaviour Signature}
+
+\begin{enumerate}\setei
+\item \label{p-process-000} \textsf{hub${_{h_{ui}}}$}:
+\begin{enumerate}
+\item \label{p-process-002} there is the usual ``triplet'' of arguments:
+                          unique identifier, mereology and static
+                          attributes; 
+\item \label{p-process-004} then there are the programmable attributes;
+\item \label{p-process-006} and finally there are the input/output
+                          channel references: 
+                          first those allowing communication between
+                          hub and link behaviours, 
+\item \label{p-process-008} and then those  allowing communication between
+                          hub and vehicle (bus and automobile) behaviours.
+\end{enumerate}
+\savei\end{enumerate}
+
+\pos{\psno}{\mnewfoil}
+\footsize
+
+\bidx{hub{$_{h_{ui}}$}}{process-000}
+\dbeat{\bidxi{hub{$_{h_{ui}}$}: {\protect{h\_ui:H\_UI{\TIMES}(vuis,luis,{\_}):H{\_}Mer{\TIMES}H$\Omega$}}\\
+{\RIGHTARROW} (H\protect{$\Sigma$}{\TIMES}H\_Traffic)\\ 
+{\RIGHTARROW} \kw{in}
+\protect{\LBRACE}ba\_r\_ch{\LBRACKET}h\_ui,v\_ui{\RBRACKET}\protect{\BAR}v\_ui:V\_UI\,{\RDOT}\,v\_ui\protect{\ISIN}vuis\protect{\RBRACE}  
+{\RIGHTARROW} \kw{in,out}
+  \protect{\LBRACE}h\_l\_ch{\LBRACKET}h\_ui,l\_ui{\RBRACKET}\protect{\BAR}l\_ui:L\_UI{\RDOT}l\_ui{\ISIN}luis\protect{\RBRACE}
+\kw{Unit}}{process-000}}\HHHH
+%\RSLatex
+%value
+%&\ref{p-process-000}&   hub&$_{h_{ui}}$&: 
+%&\ref{p-process-002}&   h_ui:H_UI><(vuis,luis,_):H_Mer><H`Omega
+%&\ref{p-process-004}&     -> (H`Sigma><H_Traffic)
+%&\ref{p-process-006}&     -> in,out { h_l_ch[h_ui,l_ui] | l_ui:L_UI:-l_ui isin luis }
+%&\ref{p-process-008}&           { ba_r_ch[h_ui,v_ui] | v_ui:V_UI:-&v\_ui&isin&vuis& } Unit
+%&\ref{p-process-002}&      pre: vuis = &$v_{ui}s$& /\ luis = &$l_{ui}s$&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{p-process-000}\ \ \ hub$_{h_{ui}}$: \\
+\ref{p-process-002}\ \ \ h\_ui:H\_UI{\TIMES}(vuis,luis,{\UNDERLINE}):H\_Mer{\TIMES}H$\Omega$\\
+\ref{p-process-004}\ \ \ \ \ {\RIGHTARROW} (H$\Sigma${\TIMES}H\_Traffic)\\
+\ref{p-process-006}\ \ \ \ \ {\RIGHTARROW} \kw{in},\kw{out} {\LBRACE} h\_l\_ch{\LBRACKET}h\_ui,l\_ui{\RBRACKET} {\BAR} l\_ui:L\_UI{\RDOT}l\_ui {\ISIN} luis {\RBRACE}\\
+\ref{p-process-008}\ \ \ \ \ \ \ \ \ \ \ {\LBRACE} ba\_r\_ch{\LBRACKET}h\_ui,v\_ui{\RBRACKET} {\BAR} v\_ui:V\_UI{\RDOT}v\_ui{\ISIN}vuis {\RBRACE} \kw{Unit}\\
+\ref{p-process-002}\ \ \ \ \ \ \kw{pre}: vuis {\EQ} $v_{ui}s$ {\WEDGE} luis {\EQ} $l_{ui}s$
+\ep
+\pos{\psno}{\mnewfoil}
+
+\nbb{Link Behaviour Signature}
+
+\begin{enumerate}\setei
+\item \label{p-process-010} \textsf{link${_{l_{ui}}}$}:
+\begin{enumerate}
+\item \label{p-process-012} there is the usual ``triplet'' of arguments:
+                          unique identifier, mereology and static
+                          attributes;
+\item \label{p-process-014} then there are the programmable attributes;
+\item \label{p-process-016} and finally there are the input/output channel references:
+                          first those allowing communication between
+                          hub and link behaviours, 
+\item \label{p-process-018} and then those  allowing communication between
+                          link and vehicle (bus and automobile) behaviours.
+\end{enumerate}
+\savei\end{enumerate}\footsize\sf\HHHH
+\pos{\psno}{\mnewfoil}
+\bidx{link{$_{l_{ui}}$}}{process-010}
+\dbeat{\bidxi{link{$_{l_{ui}}$}: {\protect{l\_ui:L\_UI{\TIMES}(vuis,huis,{\_}):L{\_}Mer{\TIMES}L$\Omega$}}\\
+{\RIGHTARROW} (L\protect{$\Sigma$}{\TIMES}L\_Traffic)\\ 
+{\RIGHTARROW} \kw{in}
+\protect{\LBRACE}ba\_r\_ch{\LBRACKET}l\_ui,v\_ui{\RBRACKET}\protect{\BAR}v\_ui:V\_UI\,{\RDOT}\,v\_ui\protect{\ISIN}vuis\protect{\RBRACE}  
+{\RIGHTARROW} \kw{in,out}
+  \protect{\LBRACE}h\_l\_ch{\LBRACKET}h\_ui,l\_ui{\RBRACKET}\protect{\BAR}h\_ui:H\_UI:h\_ui{\ISIN}huis\protect{\RBRACE}
+\kw{Unit}}{process-010}} 
+%\RSLatex
+%value
+%&\ref{p-process-010}&   link&$_{l_{ui}}$&:
+%&\ref{p-process-012}&   l_ui:L_UI><(vuis,huis,_):L_Mer><L`Omega
+%&\ref{p-process-014}&     -> (L`Sigma><L_Traffic)
+%&\ref{p-process-016}&     -> in,out { h_l_ch[h_ui,l_ui] | h_ui:H_UI:h_ui isin huis }
+%&\ref{p-process-018}&           { ba_r_ch[l_ui,v_ui] | v_ui:(B_UI|A_UI):-&v\_ui&isin&vuis& } Unit
+%&\ref{p-process-012}&     pre: vuis = &$v_{ui}s$& /\ huis = &$h_{ui}s$&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{p-process-010}\ \ \ link$_{l_{ui}}$:\\
+\ref{p-process-012}\ \ \ l\_ui:L\_UI{\TIMES}(vuis,huis,{\UNDERLINE}):L\_Mer{\TIMES}L$\Omega$\\
+\ref{p-process-014}\ \ \ \ \ {\RIGHTARROW} (L$\Sigma${\TIMES}L\_Traffic)\\
+\ref{p-process-016}\ \ \ \ \ {\RIGHTARROW} \kw{in},\kw{out} {\LBRACE} h\_l\_ch{\LBRACKET}h\_ui,l\_ui{\RBRACKET} {\BAR} h\_ui:H\_UI:h\_ui {\ISIN} huis {\RBRACE}\\
+\ref{p-process-018}\ \ \ \ \ \ \ \ \ \ \ {\LBRACE} ba\_r\_ch{\LBRACKET}l\_ui,v\_ui{\RBRACKET} {\BAR} v\_ui:(B\_UI{\BAR}A\_UI){\RDOT}v\_ui{\ISIN}vuis {\RBRACE} \kw{Unit}\\
+\ref{p-process-012}\ \ \ \ \ \kw{pre}: vuis {\EQ} $v_{ui}s$ {\WEDGE} huis {\EQ} $h_{ui}s$
+\ep
+\pos{\psno}{\mnewfoil}
+
+\nbb{Bus Company Behaviour Signature}
+
+\begin{enumerate}\setei
+\item \label{p-process-020} \textsf{bus\_company$_{bc_{ui}}$}:
+\begin{enumerate}
+\item \label{p-process-022} there is here just a ``doublet''  of
+                          arguments: unique identifier and mereology;
+\item \label{p-process-024} then there is the one programmable attribute;
+\item \label{p-process-026} and finally there are the input/output
+                          channel references allowing communication between
+                          the bus company and buses.
+\end{enumerate}
+\savei\end{enumerate}\footsize\sf\HHHH
+\pos{\psno}{\mnewfoil}
+\bidx{bus\_company{$_{bc_{ui}}$}}{process-020}
+\dbeat{\bidxi{bus\_company{$_{bc_{ui}}$}: {\protect{bc\_ui:BC{\_}UI{\TIMES}(\_,\_,buis):BC{\_}Mer}}\\
+{\RIGHTARROW} \kw{in} attr\_T\_ch,
+\kw{out} \protect{\LBRACE}bc\_b\_ch{\LBRACKET}bc\_ui,b\_ui{\RBRACKET}\protect{\BAR}b\_ui:B\_UI\,{\RDOT}\,b\_ui\protect{\ISIN}{buis}\protect{\RBRACE} \kw{Unit}}{process-020}}
+%\RSLatex
+%value
+%&\ref{p-process-020}&   bus_company&$_{bc_{ui}}$&: 
+%&\ref{p-process-022}&   bc_ui:BC_UI><(_,_,buis):BC_Mer
+%&\ref{p-process-024}&     -> BusTimTbl
+%&\ref{p-process-026}&        in,out {bc_b_ch[bc_ui,b_ui]|b_ui:B_UI:-&b\_ui&isin&buis&} Unit
+%&\ref{p-process-022}&     pre: buis = &$b_{ui}s$& /\ huis = &$h_{ui}s$&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{p-process-020}\ \ \ bus\_company$_{bc_{ui}}$: \\
+\ref{p-process-022}\ \ \ bc\_ui:BC\_UI{\TIMES}({\UNDERLINE},{\UNDERLINE},buis):BC\_Mer\\
+\ref{p-process-024}\ \ \ \ \ {\RIGHTARROW} BusTimTbl\\
+\ref{p-process-026}\ \ \ \ \ \ \ \ \kw{in},\kw{out} {\LBRACE}bc\_b\_ch{\LBRACKET}bc\_ui,b\_ui{\RBRACKET}{\BAR}b\_ui:B\_UI{\RDOT}b\_ui{\ISIN}buis{\RBRACE} \kw{Unit}\\
+\ref{p-process-022}\ \ \ \ \ \kw{pre}: buis {\EQ} $b_{ui}s$ {\WEDGE} huis {\EQ} $h_{ui}s$
+\ep
+\pos{\psno}{\mnewfoil}
+
+\nbb{Bus Behaviour Signature}
+
+\begin{enumerate}\setei
+\item \label{p-process-030} \textsf{bus$_{b_{ui}}$}:
+\begin{enumerate}
+\item \label{p-process-032} there is here just a ``doublet''  of
+                          arguments: unique identifier and mereology;
+\item \label{p-process-034} then there are the programmable attributes;
+\item \label{p-process-036} and finally there are the input/output
+                          channel references: first the input/output
+                          allowing communication between 
+                          the bus company and buses,
+\item \label{p-process-038} and the  input/output allowing communication between
+                          the bus and the hub and link behaviours.
+\end{enumerate}
+\savei\end{enumerate}\footsize\sf\HHHH
+\pos{\psno}{\mnewfoil}
+\bidx{bus{$_{b_{ui}}$}}{process-030}
+\dbeat{\bidxi{bus{$_{b_{ui}}$}: {\protect{b\_ui:B{\_}UI{\TIMES}(bc\_ui,\_,ruis):B{\_}Mer}}\\
+{\RIGHTARROW} bpos:BPos
+{\RIGHTARROW}
+\kw{out} \protect{\LBRACE}ba\_r\_ch{\LBRACKET}b\_ui,r\_ui{\RBRACKET}\protect{\BAR}r\_ui:R\_UI\,{\RDOT}\,r\_ui\protect{\ISIN}{ruis}\protect{\RBRACE} \kw{Unit}}{process-030}}
+%\RSLatex
+%value
+%&\ref{p-process-030}&   bus&$_{b_{ui}}$&:
+%&\ref{p-process-032}&   b_ui:B_UI><(bc_ui,_,ruis):B_Mer
+%&\ref{p-process-034}&     -> (LN >< BTT >< BPOS) 
+%&\ref{p-process-036}&     -> out bc_b_ch[bc_ui,b_ui], 
+%&\ref{p-process-038}&           {ba_r_ch[r_ui,b_ui]|r_ui:(H_UI|L_UI):-&ui&isin&$v_{ui}s$&} Unit
+%&\ref{p-process-032}&     pre: ruis = &$r_{ui}s$& /\ bc_ui isin &$bc_{ui}s$&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{p-process-030}\ \ \ bus$_{b_{ui}}$:\\
+\ref{p-process-032}\ \ \ b\_ui:B\_UI{\TIMES}(bc\_ui,{\UNDERLINE},ruis):B\_Mer\\
+\ref{p-process-034}\ \ \ \ \ {\RIGHTARROW} (LN {\TIMES} BTT {\TIMES} BPOS) \\
+\ref{p-process-036}\ \ \ \ \ {\RIGHTARROW} \kw{out} bc\_b\_ch{\LBRACKET}bc\_ui,b\_ui{\RBRACKET}, \\
+\ref{p-process-038}\ \ \ \ \ \ \ \ \ \ \ {\LBRACE}ba\_r\_ch{\LBRACKET}r\_ui,b\_ui{\RBRACKET}{\BAR}r\_ui:(H\_UI{\BAR}L\_UI){\RDOT}ui{\ISIN}$v_{ui}s${\RBRACE} \kw{Unit}\\
+\ref{p-process-032}\ \ \ \ \ \kw{pre}: ruis {\EQ} $r_{ui}s$ {\WEDGE} bc\_ui {\ISIN} $bc_{ui}s$
+\ep
+\pos{\psno}{\mnewfoil}
+
+\nbb{Automobile Behaviour Signature}
+
+\begin{enumerate}\setei              
+\item \label{p-process-040} \textsf{automobile$_{a_{ui}}$}:
+\begin{enumerate}
+\item \label{p-process-042} there is the usual ``triplet'' of arguments:
+                          unique identifier, mereology and static
+                          attributes;
+\item \label{p-process-044} then there is the one programmable attribute;
+\item \label{p-process-046} and finally there are the input/output
+                          channel references allowing communication between
+                          the automobile and the hub and link behaviours.
+\end{enumerate}
+\savei\end{enumerate}\footsize\sf\HHHH
+\pos{\psno}{\mnewfoil}
+\bidx{automobile{$_{a_{ui}}$}}{process-040}
+\dbeat{\bidxi{automobile{$_{a_{ui}}$}: {\protect{a\_ui:A{\_}UI{\TIMES}(\_,\_,ruis):A{\_}Mer{\TIMES}RegNo}}\\
+{\RIGHTARROW} apos:APos
+{\RIGHTARROW}
+\kw{out} \protect{\LBRACE}ba\_r\_ch{\LBRACKET}a\_ui,r\_ui{\RBRACKET}\protect{\BAR}r\_ui:R\_UI\,{\RDOT}\,r\_ui\protect{\ISIN}{ruis}\protect{\RBRACE} \kw{Unit}}{process-040}}
+%\RSLatex
+%value
+%&\ref{p-process-040}&   automobile&$_{a_{ui}}$&: 
+%&\ref{p-process-042}&   a_ui:A_UI><(_,_,ruis):A_Mer><rn:RegNo
+%&\ref{p-process-044}&     -> apos:APos
+%&\ref{p-process-046}&        in,out {ba_r_ch[a_ui,r_ui]|r_ui:(H_UI|L_UI):-&r\_ui&isin&ruis&} Unit
+%&\ref{p-process-042}&     pre: ruis = &$r_{ui}s$& /\ a_ui isin &$a_{ui}s$ \eox&
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{p-process-040}\ \ \ automobile$_{a_{ui}}$: \\
+\ref{p-process-042}\ \ \ a\_ui:A\_UI{\TIMES}({\UNDERLINE},{\UNDERLINE},ruis):A\_Mer{\TIMES}rn:RegNo\\
+\ref{p-process-044}\ \ \ \ \ {\RIGHTARROW} apos:APos\\
+\ref{p-process-046}\ \ \ \ \ \ \ \ \kw{in},\kw{out} {\LBRACE}ba\_r\_ch{\LBRACKET}a\_ui,r\_ui{\RBRACKET}{\BAR}r\_ui:(H\_UI{\BAR}L\_UI){\RDOT}r\_ui{\ISIN}ruis{\RBRACE} \kw{Unit}\\
+\ref{p-process-042}\ \ \ \ \ \kw{pre}: ruis {\EQ} $r_{ui}s$ {\WEDGE} a\_ui {\ISIN} $a_{ui}s$ \eox
+\ep
+\normalsize\rm
+\vspace*{1mm}
+}\normalsize\rm\HHHH
+%%  LocalWords:  behaviours ui mereology vuis luis Mer ba pre huis bc
+%%  LocalWords:  buis attr BusTimTbl ruis bpos BPos BTT RegNo apos rn
+%%  LocalWords:  APos Behaviour schemas hl lh oad ompany utomobile bm
+
+\index{defind}{Behaviour!Signatures|)}
+\label{p-kap6-end-of-Signatures}
+
+\nbbb{Behaviour Definitions}
+
+\begynd
+\pind We only illustrate automobile, hub and link behaviours.
+\afslut
+
+\bb{Automobile Behaviour at a Hub}{ \label{p-x.Automobile
+    Behaviour (at a hub)}\label{p-x.Automobile Behaviour} 
+\noindent
+\begynd
+\pind We define the behaviours in a different order than the treatment 
+      of their signatures.
+\pind We ``split'' definition of the \textsf{automobile} behaviour
+\begynd
+\pind into the behaviour of \textsf{automobile}s when positioned at
+      a hub, and
+\pind into the behaviour \textsf{automobile}s when positioned at
+      on a link.
+\pind In both cases the behaviours include the ``idling'' of the
+      automobile, i.e., its ``not moving'', standing still.
+\afslut
+\afslut
+\pos{\normalsize}{\LLLL}\rm
+\mnewfoil
+\begin{enumerate}\setei
+\item \label{p-habff1} We abstract automobile
+                    behaviour \textsf{at} a 
+                    \textsf{Hub} (\textsf{hui}). 
+\item \label{p-habff2} The vehicle remains at that hub, ``idling'', 
+\item \label{p-habff3} informing
+                    the hub behaviour,
+\item \label{p-habff4} or, internally non-deterministically, 
+\begin{enumerate} 
+\item \label{p-habff5} moves
+                    onto a link, \textsf{tli}, whose ``next'' 
+                    hub, identified by \textsf{th\_ui}, is obtained from
+                    the mereology of the link identified by \textsf{tl\_ui};  
+\item \label{p-habff6} informs the hub it is leaving and the link it is
+                    entering of its initial link position,
+\item \label{p-habff7} whereupon the vehicle resumes the vehicle
+                    behaviour positioned at the very beginning
+                    (\textsf{0}) of that link,
+\end{enumerate}
+\item \label{p-habff8} or, again internally non-deterministically, 
+\item \label{p-habff9} the vehicle ``disappears --- off the radar''~!
+\savei\end{enumerate}
+\pos{\normalsize}{\HHHH}\rm
+\mnewfoil
+%\RSLatex
+%&\ref{p-habff1}&  automobile&$_{a_{ui}}$&(a_ui,({},(ruis,vuis),{}),rn)
+%&\ref{p-habff1}&             (apos:atH(fl_ui,h_ui,tl_ui)) is
+%&\ref{p-habff2}&      (ba_r_ch[a_ui,h_ui] ! (&\recordtime&,atH(fl_ui,h_ui,tl_ui));
+%&\ref{p-habff3}&       automobile&$_{a_{ui}}$&(a_ui,({},(ruis,vuis),{}),rn)(apos))
+%&\ref{p-habff4}&     |^|
+%&\ref{p-habff5}&     (let ({fh_ui,th_ui},ruis&$'$&)=mereo_L(&$\wp$&(tl_ui)) in
+%&\ref{p-habff5}&           &\kw{assert:}& fh_ui=h_ui /\ ruis=ruis&$'$&
+%&\ref{p-habff1}&       let onl = (tl_ui,h_ui,0,th_ui) in
+%&\ref{p-habff6}&      (ba_r_ch[a_ui,h_ui] ! (&\recordtime&,onL(onl)) ||
+%&\ref{p-habff6}&       ba_r_ch[a_ui,tl_ui] ! (&\recordtime&,onL(onl))) ;
+%&\ref{p-habff7}&       automobile&$_{a_{ui}}$&(a_ui,({},(ruis,vuis),{}),rn)
+%&\ref{p-habff7}&              (onL(onl)) end end)
+%&\ref{p-habff8}&     |^|
+%&\ref{p-habff9}&        stop
+%\endRSLatex 
+\bp
+\ref{p-habff1}\ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},(ruis,vuis),{\LBRACE}{\RBRACE}),rn)\\
+\ref{p-habff1}\ \ \ \ \ \ \ \ \ \ \ \ \ (apos:atH(fl\_ui,h\_ui,tl\_ui)) {\IS}\\
+\ref{p-habff2}\ \ \ \ \ \ (ba\_r\_ch{\LBRACKET}a\_ui,h\_ui{\RBRACKET} ! (\recordtime,atH(fl\_ui,h\_ui,tl\_ui));\\
+\ref{p-habff3}\ \ \ \ \ \ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},(ruis,vuis),{\LBRACE}{\RBRACE}),rn)(apos))\\
+\ref{p-habff4}\ \ \ \ \ {\NONDETCHOICE}\\
+\ref{p-habff5}\ \ \ \ \ (\kw{let} ({\LBRACE}fh\_ui,th\_ui{\RBRACE},ruis$'$){\EQ}mereo\_L($\wp$(tl\_ui)) \kw{in}\\
+\ref{p-habff5}\ \ \ \ \ \ \ \ \ \ \ \kw{assert:} fh\_ui{\EQ}h\_ui {\WEDGE} ruis{\EQ}ruis$'$\\
+\ref{p-habff1}\ \ \ \ \ \ \ \kw{let} onl {\EQ} (tl\_ui,h\_ui,0,th\_ui) \kw{in}\\
+\ref{p-habff6}\ \ \ \ \ \ (ba\_r\_ch{\LBRACKET}a\_ui,h\_ui{\RBRACKET} ! (\recordtime,onL(onl)) {\PARL}\\
+\ref{p-habff6}\ \ \ \ \ \ \ ba\_r\_ch{\LBRACKET}a\_ui,tl\_ui{\RBRACKET} ! (\recordtime,onL(onl))) ;\\
+\ref{p-habff7}\ \ \ \ \ \ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},(ruis,vuis),{\LBRACE}{\RBRACE}),rn)\\
+\ref{p-habff7}\ \ \ \ \ \ \ \ \ \ \ \ \ \ (onL(onl)) \kw{end} \kw{end})\\
+\ref{p-habff8}\ \ \ \ \ {\NONDETCHOICE}\\
+\ref{p-habff9}\ \ \ \ \ \ \ \ \kw{stop}
+\ep
+}\rm\HHHH
+
+
+\nbb{Automobile Behaviour On a Link}
+{
+\bmcii%\pos{\begin{multicols}{2}}{}
+\begin{enumerate}\setei
+\item \label{p-abff0} We abstract automobile
+                    behaviour \textsf{on} a \textsf{Link}. 
+\begin{enumerate}
+\item \label{p-abff1} Internally non-deterministically,  either 
+\begin{enumerate}
+\item \label{p-abff3} the automobile remains, ``idling'', i.e., not moving,
+                    on the link,
+\item \label{p-abff2} however, first informing the link of its position,
+\end{enumerate}
+\item \label{p-abff4} or
+\begin{enumerate}
+\item \label{p-abff5} \kw{if} if the automobile's position on the link
+                    \sfsl{has not 
+                    yet reached the hub},  \kw{then}
+\begin{enumerate}
+\item \label{p-abff7} then the automobile moves an arbitrary
+                    small, positive \kw{Real}-valued \sfsl{increment}
+                    along the link 
+\item \label{p-abff8} informing the hub of this, 
+\item \label{p-abff9} while resuming being an automobile ate the new
+                    position, or 
+\end{enumerate}
+\pos{\psno}{\mnewfoil}
+\item \label{p-abffa} \kw{else},
+\begin{enumerate}
+\item \label{p-abffb} while obtaining a ``next link'' from the
+                    mereology of the hub (where that next link could
+                    very well be the same as the link the vehicle is
+                    about to leave),
+\item \label{p-abffc} the vehicle informs both the link and the imminent hub
+                    that it is now at that
+                    hub, identified by \textsf{th\_ui},
+\item \label{p-abffd} whereupon the vehicle resumes the vehicle
+                    behaviour positioned at that hub;
+\end{enumerate} 
+\end{enumerate} 
+\item \label{p-abffe} or
+\item \label{p-abfff} the vehicle ``disappears --- off the radar''~!
+\end{enumerate} 
+\savei\end{enumerate}
+
+\mnewfoil\LLLL
+%\RSLatex
+%&\ref{p-abff0}&   automobile&$_{a_{ui}}$&(a_ui,({},ruis,{}),rno)
+%&\ref{p-abff0}&                      (vp:onL(fh_ui,l_ui,f,th_ui)) is
+%&\ref{p-abff2}&   (ba_r_ch[thui,aui]!atH(lui,thui,nxt_lui) ;
+%&\ref{p-abff3}&     automobile&$_{a_{ui}}$&(a_ui,({},ruis,{}),rno)(vp))  
+%&\ref{p-abff4}&     |^|      
+%&\ref{p-abff5}&   (if not_yet_at_hub(f)     
+%&\ref{p-abff5}&      then  
+%&\ref{p-abff7}&       (let incr = increment(f) in
+%&\ref{p-habff1}&               let onl = (tl_ui,h_ui,incr,th_ui) in
+%&\ref{p-abff8}&         ba-r_ch[l_ui,a_ui] ! onL(onl) ;    
+%&\ref{p-abff9}&         automobile&$_{a_{ui}}$&(a_ui,({},ruis,{}),rno)   
+%&\ref{p-abff9}&                          (onL(onl))  
+%&\ref{p-abff5}&          end end)  
+%&\ref{p-abffa}&      else 
+%&\ref{p-abffb}&       (let nxt_lui:L_UI:-nxt_lui isin mereo_H(&$\wp$&(th_ui)) in
+%&\ref{p-abffc}&        ba_r_ch[thui,aui]!atH(l_ui,th_ui,nxt_lui) ;
+%&\ref{p-abffd}&        automobile&$_{a_{ui}}$&(a_ui,({},ruis,{}),rno)
+%&\ref{p-abffd}&                         (atH(l_ui,th_ui,nxt_lui)) end)       
+%&\ref{p-abff5}&     end)
+%&\ref{p-abffe}&     |^|
+%&\ref{p-abfff}&        stop
+%&\ref{p-abff7}&   increment: Fract -> Fract   
+%\endRSLatex 
+\bp
+\ref{p-abff0}\ \ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},ruis,{\LBRACE}{\RBRACE}),rno)\\
+\ref{p-abff0}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (vp:onL(fh\_ui,l\_ui,f,th\_ui)) {\IS}\\
+\ref{p-abff2}\ \ \ (ba\_r\_ch{\LBRACKET}thui,aui{\RBRACKET}!atH(lui,thui,nxt\_lui) ;\\
+\ref{p-abff3}\ \ \ \ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},ruis,{\LBRACE}{\RBRACE}),rno)(vp))\ \ \\
+\ref{p-abff4}\ \ \ \ \ {\NONDETCHOICE}\ \ \ \ \ \ \\
+\ref{p-abff5}\ \ \ (\kw{if} not\_yet\_at\_hub(f)\ \ \ \ \ \\
+\ref{p-abff5}\ \ \ \ \ \ \kw{then}\ \ \\
+\ref{p-abff7}\ \ \ \ \ \ \ (\kw{let} incr {\EQ} increment(f) \kw{in}\\
+\ref{p-habff1}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \kw{let} onl {\EQ} (tl\_ui,h\_ui,incr,th\_ui) \kw{in}\\
+\ref{p-abff8}\ \ \ \ \ \ \ \ \ ba{\MINUS}r\_ch{\LBRACKET}l\_ui,a\_ui{\RBRACKET} ! onL(onl) ;\ \ \ \ \\
+\ref{p-abff9}\ \ \ \ \ \ \ \ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},ruis,{\LBRACE}{\RBRACE}),rno)\ \ \ \\
+\ref{p-abff9}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (onL(onl))\ \ \\
+\ref{p-abff5}\ \ \ \ \ \ \ \ \ \ \kw{end} \kw{end})\ \ \\
+\ref{p-abffa}\ \ \ \ \ \ \kw{else} \\
+\ref{p-abffb}\ \ \ \ \ \ \ (\kw{let} nxt\_lui:L\_UI{\RDOT}nxt\_lui {\ISIN} mereo\_H($\wp$(th\_ui)) \kw{in}\\
+\ref{p-abffc}\ \ \ \ \ \ \ \ ba\_r\_ch{\LBRACKET}thui,aui{\RBRACKET}!atH(l\_ui,th\_ui,nxt\_lui) ;\\
+\ref{p-abffd}\ \ \ \ \ \ \ \ automobile$_{a_{ui}}$(a\_ui,({\LBRACE}{\RBRACE},ruis,{\LBRACE}{\RBRACE}),rno)\\
+\ref{p-abffd}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (atH(l\_ui,th\_ui,nxt\_lui)) \kw{end})\ \ \ \ \ \ \ \\
+\ref{p-abff5}\ \ \ \ \ \kw{end})\\
+\ref{p-abffe}\ \ \ \ \ {\NONDETCHOICE}\\
+\ref{p-abfff}\ \ \ \ \ \ \ \ \kw{stop}\\
+\ref{p-abff7}\ \ \ increment: Fract {\RIGHTARROW} Fract\ \ \ 
+\ep
+\emcii
+
+\nbb{Hub Behaviour}
+
+\begin{enumerate}\setei
+\item \label{p-p-h04} The hub behaviour 
+\begin{enumerate}
+\item \label{p-p-h05} non-deterministically, externally  offers 
+\item \label{p-p-h06} to accept timed vehicle positions ---
+\item \label{p-p-h07} which will be at the hub, from some vehicle,
+                    \textsf{v\_ui}.  
+\item \label{p-p-h10} The timed vehicle hub position is appended to the
+                    front of that vehicle's entry in the hub's traffic
+                    table; 
+\item \label{p-p-h15} whereupon the hub proceeds as a hub behaviour with 
+                    the updated hub traffic table.
+\item \label{p-p-h20} The hub behaviour offers to accept from any vehicle.
+\item \label{p-p-h2x} A \kw{post} condition expresses what is really a
+                    \kw{proof obligation}: that the \textsf{hub
+                    traffic, ht$'$} satisfies the \kw{axiom} of the
+                    endurant hub traffic attribute Item\,\psref{hub-traffic}. 
+\end{enumerate}
+\savei\end{enumerate}
+%\RSLatex
+%value
+%&\ref{p-p-h04}&  hub&$_{h_{ui}}$&(h_ui,({..},(luis,vuis)),h`omega)(h`sigma,ht) is
+%&\ref{p-p-h05}&      |=|
+%&\ref{p-p-h06}&          { let m = ba_r_ch[h_ui,v_ui] ? in  
+%&\ref{p-p-h07}&                 &\kw{assert:}& m=(_,atHub(_,h_ui,_))
+%&\ref{p-p-h10}&             let ht&$'$& = ht !! [h_ui +> <.m.>^ht(h_ui)] in
+%&\ref{p-p-h15}&             hub&$_{h_{ui}}$&(h_ui,({..},(luis,vuis)),(h`omega))(h`sigma,ht&$'$&)
+%&\ref{p-p-h20}&           | v_ui:V_UI:-v_&ui&isin&vuis& end end }
+%&\ref{p-p-h2x}&     post: all v_ui:V_UI:-v_ui isin dom ht&$'$&=>time_ordered(ht&$'$&(v_ui)) 
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{p-p-h04}\ \ hub$_{h_{ui}}$(h\_ui,({\it },(luis,vuis)),h$\omega$)(h$\sigma$,ht) {\IS}\\
+\ref{p-p-h05}\ \ \ \ \ \ {\DETCHOICE}\\
+\ref{p-p-h06}\ \ \ \ \ \ \ \ \ \ {\LBRACE} \kw{let} m {\EQ} ba\_r\_ch{\LBRACKET}h\_ui,v\_ui{\RBRACKET} ? \kw{in}\ \ \\
+\ref{p-p-h07}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \kw{assert:} m{\EQ}({\UNDERLINE},atHub({\UNDERLINE},h\_ui,{\UNDERLINE}))\\
+\ref{p-p-h10}\ \ \ \ \ \ \ \ \ \ \ \ \ \kw{let} ht$'$ {\EQ} ht {\DAGGER} {\LBRACKET}h\_ui {\MAPSTO} {\LANGLE}m{\RANGLE}{\CONCAT}ht(h\_ui){\RBRACKET} \kw{in}\\
+\ref{p-p-h15}\ \ \ \ \ \ \ \ \ \ \ \ \ hub$_{h_{ui}}$(h\_ui,({\it },(luis,vuis)),(h$\omega$))(h$\sigma$,ht$'$)\\
+\ref{p-p-h20}\ \ \ \ \ \ \ \ \ \ \ {\BAR} v\_ui:V\_UI{\RDOT}v\_ui{\ISIN}vuis \kw{end} \kw{end} {\RBRACE}\\
+\ref{p-p-h2x}\ \ \ \ \ \kw{post}: {\ALL} v\_ui:V\_UI{\RDOT}v\_ui {\ISIN} \kw{dom} ht$'${\DBLRIGHTARROW}time\_ordered(ht$'$(v\_ui)) 
+\ep
+\emcii
+
+\nbb{Link Behaviour}
+
+
+\begin{enumerate}\setei
+\item \label{p-p-l00} The link behaviour non-deterministically, externally
+                    offers 
+\item \label{p-p-l10} to accept timed vehicle positions ---
+\item \label{p-p-l20} which will be on the link, from some vehicle,
+                    \textsf{v\_ui}.  
+\item \label{p-p-l30} The timed vehicle link position is appended to the
+                    front of that vehicle's entry in the link's traffic
+                    table; 
+\item \label{p-p-l40} whereupon the link proceeds as a link behaviour with 
+                    the updated link traffic table.
+\item \label{p-p-l50} The link behaviour offers to accept from any vehicle.
+\item \label{p-p-l51} A \kw{post} condition expresses what is really a
+                    \kw{proof obligation}: that the \textsf{link
+                    traffic, lt$'$} satisfies the \kw{axiom} of the
+                    endurant link traffic attribute Item\,\psref{link-traffic}. 
+\savei\end{enumerate}
+%\RSLatex
+%&\ref{p-p-l00}&   link&$_{l_{ui}}$&(l_ui,(_,(huis,vuis),_),l`omega)(l`sigma,lt) is
+%&\ref{p-p-l00}&      |=| 
+%&\ref{p-p-l10}&          { let m = ba_r_ch[l_ui,v_ui] ? in  
+%&\ref{p-p-l20}&                  &\kw{assert:}& m=(_,onLink(_,l_ui,_,_))
+%&\ref{p-p-l30}&             let lt&$'$& = lt !! [l_ui +> <.m.>^lt(l_ui)] in
+%&\ref{p-p-l40}&             link&$_{l_{ui}}$&(l_ui,(huis,vuis),h`omega)(h`sigma,lt&$'$&)
+%&\ref{p-p-l50}&          | v_ui:V_UI:-v_&ui&isin&vuis& end end }
+%&\ref{p-p-l51}&      post: all v_ui:V_UI:-v_ui isin dom lt&$'$&=>time_ordered(lt&$'$&(v_ui))           
+%\endRSLatex 
+\bp
+\ref{p-p-l00}\ \ \ link$_{l_{ui}}$(l\_ui,({\UNDERLINE},(huis,vuis),{\UNDERLINE}),l$\omega$)(l$\sigma$,lt) {\IS}\\
+\ref{p-p-l00}\ \ \ \ \ \ {\DETCHOICE} \\
+\ref{p-p-l10}\ \ \ \ \ \ \ \ \ \ {\LBRACE} \kw{let} m {\EQ} ba\_r\_ch{\LBRACKET}l\_ui,v\_ui{\RBRACKET} ? \kw{in}\ \ \\
+\ref{p-p-l20}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \kw{assert:} m{\EQ}({\UNDERLINE},onLink({\UNDERLINE},l\_ui,{\UNDERLINE},{\UNDERLINE}))\\
+\ref{p-p-l30}\ \ \ \ \ \ \ \ \ \ \ \ \ \kw{let} lt$'$ {\EQ} lt {\DAGGER} {\LBRACKET}l\_ui {\MAPSTO} {\LANGLE}m{\RANGLE}{\CONCAT}lt(l\_ui){\RBRACKET} \kw{in}\\
+\ref{p-p-l40}\ \ \ \ \ \ \ \ \ \ \ \ \ link$_{l_{ui}}$(l\_ui,(huis,vuis),h$\omega$)(h$\sigma$,lt$'$)\\
+\ref{p-p-l50}\ \ \ \ \ \ \ \ \ \ {\BAR} v\_ui:V\_UI{\RDOT}v\_ui{\ISIN}vuis \kw{end} \kw{end} {\RBRACE}\\
+\ref{p-p-l51}\ \ \ \ \ \ \kw{post}: {\ALL} v\_ui:V\_UI{\RDOT}v\_ui {\ISIN} \kw{dom} lt$'${\DBLRIGHTARROW}time\_ordered(lt$'$(v\_ui))\ \ \ \ \ \ \ \ \ \ \ 
+\ep
+
+\newcommand{\isminus}{-3mm}
+
+
+\nbbbbb{System Initialisation}\HHHH\label{p-ch.Running Systems}
+
+\bbbb{Initial States}
+%\RSLatex
+%value
+%   &$hs$&:H-set is is obs_sH(obs_SH(obs_RN(&$rts$&)))   
+%   &$ls$&:L-set is is obs_sL(obs_SL(obs_RN(&$rts$&)))
+%   &$bcs$&:BC-set is obs_BCs(obs_SBC(obs_FV(obs_RN(&$rts$&))))   
+%   &$bs$&:B-set is union{obs_Bs(bc)|bc:BC:-bc isin &$bcs$&}   
+%   &$as$&:A-set is obs_BCs(obs_SBC(obs_FV(obs_RN(&$rts$&))))
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\ $hs$:H\kw{-set} {\IS} {\IS} obs\_sH(obs\_SH(obs\_RN($rts$)))\ \ \ \\
+\>\ $ls$:L\kw{-set} {\IS} {\IS} obs\_sL(obs\_SL(obs\_RN($rts$)))\\
+\>\ $bcs$:BC\kw{-set} {\IS} obs\_BCs(obs\_SBC(obs\_FV(obs\_RN($rts$))))\ \ \ \\
+\>\ $bs$:B\kw{-set} {\IS} {\UNION}{\LBRACE}obs\_Bs(bc){\BAR}bc:BC{\RDOT}bc {\ISIN} $bcs${\RBRACE}\ \ \ \\
+\>\ $as$:A\kw{-set} {\IS} obs\_BCs(obs\_SBC(obs\_FV(obs\_RN($rts$))))
+\ep
+
+\nbbbb{Initialisation}\HHHH\LLLL
+
+\begynd
+\pind We are reaching the end of this domain modeling example. 
+\begynd
+\pind Behind us there are narratives and formalisations. 
+\pind Based on these we now express 
+\begynd
+\pind  the signature and 
+\pind the body of the definition
+\afslut
+\pind of a \sfsl{``system build and execute''} function.
+\afslut
+\afslut
+\begin{enumerate}\setei
+\item \label{p-ars-00y} The system to be initialised is
+\begin{enumerate}
+\item \label{p-ars-00x} the parallel
+                      compositions ({\PARL}) of 
+\item \label{p-ars-010}  the distributed parallel composition
+                      ({\PARL}{\LBRACE}...{\BAR}...{\RBRACE}) 
+                      of all hub behaviours,
+\item \label{p-ars-020}  the distributed parallel composition
+                      ({\PARL}{\LBRACE}...{\BAR}...{\RBRACE}) 
+                      of all link behaviours,
+\item \label{p-ars-030}  the distributed parallel composition
+                      ({\PARL}{\LBRACE}...{\BAR}...{\RBRACE}) 
+                      of all bus company behaviours,
+\item \label{p-ars-040}  the distributed parallel composition
+                      ({\PARL}{\LBRACE}...{\BAR}...{\RBRACE}) 
+                      of all  bus behaviours, and
+\item \label{p-ars-050}  the distributed parallel composition
+                      ({\PARL}{\LBRACE}...{\BAR}...{\RBRACE}) 
+                      of all automobile behaviours.
+\end{enumerate} 
+\savei\end{enumerate}
+\mnewfoil\LLLL\pos{}{\vspace*{-18mm}}
+%\RSLatex
+%value
+%&\ref{p-ars-00y}&   initial_system: Unit -> Unit &\syfidxi{initial\_system: \kw{Unit} {\RIGHTARROW} \kw{Unit}}{ars-00y}&
+%&\ref{p-ars-00y}&   initial_system() is
+%&\ref{p-ars-010}&      || { hub&$_{h_{ui}}$&(h_ui,me,h`omega)(htrf,h`sigma) 
+%&\ref{p-ars-010}&         | h:H:-h isin &$hs$&, h_ui:H_UI:-h_ui=uid_H(h), me:HMetL:-me=mereo_H(h),
+%&\ref{p-ars-010}&           htrf:H_Traffic:-htrf=attr_H_Traffic_H(h),
+%&\ref{p-ars-010}&           h`omega:H`Omega:-h`omega=attr_H`Omega(h), h`sigma:H`Sigma:-h`sigma=attr_H`Sigma(h)/\h`sigma isin h`omega }       
+%&\ref{p-ars-00x}&      || 
+%&\ref{p-ars-020}&      || { link&$_{l_{ui}}$&(l_ui,me,l`omega)(ltrf,l`sigma)
+%&\ref{p-ars-020}&           l:L:-l isin &$ls$&, l_ui:L_UI:-l_ui=uid_L(l), me:LMet:-me=mereo_L(l),
+%&\ref{p-ars-020}&           ltrf:L_Traffic:-ltrf=attr_L_Traffic_H(l),
+%&\ref{p-ars-020}&           l`omega:L`Omega:-l`omega=attr_L`Omega(l), l`sigma:L`Sigma:-l`sigma=attr_L`Sigma(l)/\l`sigma isin l`omega }   
+%&\ref{p-ars-00x}&      ||  
+%&\ref{p-ars-030}&      || { bus_company&$_{bc_{ui}}$&(bcui,me)(btt)
+%&\ref{p-ars-030}&           bc:BC:-bc isin &$bcs$&, bc_ui:BC_UI:-bc_ui=uid_BC(bc), me:BCMet:-me=mereo_BC(bc),
+%&\ref{p-ars-030}&           btt:BusTimTbl:-btt=attr_BusTimTbl(bc) }  
+%&\ref{p-ars-00x}&      ||  
+%&\ref{p-ars-040}&      || { bus&$_{b_{ui}}$&(b_ui,me)(ln,btt,bpos) 
+%&\ref{p-ars-040}&           b:B:-b isin &$bs$&, b_ui:B_UI:-b_ui=uid_B(b), me:BMet:-me=mereo_B(b), ln:LN:pln=attr_LN(b),  
+%&\ref{p-ars-040}&           btt:BusTimTbl:-btt=attr_BusTimTbl(b), bpos:BPos:-bpos=attr_BPos(b) }  
+%&\ref{p-ars-00x}&   &\,&   ||  
+%&\ref{p-ars-050}&   &\,\,&   || { automobile&$_{a_{ui}}$&(a_ui,me,rn)(apos) 
+%&\ref{p-ars-050}&   &\,&        a:A:-a isin &$as$&, a_ui:A_UI:-a_ui=uid_A(a), me:AMet:-me=mereo_A(a), 
+%&\ref{p-ars-050}&   &\,&        rn:RegNo:-rno=attr_RegNo(a), apos:APos:-apos=attr_APos(a) }  &\eox&  
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{p-ars-00y}\ \ \ initial\_system: \kw{Unit} {\RIGHTARROW} \kw{Unit} \syfidxi{initial\_system: \kw{Unit} {\RIGHTARROW} \kw{Unit}}{ars-00y}\\
+\ref{p-ars-00y}\ \ \ initial\_system() {\IS}\\
+\ref{p-ars-010}\ \ \ \ \ \ {\PARL} {\LBRACE} hub$_{h_{ui}}$(h\_ui,me,h$\omega$)(htrf,h$\sigma$) \\
+\ref{p-ars-010}\ \ \ \ \ \ \ \ \ {\BAR} h:H{\RDOT}h {\ISIN} $hs$, h\_ui:H\_UI{\RDOT}h\_ui{\EQ}uid\_H(h), me:HMetL{\RDOT}me{\EQ}mereo\_H(h),\\
+\ref{p-ars-010}\ \ \ \ \ \ \ \ \ \ \ htrf:H\_Traffic{\RDOT}htrf{\EQ}attr\_H\_Traffic\_H(h),\\
+\ref{p-ars-010}\ \ \ \ \ \ \ \ \ \ \ h$\omega$:H$\Omega${\RDOT}h$\omega${\EQ}attr\_H$\Omega$(h), h$\sigma$:H$\Sigma${\RDOT}h$\sigma${\EQ}attr\_H$\Sigma$(h){\WEDGE}h$\sigma$ {\ISIN} h$\omega$ {\RBRACE}\ \ \ \ \ \ \ \\
+\ref{p-ars-00x}\ \ \ \ \ \ {\PARL} \\
+\ref{p-ars-020}\ \ \ \ \ \ {\PARL} {\LBRACE} link$_{l_{ui}}$(l\_ui,me,l$\omega$)(ltrf,l$\sigma$)\\
+\ref{p-ars-020}\ \ \ \ \ \ \ \ \ \ \ l:L{\RDOT}l {\ISIN} $ls$, l\_ui:L\_UI{\RDOT}l\_ui{\EQ}uid\_L(l), me:LMet{\RDOT}me{\EQ}mereo\_L(l),\\
+\ref{p-ars-020}\ \ \ \ \ \ \ \ \ \ \ ltrf:L\_Traffic{\RDOT}ltrf{\EQ}attr\_L\_Traffic\_H(l),\\
+\ref{p-ars-020}\ \ \ \ \ \ \ \ \ \ \ l$\omega$:L$\Omega${\RDOT}l$\omega${\EQ}attr\_L$\Omega$(l), l$\sigma$:L$\Sigma${\RDOT}l$\sigma${\EQ}attr\_L$\Sigma$(l){\WEDGE}l$\sigma$ {\ISIN} l$\omega$ {\RBRACE}\ \ \ \\
+\ref{p-ars-00x}\ \ \ \ \ \ {\PARL}\ \ \\
+\ref{p-ars-030}\ \ \ \ \ \ {\PARL} {\LBRACE} bus\_company$_{bc_{ui}}$(bcui,me)(btt)\\
+\ref{p-ars-030}\ \ \ \ \ \ \ \ \ \ \ bc:BC{\RDOT}bc {\ISIN} $bcs$, bc\_ui:BC\_UI{\RDOT}bc\_ui{\EQ}uid\_BC(bc), me:BCMet{\RDOT}me{\EQ}mereo\_BC(bc),\\
+\ref{p-ars-030}\ \ \ \ \ \ \ \ \ \ \ btt:BusTimTbl{\RDOT}btt{\EQ}attr\_BusTimTbl(bc) {\RBRACE}\ \ \\
+\ref{p-ars-00x}\ \ \ \ \ \ {\PARL}\ \ \\
+\ref{p-ars-040}\ \ \ \ \ \ {\PARL} {\LBRACE} bus$_{b_{ui}}$(b\_ui,me)(ln,btt,bpos) \\
+\ref{p-ars-040}\ \ \ \ \ \ \ \ \ \ \ b:B{\RDOT}b {\ISIN} $bs$, b\_ui:B\_UI{\RDOT}b\_ui{\EQ}uid\_B(b), me:BMet{\RDOT}me{\EQ}mereo\_B(b), ln:LN:pln{\EQ}attr\_LN(b),\ \ \\
+\ref{p-ars-040}\ \ \ \ \ \ \ \ \ \ \ btt:BusTimTbl{\RDOT}btt{\EQ}attr\_BusTimTbl(b), bpos:BPos{\RDOT}bpos{\EQ}attr\_BPos(b) {\RBRACE}\ \ \\
+\ref{p-ars-00x}\ \ \ \,\ \ \ {\PARL}\ \ \\
+\ref{p-ars-050}\ \ \ \,\,\ \ \ {\PARL} {\LBRACE} automobile$_{a_{ui}}$(a\_ui,me,rn)(apos) \\
+\ref{p-ars-050}\ \ \ \,\ \ \ \ \ \ \ \ a:A{\RDOT}a {\ISIN} $as$, a\_ui:A\_UI{\RDOT}a\_ui{\EQ}uid\_A(a), me:AMet{\RDOT}me{\EQ}mereo\_A(a), \\
+\ref{p-ars-050}\ \ \ \,\ \ \ \ \ \ \ \ rn:RegNo{\RDOT}rno{\EQ}attr\_RegNo(a), apos:APos{\RDOT}apos{\EQ}attr\_APos(a) {\RBRACE}\ \ \eox\ \ 
+\ep
+}\normalsize\HHHH\rm
+
+\label{p-ch.Running Systems.n}%%  LocalWords:  ehicle bcb ijective bbc
+%%  LocalWords:  mereo dom mereologies Invariance invariants cetera
+%%  LocalWords:  rom VPos Bool tvpl cul de Frac frac Fract lt ln btt
+%%  LocalWords:  ocity eleration Intentionality AllATH AllHTH AllLTH
+%%  LocalWords:  Trf AUI allA mrg allH allL HLT Perdurants analyse vp
+%%  LocalWords:  behaviour Msg chmsg dcl defind hui deterministically
+%%  LocalWords:  tli tl atH onl onL rno thui aui lui nxt incr ars
+%%  LocalWords:  Initialisation formalisations initialised htrf HMetL
+%%  LocalWords:  ltrf LMet bcui BCMet BMet AMet vehic
+
+\label{p-ch:Road Transport.n}

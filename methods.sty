@@ -1,0 +1,58 @@
+
+\makeindex{dadmethod}
+
+\renewcommand{\modelchoice}[3]{\rm
+\begin{modchoi}
+\noindent
+\bbcolor{\textsl{#1:}}\label{#2}
+  {#3}
+\end{modchoi}}
+
+\newcounter{prin}
+\newcounter{proc}
+\newcounter{tech}
+\newcounter{tool}
+\newcommand{\cprin}{\stepcounter{prin}}
+\newcommand{\cproc}{\stepcounter{proc}}
+\newcommand{\ctech}{\stepcounter{tech}}
+\newcommand{\ctool}{\stepcounter{tool}}
+
+\newtheorem{xprinciple}{\sort{Method Principle}}
+\newtheorem{xprocedure}{\sort{Method Procedure}}
+\newtheorem{xtechnique}{\sort{Method Technique}}
+\newtheorem{xtool}{\sort{Method Tool}}
+
+\newcommand{\prinmeth}[3]{%
+  \begin{xprinciple}
+\noindent\cprin\index{dadmethod}{\sort{principle}!\arabic{prin}. #1}%\arabic{cproc}. #1}\index{dadmethod}{\arabic{prin}. #1}%
+\bbcolor{\textsl{#1:}}\label{#2}
+  {#3}
+\end{xprinciple}}
+
+\newcommand{\procmeth}[3]{%
+  \begin{xprocedure}
+\noindent\cproc\index{dadmethod}{\sort{procedure}!\arabic{proc}. #1}%\index{dadmethod}{\arabic{proc}. #1}%%
+\bbcolor{\textsl{#1:}}\label{#2}
+  {#3}
+\end{xprocedure}}
+
+\newcommand{\techmeth}[3]{%
+  \begin{xtechnique}
+    \noindent\ctech\index{dadmethod}{\sort{technique}!\arabic{tech}. #1}%\index{dadmethod}{\arabic{tech}. #1}%%
+\bbcolor{\textsl{#1:}}\label{#2}
+  {#3}
+\begynd
+\end{xtechnique}}
+
+
+\newcommand{\toolmeth}[3]{%
+  \begin{xtool}
+\noindent\ctool\index{dadmethod}{\sort{tool}!\arabic{tool}. #1}%\index{dadmethod}{\arabic{tool}. #1}%%
+\bbcolor{\textsl{#1:}}\label{#2}
+  {#3}
+\end{xtool}}
+
+\newcommand{\isaprin}[1]{\bcolor{\texttt{#1}} is a method \sort{principle.}\cprin\index{dadmethod}{\sort{principle}!\arabic{prin}. #1}}
+\newcommand{\isaproc}[1]{\bcolor{\texttt{#1}} is a method \sort{procedure.}\cproc\index{dadmethod}{\sort{procedure}!\arabic{proc}. #1}}
+\newcommand{\isatech}[1]{\bcolor{\texttt{#1}} is a method \sort{technique.}\ctech\index{dadmethod}{\sort{technique}!\arabic{tech}. #1}}
+\newcommand{\isatool}[1]{\bcolor{\texttt{#1}} is a method \sort{tool.}\ctool\index{dadmethod}{\sort{tool}!\arabic{tool}. #1}}

@@ -1,0 +1,800 @@
+
+
+\nbbbbbb{Some Formal Languages}\label{chap2.tex.1}\label{chapter:The Mathematics}
+\minitoc
+
+\noindent
+\begynd
+\pind In this chapter we shall briefly cover an assortment of formal
+languages:
+\begynd
+\pind discrete mathematics,
+\pind notations for types and sorts, values in general and function values,
+\pind the notion of of recursive function theory: the
+      $\lambda$-Calculus \cite{Chu51,Barendregt91} and recursive
+      functions \cite{Kleene52,Kleene67,Rogers67}, and 
+\pind \texttt{CSP} \citecsp.
+\afslut
+\afslut
+
+\begin{itemize}
+\item[] \centerline{\fbox{Several sections of this chapter are still to be edited}}
+\end{itemize}
+
+
+\nbbbbb{Discrete Mathematics}\label{chap2.tex.Discrete Mathematics}
+
+By discrete mathematics we shall understand such fields as
+\begynd
+\pind mathematical logic, %\pconindex{mathematical logic}
+\pind set theory, %\pconindex{set!theory}\pconindex{theory!sets}
+\pind   algebra, %\pconindex{algebra}
+\pind   combinatorics, %\pconindex{combinatorics}
+\pind   graph theory, %\pconindex{graph!theory}\pconindex{theory!graphs}
+\pind   probability theory, %\pconindex{probability!theory}\pconindex{theory!probability}
+\pind   number theory, %\pconindex{number!theory}\pconindex{theory!number}
+\pind   Euclidean geometry, %\pconindex{Euclidean geometry}
+\pind   topology, %\pconindex{topology}
+\pind   operations research, and %\pconindex{operations research}
+\pind   game theory. %\pconindex{game!theory}\pconindex{theory!game}
+\afslut
+  
+We shall only cover a three of these:  mathematical logic, set theory
+and algebra -- and only cursorily in this chapter.
+
+\nbbbb{Logic and Mathematical Logic}\label{Logic and Mathematical Logic}
+
+\bbb{Classical Logic}\label{Classical Logic}
+
+\tbw
+
+\nbbb{Mathematical Logic}\label{Mathematical Logic}
+
+\tbw
+
+\nbbb{Model and Proof Theory}\label{Model and Proof Theory}
+
+\label{truth tables} %% remember to insert those !
+\tbw
+
+\nbbb{R{\^{o}}les of Mathematical Logic in Computing}
+
+\tbw
+
+
+\nbbbb{Set Theory}\label{Set Theory}
+
+\begin{quote}
+           \tt
+           \dbbook{\hspace*{25mm}}  Band of Musicians 
+\hfill  Bevy of Beauties\\
+           \dbbook{\hspace*{25mm}}  Bunch of Crooks 
+\hfill     Crew of Sailors\\
+           \dbbook{\hspace*{25mm}}  Flock of Geese  
+\hfill      Fleet of Ships\\
+           \dbbook{\hspace*{25mm}}  Gang of Outlaws  
+\hfill    Group of People\\
+           \dbbook{\hspace*{25mm}}  Herd of Cattle   
+\hfill        Mop of Hair\\
+           \dbbook{\hspace*{25mm}}  Pack of Dogs  
+\hfill   Posse of Vigilantes\\
+           \dbbook{\hspace*{25mm}}  Pride of Lions  
+\hfill  School of Dolphins\\
+           \dbbook{\hspace*{25mm}}  Suite of Bells  
+\hfill   Swarm of Flies\\
+           \dbbook{\hspace*{25mm}} 
+\hfill  Volley of Arrows
+\end{quote}
+
+           \vspace*{1mm}
+           \sl ~~~ \hfill --- are all examples of Sets!\rm
+           \vspace*{1mm}
+
+           \mnewfoil
+           
+\bookdefn{Set}{
+\begynd
+\pind By a \textsl{set} we shall, loosely, understand an
+unordered collection of distinct elements (i.e., entities),
+\pind 
+something for which it is meaningful to speak about 
+\begynd
+\pind (i) an entity \textsl{being a member} of a set (or not) \ISIN, 
+\pind (ii) the \textsl{union} (merging) of two or more 
+      sets into a set (of all the elements of the argument sets) \UNION, 
+\pind (iii) the \textsl{intersection} of two or more sets into a set
+      (of those elements which are in all argument sets) \INTER, 
+\pind (iv)  the \textsl{complement} of one set with respect to another
+      set $\setminus$, 
+\pind (v) whether one set is a subset of another set
+      \SUBSET\ and \SUBSETEQ\ and  
+\pind (vi) the cardinality of a (finite) set (i.e., how many members it
+      contains), \kw{card} and a few more% 
+\afslut%
+\afslut}
+\index{sind}{\protect{\ISIN}\ set membership}% 
+\index{sind}{\UNION!set union}%
+\index{sind}{\INTER\ set intersection}%
+\index{sind}{/!set difference}%
+\index{sind}{\protect{$\setminus$}!set complement}%
+\index{sind}{\SUBSET\ proper subset}%
+\index{sind}{\SUBSETEQ\ subset}%
+\index{sind}{\EQ\ equality!sets}%
+\index{sind}{\NOTEQ\ in-equality!sets}%
+\index{sind}{\kw{card}\ set cardinality}%
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind The concepts of \textsl{sets} and \textsl{set elements} are
+  left undefined.
+\pind Above we have hinted at some set forming and other operations
+over sets and their elements.
+\pind What sets ``really are'' is usually defined in mathematics by
+establishing what is called an axiom system.
+\pind Axiomatically speaking,
+  sets and their operations are what a number of axioms of a set theory
+  define them to be! 
+\newfoil
+\pind There are several axiom systems for set theory.
+\pind They each define a set theory. 
+\pind The different set theories may
+      therefore not be exactly the same.
+\pind The perhaps best-known axiom system for set theory is that put
+    forward by Zermelo/Fraenkel\pos{ (ZF)
+    \cite{fraenkel1973,enderton1977}}{}\footnote{See,
+    for example:\\  
+http://plato.stanford.edu/entries/set-theory/ZF.html\\
+http://mathworld.wolfram.com/Zermelo-FraenkelAxioms.html\\
+http://planetmath.org/encyclopedia/ZermeloFraenkelAxioms.html\\
+http://www.britannica.com/eb/article?tocId=24035, etc.}.  
+\afslut
+
+\mnewfoil
+
+\begynd
+\pind We refer to Appendix Sects.\,%
+  \vref{tseb.rsl.Type Expressions} (set types),
+  \vref{mono-rsl.Set Expressions} (set expressions), and
+  \vref{mono-rsl.Set Operations} (set operations),
+  for an overview of the set
+      constructs of \texttt{RSL} \cite{RSL}.
+\afslut
+
+\nbbb{R{\^{o}}les of Set Theory in Computing}
+
+\tbw
+
+\nbbbb{Algebra}\label{Algebra}
+
+\bookdefn{Algebra}{By an \textsl{algebra} we, loosely, mean
+  a possibly infinite set of entities and a usually finite set of
+  operations over these entities}
+
+
+\noindent
+\begynd
+\pind Section\,\ref{The Implicit Meaning Theory}
+      gave, on Page \,\pageref{algebra.1}, a first example
+      of an algebra\,!
+\afslut
+
+\begynd
+\pind In this \primer\ we shall again-and-again describe domain
+      entities in terms of algebras: the types of their entities and
+      operations and the definition of their operations, the latter sometimes, as in
+      Sect.\,\ref{The Implicit Meaning Theory},  Page
+      \,\pageref{algebra.1}, in terms of axioms, sometimes in terms of
+      explicit function definitions. 
+\afslut
+
+\nbbb{Formal Definition of the Algebra Concept}
+
+\begynd
+\pind We shall primarily take an algebraic approach when
+      determining, i.e., when deciding upon, the form of, and developing 
+      software development descriptions.
+\pind An \textsl{algebraic system}
+\index{cind}{algebraic!system}\index{cind}{system!algebra}%
+      is a set,\footnote{We usually do not say what the elements
+      of this set are, it is just a set!\dbeat{ \dbbook{Of course, with our 
+      background in programming, we could, for example, 
+      state that the set
+      elements were values (of some or any kind!).
+      Some would call them entities, others might call them
+      objects --- and now you see our problem. So, let us
+      stick with mathematical practice and just say set.}}}
+      $A$ (finite or infinite) of values, and
+      a set\footnote{Similarly: Just a set!}, $\Omega$, (usually
+      finite), of operations over these values: 
+\afslut
+\[ (A,\Omega) \] 
+\[ A = \{a_1,a_2,...,a_m,...\}, 
+   \Omega = \{\omega_1,\omega_2,...,\omega_o\} \] 
+\noindent
+\begynd
+\pind Set $A$ is the \textsl{carrier}
+\index{cind}{carrier of algebraic system}%
+      of the algebraic system, and   
+\pind $\Omega$ is a collection of operations defined on $A$.
+\newfoil
+\pind Each operation $\omega_i:\Omega$ ($\omega_i$ in $\Omega$, i.e.,
+$\omega_i$ of type $\Omega$) is a
+      function of some \textsl{arity},
+\index{cind}{arity!of function} say $n$, taking operands,
+      i.e., argument values
+\index{cind}{argument!value}%
+\index{cind}{value!argument}%
+      in $A$, and yielding a result value in $A$:
+\index{cind}{value!result}%
+\index{cind}{result!value}%
+\index{cind}{arity!of function, meta operator}%
+
+\[ \omega(a_{i_1},a_{i_2},\ldots,a_{i_n}) = a \]
+
+
+\noindent
+\pind That is, $\omega_i$ is of type $A^n\rightarrow
+A$.\pt{\footnote{The expression $A^n\rightarrow A$ is not an
+    expression of \texttt{RSL.} First, we are explaining basic
+    mathematical concepts not in \texttt{RSL} but in an informal
+    notation of mathematics already assumed understood. Second, if
+    we wish to express in \texttt{RSL} what may seem to be a
+    Cartesian of arity $n$, for a known, fixed $n$, then we write it
+    out in full:  $A_1\times A_1\times\cdots\times A_n$. If $n$ 
+    varies, then it is probably not to be modelled, i.e., thought of, as
+    a Cartesian, but rather as a list, $A^{\star}$, where $A$ is then
+    the union type of all the $A_i$'s.}}{}
+      Different functions (in $\Omega$) may have different
+      arities. 
+\pind Think of {arity} as a functional, a
+      function that applies to functions and yields their
+      arity:
+
+\[\mbox{\kw{type } {\sf arity:}}\ \Omega \rightarrow
+   \mbox{\kw{Nat}},\ \ \
+   \mbox{{\sf arity}}(\omega_i) = n \]
+\afslut
+\label{chap2.tex.Discrete Mathematics.n}
+
+\nbbb{Concrete Algebras}\label{ch2alg.ca}
+
+\bookdefn{Concrete Algebra}{A \textsl{concrete algebra} 
+      has sets of known, specific 
+      values as carrier, and a set of specifically given operations}
+    
+\monoexample{Number Algebras}{Examples of concrete algebras are those
+  over number:
+\begin{itemize}
+\item \textsl{An Integer Algebra:} (\textsf{Integer},$\{+,-,*\}$), an
+      infinite carrier algebra whose operations yield all the integers.
+\item \textsl{A Natural Numbers Algebra:} (\textsf{NatNumber},$\{${\sf
+      gcd,lcm}$\}$) an infinite carrier algebra
+      where \textsf{gcd, lcm} are the greatest common divisor,
+      respectively the smallest common multiple 
+      (viz.: \textsf{gcd(4,6)=2, lcm(4,6)=12}) operations, which
+      yield all the natural numbers.
+\item \textsl{A Modulo Natural Number Algebra:} ($\Im_m = \{0, 1, 2,
+      \ldots,$ $m-1\}, \Omega =  
+      \{\oplus, \otimes\}$) is a finite carrier algebra: $\oplus$
+      and $\otimes$ are the addition and multiplication
+      operations \textsf{modulo $m$.}
+    \end{itemize}
+  }
+  
+\nbbb{Abstract Algebras}\label{ch2alg.aa}
+
+\begynd
+\pind Whereas concrete algebras are known,
+      i.e., effectively constructed, abstract algebras
+\index{cind}{abstract!algebra}%
+\index{cind}{algebra!abstract}%
+      are postulated,  
+\index{cind}{postulated!algebra}%
+\index{cind}{algebra!postulated}%
+      That is, they are what we shall call
+      (and define as) `axiomatised' in \pt{Chap.~\ref{1ch8}}{}.  
+\afslut
+
+\bookdefn{Abstract Algebra}{An \textsl{abstract algebra} has a sort, i.e., a
+  presently further undefined set of entities as carrier, a set of
+  operations, and a set of axioms that relate (i.e., constrain)
+  properties of carrier elements and operations}
+\index{cind}{axiomatised!algebraic system}%
+
+\noindent
+\begynd
+\pind The algebraic system of an abstract algebra is
+      thus defined by a system of postulates, to be known
+      henceforth as axioms. 
+\index{cind}{axiom}% 
+\afslut
+ 
+\nbbb{Heterogeneous Algebras}\label{ch2alg.ha}
+
+\bookdefn{Heterogeneous Algebra}{
+\begynd
+\pind A \textsl{heterogeneous algebra:}
+\index{cind}{heterogeneous algebra}%
+\index{cind}{algebra!heterogeneous}%
+\[ (\{A_1,A_2,\ldots,A_m\},\Omega\}) \]
+
+\noindent
+\begynd
+\pind has its carrier set $A$ be expressible as the 
+      union of a set of disjoint sub-carriers $A_i$, and
+\pind associates with every operation $\omega$ in $\Omega$
+      a \textsf{signature}:
+\index{cind}{signature!of operator, meta operator}%
+\afslut
+\afslut
+
+\[ \mbox{\textsf{{signature}}}(\omega) = 
+   A_{i_1}\times A_{i_2}\times \cdots\ \times A_{i_n} \rightarrow
+   A_{i_{n+1}} \]
+}
+
+\noindent
+\begynd
+\pind has its carrier set $A$ be expressible as the 
+      union of a set of disjoint sub-carriers $A_i$, and
+\pind associates with every operation $\omega$ in $\Omega$
+      a \textsf{signature}:
+\index{cind}{signature!of operator, meta operator}%
+\afslut
+\afslut
+
+\monoexample{Stack Algebra}{%%
+Viewing the \textsf{stack} definition of Page\,\pageref{algebra.1} of
+Sect.\,\ref{The Implicit Meaning Theory} as a heterogeneous
+      algebra, the \textsf{stack} operations
+      are (now) of the following signatures:
+      $S$ is the stack type, and $E$ is the type of
+      stack elements:
+\begynd
+\pind \textsf{empty:} \kw{Unit} $\rightarrow S$,
+\pind \textsf{is\_empty:} $S$\ \RIGHTARROW\ \kw{Bool},
+\pind \textsf{push:} $S \times\ E$ \RIGHTARROW\ $S$,
+\pind \textsf{top:} $S$ \PARRIGHTARROW\ $E$, and 
+\pind \textsf{pop:} $S$ \PARRIGHTARROW\ $S$.
+\afslut
+}
+
+\nbbb{Universal Algebras}\label{ch2alg.ua}
+
+\bookdefn{Universal Algebra}{
+\begynd
+\pind A \textsl{universal algebra}
+\index{cind}{universal!algebra}%
+\index{cind}{algebra!universal}%
+      is a carrier and a set of operations
+      with no postulates, i.e., the operations are
+      not further constrained%
+\afslut
+}
+
+\bb{The Morphism Concept}\label{ch2.alg.morph}
+
+\begynd
+\pind When, in software development we transform abstract
+      specifications to more concrete ones, 
+      then, usually, an \textsl{algebra morphism}
+\index{cind}{morphism}\index{cind}{algebra!morphism}%
+      is taking place.
+
+\pind Let there be two  algebras:
+\afslut
+
+\[ (A,\Omega),  (A',\Omega') \]
+
+\noindent%
+\begynd%
+\pind%
+A function $\phi: A\rightarrow A'$ is said to be 
+      a \textsl{morphism}
+\index{cind}{morphism}%
+      (also called a \textsl{homomorphism})
+\index{cind}{homomorphism}%
+      from  $(A,\Omega)$ to $(A',\Omega')$ if for any 
+      $\omega\in\Omega$ and for any $a_1$, $a_2$, \ldots,
+      $a_n$ in $A$ there is a corresponding $\omega'\in\Omega'$,
+      such that:
+\afslut
+\label{ch2.alg.morph.def}
+
+      \[ M:  \phi(\omega(a_1,a_2,\ldots,a_n))
+        =  \omega'(\phi(a_1),\phi(a_2),\ldots,\phi(a_n)) \]
+
+\noindent
+\begynd
+\pind We say that the homomorphism relation $M$ 
+      \textsl{respects}
+\index{cind}{homomorphism!respects operations}%
+\index{cind}{respect operations}%
+      or \textsl{preserves} corresponding operations
+      in $\Omega$ and $\Omega'$ (Fig.~\pt{\vref}{\ref}{ch2.morph}). 
+\index{cind}{homomorphism!preserves operations}%
+\index{cind}{preserve operations}%
+
+\newfoil
+    
+\DBfigure{morphism}{30mm}
+         {Morphism mapping diagram}
+         {ch2.morph}
+     
+\pind $\phi^n$ is the $n$-fold Cartesian power of
+      $\phi:A\rightarrow A'$, that is, the map
+      $A^n\rightarrow (A')^n$, and is defined by:
+
+\[ \phi^n: (a_1,a_2,\ldots,a_n) \mapsto\
+        (\phi(a_1),\phi(a_2),\ldots,\phi(a_n))\]
+ 
+\noindent
+\pind If $\phi:A\rightarrow A'$ is a homomorphism of
+      $\Omega$-algebras, then, by definition $\phi$
+      preserves all the operations of $\Omega$. 
+\afslut
+
+\nbbb{R{\^{o}}les of Algebra in Computing}
+
+\tbw
+
+\nbbb{Syntactic Means of Expressing Algebras}
+
+\begynd
+\pind To define the various carriers we define their
+      \kw{type}s, and 
+\pind to define the various operations over these carriers
+      we define these as function \kw{value}s.
+\newfoil
+\pind Schematically:
+\afslut
+
+%\RSLatex
+%class
+%  type
+%    A, B, C, D, ...
+%  value
+%    f: A -> B
+%    f(a) is ...
+%    g: C -> D
+%    g(c) is ...
+%    ...
+%end
+%\endRSLatex
+\bp
+\kw{class}\\
+\>\kw{type}\\
+\>\>A, B, C, D, {\DOTDOTDOT}\\
+\>\kw{value}\\
+\>\>f: A {\RIGHTARROW} B\\
+\>\>f(a) {\IS} {\DOTDOTDOT}\\
+\>\>g: C {\RIGHTARROW} D\\
+\>\>g(c) {\IS} {\DOTDOTDOT}\\
+\>\>{\DOTDOTDOT}\\
+\kw{end}
+\ep
+
+\noindent
+\begynd
+\pind The above class expression defines carriers \textsf{A, B, C} and
+      \textsf{D} (etcetera), and operations  \textsf{f} and  
+      \textsf{g} (etcetera).
+\afslut
+
+\nbbbbb{Types, Sorts, Values and Functions}\label{chap2.tex.typ-val-fct}
+
+\bbbb{Types and Sorts}
+
+\begynd
+\pind \sort{Types}\pdefindex{type} and
+      \sort{functions}\pdefindex{function} are
+      [usually\footnote{except for `sorts'}] abstract mathematical
+      concepts\dbsquare\ 
+
+\pind \sort{Sorts}\pdefindex{sort} are the types of domain
+      endurants, and, as such, \sfsl{material
+      concepts}\dbsquare\ 
+\afslut
+
+\bbbb{Values}
+
+\begynd
+\pind \sort{Values}\pdefindex{value} are either physical, i.e.,
+      \sfsl{observable}\pconindex{observable} or
+      measurable\pconindex{measurable}, hence rationally \sfsl{describable}
+      phenomena (entities) of domains or are mathematical, hence
+      formally describable abstract, immaterial concepts\dbsquare\
+\afslut
+
+\bbbb{Functions}
+
+\begynd
+\pind \sort{Function}\pdefindex{function}: A function is a
+      mathematical concept. We say that a function is some
+      mathematical thing which, when \sfsl{applied} to a
+      \sfsl{value} (of its \sfsl{function definition set}) \sfsl{yields} either
+      a \sfsl{value} (of its \sfsl{function range}) or
+      \sort{chaos}\plitindex{chaos@\sort{chaos}} -- a further undefined
+      quantity -- and renders the expression in which this
+      \sfsl{function invocation} [\sfsl{function call}] occurs
+      meaningless\dbsquare\
+     
+\pind \sort{Function
+      signatures}\pdefindex{function!signature}\pdefindex{signature!function}, 
+      \sfsl{syntactically} are pairs of a \sfsl{function
+      name}\pconindex{function!name}\pconindex{name!function} and a \sfsl{function 
+      type}\pconindex{function!type}.
+
+
+%\RSLatex
+%  type  F >< (Type_Expr >< ( -> | -~-> ) >< Type_Expr)object
+%\endRSLatex 
+\bp
+\>\kw{type}\ \ F {\TIMES} (Type\_Expr {\TIMES} ( {\RIGHTARROW} {\BAR} {\PARRIGHTARROW} ) {\TIMES} Type\_Expr)
+\ep
+
+    
+      A function
+      name\pdefindex{function!name}\pconindex{name!function}, \sfsl{syntactically}, is some
+      arbitrarily chosen identifier.
+      
+      A function type, \sfsl{syntactically}, is a triple of a sort or type expression, a \RIGHTARROW\
+      (total function type symbol) or a \PARRIGHTARROW\ (partial
+      function type symbol), and a
+      sort\pconindex{sort!expression}\pconindex{expression!sort} or
+      type expression\pconindex{expression!type}.
+      
+      Function types, \sfsl{semantically}, designate a type of
+      function values\dbsquare\
+
+\noindent
+\treprikker
+      
+      Sort and type expressions will be defined in
+      Sect.\,\vref{tseb.rsl.Type Expressions}.
+      
+      Henceforth we shall use the term `sort' when referring to
+      external quality domain endurants and `type' otherwise,
+      including, notably, internal qualities.
+\afslut
+ 
+\nbbbb{R{\^{o}}les of Types, Sorts, Values and Functions in Computing}
+
+\tbw
+
+\label{chap2.tex.typ-val-fct.n}
+
+\nbbbbb{Recursive Function Theory}\label{chap2.tex.Recursive Function Theory}
+
+\nbbbb{Introduction}\label{chap2.Introduction}
+
+The mathematical concept of recursive function theory stems from work
+by \textsf{Kleene, Turing}, and \textsf{Post} starting in the late
+1930s and from work by \textsf{Church} on the \texttt{Lambda Calculus}.
+
+\nbbbb{A Lambda Calculus}\label{chap2.A Lambda Calculus}
+
+\begynd
+\pind We refer to the appendix on the \texttt{RSL} specification
+      language Appendix\,\vref{tseb.rsl.Lambda Calculus + Functions}.
+\afslut
+
+\nbbbb{Recursive Functions}\label{chap2.Recursive Funtions}
+
+\begynd
+\pind \sfsl{Recursive functions are a class of functions on the natural
+      numbers studied in computability
+      theory}\footnote{https://plato.stanford.edu/entries/recursive-functions}. 
+\pind We refer to 
+\begynd
+\pind \texttt{plato.stanford.edu/entries/recursive-functions/\#Defi}
+      for the definition of \sfsl{primitive recursive functions}, 
+\pind \texttt{plato.stanford.edu/entries/recursive-func\-tions/\#De\-fi\_1}
+      for the definition of \sfsl{partial recursive functions} and the
+      \sfsl{recursive functions}.
+\pind Borrowing from \texttt{plato.stanford.edu/entries/recursive-functions/} we sumarise:
+\afslut
+
+\nbbb{The Primitive Recursive Functions}
+
+\newcounter{rfi}\newcounter{rfii}\newcounter{rfiii}\newcounter{rfiv}\newcounter{rfv}
+\newcommand{\srfc}[1]{\addtocounter{enumi}{1}\setcounter{#1}{\value{enumi}}\arabic{#1}}
+
+\begin{tabular}{lrcrcl}
+\srfc{rfi}. \ \ & zero & & & $0$ & \\
+\srfc{rfii}. \ \  & successor & & $s(x)$ & = & $x+1$ \\
+\srfc{rfiii}. \ \  & $k$ary proj.\ fct.\ on the
+  $i$th arg.  & & $\pi^k_i(x_0,...,x_i,...,x_{k-1})$ &= & $x_i$ where $0\leq{i}\leq{k}$ \\ 
+\srfc{rfiv}. \ \ &  composition & &
+    $h(x_0,...,x_{k-1})$&=&$f(g_0(x_0,...,x_{k-1}),...,g_{j−1}(x_0,...,x_{k-1}))$\\ 
+\srfc{rfv}. \ \  & primitive recursion & &$h(x_0,...,x_{k-1},0)$ &=& $f(x_0,...,x_{k-1})$\\
+\arabic{rfv}.  \ \ & & & $h(x_0,...,x_{k-1},y+1)$  &= &  $g(x_0,...,x_{k-1},y,h(x_0,...,x_{k-1},y))$\\
+\end{tabular}
+
+\begin{itemize}
+\item[\arabic{rfi}.]
+\item[\arabic{rfii}.]
+\item[\arabic{rfiii}.]
+\item[\arabic{rfiv}.]
+\item[\arabic{rfv}.]
+\end{itemize}
+ 
+ 
+
+
+\vspace{1mm}
+ 
+\noindent
+\begynd
+\pind With the above (=) definitions one can now show
+\begynd
+\pind the encoding of all the familiar functions over natural numbers.
+\afslut
+\pind 
+\afslut
+
+\nbbb{R{\^{o}}les of Recursive Functions in Computing}
+
+\tbw
+
+\nbbbbb{The \texttt{CSP} Story}\label{The CSP Story}
+
+\begynd
+\pind \texttt{CSP} is a wonderful tool, i.e., a language
+\begynd
+\pind with which to study  and describe \sfsl{communicating sequential
+  processes}. 
+\afslut
+\pind It is the invention of \sfsl{Charles Anthony Richard Hoare}.
+\pind Major publications on \texttt{CSP} are
+      \cite{Hoa78a,Hoare85+2004,Roscoe97,Schneider99}.
+\afslut
+
+\nbbbb{Informal Presentation}
+\begynd
+\pind \texttt{CSP} processes (models of domain behaviors) $P_i, P_j, ..., P_k$ can proceed in
+      parallel:
+%\RSLatex
+%        P_i || P_j || ... || P_k
+%\endRSLatex 
+\bp
+\>\>\>\>P\_i {\PARL} P\_j {\PARL} {\DOTDOTDOT} {\PARL} P\_k
+\ep
+\pind Behaviours
+\begynd
+\pind sometimes synchronise 
+\pind and usually communicate.
+\afslut
+\pos{\psno}{\mnewfoil}
+\pind Synchronisation and communication is abstracted as 
+\begynd
+\pind the sending (\textsf{ch\,!\,m}) and 
+\pind receipt (\textsf{ch\,?})
+\pind of messages, \textsf{m:M}, 
+\pind over channels, \textsf{ch}.
+\afslut
+%\RSLatex
+%    type M
+%    channel ch:M
+%\endRSLatex 
+\bp
+\>\>\kw{type} M\\
+\>\>\kw{channel} ch:M
+\ep
+\pos{\psno}{\mnewfoil}
+\pind Communication between (unique identifier) indexed behaviours \nyl
+      have their channels modelled as similarly indexed channels:
+%\RSLatex
+%    out:        ch[idx]!m
+%    in:          ch[idx]?
+%    channel  {ch[ide]:M|ide:IDE}
+%\endRSLatex 
+\bp
+\>\>\kw{out}:\ \ \ \ \ \ \ \ ch{\LBRACKET}idx{\RBRACKET}!m\\
+\>\>\kw{in}:\ \ \ \ \ \ \ \ \ \ ch{\LBRACKET}idx{\RBRACKET}?\\
+\>\>\kw{channel}\ \ {\LBRACE}ch{\LBRACKET}ide{\RBRACKET}:M{\BAR}ide:IDE{\RBRACE}
+\ep
+    where \textsf{IDE} typically is some type expression \nyl over
+    unique identifier types.
+\afslut
+\pos{\psno}{\mnewfoil}
+
+
+\begynd
+\pind The expression
+%\RSLatex
+%   P_i |^| P_j |^| ... |^| P_k
+%\endRSLatex 
+\bp
+\>\ P\_i {\NONDETCHOICE} P\_j {\NONDETCHOICE} {\DOTDOTDOT} {\NONDETCHOICE} P\_k
+\ep
+\begynd
+\pind can be understood as a choice:
+\pos{}{\bmcii}
+\begynd
+\pind either \textsf{P\_i}, 
+\pind or \textsf{P\_j},
+\pind or ...
+\pind or \textsf{P\_k}
+\afslut \pos{}{\emcii} as \sfsl{non-deterministically \brcolor{internally}} chosen
+\pind with no stipulation as to why\,!
+\afslut
+\afslut
+\pos{\psno}{\mnewfoil}%\pos{\psno}{\mnewfoil}
+
+
+\begynd
+\pind The expression
+%\RSLatex
+%   P_i |=| P_j |=| ... |=| P_k
+%\endRSLatex 
+\bp
+\>\ P\_i {\DETCHOICE} P\_j {\DETCHOICE} {\DOTDOTDOT} {\DETCHOICE} P\_k
+\ep
+\begynd
+\pind can be understood as a choice:
+\pos{}{\bmcii}
+\begynd
+\pind either \textsf{P\_i}, 
+\pind or \textsf{P\_j},
+\pind or ...
+\pind or \textsf{P\_k}
+\afslut \pos{}{\emcii} as \sfsl{deterministically \brcolor{externally}} chosen
+\pind on the basis that the one chosen offers to participate
+      \pos{}{\\} in either an input, \textsf{ch\,?}, or an output,
+      \textsf{ch\,!\,msg}, event.
+\pind If more than one   \textsf{P\_i} offers a communication \pos{}{\\} then one
+      is arbitrarily chosen.
+\pind If no  \textsf{P\_i} offers a communication the behaviour halts \pos{}{\\} 
+      till some  \textsf{P\_j} offers a communication.
+\afslut
+\afslut
+
+\nbbbb{A Syntax for \texttt{CSP}}\label{A Syntax for CSP}
+
+
+\begynd
+\pind We present the syntax for the \texttt{CSP} such as it is used in
+this \primer.
+\afslut
+
+\begin{center}
+  \begin{tabular}{rcll}
+     \textsf{DB} & ::= & \textsf{AB  {\PARL} AB {\PARL} ...  {\PARL} AB}& \ \ \ Domain Behaviour \\
+     \textsf{AB} & ::= & \textsf{A} ; \textsf{A} ; ... ; \textsf{A}; $\mathcal{B}$ &  \  \ \ Part Behaviour \\
+     \textsf{A} & ::= & \kw{stop} & \ \ \ behaviour stops \\
+      & $\mid$ & \kw{skip} & \ \ \ no effect \\
+      & $\mid$ &  \textsf{A} ; \textsf{A} ; ... ; \textsf{A} &  \ \ \ sequential composition \\
+      & $\mid$ & \textsf{A {\PARL} A {\PARL} ...  {\PARL} A}  & \ \ \ parallel composition (interleave) \\
+      & $\mid$ & \textsf{{\PARL} $\{$ A(i) {\BAR} i:Index ... } $\}$  & \ \ \ distributed parallel composition (interleave) \\
+      & $\mid$ & \textsf{A {\NONDETCHOICE} A {\NONDETCHOICE} ... {\NONDETCHOICE} A} &  \ \ \ internal
+      non-deterministic choice \\
+      & $\mid$ & \textsf{{\NONDETCHOICE} $\{$ A(i) {\BAR} i:Index
+     ... } $\}$  & \ \ \ distributed internal
+      non-deterministic choice \\
+      & $\mid$ & \textsf{A {\DETCHOICE} A {\DETCHOICE} ...{\DETCHOICE} A}  &  \ \ \ external
+      non-deterministic choice \\
+      & $\mid$ & \textsf{{\DETCHOICE} $\{$ A(i) {\BAR} i:Index ... } $\}$  & \ \ \ distributed external
+      non-deterministic choice \\
+      & $\mid$ & \textsf{\kw{if} Bool \kw{then} A \kw{else} A \kw{end}} & \ \ \  Boolean conditional\\
+      & $\mid$ & \textsf{\kw{let} v = ch\,? \kw{in} A \kw{end}}  &  \ \ \ input
+      value \textsf{v} on \kw{channel} \textsf{ch} \\
+      & $\mid$ & \textsf{ch\,!\,e ; A} &  \ \ \ output value of expression \textsf{e} on \kw{channel} \textsf{ch}
+  \end{tabular}  
+\end{center}
+
+\nbbbb{R{\^{o}}les of \texttt{CSP} in Computing}
+
+\tbw
+
+\nbbbbb{Closing}\label{chap2.tex.Closing}
+
+\label{chap2.tex.n}
+
+
+%%  LocalWords:  CSP combinatorics cardinality sind Zermelo Fraenkel
+%%  LocalWords:  ZF rsl endurants Expr Hoare Behaviours synchronise
+%%  LocalWords:  Synchronisation behaviours modelled idx ide msg rcll
+%%  LocalWords:  deterministically behaviour Bool

@@ -1,0 +1,44 @@
+\begin{theindex}
+
+  \item $\Rightarrow $, implication (if then), 13
+  \item $\vee $, disjunction (or), 13
+  \item $\wedge $, conjunction (and), 13
+  \item ${\sim }$, negation (not), 13
+  \item {{\color  {black}\textbf  {\textsf  {$-$}}\color  {black}}} subtraction, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$=$}}\color  {black}}} equality, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {$>$}}\color  {black}}}larger than, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$>$}}\color  {black}}}smaller than, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$\ast $}}\color  {black}}} multiplication, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$\cap $}}\color  {black}}} set intersection, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {$\cup $}}\color  {black}}} set union, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {$\div $}}\color  {black}}} division, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$\geq $}}\color  {black}}} larger than or equal, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$\in $}}\color  {black}}} set membership, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {$\leq $}}\color  {black}}} smaller than or equal, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {$\neq $}}\color  {black}}} inequality, 
+		16, 17
+  \item {{\color  {black}\textbf  {\textsf  {$\setminus $}}\color  {black}}} set subtraction, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {$\subset $}}\color  {black}}} proper subset, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {$\subseteq $}}\color  {black}}} subset, 
+		16
+  \item {{\color  {black}\textbf  {\textsf  {+}}\color  {black}}} addition, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {=}}\color  {black}}} equality, 
+		17
+  \item {{\color  {black}\textbf  {\textsf  {card}}\color  {black}}} set cardinality, 
+		16
+
+\end{theindex}

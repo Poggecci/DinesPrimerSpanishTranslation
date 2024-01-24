@@ -1,0 +1,1170 @@
+ \providecommand{\CoFI}{CoFI} \providecommand{\CASL}{CASL}
+  \providecommand{\cofiWWW}{http://www.brics.dk/Projects/CoFI}
+  \providecommand{\cofiWWWpath}{http://www.brics.dk/Projects/CoFI}
+  \providecommand{\cofiFTP}{ftp://ftp.brics.dk/Projects/CoFI}
+  \providecommand{\url}[1]{#1} \providecommand{\href}[2]{#2}
+  \providecommand{\cofiWWWref}[2]{\href{\cofiWWWpath/#1}{#2}}
+  \providecommand{\cofiSN}[1] {\cofiWWWref{StudyNotes/#1.html}{Study Note~#1}}
+  \providecommand{\cofiLDSN}[1] {\cofiWWWref{StudyNotes/Lang/#1.html}{Language
+  Design Study Note~#1}} \providecommand{\cofiLDSNnoWWW}[1]
+  {\href{\cofiFTP/StudyNotes/Lang/}{Language Design Study Note~#1}}
+  \providecommand{\cofiNote}[1] {\cofiWWWref{Notes/#1/index.html}{Note~#1}}
+  \providecommand{\cofiDissentNote}[1]
+  {\cofiWWWref{Notes/#1/index.html}{Note~#1}} \providecommand{\cofiDocument}[1]
+  {\cofiWWWref{Documents/#1/index.html}{Documents/#1}}
+  \providecommand{\cofiTentativeDocument}[1]
+  {\cofiWWWref{Documents/Tentative/#1/index.html}{Documents/Tentative/#1}}
+\begin{thebibliography}{100}
+
+\bibitem{Demokrit:Dines}
+Scott Aaronson.
+\newblock {\em {Quantum Computing since Democritus}}.
+\newblock { Cambridge University Press}, 2013.
+
+\bibitem{Socrates:Dines}
+Sara Ahbel-Rappe.
+\newblock {\em {Socrates: A Guide for the Perplexed}}.
+\newblock {A\&C Black (Bloomsbury), ISBN 978-0-8264-3325-1}, 2011.
+
+\bibitem{aastroem89}
+Karl~Johan {\AA}str{\"o}m and B.~Wittenmark.
+\newblock {\em {Adaptive {C}ontrol}}.
+\newblock Addison-Wesley Publishing Company, 1989.
+
+\bibitem{cambridge.dict.phil95}
+Rober Audi.
+\newblock {\em {The Cambridge Dictionary of Philosophy}}.
+\newblock Cambridge University Press, The Pitt Building, Trumpington Street,
+  Cambridge {\sc CB2 1RP,} England, 1995.
+
+\bibitem{Heraklit:Dines}
+Jonathan Barnes.
+\newblock {\em {The Presocratic Philosophers: The Natural Philosophy of
+  Heraclitus}}.
+\newblock {Routledge, Taylor \& Francis Group}, 1982.
+\newblock 43--62.
+
+\bibitem{Aristotle:Dines-x}
+Jonathan Barnes, editor.
+\newblock {\em {Complete Works of Aristotle}}.
+\newblock {Princeton University Press: Bollingen Series}, 1984.
+
+\bibitem{db74:r:Bek74}
+Hans Beki{\v{c}}, Dines Bj{\o}rner, Wolfgang Henhapl, Cliff~B. Jones, and Peter
+  Lucas.
+\newblock {A Formal Definition of a {PL/I} Subset}.
+\newblock Technical Report 25.139, Vienna, Austria, 20 September 1974.
+
+\bibitem{Schelling:Dines}
+Benjamain Berger and Daniel Whistler.
+\newblock {\em {The Schelling Reader}}.
+\newblock {Bloomsbury Publishing PLC}, 2020.
+
+\bibitem{Berkeley:Dines}
+George Berkeley.
+\newblock {\em {Philosophical Works, Including the Works on Vision}}.
+\newblock {Everyman edition, London}, 1975 (1713).
+
+\bibitem{UNUIIST:46}
+Dines Bj{\o}rner.
+\newblock {New Software Technology Development}.
+\newblock Technical Report~46, {\sf UNU/IIST}, P.O.Box 3058, Macau, November
+  1995.
+\newblock \BREAK International Symposium: {\sf New IT for Governance and
+  Publication Administration}, Beijing, China; organized by UNDDSMS, June 1996.
+
+\bibitem{db:UNUIIST:48}
+Dines Bj{\o}rner.
+\newblock {Software Systems Engineering --- From Domain Analysis to
+  Requirements Capture [--- an Air Traffic Control Example]}.
+\newblock Technical Report~48, {\sf UNU/IIST}, P.O.Box 3058, Macau, November
+  1995.
+\newblock Keynote paper for the {\sl Asia Pacific Software Engineering
+  Conference}, APSEC'95, Brisbane, Australia, 6--9 December 1995.
+  \dbabstract{From Domain Analysis to Requirements Capture Based on an Air
+  Traffic example we illustrate issues of Domain Analysis (of: air space, time
+  tables, and traffic), and of Requirements Capture (of: scheduling systems,
+  and of air traffic control). We relate also to the issue of Software
+  Architecture}.
+
+\bibitem{UNUIIST:58}
+Dines Bj{\o}rner.
+\newblock {Infrastructure Software Systems}.
+\newblock Technical Report~58, {\sf UNU/IIST}, P.O.Box 3058, Macau, Dec 1996.
+\newblock \BREAK Presentation solicited for the Academia Europae (AE/CWI/SMC)
+  Symposium, Amsterdam 11--12 April, 1996. \dbabstract{The aim of this mostly
+  analytical paper is to propose a definition of what an infrastructure is.
+  This definition will be stated in terms of properties of properties of
+  mathematical models of the domain of the `infrastructure', in terms of
+  properties of requirements put to computing \& communications support, and in
+  terms of characteristics of possible architectures for software that support
+  the `infrastructure'. The paper is presently in draft form, but is circulated
+  in order to solicit comments}.
+
+\bibitem{UNUIIST:59}
+Dines Bj{\o}rner.
+\newblock {New Software Development}.
+\newblock Administrative/Technical Report~59, {\sf UNU/IIST}, P.O.Box 3058,
+  Macau, January 1996.
+\newblock Special {\sl Theme\/} paper: {\sl New Software Technology
+  Development}. Paper was first prepared in September 1995 for an International
+  Symposium: {\sl New IT Applications for Governance and Public
+  Administration}, convened by the UN's Department for Development Support and
+  Management Service: UNDDSMS, Beijing, November 9--14, 1995. This symposium
+  was subsequently moved to June 1996, same venue. \dbabstract{In this paper we
+  review (i) basic functions of Governance and Public Administration with
+  respect to its possible needs for Computers \& Communications (notably
+  software); (ii) the basic tasks confronting upper level management of
+  Governance and Public Administration institutions when considering Computers
+  \& Communications; (iii) the basic tasks confronting Computers \&
+  Communications facilities management when procuring, monitoring the
+  development of and operating new software technology for Governance and
+  Public Administration; and (iv) the basic tasks confronting {\sf New
+  Development of Software Technology}. In this latter we cover current thoughts
+  on software development process modeling, current methods, principles,
+  techniques, and tools of software development. We need to cover (i--iii) in
+  order to properly understand the setting for and offerings of what is covered
+  in (iv)}.
+
+\bibitem{db00:p:ifac}
+Dines Bj{\o}rner.
+\newblock {Formal Software Techniques in Railway Systems}.
+\newblock In Eckehard Schnieder, editor, {\em {9th IFAC Symposium on Control in
+  Transportation Systems}}, pages 1--12, Technical University, Braunschweig,
+  Germany, 13--15 June 2000. {\sf VDI/VDE-Gesellschaft Mess-- und
+  Automatisieringstechnik}, {\sf VDI-Gesellschaft f{\"u}r Fahrzeug-- und
+  Verkehrstechnik}.
+\newblock Invited talk.
+
+\bibitem{dines-kilov-02}
+Dines Bj{\o}rner.
+\newblock {Domain Models of "The Market" --- in Preparation for E--Transaction
+  Systems}.
+\newblock In {\em {Practical Foundations of Business and System Specifications
+  (Eds.: Haim Kilov and Ken Baclawski)}}, The Netherlands, December 2002.
+  Kluwer Academic Press.
+\newblock \url{www2.imm.dtu.dk/~dibj/themarket.pdf}.
+
+\bibitem{db03:ifac-cts2003}
+Dines Bj{\o}rner.
+\newblock {Dynamics of Railway Nets: On an Interface between Automatic Control
+  and Software Engineering}.
+\newblock In {\em {CTS2003: 10th IFAC Symposium on Control in Transportation
+  Systems}}, Oxford, UK, August 4-6 2003. Elsevier Science Ltd.
+\newblock Symposium held at Tokyo, Japan. Editors: S. Tsugawa and M. Aoki.
+  \url{www2.imm.dtu.dk/~dibj/ifac-dynamics.pdf}.
+
+\bibitem{train-ifip-wcc2004-db1}
+Dines Bj{\o}rner.
+\newblock {\textsf{TRain:} The Railway Domain --- A ``Grand Challenge'' for
+  Computing Science and Transportation Engineering}.
+\newblock In {\em {Topical Days @ IFIP World Computer Congress 2004}}, IFIP
+  Series. IFIP, Kluwer Academic Press, August 2004.
+
+\bibitem{TheSEBook1}
+Dines Bj{\o}rner.
+\newblock {\em {Software Engineering, Vol.~1: Abstraction and Modelling}}.
+\newblock Texts in Theoretical Computer Science, the EATCS Series. Springer,
+  2006.
+\newblock {See \cite{eQTheSEBook1,cQTheSEBook1}}.
+
+\bibitem{TheSEBook2}
+Dines Bj{\o}rner.
+\newblock {\em {Software Engineering, Vol.~2: Specification of Systems and
+  Languages}}.
+\newblock Texts in Theoretical Computer Science, the EATCS Series. Springer,
+  2006.
+\newblock {Chapters 12--14 are primarily authored by Christian Krog Madsen. See
+  \cite{eQTheSEBook2,cQTheSEBook2}}.
+
+\bibitem{TheSEBook3}
+Dines Bj{\o}rner.
+\newblock {\em {Software Engineering, Vol.~3: Domains, Requirements and
+  Software Design}}.
+\newblock Texts in Theoretical Computer Science, the EATCS Series. Springer,
+  2006.
+\newblock {See \cite{eQTheSEBook3,cQTheSEBook3}}.
+
+\bibitem{db07:container}
+Dines Bj{\o}rner.
+\newblock {A Container Line Industry Domain.
+  \url{www.imm.dtu.dk/~db/container-paper.pdf}}.
+\newblock Techn. report, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, June 2007.
+
+\bibitem{dines:ugo65:2008}
+Dines Bj{\o}rner.
+\newblock {From Domains to Requirements
+  \url{www.imm.dtu.dk/~dibj/2008/ugo/ugo65.pdf}}.
+\newblock In {\em {Montanari Festschrift}}, volume 5065 of {\em Lecture Notes
+  in Computer Science (eds.\ Pierpaolo Degano, Rocco De Nicola and Jos{\'e}
+  Meseguer)}, pages 1--30, Heidelberg, May 2008. Springer.
+
+\bibitem{eQTheSEBook1}
+Dines Bj{\o}rner.
+\newblock {\em {Software Engineering, Vol.~1: Abstraction and Modelling}}.
+\newblock Qinghua University Press, 2008.
+
+\bibitem{eQTheSEBook2}
+Dines Bj{\o}rner.
+\newblock {\em {Software Engineering, Vol.~2: Specification of Systems and
+  Languages}}.
+\newblock Qinghua University Press, 2008.
+
+\bibitem{eQTheSEBook3}
+Dines Bj{\o}rner.
+\newblock {\em {Software Engineering, Vol.~3: Domains, Requirements and
+  Software Design}}.
+\newblock Qinghua University Press, 2008.
+
+\bibitem{cQTheSEBook1}
+Dines Bj{\o}rner.
+\newblock {\em {\textbf{Chinese:} Software Engineering, Vol.~1: Abstraction and
+  Modelling}}.
+\newblock Qinghua University Press. Translated by Dr Liu Bo Chao et al., 2010.
+
+\bibitem{cQTheSEBook2}
+Dines Bj{\o}rner.
+\newblock {\em {\textbf{Chinese:} Software Engineering, Vol.~2: Specification
+  of Systems and Languages}}.
+\newblock Qinghua University Press. Translated by Dr Liu Bo Chao et al., 2010.
+
+\bibitem{cQTheSEBook3}
+Dines Bj{\o}rner.
+\newblock {\em {\textbf{Chinese:} Software Engineering, Vol.~3: Domains,
+  Requirements and Software Design}}.
+\newblock Qinghua University Press. Translated by Dr Liu Bo Chao et al., 2010.
+
+\bibitem{dines:facs:2008}
+Dines Bj{\o}rner.
+\newblock {Domain Engineering}.
+\newblock In Paul Boca and Jonathan Bowen, editors, {\em {Formal Methods: State
+  of the Art and New Directions}}, {Eds.\ Paul Boca and Jonathan Bowen}, pages
+  1--42, London, UK, 2010. Springer.
+
+\bibitem{Kiev:2010ptI}
+Dines Bj{\o}rner.
+\newblock {Domain Science \& Engineering -- \sf \textsl{From Computer Science
+  to The Sciences of Informatics, Part I of II: The Engineering Part}}.
+\newblock {\em {Kibernetika i sistemny analiz}}, {2}(4):100--116, May 2010.
+
+\bibitem{evaKuhn2010}
+Dines Bj{\o}rner.
+\newblock {On Development of Web-based Software: A Divertimento of Ideas and
+  Suggestions}.
+\newblock {Technical}, {Technical University of Vienna}, August--October 2010.
+\newblock \url{www.imm.dtu.dk/~dibj/wfdftp.pdf}.
+
+\bibitem{db:tse:2010:www}
+Dines Bj{\o}rner.
+\newblock {The Tokyo Stock Exchange Trading Rules
+  \url{www.imm.dtu.dk/~db/todai/tse-1.pdf},
+  \url{www.imm.dtu.dk/~db/todai/tse-2.pdf}}.
+\newblock {R\&D Experiment}, {Techn. Univ. of Denmark}, {Fredsvej 11, DK-2840
+  Holte, Denmark}, 2010.
+
+\bibitem{db:tse:2010}
+Dines Bj{\o}rner.
+\newblock {The Tokyo Stock Exchange Trading Rules
+  \url{www.imm.dtu.dk/~db/todai/tse-1.pdf},
+  \url{www.imm.dtu.dk/~db/todai/tse-2.pdf}}.
+\newblock {R\&D Experiment}, {Techn. Univ. of Denmark}, {Fredsvej 11, DK-2840
+  Holte, Denmark}, January, February 2010.
+
+\bibitem{Kiev:2010ptII}
+Dines Bj{\o}rner.
+\newblock {Domain Science \& Engineering -- \sf \textsl{From Computer Science
+  to The Sciences of Informatics Part II of II: The Science Part}}.
+\newblock {\em {Kibernetika i sistemny analiz}}, {2}(3):100--120, June 2011.
+
+\bibitem{2013pipe}
+Dines Bj{\o}rner.
+\newblock {{Pipelines -- a Domain} \url{www.imm.dtu.dk/~dibj/pipe-p.pdf}}.
+\newblock {Experimental Research Report} {2013-2}, {DTU Compute and Fredsvej
+  11, DK-2840 Holte, Denmark}, Spring 2013.
+
+\bibitem{BjornerMereology2013}
+Dines Bj{\o}rner.
+\newblock {A R{\^o}le for Mereology in Domain Science and Engineering}.
+\newblock In {\em {Mereology and the Sciences}}, Synthese Library (eds.\
+  Claudio Calosi and Pierluigi Graziani), pages 323--357, Amsterdam, The
+  Netherlands, October 2014. Springer.
+\newblock \url{https://www.imm.dtu.dk/~dibj/2011/urbino/urbino-colour.pdf}.
+
+\bibitem{bjorner-jaist-2014}
+Dines Bj{\o}rner.
+\newblock {Domain Analysis: Endurants -- An Analysis \& Description Process
+  Model \url{www.imm.dtu.dk/~dibj/2014/kanazawa/kanazawa-p.pdf}}.
+\newblock In {{Shusaku} Iida and {Jos{\'e}} Meseguer and {Kazuhiro} Ogata},
+  editor, {\em {Specification, Algebra, and Software: A Festschrift Symposium
+  in Honor of Kokichi Futatsugi}}. Springer, Heidelberg, Garmany, May 2014.
+
+\bibitem{BjornerCreditCard2016}
+Dines Bj{\o}rner.
+\newblock {A Credit Card System: Uppsala Draft
+  \url{www.imm.dtu.dk/~dibj/2016/credit/accs.pdf}}.
+\newblock {Technical Report: Experimental Research}, {Technical University of
+  Denmark}, {Fredsvej 11, DK-2840 Holte, Denmark}, November 2016.
+
+\bibitem{BjornerWeather2016}
+Dines Bj{\o}rner.
+\newblock {Weather Information Systems: Towards a Domain Description
+  \url{www.imm.dtu.dk/~dibj/2016/wis/wis-p.pdf}}.
+\newblock {Technical Report: Experimental Research}, {Technical University of
+  Denmark}, {Fredsvej 11, DK-2840 Holte, Denmark}, November 2016.
+
+\bibitem{BjornerDrones2017}
+Dines Bj{\o}rner.
+\newblock {A Space of Swarms of Drones.
+  \url{www.imm.dtu.dk/~dibj/2017/swarms/swarm-paper.pdf}}.
+\newblock {Research Note}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, {December} 2017.
+
+\bibitem{BjornerFAoC2015MDAAD}
+Dines Bj{\o}rner.
+\newblock {Manifest Domains: Analysis \& Description
+  \url{www.imm.dtu.dk/~dibj/2015/faoc/faoc-bjorner.pdf}}.
+\newblock {\em {Formal Aspects of Computing}}, 29(2):175--225, March 2017.
+\newblock Online: 26 July 2016.
+
+\bibitem{BjornerDocuments2017}
+Dines Bj{\o}rner.
+\newblock {What are Documents\,?
+  \url{www.imm.dtu.dk/~dibj/2017/docs/docs.pdf}}.
+\newblock {Research Note}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, July 2017.
+
+\bibitem{BjornerContainer2018}
+Dines Bj{\o}rner.
+\newblock {Container Terminals.
+  \url{www.imm.dtu.dk/~dibj/2018/yangshan/maersk-pa.pdf}}.
+\newblock Technical report, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, September 2018.
+\newblock An incomplete draft report; currently 60+ pages.
+
+\bibitem{BjornerTesla2021}
+Dines Bj{\o}rner.
+\newblock {\sfsl{An Assembly Plant Domain -- Analysis \& Description},
+  \texttt{www.imm.dtu.dk/~dibj/2021/assembly/assembly-line.pdf}}.
+\newblock Technical report, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, September 2019.
+
+\bibitem{BjornerTOSEM2018}
+Dines Bj{\o}rner.
+\newblock {Domain Analysis \& Description -- Principles, Techniques and
+  Modeling Languages. \url{www.imm.dtu.dk/~dibj/2018/tosem/Bjorner-TOSEM.pdf}}.
+\newblock {\em {ACM Trans.\,on\,Software Engineering and Methodology}},
+  28(2):66 pages, March 2019.
+
+\bibitem{BjornerRetailer2021}
+Dines Bj{\o}rner.
+\newblock {A Retailer Market: Domain Analysis \& Description. A Comparison {\sf
+  Heraklit/DS\&E} Case Study.
+  \tosemfootnote{www.imm.dtu.dk/~dibj/2021/Retailer/BjornerHeraklit27January2021.pdf}}.
+\newblock {Technical Report}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, January 2021.
+
+\bibitem{BjornerTeslaSept2021}
+Dines Bj{\o}rner.
+\newblock {Automobile Assembly Plants.
+  \tosemfootnote{www.imm.dtu.dk/\~{}dibj/2021/assembly/\-as\-sem\-bly\--li\-ne.pdf}}.
+\newblock {Technical Report}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, September 2021.
+
+\bibitem{BjornerMonograph2020}
+Dines Bj{\o}rner.
+\newblock {\em {Domain Science \& Engineering -- A Foundation for Software
+  Development}}.
+\newblock {EATCS Monographs in Theoretical Computer Science}. Springer,
+  Heidelberg, Germany, 2021.
+\newblock A revised version of this book is \cite{BjornerMonograph2023}.
+
+\bibitem{icasestudies}
+Dines Bj{\o}rner.
+\newblock {\em {\sfsl{Rigorous Domain Descriptions}. A compendium of draft
+  domain description sketches carried out over the years 1995--2021. Chapters
+  cover: \vspace*{-3mm} \begin{multicols}{3}\small\footnotesize \begin{itemize}
+  \item \sfsl{Graphs}, \item \sfsl{Railways}, \item \sfsl{Road Transport},
+  \item \sfsl{The ``7 Seas''}, \item \sfsl{The ``Blue Skies''}, \item
+  \sfsl{Credit Cards}, \item \sfsl{Weather Information}, \item
+  \sfsl{Documents}, \item \sfsl{Urban Planning}, \item \sfsl{Swarms of Drones},
+  \item \sfsl{Container Terminals}, \item \sfsl{A Retailer Market}, \item
+  \sfsl{Shipping}, \item \sfsl{Rivers}, \item \sfsl{Canals}, \item \sfsl{Stock
+  Exchanges}, \item \sfsl{Web Transactions}, etc. \end{itemize} \end{multicols}
+  \vspace*{-3mm} This document is currently being edited}\normalsize}.
+\newblock {Own: \tosemfootnote{www.imm.dtu.dk/~dibj/2021/dd/dd.pdf}}, {Fredsvej
+  11, DK-2840 Holte, Denmark}, {November 15,} {2021}.
+
+\bibitem{BjornerRiversCanals2021}
+Dines Bj{\o}rner.
+\newblock {Rivers and Canals.
+  \tosemfootnote{www.imm.dtu.dk/\latexhtml{\~{}}{~}dibj/2021/\-Graphs/\-Ri\-vers-\-and-\-Canals.pdf}}.
+\newblock {Technical Report}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, March 2021.
+
+\bibitem{BjornerShipping2021}
+Dines Bj{\o}rner.
+\newblock {Shipping.
+  \tosemfootnote{www.imm.dtu.dk/\latexhtml{\~{}}{~}dibj/2021/ral/ral.pdf}}.
+\newblock {Technical Report}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, April 2021.
+
+\bibitem{NewPrimer2023}
+Dines Bj{\o}rner.
+\newblock {Domain Modelling -- A Primer}.
+\newblock A short version of \cite{BjornerMonograph2023}. xii+202
+  pages\footnote{This book is currently being translated into Chinese by Dr.\
+  Yang ShaoFa, IoS/CAS, Beijing and into Russian by Dr.\ Mikhail Chupilko,
+  ISP/RAS, Moscow}, May 2023.
+
+\bibitem{BjornerMonograph2023}
+Dines Bj{\o}rner.
+\newblock {Domain Science \& Engineering -- A Foundation for Software
+  Development}.
+\newblock Revised edition of \cite{BjornerMonograph2020}. xii+346
+  pages\footnote{Due to copyright reasons no URL is given to this document's
+  possible Internet location. A primer version, omitting certain chapters, is
+  \cite{NewPrimer2023}}, January 2023.
+
+\bibitem{train-ifip-wcc2004-db2}
+Dines Bj{\o}rner, Peter Chiang, Morten~S.T. Jacobsen, Jens~Kielsgaard Hansen,
+  Michael~P. Madsen, and Martin Penicka.
+\newblock {Towards a Formal Model of \textsf{CyberRail}}.
+\newblock In {\em {Topical Days @ IFIP World Computer Congress 2004}}, IFIP
+  Series. IFIP, Kluwer Academic Press, August 2004.
+
+\bibitem{dines:wpderoever:2008}
+Dines Bj{\o}rner and Asger Eir.
+\newblock {Compositionality: Ontology and Mereology of Domains. Some Clarifying
+  Observations in the Context of Software Engineering in \textrm{July 2008,
+  eds.\ Martin Steffen, Dennis Dams and Ulrich Hannemann}}.
+\newblock In {\em {Festschrift for Prof. Willem Paul de Roever Concurrency,
+  Compositionality, and Correctness}}, volume 5930 of {\em Lecture Notes in
+  Computer Science}, pages 22--59, Heidelberg, July 2010. Springer.
+
+\bibitem{UNUIIST:37}
+Dines Bj{\o}rner, Chris~W. George, and S{\o}ren Prehn.
+\newblock {Domain Analysis --- a Prerequisite for Requirements Capture}.
+\newblock Technical Report~37, {\sf UNU/IIST}, P.O.Box 3058, Macau, February
+  1995.
+\newblock \dbabstract{Before an architecture for a software system (or package)
+  - that is: a definition of concepts and facilities of the software system
+  (resp.\ package) to be developed - can be given, one first establishes proper
+  requirements expected of that software, that is: we base software development
+  on requirements specifications. These requirements are captured from
+  understanding first the domain in which the software is to serve and then
+  from understanding the expectations of the new software as an operational
+  part of the thus extended domain. Thus understanding the domain seems to be a
+  very first order of `business'! In this paper we present an example of the
+  collection of (informal) procedures and (formal) techniques that are being
+  applied in understanding the Railway System domain - as part of a large scale
+  technology transfer project joint with various software development and
+  computer centers of the Chinese Railways in researching and developing proper
+  software eventually for all aspects of railway operation in China}.
+
+\bibitem{dines-idpt-02}
+Dines Bj{\o}rner, Chris~W. George, and S{\o}ren Prehn.
+\newblock {Computing Systems for Railways --- A R{\^o}le for Domain
+  Engineering. Relations to Requirements Engineering and Software for Control
+  Applications}.
+\newblock In {\em {Integrated Design and Process Technology. Editors: Bernd
+  Kraemer and John C. Petterson}}, P.O.Box 1299, Grand View, Texas 76050-1299,
+  USA, 24--28 June 2002. Society for Design and Process Science.
+\newblock \url{www2.imm.dtu.dk/~dibj/pasadena-25.pdf}.
+
+\bibitem{db97:r:UNUIIST:93}
+Dines Bj{\o}rner, C.W. George, B.Stig Hansen, H.~Laustrup, and S.~Prehn.
+\newblock {A Railway System, Coordination'97, Case Study Workshop Example}.
+\newblock Research Report~93, {\sf UNU/IIST}, P.O.Box 3058, Macau, January
+  1997.
+\newblock \dbabstract{This report presents a solution to the problem presented
+  by the organisers of a Case Study Workshop in connection with {\sf
+  Coordination'97:} the second international conference on Coordination Models
+  and Languages, Berlin, September 4, 1997. The solution covers three stages of
+  development: a domain theory of railway systems, a set of requirements
+  definitions, a computing systems architecture and program organisation. All
+  stages are both informally and formally described in The RAISE Specification
+  Language, and correctness relations between stages are formally expressed
+  using The RAISE Method Implementation Relation}.
+
+\bibitem{e:db:Bj78bwo}
+Dines Bj{\o}rner and Cliff~B. Jones, editors.
+\newblock {\em {The Vienna Development Method: The Meta-Language}}, volume~61
+  of {\em LNCS}.
+\newblock Springer, Heidelberg, Germany, 1978.
+
+\bibitem{e:db:Bj82b}
+Dines Bj{\o}rner and Cliff~B. Jones, editors.
+\newblock {\em {Formal Specification and Software Development}}.
+\newblock Prentice-Hall, London, England, 1982.
+
+\bibitem{e:db:Bj80f}
+Dines Bj{\o}rner and Ole~N. Oest, editors.
+\newblock {\em {Towards a Formal Description of {A}da}}, volume~98 of {\em
+  LNCS}.
+\newblock Springer, Heidelberg, Germany, 1980.
+
+\bibitem{db04:railway}
+Dines Bj{\o}rner and Martin P{\v{c}}ni{\v{c}}ka.
+\newblock {Towards a TRAIN Book for The RAIlway DomaiN}.
+\newblock Techn. reports, www.railwaydomain.org/PDF/tb.pdf, The TRAIN
+  Consortium, 2004.
+
+\bibitem{CPAIOR:Nikolaj:2021}
+Nikolaj Bj{\o}rner, Maxwell Levatich, Nuno~P. Lopes, Andrey Rybalchenko, and
+  Chandrasekar Vuppalapati.
+\newblock Supercharging plant configurations using {Z3}.
+\newblock In Peter~J. Stuckey, editor, {\em Integration of Constraint
+  Programming, Artificial Intelligence, and Operations Research - 18th
+  International Conference, {CPAIOR} 2021, Vienna, Austria, July 5-8, 2021,
+  Proceedings}, volume 12735 of {\em Lecture Notes in Computer Science}, pages
+  1--25. Springer, 2021.
+
+\bibitem{BjornerUrbanPlanningProcesses2017}
+Dines Bj{\o}rner\label{BjornerUrbanPlanningProcesses2017}.
+\newblock {Urban Planning Processes.
+  {\url{www.imm.dtu.dk/~dibj/2017/up/urban-planning.pdf}}}.
+\newblock {Research Note}, {Technical University of Denmark}, {Fredsvej 11,
+  DK-2840 Holte, Denmark}, July 2017.
+
+\bibitem{wayne.d.blizard.90}
+Wayne~D. Blizard.
+\newblock {A Formal Theory of Objects, Space and Time}.
+\newblock {\em The Journal of Symbolic Logic}, 55(1):74--89, March 1990.
+
+\bibitem{blackwell96}
+Nicholas Bunnin and E.P. Tsui-James, editors.
+\newblock {\em {The Blackwell Companion to Philosophy}}.
+\newblock Blackwell Companions to Philosophy. Blackwell Publishers, 108 Cowley
+  Road, Oxford OX4 1JF, UK, 1996.
+
+\bibitem{RudolfCarnap1928}
+Rudolf Carnap.
+\newblock {\em {Der Logische Aufbau der Welt}}.
+\newblock Weltkreis, Berlin, 1928.
+
+\bibitem{Car37}
+Rudolf Carnap.
+\newblock {\em {The Logical Syntax of Language}}.
+\newblock Harcourt Brace and Co., N.Y., 1937.
+
+\bibitem{Car42}
+Rudolf Carnap.
+\newblock {\em {Introduction to Semantics}}.
+\newblock Harvard Univ. Press, Cambridge, Mass., 1942.
+
+\bibitem{CasatiVarzi1999}
+Roberto Casati and Achille~C. Varzi.
+\newblock {\em {Parts and Places: the structures of spatial representation}}.
+\newblock MIT Press, 1999.
+
+\bibitem{actulus2015}
+David~R. Christiansen, Klaus Grue, Henning Niss, Peter Sestoft, and
+  Kristj{\'a}n~S. Sigtryggsson.
+\newblock {Actulus Modeling Language –- An actuarial programming language for
+  life insurance and pensions}.
+\newblock {Technical Report,
+  \tosemfootnote{edlund.dk/\-si\-tes/\-de\-fault/\-fi\-les/\-Down\-loads/\-paper\_ac\-tu\-lus-\-mo\-de\-ling-\-lan\-gua\-ge.pdf}},
+  {Edlund A/S, Denmark, Bjerreg{\aa}rds Sidevej 4, DK-2500 Valby. (+45) 36 15
+  06 30. edlund@edlund.dk, http://www.edlund.dk/en/insights/scientific-papers},
+  2015.
+\newblock {This paper illustrates how the design of pension and life insurance
+  products, and their administration, reserve calculations, and audit, can be
+  based on a common formal notation. The notation is human-readable and
+  machine-processable, and specialised to the actuarial domain, achieving great
+  expressive power combined with ease of use and safety.}
+
+\bibitem{maude-manual}
+Manuel Clavel, Francisco Dur{\'a}n, Steven Eker, Patrick Lincoln,
+  Narciso~Mart{\'\i} Oliet, Jos{\'e} Meseguer, and Carolyn Talcott.
+\newblock {\em Maude 2.6 Manual}.
+\newblock Department of Computer Science, University of Illinois and
+  Urbana-Champaign, Urbana-Champaign, Ill., USA, January 2011.
+
+\bibitem{Clem84}
+Geert~Bagge Clemmensen and Ole~N. Oest.
+\newblock Formal specification and development of an {A}da compiler -- a {VDM}
+  case study.
+\newblock In {\em Proc. 7th International Conf. on Software Engineering,
+  26.-29. March 1984, Orlando, Florida}, pages 430--440, New York, USA, 1984.
+  IEEE.
+
+\bibitem{CohenSMarc2018}
+S.~Marc Cohen.
+\newblock {Aristotle's Metaphysics}.
+\newblock In {\em {Stanford Encyclopedia of Philosophy}}. {Center for the Study
+  of Language and Information}, {Stanford University Stanford, CA}, {November}
+  {2018}.
+\newblock {The Metaphysics Research Lab.}
+
+\bibitem{Anaximander:Dines}
+Dirk~L. Couprie and Radim Kocandrle.
+\newblock {\em {Anaximander: Anaximander on Generation and Destruction}}.
+\newblock {x}, Springer (Briefs in Philosophy Series).
+
+\bibitem{CourantAaC}
+Richard Courant and Fritz John.
+\newblock {\em {Introduction to Analysis and Calculus, I--II/1}}.
+\newblock {Springer(Wiley 1974)}, {December} {1989, 1998}.
+\newblock {`Classics in Mathematics' Series}.
+
+\bibitem{PatrickCousot2021}
+Patrick Cousot.
+\newblock {\em Principles of Abstract Interpretation}.
+\newblock The MIT Press, 2021.
+
+\bibitem{Cousot77a}
+Patrick Cousot and Rhadia Cousot.
+\newblock {Abstract Interpretation: A Unified Lattice Model for Static Analysis
+  of Programs by Construction or Approximation of Fixpoints}.
+\newblock In {\em {4th POPL: Principles of Programming and Languages}}, pages
+  238--252. ACM Press, 1977.
+
+\bibitem{Dahl72a}
+O.-J. Dahl, E.W. Dijkstra, and Charles Anthony~Richard Hoare.
+\newblock {\em Structured Programming}.
+\newblock Academic Press, 1972.
+
+\bibitem{Descartes:Dines}
+Ren{\'e} Descartes.
+\newblock {\em {Discours de la m{\'e}thode. Texte et commentaire par
+  {\'E}tienne Gilson}}.
+\newblock {Paris: Vrin}, 1987.
+
+\bibitem{AsgerEir2004}
+Asger Eir.
+\newblock {\em {Construction Informatics --- issues in engineering, computer
+  science, and ontology}}.
+\newblock PhD thesis, Dept. of Computer Science and Engineering, Institute of
+  Informatics and Mathematical Modeling, Technical University of Denmark,
+  Building 322, Richard Petersens Plads, DK--2800 Kgs.Lyngby, Denmark, February
+  2004.
+
+\bibitem{AsgerEir07}
+Asger Eir.
+\newblock {\em {Formal Methods and Hybrid Real-Time Systems}}, chapter
+  {Relating Domain Concepts Intensionally by Ordering Connections}, pages
+  188--216.
+\newblock Springer (LNCS Vol.~4700, Festschridt: Essays in Honour of Dines
+  Bj{\o}rner and Zhou Chaochen on the Occasion of Their 70th Birthdays), 2007.
+
+\bibitem{Plato:Dines}
+William David~Ross et~al.
+\newblock {\em {Plato's Theory of Ideas}}.
+\newblock {Oxford University Press}, 1963.
+
+\bibitem{mctaggart-t1}
+David~John Farmer.
+\newblock {\em {Being in time: The nature of time in light of McTaggart's
+  paradox}}.
+\newblock University Press of America, Lanham, Maryland, 1990.
+\newblock 223 pages.
+
+\bibitem{JohnFitzgerald+PeterGormLarsen}
+John Fitzgerald and Peter~Gorm Larsen.
+\newblock {\em {Modelling Systems -- Practical Tools and Techniques in Software
+  Development}}.
+\newblock Cambridge University Press, The Edinburgh Building, Cambridge CB2
+  2RU, UK, 1998.
+\newblock ISBN 0-521-62348-0.
+
+\bibitem{Mandrioli2012Time}
+Carlo~A. Furia, Dino Mandrioli, Angelo Morzenti, and Matteo Rossi.
+\newblock {\em {Modeling Time in Computing}}.
+\newblock {Monographs in Theoretical Computer Science}. Springer, 2012.
+
+\bibitem{futatsugi2000a}
+K.~Futatsugi, A.T. Nakagawa, and T.~Tamai, editors.
+\newblock {\em {CAFE: An Industrial\---Strength Algebraic Formal Method}}, Sara
+  Burgerhartstraat 25, P.O. Box 211, NL--1000 AE Amsterdam, The Netherlands,
+  2000. Elsevier.
+\newblock Proceedings from an April 1998 Symposium, Numazu, Japan.
+
+\bibitem{AdvCafeOBJ2022}
+Kokichi Futatsugi.
+\newblock {Advances of proof scores in CafeOBJ}.
+\newblock {\em {Science of Computer Programming}}, 224, December 2022.
+
+\bibitem{DBLP:conf/ac/George07x}
+Chris George.
+\newblock Applicative modelling with {RAISE}.
+\newblock In Chris George, Zhiming Liu, and Jim Woodcock, editors, {\em Domain
+  Modeling and the Duration Calculus, International Training School, Shanghai,
+  China, September 17-21. 2007, Advanced Lectures}, volume 4710 of {\em Lecture
+  Notes in Computer Science}, pages 51--118. Springer, 2007.
+
+\bibitem{RSL}
+Chris~W. George, Peter Haff, Klaus Havelund, Anne~Elisabeth Haxthausen, Robert
+  Milne, Claus~Bendix Nielsen, S{\o}ren Prehn, and Kim~Ritter Wagner.
+\newblock {\em The RAISE Specification Language}.
+\newblock The BCS Practitioner Series. Prentice-Hall, Hemel Hampstead, England,
+  1992.
+
+\bibitem{RaiseMethod}
+Chris~W. George, Anne~Elisabeth Haxthausen, Steven Hughes, Robert Milne,
+  S{\o}ren Prehn, and Jan~Storbank Pedersen.
+\newblock {\em {The RAISE Development Method}}.
+\newblock The BCS Practitioner Series. Prentice-Hall, Hemel Hampstead, England,
+  1995.
+
+\bibitem{JavaLangSpec96}
+James Gosling and Frank Yellin.
+\newblock {\em {The Java Language Specification}}.
+\newblock Addison\--Wesley \& Sun Microsystems. ACM Press Books, 1996.
+\newblock 864 pp, ISBN 0-10-63451-1.
+
+\bibitem{Kant1992}
+P.~Guyer, editor.
+\newblock {\em {The Cambridge Companion to Kant}}.
+\newblock Cambridge Univ. Press, England, 1992.
+
+\bibitem{Haff87}
+P.~Haff and A.V. Olsen.
+\newblock Use of {VDM} within {CCITT}.
+\newblock In {\em {VDM -- A Formal Method at Work, eds. Dines Bj{\o}rner, Cliff
+  B. Jones, Micheal Mac an Airchinnigh and Erich J. Neuhold}}, pages 324--330.
+  Springer, Lecture Notes in Computer Science, Vol. 252, March 1987.
+\newblock {Proc. VDM-Europe Symposium 1987, Brussels, Belgium}.
+
+\bibitem{vdm:Haff}
+Peter Haff.
+\newblock {A Formal Definition of CHILL. A Supplement to the CCITT
+  Recommendation Z.200}.
+\newblock Technical report, Dansk Datamatik Center, Lyngby, Denmark, Dansk
+  Datamatik Center, Lyngby, Denmark, 1980.
+
+\bibitem{MRHansen+HRischel}
+Michael~Reichhardt Hansen and Hans Rischel.
+\newblock {\em {Functional Programming in Standard ML}}.
+\newblock Addison Wesley, 1997.
+
+\bibitem{Hansen+Rischel}
+Michael~Reichhardt Hansen and Hans Rischel.
+\newblock {\em {Functional Programming Using F\#}}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem{HardyWright2008}
+G.~H. Hardy, Edward~M. Wright, and John Silvermann.
+\newblock {\em An Introduction to the Theory of Numbers}.
+\newblock Oxford University Press, England, 6th edition edition, 2008.
+\newblock Editor: Roger Heath Brown.
+
+\bibitem{Harel87b}
+David Harel.
+\newblock {\em {Algorithmics ---The Spirit of Computing}}.
+\newblock Addison-Wesley, 1987.
+
+\bibitem{Harper}
+R.~Harper, D.~MacQueen, and R.~Milner.
+\newblock {Standard ML}.
+\newblock Technical Report ECS-LFCS-86-2, Lab. f. Found. of Comp. Sci., Dept.
+  of Comp. Sci., Univ. of Edinburgh, Scotland, 1986.
+
+\bibitem{Hegel:Dines}
+Georg Wilhelm~Friedrich Hegel.
+\newblock {\em {Wissenschaft der Logik}}.
+\newblock {Hofenberg}, 2016 (1812--1816).
+
+\bibitem{Heidegger27}
+Martin Heidegger.
+\newblock {\em {Sein und Zeit (Being and Time)}}.
+\newblock Oxford University Press, 1927, 1962.
+
+\bibitem{Parminedes:Dines}
+Martin Heidegger.
+\newblock {\em {Parminedes}}.
+\newblock {Indiana University Press}, 1998.
+
+\bibitem{Hoa72a}
+Charles Anthony~Richard Hoare.
+\newblock {Notes on Data Structuring}.
+\newblock In {\em \cite{Dahl72a}}, pages 83--174, 1972.
+
+\bibitem{Hoa78}
+Charles Anthony~Richard Hoare.
+\newblock {Communicating Sequential Processes}.
+\newblock {\em Communications of the ACM}, 21(8), Aug. 1978.
+
+\bibitem{Hoare85+2004}
+Charles Anthony~Richard Hoare.
+\newblock {\em {Communicating Sequential Processes}}.
+\newblock {C.A.R.} Hoare Series in Computer Science. Prentice-Hall
+  International, London, England, 1985.
+\newblock Published electronically:
+  \tosemfootnote{using\-csp.\-com/\-csp\-book.pdf} (2004).
+
+\bibitem{Hoare85}
+Charles Anthony~Richard Hoare.
+\newblock {\em {Communicating Sequential Processes}}.
+\newblock {C.A.R.} Hoare Series in Computer Science. Prentice-Hall
+  International, 1985.
+
+\bibitem{Holzmann03}
+Gerard~J. Holzmann.
+\newblock {\em {The SPIN Model Checker, Primer and Reference Manual}}.
+\newblock Addison-Wesley, Reading, Massachusetts, 2003.
+
+\bibitem{oxford.dict.phil95}
+Ted Honderich.
+\newblock {\em {The Oxford Companion to Philosophy}}.
+\newblock Oxford University Press, Walton St., Oxford {\sc ox2 6dp}, England,
+  1995.
+
+\bibitem{Hume:Dines}
+David Hume.
+\newblock {\em {Enquiry Concerning Human Understanding}}.
+\newblock {Squashed Editions}, 2020 (1758).
+
+\bibitem{Husserl:Dines}
+Edmund Husserl.
+\newblock {\em {Ideas. General Introduction to Pure Phenomenology}}.
+\newblock {Routledge}, 2012.
+
+\bibitem{alloy}
+Daniel Jackson.
+\newblock {\em {{Software Abstractions: Logic, Language, and Analysis}}}.
+\newblock The MIT Press, Cambridge, Mass., USA, April 2006.
+\newblock ISBN 0-262-10114-9.
+
+\bibitem{lexicon}
+Michael~A. Jackson.
+\newblock {\em {Software {R}equirements \& {S}pecifications: a lexicon of
+  practice, principles and prejudices}}.
+\newblock ACM Press. Addison-Wesley, Reading, England, 1995.
+
+\bibitem{Jackson2010Facs}
+Michael~A. Jackson.
+\newblock {Program Verification and System Dependability}.
+\newblock In Paul Boca and Jonathan Bowen, editors, {\em {Formal Methods: State
+  of the Art and New Directions}}, pages 43--78, London, UK, 2010. Springer.
+
+\bibitem{Fichte:Dines}
+David James and Gunter Zoller.
+\newblock {\em {Cambridge Companion to Fichte}}.
+\newblock {Cambridge University Press}, 2016.
+
+\bibitem{FuzzyTextBook2014}
+{James J. Buckley and Esfanidar Eslami}.
+\newblock {\em {An Introduction to Fuzzy Logic and Fuzzy Sets}}.
+\newblock {Springer}, {2002}.
+
+\bibitem{Kant:Dines}
+Immanuel Kant.
+\newblock {\em {Critique of Pure Reason}}.
+\newblock {Penguin Books Ltd}, 2007 (1787).
+
+\bibitem{Karlin+Taylor1998}
+Samuel Karlin and Howard~M. Taylor.
+\newblock {\em {An Introduction to Stochastic Modeling}}.
+\newblock Academic Press, 1998.
+\newblock ISBN 0-12-684887-4.
+
+\bibitem{Kennedy96}
+Andrew Kennedy.
+\newblock {\em Programming languages and dimensions}.
+\newblock PhD thesis, University of Cambridge, Computer Laboratory, April 1996.
+\newblock 149 pages:
+  \tosemfootnote{cl.cam.ac.uk/techreports/UCAM-CL-TR-391.pdf}. Technical report
+  UCAM-CL-TR-391, ISSN 1476-298.
+
+\bibitem{Knuth}
+Donald~E. Knuth.
+\newblock {\em The Art of Computer Programming, 3 vols: 1: Fundamental
+  Algorithms, 2: Seminumerical Algorithms, 3: Searching \& Sorting}.
+\newblock Addison-Wesley, Reading, Mass., USA, 1968, 1969, 1973; newly revised
+  2000.
+
+\bibitem{Lamsweerde}
+{Axel van} Lamsweerde.
+\newblock {\em {Requirements Engineering: from system goals to UML models to
+  software specifications}}.
+\newblock Wiley, 2009.
+
+\bibitem{PaulLindgreen1983}
+Paul Lindgreen.
+\newblock {\em {Systemanalyse og systembeskrivelse (System Analysis and System
+  Description)}}.
+\newblock {Samfundslitteratur}, {1983}.
+
+\bibitem{OED}
+W.~Little, H.W. Fowler, J.~Coulson, and C.T. Onions.
+\newblock {\em {The Shorter {O}xford English Dictionary on Historical
+  Principles}}.
+\newblock Clarendon Press, Oxford, England, 1973, 1987.
+\newblock {Two vols.}
+
+\bibitem{Locke:Dines}
+John Locke.
+\newblock {\em {An Essay Concerning Human Understanding}}.
+\newblock {Penguin Classics}, 1998 (1689).
+
+\bibitem{maude-primer}
+Theodore McCombs.
+\newblock {\em Maude 2,0 Primer}.
+\newblock Department of Computer Science, University of Illinois and
+  Urbana-Champaign, Urbana-Champaign, Ill., USA, August 2003.
+
+\bibitem{mctaggart-t0}
+J.~M.~E. McTaggart.
+\newblock {The Unreality of Time}.
+\newblock {\em Mind}, 18(68):457--84, October 1908.
+\newblock New Series. See also: \cite{philosophy-time}.
+
+\bibitem{Anaximenes:Dines}
+J.~Edward Mercer.
+\newblock {\em {The Mysticism Of Anaximenes And The Air}}.
+\newblock {Kessinger Publishing, LLC}, 2010.
+
+\bibitem{Michel-etal-2010}
+Kai Michels, Frank Klawonn, Rudolf Kruse, and Andreas N{\"u}rnberger.
+\newblock {\em {Fuzzy Control: Fundamentals, Stability and Design of Fuzzy
+  Controllers}}.
+\newblock Springer, 19 October 2010.
+
+\bibitem{MilnerTofte}
+R.~Milner, M.~Tofte, and R.~Harper.
+\newblock {\em {The Definition of Standard ML}}.
+\newblock The MIT Press, Cambridge, Mass., USA and London, England, 1990.
+
+\bibitem{Thales:Dines}
+Patricia O'Grady.
+\newblock {\em {Thales of Miletus}}.
+\newblock {Routledge (Western Philosophy Series)}, 2002.
+
+\bibitem{train-ifip-wcc2004-mp}
+Martin Penicka.
+\newblock {From Railway Resource Planning to Train Operation}.
+\newblock In {\em {Topical Days @ IFIP World Computer Congress 2004}}, IFIP
+  Series. IFIP, Kluwer Academic Press, August 2004.
+
+\bibitem{pierce1997}
+Benjamin Pierce.
+\newblock {\em {Types and Programming Languages}}.
+\newblock The MIT Press, 2002.
+
+\bibitem{philosophy-time}
+Robin~Le Poidevin and Murray MacBeath, editors.
+\newblock {\em {The Philosophy of Time}}.
+\newblock Oxford University Press, 1993.
+
+\bibitem{popper-ldf34}
+Karl~R. Popper.
+\newblock {\em {Logik der Forschung}}.
+\newblock Julius Springer Verlag, Vienna, Austria, 1934 (1935).
+\newblock English version \cite{popper-tlosd59}.
+
+\bibitem{popper-tlosd59}
+Karl~R. Popper.
+\newblock {\em {The Logic of Scientific Dicovery}}.
+\newblock Hutchinson of London, 3 Fitzroy Square, London W1, England,
+  1959,\ldots,1979.
+\newblock Translated from \cite{popper-ldf34}.
+
+\bibitem{popper-car-tgask63}
+Karl~R. Popper.
+\newblock {\em {Conjectures and Refutations. The Growth of Scientific
+  Knowledge}}.
+\newblock Routledge and Kegan Paul Ltd. (Basic Books, Inc.), 39 Store Street,
+  WC1E 7DD, London, England (New York, NY, USA), 1963,\ldots,1981.
+
+\bibitem{prior49}
+Arthur~N. Prior.
+\newblock {\em {Logic and the Basis of Ethics}}.
+\newblock Clarendon Press, Oxford, UK, 1949.
+
+\bibitem{prior55}
+Arthur~N. Prior.
+\newblock {\em {Formal Logic}}.
+\newblock Clarendon Press, Oxford, UK, 1955.
+
+\bibitem{prior57}
+Arthur~N. Prior.
+\newblock {\em {Time and Modality}}.
+\newblock Oxford University Press, Oxford, UK, 1957.
+
+\bibitem{prior67}
+Arthur~N. Prior.
+\newblock {\em {Past, Present and Future}}.
+\newblock Clarendon Press, Oxford, UK, 1967.
+
+\bibitem{prior68}
+Arthur~N. Prior.
+\newblock {\em {Papers on Time and Tense}}.
+\newblock Clarendon Press, Oxford, UK, 1968.
+
+\bibitem{prior93}
+Arthur~N. Prior.
+\newblock {\em Changes in Events and Changes in Things}, chapter in
+  \cite{philosophy-time}.
+\newblock Oxford University Press, 1993.
+
+\bibitem{db02-amore-maint}
+Martin P\v{e}ni\v{c}ka, Albena~Kirilova Strupchanska, and Dines Bj{\o}rner.
+\newblock {Train Maintenance Routing}.
+\newblock In {\em {FORMS'2003: Symposium on Formal Methods for Railway
+  Operation and Control Systems}}. L'Harmattan Hongrie, 15--16 May 2003.
+\newblock Conf. held at Techn.Univ. of Budapest, Hungary. Editors: G. Tarnai
+  and E. Schnieder, Germany. \url{www2.imm.dtu.dk/~dibj/martin.pdf}.
+
+\bibitem{mctaggart-t2}
+Gerald Rochelle.
+\newblock {\em {Behind time: The incoherence of time and McTaggart's atemporal
+  replacement}}.
+\newblock Avebury series in philosophy. Ashgate, Brookfield, Vt., USA, 1998.
+\newblock vii + 221 pages.
+
+\bibitem{Rogers67}
+Hartley~R. Rogers.
+\newblock {\em Theory of Recursive Functions and Effective Computability}.
+\newblock McGraw-Hill, 1967.
+
+\bibitem{Roscoe97}
+A.~W. Roscoe.
+\newblock {\em {Theory and Practice of Concurrency}}.
+\newblock {C.A.R.} Hoare Series in Computer Science. Prentice-Hall, 1997.
+\newblock
+  \tosemfootnote{http://\-www.\-com\-lab.\-ox.\-ac.\-uk/\-people/\-bill.\-ros\-coe/pub\-li\-ca\-tions/\-68b.pdf}.
+
+\bibitem{Russell1905}
+Bertrand Russell.
+\newblock {On Denoting}.
+\newblock {\em Mind}, 14:479--493, 1905.
+
+\bibitem{Rus12}
+Bertrand Russell.
+\newblock {\em {The Problems of Philosophy}}.
+\newblock Home University Library, London, 1912.
+\newblock Oxford University Press paperback, 1959 Reprinted, 1971-2.
+
+\bibitem{Russell1919}
+Bertrand Russell.
+\newblock {\em {Introduction to Mathematical Philosophy}}.
+\newblock George Allen and Unwin, London, 1919.
+
+\bibitem{Schneider99}
+Steve Schneider.
+\newblock {\em {Concurrent and Real-time Systems --- The CSP Approach}}.
+\newblock Worldwide Series in Computer Science. John Wiley \& Sons, Ltd.,
+  Baffins Lane, Chichester, West Sussex PO19 1UD, England, January 2000.
+
+\bibitem{sestoft-Java}
+Peter Sestoft.
+\newblock {\em {Java Precisely}}.
+\newblock The MIT Press, 25 July 2002.
+
+\bibitem{kaisorlander1994}
+Kai S{\o}rlander.
+\newblock {\em {Det Uomg{\ae}ngelige -- Filosofiske Deduktioner [The Inevitable
+  -- Philosophical Deductions, with a foreword by Georg Henrik von Wright]}}.
+\newblock Munksgaard $\cdot$ Rosinante, Copenhagen, Denmark, 1994.
+\newblock 168 pages.
+
+\bibitem{kaisorlander1997}
+Kai S{\o}rlander.
+\newblock {\em {Under Evighedens Synsvinkel [Under the viewpoint of
+  eternity]}}.
+\newblock Munksgaard $\cdot$ Rosinante, Copenhagen, Denmark, 1997.
+\newblock 200 pages.
+
+\bibitem{kaisorlander2002}
+Kai S{\o}rlander.
+\newblock {\em {Den Endegyldige Sandhed [The Final Truth]}}.
+\newblock Rosinante, Copenhagen, Denmark, 2002.
+\newblock 187 pages.
+
+\bibitem{kaisorlander2016}
+Kai S{\o}rlander.
+\newblock {\em {Indf{\o}ring i Filosofien [Introduction to The Philosophy]}}.
+\newblock Informations Forlag, Copenhagen, Denmark, 2016.
+\newblock 233 pages.
+
+\bibitem{kaisorlander2022}
+Kai S{\o}rlander.
+\newblock {\em {Den rene fornufts struktur [The Structure of Pure Reason]}}.
+\newblock Ellek{\ae}r, Slagelse, Denmark, 2022.
+\newblock See \cite{kaisorlander2023}.
+
+\bibitem{kaisorlander2023}
+Kai S{\o}rlander.
+\newblock {\em {The Structure of Pure Reason}}.
+\newblock Publisher to be decided, 2023.
+\newblock {This is an English translation of \cite{kaisorlander2022} -- done by
+  Dines Bj{\o}rner in collaboration with the author}.
+
+\bibitem{Spinoza:Dines}
+Baruch Spinoza.
+\newblock {\em {Ethics, Demonstrated in Geometrical Order}}.
+\newblock {The Netherlands}, 1677.
+
+\bibitem{GaloisTheory2009}
+{Steven Weintraub}.
+\newblock {\em {Galois Theory}}.
+\newblock {Springer}, {2009}.
+
+\bibitem{db02-amore-ros}
+Albena~Kirilova Strupchanska, Martin P\v{e}ni\v{c}ka, and Dines
+  Bj{\o}rner\label{db02-amore-ros}.
+\newblock {Railway Staff Rostering}.
+\newblock In {\em {FORMS2003: Symposium on Formal Methods for Railway Operation
+  and Control Systems}}. L'Harmattan Hongrie, 15--16 May 2003.
+\newblock Conf. held at Techn.Univ. of Budapest, Hungary. Editors: G. Tarnai
+  and E. Schnieder, Germany. \url{www2.imm.dtu.dk/~dibj/albena.pdf}.
+
+\bibitem{J.van.Benthem.Logic.Time91}
+Johan {van Benthem}.
+\newblock {\em {The Logic of Time}}, volume 156 of {\em Synthese Library:
+  Studies in Epistemology, Logic, Methhodology, and Philosophy of Science
+  (Editor: Jaakko Hintika)}.
+\newblock Kluwer Academic Publishers, P.O.Box 17, NL~3300 AA Dordrecht, The
+  Netherlands, second edition, 1983, 1991.
+
+\bibitem{Russell1910-1913}
+Alfred~North Whitehead and Bertrand Russell.
+\newblock {\em {Principia Mathematica, 3 vols.}}
+\newblock Cambridge University Press, 1910, 1912, and 1913.
+\newblock Second edition, 1925 (Vol. 1), 1927 (Vols 2, 3), also Cambridge
+  University Press, 1962.
+
+\bibitem{Wirth88b}
+N.~Wirth.
+\newblock {The Programming Language Oberon}.
+\newblock {\em Software --- Practice and Experience}, 18:671--690, 1988.
+
+\bibitem{Wittgenstein21}
+Ludwig Johan~Josef Wittgenstein.
+\newblock {\em {Tractatus Logico--Philosophicus}}.
+\newblock Oxford Univ. Press, London, (1921) 1961.
+
+\bibitem{Wittgenstein58}
+Ludwig Johan~Josef Wittgenstein.
+\newblock {\em {Philosophical Investigations}}.
+\newblock Oxford Univ. Press, 1958.
+
+\bibitem{m:z:jd+jcppw96}
+James Charles~Paul Woodcock and James Davies.
+\newblock {\em Using {Z}: Specification, Proof and Refinement}.
+\newblock Prentice Hall International Series in Computer Science, London,
+  England, 1996.
+
+\bibitem{Empedokles:Dines}
+M.R. Wright.
+\newblock {\em {Empedokles: The Extant Fragments}}.
+\newblock {Hackett Publishing Company, Inc.}, 1995.
+
+\bibitem{rTiMo2018}
+WanLing Xie, ShuangQing Xiang, and HuiBiao Zhu.
+\newblock {A UTP approach for rTiMo}.
+\newblock {\em {Formal Aspects of Computing}}, 30(6):713--738, 2018.
+
+\bibitem{BigrTiMo2021}
+WanLing Xie, HuiBiao Zhu, and QiWen Xu.
+\newblock {A process calculus \textsf{BigrTiMo} of mobile systems and its
+  formal semantics}.
+\newblock {\em Formal Aspects of Computing}, 33(2):207--249, March 2021.
+
+\bibitem{Zadeh1965Fuzzy}
+Lotfi~A. Zadeh.
+\newblock {Fuzzy sets}.
+\newblock {\em Information and Control}, 8(3):338--353, 1965.
+
+\end{thebibliography}

@@ -1,0 +1,664 @@
+
+\newcommand{\psno}{}
+
+\newcommand{\begynd}{\begin{itemize}}
+\newcommand{\pind}{\item} 
+\newcommand{\afslut}{\end{itemize}}
+
+\newcommand{\bq}{\brcolor{\ding{125}}\,}
+\newcommand{\eq}{\,\brcolor{\ding{126}}}
+\newcommand{\rsltxt}{\texttt{RSL}\kw{-Text}}
+\renewcommand{\rsltext}{\texttt{RSL}\kw{-Text}}
+\newcommand{\HHHH}{\Huge}
+\newcommand{\LLll}{\Large}
+
+\newcommand{\textindex}[1]{\sfsl{#1}}
+\newcommand{\txtindex}[1]{\sfsl{#1}}
+
+\newcommand{\chardefn}{\bookdefn}
+
+\newcommand{\sfsl}[1]{\textsf{\textsl{#1}}}
+
+\newtheorem{primerexample}{\sort{Example}}
+
+\newtheorem{adomainlaw}{\sort{A Domain Law:}}
+
+\newcommand{\domainlaw}[3]{%
+\begin{center}
+\boiteepaisseavecuntitre{\brcolor{#1}}\vspace*{0.4mm}
+\begin{adomainlaw} \bgcolor{#1:}\label{adl:#2}
+\begin{quote}
+{#3}
+\end{quote}
+\end{adomainlaw}
+\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}\rm
+\end{center}
+}
+
+\newcommand{\finalchanges}[1]{#1}
+
+\newcommand{\txtindexiv}[2]{\sfsl{#1 #2}}
+
+\newtheorem{aside}{\sort{An Aside}}
+
+\newcommand{\anaside}[3]{%
+\begin{center}
+\begin{aside} \bgcolor{#1:}\label{ana:#2}
+{#3}
+\end{aside}
+\end{center}
+}
+
+
+\newtheorem{elaborate}{\sort{Elaboration}}
+
+\newcommand{\elaboration}[3]{%
+\begin{center}
+\begin{elaborate} \bgcolor{#1:}\label{ana:#2}
+{#3}
+\end{elaborate}
+\end{center}
+}
+
+\newcounter{sei}
+\newcounter{seii}
+\newcommand{\setei}{\setcounter{enumi}{\value{sei}}}
+\newcommand{\seteii}{\setcounter{enumii}{\value{seii}}}
+\newcommand{\savei}{\setcounter{sei}{\value{enumi}}}
+\newcommand{\saveii}{\setcounter{seii}{\value{enumii}}}
+
+\newcommand{\dbchg}{}
+
+\newcommand{\monoexample}[2]{\pos{\vspace*{2mm}}{}\rm
+\begin{primerexample}.\label{#1}\rm
+\noindent\HHHH\brcolor{#1:} #2
+\end{primerexample}
+\HHHH\rm
+}
+
+\newcommand{\ddlt}[2]{}
+\newcommand{\dpindex}[1]{}%
+
+\newtheorem{atprompt}{\bmcolor{Attribute Prompt}}
+\newcommand{\sac}{\stepcounter{atprompt}}
+
+\newtheorem{dprompt}{\textbf{Domain Description Prompt}}
+
+\newcommand{\ddprompt}[3]{%
+\begin{center}
+\begin{dprompt}. \bbcolor{\texttt{#1}:}\label{ddp:#2}\label{#2}
+\addcontentsline{toc}{subparagraph}{{\bcolor{\arabic{dprompt}:} \small{\bcolor{#2}}}}
+  {#3}
+\rm
+   
+\end{dprompt} \end{center}
+}
+
+\newcommand{\inthis}[3]{%
+\noindent%
+\begynd%
+\pind We shall investigate the, as we shall call them, #1 of domains.
+\pind That is #2
+\pind The outcome of this chapter is that the \pos{reader}{student}
+\begynd
+\pind will be able to model the #1 of domains.
+\pind Not just for a particular domain instance,
+\pind but a possibly infinite set of domain instances\footnote{By this
+we mean: You are not just analysing a specific domain, say the one
+manifested around the corner from where you are, but any instance,
+anywhere in the world, which satisfies what you have described.}.
+\afslut
+\afslut}
+
+
+\newcommand{\typo}[1]{#1}
+
+\newcommand{\daad}{\sfsl{domain analyser \& describer}}
+\newcounter{doanno}
+
+\newcommand{\treprikker}{\begin{center}$\bullet$\ \ $\bullet$\ \ $\bullet$\end{center}}
+
+\newcounter{dodeno}
+\newcommand{\dodepr}{\stepcounter{dodeno}}
+
+\newcounter{dlti}
+\newcommand{\cdlti}{\arabic{dodeno}.}
+\newcommand{\delati}[1]{}
+
+\newtheorem{aprompt}{\sort{Analysis Predicate Prompt}}
+
+\newcommand{\doanpr}{\stepcounter{doanno}}
+
+\newcommand{\daprompt}[3]{%
+\begin{center}\rm
+\begin{aprompt}. \bcolor{\texttt{#1:}}\label{dap:#2}\doanpr
+\noindent
+{#3}
+\end{aprompt}
+\end{center}
+}
+
+\newcommand{\eoap}{\dbsquare}
+
+\newcommand{\firkantmedtekst}[2]{\vspace*{1mm}
+
+\noindent
+\brcolor{#1:} #2}
+
+\newcommand{\newdaprompt}[5]{
+\begin{center}
+\begin{aprompt}. \bgcolor{\texttt{#1:}}\label{dap:#2}\doanpr
+\label{#5}
+\noindent%
+\begynd
+\pind The domain analyser analyses ``things'' (#3) into #4.
+\pind The method can thus be said to provide \nyl the \dap:
+\begin{itemize}
+\item \bgcolor{\texttt{#1}} -- where 
+      \bgcolor{\texttt{#1(#3)}} holds \nyl if #3 is #5 \dbsquare
+\end{itemize}
+\afslut
+\end{aprompt}
+\end{center} 
+}
+
+
+\newcommand{\newestdaprompt}[6]{\label{#6}%
+%\begin{center}
+\begin{aprompt}. \bgcolor{\texttt{#1:}}\label{dap:#2}\doanpr
+\noindent%
+\begynd
+\pind The domain analyser analyses ``things'' (#3) into #4.
+\pind The method can thus be said to provide \nyl the \dap:
+\begin{itemize}
+\item \bgcolor{\texttt{#1}} -- where 
+      \bgcolor{\texttt{#1(#3)}} holds if #3 is #5 \eoap
+\end{itemize}
+\afslut
+\end{aprompt}
+%\end{center} 
+}
+\newcommand{\dap}{\sfsl{\bbcolor{domain analysis prompt}}}
+\newcommand{\dapprompt}[3]{%
+  \begin{center}
+\begin{aprompt}. \bgcolor{\texttt{#1:}}\label{dap:#2}
+{#3}\doanpr%\apindex{\texttt{#1}}
+\end{aprompt}
+\end{center}
+}
+
+\newcommand{\parmdafprompt}[4]{
+\dafprompt{type\_name, type\_of, is\_}{#1}{\\ \label{#1}%
+\noindent    
+\begynd
+\pind The definition of \textsf{#2} 
+\pind implicitly implies the definition of
+\begin{itemize}
+\item
+%\RSLatex
+%   &#2&(e)=&#3& >> 
+%        type_name(&#3&)is&\bq#4\eq& 
+%       /\ type_of(&#3&)is&#4& 
+%       /\ is_&#4(#3)&
+%\endRSLatex 
+\bp
+\>\ #2(e){\EQ}#3 {\SUPSET} \\
+\>\>\>\>type\_name(#3){\IS}\bq#4\eq \\
+\>\>\>\ {\WEDGE} type\_of(#3){\IS}#4 \\
+\>\>\>\ {\WEDGE} is\_#4(#3)
+\ep
+\index{doaf}{type\_name}\index{doaf}{type\_of}\index{doaf}{type!name}\index{doaf}{type!of}
+\end{itemize}}
+\afslut}
+
+\newcommand{\parmdafpromptoneline}[4]{
+\dafprompt{type\_name, type\_of, is\_}{#1}{\\  \label{#1}%
+\noindent    
+\begynd
+\pind The definition of \textsf{#2} 
+\pind implicitly implies the informal definition of
+\begin{itemize}
+\item
+\RSLatex
+   &#2&(e)=&#3& >>  type_name(&#3&)is&\bq#4\eq& /\ type_of(&#3&)is&#4& /\ is_&#4(#3)&
+\endRSLatex 
+\index{doaf}{type\_name}\index{doaf}{type\_of}\index{doaf}{type!name}\index{doaf}{type!of}
+\end{itemize}}
+\afslut}
+
+\newtheorem{afprompt}{\sort{Observer Function Prompt}}
+
+\newcommand{\dafprompt}[3]{\label{#2}%
+\begin{afprompt}. \bgcolor{\texttt{#1:}}\label{dap:#2}\\
+\noindent%
+{#3}\doafpr
+\end{afprompt}
+}
+\newcommand{\newafprompt}[5]{\index{doaf}{\texttt{#1}}%
+\begin{center}
+\begin{afprompt}. \bgcolor{\texttt{#1:}}\label{dap:#2}
+      \doafpr\afindex{\texttt{#1}}
+\begin{leftbar}
+\noindent%
+\begynd
+\pind The domain analyser analyses ``things'' (#3) into #4.
+\pind The method can thus be said to provide the \dop:
+\begin{itemize}
+\item \bgcolor{\texttt{#1}}
+      -- where 
+      \bgcolor{\texttt{#1(#3)}} holds if #3 is #5
+      \eoap
+\end{itemize}
+\afslut
+  \end{leftbar}
+\end{afprompt} \end{center} 
+}
+
+\newcommand{\newddprompt}[3]{%
+\begin{center}
+\begin{dprompt}. \bbcolor{\texttt{#1}:}\label{ddp:#2}\label{#2}
+\addcontentsline{toc}{subparagraph}{{\bcolor{\arabic{dprompt}:} \small{\bcolor{#2}}}}
+  {#3}
+\rm
+   
+\end{dprompt} \end{center}
+}
+
+
+
+
+\newcommand{\primerddprompt}[4]{%
+\begin{center}
+\begin{dprompt}. \bbcolor{\texttt{#1}:}\label{ddp:#2}\label{ddp:#3}
+\addcontentsline{toc}{subparagraph}{{\bcolor{\arabic{dprompt}:} \small{\bcolor{#3}}}}
+  {#4}
+\rm
+   
+\end{dprompt} \end{center}
+}
+
+
+\newcommand{\newestddprompt}[5]{%
+\begin{center}
+\begin{dprompt}. \brcolor{\texttt{#1}:}\label{ddp:#2}
+\begynd
+\pind If \texttt{is\_composite}(#3) holds, then the analyser 
+      ``applies'' the \ddp\
+\begin{itemize}
+\item \texttt{#1}(#3)
+\end{itemize}
+\noindent resulting in the analyser writing down the \ddtu{#4}
+\afslut 
+\mnewfoil\pos{}{\vspace*{-6mm}}\LLll\label{nar+for-1}
+\rammeddl{\bgcolor{\cdlti\ \texttt{#1}}}
+       \label{L:nar+for-1}
+ {#5}\rm
+\end{dprompt}\end{center}
+\lddemmar
+\noindent
+\begynd
+\pind \texttt{is\_composite} is a
+  \pdindextermiix{prerequisite}{prompt}{} of 
+  \texttt{#1} \eodp
+\afslut
+}
+
+\newtheorem{pschema}{\brcolor{Process Schema}}
+
+\newcommand{\processramme}[2]{\begin{pschema}\vspace*{1mm}\noindent%
+\addcontentsline{toc}{subparagraph}{\brcolor{Process Schema \arabic{pschema}:} \nylacolor{#1}}
+\boiteepaisseavecuntitre{\brcolor{#1}}\vspace*{0.4mm}
+{#2}\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}\rm
+\end{pschema}}
+
+\newtheorem{axiom}{\sort{Axiom System}}
+
+\newtheorem{discovery}{\sort{Discovery Schema}}
+
+\newcommand{\discoverdomain}[2]{%
+  \boiteepaisseavecuntitre{\LLLL\sort{Discovery Schema:} \brcolor{#1}}
+  \begin{discoverdomain}.\label{#1}
+  \pos{\footnotesize}{\LLLL}
+  #2
+  \end{discoverdomain}
+  \endboiteepaisseavecuntitre\rm
+}
+
+
+\renewcommand{\discoverdomain}[2]{%
+\boiteepaisseavecuntitre{\brcolor{#1}} %\vspace*{0.4mm}
+\begin{discoverdomain}.\label{#1} 
+\noindent
+{#2}
+\vspace*{0.5mm}
+\end{discoverdomain}
+\endboiteepaisseavecuntitre
+\vspace*{0.4mm}\rm
+}
+
+\newcommand{\axiomschema}[2]{%
+\boiteepaisseavecuntitre{\brcolor{#1}} %\vspace*{0.4mm}
+\begin{axiom}. 
+\noindent
+{#2}
+\vspace*{0.5mm}
+\end{axiom}
+\endboiteepaisseavecuntitre
+\vspace*{0.4mm}\rm
+}
+
+\newcommand{\citesealle}{\cite{TheSEBook1,TheSEBook2,TheSEBook3eps,eQTheSEBook1,cQTheSEBook1,eQTheSEBook2,cQTheSEBook2,eQTheSEBook3,cQTheSEBook3}}
+\newcommand{\citesei}{\cite{TheSEBook1}}
+\newcommand{\citeseii}{\cite{TheSEBook2}}
+\newcommand{\citeifm}{\cite{ifmall}}
+\newcommand{\citealloy}{\cite{alloy}}
+\newcommand{\citeasm}{\cite{losl:2007:asm}}
+\newcommand{\citeb}{\cite{JRAbrial:TheBBooks}}
+\newcommand{\citetlap}{\cite{Lamport-TLA+02}}%
+\newcommand{\citecafeobj}{\cite{futatsugi2000a}}
+\newcommand{\citecasl}{\cite{CoFI:2004:CASL-RM}}
+\newcommand{\citevdm}{\cite{e:db:Bj78bwo,e:db:Bj82b,JohnFitzgerald+PeterGormLarsen}}
+\newcommand{\citez}{\cite{m:z:jd+jcppw96}}
+\newcommand{\citersl}{\cite{RSL}}
+\newcommand{\citeraise}{\cite{RaiseMethod}}
+\newcommand{\citepetrinets}{\cite{m:petri:wr09}}
+\newcommand{\citescs}{\cite{Harel87}}
+\newcommand{\citemscs}{\cite{MSCall}}
+\newcommand{\citedc}{\cite{zcc+mrh2002}}
+\newcommand{\citetls}{\cite{MannaPnueli12}}
+\newcommand{\citecsp}{\cite{Hoare85+2004}}
+
+\newcommand{\eod}{\dbsquare}
+\newcommand{\eox}{\dbsquare}
+\newcommand{\footsize}{\footnotesize}
+
+\newcommand{\termi}[1]{$^{\iota}$\textsl{#1}}
+\newcommand{\termii}[2]{$^{\iota}$\textsl{#1 #2}}
+\newcommand{\termiii}[3]{$^{\iota}$\textsl{#1 #2 #3}}
+
+\newcommand{\LLLL}{\LARGE}
+
+\renewcommand{\mnewfoil}{\newpage\HHHH}
+
+\newcommand{\nyl}{\pos{}{\newline}}
+
+\newcommand{\dbsquare}{\ \bmcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}} 
+
+\newtheorem{primerdefinition}{\sort{Definition}}
+
+\newcommand{\daadekss}[2]{\vspace*{2mm}%
+\noindent
+\begin{primerexample}.
+\noindent
+\noindent{\sf #2}\normalsize\rm\stepcounter{primerexample}
+\end{primerexample}
+\rm
+}
+
+\newtheorem{methstep}{\sort{Method:}}
+\newtheorem{prinstep}{\sort{Method Principle:}}
+\newtheorem{procstep}{\sort{Method Procedure:}}
+\newtheorem{techstep}{\sort{Method Technicque:}}
+\newtheorem{toolstep}{\sort{Method Tool:}}
+
+\newcounter{metodetrin}
+\newcommand{\mtcount}{\stepcounter{metodetrin}}
+
+\newcommand{\methodstep}[3]{%
+\noindent
+\begin{methstep}.
+\noindent \mtcount
+\brcolor{#1:}\label{#2}
+\noindent
+\rm {#3}
+\end{methstep}}
+
+\newcommand{\principle}[3]{%
+\noindent
+\begin{prinstep}.
+\noindent \mtcount
+\brcolor{#1:}\label{#2}
+\noindent
+\rm {#3}
+\end{prinstep}}
+
+\newcommand{\procedure}[3]{%
+\noindent
+\begin{procstep}.
+\noindent \mtcount
+\brcolor{#1:}\label{#2}
+\noindent
+\rm {#3}
+\end{procstep}}
+
+\newcommand{\technique}[3]{%
+\noindent
+\begin{techstep}.
+\brcolor{#1:}\label{#2}
+\noindent
+\rm {#3}
+\end{techstep}}
+
+\newcommand{\tool}[3]{%
+\noindent
+\begin{tollstep}.
+\noindent \mtcount
+\brcolor{#1:}\label{#2}
+\noindent
+\rm {#3}
+\end{toolstep}}
+
+\newcommand{\dbeat}[1]{}
+
+\newcommand{\bookdefn}{\primerdefn}
+\newcommand{\nbookdefn}{\primerdefn}
+\renewcommand{\primerdefn}[2]{
+\begin{primerdefinition}.
+  \brcolor{#1:}\label{def:#1}\label{primer:#1}
+{\rm #2}
+\vspace*{1.2mm}
+\end{primerdefinition}}
+
+\newcommand{\psref}[1]{\pos{Pg}{Sli}.\,\pageref{#1}}
+
+\newcommand{\bmcii}{}
+\newcommand{\emcii}{}
+
+\newcommand{\pcindextermi}[1]{\bbcolor{\sfsl{#1}}}
+\newcommand{\pcindextermii}[2]{\bbcolor{\sfsl{#1 #2}}}
+\newcommand{\pcindextermiii}[3]{\bbcolor{\sfsl{#1 #2 #3}}}
+\newcommand{\pdefindex}[1]{}%\index{pdefind}{#1}\index{pconind}{#1}}
+\newcommand{\pdefindexi}[1]{}%\index{pdefind}{#1}\index{pconind}{#1}}
+\newcommand{\pdefindexii}[2]{}%\index{pdefind}{#1!#2}\index{pdefind}{#2!#1}
+\newcommand{\pdefindexiii}[3]{}%\index{pdefind}{#1!#2!#3}\index{pdefind}{#2!#1!#3}\index{pdefind}{#3!#1!#2}
+\newcommand{\pconindex}[1]{}%\index{pdefind}{#1}\index{pconind}{#1}}
+\newcommand{\pconindexi}[1]{}%\index{pdefind}{#1}\index{pconind}{#1}}
+\newcommand{\pconindexii}[2]{}%\index{pdefind}{#1!#2}\index{pdefind}{#2!#1}
+\newcommand{\pconindexiii}[3]{}%\index{pdefind}{#1!#2!#3}\index{pdefind}{#2!#1!#3}\index{pdefind}{#3!#1!#2}
+\newcommand{\pdindextermi}[1]{\bbcolor{\sfsl{#1}}}%{\bmcolor{\sfsl{#1}}\dindextermii{#1}}
+\newcommand{\pdindextermii}[2]{\bbcolor{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pdindextermiii}[3]{\bbcolor{\sfsl{#1 #2 #3}}}%{\bmcolor{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+\newcommand{\pdindexi}[1]{{\sfsl{#1}}}%{\bmcolor{\sfsl{#1}}\dindextermii{#1}}
+\newcommand{\pdindexii}[2]{{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pdindexiii}[3]{{\sfsl{#1 #2 #3}}}%{\bmcolor{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+\newcommand{\dindextermi}[1]{{\sfsl{#1}}}%{\bmcolor{\sfsl{#1}}\dindextermii{#1}}
+\newcommand{\dindextermii}[2]{{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\dindextermiii}[3]{{\sfsl{#1 #2 #3}}}%{\bmcolor{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+\newcommand{\dindexi}[1]{{\sfsl{#1}}}%{\bmcolor{\sfsl{#1}}\dindextermii{#1}}
+\newcommand{\dindexii}[2]{{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\dindexiii}[3]{{\sfsl{#1 #2 #3}}}%{\bmcolor{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+\newcommand{\pdindextermiix}[2]{{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pcindexi}[1]{{\sfsl{#1}}}%{\bmcolor{\sfsl{#1}}\dindextermii{#1}}
+\newcommand{\pcindexii}[2]{{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pcindexiii}[3]{{\sfsl{#1 #2 #3}}}%{\bmcolor{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+\newcommand{\pcindexiix}[2]{{\sfsl{#1 #2}}}%{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\renewcommand{\vidxi}[2]{}
+\renewcommand{\xfidxi}[2]{}
+
+\newcommand{\btosem}{}
+\newcommand{\etosem}{}
+\newcommand{\ramme}[1]{}
+\newcommand{\rammes}[1]{}
+
+\newcommand{\ddtuu}[1]{\sfsl{\lowercase{\dbsmall\HHHH #1}} \pos{}{\\}  domain
+      description text \pos{}{\\} according to the following schema}
+\newcommand{\ddtu}[1]{\sfsl{\lowercase{\dbsmall\HHHH #1}} \pos{}{\\}   domain
+      description text \pos{}{\\} according to the following schema:}
+\newcommand{\bdbrule}{}\newcommand{\edbrule}{}
+\newcommand{\apindex}[1]{}
+\newcommand{\smallish}{}
+\newcommand{\dbsmall}{}
+\newcommand{\kaisorfil}{Kai S{\o}rlander's Philosphy}
+\newcommand{\tbw}{\begin{center}\centerline{{\sc to be written}}\end{center}}
+\newcommand{\merriam}{\texttt{[Mer\-ri\-am Web\-ster]}}
+\newcommand{\todaytime}{\today}
+\newcommand{\keyw}[1]{\sort{true}}
+\newcommand{\dbcite}{\cite}
+\newcommand{\tosemfootnote}[1]{#1}
+\newcommand{\dop}{\sfsl{\bbcolor{domain observer prompt}}}
+\newcommand{\ddp}{\sfsl{\bgcolor{domain de\-scrip\-tion prompt}}}
+\newcommand{\newestdefn}{\primerdefn}
+\newcounter{doafno}
+\newcommand{\doafpr}{\stepcounter{doafno}}
+\newcommand{\hDBfigure}[4]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+    \caption{#3\label{#4}}
+  \end{center}
+ \end{figure}}
+
+\renewcommand{\newestdefn}[2]{
+\begin{primerdefinition}.
+  \brcolor{#1}\label{def:#1}\label{primer:#1}
+{\rm #2}
+\vspace*{1.2mm}
+\end{primerdefinition}}
+
+\renewcommand{\newestpdefn}[2]{
+\begin{primerdefinition}. \brcolor{#1}\label{def:#1}\label{primer:#1}
+{\rm #2}
+\vspace*{1.2mm}
+\end{primerdefinition}}
+
+\renewcommand{\monoexample}[2]{\pos{\vspace*{2mm}}{}%
+\begin{primerexample}.\rm\ \brcolor{#1:}\label{#1}
+\noindent\HHHH{#2}
+\end{primerexample}
+}
+
+\newcommand{\newestxample}{\monoexample}
+
+%\newcommand{\sfsl}[1]{\textsl{\textsf{#1}}}
+
+
+\newcommand{\obsmereo}{\textsf{\textbf{{\protect{obs{\_}mereo{\_}}}}}}
+\newcommand{\obsattrs}{\textsf{\textbf{{\protect{obs{\_}attribs{\_}}}}}}
+\newcommand{\obsattrvals}{\textsf{\textbf{{\protect{obs{\_}attrib{\_}values{\_}}}}}}
+\newcommand{\obsattribs}{\textsf{\textbf{{\protect{attributes}}}}}
+\newcommand{\obsmo}{\textsf{\textbf{{\protect{obs{\_}part{\_}}}}}}
+\renewcommand{\obsmo}{\textsf{\textbf{obs{\_}part{\_}}}}
+\newcommand{\obsmop}{\textsf{\textbf{obs{\_}part{\_}}}}
+\newcommand{\obsmoe}{\textsf{\textbf{obs{\_}endurant{\_}sorts{\_}}}}
+\newcommand{\obspt}{\textsf{\textbf{obs{\_}part{\_}}}}
+\newcommand{\obsco}{\textsf{\textbf{{\protect{obs{\_}comp{\_}}}}}}
+\newcommand{\obsma}{\protect{\textsf{\textbf{{\protect{obs{\_}mat{\_}sort{\_}}}}}}}
+\newcommand{\obsposmo}{\textsf{\textbf{{\protect{obs{\_}pos{\_}}}}}}
+\newcommand{\obslocmo}{\textsf{\textbf{{\protect{obs{\_}loc{\_}}}}}}
+\newcommand{\obs}{{\textsf{obs{\_}}}}
+\newcommand{\obsi}{{\textsf{obs{\_}}\,$\iota$}}
+\newcommand{\mereomo}{\textsf{mereo}{\_}}
+\newcommand{\attrmo}{\textsf{attr}{\_}}
+\newcommand{\uidmo}{\textsf{uid}{\_}}
+\newcommand{\ismo}{\textsf{is}{\_}}
+
+\newcommand{\eomc}{
+  \sort{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}\!\!\!.\;\;} 
+\newcommand{\faocb}{}
+\newcommand{\faoce}{}
+\newcommand{\fromitemize}{\renewcommand{\begynd}{}
+                          \renewcommand{\pind}{}
+                          \renewcommand{\afslut}{}}
+\newcommand{\emmar}{}
+
+\newcommand{\delaoi}[1]{}%{\index{dloind}{#1}}
+\newcommand{\delaoii}[2]{}%{\index{dloind}{\protect{#1}!#2}}
+
+\newcommand{\atindex}[1]{}
+
+\renewcommand{\mtidxi}[2]{}
+\renewcommand{\mfidxi}[2]{}
+\renewcommand{\psfidxi}[2]{}
+\renewcommand{\ptsidxi}[2]{}%{\kindex{sorts}{Part Sorts!#1\hfill\protect\ref{#2}}}
+\renewcommand{\kindex}[2]{}%{\addtocounter{kkk}{1}\index{#1}{#2}}
+%\newcounter{kkk}
+
+\newcommand{\axiomindex}[2]{}
+\newcommand{\poindex}[2]{}
+
+ \newcommand{\monograph}{\primer}
+ \newcommand{\primer}{\sfsl{primer}}
+ 
+\newcounter{theorem}
+\newcounter{case}
+\newcounter{corrollary}
+\newcounter{definition}
+\newcounter{conjeture}
+\newcounter{example}
+\newcounter{exercise}
+\newcounter{lemma}
+\newcounter{note}
+\newcounter{problem}
+\newcounter{property}
+\newcounter{proposition}
+\newcounter{question}
+\newcounter{solution}
+\newcounter{remark}
+\newcounter{prob}
+\newcounter{mtc}
+\newcounter{minitocdepth}
+\newcounter{ptc}
+\newcounter{parttocdepth}
+%\newcounter{}
+%\newcounter{}
+%\newcounter{}
+
+\newcounter{attrdefn}
+
+\newtheorem{attributecat}{\bgcolor{Attribute Category:}}
+
+\newcommand{\attribute}[2]{%
+  \begin{attributecat}.
+       \pos{\index{defind}{Attribute!#1}}{}\label{d:#1} {\rm #2}
+  \end{attributecat}}
+
+\newcommand{\DBfigure}[4]{
+ \begin{figure}
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+    \caption{#3}\label{#4}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\fotoiv}[7]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#2.pdf,height=#1}
+    \epsfig{file=#3.pdf,height=#1}
+    \epsfig{file=#4.pdf,height=#1}
+    \epsfig{file=#5.pdf,height=#1}
+    \caption{#6}\label{#7}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\fotov}[8]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#2.pdf,height=#1}
+    \epsfig{file=#3.pdf,height=#1}
+    \epsfig{file=#4.pdf,height=#1}
+    \epsfig{file=#5.pdf,height=#1}
+    \epsfig{file=#6.pdf,height=#1}
+    \caption{#7}\label{#8}
+  \end{center}
+ \end{figure}}

@@ -1,0 +1,703 @@
+
+\nbbbbbb{Closing}\label{chap7.tex.1}\label{chapter:Closing}
+\pos{\minitoc}{}
+
+\bbbbb{What has been Achieved and Not Achieved\,?}
+
+\bbbb{What has been Achieved\,?}
+
+\begynd
+\pind An initial phase of software development has been suggested, one
+      that is also independent of whether software is indeed intended:
+      that of domain engineering.
+\begynd
+\pind A calculus of domain inquiry and a calculus of domain
+      description ha\ysfchg{ve } been put forward --- 
+\pind calculi that are presently focused on domain endurants.
+\afslut
+\afslut
+
+\nbbbb{What has Not been Achieved\,?}
+
+The next section elucidates on both what has been, and what has not
+been achieved. 
+
+\bbbbb{Related Issues}
+
+\begynd
+\pind A number of issues related to domain modelling need be briefly addressed.
+\afslut
+
+\nbbbb{Axioms, Well-formedness and Proof Obligations}\LLLL
+
+\begynd 
+\pind \pos{The reader}{Someone in the audience} may have noticed \nyl
+      that this \primer\ hardly mentions the notion of verification,
+\begynd
+\pind yet domain descriptions, \nyl as possibly any specification related
+      to software, 
+\pind may require some form of verification.
+\afslut
+\pind Yet this \primer\ appears to skirt the issue.
+\pind Indeed, we have, regrettably, omitted the issue.
+\pind So we must refer t\ysfchg{he } \pos{reader}{student} to relevant literature.
+\pind We cannot, \today, point to any definitive book on the topic.
+\pind The field is under intense research.
+\pind Instead we refer to
+\begynd 
+\pind  such diverse papers as:\cite{CPAIOR:Nikolaj:2021,AdvCafeOBJ2022}
+\pind  as well as the seminal book \cite{PatrickCousot2021}.
+\afslut
+\afslut
+
+\mnewfoil
+  
+\begynd
+\pind In \ysfchg{\sfsl{Endurant Description Prompt}}
+      \vref{ddp:calc-Cartesian-parts} and  we mention the
+      concept of proof obligation. They are also mentioned in
+      \ysfchg{\sfsl{Attribute  Description Prompt}} \vref{ddp:observe-attributes}. 
+\pind In numerous other places we mention the concept of \sfsl{axiom}:
+      \vref{apuid000} (uniqueness of unique identifiers),
+      \vref{observe-mereology} (mereology),
+      \vref{xtime-020} (property of time),
+\pind And in some places we mention  the concept of
+      \sfsl{well-formedness,} \ysfchg{for example}, Sect.\,\vref{wff-event-histories},
+\afslut
+ 
+\mnewfoil
+   
+\begin{itemize}
+\item \bbcolor{Axioms} express properties of endurants, whether
+      external or internal qualities, that hold\ysfchg{ } -- as were they laws of
+      the domain.
+\item \bbcolor{Well-formedness} predicates are defined where  external
+      or internal qualities of endurants are defined by concrete types
+      in such ways as to warrant such predicates.  
+\item \bbcolor{Proof obligations} are usually warranted where distinct
+      sort definitions need be separated.
+\end{itemize}
+  
+\nbbbb{From Programming Language Semantics to Domain Models}\label{primer:From Programming Language Semantics to Domain Models}
+
+\begynd
+\pind In 1973--1974, at the \sfsl{IBM Vienna Laboratory}, we,
+\begynd
+\pind Peter Lucas, Hans Beki{\v{c}}, Cliff Jones, Wolfgang Henhapl and
+      \ysfchgiii{Dines Bj{\o}rner }
+\pind researched \& developed a formal description of the
+      \texttt{PL/I} programming language \cite{db74:r:Bek74}.
+\afslut
+\pind In 1979--1984, at the \sfsl{Dansk Datamatik Center, DDC}, \nyl under \ysfchgiii{Dines Bj{\o}rner's }
+      leadership and with invaluable help from \ysfchgiii{his } colleague, Dr.\ Hans
+      Bruun, \nyl and based on  \ysfchgiii{Dines Bj{\o}rner's } MSc.\ lectures,
+\begynd
+\pind seven M.Sc.\ students%
+\footnote{%
+          J{\o}rgen Bundgaard,
+          Ole Dommergaard,
+          Peter L. Haff,
+          Hans Henrik L{\o}vengreen,
+          Jan Storbank Petersen,
+          S{\o}ren Prehn,
+          Lennart Schulz}
+developed formal descriptions of (and later full compilers for) the
+     programming languages \texttt{CHILL} \cite{vdm:Haff} and \texttt{Ada}, the latter
+          under the informed management of Dr.\ Ole N.\ Oest \cite{e:db:Bj80f}.
+\afslut
+\afslut
+
+\mnewfoil\LLLL
+
+\begynd
+\pind In a domain model we describe essential nouns and verbs of the
+      ``language spoken'' by practitioners of the domain.
+\begynd
+\pind The ``extension'' from the language ``spoken by programmers'' to
+      that ``spoken by domain practitioners'' should be obvious.
+\afslut
+\afslut
+
+\begynd
+\pind In both cases, the descriptions, for realistic programming
+      languages and for realistic domains, are not trivial.
+\begynd
+\pind They are sizable.
+\pind The \texttt{PL/I, CHILL} and \texttt{Ada} descriptions
+      span from a hundred pages to several hundred pages,!
+\afslut
+\pind Similarly, their implementation, in terms of interpreters and
+      compilers, took many man-years.
+\begynd
+\pind For the \sfsl{DDC} \texttt{Ada Compiler} \cite{Haff87,Clem84} it took 44 man-years\,!
+\afslut
+\afslut
+
+\begynd
+\pind From a description of realistic facets of a domain \nyl one can
+      develop a number of more-or-less distinct requirements,
+\pind and from these one can develop computing systems software \nyl
+      and we can expect similar size efforts.
+\afslut
+
+\nbbbb{Domain Specific Languages}
+
+\begynd
+\pind A domain specific language, generically referred to as a \texttt{DSL},
+\begynd
+\pind is a language whose basic syntactic elements directly reflect
+      endurants and perdurants of a specific domain.
+\pind \sfsl{Actulus}, a language in which to express calculations of
+      actuarian character \cite{actulus2015}, is a DSL. 
+\afslut
+      
+\pind The semantics of a \texttt{DSL}, obviously, must relate to a
+      model for the domain in question. 
+\pind In fact, we advice, that \texttt{DSL}s be developed from the
+      basis of relevant domain models.
+\afslut
+  
+
+\nbbbb{The \texttt{RAISE} Specification Language, \texttt{RSL}}\label{RSL-II}
+
+\begynd
+\pos{\pind We refer to Sect.\,\vref{RSL-I}.}{}
+\pind So we have used \texttt{RSL} in two ways in this \primer:
+\begynd
+\pind (i)  informally, to explain the domain analysis \& description
+           method -- in \rslplus, and
+\pind (ii) formally, to present [fragments of] specific domain
+           specifications. 
+\afslut
+\pind The latter always in enumerated examples.\footnote{\LLLL These
+  are: Examples\,%
+  \pos{}{\begin{multicols}{5}}\LLll\noindent%
+\vref{A Road Transport System Domain: Cartesians},\nyl
+      \vref{Road Transport System: Sets of Hubs, Links and Automobiles},  \nyl 
+      \vref{Alternative Rail Units}, \nyl
+      \vref{Constants and States},  \nyl
+      \vref{Unique Identifiers},    \nyl     
+      \vref{Unique Road Transport System Identifiers},  \nyl     
+      \vref{Uniqueness of Road Net Identifiers}, \nyl  
+      \vref{Rail Net Unique Identifiers},  \nyl      
+      \vref{Mereology of a Road Net},  \nyl
+      \vref{Invariance of Road Nets},  \nyl     
+      \vref{Rail Net Mereology},    \nyl
+      \vref{Road Net Attributes},     \nyl  
+      \vref{Invariance of Road Net Traffic States}, \nyl    
+      \vref{Road Transport -- Further Attributes}, \nyl  
+      \vref{Intentional Pull -- Road Transport},  \nyl   
+      \vref{Automobile Behaviour},     \nyl
+      \vref{The Road Transport System Initialisation}, \nyl    
+      \vref{Road Net Administrator},     \nyl  
+      \vref{Road Net Development: Hub Insertion}, \nyl      
+      \vref{Road Net Development: Link Insertion}, \nyl
+      \vref{Road Net Development: Hub Removal}, and  \nyl    
+      \vref{Hub Adjustments}
+\pos{}{\end{multicols}}}
+\pos{\pind Appendices\,\ref{Chapter:Road
+       Transport}--\ref{appendix:Pipelines} both exemplify 
+       formal uses of 
+       \texttt{RSL}. 
+\pind All the functions listed in Index
+       Sects.\,\ref{label.apps}--\ref{label.dps}  and their
+       explication are using the informal \rslplus.}{}
+\afslut 
+
+\nbbbb{R{\^o}le of Algorithms}\label{Role of Algorithms}
+
+\begynd
+\pind In all of the function formulation of domain phenomena, in this
+\primer, You have 
+      not seen a single, interesting algorithm\,!\footnote{\LLLL
+        Algorithm: a process or set of rules to be followed in
+        calculations or other problem-solving operations, especially
+        by a computer.} 
+\begynd
+\pind We need not apologize for that.
+\pind There is a reason.
+\begynd
+\pind The reason is that we almost only describe properties.
+\pind To that end we make use of classical mathematical notions such as
+      set comprehension, for example: \textsf{{\LBRACE}
+      a {\BAR} a:A {\RDOT} $\mathcal{P}$(a) {\RBRACE}}.
+\pind The search for a\ysfchg{n } appropriate $a$ such that $\mathcal{P}(a)$
+      holds is often what requires, often beautiful algorithms.
+\afslut
+\pind We refer to \cite[\sfsl{Knuth and Harel}]{Knuth,Harel87b}.
+\afslut
+\mnewfoil
+\pind The need for clever algorithms, usually, first arise when
+      designing software. 
+\begynd
+\pind Not in requirements engineering
+      (cf.\,Sect.\,\vref{primer:Requirements Engineering}), but in
+      software design. 
+\pind Then requirements prescriptions,
+\begynd
+\pind also usually expressed in terms of set, list or map comprehension, 
+\pind or corresponding quantifications,
+\afslut
+\pind need efficient implementations;
+\pind hence clever algorithms.
+\afslut
+\afslut
+
+\nbbbb{CSP versus PDEs}\label{CSP versus PDEs}
+
+\begynd
+\pind To model the behaviour of discrete dynamic domains, such as are
+      the main focus of this \primer, we use the \texttt{CSP} process
+      concept \citecsp.
+\pind To model the behaviour of continuous dynamic domains, which we
+      really have not, we suggest that You use  methods of
+      analysis, to wit: \sfsl{[Partial] Differential Equations, PDEs}.
+\pind Perhaps also some \sfsl{Fuzzy Logic} \cite{Zadeh1965Fuzzy,FuzzyTextBook2014}.   
+\pind That is: We see this as the ``dividing line'' between discrete
+      and continuous dynamic systems modelling: \sfsl{CSP versus DPEs}.
+\pos{\pind Appendix\,\ref{appendix:Pipelines},
+      pages\,\pageref{appendix:Pipelines}--\pageref{appendix:Pipelines.n},
+      puts forward a domain whose continuous dynamics need be
+      formalised, for example using PDEs \cite{CourantAaC}.}{}
+\pind Mathematical modelling such as based on \sfsl{Adaptive Control
+      Theory} \cite{aastroem89}, \sfsl{Stochastic Control Theory}
+      \cite{Karlin+Taylor1998} or maybe \sfsl{Fuzzy Control} \cite{Michel-etal-2010},
+      like algorithmics, first be required 
+      as possible techniques when issues of correct continuous
+      dynamics and optimisation arise, as when implementing certain requirements. 
+\afslut
+
+\nbbbb{Domain Facets}\label{primer:Domain Facets}
+
+\begynd
+\pind There are other, additional methodological domain modelling steps.
+\pind In \cite[Chapter\,8, Pages 205--240]{BjornerMonograph2020} we
+      cover the notion of \sfsl{domain facets}.
+\begynd
+\pind By a domain facet we shall understand one amongst a finite set
+      of generic ways of analysing a domain:
+\begynd
+\pind a view of the domain,
+\pind such that the different facets 
+\pind cover conceptually different views, 
+\pind and such that these views together
+\pind cover the domain. 
+\afslut
+\afslut
+\pind \pos{We here}{As examples of domain facets we} list:
+\begin{multicols}{2}
+\begin{itemize}
+\item intrinsics,
+\item support technologies,
+\item rules \& regulations, including
+\begin{itemize}
+\item scripts,
+\item license languages,
+\end{itemize}
+\item management \& organisation, and
+\item human behaviour.
+\end{itemize}
+\end{multicols}\noindent as such facets.
+\pos{\pind The referenced chapter (\cite[Chapter\,8, Pages
+      205--240]{BjornerMonograph2020}) is traditional, programming
+      methodological, in the sense that there is no [semi-]formal
+      calculi involved, as in this primer's
+      Chapters\,\ref{primer-extq.1}--\ref{chap4.tex.1}\ysfchgii{. }
+\pind \ysfchg{We } could wish for that\,!}{}
+\afslut
+
+\nbbbb{Requirements Engineering}\label{primer:Requirements Engineering}
+
+\begynd
+\pind Domain modelling, to repeat, can be pursued for two different,
+      but related, reasons.
+\begynd
+\pind (i) \ysfchg{S}imply, without any concern for, or idea of possible
+          software, in order to ``just'' understand a domain, or
+\pind (ii) for reasons of subsequent software development.
+\afslut
+\pind In the later case a step of \sfsl{requirements engineering} need be pursued.
+\begynd
+\pind \cite[Chapter\,9, Pages\,243--298]{BjornerMonograph2020} covers
+      a notion of \sfsl{requirements engineering}.
+\pind In that chapter we show three stages of requirements
+      development:
+\begynd
+\pind ($\alpha$) \sfsl{domain requirements},
+\pind ($\beta$) \sfsl{interface requirements}, and 
+\pind ($\gamma$) \sfsl{machine requirements}.
+\afslut
+\mnewfoil
+\pind But first a definition of the term \sfsl{`machine'}.
+
+\lastchg{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bookdefn{Machine}{
+\begynd
+\pind By \sfsl{machine} we shall understand\index{pdefind}{machine}
+\begynd
+\pind a, or the, combination of hardware and software 
+\pind that is the target for, or result of 
+\pind the required computing systems development. 
+\afslut 
+\afslut
+}
+
+\bookdefn{Requirement}{
+\pind By a \sfsl{requirement\ysfchg{ }} we shall understand (cf., IEEE Standard
+      610.12):\index{pdefind}{requirements}
+\begynd
+\pind  \sfsl{``A condition or capability
+\pind  needed by a user
+\pind  to solve a problem
+\pind  or achieve an objective.''}\dbsquare\
+\afslut
+\afslut
+}
+\mnewfoil
+
+\bookdefn{Domain Requirements}{
+\pind By \ysfchg{ } \sfsl{domain requirements} we shall understand
+      \index{pdefind}{domain!requirements}\index{pdefind}{requirements!domain} 
+\begynd
+\pind those requirements 
+\pind which can be expressed 
+\pind s{\^o}lely using terms of the domain\dbsquare\
+\afslut
+}
+
+\bookdefn{Interface Requirements}{
+\pind By  \ysfchg{ } \sfsl{interface requirements} we shall understand
+      \index{pdefind}{interface!requirements}\index{pdefind}{requirements!interface} 
+\begynd
+\pind those requirements
+\pind which can be expressed
+\pind only using technical terms of both the domain and the machine\dbsquare\
+\afslut
+}
+
+\bookdefn{Machine Requirements}{
+\pind By  \ysfchg{ } \sfsl{machine requirements} we shall understand
+      \index{pdefind}{machine!requirements}\index{pdefind}{requirements!machine} 
+\begynd
+\pind those requirements which, in principle, 
+\pind can be expressed 
+\pind s{\^o}lely using terms of the machine\dbsquare\
+\afslut
+}
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\pind The  \sfsl{domain requirements} stage of requirements
+      development
+\begynd
+\pind starts with a basis in the domain engineering's domain description.
+\pind It is, so-to-speak, a first step in the development of a
+      requirements prescription.\footnote{\LLLL The ``passage'' from
+      domain description to requirements 
+      prescription marks a transcendental deduction. Domain descriptions
+      designate that which  is being described. Requirements 
+      prescriptions designate what is intended to be implemented by computing. Please note
+      the distinction: At the end of the development of a domain description we have just that:
+      a domain description. At the beginning of the development of a
+      requirements prescription we consider the domain description to be
+      the initial requirements prescription: Thus, 
+      seemingly bewildering, in one instance a document is considered a domain description,
+      in the next instance, without that document having been textually changed, it is now
+      considered a requirements prescription.
+      The transition from domain description to requirements prescription also marks a
+      transition from ``no-design mode'' description to ``design-mode'' prescription.}
+\mnewfoil
+\pind From there follows, according to
+      \cite[Chapter\,9]{BjornerMonograph2020} a number of (five)
+      steps:
+      
+\begynd
+\bookdefn{Projection}{\index{pdefind}{requirements!projection}
+      By projection is meant a subset of the
+      domain description, one which projects out all those endurants:
+      parts and fluids, as well as perdurants: actions, events and
+      behaviours that the stake-holders do not wish represented or
+      relied upon by the machine\dbsquare\
+    }
+    
+\bookdefn{Instantiation}{\index{pdefind}{requirements!instantiation} By
+      instantiation we mean a refinement of the partial domain
+      requirements prescription (resulting from the projection step)
+      in which the refinements aim at rendering more concrete, more
+      specific the endurants: parts and fluids, as well as the
+      perdurants: actions, events and behaviours of the domain
+      requirements prescription\dbsquare\
+}
+      \mnewfoil
+   
+\bookdefn{Determination}{\index{pdefind}{requirements!determination} By
+      determination we mean a refinement of the partial domain
+      requirements prescription, resulting from the instantiation
+      step, in which the refinements aim at rendering less
+      non-determinate, more determinate the endurants: parts and
+      fluids, as well as the perdurants: functions, events and
+      behaviours of the partial domain requirements
+      prescription\dbsquare\
+}
+      
+\bookdefn{Extension}{\index{pdefind}{requirements!extension}
+      By  extension we understand the introduction of endurants
+      and perdurants that were not feasible in the original domain,
+      but for which, with computing and communication, and with new,
+      emerging technologies, for example, sensors, actuators and
+      satellites, there is the possibility of feasible
+      implementations, hence the requirements, that what is introduced
+      becomes part of the unfolding requirements
+      prescription\dbsquare\
+    }
+    
+\mnewfoil  
+\bookdefn{Fitting}{\index{pdefind}{requirements!fitting} By
+      requirements fitting we mean a harmonisation of two or more
+      domain requirements that have overlapping (shared) not always
+      consistent parts and which results in $n$ partial domain
+      requirement, and \ysfchg{$m$ } shared domain requirement, that ``fit
+      into'' two or more of the partial domain requirements\dbsquare\
+}
+\afslut
+      
+\noindent
+\pind \cite[Chapter\,9]{BjornerMonograph2020} then goes on to outline
+      interface and machine requirements steps.
+      \afslut
+      
+\pind So domain engineering is a sound basis, we claim, for software
+      development.
+
+\pind How that basis harmonises with the approaches taken by
+      \sfsl{{Axel van} Lamsweerde} 
+      \cite{Lamsweerde} and \sfsl{Michael A. Jackson}
+      \cite{Jackson2010Facs} is, really, a worthwhile study    
+      in-and-by itself\,!
+\afslut
+\afslut
+
+\nbbbb{Possible [PhD] Research Topics}\label{Possible Research Topics}
+
+\begynd
+\pind \ysfchg{We } list here a number of possible (PhD) research topics:
+\begin{enumerate}
+\item \label{rp:Intentional Pull} \sort{Intentional Pull:} This topic is not treated to the depth
+      it deserves in this \primer. Try think of intentional pulls in
+      several domains: (i) \sfsl{money flow in financial institutions}
+      (while domain modelling a fair selection of such: banks, credit
+      card companies, brokers, stock exchanges \cite{db:tse:2010},
+      etc.); (ii) \sfsl{railway systems} (study, for example,
+      \cite{db04:railway,db97:r:UNUIIST:93,train-ifip-wcc2004-db1,train-ifip-wcc2004-mp,%
+            train-ifip-wcc2004-db2,db02-amore-ros,db02-amore-maint,db03:ifac-cts2003,dines-idpt-02}); 
+      and (iii) \sfsl{container terminals} (see \cite{BjornerContainer2018}). 
+\mnewfoil
+\item \label{rp:Discrete vs Continuous}  \sort{Discrete vs. Continuous
+      Endurants and Perdurants:} Take 
+      the example of (oil, gas, water) \sfsl{pipelines}. \pos{See Appendix\,\ref{appendix:Pipelines}.}{}
+      Try model the dynamic flow of liquid in pipes, valves, pumps,
+      etc., that is ``mix'', as may be expected, differential
+      equations with \texttt{RSL} formulas. Some have tried. No real
+      progress seems attained. Se however
+      \cite{rTiMo2018,BigrTiMo2021}.
+      The pipeline example should illustrate the use of monitorable
+      attributes, their ``reading'' and their ``biddable updates''.
+
+      The challenge here is threefold: (i) first the PDE etc.\ modelling of
+      the flow for each kind of unit, including curved pipe
+      units; \pos{}{and} (ii) then for their composition -- for a specific layout\pos{,
+      for example that hinted at in Fig.\,\vref{anoipilisy}; and (iii) finally
+      for the infinite collection of pipeline systems such as defined
+      by the ``abstract syntax'' of
+      Appendix.\,\ref{appendix:Pipelines} Item\,\vref{p-e--1}
+      (including its wellformedness).}{.} 
+\mnewfoil
+\item \label{rp:Towards a Calculus of Perdurants}  \sort{Towards a
+      Calculus of Perdurants:} This \primer\ has 
+      unveiled the beginnings of a \sfsl{Calculus of Endurants}. (Yet, its
+      real ``calculus-orientation'' has yet to emerge: its laws, etc.)
+      Sect.\,\ref{Behaviour Definition Bodies}  hints at what
+      \ysfchg{we } have in
+      mind. A systematic analysis which aims at uncovering a fixed number
+      of behaviour patterns such as sketched in Sect.\,\ref{Behaviour Definition Bodies}. 
+\mnewfoil
+\item \label{rp:Human Interaction}  \sort{Modelling Human
+      Interaction:} The ``running example''\pos{, 
+      summarised in Appendix\,\ref{p-ch:Road Transport},}{} illustrated a
+      road net ``populated'' with automobiles driving ``hither \&
+      dither''. The current \primer\ has not treated the interaction
+      between humans and man-made artifacts, like, for example,
+      drivers and their automobiles. You are to model, for example,
+      such human actions as starting an automobile, accelerating,
+      braking\ysfchg{, } turning left, turning right, and stopping. Doing so
+      You will have to try out, experiment with the r{\^{o}}les of
+      monitorable, including biddable automobile attributes. An aim,
+      besides such a domain model, is to research method issues of
+      modelling human interaction. Please disregard modelling issues
+      of sentiments, feelings, etc. 
+\mnewfoil
+\item \label{rp:Transcendental Deduction}  \sort{Transcendental
+      Deduction:} In the philosophy of Kai 
+      S{\o}rlander \pos{such as, for example, explained in
+      Chapter\,\ref{chap2.tex.Philosophy},}{} transcendental deduction is
+      appealed to repeatably. In this \primer, as in
+      \cite{BjornerMonograph2020}, transcendental deduction is
+      appealed to only once\,! Maybe research into possible calculi
+      for perdurants, cf.\,\textsf{Research Challenge}\,\ref{rp:Towards
+      a Calculus of Perdurants}, might yield some more examples of transcendental deductions. 
+\mnewfoil
+  \item \label{rp:Formal Models} \sort{Formal Models of Domain
+      Modelling Calculi:} In \cite{bjorner-jaist-2014} \ysfchg{an
+      attempt is made at } a
+      first formal model of the domain analysis \& description calculi.
+      With  \cite{BjornerMonograph2020} and, especially, this \primer\
+      as a background, perhaps a more thorough attempt should be made to
+      bring the model of \cite{bjorner-jaist-2014} up-to-date and complete\,! 
+\mnewfoil
+\item \label{rp:filosofi} \sort{Kai S{\o}rlander's Philosophy:} \pos{We
+    refer to Chapter\,\ref{chapter:Philosophy}.}{{[Kai S{\o}rlander's
+    Philosophy is treated in a special chapter of the notes fr
+    these lectures.]}} It is here strongly
+    suggested that this research project be based on
+    \cite{kaisorlander2022}, Kai S{\o}rlander's most recent
+    book.\footnote{All of S{\o}rlander's books
+    \cite[1994--2022]{kaisorlander1994,kaisorlander1997,kaisorlander2002,kaisorlander2016,kaisorlander2022} 
+    are in Danish -- so the researcher would either be able to read
+    Danish, or, more preferably to \ysfchgv{us}, to have a suitable (German,
+    English, French, ...) translation at hand.} 
+    The challenge, in a sense, has two elements: (i) the
+    identification of S{\o}rlander's use of \textsf{transcendental
+    deduction}: painstakingly identifying \sort{all} it uses,
+    analysing each of these, studying whether one can characterise
+    these uses into more than one common kind of deduction, or whether
+    one might claim \sfsl{``classes of deductions''}, not necessarily
+    disjoint, but perhaps structured in some kind of taxonomy; and
+    (ii) the analysis of this report's presentation of S{\o}rlander's
+    metaphysics.
+\end{enumerate}
+\afslut
+
+%%\nbbbb{What Next\,?}
+
+%%\tbw
+
+\nbbbbb{Closing Remarks}
+
+\bbbb{Endurants versus Perdurants}
+
+\begynd
+\pind The number of concepts pertaining to endurants versus the number
+      of concepts pertaining to perdurants appears to signify something\,!
+\begynd
+\pind The number of concept definitions that relate to endurants is around 80.
+\pind Those of perdurant concepts is around 10\,!
+\pind How can that large difference be understood\,?
+\afslut
+\afslut
+
+\nbbbb{Domain Science \& Engineering}
+
+\begynd
+\pind The present primer represents, at the moment, a long line of development.
+\pind As mentioned in Sect.\,\vref{Domain Engineering 2016 2022} this grew out of a series of works:
+\cite{TheSEBook3,Kiev:2010ptI,Kiev:2010ptII,BjornerFAoC2015MDAAD,BjornerTOSEM2018,BjornerMonograph2020}. 
+\begynd
+\pind The first inklings --- in \ysfchg{our } work on 
+\pind what is now the \sfsl{Domain
+      Science \& Engineering} of this \primer --- \nyl appeared in
+      \cite[1995-1996]{UNUIIST:37,UNUIIST:46,db:UNUIIST:48,UNUIIST:58,UNUIIST:59}. 
+\pind The \sfsl{UN University's International Institute for Software
+      Technology,} \texttt{UNU/IIST} \ysfchg{ } conducted several domain engineering-based
+      research \& development projects, most of them under the
+      leaderships of (the late) S{\o}ren Prehn and Chris W.\ George
+      \cite{DBLP:conf/ac/George07x}. 
+\pind \cite[2008]{dines:facs:2008} touched upon the concept of 
+      \sfsl{Domain Facets}, not covered in this \primer, but in
+      \cite[2021]{BjornerMonograph2020}. 
+\pind Two papers \cite[2010]{Kiev:2010ptI,Kiev:2010ptII} suggested
+      reasonably relevant properties of domain descriptions.
+\pind It was not until \cite[2017]{BjornerFAoC2015MDAAD} that the analysis
+      \& description calculi of this \primer\ emerged, and were
+      refined in \cite[2019]{BjornerTOSEM2018}. 
+\afslut
+
+                                %\summerchg
+{%%%%%%%%%%%%%%%%%%
+\pind The iteration from \cite{TheSEBook3} via
+      \cite{Kiev:2010ptI,Kiev:2010ptII,BjornerFAoC2015MDAAD,BjornerTOSEM2018,BjornerMonograph2020}
+      to the present primer 
+      reminds \ysfchgiii{us } of the French author \textsl{Anatole France's} story of the
+      history of the  mankind.\footnote{%%
+On acceding to the throne of Persia, a young king assembled all the
+academicians of his realm and charged them with writing a detailed
+history of mankind, that he may learn from it to become a wise ruler. 
+
+The wise men deliberated and returned after twenty years with twelve
+camels, each carrying five hundred volumes. But the king could not
+find the time to read so many volumes, and tasked them with reducing
+the number of volumes ``to the brevity of human existence''. 
+
+The academicians worked for another twenty years and returned with
+fifteen hundred volumes. But the king said, ``I am getting old and
+cannot read all these volumes''. 
+
+The academicians returned after ten years with five hundred volumes
+but the king asked them to shorten it further so that he could learn,
+before dying, human history. 
+
+After five years, a lone academician carrying a single volume arrived
+at the palace. ``Hurry up''\ysfchgii{, } an officer told him, ``the king is
+dying''. The king looked at the academician and said, ``So I shall die
+without knowing human history''. 
+
+``Sir'', replied the academician, ``\ysfchgii{I } can summarize it for you in three
+words: – they are born, they suffer, they die.'' [\texttt{http://profzeki.blogspot.com/2012/05/anatole-france-and-reductionism.html}]
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\afslut
+\afslut
+\afslut
+
+\nbbbbb{Acknowledgments}
+
+\begynd
+\pind In \cite[\sfsl{Preface/Acknowledgments,
+      Page\,xiv}]{BjornerMonograph2020} \ysfchg{the first author } acknowledged the very many
+      who, over \ysfchg{his } professional life, has inspired \ysfchg{him}.
+\pind In ``rewriting'' this primer from \cite{BjornerMonograph2020}
+       \ysfchg{the first author has}, again, attempted to ``capture'' Kai S{\o}rlander's
+      Philosophy\pos{, cf.\,Chapter\,\ref{chapter:Philosophy}}{}. And
+      again \ysfchg{we }
+      wish\ysfchg{ } to deeply acknowledge that work and, hence, \sort{Kai S{\o}rlander}.
+\pind Here  \ysfchg{the first author}, additionally,wishes to acknowledge, with pleasure, \sort{Laura
+      Kovacs}, TU Wien. Laura invited  \ysfchg{him } to lecture, in the fall of
+      2022\footnote{\LLLL Well, an invitation for Covid-19 year 2021 had to be
+      postponed\,!}, at TU Wien. 
+      This \primer\ is the result of that invitation.
+\pind Drs.\ Mikhail Chupilko\footnote{\LLLL ISP/RAS: Inst\pos{itute}{.} of Systems
+      Programming, The Russian Acad\pos{emy}{.} of Sci\pos{ences}{.}, Moscow} and Yang
+      ShaoFa\footnote{\LLLL IoS/CAS: Inst\pos{itute}{.} of Software, The Chinese Acad\pos{emy}{.} of
+      Sci\pos{ences}{.}, Beijing} are currently translating this primer into
+      Russian, respectively Chinese. \ysfchg{The first author } acknowledge\ysfchg{s}, with many thanks, their
+      ongoing comments.
+\pind \ysfchg{The work of Dr.\.Yang ShaoFa has in this respect been of
+      such help that the first author decided, in September 2023, to
+      list him as co-author\,!}
+\afslut
+
+\label{chap7.tex.n}
+
+
+%%  LocalWords:  modelling Endurants Perdurants RSL monitorable les
+%%  LocalWords:  behaviour summarised computable Kovacs Wien Covid le
+%%  LocalWords:  Kai rlander perdurants rlander's analysing amongst
+%%  LocalWords:  characterise intrinsics organisation Harel CSP DPEs
+%%  LocalWords:  pdefind lely endurants behaviours instantiation Axel
+%%  LocalWords:  harmonisation harmonises Lamsweerde quantifications
+%%  LocalWords:  PDEs formalised algorithmics optimisation Beki Dansk
+%%  LocalWords:  Henhapl Datamatik Bruun MSc rgen Bundgaard Haff ren
+%%  LocalWords:  Dommergaard vengreen Storbank Prehn Lennart DDC DSL
+%%  LocalWords:  Actulus actuarian Cartesians Mereology Invariance sa
+%%  LocalWords:  Initialisation PDE anoipilisy wellformedness UNU ddp
+%%  LocalWords:  IIST formedness endurant calc apuid mereology xtime
+%%  LocalWords:  wff perdurant Drs Chupilko RAS ShaoFa IoS CAS Oest
+%%  LocalWords:  itute Acad emy ences ve

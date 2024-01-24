@@ -1,0 +1,1069 @@
+
+\nbbbbb{Endurants: External
+  Qualities}\label{pipe-ex1}\tehran{Endurants}{pipe:Edurants}\HHHH 
+
+We follow the ontology of Fig.\,\ref{anoipilisy}, the lefthand dashed box
+labelled \sfsl{External Qualities}.
+
+\hDBfigure{onto}{\pos{10.8}{10}cm}{Upper Ontology}{anoipilisy}
+
+\mnewfoil
+
+\nbbbb{Parts}\tehran{Parts}{pipe:Parts}\HHHH
+
+\DBfigure{opls-edin}{\pos{5}{10}cm}{An example pipeline system}{nabucco}
+
+\mnewfoil
+
+\tehrantutorial{\begin{multicols}{2}}{}\HHHH
+\begin{enumerate}\setei
+\item \label{p-e-00} A pipeline system contains a set of pipeline 
+  units and a pipeline system monitor.
+\item \label{p-e--1} The well-formedness of a pipeline system
+  depends on its mereology\pos{ (cf.\ Sect.\,\ref{PLS Mereology})}{}
+  and the routing of its pipes\pos{ (cf.\ Sect.\,\ref{Wellformed Pipes})}{}. 
+\item \label{p-e-01} A pipeline unit is either a well, a pipe, a pump,
+  a valve, a fork, a join, a plate\footnote{\LLLL A \sfsl{plate} unit is a
+  usually circular, flat steel plate used to ``begin'' or ``end'' a
+  pipe segment.}, or a sink unit.
+\item \label{p-e-02} We consider all these units to be
+  distinguishable, i.e., the set of wells, the set pipe, etc., the set
+  of sinks, to be disjoint.
+\savei\end{enumerate} 
+\tehrantutorial{\end{multicols}}{}
+
+\mnewfoil\LLLL
+\tehrantutorial{\begin{multicols}{2}\footnotesize}{\LLLL}
+%\RSLatex
+%type
+%&\ref{p-e-00}.&  PLS', U, M &\iptye{PLS$'$}{p-e-00}\iptye{U}{p-e-00}\iptye{M}{p-e-00}&
+%&\ref{p-e--1}.&  PLS = {| pls:PLS':-wf_PLS(pls) |} &\iptye{PLS}{p-e--1}& 
+%value
+%&\ref{p-e--1}.&  wf_PLS: PLS -> Bool &\ipwf{wf\_PLS}{p-e--1}&
+%&\ref{p-e--1}.&  wf_PLS(pls) is
+%&\ref{p-e--1}.&  wf_Mereology(pls)/\wf_Routes(pls)/\wf_Metrics(pls)&\footnotemark&
+%&\ref{p-e-00}.&  obs_Us: PLS -> U-set &\ipob{obs\_Us}{p-e-00}&
+%&\ref{p-e-00}.&  obs_M: PLS -> M &\ipob{obs\_M}{p-e-00}&
+%type
+%&\ref{p-e-01}.&  U = We | Pi | Pu | Va | Fo | Jo | Pl | Si&\iptye{U}{p-e-01}&
+%&\ref{p-e-02}.&  We :: Well&\iptye{We}{p-e-02}&
+%&\ref{p-e-02}.&  Pi :: Pipe&\iptye{Pi}{p-e-02}& 
+%&\ref{p-e-02}.&  Pu :: Pump&\iptye{Pu}{p-e-02}& 
+%&\ref{p-e-02}.&  Va :: Valv&\iptye{Va}{p-e-02}&
+%&\ref{p-e-02}.&  Fo :: Fork&\iptye{Fo}{p-e-02}&
+%&\ref{p-e-02}.&  Jo :: Join&\iptye{Jo}{p-e-02}&
+%&\ref{p-e-02}.&  Pl :: Plate&\iptye{Pl}{p-e-02}&
+%&\ref{p-e-02}.&  Si :: Sink&\iptye{Si}{p-e-02}&
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{p-e-00}.\ \ PLS{\PRIM}, U, M \iptye{PLS$'$}{p-e-00}\iptye{U}{p-e-00}\iptye{M}{p-e-00}\\
+\ref{p-e--1}.\ \ PLS {\EQ} {\LBRACE}{\BAR} pls:PLS{\PRIM}{\RDOT}wf\_PLS(pls) {\BAR}{\RBRACE} \iptye{PLS}{p-e--1} \\
+\kw{value}\\
+\ref{p-e--1}.\ \ wf\_PLS: PLS {\RIGHTARROW} \kw{Bool} \ipwf{wf\_PLS}{p-e--1}\\
+\ref{p-e--1}.\ \ wf\_PLS(pls) {\IS}\\
+\ref{p-e--1}.\ \ wf\_Mereology(pls){\WEDGE}wf\_Routes(pls){\WEDGE}wf\_Metrics(pls)\footnotemark\\
+\ref{p-e-00}.\ \ obs\_Us: PLS {\RIGHTARROW} U\kw{-set} \ipob{obs\_Us}{p-e-00}\\
+\ref{p-e-00}.\ \ obs\_M: PLS {\RIGHTARROW} M \ipob{obs\_M}{p-e-00}\\
+\kw{type}\\
+\ref{p-e-01}.\ \ U {\EQ} We {\BAR} Pi {\BAR} Pu {\BAR} Va {\BAR} Fo {\BAR} Jo {\BAR} Pl {\BAR} Si\iptye{U}{p-e-01}\\
+\ref{p-e-02}.\ \ We :: Well\iptye{We}{p-e-02}\\
+\ref{p-e-02}.\ \ Pi :: Pipe\iptye{Pi}{p-e-02} \\
+\ref{p-e-02}.\ \ Pu :: Pump\iptye{Pu}{p-e-02} \\
+\ref{p-e-02}.\ \ Va :: Valv\iptye{Va}{p-e-02}\\
+\ref{p-e-02}.\ \ Fo :: Fork\iptye{Fo}{p-e-02}\\
+\ref{p-e-02}.\ \ Jo :: Join\iptye{Jo}{p-e-02}\\
+\ref{p-e-02}.\ \ Pl :: Plate\iptye{Pl}{p-e-02}\\
+\ref{p-e-02}.\ \ Si :: Sink\iptye{Si}{p-e-02}
+\ep
+\tehrantutorial{\end{multicols}}{}
+\footnotetext{\LLLL%
+  \textsf{wf\_Mereology}, 
+  \textsf{wf\_Routes} and
+  \textsf{wf\_Metrics} will be explained in Sects.\,%
+  \vref{pipe:wfMereology},
+  \vref{pipe:wfRoutes}, and
+  \vref{pipe:Wellformed Unit Metrics}.}
+
+
+\nbbbb{An Endurant State}
+
+\begin{enumerate}\setei
+\item \label{end-state-000} For a given pipeline system
+\item \label{end-state-010} we exemplify an endurant state $\sigma$
+\item \label{end-state-020} composed of the given  pipeline system and
+                            all its manifest units, i.e., without plates.
+\savei\end{enumerate}
+
+%\RSLatex
+%value
+%&\ref{end-state-000}.&   pls:PLS  &\ipva{pls}{end-state-000}&
+%variable
+%&\ref{end-state-010}.&   `sigma := collect_state(pls)  &\ipst{$\sigma$}{end-state-010}& 
+%value 
+%&\ref{end-state-020}.&   collect_state: PLS   &\ipfu{collect\_state}{end-state-020}&
+%&\ref{end-state-020}.&   collect_state(pls) is {pls}&\,&union&\,o&bs_Us(pls) \ Pl
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{end-state-000}.\ \ \ pls:PLS\ \ \ipva{pls}{end-state-000}\\
+\kw{variable}\\
+\ref{end-state-010}.\ \ \ $\sigma$ :{\EQ} collect\_state(pls)\ \ \ipst{$\sigma$}{end-state-010} \\
+\kw{value} \\
+\ref{end-state-020}.\ \ \ collect\_state: PLS\ \ \ \ipfu{collect\_state}{end-state-020}\\
+\ref{end-state-020}.\ \ \ collect\_state(pls) {\IS} {\LBRACE}pls{\RBRACE}\,{\UNION}\,obs\_Us(pls) {\SETMINUS} Pl
+\ep
+
+\nbbbbb{Endurants: Internal Qualities}
+
+\begynd
+\pind We follow the ontology of Fig.\,\vref{anoipilisy}, \nyl the
+lefthand vertical and horisontal lines.
+\afslut
+
+
+\bbbb{Unique Identification}
+
+\begin{enumerate}\setei
+\item \label{p-e-03z} The pipeline system, as such,
+\item \label{p-e-03x} has a unique identifier, distinct (different) from its
+                      pipeline unit identifiers. 
+\item \label{p-e-03y} Each pipeline unit is uniquely distinguished by
+                      its unit identifier. 
+\item \label{p-e-03zz} There is a state of all unique identifiers.
+\savei\end{enumerate}
+\mnewfoil
+%\RSLatex
+%   type
+%&\ref{p-e-03x}.&      PLSI &\iptyu{PLSI}{p-e-03x}&
+%&\ref{p-e-03y}.&      UI &\iptyu{UI}{p-e-03y}&
+%   value
+%&\ref{p-e-03z}.&      pls:PLS
+%&\ref{p-e-03x}.&      uid_PLS: PLS -> PLSI&\ipob{uid\_PLS}{p-e-03x}&
+%&\ref{p-e-03y}.&      uid_U: U -> UI&\ipob{uid\_U}{p-e-03y}&
+%   variable
+%&\ref{p-e-03zz}.&      `sigma&$_{uid}$& := { uid_PLS(pls) } union xtr_UIs(pls) &\ipst{$\sigma_{uid}$}{p-e-03z}&
+%   axiom &\ipax{Unique Identification}{p-e-03y}&
+%&\ref{p-e-03y}.&      all u,u':U:-{u,u'}<<=obs_Us(pls)=>(u~=u'=>uid_UI(u)~=uid_UI(u'))
+%&\ref{p-e-03y}.&    /\  uid_PLS(pls) ~isin {uid_UI(u)|u:U:-u isin obs_Us(pls)}
+%\endRSLatex 
+\bp
+\>\ \kw{type}\\
+\ref{p-e-03x}.\ \ \ \ \ \ PLSI \iptyu{PLSI}{p-e-03x}\\
+\ref{p-e-03y}.\ \ \ \ \ \ UI \iptyu{UI}{p-e-03y}\\
+\>\ \kw{value}\\
+\ref{p-e-03z}.\ \ \ \ \ \ pls:PLS\\
+\ref{p-e-03x}.\ \ \ \ \ \ uid\_PLS: PLS {\RIGHTARROW} PLSI\ipob{uid\_PLS}{p-e-03x}\\
+\ref{p-e-03y}.\ \ \ \ \ \ uid\_U: U {\RIGHTARROW} UI\ipob{uid\_U}{p-e-03y}\\
+\>\ \kw{variable}\\
+\ref{p-e-03zz}.\ \ \ \ \ \ $\sigma$$_{uid}$ :{\EQ} {\LBRACE} uid\_PLS(pls) {\RBRACE} {\UNION} xtr\_UIs(pls) \ipst{$\sigma_{uid}$}{p-e-03z}\\
+\>\ \kw{axiom} \ipax{Unique Identification}{p-e-03y}\\
+\ref{p-e-03y}.\ \ \ \ \ \ {\ALL} u,u{\PRIM}:U{\RDOT}{\LBRACE}u,u{\PRIM}{\RBRACE}{\SUBSETEQ}obs\_Us(pls){\DBLRIGHTARROW}(u{\NOTEQ}u{\PRIM}{\DBLRIGHTARROW}uid\_UI(u){\NOTEQ}uid\_UI(u{\PRIM}))\\
+\ref{p-e-03y}.\ \ \ \ {\WEDGE}\ \ uid\_PLS(pls) {\NOTISIN} {\LBRACE}uid\_UI(u){\BAR}u:U{\RDOT}u {\ISIN} obs\_Us(pls){\RBRACE}
+\ep
+
+\mnewfoil
+\begin{enumerate}\setei
+\item \label{p-e-03a} From a pipeline system one can observe the set
+  of all unique unit identifiers.
+\savei\end{enumerate}
+
+
+%\RSLatex
+%   value
+%&\ref{p-e-03a}.&   xtr_UIs: PLS -> UI-set&\ipfu{xtr\_UIs}{p-e-03a}&
+%&\ref{p-e-03a}.&   xtr_UIs(pls) is {uid_UI(u)|u:U:-u isin obs_Us(pls)}
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\ref{p-e-03a}.\ \ \ xtr\_UIs: PLS {\RIGHTARROW} UI\kw{-set}\ipfu{xtr\_UIs}{p-e-03a}\\
+\ref{p-e-03a}.\ \ \ xtr\_UIs(pls) {\IS} {\LBRACE}uid\_UI(u){\BAR}u:U{\RDOT}u {\ISIN} obs\_Us(pls){\RBRACE}
+\ep
+
+\begin{enumerate}\setei
+\item \label{p-e-03b} We can prove that the number of unique unit
+                      identifiers of a pipeline system equals that
+                      of the units of that system.
+\savei\end{enumerate}
+
+
+%\RSLatex
+%   &\kw{theorem:}\ipth{Unique Endurants}{p-e-03b}&
+%&\ref{p-e-03b}.&     all pls:PLS:-card obs_Us(pl)=card xtr_UIs(pls)
+%\endRSLatex 
+\bp
+\>\ \kw{theorem:}\ipth{Unique Endurants}{p-e-03b}\\
+\ref{p-e-03b}.\ \ \ \ \ {\ALL} pls:PLS{\RDOT}\kw{card} obs\_Us(pl){\EQ}\kw{card} xtr\_UIs(pls)
+\ep
+
+\nbbbb{Mereology}\label{PLS Mereology}\LLLL\HHHH
+
+\bbb{PLS Mereology}
+
+\begin{enumerate}\setei
+\item \label{pls-mer-00} The mereology of a pipeline system is the set
+  of unique identifiers of all the units of that system.
+\savei\end{enumerate}
+
+%\RSLatex
+%type
+%&\ref{pls-mer-00}.&   PLS_Mer = UI-set&\ipty{PLS\_Mer}{pls-mer-00}&
+%value
+%&\ref{pls-mer-00}.&   mereo_PLS: PLS -> PLS_Mer&\ipob{mereo\_PLS}{pls-mer-00}&
+%axiom&\ipty{Wellformed Mereologies}{pls-mer-00}&
+%&\ref{pls-mer-00}.&   all uis:PLS_Mer :- uis = card xtr_UIs(pls)
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{pls-mer-00}.\ \ \ PLS\_Mer {\EQ} UI\kw{-set}\ipty{PLS\_Mer}{pls-mer-00}\\
+\kw{value}\\
+\ref{pls-mer-00}.\ \ \ mereo\_PLS: PLS {\RIGHTARROW} PLS\_Mer\ipob{mereo\_PLS}{pls-mer-00}\\
+\kw{axiom}\ipty{Wellformed Mereologies}{pls-mer-00}\\
+\ref{pls-mer-00}.\ \ \ {\ALL} uis:PLS\_Mer {\RDOT} uis {\EQ} \kw{card} xtr\_UIs(pls)
+\ep
+
+\nbbb{Unit Mereologies}\HHHH\LLLL
+
+\begin{enumerate}\setei
+\item \label{p-e-11}   Each unit is connected to zero, one or two
+                       other existing input units and  zero, one or two
+                       other existing output units as follows:
+\begin{enumerate}
+\item \label{p-e-04}   A well unit is connected to exactly one output
+                       unit (and, hence, has no ``input'').
+\item \label{p-e-05}   A pipe unit is connected to exactly one input unit
+                       and one output unit.
+\item \label{p-e-06}   A pump unit is connected to exactly one input unit
+                       and one output unit.
+\item \label{p-e-07}   A valve is connected to exactly one input unit
+                       and one output unit.
+\item \label{p-e-08}   A fork is connected to exactly one input unit
+                       and two distinct output units.
+\item \label{p-e-09}   A join is connected to exactly two distinct input units
+                       and one output unit.
+\item \label{p-e-85}   A plate is connected to exactly one unit.
+\item \label{p-e-10}   A sink is connected to exactly one input unit
+                       (and, hence, has no ``output''). 
+\end{enumerate}
+\savei\end{enumerate}
+
+\mnewfoil\LLLL
+
+%\RSLatex
+%   type
+%&\ref{p-e-11}.&      MER = UI-set >< UI-set&\iptym{MER}{p-e-11}&
+%   value
+%&\ref{p-e-11}.&      mereo_U: U -> MER &\ipob{mereo\_U}{p-e-11}&
+%   axiom
+%&\ref{p-e-11}.&       wf_Mereology: PLS -> Bool &\label{pipe:wfMereology}\ipwf{wf\_Mereology}{p-e-11}&
+%&\ref{p-e-11}.&       wf_Mereology(pls) is
+%&\ref{p-e-11}.&          all u:U:-u isin obs_Us(pls)=> 
+%&\ref{p-e-11}.&             let (iuis,ouis) = mereo_U(u) in iuis union ouis <<= xtr_UIs(pls) /\
+%&\ref{p-e-11}.&                 case (u,(card uius,card ouis)) of
+%&\ref{p-e-04}.&                     (mk_We(we),(0,1)) -> true,
+%&\ref{p-e-05}.&                     (mk_Pi(pi),(1,1)) -> true,
+%&\ref{p-e-06}.&                     (mk_Pu(pu),(1,1)) -> true,
+%&\ref{p-e-07}.&                     (mk_Va(va),(1,1)) -> true,
+%&\ref{p-e-08}.&                     (mk_Fo(fo),(1,1)) -> true,
+%&\ref{p-e-09}.&                     (mk_Jo(jo),(1,1)) -> true,
+%&\ref{p-e-09}.&                     (mk_Pl(pl),(0,1)) -> true, &``begin''&
+%&\ref{p-e-09}.&                     (mk_Pl(pl),(1,0)) -> true, &``end''&
+%&\ref{p-e-10}.&                     (mk_Si(si),(1,1)) -> true,
+%&\ref{p-e-11}.&                     _ -> false end end
+%\endRSLatex 
+\bp
+\>\ \kw{type}\\
+\ref{p-e-11}.\ \ \ \ \ \ MER {\EQ} UI\kw{-set} {\TIMES} UI\kw{-set}\iptym{MER}{p-e-11}\\
+\>\ \kw{value}\\
+\ref{p-e-11}.\ \ \ \ \ \ mereo\_U: U {\RIGHTARROW} MER \ipob{mereo\_U}{p-e-11}\\
+\>\ \kw{axiom}\\
+\ref{p-e-11}.\ \ \ \ \ \ \ wf\_Mereology: PLS {\RIGHTARROW} \kw{Bool} \label{pipe:wfMereology}\ipwf{wf\_Mereology}{p-e-11}\\
+\ref{p-e-11}.\ \ \ \ \ \ \ wf\_Mereology(pls) {\IS}\\
+\ref{p-e-11}.\ \ \ \ \ \ \ \ \ \ {\ALL} u:U{\RDOT}u {\ISIN} obs\_Us(pls){\DBLRIGHTARROW} \\
+\ref{p-e-11}.\ \ \ \ \ \ \ \ \ \ \ \ \ \kw{let} (iuis,ouis) {\EQ} mereo\_U(u) \kw{in} iuis {\UNION} ouis {\SUBSETEQ} xtr\_UIs(pls) {\WEDGE}\\
+\ref{p-e-11}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \kw{case} (u,(\kw{card} uius,\kw{card} ouis)) \kw{of}\\
+\ref{p-e-04}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_We(we),(0,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-05}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pi(pi),(1,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-06}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pu(pu),(1,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-07}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Va(va),(1,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-08}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Fo(fo),(1,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Jo(jo),(1,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pl(pl),(0,1)) {\RIGHTARROW} \kw{true}, ``begin''\\
+\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pl(pl),(1,0)) {\RIGHTARROW} \kw{true}, ``end''\\
+\ref{p-e-10}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Si(si),(1,1)) {\RIGHTARROW} \kw{true},\\
+\ref{p-e-11}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\UNDERLINE} {\RIGHTARROW} \kw{false} \kw{end} \kw{end}
+\ep
+
+\nbbbb{Pipeline Concepts, I}
+
+\bbb{Pipe Routes}\label{primer-pipe}\HHHH
+
+\begin{enumerate}\setei
+\item \label{p-e-12} A route (of a pipeline system) is a sequence of
+                     connected units (of the pipeline system). 
+\item \label{p-e-13} A route descriptor is a sequence of unit
+                     identifiers and the connected units of a route
+                     (of a pipeline system).
+\savei\end{enumerate}
+
+%\RSLatex
+%   type
+%&\ref{p-e-12}.&      R' = U-inflist &\iptyo{R$'$}{p-e-12}&
+%&\ref{p-e-12}.&      R = {| r:Route':-wf_Route(r) |} &\iptyo{R}{p-e-12}&
+%&\ref{p-e-13}.&      RD = UI-inflist &\iptyo{RD}{p-e-13}&
+%   axiom
+%&\ref{p-e-13}.&      all rd:RD :- exists r:R:-rd=descriptor(r) &\ipax{Route Describability}{p-e-13}&
+%   value
+%&\ref{p-e-13}.&      descriptor: R -> RD &\ipfu{descriptor}{p-e-13}&
+%&\ref{p-e-13}.&      descriptor(r) is <.uid_UI(r[i])|i:Nat:-1<=i<=len r.>   
+%\endRSLatex 
+\bp
+\>\ \kw{type}\\
+\ref{p-e-12}.\ \ \ \ \ \ R{\PRIM} {\EQ} U$^{\omega}$ \iptyo{R$'$}{p-e-12}\\
+\ref{p-e-12}.\ \ \ \ \ \ R {\EQ} {\LBRACE}{\BAR} r:Route{\PRIM}{\RDOT}wf\_Route(r) {\BAR}{\RBRACE} \iptyo{R}{p-e-12}\\
+\ref{p-e-13}.\ \ \ \ \ \ RD {\EQ} UI$^{\omega}$ \iptyo{RD}{p-e-13}\\
+\>\ \kw{axiom}\\
+\ref{p-e-13}.\ \ \ \ \ \ {\ALL} rd:RD {\RDOT} {\EXISTS} r:R{\RDOT}rd{\EQ}descriptor(r) \ipax{Route Describability}{p-e-13}\\
+\>\ \kw{value}\\
+\ref{p-e-13}.\ \ \ \ \ \ descriptor: R {\RIGHTARROW} RD \ipfu{descriptor}{p-e-13}\\
+\ref{p-e-13}.\ \ \ \ \ \ descriptor(r) {\IS} {\LANGLE}uid\_UI(r{\LBRACKET}i{\RBRACKET}){\BAR}i:\kw{Nat}{\RDOT}1{\LEQ}i{\LEQ}\kw{len} r{\RANGLE}\ \ \ 
+\ep
+
+\mnewfoil\LLLL\HHHH
+
+\begin{enumerate}\setei
+\item \label{p-e-20x}   Two units are adjacent if the output unit
+  identifiers of one shares a unique unit identifier with the input
+  identifiers of the other.
+\savei\end{enumerate}
+
+%\RSLatex
+%   value 
+%&\ref{p-e-20x}.&      adjacent: U >< U -> Bool &\ipfu{adjacent}{p-e-20x}&
+%&\ref{p-e-20x}.&      adjacent(u,u') is let (,ouis)=mereo_U(u),(iuis,)=mereo_U(u') in ouis inter iuis ~= {} end
+%\endRSLatex 
+\bp
+\>\ \kw{value} \\
+\ref{p-e-20x}.\ \ \ \ \ \ adjacent: U {\TIMES} U {\RIGHTARROW} \kw{Bool} \ipfu{adjacent}{p-e-20x}\\
+\ref{p-e-20x}.\ \ \ \ \ \ adjacent(u,u{\PRIM}) {\IS} \kw{let} (,ouis){\EQ}mereo\_U(u),(iuis,){\EQ}mereo\_U(u{\PRIM}) \kw{in} ouis {\INTER} iuis {\NOTEQ} {\LBRACE}{\RBRACE} \kw{end}
+\ep
+
+\LLLL
+
+\begin{enumerate}\setei
+\item \label{p-e-20a}   Given a pipeline system, $pls$, one can identify the
+                  (possibly infinite) set of (possibly infinite) routes
+                  of that pipeline system.
+\begin{enumerate}
+\item \label{p-e-20}  The empty sequence, {\LANGLE}{\RANGLE}, is a
+                      route of $pls$.  
+\item \label{p-e-21}  Let $u, u'$ be any units of $pls$, such that
+                      an output unit identifier of $u$ is the same as
+                      an input unit identifier of $u'$ then
+                      {\LANGLE}$u,u'${\RANGLE} is a route of $pls$.
+\item \label{p-e-22}  If $r$ and $r'$ are routes of $pls$ such that
+                      the last element of $r$ is the same as the first
+                      element of $r'$, then $r${\CONCAT}\kw{tl}$r'$ is
+                      a route of $pls$.  
+\item \label{p-e-23}  No sequence of units is a route unless it
+                      follows from a finite (or an infinite) number of
+                      applications of the basis and induction clauses
+                      of Items~\ref{p-e-20}--\ref{p-e-22}.
+\end{enumerate}
+\savei\end{enumerate}
+
+\mnewfoil\LLLL\HHHH
+
+%\RSLatex 
+%   value
+%&\ref{p-e-20a}.&      Routes: PLS -> RD-infset&\ipfu{Routes}{p-e-20a}&
+%&\ref{p-e-20a}.&      Routes(pls) is 
+%&\ref{p-e-20}.&          let rs = <..> union 
+%&\ref{p-e-21}.&                   {<.uid_UI(u),uid_UI(u').>|u,u':U:-{u,u'}<<=obs_Us(pls) /\ adjacent(u,u')}
+%&\ref{p-e-22}.&                 union {r^tl r'|r,r':R:-{r,r'}<<=rs}
+%&\ref{p-e-23}.&          in rs end
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\ref{p-e-20a}.\ \ \ \ \ \ Routes: PLS {\RIGHTARROW} RD\kw{-infset}\ipfu{Routes}{p-e-20a}\\
+\ref{p-e-20a}.\ \ \ \ \ \ Routes(pls) {\IS} \\
+\ref{p-e-20}.\ \ \ \ \ \ \ \ \ \ \kw{let} rs {\EQ} {\LANGLE}{\RANGLE} {\UNION} \\
+\ref{p-e-21}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\LBRACE}{\LANGLE}uid\_UI(u),uid\_UI(u{\PRIM}){\RANGLE}{\BAR}u,u{\PRIM}:U{\RDOT}{\LBRACE}u,u{\PRIM}{\RBRACE}{\SUBSETEQ}obs\_Us(pls) {\WEDGE} adjacent(u,u{\PRIM}){\RBRACE}\\
+\ref{p-e-22}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\UNION} {\LBRACE}r{\CONCAT}\kw{tl} r{\PRIM}{\BAR}r,r{\PRIM}:R{\RDOT}{\LBRACE}r,r{\PRIM}{\RBRACE}{\SUBSETEQ}rs{\RBRACE}\\
+\ref{p-e-23}.\ \ \ \ \ \ \ \ \ \ \kw{in} rs \kw{end}
+\ep
+
+\bbb{Well-formed Routes}\label{Wellformed Pipes}
+
+\begin{enumerate}\setei
+\item \label{p-e-14a}  A route is acyclic if no two route positions
+  reveal the same unique unit identifier.
+\savei\end{enumerate}
+%\RSLatex
+%   value
+%&\ref{p-e-14a}.&   is_acyclic_Route: R -> Bool&\ippr{is\_acyclic\_Route}{p-e-14a}&
+%&\ref{p-e-14a}.&   is_acyclic_Route(r) is ~exists i,j:Nat:-{i,j}<<=inds r /\ i~=j /\ r[i]=r[j]
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\ref{p-e-14a}.\ \ \ is\_acyclic\_Route: R {\RIGHTARROW} \kw{Bool}\ippr{is\_acyclic\_Route}{p-e-14a}\\
+\ref{p-e-14a}.\ \ \ is\_acyclic\_Route(r) {\IS} {\SIM}{\EXISTS} i,j:\kw{Nat}{\RDOT}{\LBRACE}i,j{\RBRACE}{\SUBSETEQ}\kw{inds} r {\WEDGE} i{\NOTEQ}j {\WEDGE} r{\LBRACKET}i{\RBRACKET}{\EQ}r{\LBRACKET}j{\RBRACKET}
+\ep
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{p-e-14b}  A pipeline system is well-formed if none of its
+                      routes are circular (and all of its routes
+                      embedded in well-to-sink routes). 
+\savei\end{enumerate}
+%\RSLatex
+%   value
+%&\ref{p-e-14b}.&   wf_Routes: PLS -> Bool&\ipwf{wf\_Routes}{p-e-14b}&
+%&\ref{p-e-14b}.&   wf_Routes(pls) is  &\label{pipe:wfRoutes}&
+%&\ref{p-e-14b}.&       non_circular(pls) /\ are_embedded_Routes(pls)
+%
+%&\ref{p-e-14b}.&   is_non_circular_PLS: PLS -> Bool&\ipwf{is\_non\_circular\_PLS}{p-e-14b}&
+%&\ref{p-e-14b}.&   is_non_circular_PLS(pls) is 
+%&\ref{p-e-14b}.&       all r:R:-r isin routes(p)/\acyclic_Route(r)
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\ref{p-e-14b}.\ \ \ wf\_Routes: PLS {\RIGHTARROW} \kw{Bool}\ipwf{wf\_Routes}{p-e-14b}\\
+\ref{p-e-14b}.\ \ \ wf\_Routes(pls) {\IS}\ \ \label{pipe:wfRoutes}\\
+\ref{p-e-14b}.\ \ \ \ \ \ \ non\_circular(pls) {\WEDGE} are\_embedded\_Routes(pls)\\
+\\
+\ref{p-e-14b}.\ \ \ is\_non\_circular\_PLS: PLS {\RIGHTARROW} \kw{Bool}\ipwf{is\_non\_circular\_PLS}{p-e-14b}\\
+\ref{p-e-14b}.\ \ \ is\_non\_circular\_PLS(pls) {\IS} \\
+\ref{p-e-14b}.\ \ \ \ \ \ \ {\ALL} r:R{\RDOT}r {\ISIN} routes(p){\WEDGE}acyclic\_Route(r)
+\ep
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{p-e-19}  We define well-formedness in terms of
+  well-to-sink routes, i.e., routes which start with a well unit and
+  end with a sink unit.
+\savei\end{enumerate}
+
+%\RSLatex
+%   value   
+%&\ref{p-e-19}.&   well_to_sink_Routes: PLS -> R-set&\ipfu{well\_to\_sink\_Routes}{p-e-19}&
+%&\ref{p-e-19}.&   well_to_sink_Routes(pls) is
+%&\ref{p-e-19}.&      let rs = Routes(pls) in
+%&\ref{p-e-19}.&      {r|r:R:-r isin rs /\ is_We(r[1]) /\ is_Si(r[len r])} end
+%\endRSLatex 
+\bp
+\>\ \kw{value}\ \ \ \\
+\ref{p-e-19}.\ \ \ well\_to\_sink\_Routes: PLS {\RIGHTARROW} R\kw{-set}\ipfu{well\_to\_sink\_Routes}{p-e-19}\\
+\ref{p-e-19}.\ \ \ well\_to\_sink\_Routes(pls) {\IS}\\
+\ref{p-e-19}.\ \ \ \ \ \ \kw{let} rs {\EQ} Routes(pls) \kw{in}\\
+\ref{p-e-19}.\ \ \ \ \ \ {\LBRACE}r{\BAR}r:R{\RDOT}r {\ISIN} rs {\WEDGE} is\_We(r{\LBRACKET}1{\RBRACKET}) {\WEDGE} is\_Si(r{\LBRACKET}\kw{len} r{\RBRACKET}){\RBRACE} \kw{end}
+\ep
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{p-e-18} A pipeline system is well-formed
+      if all of its routes are embedded in well-to-sink routes.
+\savei\end{enumerate}
+
+%\RSLatex
+%&\ref{p-e-18}.&   are_embedded_Routes: PLS -> Bool&\ippr{are\_embedded\_Routes}{p-e-18}&
+%&\ref{p-e-18}.&   are_embedded_Routes(pls) is   
+%&\ref{p-e-18}.&       let wsrs = well_to_sink_Routes(pls) in
+%&\ref{p-e-18}.&       all r:R :- r isin Routes(pls) =>
+%&\ref{p-e-18}.&           exists r':R,i,j:Nat :- 
+%&\ref{p-e-18}.&              r' isin wsrs /\ {i,j}<<=inds r'/\i<=j /\ r = <.r'[k]|k:Nat:-i<=k<=j.> end
+%\endRSLatex 
+\bp
+\ref{p-e-18}.\ \ \ are\_embedded\_Routes: PLS {\RIGHTARROW} \kw{Bool}\ippr{are\_embedded\_Routes}{p-e-18}\\
+\ref{p-e-18}.\ \ \ are\_embedded\_Routes(pls) {\IS}\ \ \ \\
+\ref{p-e-18}.\ \ \ \ \ \ \ \kw{let} wsrs {\EQ} well\_to\_sink\_Routes(pls) \kw{in}\\
+\ref{p-e-18}.\ \ \ \ \ \ \ {\ALL} r:R {\RDOT} r {\ISIN} Routes(pls) {\DBLRIGHTARROW}\\
+\ref{p-e-18}.\ \ \ \ \ \ \ \ \ \ \ {\EXISTS} r{\PRIM}:R,i,j:\kw{Nat} {\RDOT} \\
+\ref{p-e-18}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ r{\PRIM} {\ISIN} wsrs {\WEDGE} {\LBRACE}i,j{\RBRACE}{\SUBSETEQ}\kw{inds} r{\PRIM}{\WEDGE}i{\LEQ}j {\WEDGE} r {\EQ} {\LANGLE}r{\PRIM}{\LBRACKET}k{\RBRACKET}{\BAR}k:\kw{Nat}{\RDOT}i{\LEQ}k{\LEQ}j{\RANGLE} \kw{end}
+\ep
+
+\bbb{Embedded Routes}
+
+\begin{enumerate}\setei
+\item \label{p-e-33a} For every route we can define the set of all its
+                      embedded routes. 
+\savei\end{enumerate} 
+
+%\RSLatex
+%   value
+%&\ref{p-e-33a}.&  embedded_Routes: R -> R-set&\ipfu{embedded\_Routes}{p-e-33a}&
+%&\ref{p-e-33a}.&  embedded_Routes(r) is {<.r[k]|k:Nat:-i<=k<=j.> | i,j:Nat:- i {i,j}<<=inds(r) /\ i<=j}  
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\ref{p-e-33a}.\ \ embedded\_Routes: R {\RIGHTARROW} R\kw{-set}\ipfu{embedded\_Routes}{p-e-33a}\\
+\ref{p-e-33a}.\ \ embedded\_Routes(r) {\IS} {\LBRACE}{\LANGLE}r{\LBRACKET}k{\RBRACKET}{\BAR}k:\kw{Nat}{\RDOT}i{\LEQ}k{\LEQ}j{\RANGLE} {\BAR} i,j:\kw{Nat}{\RDOT} i {\LBRACE}i,j{\RBRACE}{\SUBSETEQ}\kw{inds}(r) {\WEDGE} i{\LEQ}j{\RBRACE}\ \ 
+\ep
+
+\nbbb{A Theorem}
+
+\begin{enumerate}\setei
+\item \label{p-e-33b} The following theorem is conjectured:
+\begin{enumerate}
+\item \label{p-e-30}  the set of all routes  (of the pipeline system)
+\item \label{p-e-31}  is the set of all well-to-sink routes (of a
+                      pipeline system) and 
+\item \label{p-e-32}  all their embedded routes
+\end{enumerate}
+\savei\end{enumerate}
+
+%\RSLatex
+%   &\kw{theorem:}\ipth{Routes of a PLS}{p-e-33b}&
+%&\ref{p-e-33b}.&   all pls:PLS :-
+%&\ref{p-e-33b}.&   let rs = Routes(pls),
+%&\ref{p-e-33b}.&       wsrs = well_to_sink_Routes(pls) in
+%&\ref{p-e-30}.&   rs = 
+%&\ref{p-e-31}.&        wsrs union
+%&\ref{p-e-32}.&        union {{r'|r':R :- r' isin is_embedded_Routes(r'')} | r'':R :- r'' isin wsrs}
+%&\ref{p-e-33a}.&   end
+%\endRSLatex 
+\bp
+\>\ \kw{theorem:}\ipth{Routes of a PLS}{p-e-33b}\\
+\ref{p-e-33b}.\ \ \ {\ALL} pls:PLS {\RDOT}\\
+\ref{p-e-33b}.\ \ \ \kw{let} rs {\EQ} Routes(pls),\\
+\ref{p-e-33b}.\ \ \ \ \ \ \ wsrs {\EQ} well\_to\_sink\_Routes(pls) \kw{in}\\
+\ref{p-e-30}.\ \ \ rs {\EQ} \\
+\ref{p-e-31}.\ \ \ \ \ \ \ \ wsrs {\UNION}\\
+\ref{p-e-32}.\ \ \ \ \ \ \ \ {\UNION} {\LBRACE}{\LBRACE}r{\PRIM}{\BAR}r{\PRIM}:R {\RDOT} r{\PRIM} {\ISIN} is\_embedded\_Routes(r{\PRIM}{\PRIM}){\RBRACE} {\BAR} r{\PRIM}{\PRIM}:R {\RDOT} r{\PRIM}{\PRIM} {\ISIN} wsrs{\RBRACE}\\
+\ref{p-e-33a}.\ \ \ \kw{end}
+\ep
+
+\nbbb{Fluids}
+
+\begin{enumerate}\setei
+\item \label{p-e-34} The only fluid of concern to pipelines is the
+                     gas\footnote{\LLLL Gaseous materials include: air, gas,
+                     etc.} or liquid\footnote{\LLLL Liquid materials include
+                     water, oil, etc.} which the pipes
+                     transport\footnote{\LLLL The description of this
+                     document is relevant only to gas or oil pipelines.}.
+\savei\end{enumerate}
+
+%\RSLatex
+%   type
+%&\ref{p-e-34}.&      GoL [ = M ] &\iptye{GoL}{p-e-34}&
+%   value
+%&\ref{p-e-34}.&      obs_GoL: U -> GoL&\ipob{obs\_GoL}{p-e-34}&  
+%\endRSLatex 
+\bp
+\>\ \kw{type}\\
+\ref{p-e-34}.\ \ \ \ \ \ GoL {\LBRACKET} {\EQ} M {\RBRACKET} \iptye{GoL}{p-e-34}\\
+\>\ \kw{value}\\
+\ref{p-e-34}.\ \ \ \ \ \ obs\_GoL: U {\RIGHTARROW} GoL\ipob{obs\_GoL}{p-e-34}\ \ 
+\ep
+
+\nbbbb{Attributes}\LLLL
+
+\bbb{Unit Flow Attributes}\HHHH
+
+
+\begin{enumerate}\setei
+\item A number of attribute types characterise units:
+\begin{enumerate}
+\item \label{pa01x} estimated current well capacity (barrels of oil, etc.),
+\item \label{pa03x} pump height (a static attribute), 
+\item \label{pa04x} current pump status (not pumping, pumping; a programmable attribute),
+\item \label{pa05x} current valve status (closed, open; a programmable attribute) and
+\item \label{pa06x} flow (barrels/second, a biddable attribute).
+\end{enumerate}
+\savei\end{enumerate}
+
+\mnewfoil\LLLL\HHHH%&$_{\mathcall{L}}$&
+
+%\begin{multicols}{2}
+%\RSLatex
+%   type
+%&\ref{pa01x}.&      WellCap &\iptya{WellCap}{pa01x}&
+%&\ref{pa03x}.&      Pump_Height &\iptya{Pump\_Height}{pa03x}&
+%&\ref{pa04x}.&      Pump_State == {|&\sort{not\_pumping}&,&\sort{pumping}&|} &\iptya{Pump\_State}{pa04x}&
+%&\ref{pa05x}.&      Valve_State == {|&\sort{closed}&,&\sort{open}&|} &\iptya{Valve\_State}{pa05x}&
+%&\ref{pa06x}.&      Flow &\iptya{Flow}{pa06x}&
+%\endRSLatex 
+\bp
+\>\ \kw{type}\\
+\ref{pa01x}.\ \ \ \ \ \ WellCap \iptya{WellCap}{pa01x}\\
+\ref{pa03x}.\ \ \ \ \ \ Pump\_Height \iptya{Pump\_Height}{pa03x}\\
+\ref{pa04x}.\ \ \ \ \ \ Pump\_State {\EQ}{\EQ} {\LBRACE}{\BAR}\sort{not\_pumping},\sort{pumping}{\BAR}{\RBRACE} \iptya{Pump\_State}{pa04x}\\
+\ref{pa05x}.\ \ \ \ \ \ Valve\_State {\EQ}{\EQ} {\LBRACE}{\BAR}\sort{closed},\sort{open}{\BAR}{\RBRACE} \iptya{Valve\_State}{pa05x}\\
+\ref{pa06x}.\ \ \ \ \ \ Flow \iptya{Flow}{pa06x}
+\ep
+\begin{enumerate}\setei
+\item \label{pa05y1} Flows can be added and subtracted,
+\item \label{pa05y2} added distributively  and
+\item \label{pa05z} flows can be compared.
+\savei\end{enumerate}
+
+%\RSLatex
+%   value
+%&\ref{pa05y1}.&      &$\oplus,\ominus$&: Flow><Flow -> Flow &\ipop{$\oplus$}{pa05y1}\ipop{$\ominus$}{pa05y1}&
+%&\ref{pa05y2}.&      &$\oplus$&: Flow-set -> Flow  &\ipop{$\oplus$}{pa05y2}&
+%&\ref{pa05z}.&      <,<=,=,~=,>=,>: Flow >< Flow -> Bool
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\ref{pa05y1}.\ \ \ \ \ \ $\oplus,\ominus$: Flow{\TIMES}Flow {\RIGHTARROW} Flow \ipop{$\oplus$}{pa05y1}\ipop{$\ominus$}{pa05y1}\\
+\ref{pa05y2}.\ \ \ \ \ \ $\oplus$: Flow\kw{-set} {\RIGHTARROW} Flow\ \ \ipop{$\oplus$}{pa05y2}\\
+\ref{pa05z}.\ \ \ \ \ \ {\LT},{\LEQ},{\EQ},{\NOTEQ},{\GEQ},{\GT}: Flow {\TIMES} Flow {\RIGHTARROW} \kw{Bool}
+\ep
+\ipop{\LT}{pa05z}%
+\ipop{\LEQ}{pa05z}%
+\ipop{\EQ}{pa05z}%
+\ipop{\NOTEQ}{pa05z}%
+\ipop{\GEQ}{pa05z}%
+\ipop{\GT}{pa05z}
+\mnewfoil
+\begin{enumerate}\setei
+\item \label{pa00} Properties of pipeline units include
+%%%\begin{multicols}{2}
+\begin{enumerate}
+\item \label{pa01} estimated current well capacity (barrels of oil,
+  etc.) [a biddable attribute], 
+\item \label{pa02} pipe length [a static attribute],
+\item \label{pa03} current pump height [a biddable attribute], 
+\item \label{pa04} current valve open/close status [a programmable attribute],
+\item \label{pa05} current [$\mathcal{L}$aminar] in-flow at unit input
+                   [a monitorable attribute],
+\item \label{pa06} current $\mathcal{L}$aminar] in-flow leak at unit input
+                   [a monitorable attribute],
+\item \label{pa07} maximum [$\mathcal{L}$aminar] guaranteed in-flow leak at unit input
+  [a static attribute],
+\mnewfoil
+\item \label{pa08} current [$\mathcal{L}$aminar] leak unit interior
+                   [a monitorable attribute],
+\item \label{pa09} current [$\mathcal{L}$aminar] flow in unit interior
+                   [a monitorable attribute],
+\item \label{pa10} maximum $\mathcal{L}$aminar] guaranteed flow in unit interior
+                   [a monitorable attribute],
+\item \label{pa11} current [$\mathcal{L}$aminar] out-flow at unit output
+                   [a monitorable attribute],
+\item \label{pa12} current [$\mathcal{L}$aminar] out-flow leak at unit output
+                   [a monitorable attribute] and
+\item \label{pa13} maximum guaranteed $\mathcal{L}$aminar out-flow leak at unit output
+                   [a static attribute.
+\end{enumerate}
+%%%\end{multicols}
+\savei\end{enumerate}
+\mnewfoil
+\begin{multicols}{2}\LLLL
+%\RSLatex
+%type 
+%&\ref{pa05}&  In_Flow = Flow&\iptya{In\_Flow}{pa05}&
+%&\ref{pa06}&  In_Leak = Flow&\iptya{In\_Leak}{pa06}&
+%&\ref{pa07}&  Max_In_Leak = Flow&\iptya{Max\_In\_Leak}{pa07}&
+%&\ref{pa08}&  Body_Flow = Flow&\iptya{Body\_Flow}{pa08}&
+%&\ref{pa09}&   Body_Leak = Flow&\iptya{Body\_Leak}{pa09}&
+%&\ref{pa10}&   Max_Flow = Flow&\iptya{Max\_Flow}{pa10}&
+%&\ref{pa11}&  Out_Flow = Flow&\iptya{Out\_Flow}{pa11}&
+%&\ref{pa12}&   Out_Leak = Flow&\iptya{Out\_Leak}{pa12}& 
+%&\ref{pa13}&  Max_Out_Leak = Flow&\iptya{Max\_Out\_Leak}{pa13}&
+%value
+%&\ref{pa01}&  attr_WellCap: We -> WellCap    
+%&\ref{pa02}&  attr_LEN: Pi -> LEN   
+%&\ref{pa03}&  attr_Height: Pu -> Height
+%&\ref{pa04}&  attr_ValSta: Va -> VaSta
+%&\ref{pa05}&  attr_In_Flow: U -> UI -> Flow&\ipob{attr\_In\_Flow}{pa05}&
+%&\ref{pa06}&  attr_In_Leak: U -> UI -> Flow &\ipob{attr\_In\_Leak}{pa06}&  
+%&\ref{pa07}&  attr_Max_In_Leak: U -> UI -> Flow &\ipob{attr\_Max\_In\_Leak}{pa07}&  
+%&\ref{pa08}&  attr_Body_Flow: U -> Flow &\ipob{attr\_Body\_Flow}{pa08}&    
+%&\ref{pa09}&   attr_Body_Leak: U -> Flow  &\ipob{attr\_Body\_Leak}{pa09}&
+%&\ref{pa10}&   attr_Max_Flow: U -> Flow  &\ipob{attr\_Max\_Flow}{pa10}&
+%&\ref{pa11}&  attr_Out_Flow: U -> UI -> Flow  &\ipob{attr\_Out\_Flow}{pa11}&
+%&\ref{pa12}&   attr_Out_Leak: U -> UI -> Flow &\ipob{attr\_Out\_Leak}{pa12}& 
+%&\ref{pa13}&  attr_Max_Out_Leak: U -> UI -> Flow&\ipob{attr\_Max\_Out\_Leak}{pa13}&
+%\endRSLatex 
+\bp
+\kw{type} \\
+\ref{pa05}\ \ In\_Flow {\EQ} Flow\iptya{In\_Flow}{pa05}\\
+\ref{pa06}\ \ In\_Leak {\EQ} Flow\iptya{In\_Leak}{pa06}\\
+\ref{pa07}\ \ Max\_In\_Leak {\EQ} Flow\iptya{Max\_In\_Leak}{pa07}\\
+\ref{pa08}\ \ Body\_Flow {\EQ} Flow\iptya{Body\_Flow}{pa08}\\
+\ref{pa09}\ \ \ Body\_Leak {\EQ} Flow\iptya{Body\_Leak}{pa09}\\
+\ref{pa10}\ \ \ Max\_Flow {\EQ} Flow\iptya{Max\_Flow}{pa10}\\
+\ref{pa11}\ \ Out\_Flow {\EQ} Flow\iptya{Out\_Flow}{pa11}\\
+\ref{pa12}\ \ \ Out\_Leak {\EQ} Flow\iptya{Out\_Leak}{pa12} \\
+\ref{pa13}\ \ Max\_Out\_Leak {\EQ} Flow\iptya{Max\_Out\_Leak}{pa13}\\
+\kw{value}\\
+\ref{pa01}\ \ attr\_WellCap: We {\RIGHTARROW} WellCap\ \ \ \ \\
+\ref{pa02}\ \ attr\_LEN: Pi {\RIGHTARROW} LEN\ \ \ \\
+\ref{pa03}\ \ attr\_Height: Pu {\RIGHTARROW} Height\\
+\ref{pa04}\ \ attr\_ValSta: Va {\RIGHTARROW} VaSta\\
+\ref{pa05}\ \ attr\_In\_Flow: U {\RIGHTARROW} UI {\RIGHTARROW} Flow\ipob{attr\_In\_Flow}{pa05}\\
+\ref{pa06}\ \ attr\_In\_Leak: U {\RIGHTARROW} UI {\RIGHTARROW} Flow \ipob{attr\_In\_Leak}{pa06}\ \ \\
+\ref{pa07}\ \ attr\_Max\_In\_Leak: U {\RIGHTARROW} UI {\RIGHTARROW} Flow \ipob{attr\_Max\_In\_Leak}{pa07}\ \ \\
+\ref{pa08}\ \ attr\_Body\_Flow: U {\RIGHTARROW} Flow \ipob{attr\_Body\_Flow}{pa08}\ \ \ \ \\
+\ref{pa09}\ \ \ attr\_Body\_Leak: U {\RIGHTARROW} Flow\ \ \ipob{attr\_Body\_Leak}{pa09}\\
+\ref{pa10}\ \ \ attr\_Max\_Flow: U {\RIGHTARROW} Flow\ \ \ipob{attr\_Max\_Flow}{pa10}\\
+\ref{pa11}\ \ attr\_Out\_Flow: U {\RIGHTARROW} UI {\RIGHTARROW} Flow\ \ \ipob{attr\_Out\_Flow}{pa11}\\
+\ref{pa12}\ \ \ attr\_Out\_Leak: U {\RIGHTARROW} UI {\RIGHTARROW} Flow \ipob{attr\_Out\_Leak}{pa12} \\
+\ref{pa13}\ \ attr\_Max\_Out\_Leak: U {\RIGHTARROW} UI {\RIGHTARROW} Flow\ipob{attr\_Max\_Out\_Leak}{pa13}
+\ep
+\end{multicols}
+
+\mnewfoil\HHHH
+\begin{enumerate}\setei
+\item \label{pa13xy} Summarising we can define a two notions of flow:
+\begin{enumerate}
+\item \label{pa13x} static and
+\item \label{pa13xz} monitorable.
+\savei\end{enumerate}
+\savei\end{enumerate}\footnotesize\small\LLLL
+%\RSLatex   
+%type
+%&\ref{pa13x}&  Sta_Flows = Max_In_Leak><In_Max_Flow>Max_Out_Leak&\iptya{Sta\_Flows}{pa13x}&
+%&\ref{pa13xz}&  Mon_Flows = In_Flow><In_Leak><Body_Flow><Body_Leak><Out_Flow><Out_Leak&\iptya{Mon\_Flows}{pa13xz}&
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{pa13x}\ \ Sta\_Flows {\EQ} Max\_In\_Leak{\TIMES}In\_Max\_Flow{\GT}Max\_Out\_Leak\iptya{Sta\_Flows}{pa13x}\\
+\ref{pa13xz}\ \ Mon\_Flows {\EQ} In\_Flow{\TIMES}In\_Leak{\TIMES}Body\_Flow{\TIMES}Body\_Leak{\TIMES}Out\_Flow{\TIMES}Out\_Leak\iptya{Mon\_Flows}{pa13xz}
+\ep
+\normalsize
+\mnewfoil
+
+\nbbb{Unit Metrics}
+
+\input{metrics}
+
+\nbbb{Summary}
+
+\noindent
+\begynd
+\pind We summarise the static, monitorable and programmable attributes
+      for each manifest part of the pipeline system:
+\afslut      
+%\begin{multicols}{2}
+%\RSLatex
+%type
+%   PLS_Sta = PLS_net><...
+%   PLS_Mon = ...
+%   PLS_Prg = PLS_`Sigma><...
+%   Well_Sta = Sta1_Metric><Sta_Flows><Orig_Cap><...
+%   Well_Mon = Mon_Flows><Well_Cap><...
+%   Well_Prg = ... 
+%   Pipe_Sta = Sta2_Metric><Sta_Flows><LEN><...
+%   Pipe_Mon = Mon_Flows><In_Temp><Out_Temp><...
+%   Pipe_Prg = ...  
+%   Pump_Sta = Sta2_Metric><Sta_Flows><Pump_Height><...
+%   Pump_Mon = Mon_Flows><...
+%   Pump_Prg = Pump_State><...
+%   Valve_Sta = Sta2_Metric><Sta_Flows><...
+%   Valve_Mon = Mon_Flows><In_Temp><Out_Temp><...
+%   Valve_Prg = Valve_State><...
+%   Fork_Sta = Sta12_Metric><Sta_Flows><...
+%   Fork_Mon = Mon_Flows><In_Temp><Out_Temp><...
+%   Fork_Prg = ... 
+%   Join_Sta = Sta21_Metric><Sta_Flows><...
+%   Join_Mon = Mon_Flows><In_Temp><Out_Temp><...
+%   Join_Prg = ...
+%   Sink_Sta = Sta1_Metric><Sta_Flows><Max_Vol><...
+%   Sink_Mon = Mon_Flows><Curr_Vol><In_Temp><Out_Temp><...
+%   Sink_Prg = ... 
+%\endRSLatex 
+\bp
+\kw{type}\\
+\>\ PLS\_Sta {\EQ} PLS\_net{\TIMES}{\DOTDOTDOT}\\
+\>\ PLS\_Mon {\EQ} {\DOTDOTDOT}\\
+\>\ PLS\_Prg {\EQ} PLS\_$\Sigma${\TIMES}{\DOTDOTDOT}\\
+\>\ Well\_Sta {\EQ} Sta1\_Metric{\TIMES}Sta\_Flows{\TIMES}Orig\_Cap{\TIMES}{\DOTDOTDOT}\\
+\>\ Well\_Mon {\EQ} Mon\_Flows{\TIMES}Well\_Cap{\TIMES}{\DOTDOTDOT}\\
+\>\ Well\_Prg {\EQ} {\DOTDOTDOT} \\
+\>\ Pipe\_Sta {\EQ} Sta2\_Metric{\TIMES}Sta\_Flows{\TIMES}LEN{\TIMES}{\DOTDOTDOT}\\
+\>\ Pipe\_Mon {\EQ} Mon\_Flows{\TIMES}In\_Temp{\TIMES}Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\>\ Pipe\_Prg {\EQ} {\DOTDOTDOT}\ \ \\
+\>\ Pump\_Sta {\EQ} Sta2\_Metric{\TIMES}Sta\_Flows{\TIMES}Pump\_Height{\TIMES}{\DOTDOTDOT}\\
+\>\ Pump\_Mon {\EQ} Mon\_Flows{\TIMES}{\DOTDOTDOT}\\
+\>\ Pump\_Prg {\EQ} Pump\_State{\TIMES}{\DOTDOTDOT}\\
+\>\ Valve\_Sta {\EQ} Sta2\_Metric{\TIMES}Sta\_Flows{\TIMES}{\DOTDOTDOT}\\
+\>\ Valve\_Mon {\EQ} Mon\_Flows{\TIMES}In\_Temp{\TIMES}Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\>\ Valve\_Prg {\EQ} Valve\_State{\TIMES}{\DOTDOTDOT}\\
+\>\ Fork\_Sta {\EQ} Sta12\_Metric{\TIMES}Sta\_Flows{\TIMES}{\DOTDOTDOT}\\
+\>\ Fork\_Mon {\EQ} Mon\_Flows{\TIMES}In\_Temp{\TIMES}Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\>\ Fork\_Prg {\EQ} {\DOTDOTDOT} \\
+\>\ Join\_Sta {\EQ} Sta21\_Metric{\TIMES}Sta\_Flows{\TIMES}{\DOTDOTDOT}\\
+\>\ Join\_Mon {\EQ} Mon\_Flows{\TIMES}In\_Temp{\TIMES}Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\>\ Join\_Prg {\EQ} {\DOTDOTDOT}\\
+\>\ Sink\_Sta {\EQ} Sta1\_Metric{\TIMES}Sta\_Flows{\TIMES}Max\_Vol{\TIMES}{\DOTDOTDOT}\\
+\>\ Sink\_Mon {\EQ} Mon\_Flows{\TIMES}Curr\_Vol{\TIMES}In\_Temp{\TIMES}Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\>\ Sink\_Prg {\EQ} {\DOTDOTDOT} 
+\ep
+
+\mnewfoil%
+\normalsize\HHHH
+\noindent
+\begin{enumerate}\setei
+\item \label{com-attr}Corresponding to the above three attribute categories
+      we can define ``collective'' attribute observers:
+\savei\end{enumerate}
+
+%\small\footnotesize
+%\begin{multicols}{2}
+%\RSLatex
+%value
+%&\ref{com-attr}.&  sta_A_We: We -> Sta1_Metric><Sta_Flows><Orig_Cap><...
+%&\ref{com-attr}.&  mon_A_We: We -> `eta&M&on_Flows><`eta&W&ell_Cap><`eta&I&n_Temp><`eta&O&ut_Temp><...
+%&\ref{com-attr}.&  prg_A_We: We -> ...
+%&\ref{com-attr}.&  sta_A_Pi: Pi -> Sta2_Metric><Sta_Flows><LEN><...
+%&\ref{com-attr}.&  mon_A_Pi: Pi -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><... 
+%&\ref{com-attr}.&  prg_A_Pi: Pi -> ... 
+%&\ref{com-attr}.&  sta_A_Pu: Pu -> Sta2_Metric><Sta_Flows><LEN><...
+%&\ref{com-attr}.&  mon_A_Pu: Pu -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
+%&\ref{com-attr}.&  prg_A_Pu: Pu -> Pump_State><... 
+%&\ref{com-attr}.&  sta_A_Va: Va -> Sta2_Metric><Sta_Flows><LEN><...
+%&\ref{com-attr}.&  mon_A_Va: Va -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
+%&\ref{com-attr}.&  prg_A_Va: Va -> Valve_State><... 
+%&\ref{com-attr}.&  sta_A_Fo: Fo -> Sta12_Metric><Sta_Flows><...
+%&\ref{com-attr}.&  mon_A_Fo: Fo -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><... 
+%&\ref{com-attr}.&  prg_A_Fo: Fo -> ... 
+%&\ref{com-attr}.&  sta_A_Jo: Jo -> Sta21_Metric><Sta_Flows><...
+%&\ref{com-attr}.&  mon_A_Jo: Jo -> Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
+%&\ref{com-attr}.&  prg_A_Jo: Jo -> ... 
+%&\ref{com-attr}.&  sta_A_Si: Si -> Sta1_Metric><Sta_Flows><Max_Vol><...
+%&\ref{com-attr}.&  mon_A_Si: Si -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
+%&\ref{com-attr}.&  prg_A_Si: Si -> ...
+%
+%&\ref{com-attr}.&  &$\mathcal{N}$&Mon_Flows is (`eta&I&n_Flow,`eta&I&n_Leak,`eta&B&ody_Flow,`eta&B&ody_Leak,`eta&O&ut_Flow,`eta&O&ut_Leak)
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{com-attr}.\ \ sta\_A\_We: We {\RIGHTARROW} Sta1\_Metric{\TIMES}Sta\_Flows{\TIMES}Orig\_Cap{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_We: We {\RIGHTARROW} $\eta$Mon\_Flows{\TIMES}$\eta$Well\_Cap{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ prg\_A\_We: We {\RIGHTARROW} {\DOTDOTDOT}\\
+\ref{com-attr}.\ \ sta\_A\_Pi: Pi {\RIGHTARROW} Sta2\_Metric{\TIMES}Sta\_Flows{\TIMES}LEN{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_Pi: Pi {\RIGHTARROW} $\mathcal{N}$Mon\_Flows{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT} \\
+\ref{com-attr}.\ \ prg\_A\_Pi: Pi {\RIGHTARROW} {\DOTDOTDOT} \\
+\ref{com-attr}.\ \ sta\_A\_Pu: Pu {\RIGHTARROW} Sta2\_Metric{\TIMES}Sta\_Flows{\TIMES}LEN{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_Pu: Pu {\RIGHTARROW} $\mathcal{N}$Mon\_Flows{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ prg\_A\_Pu: Pu {\RIGHTARROW} Pump\_State{\TIMES}{\DOTDOTDOT} \\
+\ref{com-attr}.\ \ sta\_A\_Va: Va {\RIGHTARROW} Sta2\_Metric{\TIMES}Sta\_Flows{\TIMES}LEN{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_Va: Va {\RIGHTARROW} $\mathcal{N}$Mon\_Flows{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ prg\_A\_Va: Va {\RIGHTARROW} Valve\_State{\TIMES}{\DOTDOTDOT} \\
+\ref{com-attr}.\ \ sta\_A\_Fo: Fo {\RIGHTARROW} Sta12\_Metric{\TIMES}Sta\_Flows{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_Fo: Fo {\RIGHTARROW} $\mathcal{N}$Mon\_Flows{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT} \\
+\ref{com-attr}.\ \ prg\_A\_Fo: Fo {\RIGHTARROW} {\DOTDOTDOT} \\
+\ref{com-attr}.\ \ sta\_A\_Jo: Jo {\RIGHTARROW} Sta21\_Metric{\TIMES}Sta\_Flows{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_Jo: Jo {\RIGHTARROW} Mon\_Flows{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ prg\_A\_Jo: Jo {\RIGHTARROW} {\DOTDOTDOT} \\
+\ref{com-attr}.\ \ sta\_A\_Si: Si {\RIGHTARROW} Sta1\_Metric{\TIMES}Sta\_Flows{\TIMES}Max\_Vol{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ mon\_A\_Si: Si {\RIGHTARROW} $\mathcal{N}$Mon\_Flows{\TIMES}$\eta$In\_Temp{\TIMES}$\eta$Out\_Temp{\TIMES}{\DOTDOTDOT}\\
+\ref{com-attr}.\ \ prg\_A\_Si: Si {\RIGHTARROW} {\DOTDOTDOT}\\
+\\
+\ref{com-attr}.\ \ $\mathcal{N}$Mon\_Flows {\IS} ($\eta$In\_Flow,$\eta$In\_Leak,$\eta$Body\_Flow,$\eta$Body\_Leak,$\eta$Out\_Flow,$\eta$Out\_Leak)
+\ep
+%\end{multicols}\normalsize
+
+\noindent
+\begynd
+\pind Monitored flow attributes
+\begynd
+\pind are [to be] passed as arguments to behaviours \sfsl{by reference}
+\pind so that their monitorable attribute values can be sampled.
+\afslut
+\afslut
+
+\nbbb{Fluid Attributes}
+\begynd
+\pind Fluids, we here assume, oil, as it appears in the pipeline units
+\begynd
+\pind have no unique identity,
+\pind have not mereology, 
+\pind but does have attributes:  hydrocarbons consisting predominantly of
+\begynd
+\pind aliphatic, 
+\pind alicyclic and 
+\pind aromatic hydrocarbons.
+\afslut
+\pind It may also contain small amounts of 
+\begynd
+\pind nitrogen, 
+\pind oxygen, and
+\pind sulfur
+\afslut compounds
+\afslut
+\afslut
+
+\begin{enumerate}\setei
+\item \label{fluid-0000} We shall simplify, just for illustration, crude oil fluid of
+      units to have these attributes:
+\begin{enumerate}
+\item \label{fluid-0050} volume,
+\item \label{fluid-0100} viscosity,
+\item \label{fluid-0200} temperature, 
+\item \label{fluid-0300} paraffin content (\%age),
+\item \label{fluid-0400} naphtenes content (\%age), 
+\end{enumerate}
+\savei\end{enumerate}
+\begin{multicols}{2}
+%\RSLatex
+%type
+%&\ref{fluid-0000}.&   Oil
+%&\ref{fluid-0050}.&   Vol
+%&\ref{fluid-0100}.&   Visc   
+%&\ref{fluid-0200}.&   Temp
+%&\ref{fluid-0300}.&   Paraffin
+%&\ref{fluid-0400}.&   Naphtene
+%value
+%&\ref{fluid-0100}.&   obs_Oil: U -> Oil
+%&\ref{fluid-0050}.&   attr_Vol: Oil -> Vol
+%&\ref{fluid-0100}.&   attr_Visc: Oil -> Visc   
+%&\ref{fluid-0200}.&   attr_Temp: Oil -> Temp
+%&\ref{fluid-0300}.&   attr_Paraffin: Oil -> Paraffin
+%&\ref{fluid-0400}.&   attr_Naphtene: Oil -> Naphtene  
+%\endRSLatex
+\bp
+\kw{type}\\
+\ref{fluid-0000}.\ \ \ Oil\\
+\ref{fluid-0050}.\ \ \ Vol\\
+\ref{fluid-0100}.\ \ \ Visc\ \ \ \\
+\ref{fluid-0200}.\ \ \ Temp\\
+\ref{fluid-0300}.\ \ \ Paraffin\\
+\ref{fluid-0400}.\ \ \ Naphtene\\
+\kw{value}\\
+\ref{fluid-0100}.\ \ \ obs\_Oil: U {\RIGHTARROW} Oil\\
+\ref{fluid-0050}.\ \ \ attr\_Vol: Oil {\RIGHTARROW} Vol\\
+\ref{fluid-0100}.\ \ \ attr\_Visc: Oil {\RIGHTARROW} Visc\ \ \ \\
+\ref{fluid-0200}.\ \ \ attr\_Temp: Oil {\RIGHTARROW} Temp\\
+\ref{fluid-0300}.\ \ \ attr\_Paraffin: Oil {\RIGHTARROW} Paraffin\\
+\ref{fluid-0400}.\ \ \ attr\_Naphtene: Oil {\RIGHTARROW} Naphtene\ \ 
+\ep
+\end{multicols} 
+
+
+\nbbb{Pipeline System Attributes}
+
+\begynd
+\pind The ``root'' pipeline system is a compound.
+\pind In its transcendentally deduced behavioral form
+\begynd
+\pind it is, amongst other ``tasks'', entrusted with the monitoring
+      and control of all its units.
+\begynd
+\pind To do so it must, as a basically static attribute
+\pind possess awareness, say in the form of a net diagram
+\begynd
+\pind of how these units are interconnected,
+\pind together with all their internal qualities, 
+\pind by type and by value.
+\afslut
+\afslut
+\pind Next we shall give a very simplified account of the possible
+      pipeline system attribute.
+\afslut
+      
+\mnewfoil
+\begin{enumerate}\setei
+\item \label{pls-attrs-0000} We shall make use, in this example, of
+  just a simple pipeline state, \textsf{pls\_$\omega$}.
+\savei\end{enumerate}
+
+\noindent
+\begynd
+\pind The pipeline state, \textsf{pls\_$\omega$}, embodies all the
+      information that is relevant to the monitoring and control of an
+      entire pipeline system, whether static or dynamic.
+\afslut
+%\RSLatex
+%type
+%&\ref{pls-attrs-0000}.&  PLS_`Omega 
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{pls-attrs-0000}.\ \ PLS\_$\Omega$ 
+\ep
+
+\nbbbb{Pipeline Concepts, II: Flow Laws}
+
+\begin{enumerate}\setei
+\item \label{pefl00} ``What flows in, flows out~!''. For $\mathcal{L}$aminar
+                     flows: for any non-well and non-sink  unit
+                     the sums of input leaks and in-flows equals the
+                     sums of unit and output leaks and out-flows.
+\savei\end{enumerate}
+%\RSLatex
+%   &\kw{Law:}&
+%&\ref{pefl00}.&      all u:U\We\Si :- &\ipla{In\_Flow{\IS}Out\_Flow}{pefl00}&
+%&\ref{pefl00}.&          sum_in_leaks(u) &$\oplus$& sum_in_flows(u) =
+%&\ref{pefl00}.&          attr_body_Leak&$_{\mathcal{L}}$&(u) &$\oplus$& 
+%&\ref{pefl00}.&          sum_out_leaks(u) &$\oplus$& sum_out_flows(u)
+%\endRSLatex 
+\bp
+\>\ \kw{Law:}\\
+\ref{pefl00}.\ \ \ \ \ \ {\ALL} u:U{\SETMINUS}We{\SETMINUS}Si {\RDOT} \ipla{In\_Flow{\IS}Out\_Flow}{pefl00}\\
+\ref{pefl00}.\ \ \ \ \ \ \ \ \ \ sum\_in\_leaks(u) $\oplus$ sum\_in\_flows(u) {\EQ}\\
+\ref{pefl00}.\ \ \ \ \ \ \ \ \ \ attr\_body\_Leak$_{\mathcal{L}}$(u) $\oplus$ \\
+\ref{pefl00}.\ \ \ \ \ \ \ \ \ \ sum\_out\_leaks(u) $\oplus$ sum\_out\_flows(u)
+\ep
+
+\mnewfoil\LLLL
+
+%\RSLatex
+%value
+%  sum_in_leaks: U -> Flow
+%  sum_in_leaks(u) is let (iuis,) = mereo_U(u) in &$\oplus$& {attr_In_Leak&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin iuis} end
+%  sum_in_flows: U -> Flow
+%  sum_in_flows(u) is let (iuis,) = mereo_U(u) in &$\oplus$& {attr_In_Flow&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin iuis} end
+%  sum_out_leaks: U -> Flow
+%  sum_out_leaks(u) is let (,ouis) = mereo_U(u) in &$\oplus$& {attr_Out_Leak&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin ouis} end
+%  sum_out_flows: U -> Flow
+%  sum_out_flows(u) is let (,ouis) = mereo_U(u) in &$\oplus$& {attr_Out_Leak&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin ouis} end
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>sum\_in\_leaks: U {\RIGHTARROW} Flow\\
+\>sum\_in\_leaks(u) {\IS} \kw{let} (iuis,) {\EQ} mereo\_U(u) \kw{in} $\oplus$ {\LBRACE}attr\_In\_Leak$_{\mathcal{L}}$(u)(ui){\BAR}ui:UI{\RDOT}ui {\ISIN} iuis{\RBRACE} \kw{end}\\
+\>sum\_in\_flows: U {\RIGHTARROW} Flow\\
+\>sum\_in\_flows(u) {\IS} \kw{let} (iuis,) {\EQ} mereo\_U(u) \kw{in} $\oplus$ {\LBRACE}attr\_In\_Flow$_{\mathcal{L}}$(u)(ui){\BAR}ui:UI{\RDOT}ui {\ISIN} iuis{\RBRACE} \kw{end}\\
+\>sum\_out\_leaks: U {\RIGHTARROW} Flow\\
+\>sum\_out\_leaks(u) {\IS} \kw{let} (,ouis) {\EQ} mereo\_U(u) \kw{in} $\oplus$ {\LBRACE}attr\_Out\_Leak$_{\mathcal{L}}$(u)(ui){\BAR}ui:UI{\RDOT}ui {\ISIN} ouis{\RBRACE} \kw{end}\\
+\>sum\_out\_flows: U {\RIGHTARROW} Flow\\
+\>sum\_out\_flows(u) {\IS} \kw{let} (,ouis) {\EQ} mereo\_U(u) \kw{in} $\oplus$ {\LBRACE}attr\_Out\_Leak$_{\mathcal{L}}$(u)(ui){\BAR}ui:UI{\RDOT}ui {\ISIN} ouis{\RBRACE} \kw{end}
+\ep
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{pefl01} ``What flows out, flows in~!''. For $\mathcal{L}$aminar
+                     flows: for any adjacent pairs of  units
+                     the output flow at one unit connection equals the
+                     sum of adjacent unit leak and in-flow at that connection.
+\savei\end{enumerate}
+
+
+%\RSLatex
+%   &\kw{Law:}&
+%&\ref{pefl01}.&  all u,u':U:-adjacent(u,u') =>&\ipla{Out\_Flow{\IS}In\_Flow}{pefl00}&
+%&\ref{pefl01}.&      let (,ouis)=mereo_U(u), (iuis',)=mereo_U(u') in
+%&\ref{pefl01}.&      &\kw{assert:}& uid_U(u') isin ouis /\ uid_U(u) isin iuis '
+%&\ref{pefl01}.&      attr_Out_Flow&$_{\mathcal{L}}$&(u)(uid_U(u')) = 
+%&\ref{pefl01}.&      attr_In_Leak&$_{\mathcal{L}}$&(u)(uid_U(u))&$\oplus$&attr_In_Flow&$_{\mathcal{L}}$&(u')(uid_U(u)) end
+%\endRSLatex 
+\bp
+\>\ \kw{Law:}\\
+\ref{pefl01}.\ \ {\ALL} u,u{\PRIM}:U{\RDOT}adjacent(u,u{\PRIM}) {\DBLRIGHTARROW}\ipla{Out\_Flow{\IS}In\_Flow}{pefl00}\\
+\ref{pefl01}.\ \ \ \ \ \ \kw{let} (,ouis){\EQ}mereo\_U(u), (iuis{\PRIM},){\EQ}mereo\_U(u{\PRIM}) \kw{in}\\
+\ref{pefl01}.\ \ \ \ \ \ \kw{assert:} uid\_U(u{\PRIM}) {\ISIN} ouis {\WEDGE} uid\_U(u) {\ISIN} iuis {\PRIM}\\
+\ref{pefl01}.\ \ \ \ \ \ attr\_Out\_Flow$_{\mathcal{L}}$(u)(uid\_U(u{\PRIM})) {\EQ} \\
+\ref{pefl01}.\ \ \ \ \ \ attr\_In\_Leak$_{\mathcal{L}}$(u)(uid\_U(u))$\oplus$attr\_In\_Flow$_{\mathcal{L}}$(u{\PRIM})(uid\_U(u)) \kw{end}
+\ep
+
+\noindent
+\pind These ``laws'' should hold for a pipeline system without plates.
+\afslut
+
+% LocalWords:  Endurants formedness mereology cf PLS pls wf Bool obs Fo Valv UI
+% LocalWords:  uid xtr UIs isin mereo iuis ouis uius mk pu va fo jo si
+%%  LocalWords:  organised IPM nstitute hysics athematics PLSI Mer tl
+%%  LocalWords:  uis Mereologies len infset acyclic inds wsrs GoL Prg
+%%  LocalWords:  characterise WellCap aminar monitorable attr ValSta
+%%  LocalWords:  VaSta Summarising summarise FLows Curr amongst ui xz
+%%  LocalWords:  formalisations Edurants wfMereology wfRoutes mani
+%%  LocalWords:  Wellformed behaviours endurants Endurant endurant
+%%  LocalWords:  ipty mer Meripob Describability sta mon prg Visc
+%%  LocalWords:  aliphatic alicyclic naphtenes Naphtene pefl

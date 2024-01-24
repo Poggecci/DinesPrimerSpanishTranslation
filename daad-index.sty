@@ -1,0 +1,280 @@
+
+\newcommand{\cdindex}[1]{%
+      \index{defind}{#1@\textbf{\ref{#1}. #1}}}
+\newcommand{\cdindexi}[1]{%
+      \index{defind}{#1@\textbf{\ref{#1}. #1}}}
+\newcommand{\cdindexii}[2]{%
+      \index{defind}{#1 #2@\textbf{\ref{#1}. #1!#2}}
+      \index{defind}{#2, #1@\textbf{\ref{#1}. #2,!#1}}
+                                %     \index{defind}{\ref{#1}. #1!#2}
+                                %     \index{defind}{\ref{#1}. #2,!#1}
+    }
+\newcommand{\dcindex}[1]{%
+      \index{defind}{#1@\textbf{\ref{#1}. #1}}}
+\newcommand{\dcindexi}[1]{%
+      \index{defind}{#1@\textbf{\ref{#1}. #1}}}
+\newcommand{\dcindexii}[2]{%
+      \index{defind}{#1 #2@\textbf{\ref{#1}. #1!#2}}
+      \index{defind}{#2, #1@\textbf{\ref{#1}. #2,!#1}}
+                                %      \index{defind}{\ref{#1}. #1!#2}
+                                %      \index{defind}{\ref{#1}. #2,!#1}
+    }
+
+\renewcommand{\cdindex}[1]{%
+      \index{defind}{\protect{\ref{#1}}. #1}}
+\renewcommand{\cdindexi}[1]{%
+      \index{defind}{\protect{\ref{#1}}. #1}}
+\renewcommand{\cdindexii}[2]{%
+      \index{defind}{\protect{\ref{#1}}. #1 #2}
+      \index{defind}{\protect{\ref{#1}}. #2, #1}
+                                %     \index{defind}{\ref{#1}. #1!#2}
+                                %     \index{defind}{\ref{#1}. #2,!#1}
+    }
+\renewcommand{\dcindex}[1]{%
+      \index{defind}{\sort{Chapter 1 Concepts}!#1}}
+\renewcommand{\dcindexi}[1]{%
+      \index{defind}{\sort{Chapter 1 Concepts}!#1}}
+\renewcommand{\dcindexii}[2]{%
+      \index{defind}{\sort{Chapter 1 Concepts}!#1 #2}
+      \index{defind}{\sort{Chapter 1 Concepts}!#2, #1}
+                                %     \index{defind}{\ref{#1}. #1!#2}
+                                %     \index{defind}{\ref{#1}. #2,!#1}
+    }
+
+\newcounter{concepts}
+\newcounter{allconcepts}
+\renewcommand{\cdindex}[1]{\stepcounter{concepts}%
+      \index{defind}{\arabic{primerdefinition}. #1}}
+\renewcommand{\cdindexi}[1]{\stepcounter{concepts}%
+      \index{defind}{\arabic{primerdefinition}. #1}}
+\renewcommand{\cdindexii}[2]{\stepcounter{concepts}%
+      \index{defind}{\arabic{primerdefinition}. #1 #2}
+      \index{defind}{\arabic{primerdefinition}. #2, #1}
+    }
+    
+\renewcommand{\cdindex}[1]{\stepcounter{concepts}%
+      \index{defind}{\sort{Chapter 1 Concepts}!#1}}
+\renewcommand{\cdindexi}[1]{\stepcounter{concepts}%
+      \index{defind}{\sort{Chapter 1 Concepts}!#1}}
+\renewcommand{\cdindexii}[2]{\stepcounter{concepts}%
+      \index{defind}{\sort{Chapter 1 Concepts}!#1 #2}
+      \index{defind}{\sort{Chapter 1 Concepts}!#2, #1}
+    }
+
+\newcommand{\pideaphindex}[2]{\sfsl{#1}\phindextermi{iiii@\textbf{Ideas:}!#1,
+  #2}}
+\newcommand{\pideaphindexi}[1]{\sfsl{#1}\phindextermi{iiii@\textbf{Ideas:}!#1}}
+\newcommand{\pideaphindexii}[2]{\sfsl{#1 #2}\phindextermi{iiii@\textbf{Ideas:}!#1!#2}}
+\newcommand{\ideaphindexi}[1]{\phindextermi{iiii@\textbf{Ideas:}!#1}}
+\newcommand{\ideaphindexii}[2]{\phindextermi{iiii@\textbf{Ideas:}!#1, #2}}
+\newcommand{\ideaphindexiii}[2]{\phindextermi{iiii@\textbf{Ideas:}!#1!#2}}
+\newcommand{\psubsphindex}[2]{\sfsl{#1}\phindextermi{ssss@\textbf{Substance:}!#1,
+  #2}} 
+\newcommand{\pphilphindex}[2]{\sfsl{#1}\nextfilo\phindextermi{aaa@\textbf{Philosophers:}!#1,
+  #2}}
+
+\newcommand{\phitoc}[1]{\bmcolor{#1}\philphindex{#1}%
+\addtocounter{subsubsection}{1}% 
+\addcontentsline{toc}{subsubsection}{\thesubsubsection\ \ \, \bmcolor{#1}}}
+
+\newcommand{\nbbtoc}[1]{\mnewfoil\bmcolor{#1}\philphindex{#1}%
+\addtocounter{subsubsection}{1}% 
+\addcontentsline{toc}{subsubsection}{\thesubsubsection\ \bmcolor{#1}}}
+
+\newcommand{\bbtoc}[1]{\bmcolor{#1}\philphindex{#1}%
+\addtocounter{subsubsection}{1}% 
+\addcontentsline{toc}{subsubsection}{\thesubsubsection\ \bmcolor{#1}}}
+
+\newcommand{\dbsmall}{\small}
+\newcommand{\dbfootnotesize}{\footnotesize}
+
+\newcommand{\atindex}[1]{\index{attr}{#1}}
+\newcommand{\apindex}[1]{\index{doan}{#1}}
+\newcommand{\afindex}[1]{\index{doaf}{#1}}
+
+\newcommand{\cindex}[1]{\index{cind}{#1}}
+\newcommand{\dindex}[1]{}
+\newcommand{\eindex}[1]{\index{eind}{#1}}
+\newcommand{\hindex}[1]{\index{hind}{#1}}
+\newcommand{\sindex}[1]{\index{sind}{#1}}
+\newcommand{\ttindex}[1]{\index{tind}{#1}} 
+\newcommand{\phindex}[1]{\index{phind}{#1}}
+
+\newcommand{\filo}[1]{\pos{\footnote{{\sc philosophical note:} #1}}{}}
+
+\usepackage{wrapfig}
+
+\newcommand{\inpaperproper}[2]{#1}
+
+\newcommand{\moindex}[2]{\index{find}{Meta Functions Definitions:!#1
+    $\iota$\ref{#2}}} 
+
+\newcommand{\fcindex}[2]{\index{find}{Perdurant Channnels!#1 $\iota$\ref{#2}}}
+\newcommand{\findex}[2]{\index{find}{#1 $\iota$\ref{#2}}}
+\newcommand{\fwffindex}[2]{\index{find}{Wellformedness!wf\_#1 $\iota$\ref{#2}}}
+\newcommand{\fxindex}[2]{\index{find}{Endurant Extraction
+    Functions!xtr\_#1 $\iota$\ref{#2}}} 
+\newcommand{\fcvindex}[2]{\index{find}{Concept!Values!#1 $\iota$\ref{#2}}}
+\newcommand{\fctindex}[2]{\index{find}{Concept!Types!#1 $\iota$\ref{#2}}}
+\newcommand{\fcfindex}[2]{\index{find}{Concept!Functions!#1 $\iota$\ref{#2}}}
+\newcommand{\fptindex}[2]{\index{find}{Endurant Part!Types!#1 $\iota$\ref{#2}}}
+\newcommand{\fptaindex}[2]{\index{find}{Endurant Part!Type Axioms!#1
+    $\iota$\ref{#2}}} 
+\newcommand{\fpvindex}[2]{\index{find}{Endurant Part!Values!#1 $\iota$\ref{#2}}}
+\newcommand{\fpafindex}[2]{\index{find}{Endurant Part!Auxiliary
+    Functions!#1 $\iota$\ref{#2}}} 
+\newcommand{\fpuidtindex}[2]{\index{find}{Endurant Part!Unique
+    Identifier Types!#1 $\iota$\ref{#2}}} 
+\newcommand{\fpuidoindex}[2]{\index{find}{Endurant Part!Unique
+    Identifier Observer!\protect{\uidmo}#1 $\iota$\ref{#2}}} 
+\newcommand{\fmereoindex}[2]{\index{find}{Endurant Part!Mereology
+    Observers!\protect{\mereomo}#1 $\iota$\ref{#2}}} 
+\newcommand{\fmereoaindex}[2]{\index{find}{Endurant Part!Mereology
+    Axioms!#1 $\iota$\ref{#2}}} 
+\newcommand{\fpatindex}[2]{\index{find}{Endurant Part!Attribute
+    Types!#1 $\iota$\ref{#2}}} 
+\newcommand{\fpataindex}[2]{\index{find}{Endurant Part!Attribute Type
+    Axioms!#1 $\iota$\ref{#2}}} 
+\newcommand{\fpaoindex}[2]{\index{find}{Endurant Part!Attribute
+    Observer!\protect{\attrmo}#1 $\iota$\ref{#2}}} 
+\newcommand{\faindex}[2]{\index{find}{Perdurant Functions!Actions!#1
+    $\iota$\ref{#2}}} 
+\newcommand{\feindex}[2]{\index{find}{Perdurant Functions!Events!#1
+    $\iota$\ref{#2}}} 
+\newcommand{\fbindex}[2]{\index{find}{Perdurant
+    Functions!Behaviours!#1 $\iota$\ref{#2}}} 
+\newcommand{\fmatindex}[2]{\index{find}{Endurant Material Type!#1 $\iota$\ref{#2}}}
+\newcommand{\ffindex}[2]{\index{find}{Functions!#1 $\iota$\ref{#2}}}
+\newcommand{\fafindex}[2]{\index{find}{Functions!Auxiliary!#1 $\iota$\ref{#2}}}
+\newcommand{\fdindex}[2]{\index{find}{Domain!#1 $\iota$\ref{#2}}}
+\newcommand{\foindex}[2]{\index{find}{Endurant
+    Part!Observers!\protect{\obsmo}#1 $\iota$\ref{#2}}} 
+
+\newcommand{\saindex}[1]{\sindex{\textbf{Arithmetics}!#1}}
+\newcommand{\scindex}[1]{\sindex{\textbf{Cartesians}!#1}}
+\newcommand{\svindex}[1]{\sindex{\textbf{Chaos}!#1}}
+\newcommand{\seindex}[1]{\sindex{\textbf{Clauses}!#1}}
+\newcommand{\skindex}[1]{\sindex{\textbf{Combinators}!#1}}
+\newcommand{\sfindex}[1]{\sindex{\textbf{Functions}!#1}}
+\newcommand{\siindex}[1]{\sindex{\textbf{Imperative}!#1}}
+\newcommand{\sqindex}[1]{\sindex{\textbf{Lists}!#1}}
+\newcommand{\slindex}[1]{\sindex{\textbf{Logics}!#1}}
+\newcommand{\smindex}[1]{\sindex{\textbf{Maps}!#1}}
+\newcommand{\spindex}[1]{\sindex{\textbf{Processes}!#1}}
+\newcommand{\ssindex}[1]{\sindex{\textbf{Sets}!#1}}
+\newcommand{\stindex}[1]{\sindex{\textbf{Types}!#1}}
+
+\newcommand{\dindexii}[2]{\index{dind}{#1!#2}}
+\newcommand{\dindexiii}[3]{\index{dind}{#1!#2!#3}}
+
+\newcommand{\pdindexi}[1]{\bmcolor{\sfsl{#1}}\dindextermi{#1}}
+\newcommand{\pdindexii}[2]{\bmcolor{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pdindexiii}[3]{\bmcolor{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+
+\newcommand{\pdindextermi}[1]{{\sfsl{#1}}\dindextermi{#1}}
+\newcommand{\pdindextermii}[2]{{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pdindextermiii}[3]{{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+
+\newcommand{\pdindextermiix}[2]{{\sfsl{#1 #2}}\dindextermii{#1}{#2}}
+\newcommand{\pdindextermiiix}[3]{{\sfsl{#1 #2 #3}}\dindextermiii{#1}{#2}{#3}}
+
+\newcommand{\pcindextermi}[1]{\sfsl{#1}\cindextermi{#1}}
+\newcommand{\pcindextermii}[2]{\sfsl{#1 #2}\cindextermii{#1}{#2}} 
+\newcommand{\pcindextermiii}[3]{\sfsl{#1 #2 #3}\cindextermiii{#1}{#2}{#3}}
+
+\newcommand{\pcindextermiiix}[3]{\sfsl{#1 #2 #3}\cindextermiii{#1}{#2}{#3}}
+\newcommand{\pcindextermiix}[3]{\sfsl{#1 #2}\cindextermiii{#1}{#2}{#3}}
+
+\newcommand{\fcindextermi}[1]{\phindextermi{#1}}
+\newcommand{\fcindextermii}[2]{\phindextermii{#1}{#2}} 
+\newcommand{\fcindextermiii}[3]{\phindextermiii{#1}{#2}{#3}}
+
+\newcommand{\ideaphindex}[1]{\phindextermi{iiii@\textbf{Ideas:}!#1}}
+\newcommand{\subsphindex}[1]{\phindextermi{ssss@\textbf{Substance:}!#1}} 
+\newcommand{\philphindex}[1]{\nextfilo\phindextermi{aaa@\textbf{Philosophers:}!#1}}
+
+\newcounter{filosofnummer}
+\newcommand{\nextfilo}{\stepcounter{filosofnummer}}
+
+\newcommand{\fpcindextermi}[1]{\sfsl{#1}\phindextermi{#1}}
+\newcommand{\fpcindextermii}[2]{\sfsl{#1 #2}\phindextermii{#1}{#2}} 
+\newcommand{\fpcindextermiii}[3]{\sfsl{#1 #2 #3}\phindextermiii{#1}{#2}{#3}}
+
+\newcommand{\fpdindextermi}[1]{\sfsl{#1}\phindextermi{#1}}
+\newcommand{\fpdindextermii}[2]{\sfsl{#1 #2}\phindextermii{#1}{#2}} 
+\newcommand{\fpdindextermiii}[3]{\sfsl{#1 #2 #3}\phindextermiii{#1}{#2}{#3}}
+
+\newcommand{\phindextermi}[1]{% 
+    \phindex{#1}%
+}
+\newcommand{\phindextermii}[2]{%
+    \phindex{#1!#2}%
+\dbeat{    \phindex{#2!#1}}%
+}
+\newcommand{\phindextermiii}[3]{%
+    \phindex{#1!#2!#3}%
+\dbeat{    \phindex{#1!#3!#2}%
+    \phindex{#2!#1!#3}%
+    \phindex{#2!#3!#1}%
+    \phindex{#3!#1!#2}%
+    \phindex{#3!#2!#1}}%
+} 
+\newcommand{\indextermi}[1]{%
+  \cindex{#1}}
+
+\newcommand{\indextermii}[2]{%
+    \cindex{#1!#2}%
+\dbeat{    \cindex{#2!#1}}%
+}
+\newcommand{\indextermiii}[3]{%
+    \cindex{#1!#2!#3}%
+\dbeat{    \cindex{#1!#3!#2}%
+    \cindex{#2!#1!#3}%
+    \cindex{#2!#3!#1}%
+    \cindex{#3!#1!#2}%
+    \cindex{#3!#2!#1}}%
+} 
+
+\newcommand{\cindextermi}[1]{%
+    \cindex{#1}}
+\newcommand{\cindextermii}[2]{%
+    \cindex{#1!#2}%
+\dbeat{    \cindex{#2!#1}}%
+}
+\newcommand{\cindextermiii}[3]{%
+    \cindex{#1!#2!#3}%
+\dbeat{    \cindex{#1!#3!#2}%
+    \cindex{#2!#1!#3}%
+    \cindex{#2!#3!#1}%
+    \cindex{#3!#1!#2}%
+    \cindex{#3!#2!#1}}%
+} 
+
+\newcommand{\dindextermi}[1]{%
+    \dindex{#1}}
+
+\newcommand{\dindextermii}[2]{%
+    \dindex{#1!#2}%
+\dbeat{    \dindex{#2!#1}}%
+}
+
+\newcommand{\dindextermiii}[3]{%
+    \dindex{#1!#2!#3}%
+\dbeat{    \dindex{#1!#3!#2}%
+    \dindex{#2!#1!#3}%
+    \dindex{#2!#3!#1}%
+    \dindex{#3!#1!#2}%
+    \dindex{#3!#2!#1}}%
+    \cindex{#1!#2!#3}%
+\dbeat{    \cindex{#1!#3!#2}%
+    \cindex{#2!#1!#3}%
+    \cindex{#2!#3!#1}%
+    \cindex{#3!#1!#2}%
+    \cindex{#3!#2!#1}}%
+} 
+
+
+\renewcommand{\eindex}[1]{\index{eind}{#1}}
+  \newcommand{\eindexi}[1]{\index{eind}{#1}}
+  \newcommand{\eindexii}[2]{\index{eind}{#1!#2}}
+  \newcommand{\eindexiii}[3]{\index{eind}{#1!#2!#3}}

@@ -1,0 +1,122 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: dommod.aux
+A level-1 auxiliary file: primer-forsider.aux
+A level-1 auxiliary file: primer-intro.aux
+A level-1 auxiliary file: primer-filosofi.aux
+A level-1 auxiliary file: primer-domains.aux
+A level-1 auxiliary file: primer-extq.aux
+A level-1 auxiliary file: primer-intq.aux
+A level-1 auxiliary file: primer-perd.aux
+A level-1 auxiliary file: primer-closing.aux
+A level-1 auxiliary file: primer-bib.aux
+The style file: plain.bst
+Reallocated bib_list (elt_size=4) to 40 items from 20.
+Reallocated bib_file (elt_size=8) to 40 items from 20.
+Reallocated s_preamble (elt_size=4) to 40 items from 20.
+Reallocated bib_list (elt_size=4) to 60 items from 40.
+Reallocated bib_file (elt_size=8) to 60 items from 40.
+Reallocated s_preamble (elt_size=4) to 60 items from 40.
+A level-1 auxiliary file: primer-road.aux
+A level-1 auxiliary file: app-pipeline.aux
+A level-1 auxiliary file: primer-rsl.aux
+A level-1 auxiliary file: primer-indexes.aux
+Database file #1: bib/strings.bib
+Database file #2: bib/ada.bib
+Database file #3: bib/alle.bib
+Database file #4: bib/allrail.bib
+Database file #5: bib/annals.bib
+Database file #6: bib/arch.bib
+Database file #7: bib/asm.bib
+Database file #8: bib/asger-specification.bib
+Database file #9: bib/asger-philosophy.bib
+Database file #10: bib/b-method.bib
+Database file #11: bib/bib.bib
+Database file #12: bib/dsae.bib
+Database file #13: bib/cofi.bib
+Database file #14: bib/concept.bib
+Database file #15: bib/darcsa.bib
+Database file #16: bib/dcia.bib
+Database file #17: bib/ddc.bib
+Database file #18: bib/des.bib
+Database file #19: bib/art-dines.bib
+Database file #20: bib/book-dines.bib
+Database file #21: bib/rept-dines.bib
+Database file #22: bib/adm-dines.bib
+Database file #23: bib/notes-dines.bib
+Database file #24: bib/ckm.bib
+Database file #25: bib/dines99.bib
+Database file #26: bib/domain.bib
+Database file #27: bib/doreso.bib
+Database file #28: bib/filosofi.bib
+Database file #29: bib/chriswgeorge.bib
+Database file #30: bib/havelund.bib
+Database file #31: bib/HaxthausenReferences.bib
+Database file #32: bib/heraklit.bib
+Database file #33: bib/icse.bib
+Database file #34: bib/internet.bib
+Database file #35: bib/jackson.bib
+Database file #36: bib/klaus.bib
+Database file #37: bib/ks.bib
+Database file #38: bib/languages.bib
+Database file #39: bib/larch.bib
+Database file #40: bib/ll.bib
+Database file #41: bib/logics.bib
+Database file #42: bib/method.bib
+Database file #43: bib/nikolaj.bib
+Database file #44: bib/1999.bib
+Database file #45: bib/ontology.bib
+Database file #46: bib/pe.bib
+Database file #47: bib/pipelines.bib
+Database file #48: bib/raisepap.bib
+Database file #49: bib/s2000.bib
+Database file #50: bib/s2000-1.bib
+Database file #51: bib/swarms.bib
+Database file #52: bib/seeduc.bib
+Database file #53: bib/train.bib
+Database file #54: bib/tlt.bib
+Database file #55: bib/unuiist.bib
+Database file #56: bib/vdm.bib
+Database file #57: bib/vdmfme.bib
+Database file #58: bib/zall.bib
+You've used 167 entries,
+            2118 wiz_defined-function locations,
+            2175 strings with 50585 characters,
+and the built_in function-call counts, 43339 in all, are:
+= -- 4225
+> -- 1726
+< -- 31
++ -- 700
+- -- 530
+* -- 2338
+:= -- 7646
+add.period$ -- 585
+call.type$ -- 167
+change.case$ -- 678
+chr.to.int$ -- 0
+cite$ -- 167
+duplicate$ -- 2023
+empty$ -- 3761
+format.name$ -- 530
+if$ -- 9191
+int.to.chr$ -- 0
+int.to.str$ -- 167
+missing$ -- 224
+newline$ -- 886
+num.names$ -- 354
+pop$ -- 988
+preamble$ -- 2
+purify$ -- 594
+quote$ -- 0
+skip$ -- 1129
+stack$ -- 0
+substring$ -- 1413
+swap$ -- 267
+text.length$ -- 31
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 471
+warning$ -- 0
+while$ -- 393
+width$ -- 170
+write$ -- 1952

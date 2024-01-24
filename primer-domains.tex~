@@ -1,0 +1,822 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Released for translation 20 April 2023  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbbbb{\HHHH Domains}\label{chapter:Domains}\label{chap2.tex.Preview}
+\pos{\minitoc}{}
+\pos{\label{lect1:label1}}{}
+
+\pos{
+\noindent
+\begynd
+\pind This \pos{chapter}{section} is informal.
+\pind Here we introduce You to  important  concepts of domains.
+\pind Subsequent  \pos{chapter}{section}s will be more technical.
+\begynd
+\pind They will define most of the domain concepts of this
+      \pos{chapter}{section} properly.
+\afslut
+\afslut
+}{}
+
+\bbbbb{Domain Definition}\HHHH
+
+\pos{We repeat the definition of the concept of domains as first given on
+Page\,\pageref{1stdd}.}{}
+
+\bookdefn{Domain}{ \domaindefinition}
+
+\pos{%
+\noindent
+\ysf{We exclude from our treatment of domains issues of biological and
+psychological matters.}}{}
+
+\mnewfoil
+
+\monoexample{Domains}{A few, more-or-less self-explanatory examples:
+\begin{itemize}
+\item \bbcolor{Rivers --} with their natural sources, deltas, tributaries,
+  waterfalls, etc., and their man-made dams, harbours, locks, etc. --
+  and their conveyage of materials (ships etc.) \cite{BjornerRiversCanals2021};
+\item \bbcolor{Road nets --} with street segments and intersections, traffic
+  lights and automobiles -- and the flow of these;
+\item \bbcolor{Pipelines --} with their wells, pipes, valves, pumps, forks,
+  joins and wells and the flow of fluids \cite{2013pipe}; and
+\item \bbcolor{Container terminals --} with their container vessels, containers,
+  cranes, trucks, etc. -- and the movement of all of these \cite{BjornerContainer2018}\dbsquare
+\end{itemize}}
+
+\noindent
+\mnewfoil%\LLLL
+\begynd
+\pind The definition relies on the understanding of the terms \nyl
+\pos{}{\vspace*{-10mm}\begin{multicols}{2}}
+      \sfsl{`rationally describable'}, \nyl \sfsl{`discrete dynamics'}, \nyl \sfsl{`human
+      assisted'}, \nyl \sfsl{`solid'} and \nyl \sfsl{`fluid'}.
+\pos{}{\end{multicols}}
+ The last two will be explained later.
+\pind By \bbcolor{\sfsl{rationally describable}} we mean that what is described \nyl
+      can be understood, including reasoned about, in a rational, \nyl  that is,
+      logical manner -- \ysf{in other words  \bbcolor{\sfsl{logically tractable}}.}
+\pind By \bbcolor{\sfsl{discrete dynamics}} we imply that we shall basically
+      rule out such domain phenomena which have
+      properties \ysfchg{that } are continuous with
+      respect to their time-wise\pos{, i.e., dynamic,}{} behaviour.
+\pind By \bbcolor{\sfsl{human-assisted}} we mean that the domains -- that we are
+      interested in modelling -- have, as an important property, that
+      they possess man-made entities.
+\afslut
+
+\pos{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begynd
+\pind This primer presents a \sfsl{method}\pconindex{method}, its
+      \sfsl{principles}\pconindex{principle}, 
+      \sfsl{procedures}\pconindex{procedure}, 
+      \sfsl{techniques}\pconindex{technique} 
+      and 
+      \sfsl{tools}\pconindex{tool}, 
+      for \sfsl{analysing} \&\footnote{We use here the ampersand, `\&',
+      as in $A\&B$, to emphasize that we are treating $A$ and $B$ as
+      one concept.} \sfsl{describing} domains.
+\afslut
+}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbbb{Phenomena and Entities}\HHHH
+
+\begynd
+\pind \primerdefn{Phenomena}{ {\pdefindex{phenomenon} By a
+\sfsl{phenomenon} we shall understand a fact that is
+     observed to exist or happen\dbsquare}}
+
+\noindent
+\begynd
+\pind Some phenomena are rationally describable -- to a large or full
+degree -- others are not.
+\afslut
+
+\noindent
+\pind \primerdefn{Entities}{ By an entity \pdefindex{entity} \ysfchg{}
+      we shall understand a more-or-less rationally describable phenomenon\dbsquare}
+
+\noindent
+\pind \newestxample{Phenomena and Entities}{Some, but not necessarily
+  all aspects of a river can
+  be rationally described, hence can be still be considered
+  entities. Similarly, many aspects of a
+  road net can be rationally described, hence will be considered entities\dbsquare}
+\afslut
+
+\nbbbbb{Endurants and Perdurants}
+
+\bbbb{Endurants}
+
+\begynd
+%%%%%%%
+\pind \bookdefn{Endurants}{ Endurants are \pdefindex{endurant}\ 
+      those quantities of domains that we can
+      observe (see and touch), in \sfsl{space}, as ``complete'' entities at no matter
+      which point in \sfsl{time} -- ``material'' entities that
+      persist\ysfchg{}, endure\ysfchg{}\dbsquare}%%%%
+      
+\noindent
+\monoexample{Endurants}{ Examples of endurants are: a street segment [link], a street intersection [hub], an
+      automobile\dbsquare}
+      
+\noindent
+\pind Domain endurants, when eventually modelled in software, typically
+      become data. Hence the careful analysis of domain endurants is a
+      prerequisite for subsequent careful conception and analyses of
+      data structures for software, including data bases.
+\afslut
+%%%%%%%
+    
+\nbbbb{Perdurants}
+
+\begynd
+\pind \newestpdefn{Perdurants}{ Perdurants are \pdefindex{perdurant}\   
+      those quantities of domains for which only a
+      fragment exists, in \sfsl{space}, if we look at or touch them at
+      any given snapshot in
+      \sfsl{time}\dbsquare}%%%%
+      
+\noindent
+\newestxample{Perdurant}{ A moving automobile is an example of a perdurant\dbsquare}
+        
+\noindent
+\pind Domain perdurants, when eventually modelled in software, typically
+      become processes. Hence the careful analysis of domain perdurants is a
+      prerequisite for subsequent careful conception and analyses of
+      functions (procedures).
+\afslut
+%%%%%%%
+    
+\nbbbbb{External and Internal Endurant Qualities}
+
+\bbbb{External Qualities}
+
+\newestpdefn{External Qualities}{ \pdefindex{external quality}\
+     External qualities of endurants of a manifest domain 
+\begynd
+\pind are, in a simplifying sense, those we can
+\begynd
+\pind \ysf{see,}
+\pind touch and
+\pind have spatial extent.
+\afslut
+\pind They, so to speak, take form.
+\afslut}
+
+\mnewfoil
+
+\noindent
+\newestxample{External Qualities}{ An example of external qualities of
+  a domain\ysfchg{ } is:
+\begynd
+\pind the Cartesian\footnote{\LLLL Cartesian
+      after the French philosopher, mathematician, scientist Ren{\'e}
+      Descartes (1596--1650)} 
+\begynd
+\pind of sets of solid atomic street intersections, and
+\pind of sets  of solid atomic street segments, and 
+\pind of sets  of solid automobiles
+\afslut of a road transport system
+\pind  where the
+\pos{}{\begin{multicols}{4}}   
+\begynd
+\pind Cartesian, \pind sets, 
+      \pind atomic, and \pind solid
+\afslut
+\pos{}{\end{multicols}} reflect external qualities\dbsquare
+\afslut}
+%%%%%%%
+    
+\nbbb{Discrete or Solid Endurants}
+
+\newestpdefn{Discrete or Solid
+      Endurants}{ \pdefindex{discrete!endurant}\pdefindex{endurant!discrete}%%%% 
+      \pdefindex{solid!endurant}\pdefindex{endurant!solid} By a
+      \sfsl{solid} \nyl [or \sfsl{discrete}] endurant we shall understand an endurant
+\begynd
+\pind which is  separate,  individual or distinct in form or concept,
+\pind or, rephrasing: have `body'  [or magnitude]
+      of three-dimensions: length, breadth and depth
+      \cite[Vol.\,II, pg.\,2046]{OED}\dbsquare
+\afslut}
+
+\noindent
+%\mnewfoil
+\newestxample{Solid Endurants}{ Examples of sol\ysfchg{i}d endurants are
+\begynd
+\pind the
+\pos{}{\begin{multicols}{4}}
+\begynd
+\pind wells, 
+\pind pipes,
+\pind valves,
+\pind pumps, 
+\pind forks, 
+\pind joins and 
+\pind sinks
+\afslut
+\pos{}{\end{multicols}} of pipelines\ysfchg{}. 
+\pind{} [These
+  units may, however, and usually will, contain fluids, e.g., oil, gas
+  or water]\dbsquare
+\afslut}
+\mnewfoil
+
+\noindent
+\begynd
+\pind We shall mostly be analysing and describing solid endurants.
+
+\pind As we shall see, in the next \pos{chapter}{section},
+\begynd
+\pind we analyse and describe solid endurants as
+\pind  either parts 
+\pind or living species: animals and humans.
+\afslut
+\pind We shall mostly be concerned with parts.
+\begynd
+\pind That is, we shall just, as: ``in passing'', 
+\pind for \ysfchg{the } sake of completeness,
+\pind mention living species\,!
+\afslut
+\afslut
+%%%%%%%
+    
+\nbbb{Fluids}
+
+\begynd
+\pind \newestpdefn{Fluid
+  Endurants}{ \pdefindex{fluid!endurant}\pdefindex{endurant!fluid}\ 
+\begynd
+\pind By a \sfsl{fluid endurant} we shall understand  an endurant \nyl which is 
+\begynd
+\pind prolonged, without interruption, \nyl in an unbroken series or pattern;
+\pind or, rephrasing:  a substance (liquid,
+  gas or plasma) having the property of flowing, consisting of
+  particles that move  among themselves \cite[Vol.\,I, pg.\,774]{OED} \dbsquare
+\afslut
+\afslut}
+%%%%%%%
+\afslut
+
+\noindent
+\newestxample{Fluid Endurants}{ Examples of fluid endurants are:
+  \pos{}{\begin{multicols}{3}}
+\begynd
+\pind water, \pind oil, \pind gas,
+  \pind compressed air, \pind smoke\dbsquare
+  \afslut
+\pos{}{\end{multicols}}}
+
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind Fluids are otherwise
+\begynd
+\pind liquid, or
+\pind gaseous, or
+\pind plasmatic, or
+\pind granular\footnote{\label{fn.granular} This is a purely
+  pragmatic decision. ``Of course'' sand, gravel, soil, etc., are not
+  fluids, but for our modelling purposes it is convenient to
+  ``compartmentalise'' them as fluids\,!}, or
+\pind plant products, i.e., chopped sugar cane, threshed, or
+otherwise\footnote{See footnote \vref{fn.granular}.},
+\pind et cetera.
+\afslut
+\pind Fluid endurants will be analysed and described \nyl in relation to
+      solid endurants, viz.\ their ``containers''.
+\afslut
+
+\nbbb{Parts}
+  
+\begynd
+\pind \newestpdefn{Parts}{ \pdefindex{parts}\
+\begynd
+\pind The non-living species solids are what we shall call parts\dbsquare
+\afslut}
+
+\noindent
+\pind Parts are the ``work-horses'' of man-made domains.
+\pind That is, we shall mostly be concerned  \nyl with the analysis and
+      description of endurants into parts.
+\afslut
+%%%%%%%
+
+\noindent
+\newestxample{Parts}{ The previous example of solids
+  was also an example of parts\dbsquare}
+
+\noindent
+\begynd
+\pind We distinguish between atomic and compound parts.
+\afslut
+
+\nbb{Atomic Parts}
+  
+\bookdefn{Atomic Part, I}{ \label{pd-atomic-parts}
+\begynd
+\pind By an \sfsl{atomic part} we shall understand a part
+\begynd
+\pind which the domain analyser considers to be indivisible
+\pind in the sense of not meaningfully \ysfchg{divisible},
+\pind for the purposes of the domain under consideration,
+\pind that is, to not meaningfully consist of sub-parts\eod
+\afslut
+\afslut
+}
+
+\monoexample{Atomic Parts}{ Examples of atomic parts are:
+\begynd
+\pind a hub, i.e., a street intersection;
+\pind a link, i.e., the stretch of road between two neighbouring hubs; and
+\pind an automobile \dbsquare
+\afslut}
+
+\nbb{Compound Parts}
+  
+\begynd
+\pind We, pragmatically, distinguish between
+\begynd
+\pind Cartesian-product-, and 
+\pind set-
+\afslut oriented parts.
+\pind If Cartesian-oriented, to consist of two or more
+      distinctly sort-named endurants (solids or fluids)\ysfchg{. }
+\pind If set-oriented, to consist of an indefinite number of  \nyl zero,
+      one or more parts.
+\afslut
+
+\bookdefn{Compound Part, I}{ %
+\begynd
+\pind \pdindextermii{Compound}{part}s are those which are
+\begynd
+\pind either \ysf{Cartesian-}
+\pind or are set-
+\afslut
+\pind oriented parts  \eod
+\afslut
+}
+
+\monoexample{Compound Parts}{ An example of \ysfchg{} compound parts
+  is: 
+\begynd
+\pind \ysfchg{(i) } a road net consisting of a set of hubs,
+  i.e., street intersections or ``end-of-streets'',  and
+\pind  \ysfchg{(ii) } a set of
+  links, i.e., street segments (with no contained hubs),
+\afslut
+ is a Cartesian compound\ysfchg{. }
+\begynd
+\pind  \ysfchg{(iii) } \ysfchg{Each set } of hubs and \ysfchg{each set } of links
+\afslut are part set compounds\dbsquare}
+
+\nbbbb{An Aside: An Upper Ontology}\label{An Upper Ontology}
+
+\begynd
+\pind We have been reasonably careful
+\begynd  
+\pind to just introduce and state
+      informal definitions 
+\pind of phenomena and some classes thereof.
+\afslut
+\pind In the next chapter we shall, in a sense, ``repeat'' coverage of
+      these phenomena.
+\begynd
+\pind But \ysf{then} in a more analytic manner.
+\pind Figure\,\vref{onto.fig0} is intended to indicate this.
+\afslut
+\afslut
+
+\mnewfoil
+
+\noindent
+\hDBfigure{onto}{\pos{10.5}{11.7}cm}{{An} Upper Ontology}{onto.fig0}
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind So far we have only touched upon 
+\begynd
+\pind the `External Qualities' labeled, dotted-dashed box 
+\pind of the `Endurants'-labeled dashed box of Fig.\,\ref{onto.fig0}.
+\afslut
+\pind In Chapter \ref{primer-extq.1} we shall treat external qualities
+      in more depth ---
+\begynd
+\pind more systematically: analytically and descriptionally.
+\afslut
+\afslut
+
+
+\nbbbb{Internal Qualities}
+     
+\newestpdefn{Internal Qualities}{ Internal qualities are \pdefindex{internal quality}
+\begynd
+\pind those properties [of endurants]
+\pind that do not occupy \sfsl{space}
+\pind but can be measured or spoken about\dbsquare
+\afslut}%%%%
+      
+\newestxample{Internal qualities}{ Examples of internal qualities are %%%%
+\begynd
+\pind the unique identity of a part, 
+\pind the relation of \ysfchg{a } part to other
+      parts, and 
+\pind the endurant attributes such as temperature, length, colour\dbsquare
+\afslut} 
+
+  
+\nbbb{Unique identity}
+    
+\begynd
+\pind \newestpdefn{Unique Identity}{ A unique identity is \pdefindexii{unique}{identity}\  
+\begynd
+\pind an immaterial property
+\pind that distinguishes any two \sfsl{spatially}
+      distinct solids\dbsquare
+\afslut}
+\afslut
+
+\newestxample{Unique Identities}{ Each 
+\begynd
+\pind hub in a road net is unique\ysf{ly} identified, 
+\pind so is each link  
+\pind and \ysfchg{each } automobile\dbsquare
+\afslut}
+%%%%%%%
+
+\nbbb{Mereology}
+\begynd 
+\pind \newestpdefn{Mereology, I}{ Mereology is \pdefindex{mereology}\  
+      a theory of [endurant] part-hood relations: 
+\begynd 
+\pind of the relations of an [endurant]
+      part\ysfchg{ } to a whole 
+\pind and the
+      relations of [endurant] parts to [endurant] parts within that
+      whole\dbsquare
+\afslut}%%%%
+\afslut
+      
+\newestxample{Mereology}{ Examples of mereologies are %%%%
+\begynd 
+\pind that a link is topologically \sl connected \rm to \nyl
+      exactly two specific hubs, 
+\pind that \ysfchg{a hub is } \sl connected \rm to \nyl zero, one or
+      more specific links, 
+\pind and that links and hubs are   \sl  open  \rm to \nyl
+      specific subsets of automobiles\dbsquare
+\afslut}
+%%%%%%%
+
+\nbbb{Attribute}
+\newestpdefn{Attributes}{ Attributes are \pdefindex{attribute}\
+      properties of  endurants
+\begynd 
+\pind that are not \sfsl{spatially} observable, 
+\pind but can be either
+      physically 
+\pind (electronically, chemically, or otherwise) 
+\pind measured or can
+      be objectively spoken about\dbsquare
+\afslut}%%%%
+      
+\newestxample{Attributes}{ Examples of attributes are: 
+\begynd 
+\pind links \ysfchg{ } have lengths, and, 
+\pind that at any one time,
+\pind zero, one or more automobiles are occupying \ysfchg{each
+link}\ysf{\footnote{Oh yes, it is, of course, spatially observable
+    that a link has a length, but the measurement, say \sfsl{123
+      meters} is not; and the number of cars on the link is also not
+    spatially observable.}}\dbsquare
+\afslut}
+%%%%%%%
+\label{pre-primer.Prompts}
+\nbbbbb{Prompts}\label{primer.Prompts}
+
+\bbbb{Analysis Prompts}
+
+\begynd 
+\pind \newestpdefn{Analysis Prompt}{ An analysis prompt is \pdefindex{analysis!prompt}\
+\begynd 
+\pind a predicate or a function 
+\pind that may be posed by humans to \ysf{segments}
+      of a domain. 
+\pind Observing the domain the analyser  may then
+\pind act upon the combination of the particular prompt  
+\pind (whether a
+      predicate or a function, \nyl and then what particular one of these
+      it is) 
+\pind  thus ``applying'' it to a domain phenomen\ysfchg{on}, 
+\pind  and yielding, in the
+      minds of the humans, 
+\pind  either a truth value or some other form of value\dbsquare
+\afslut}
+\afslut
+      
+\nbbb{Analysis Predicate}
+\begynd
+\pind \newestpdefn{Analysis predicates}{ \pdefindex{analysis!predicate}\ 
+\begynd
+\pind An analysis predicate is an analysis prompt
+\pind which yields a truth value\dbsquare
+\afslut}
+\afslut
+      
+\newestxample{Analysis Predicates}{ General examples of analysis
+  predicates are:
+\begynd
+\pind \sfsl{``can an observable phenomen\ysfchg{on }be rationally described''}, \nyl i.e., an entity, 
+\pind \sfsl{``is an entity a solid or a fluid''},
+\pind \sfsl{``is a solid endurant a part or a living species''}\dbsquare
+\afslut}
+%%%%%%%
+    
+\nbbb{Analysis Function}
+
+\newestpdefn{Analysis function}{ An analysis function is \pdefindex{analysis!function}%%%
+\begynd
+\pind an analysis prompt which yields some \texttt{\rsltxt}\dbsquare
+\afslut} 
+      
+\newestxample{Analysis Functions}{ Two examples of analysis functions are:
+\begynd
+\pind one yields the endurants of a Cartesian part \nyl and their respective sort names,
+\pind another yields the set of \ysfchg{} parts of a part set \nyl and their common type\dbsquare
+\afslut}
+%%%%%%%
+  
+\nbbbb{Description Prompt}
+
+\begynd  
+\pind \newestpdefn{Description Prompt}{ A description prompt is \pdefindex{description!prompt}
+\begynd  
+\pind a function that may be posed by humans  
+\pind who may then act  upon it:   
+\begynd  
+\pind \ysf{{[the human]}} ``applying'' it to a domain phenomen\ysfchg{on}, and 
+\pind \ysf{{[the human]}} ``yielding'', i.e., writing down, \ysf{a}
+narrative and formal {\rsltxt}s \nyl describing 
+      what is being observed \ysf{[by that human]}\dbsquare
+\afslut
+\afslut}
+\afslut
+
+\mnewfoil
+
+\newestxample{Description Prompts}{ Description prompts result
+\begynd
+\pind in {\rsltxt}s describing for example a 
+\begynd
+\pind (i) \ysfchg{a } Cartesian endurant, or
+\pind (ii) its unique identifier, \ysf{or}
+\pind (iii) its mereology, or
+\pind (iv) its attributes, \ysf{or}
+\pind(iv) other\dbsquare
+\afslut
+\afslut}
+%%%%%%%
+
+\nbbbbb{Perdurant Concepts}\label{Perdurant Concepts}
+
+\bbbb{``Morphing'' Parts into Behaviours}
+
+\begynd
+\pind As already indicated we shall
+\begynd
+\pind transcendentally deduce
+\pind (perdurant) behaviours from
+\pind those (endurant) parts
+\begynd
+\pind which we, as domain analysers cum describers,
+\pind have endowed with all three kinds of internal qualities:
+\pind unique identifiers, mereologies and attributes.
+\afslut
+\afslut
+\pind Chapter\,\ref{chap6.tex.1}, will show how.
+\afslut
+
+\nbbbb{State}
+\newestpdefn{State, I}{ \pdefindex{state}\ 
+\begynd
+\pind  A state is any set of
+      the parts of a domain\dbsquare
+\afslut}
+%%%%%%%
+
+\monoexample{A Road System State}{ The domain analyser cum describer
+  may, \nyl \ysf{} decide that a road system state consists of
+\begynd
+\pind the road net aggregate (of hubs and links)\footnote{\LLLL The road net
+  aggregate, in its perdurant form, may ``model'' the \sfsl{Department
+  of Roads} of some country, province, or town.},
+\pind all the hubs, and all the links, and
+\pind the automobile aggregate (of all the automobiles)\footnote{\LLLL
+  The  automobile \ysfchg{}
+  aggregate, in its perdurant form, may ``model'' the \sfsl{Department
+  of Vehicles} of some country, province, or town.}, and
+\pind all the individual automobiles\dbsquare
+\afslut}
+
+\nbbbb{Actors}
+\newestpdefn{Actors}{ \pdefindex{actor}\ 
+\begynd
+\pind An actor is anything
+      that can initiate an action, an event or a behaviour\dbsquare
+\afslut}
+%%%%%%%
+ 
+\bbb{Action}
+   
+\newestpdefn{Actions}{ \pdefindex{action}\
+\begynd
+\pind  An action is a
+      function that can purposefully change\ysfchg{ } a state\dbsquare
+\afslut}
+\monoexample{Road Net Actions}{ These are some road net actions:
+\begynd
+\pind The insertion of a new or removal of an existing hub; or
+\pind the insertion of a new, or removal of an existing link;
+\afslut}
+
+%%%%%%%
+
+\nbbb{Event}
+
+\newestpdefn{Events}{ \pdefindex{event}\
+\begynd
+\pind  An event is a function
+      that surreptitiously changes a state\dbsquare
+\afslut}
+\monoexample{Road Net Events}{ These are some road net events:
+\begynd
+\pind The blocking of a link due to a mud slide;
+\pind the failing of a hub traffic signal due to power outage;
+\pind the blocking of a link due to an automobile accident.
+\afslut}
+
+%%%%%%%
+    
+\nbbb{Behaviour}
+
+\newestpdefn{Behaviours}{ \pdefindex{behaviour}\
+\begynd
+\pind A behaviour is a set 
+\pind of sequences of 
+\pind actions, events and behaviours\dbsquare
+\afslut}
+%%%%%%%
+\mnewfoil\LLll
+\monoexample{Road Net Traffic}{ %
+\begynd
+\pind Road net traffic can be seen as a behaviour
+\begynd
+\pind \ysfchg{(i) } of all the behaviours of automobiles,
+\begynd
+\pind where each automobile behaviour is seen as sequence of \nyl start, stop,
+      turn right, turn left, etc., actions;
+\afslut
+\pind \ysfchg{(ii) } of all the behaviours of links
+\begynd
+\pind where each link behaviour is seen \nyl as a set of sequences
+(i.e., behaviours) of ``following'' the 
+\begynd
+\pind link entering, link leaving, and movement
+\afslut of automobiles on the link;
+\afslut
+\pind \ysfchg{(iii) } of all the behaviours of hubs (etc.);
+\pind \ysfchg{(iv) } of the behaviour of the aggregate of roads, \nyl
+      viz.\ \sfsl{The Department of Roads}, and 
+\pind \ysfchg{(v) } of the behaviour of the aggregate of automobiles, \nyl viz,\
+      \sfsl{The Department of Vehicles}.
+\afslut
+\afslut}\HHHH
+
+
+\nbbbb{Channel}
+
+\begynd
+\pind \newestpdefn{Channel}{ \pdefindex{channel}\
+\begynd
+\pind A channel is anything 
+\pind that allows synchronisation and communication
+\pind of values
+\pind between two behaviours\dbsquare
+\afslut}
+\afslut
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind We shall use Tony Hoare's \texttt{CSP} concept \citecsp\
+\begynd
+\pind to express synchronisation and communication \nyl of values
+      between behaviours \brcolor{\textsl{i}} and \brcolor{\textsl{j}}.
+\pind Hence the behaviour \brcolor{\textsl{i}} statement \nyl
+      \bbcolor{\textsl{ch[\brcolor{j}]\,\,!\,\,value}} \nyl
+      \ysfchg{states } that
+      behaviour \brcolor{\textsl{i}} \nyl  offers, ``outputs'':
+      \bbcolor{!}, \bbcolor{\textsl{value}} \nyl  to \ysfchg{the
+      behaviour } indicated by \bbcolor{\textsl{\brcolor{j}}}. 
+\pind And behaviour \brcolor{\textsf{i}} expresses \nyl  \bbcolor{\textsl{ch[\brcolor{j}]\,\,?}} \nyl 
+      that  it is willing to accept \nyl  ``input from \&
+      synchronise with'' behaviour \brcolor{\textsl{i}}, \bbcolor{?}, \nyl any \bbcolor{\textsl{value}}.
+\afslut
+\afslut
+%%%%%%%
+
+\nbbbbb{Domain Analysis \& Description}
+
+\bbbb{Domain Analysis}
+
+\newestpdefn{Domain Analysis}{ Domain analysis \pdefindex{domain!analysis}\pdefindex{analysis!domain}\
+\begynd
+\pind is the act of studying a domain
+\pind as well as the result of that study
+\pind in the form of \bmcolor{informal} statements\dbsquare
+\afslut}
+
+\bbbb{Domain Description}
+
+\newestpdefn{Domain Description}{ Domain description \pdefindex{domain!description}\pdefindex{description!domain}\ 
+\begynd
+\pind is the act of describing a domain 
+\pind as well as the result of that act
+\pind in the
+      form of  \bmcolor{narratives} and \bmcolor{formal \rsltxt}\dbsquare
+\afslut}
+
+\nbbbbb{Closing}
+
+\begynd
+\pind This \pos{chapter}{lecture} has introduced \nyl the main concepts of domains such as
+      we shall treat \nyl  (analyse and describe) domains.\footnote{\LLLL We
+      have omitted treatment of \sfsl{living species: plants} and
+      \sfsl{animals} -- the latter including \sfsl{humans}. They will
+      be treated in the next chapter\,!}
+\pind The next \pos{three chapters}{lectures} shall now systematically treat \nyl  the
+      analysis and description of domains.
+\begynd
+\pind That treatment takes concept by concept and 
+\begynd
+\pind provides proper definitions and
+\pind introduces appropriate analysis and description prompts;
+\pind one-by-one, in an almost pedantic, 
+\pind hence perhaps ``slow'' progression\,!
+\afslut
+\afslut
+\mnewfoil
+\pind The \pos{reader}{student} may be excused
+\begynd
+\pind if they, now-and-then, lose sight of ``their way''.
+\afslut
+\pind Hence the present chapter.
+\begynd
+\pind To show ``the way'':
+\pind that, for example, \nyl when we treat external endurant qualities,
+\pind there are still the internal endurant qualities,
+\pind and that the whole thing leads of to perdurants:
+\begynd
+\pind actors,
+\pind actions,
+\pind events and
+\pind behaviours.
+\afslut
+\afslut
+\afslut
+
+\dbeat{\pos{}{\mnewfoil
+
+  \vspace*{4cm}
+
+  \centerline{\brcolor{THANKS}}
+
+  \vfill
+
+\begynd
+\pind The next 45 minute lecture shall present \nyl fragments of a
+\sfsl{road transport system} example.
+\afslut
+
+  \vfill}
+}
+
+\label{chap2.tex.Preview.n}
+%%  LocalWords:  artefactual analysing Endurants endurant Perdurants
+%%  LocalWords:  perdurant endurants colour Mereology mereology RSL
+%%  LocalWords:  behaviour Behaviours behaviours harbours modelled de
+  %%  LocalWords:  synchronisation perdurants philosophee Ren analyse
+%%  LocalWords:  plasmatic compartmentalise fn et cetera analysed CSP
+%%  LocalWords:  descriptionally analyser Hoare's synchronise ly wo
+%%  LocalWords:  analysers mereologies modelling conveyage phenomen
+%%  LocalWords:  neighbouring

@@ -1,0 +1,300 @@
+%makeindex cind;makeindex defind;makeindex eind;makeindex method;makeindex doan;makeindex doaf;makeindex perduind;makeindex dltind;makeindex sorts;makeindex attr;makeindex types;makeindex value;makeindex monoschema;makeindex funct;makeindex chann;makeindex behav;makeindex symbind;makeindex pipe
+
+%scp primer.pdf dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2022/primer/primer.pdf
+
+%%% latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps primer.pdf
+%%% latex slides;dvips slides.dvi -o slides.ps;ps2pdf slides.ps slides.pdf
+
+\documentclass[graybox,usenames,dvipsnames,10pt]{bjorner-svmono}
+
+\newcommand{\obs}{{\sort{obs\_}}}
+\newcommand{\uid}{{\sort{uid\_}}}
+\newcommand{\mereo}{{\sort{mereo\_}}}
+\newcommand{\attr}{{\sort{attr\_}}}
+\newcommand{\is}{{\sort{is\_}}}
+
+\renewcommand{\obs}{{{obs\_}}}
+\renewcommand{\uid}{{{uid\_}}}
+\renewcommand{\mereo}{{{mereo\_}}}
+\renewcommand{\attr}{{{attr\_}}}
+\renewcommand{\is}{{{is\_}}}
+
+\newcommand{\efootnote}[1]{\footnote{\brcolor{Edit:} #1}}
+
+%\includeonly{primer-intq}%primer-perd}%primer-intro}%,primer-forsider},
+
+%\includeonly{primer-forsider,primer-filosofi,primer-domains,primer-extq,primer-intq,primer-perd}%primer-intro}%,primer-forsider}
+
+%\includeonly{primer-intro,primer-filosofi,primer-domains,primer-extq,primer-intq,primer-perd,primer-bib,primer-rsl,primer-indexes}
+
+%\includeonly{primer-domains,primer-extq,primer-intq,primer-bib}
+
+\renewcommand{\dbevenfoot}{$\overline{\sort{{\scriptsize Domain
+        Modelling}}\hfil}$\hfil\brcolor{IoS/CAS\thepage}\hfil%  
+        $\overline{\sort{{\scriptsize\copyright\ Dines Bj{\o}rner. \todaytime}}}$}
+\renewcommand{\dboddfoot}{$\overline{\sort{{\scriptsize\copyright\ Dines
+        Bj{\o}rner.
+        \todaytime}}}$\hfil\brcolor{IoS/CAS\thepage}\hfil$\overline{\hfil\sort{{\scriptsize   
+        Domain Modelling}}}$}
+
+\newcommand{\primerorfilosofi}[2]{#1}
+\newcommand{\pof}[2]{#1}
+
+\newcommand{\cf}[1]{\,\,\,\,\,\,\LLll[\ref{#1}]}
+\newcommand{\latexhtml}[2]{#1}
+\newcommand{\begyndbar}{}
+\newcommand{\afslutbar}{}
+\newcommand{\domkap}{\sort{\brcolor{Roads}}}
+\newcommand{\tosemb}{}
+\newcommand{\toseme}{}
+\newcommand{\setminitoc}{\setcounter{minitocdepth}{9}}
+\newcommand{\ddminitoc}{\setcounter{minitocdepth}{6}\minitoc}
+\newcommand{\pfootnote}[1]{#1}
+\newcommand{\recordtime}{\textbf{\textsf{record\_$\mathbb{TIME}$}}()}
+
+\newcommand{\pvienna}[2]{\noindent
+This section is based on Sect.\,#1 of \cite[Pages\,#2]{BjornerMonograph2020}.}
+
+\newcommand{\qvienna}[2]{\noindent
+This chapter is based on Chapter\,#1 of \cite[Pages\,#2]{BjornerMonograph2020}.}
+
+\newcommand{\nextlecture}{}
+
+\usepackage[paperwidth=210mm,
+            paperheight=297mm, 
+          % margin={2.5cm,2cm},%
+            dvips]{geometry}
+
+\newcommand{\pos}[2]{#1}
+            
+\RequirePackage{etex}
+
+\usepackage{cite}
+\usepackage{minitoc}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{graphicx} 
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{footmisc}[bottom]
+\usepackage{scrwfile}%\usepackage{morewrites}%\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{shading}
+\usepackage{shadethm}
+\usepackage{changebar}
+%\usepackage{html}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{wasysym}
+\usepackage{textcomp}
+\newcommand{\dbir}[1]{{\footnotesize\textlbrackdbl$\iota$\,\ref{#1},$\pi$\,\pageref{#1}\textrbrackdbl}}
+\usepackage{mono-varioref}
+\usepackage{a4wide}
+\usepackage{multind}
+\usepackage{epsfig} 
+\usepackage{ifthen}
+\usepackage{calc}
+%\usepackage{semtrans}
+\usepackage{pxfonts}
+\usepackage{primer-sty}
+\usepackage{pstricks}
+\usepackage{psboxit}
+\usepackage{wrapfig}
+\usepackage{boites}
+\usepackage{boitesexamples}
+\usepackage{framed}
+\usepackage{color} 
+\usepackage{pifont}
+\usepackage{theenv}
+\usepackage{shadethm}
+\usepackage{daad}
+%\usepackage{old-daad}
+\usepackage{daad-color}
+\usepackage{daad-bbbb}
+\usepackage{daad-index}
+                                %\usepackage{braga}
+\newcommand{\dbcomment}{\mbox{--\,-- }}
+\usepackage{rslenv}
+\renewcommand{\detchoice}{\mbox{$\lceil\!\rceil\!\!\!\!\lfloor\!\rfloor$}}
+
+
+\usepackage{faoc-demo}
+\usepackage{book}
+\usepackage{filo}
+\usepackage{slide-formula} 
+\usepackage{eurosym}
+\usepackage{primer} 
+\usepackage{k5678}
+\usepackage{methods}
+
+\newcommand{\fotoiv}[7]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#2.eps,height=#1}
+    \epsfig{file=#3.eps,height=#1}
+    \epsfig{file=#4.eps,height=#1}
+    \epsfig{file=#5.eps,height=#1}
+    \caption{#6}\label{#7}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\bthr}{}%{\cbstart[5pt]}
+\newcommand{\ethr}{}%{\cbend}
+
+\usepackage{changebar}
+\newcommand{\bnew}{}%{\cbstart[5pt]}
+\newcommand{\enew}{}%{\cbend}
+\newcommand{\bmcysfsummernew}{\cbstart[5pt]}
+\newcommand{\emcysfsummernew}{\cbend}
+\newcommand{\summerchg}[1]{\bmcysfsummernew #1\emcysfsummernew}
+
+\newcommand{\bysfii}{\cbstart[2pt]}{}
+\newcommand{\bysfv}{\cbstart[5pt]}{}
+\newcommand{\eysf}{\cbend}{}
+\newcommand{\ysftxtii}[1]{\bysfii{#1}\eysf} %%%***
+\newcommand{\ysftxtv}[1]{\bysfv{#1}\eysf} %%%***
+\newcommand{\ysfchg}[1]{\bysfv#1\eysf}
+\renewcommand{\ysfchg}[1]{#1}
+\newcommand{\ysfchgii}[1]{\bysfv#1\eysf}\renewcommand{\ysfchgii}[1]{#1}
+\newcommand{\ysfchgiii}[1]{\bysfv#1\eysf}\renewcommand{\ysfchgiii}[1]{#1}
+\newcommand{\ysfchgv}[1]{\bysfv#1\eysf}\renewcommand{\ysfchgv}[1]{#1}
+
+\newcommand{\blastchg}{\cbstart[2pt]}
+\newcommand{\elastchg}{\cbend}
+\newcommand{\lastchg}[1]{\cbstart[1pt]#1\cbend}\renewcommand{\lastchg}[1]{#1}
+ 
+\newcommand{\cacmboiteepaisseavecuntitre}[1]{\boiteepaisseavecuntitre{\brcolor{Calculus
+      \arabic{calculus}:} #1}\stepcounter{calculus}}
+
+\newcounter{calculus}
+\newcommand{\rngraph}{\sfsl{road net (development \& maintenance) graph}}
+
+\newcommand{\bnewedit}{}%{\cbstart[5pt]}
+\newcommand{\enewedit}{}%{\cbend}
+\newcommand{\finaledit}[1]{{\bnewedit{#1}\enewedit}} 
+
+\newcommand{\bysfedit}{}%{\cbstart[2pt]}
+\newcommand{\eysfedit}{}%{\cbend}
+\newcommand{\ysfedit}[1]{#1}%{{\bysfedit{#1}\eysfedit}} 
+\newcommand{\ysf}[1]{#1}%{{\bysfedit$^{\lceil}${#1}$^{\rceil}$\eysfedit}} 
+\newcommand{\ysfnote}[2]{}%%{{\bysfedit$^{\lceil}${\footnote{#1}}$^{\rceil}$\eysfedit}} 
+
+\newcommand{\pmt}[1]%
+    {\vspace*{1.5mm}%
+     \boiteepaisseavecuntitre{#1}%
+     \vspace*{0.2mm}}
+
+\newcommand{\tmp}%
+    {\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}} 
+
+\newcommand{\nbysfedit}{}%%{\cbstart[5pt]}
+\newcommand{\neysfedit}{}%%{\cbend}
+\newcommand{\misprint}[1]{#1}%%{{\nbysfedit{#1}\neysfedit}} 
+\newcommand{\nysfedit}[1]{#1}%{{\nbysfedit{#1}\neysfedit}} 
+\newcommand{\nysf}[1]{#1}%\nbysfedit$^{\lceil}${#1}$^{\rceil}$\neysfedit}} 
+%\newcommand{\nysfnote}[2]{}%{{\nbysfedit$^{\lceil}${\footnote{#1}}$^{\rceil}$\neysfedit}} 
+
+\renewcommand{\typo}[1]{#1}%
+\newcommand{\iinded}[1]{#1}%
+      
+\renewcommand{\dbsquare}{\,\bmcolor{\pos{\rule{0.8mm}{0.8mm}}{\rule{3mm}{3mm}}}\
+  \ \rm}
+\renewcommand{\dbeat}[1]{}
+
+\renewcommand{\nrslframebox}[2]{#2}
+
+\newcommand{\mtc}{\tbw}
+
+\newcommand{\hertil}{\vspace*{2mm}\centerline{\brcolor{\fbox{\bbcolor{\todaytime\ CEST}}}}}
+
+\renewcommand{\monoexample}[2]{\pos{\vspace*{2mm}}{}%
+\begin{primerexample}\index{eind}{#1}\label{#1}
+\noindent\LLLL\HHHH{{\brcolor{#1}.} #2} %\sf 
+\end{primerexample}
+\normalsize\rm
+}
+
+\renewcommand{\dbchg}[1]{#1}
+\renewcommand{\eoap}{\dbsquare}
+\renewcommand{\eod}{\dbsquare}
+\renewcommand{\eox}{\dbsquare}
+\newcommand{\smallish}[1]{#1}
+
+\renewcommand{\detchoice}{\mbox{$\lceil\!\rceil\!\!\!\!\!\!\lfloor\!\rfloor$}}
+
+\renewcommand{\primer}{\textsf{\textbf{primer}}}
+
+\renewcommand{\mtc}{\begin{center}\fbox{{\sc more to come}}\end{center}}
+
+\renewcommand{\nspb}[1]{\subparagraph{{\HHHH\lilacolor{#1}}}}
+\renewcommand{\spb}[1]{\subparagraph{{\HHHH\lilacolor{#1}}}}
+
+\setcounter{secnumdepth}{8}
+
+\renewcommand{\detchoice}{\mbox{$\lceil\!\rceil\!\!\!\!\!\!\lfloor\!\rfloor$}}
+
+%\renewcommand{\irsltxt}[1]{#1}
+%\renewcommand{\irsltxtu}[1]{\noindent\sl\normalsize\xample\ #1}
+\renewcommand{\irsltxt}[1]{\begin{quote}\noindent\sl\normalsize$\mathcal{I}$: #1\,\dbsquare\end{quote}}
+%\newcommand{\durcal}{\texttt{Duration Calculus}}
+%\newcommand{\durcaltime}{$\mathbb{T}$}
+                                %\newcommand{\durcalinterval}{$\mathbb{TI}$}
+
+\renewcommand{\bthr}{}%{\cbstart[5pt]}
+\renewcommand{\ethr}{}%{\cbend}
+
+\newcommand{\tehrantutorial}[2]{#2}
+
+\setcounter{minitocdepth}{9}
+
+\usepackage{bogen}
+
+\makeindex{attr}\makeindex{dltind}\makeindex{doaf}\makeindex{doan}\makeindex{method}\makeindex{symind}\makeindex{symbind}
+%\makeindex{attr}\makeindex{dltind}\makeindex{doaf}\makeindex{doan}\makeindex{method}
+%\makeindex{defind}\makeindex{conind}\makeindex{pexaind}\makeindex{eind}\makeindex{symind}\makeindex{symbind}\makeindex{pipe}\makeindex{pdefind}\makeindex{pconind}
+
+\begin{document}\normalsize
+
+\dbcalctime
+
+\setminitoc
+
+\frontmatter
+
+\setcounter{page}{-1}
+
+\include{primer-forsider}
+
+\mainmatter
+
+\include{primer-intro}    % Introduction
+ 
+\include{primer-filosofi} % Philosophy
+
+\include{primer-domains}  % Domains
+
+\pos{\label{lect1:labeln}}{}
+
+\include{primer-extq}     % External Qualities
+ 
+\include{primer-intq}     % Unique Ids, Mereology and Attributes
+
+\include{primer-perd}     % Perdurants
+
+\include{primer-closing}  % Closing
+
+\include{primer-bib}      % Biblio
+
+\appendix
+
+\include{primer-road}% Example
+\pos{\label{primer-example.n}}{}
+
+\include{app-pipeline}% Example
+
+\include{primer-rsl}  % 
+
+\include{primer-indexes}  % 
+
+\end{document} 

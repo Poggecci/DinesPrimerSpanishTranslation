@@ -1,0 +1,112 @@
+
+\label{wf-pls-metrics}
+\begynd
+\pind Pipelines are laid out in the terrain.
+\begynd
+\pind Units have length and diameters.
+\pind Units are positioned in space: have altitude, longitude and
+      latitude positions of its one, two or three
+      connection PoinTs\footnote{1 for \sfsl{well}s, \sfsl{plate}s and \sfsl{sink}s; 2 for \sfsl{pipe}s,
+      \sfsl{pump}s and \sfsl{valve}s; 1+2 for \sfsl{fork}s, 2+1 for \sfsl{join}s.}. 
+\afslut
+\afslut
+
+%\begin{multicols}{2}
+\begin{enumerate}\setei
+\item \label{metrics-0000} length (a static attribute),
+\item \label{metrics-0100} diameter (a static attribute) and
+\item \label{metrics-0200} position (a static attribute).
+\savei\end{enumerate}
+                                %\end{multicols}
+\normalsize\mnewfoil\HHHH
+
+%\begin{multicols}{2}
+%\RSLatex
+%type
+%&\ref{metrics-0000}.&   LEN&\iptya{LEN}{metrics-0000}&
+%&\ref{metrics-0100}.&   &$\bigcirc$\iptya{$\bigcirc$}{metrics-0100}&
+%&\ref{metrics-0200}.&   POS == mk_One(pt:PT) | mk_Two(ipt:PT,opt:PT)&\iptya{POS}{metrics-0200}&
+%&\ref{metrics-0200}.&             | mk_OneTwo(ipt:PT,opts:(lpt:PT,rpt:PT)) 
+%&\ref{metrics-0200}.&             | mk_TwoOne(ipts:(lpt:PT,rpt:PT),opt:PT)  
+%&\ref{metrics-0200}.&   PT = Alt >< Lon >< Lat  &\iptya{PT}{metrics-0200}&
+%&\ref{metrics-0200}.&   Alt, Lon, Lat = ...&\iptya{Alt}{metrics-0200}\iptya{Lon}{metrics-0200}\iptya{Lat}{metrics-0200}&
+%value
+%&\ref{metrics-0000}.&   attr_LEN: U -> LEN&\ipob{attr\_LEN}{metrics-0000}&
+%&\ref{metrics-0100}.&   attr_&$\bigcirc$&: U -> &$\bigcirc$\ipob{attr\_$\bigcirc$}{metrics-0100}&
+%&\ref{metrics-0200}.&   attr_POS: U -> POS&\ipob{attr\_POS}{metrics-0200}&
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{metrics-0000}.\ \ \ LEN\iptya{LEN}{metrics-0000}\\
+\ref{metrics-0100}.\ \ \ $\bigcirc$\iptya{$\bigcirc$}{metrics-0100}\\
+\ref{metrics-0200}.\ \ \ POS {\EQ}{\EQ} mk\_One(pt:PT) {\BAR} mk\_Two(ipt:PT,opt:PT)\iptya{POS}{metrics-0200}\\
+\ref{metrics-0200}.\ \ \ \ \ \ \ \ \ \ \ \ \ {\BAR} mk\_OneTwo(ipt:PT,opts:(lpt:PT,rpt:PT)) \\
+\ref{metrics-0200}.\ \ \ \ \ \ \ \ \ \ \ \ \ {\BAR} mk\_TwoOne(ipts:(lpt:PT,rpt:PT),opt:PT)\ \ \\
+\ref{metrics-0200}.\ \ \ PT {\EQ} Alt {\TIMES} Lon {\TIMES} Lat\ \ \iptya{PT}{metrics-0200}\\
+\ref{metrics-0200}.\ \ \ Alt, Lon, Lat {\EQ} {\DOTDOTDOT}\iptya{Alt}{metrics-0200}\iptya{Lon}{metrics-0200}\iptya{Lat}{metrics-0200}\\
+\kw{value}\\
+\ref{metrics-0000}.\ \ \ attr\_LEN: U {\RIGHTARROW} LEN\ipob{attr\_LEN}{metrics-0000}\\
+\ref{metrics-0100}.\ \ \ attr\_$\bigcirc$: U {\RIGHTARROW} $\bigcirc$\ipob{attr\_$\bigcirc$}{metrics-0100}\\
+\ref{metrics-0200}.\ \ \ attr\_POS: U {\RIGHTARROW} POS\ipob{attr\_POS}{metrics-0200}
+\ep
+%\end{multicols}
+\mnewfoil\normalsize\HHHH
+\noindent
+\begynd
+\pind We can summarise the metric attributes:
+\afslut
+\begin{enumerate}\setei
+\item \label{metrics-0500} Units are subject to either of four
+  (mutually exclusive) metrics:
+\begin{enumerate}
+\item \label{metrics-0510} Length, diameter and a one point position.  
+\item \label{metrics-0520} Length, diameter and a two points position. 
+\item \label{metrics-0530} Length, diameter and a one+two points position. 
+\item \label{metrics-0540} Length, diameter and a two+one points position. 
+\end{enumerate}
+\savei\end{enumerate}
+\mnewfoil\normalsize\HHHH
+%\RSLatex
+%type
+%&\ref{metrics-0500}.&   Unit_Sta = Sta1_Metric | Sta2_Metric | Sta12_Metric | Sta21_Metric&\iptya{Unit\_Sta}{metrics-0500}&  
+%&\ref{metrics-0510}&  Sta1_Metric = LEN >< &{\O}& >< mk_One(pt:PT)&\iptya{Sta1\_Metric}{metrics-0510}& 
+%&\ref{metrics-0520}&  Sta2_Metric = LEN >< &{\O}& >< mk_Two(ipt:PT,opt:PT)&\iptya{Sta2\_Metric}{metrics-0520}& 
+%&\ref{metrics-0530}&  Sta12_Metric = LEN >< &{\O}& >< mk_OneTwo(ipt:PT,opts:(lpt:PT,rpt:PT))&\iptya{Sta12\_Metric}{metrics-0530}& 
+%&\ref{metrics-0540}&  Sta21_Metric = LEN >< &{\O}& >< mk_TwpOne(ipts:(lpt:PT,rpt:PT),opt:PT)&\iptya{Sta21\_Metric}{metrics-0540}& 
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{metrics-0500}.\ \ \ Unit\_Sta {\EQ} Sta1\_Metric {\BAR} Sta2\_Metric {\BAR} Sta12\_Metric {\BAR} Sta21\_Metric\iptya{Unit\_Sta}{metrics-0500}\ \ \\
+\ref{metrics-0510}\ \ Sta1\_Metric {\EQ} LEN {\TIMES} {\O} {\TIMES} mk\_One(pt:PT)\iptya{Sta1\_Metric}{metrics-0510} \\
+\ref{metrics-0520}\ \ Sta2\_Metric {\EQ} LEN {\TIMES} {\O} {\TIMES} mk\_Two(ipt:PT,opt:PT)\iptya{Sta2\_Metric}{metrics-0520} \\
+\ref{metrics-0530}\ \ Sta12\_Metric {\EQ} LEN {\TIMES} {\O} {\TIMES} mk\_OneTwo(ipt:PT,opts:(lpt:PT,rpt:PT))\iptya{Sta12\_Metric}{metrics-0530} \\
+\ref{metrics-0540}\ \ Sta21\_Metric {\EQ} LEN {\TIMES} {\O} {\TIMES} mk\_TwpOne(ipts:(lpt:PT,rpt:PT),opt:PT)\iptya{Sta21\_Metric}{metrics-0540} 
+\ep
+
+
+\nbbb{Wellformed Unit Metrics}\label{pipe:Wellformed Unit Metrics}
+
+\begynd
+\pind The points positions of neighbouring units must ``fit'' one-another.
+\afslut
+
+\begin{enumerate}\setei
+\item \label{pls-metrics} Without going into details we can define a predicate,
+      \textsf{wf\_Metrics}, \nyl that applies to a pipeline system and
+      yields \sort{true} \nyl iff neighbouring units must ``fit'' one-another.
+\savei\end{enumerate}
+    
+%\RSLatex
+%value
+%&\ref{pls-metrics}.&  wf_Metrics: PLS -> Bool&\ipwf{wf\_Metrics}{pls-metrics}&
+%&\ref{pls-metrics}.&  wf_Metrics(pls) is ... 
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{pls-metrics}.\ \ wf\_Metrics: PLS {\RIGHTARROW} \kw{Bool}\ipwf{wf\_Metrics}{pls-metrics}\\
+\ref{pls-metrics}.\ \ wf\_Metrics(pls) {\IS} {\DOTDOTDOT} 
+\ep
+
+%%  LocalWords:  PoinTs POS mk ipt OneTwo lpt rpt TwoOne ipts attr wf
+%%  LocalWords:  summarise TwpOne Wellformed neighbouring iff PLS pls
+%%  LocalWords:  Bool

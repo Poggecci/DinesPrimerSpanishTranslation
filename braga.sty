@@ -1,0 +1,172 @@
+
+\newcommand{\U}[1]{\textsf{$\mathbb{U}$#1}}
+
+\newcommand{\ndichar}[2]{\bookdefn{#1}{#2}}
+
+\newcommand{\dichar}[2]{\bookdefn{#1}{#2}}
+
+\newcommand{\Leshniewski}{Le{\'s}niewski}
+\newcommand{\SLeshniewski}{Stanis{\l}aw Le{\'s}niewski}
+\newcommand{\opdef}{=_{\mbox{\pos{\footnotesize}{\large}{\sc def}}}}
+\renewcommand{\opdef}{\stackrel{\bigtriangleup}{=}}
+
+\newcommand{\rr}[1]{{\ \ \ \ \ \ \ \mbox{\pos{Page}{Slide}~\pageref{#1}}}}
+
+\newcommand{\pty}{\mathcal{P}}
+\newcommand{\aty}{\mathcal{A}}
+\newcommand{\pop}{\mathbb{P}} 
+\newcommand{\ppop}{\mathbb{PP}}
+\newcommand{\oop}{\mathbb{O}}
+\newcommand{\uop}{\mathbb{U}}
+\newcommand{\poop}{\mathbb{PO}}
+\newcommand{\puop}{\mathbb{PU}}
+\newcommand{\oxop}{\mathbb{OX}} 
+\newcommand{\uxop}{\mathbb{UX}}
+\newcommand{\aop}{\mathbb{A}}
+
+\newcommand{\reqdome}{$\Delta_{\mathcal{E}}$}
+\newcommand{\reqdomeidx}[1]{\iitfix{$\Delta$}{$\mathcal{E}$}{#1}}
+
+\newcommand{\reqnete}{N$_{\mathcal{E}}$}
+\newcommand{\reqneteidx}[1]{\iitfix{N}{$\mathcal{E}$}{#1}}
+
+\newcommand{\reqfe}{F$_{\mathcal{E}}$}
+\newcommand{\reqfeidx}[1]{\iitfix{F}{$\mathcal{E}$}{#1}}
+
+\newcommand{\reqve}{V$_{\mathcal{E}}$}
+\newcommand{\reqveidx}[1]{\iitfix{V}{$\mathcal{E}$}{#1}}
+
+\newcommand{\reqtrni}{TRN$_{\mathcal{I}}$}
+\newcommand{\reqrniidx}[1]{\iitfix{TRN}{$\mathcal{I}$}{#1}}
+
+\newcommand{\reqtrne}{TRN$_{\mathcal{E}}$}
+\newcommand{\reqtrneidx}[1]{\iitfix{TRN}{$\mathcal{E}$}{#1}}
+
+\newcommand{\reqce}{C$_{\mathcal{E}}$}
+\newcommand{\reqceidx}[1]{\iitfix{C}{$\mathcal{E}$}{#1}}
+
+\newcommand{\req}[2]{#1$_{\mathcal{#2}}$}
+\newcommand{\reqidx}[3]{\iitfix{#1}{$\mathcal{#2}$}{#3}}
+\newcommand{\obsreqmoidx}[3]{\tfix{\obsmo{#1$_\mathcal{#2}$}}{#3}}
+\newcommand{\reqidxm}[3]{\iitfix{$#1$}{$\mathcal{#2}$}{#3}}
+
+\newcommand{\reqrule}[2]{\vspace*{-1.5mm}%
+\begin{regel}\bgcolor{{#1}:}\label{def:#1}
+{#2}\eod
+\end{regel}\vspace*{-1.5mm}%
+}
+
+\newcommand{\tbt}{\begin{center}\fbox{{\sc to be typed}}\end{center}}
+\newcommand{\px}[1]{#1}
+\newcommand{\eoxl}{}
+\newcommand{\tfix}[2]{}
+\newcommand{\itfix}[2]{}
+\newcommand{\oltfix}[3]{}
+\newcommand{\iitfix}[3]{}
+%\newcommand{\foindex}[2]{}
+
+\newcommand{\begyndeksempel}[1]{\begin{xample}.\rm \
+                                \renewcommand{\newfoil}{\mnewfoilLLLL}
+                                \lilacolor{#1}:  \label{#1}
+                                \eindex{#1: \#\,\protect\ref{#1}}%
+                                \pos{\footnotesize\sf}{\LLLL\sf}}
+\newcommand{\begyndeksempelii}[2]{\begin{xample}.\rm \
+                                \renewcommand{\newfoil}{\mnewfoilLLLL}
+                                \lilacolor{\HHHH #1 --- #2}:  \label{#1 #2}
+                                \eindex{#1!#2: \#\,\protect\ref{#1 #2}}%
+                                \pos{\footnotesize\sf}{\LLLL\sf}}
+\newcommand{\begyndeksempeliii}[3]{\begin{xample}.\rm \
+                                \renewcommand{\newfoil}{\mnewfoilLLLL}
+                                \lilacolor{\HHHH #1. #2 #3}:  
+                                \label{#1 #2 #3}
+                  \eindex{#1!#2!#3: \#\,\protect\ref{#1 #2 #3}}%
+                                \pos{\footnotesize\sf}{\LLLL\sf}}
+\newcommand{\begyndeksempeliiir}[3]{\begin{xample}.\rm \
+                                \lilacolor{\HHHH #2 #1: #3}:  \label{#1 #2 #3}
+                  \eindex{#1!#2!#3: \#\,\protect\ref{#1 #2 #3}}%
+                                \pos{\footnotesize\sf}{\LLLL\sf}}
+
+\newcommand{\sluteksempel}[1]{\pos{\normalsize\rm}{\HHHH\rm}
+                              \renewcommand{\newfoil}{\mnewfoilHHHH}
+                              \end{xample}}
+
+\newcommand{\sluteksempelii}[2]{\pos{\normalsize\rm}{\HHHH\rm}
+                              \renewcommand{\newfoil}{\mnewfoilHHHH}
+                              \end{xample}}
+
+\newcommand{\sluteksempeliii}[3]{\pos{\normalsize\rm}{\HHHH\rm}
+                              \renewcommand{\newfoil}{\mnewfoilHHHH} 
+                              \end{xample}}
+
+\newcommand{\sluteksempeliiir}[3]{\pos{\normalsize\rm}{\HHHH\rm}
+                              \end{xample}}
+ 
+\newcommand{\eodg}{
+  \bgcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}\!\!\!.\;\;} 
+
+\renewcommand{\eodp}{
+  \bgcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}\!\!\!.\;\;} 
+
+\renewcommand{\eodp}{
+  \bgcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}} 
+
+\newcommand{\finput}[2]{\mnewfoil\sf\input{#2}}
+%\newcommand{\finputikkenewpage}[2]{\mnewfoil\sf\input{#2}}
+\renewcommand{\finput}[2]{\sf\input{#2}}
+
+\newcommand{\tfinput}[3]{\nbbbb{#1}\LLLL\HHHH\sf\input{#3}}%
+
+\newcommand{\uhtfinput}[3]{\bbbb{#1}\LLLL\HHHH\sf\input{#3}}%
+\newcommand{\utfinput}[3]{\bbbb{#1}\LLLL\sf\input{#3}}%
+
+\newcommand{\ptfinput}[3]{\nbbb{#1}\LLLL\sf\input{#3}}%
+
+\newcounter{side}
+\newcommand{\saveside}{\setcounter{side}{\value{page}}}
+\newcommand{\setside}{\setcounter{page}{\value{side}}}
+
+\newcounter{bl}
+\newcommand{\nxtbl}{{\#\,\arabic{bl}}}
+
+\newcommand{\ble}[3]{%
+\newpage\saveside\setcounter{page}{0}
+\begin{center}
+\vspace*{25mm}
+\brcolor{\hrule}
+\vspace*{1mm}
+\bbcolor{\large Dines Bj{\o}rner's MAP-i Lecture \nxtbl}
+\vspace*{1mm}
+\brcolor{\hrule}
+\vspace*{25mm}
+\brcolor{\HHHH #1}
+\vspace*{25mm}
+\brcolor{\hrule}
+\vspace*{1mm}
+\bbcolor{\large #2: #3}
+\vspace*{1mm}
+\brcolor{\hrule}
+\end{center}
+\newpage\setside}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\xble}[3]{%
+\newpage\saveside\setcounter{page}{0}
+\begin{center}
+\vspace*{25mm}
+\brcolor{\hrule}
+\vspace*{1mm}
+\bbcolor{\large Dines Bj{\o}rner's MAP-i Lecture\ \#\,\arabic{bl}}
+\vspace*{1mm}
+\brcolor{\hrule}
+\vspace*{25mm}
+    \bbcolor{\HHHH End of MAP-i Lecture\ \#\,\arabic{bl}}:\\
+    \brcolor{\HHHH #1}\stepcounter{bl} 
+\vspace*{25mm}
+\brcolor{\hrule}
+\vspace*{1mm}
+\bbcolor{\large #2: #3}
+\vspace*{1mm}
+\brcolor{\hrule}
+\end{center}
+\newpage\setside}

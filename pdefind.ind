@@ -1,0 +1,365 @@
+\begin{theindex}
+
+  \item 1. Philosophy, 8
+  \item 10. Empirical Assertion, 14
+  \item 100. Determination, 115
+  \item 101. Extension, 115
+  \item 102. Fitting, 115
+  \item 11. Identical, 15
+  \item 12. Different, 15
+  \item 13. Unique Identification, 15
+  \item 14. Relation, 15
+  \item 15. Symmetry, 16
+  \item 16. Asymmetry, 16
+  \item 17. Transitivity, 16
+  \item 18. Intransitivity, 16
+  \item 19. Sets, 16
+  \item 2. Transcendental, 9
+  \item 20. The Universal Quantifier, 16
+  \item 21. The Existential Quantifier, 16
+  \item 22. Numbers, 17
+  \item 23. Object, 17
+  \item 24. Primary Object, 17
+  \item 25. Domain, 24
+  \item 26. Phenomena, 24
+  \item 27. Entities, 24
+  \item 28. Endurants, 25
+  \item 29. Perdurants, 25
+  \item 3. Transcendental Deduction, 10
+  \item 30. External Qualities, 25
+  \item 31. Discrete or Solid Endurants, 25
+  \item 32. Fluid Endurants, 26
+  \item 33. Parts, 26
+  \item 34. Atomic Part, I, 26
+  \item 35. Compound Part, I, 26
+  \item 36. Internal Qualities, 28
+  \item 37. Unique Identity, 28
+  \item 38. Mereology, I, 28
+  \item 39. Attributes, 28
+  \item 4. Transcendentality, 10
+  \item 40. Analysis Prompt, 28
+  \item 41. Analysis predicates, 29
+  \item 42. Analysis function, 29
+  \item 43. Description Prompt, 29
+  \item 44. State, I, 29
+  \item 45. Actors, 30
+  \item 46. Actions, 30
+  \item 47. Events, 30
+  \item 48. Behaviours, 30
+  \item 49. Channel, 30
+  \item 5. Implicit Meaning Theory, 12
+  \item 50. Domain Analysis, 31
+  \item 51. Domain Description, 31
+  \item 52. Description, I, 34
+  \item 53. Universe of Discourse, UoD, 34
+  \item 54. Entity, 36
+  \item 55. Endurant, 37
+  \item 56. Perdurant, 38
+  \item 57. Solid Endurant, 39
+  \item 58. Fluid Endurant, 39
+  \item 59. Part, 40
+  \item 6. Assertion, 12
+  \item 60. Atomic Part, 40
+  \item 61. Compound Part, 40
+  \item 62. Cartesian Part, 41
+  \item 63. Part Sets, 44
+  \item 64. Part Set Sort, 44
+  \item 65. Domain Taxonomy, 46
+  \item 66. Living Species, 47
+  \item 67. Animal, 48
+  \item 68. Human, 48
+  \item 69. State, II, 49
+  \item 7. Necessity, 13
+  \item 70. Description, II, 56
+  \item 71. Manifest Part:, 57
+  \item 72. Structure, 57
+  \item 73. Uniqueness, 58
+  \item 74. Unique Identifier, 58
+  \item 75. Mereology, II, 62
+  \item 76. Fixed Mereology, 65
+  \item 77. Varying Mereology, 65
+  \item 78. Stationary, 75
+  \item 79. Mobile, 76
+  \item 8. Possibility, 13
+  \item 80. Indefinite Time, 80
+  \item 81. Definite Time, 80
+  \item 82. Description, III, 92
+  \item 83. Behaviour, 92
+  \item 84. Actor, 93
+  \item 85. Action, 93
+  \item 86. Event, 93
+  \item 87. Process, 93
+  \item 88. Channels, 94
+  \item 89. Signature, 95
+  \item 9. Empirical Knowledge, 14
+  \item 90. Invocation, 98
+  \item 91. Behaviour Definition, 99
+  \item 92. Domain Initialisation, 101
+  \item 93. Machine, 114
+  \item 94. Requirement, 114
+  \item 95. Domain Requirements, 114
+  \item 96. Interface Requirements, 114
+  \item 97. Machine Requirements, 114
+  \item 98. Projection, 114
+  \item 99. Instantiation, 115
+
+  \indexspace
+
+  \item action, 30, 94, 95
+  \item actor, 30, 95
+  \item analysis
+    \subitem domain, 31
+    \subitem function, 29
+    \subitem predicate, 29
+    \subitem prompt, 28
+  \item animals
+    \subitem intentionality, 82
+  \item animate entities
+    \subitem intentionality, 82
+  \item assertion, 12
+    \subitem empirical, 14
+  \item asymmetric
+    \subitem relation, 16
+  \item atomic
+    \subitem type, 172
+  \item attribute, 28
+
+  \indexspace
+
+  \item basic
+    \subitem type, 172
+      \subsubitem expression, 172
+  \item behaviour, 30, 94
+
+  \indexspace
+
+  \item calculi, v
+  \item calculus
+    \subitem analysis, v
+  \item Cartesian, 174
+  \item causality
+    \subitem intentionality, 82
+  \item channel, 30, 94
+  \item composite
+    \subitem type, 172
+      \subsubitem expression, 172
+
+  \indexspace
+
+  \item declarative sentence, 175
+  \item description
+    \subitem domain, 31
+    \subitem external qualities, 34
+    \subitem internal qualities, 56
+    \subitem perdurants, 92
+    \subitem prompt, 29
+  \item discrete
+    \subitem endurant, 25
+  \item disjoint
+    \subitem types, 174
+  \item Dogma, The Triptych, 1
+  \item domain
+    \subitem analysis, 31
+    \subitem description, 31
+    \subitem requirements, 114
+
+  \indexspace
+
+  \item empirical
+    \subitem assertion, 14
+    \subitem knowledge, 14
+  \item endurant, v, 25
+    \subitem discrete, 25
+    \subitem fluid, 26
+    \subitem solid, 25
+  \item entity, 24
+  \item event, 30, 95
+  \item existential
+    \subitem quantifier, 16
+  \item external quality, 25
+
+  \indexspace
+
+  \item fixed
+    \subitem mereology, 65
+  \item fluid
+    \subitem endurant, 26
+
+  \indexspace
+
+  \item Galois
+    \subitem Connection, 86--87
+      \subsubitem intentionality, 87
+  \item Galois connection, 86
+
+  \indexspace
+
+  \item humans
+    \subitem consciousness and learning
+      \subsubitem intentionality, 82
+
+  \indexspace
+
+  \item identification
+    \subitem unique, 15
+  \item identifier
+    \subitem unique, 15
+  \item identity
+    \subitem unique, 28
+  \item intentional
+    \subitem pull, 83
+  \item humans
+    \subitem consciousness and learning, 82
+  \item intentional
+    \subitem pull, 83
+  \item Intentionality, 81--87
+  \item intentionality
+    \subitem animals, 82
+    \subitem animate entities, 82
+    \subitem causality of purpose, 82
+    \subitem knowledge, 83
+    \subitem living species, 82
+    \subitem responsibility, 83
+  \item interface
+    \subitem requirements, 114
+  \item internal quality, 28
+  \item intransitive
+    \subitem relation, 16
+
+  \indexspace
+
+  \item knowledge
+    \subitem empirical, 14
+  \item knowledge
+    \subitem intentionality, 83
+
+  \indexspace
+
+  \item language
+    \subitem intentionality, 82
+  \item living species
+    \subitem intentionality, 82
+
+  \indexspace
+
+  \item machine, 114
+    \subitem requirements, 114
+  \item manifest part, 57
+  \item mathematics, v
+  \item mereology, 28
+    \subitem fixed, 65
+    \subitem varying, 65
+  \item method
+    \subitem procedure, 88
+    \subitem technique, 88
+    \subitem tools, 88
+  \item modality
+    \subitem necessity, 13
+    \subitem possibility, 13
+
+  \indexspace
+
+  \item necessity
+    \subitem modality, 13
+  \item number, 17
+
+  \indexspace
+
+  \item object, 17
+    \subitem primary, 17
+  \item ontology, v
+
+  \indexspace
+
+  \item part
+    \subitem manifest, 57
+  \item parts, 26
+  \item perdurant, v, 25
+  \item phenomenon, 24
+  \item philosophy, 8
+  \item possibility
+    \subitem modality, 13
+  \item primary
+    \subitem object, 17
+  \item principle, vi
+  \item procedure, vi
+  \item proposition, 175
+  \item propositional
+    \subitem calculus, 176
+    \subitem expression, 175
+  \item pull
+    \subitem intentional, 83
+
+  \indexspace
+
+  \item quantifier
+    \subitem existential, 16
+    \subitem universal, 16
+
+  \indexspace
+
+  \item recursive
+    \subitem function theory, v
+  \item relation
+    \subitem asymmetric, 16
+    \subitem intransitive, 16
+    \subitem symmetric, 16
+    \subitem transitive, 16
+  \item requirements, 114
+    \subitem determination, 115
+    \subitem domain, 114
+    \subitem extension, 115
+    \subitem fitting, 115
+    \subitem instantiation, 115
+    \subitem interface, 114
+    \subitem machine, 114
+    \subitem projection, 114
+  \item responsibility
+    \subitem intentionality, 83
+
+  \indexspace
+
+  \item sets, 173
+  \item solid
+    \subitem endurant, 25
+  \item sort
+    \subitem expression, 172
+  \item state, 29
+  \item structure, 57
+  \item subtype, 175
+  \item symmetric
+    \subitem relation, 16
+
+  \indexspace
+
+  \item technique, vi
+  \item The Triptych Dogma, v, 1
+  \item $\mathbb{TIME}$, 80--81
+  \item tool, vi
+  \item transcendental deduction, v
+  \item transitive
+    \subitem relation, 16
+  \item traversal
+    \subitem internal qualities, 89
+  \item Triptych
+    \subitem Dogma, The, v
+  \item Triptych Dogma, The, 1
+  \item type
+    \subitem expression, 172
+    \subitem theory, v
+
+  \indexspace
+
+  \item unique
+    \subitem identification, 15
+    \subitem identifier, 15
+    \subitem identity, 28
+  \item universal
+    \subitem quantifier, 16
+
+  \indexspace
+
+  \item varying
+    \subitem mereology, 65
+
+\end{theindex}

@@ -1,0 +1,107 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Changed 11 April 2023 %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\domaindefinition}{%%%
+\begynd
+\pind By a \sfsl{domain} we shall understand
+\begynd
+\pind a \sfsl{rationally describable} segment of
+\pind a \sfsl{discrete dynamics} fragment of
+\pind a \sfsl{human assisted} reality, i.e., of the world.
+\afslut
+\pind It includes
+\begynd
+\pind its \sort{endurants}, \nyl i.e., \sfsl{solid and fluid entities} of
+\begynd
+\pind \sort{parts} and 
+\pind \sort{living species}, 
+\afslut
+\pind and \sort{perdurants}\ysfchg{\newdbsquare}
+\afslut
+\mnewfoil
+
+\pind \sfsl{Endurants} are
+\begynd
+\pind either \sfsl{natural} [``God-given''] 
+\pind or \sfsl{artefactual} [``man-made'']\ysfchg{ } 
+\afslut
+and may be considered
+\begynd
+\pind \sfsl{atomic} or  \sfsl{compound} parts,
+\pind or, as in \pos{this primer}{this talk}, further unanalysed  \sfsl{living
+      species:}
+\begynd
+\pind \sort{plants} and
+\pind \sort{animals} --
+      including \sfsl{humans}.
+\afslut
+\afslut
+\pind \sfsl{Perdurants} are here considered to be
+\begynd
+\pind \sfsl{actions}, 
+\pind \sfsl{events} and 
+\pind \sfsl{behaviours}.
+\afslut
+%\afslut
+\afslut}
+
+\newcommand{\begyndmultii}{\pos{}{\begin{multicols}{2}}}
+\newcommand{\slutmultii}{\pos{}{\end{multicols}}}
+\newcommand{\begundmultiii}{\pos{}{\begin{multicols}{3}}}
+\newcommand{\slutmultiii}{\pos{}{\end{multicols}}}
+
+\newcommand{\rsltext}{\texttt{RSL}\kw{-Text}}
+\newcommand{\rslplustext}{\texttt{RSL}$^{+}$\kw{-Text}}
+
+\newcommand{\primerdefn}[2]{
+\begin{primerdefinition} %CHANGE 10.4.23
+  \brcolor{#1}\label{def:#1}%\label{primer:#1}
+  \pos{\index{defind}{#1}\index{pdefind}{#1}}{}
+  \pos{\index{defind}{\arabic{primerdefinition}. #1}}{} 
+{\rm #2}
+\vspace*{1.2mm}
+\end{primerdefinition}}
+
+
+\newcommand{\newpdefn}[1]{
+\begin{primerdefinition} %CHANGE 10.4.23.
+  \brcolor{#1}\label{def:#1}%\label{primer:#1} 
+\end{primerdefinition}}
+
+\newcommand{\newestpdefn}[2]{
+\begin{primerdefinition} %CHANGE 10.4.23
+  \brcolor{#1}\label{def:#1}%\label{primer:#1}
+  #2
+\end{primerdefinition}}
+
+
+\newcommand{\term}[2]{\item[\sort{#1:}] #2}
+
+\newcommand{\wiki}{{\tt [Wikipedia]}}
+
+\newcommand{\startref}[1]{\ref{#1} [starting Page\,\pageref{#1}]}
+
+\newcommand{\begyndbegin}{
+   \renewcommand{\begynd}{\pos{\begin{itemize}}{\begin{itemize}}}
+   \renewcommand{\pind}{\pos{\item}{\item}}
+   \renewcommand{\afslut}{\pos{\end{itemize}}{\end{itemize}}}}
+
+
+\newcommand{\beginbegynd}{
+   \renewcommand{\begynd}{\pos{}{\begin{itemize}}}
+   \renewcommand{\pind}{\pos{}{\item}}
+   \renewcommand{\afslut}{\pos{}{\end{itemize}}}}
+
+
+\newcommand{\kapabs}[1]{%
+\vspace*{-3cm}
+\begin{quote}
+\sf     
+\noindent
+\sl{#1}\rm
+\end{quote}
+\vspace*{1cm}
+}
+%%  LocalWords:  RSL defind

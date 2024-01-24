@@ -1,0 +1,53 @@
+
+\documentclass[twoside,10pt]{article}
+
+\usepackage{a4wide}
+
+\title{README fpr Primer}
+\author{Dines Bj{\o}rner\\ 
+ Fredsvej 11, DK-2840 Holte, Danmark\\ 
+ E--Mail: bjorner@gmail.com, URL: www.imm.dtu.dk/\~{}db}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{verbatim}
+
+1. The root file is primer.tex .
+
+2. Before compilation, first delete all *.toc 
+   files (auxiliary files for creating Table of Contents),
+   and all *.mtc* files (auxiliary files for 
+   creating Mini Table of Contents in each Chapter). 
+   Else they can cause strange LaTeX compilation errors.
+
+3. After performing Step 2, primer.pdf can be compiled 
+   from the following:
+
+     xelatex primer
+     xelatex primer
+     bibtex primer
+     xelatex primer
+     xelatex primer
+
+   Note that we use xelatex instead of pdflatex, 
+   as some of the source files contain Unicode characters.
+   The above commands are tested with the 
+   TeX Live 2023 Distribution.
+   
+4. On indices: At present, the indices are generated 
+   using the 'multind' package and
+   that entails running 'makeindex' multiple times, 
+   one for each list of indices.
+   For the translation, one may consider switching 
+   to 'imakeidx' package (or something similar),
+   which requires only one run of 'makeindex'. 
+   If switching to 'imakeidx' is desired,
+   the \indexprologue command from the 'imakeidx' 
+   package will be handy for inserting texts
+   between the index header and the index entries, 
+   as needed in this Primer.
+\end{verbatim}
+
+\end{document}

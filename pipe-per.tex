@@ -1,0 +1,500 @@
+
+\nbbbbb{Perdurants}\label{pipe:Perdurants}\tehran{Perdurants}{pipe:Perdurants}
+
+We follow the ontology of Fig.\,\vref{anoipilisy}, the
+right-hand dashed box labeled \sfsl{Perdurants} and the right-hand
+vertical and horisontal lines. 
+
+\nbbbb{State}\label{tehran:State}\tehran{State}{tehran:State}
+
+\begynd
+\pind We introduce concepts of \sfsl{manifest} and \sfsl{structure}
+      endurants.
+\begynd
+\pind The former are such compound endurants (Cartesians of sets) \nyl
+      to which we ascribe internal qualities;
+\pind the latter are such compound endurants (Cartesians of sets) \nyl
+      to which we \sort{do not} ascribe internal qualities.
+\afslut
+\pind The distinction is pragmatic.
+\afslut
+
+%\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{pls-state} For any given pipeline system we suggest the state to consist of
+      the manifest endurants of  all
+      its non-plate units.
+\savei\end{enumerate}
+%\RSLatex
+%value
+%&\ref{pls-state}.&   `sigma = obs_Us(pls)&\ipst{$\sigma$}{pls-state}&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{pls-state}.\ \ \ $\sigma$ {\EQ} obs\_Us(pls)\ipst{$\sigma$}{pls-state}
+\ep
+
+\nbbbb{Channel}\label{tehran:Channel}\tehran{Channel}{tehran:Channel}
+
+\begin{enumerate}\setei
+\item \label{pls-channel} There is a [global] array channel \nyl
+                          indexed by a ``set pair'' of distinct
+                          manifest endurant part identifiers --
+                          signifying the possibility of the
+                          syncharonisation and communication between
+                          any pair of pipeline units and between these
+                          and the pipeline system, cf.\ last, i.e., bottom-most
+                          diagram of Fig.\,\vref{pi:pl.dia1}.
+\savei\end{enumerate}
+%\RSLatex
+%channel&\ipch{ch}{pls-channel}&
+%&\ref{pls-channel}.&   { ch[{i,j}] | {i,j}:(PLSI|UI) :- {i,j}<<=`sigma&$_{id}$& } 
+%\endRSLatex 
+\bp
+\kw{channel}\ipch{ch}{pls-channel}\\
+\ref{pls-channel}.\ \ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}i,j{\RBRACE}{\RBRACKET} {\BAR} {\LBRACE}i,j{\RBRACE}:(PLSI{\BAR}UI) {\RDOT} {\LBRACE}i,j{\RBRACE}{\SUBSETEQ}$\sigma$$_{id}$ {\RBRACE} 
+\ep
+
+\nbbbb{Actions}\label{tehran:Actions}\tehran{Action}{tehran:Actions}\LLLL
+
+\begynd
+\pind These are, informally, some of the actions of a pipeline system:
+\afslut
+\begin{enumerate}\setei
+\item \label{pls-act-00} \sort{start pumping}: from a state of not
+  pumping to a state of pumping ``at full blast\,!''.\footnote{\LLLL -- \label{pls-fn-pump}
+  that is, we simplify, just for the sake of illustration, and do not
+  consider ``intermediate'' states of pumping.}
+\item \label{pls-act-10} \sort{stop pumping}: from  a state of (full) pumping
+  to a state of no pumping at all.
+\item \label{pls-act-20} \sort{open valve}: from a state of a fully
+  closed valve to a state of fully open valve.\footnote{\LLLL -- cf.\,Footnote\,\vref{pls-fn-pump}.}
+\item \label{pls-act-30} \sort{close valve}: from a state of a fully opened
+  valve to a state of fully closed valve.
+\savei\end{enumerate}
+
+\noindent
+\begynd
+\pind We shall not define these actions in this paper.
+\pind But they will be referred to in the \sfsl{pipeline\_system}
+      (Items\,\ref{beh-def-1300}, \ref{beh-def-1400}, \ref{beh-def-1450}), the
+      \sfsl{pump} (Items\,\ref{beh-def-2300}, \ref{beh-def-2400})
+      and the \sfsl{valve} (Items\,\ref{beh-def-3300}, \ref{beh-def-3400}) behaviours. 
+\afslut
+
+\nbbbb{Behaviours}\label{tehran:Behaviours}\tehran{Behaviour}{tehran:Behaviour}
+
+\bbb{Behaviour Kinds}
+
+\begynd
+\pind There are eight kinds of behaviours:
+\afslut
+\begin{multicols}{2}
+\begin{enumerate}\setei
+\item \label{ls-beh-010} the \dbeat{[overall]} pipeline system
+  behaviour;\footnote{This ``PLS'' behaviour summarises the either global,
+  i.e., \sfsl{SCADA}\footnotemark-like behaviour, or the fully distributed, for example, manual,
+  human-operated behaviour of the monitoring and control of the entire
+  pipeline system.}\footnotetext{Supervisory Control And Data Acquisition}
+\item \label{ls-beh-020} the [generic] well behaviour,
+\item \label{ls-beh-030} the [generic] pipe  behaviour,
+\item \label{ls-beh-040} the [generic] pump  behaviour,
+\item \label{ls-beh-050} the [generic] valve  behaviour,
+\item \label{ls-beh-060} the [generic] fork  behaviour,
+\item \label{ls-beh-070} the [generic] join  behaviour,
+\item \label{ls-beh-080} the [generic] sink  behaviour.
+\savei\end{enumerate}
+\end{multicols}
+
+\nbbb{Behaviour Signatures}\label{pipe:Behaviour Signatures}
+\tehran{Behaviour!Signature}{pipe:Behaviour Signatures}%
+ \tehran{Signature!Behaviour}{pipe:Behaviour Signatures}%
+
+\begin{enumerate}\setei
+\item \label{ls-beh-110} The \sfsl{pipeline\_system} behaviour, \sfsl{pls}, 
+\item \label{ls-beh-120} The \sfsl{well} behaviour signature lists the
+  unique well identifier, the well mereology, the static well
+  attributes, the monitorable well attributes, the programmable well
+  attributes and the channels over which the well [may] interact with
+  the pipeline system and a pipeline unit.
+\item \label{ls-beh-130} The \sfsl{pipe} behaviour signature lists the
+  unique pipe identifier, the pipe mereology, the static pipe
+  attributes, the monitorable pipe attributes, the programmable pipe
+  attributes and the channels over which the pipe [may] interact with
+  the pipeline system and its two neighbouring pipeline units.
+\mnewfoil
+\item \label{ls-beh-140} The \sfsl{pump} behaviour signature lists the
+  unique pump identifier, the pump mereology, the static pump
+  attributes, the monitorable pump attributes, the programmable pump
+  attributes and the channels over which the pump [may] interact with
+  the pipeline system and its two neighbouring pipeline units. 
+\item \label{ls-beh-150} The \sfsl{valve} behaviour signature lists the
+  unique valve identifier, the valve mereology, the static valve
+  attributes, the monitorable valve attributes, the programmable valve
+  attributes and the channels over which the valve [may] interact with
+  the pipeline system and its two neighbouring pipeline units.
+\mnewfoil
+\item \label{ls-beh-160} The \sfsl{fork} behaviour signature lists the
+  unique fork identifier, the fork mereology, the static fork
+  attributes, the monitorable fork attributes, the programmable fork
+  attributes and the channels over which the fork [may] interact with
+  the pipeline system and its three neighbouring pipeline units.
+\item \label{ls-beh-170} The \sfsl{join} behaviour signature lists the
+  unique join identifier, the join mereology, the static join
+  attributes, the monitorable join attributes, the programmable join
+  attributes and the channels over which the join [may] interact with
+  the pipeline system and its three neighbouring pipeline units.
+\mnewfoil
+\item \label{ls-beh-180} The \sfsl{sink} behaviour signature lists the
+  unique sink identifier, the sink mereology, the static sing
+  attributes, the monitorable sing attributes, the programmable sink
+  attributes and the channels over which the sink [may] interact with
+  the pipeline system and its one or more pipeline units.
+\savei\end{enumerate}
+\mnewfoil
+\pos{}{\vspace*{-10mm}}
+%\RSLatex
+%value
+%&\ref{ls-beh-110}.&  pls: plso:PLSI -> pls_mer:PLS_Mer -> PLS_Sta -> PLS_Mon ->&\ipbs{pls}{ls-beh-110}&
+%&\ref{ls-beh-110}.&                            PLS_Prg -> { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit   
+%&\ref{ls-beh-120}.&  well: wid:WI -> well_mer:MER -> Well_Sta -> Well_mon ->&\ipbs{well}{ls-beh-120}&  
+%&\ref{ls-beh-120}.&                            Well_Prgr ->  { ch[{plsi,ui}] | wi:WI :- ui isin `sigma&$_{ui}$& } Unit 
+%&\ref{ls-beh-130}.&  `pi&ipe&: UI -> pipe_mer:MER -> Pipe_Sta -> Pipe_mon ->&\ipbs{pipe}{ls-beh-130}&     
+%&\ref{ls-beh-130}.&                            Pipe_Prgr ->  { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit 
+%&\ref{ls-beh-140}.&  pump: pi:UI -> pump_mer:MER -> Pump_Sta -> Pump_Mon ->&\ipbs{pump}{ls-beh-140}&     
+%&\ref{ls-beh-140}.&                            Pump_Prgr ->  { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit 
+%&\ref{ls-beh-150}.&  valve: vi:UI -> valve_mer:MER -> Valve_Sta -> Valve_Mon -> &\ipbs{valve}{ls-beh-150}&    
+%&\ref{ls-beh-150}.&                            Valve_Prgr ->  { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit 
+%&\ref{ls-beh-160}.&  fork: fi:FI -> fork_mer:MER -> Fork_Sta -> Fork_Mon ->  &\ipbs{fork}{ls-beh-160}&   
+%&\ref{ls-beh-160}.&                             Fork_Prgr ->  { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit 
+%&\ref{ls-beh-170}.&  join: ji:JI -> join_mer:MER -> Join_Sta -> Join_Mon -> &\ipbs{join}{ls-beh-170}&    
+%&\ref{ls-beh-170}.&                            Join_Prgr ->  { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit 
+%&\ref{ls-beh-180}.&  sink: si:SI -> sink_mer:MER -> Sink_Sta -> Sink_Mon -> &\ipbs{sink}{ls-beh-180}&    
+%&\ref{ls-beh-180}.&                            Sink_Prgr ->  { ch[{plsi,ui}] | ui:UI :- ui isin `sigma&$_{ui}$& } Unit  
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{ls-beh-110}.\ \ pls: plso:PLSI {\RIGHTARROW} pls\_mer:PLS\_Mer {\RIGHTARROW} PLS\_Sta {\RIGHTARROW} PLS\_Mon {\RIGHTARROW}\ipbs{pls}{ls-beh-110}\\
+\ref{ls-beh-110}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PLS\_Prg {\RIGHTARROW} {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit}\ \ \ \\
+\ref{ls-beh-120}.\ \ well: wid:WI {\RIGHTARROW} well\_mer:MER {\RIGHTARROW} Well\_Sta {\RIGHTARROW} Well\_mon {\RIGHTARROW}\ipbs{well}{ls-beh-120}\ \ \\
+\ref{ls-beh-120}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Well\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} wi:WI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit} \\
+\ref{ls-beh-130}.\ \ $\pi$ipe: UI {\RIGHTARROW} pipe\_mer:MER {\RIGHTARROW} Pipe\_Sta {\RIGHTARROW} Pipe\_mon {\RIGHTARROW}\ipbs{pipe}{ls-beh-130}\ \ \ \ \ \\
+\ref{ls-beh-130}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pipe\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit} \\
+\ref{ls-beh-140}.\ \ pump: pi:UI {\RIGHTARROW} pump\_mer:MER {\RIGHTARROW} Pump\_Sta {\RIGHTARROW} Pump\_Mon {\RIGHTARROW}\ipbs{pump}{ls-beh-140}\ \ \ \ \ \\
+\ref{ls-beh-140}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pump\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit} \\
+\ref{ls-beh-150}.\ \ valve: vi:UI {\RIGHTARROW} valve\_mer:MER {\RIGHTARROW} Valve\_Sta {\RIGHTARROW} Valve\_Mon {\RIGHTARROW} \ipbs{valve}{ls-beh-150}\ \ \ \ \\
+\ref{ls-beh-150}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Valve\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit} \\
+\ref{ls-beh-160}.\ \ fork: fi:FI {\RIGHTARROW} fork\_mer:MER {\RIGHTARROW} Fork\_Sta {\RIGHTARROW} Fork\_Mon {\RIGHTARROW}\ \ \ipbs{fork}{ls-beh-160}\ \ \ \\
+\ref{ls-beh-160}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fork\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit} \\
+\ref{ls-beh-170}.\ \ join: ji:JI {\RIGHTARROW} join\_mer:MER {\RIGHTARROW} Join\_Sta {\RIGHTARROW} Join\_Mon {\RIGHTARROW} \ipbs{join}{ls-beh-170}\ \ \ \ \\
+\ref{ls-beh-170}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Join\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit} \\
+\ref{ls-beh-180}.\ \ sink: si:SI {\RIGHTARROW} sink\_mer:MER {\RIGHTARROW} Sink\_Sta {\RIGHTARROW} Sink\_Mon {\RIGHTARROW} \ipbs{sink}{ls-beh-180}\ \ \ \ \\
+\ref{ls-beh-180}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sink\_Prgr {\RIGHTARROW}\ \ {\LBRACE} ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} {\BAR} ui:UI {\RDOT} ui {\ISIN} $\sigma$$_{ui}$ {\RBRACE} \kw{Unit}\ \ 
+\ep
+
+\bb{Behaviour Definitions}\label{pipe:Behaviour Definitions}
+\tehran{Behaviour!Definitions}{pipe:Behaviour Definitions}%
+ \tehran{Definitions!Behaviour}{pipe:Behaviour Definitions}%
+
+\begynd
+\pind We show the definition of only three behaviours:
+\afslut
+\begin{itemize}
+\item  the \bbcolor{pipe\_line\_system} behaviour,
+\item  the \bbcolor{pump} behaviour and
+\item  the \bbcolor{valve} behaviour.
+\end{itemize}
+
+\nbb{The Pipeline System Behaviour}
+
+\begin{enumerate}\setei
+\item \label{beh-def-1000} The pipeline system behaviour
+\item \label{beh-def-1100} calculates, based on its programmable
+                           state, its next move;  
+\item \label{beh-def-1200} if that move is [to be] an action on a named 
+\begin{enumerate}
+\item \label{beh-def-1300} pump, whether to start or stop
+                           pumping, then the named pump is so
+                           informed, whereupon the  pipeline system
+                           behaviour 
+                           resumes in the new pipeline state; or
+\item \label{beh-def-1400} valve, whether to open or close
+                           the valve, then the named valve is so
+                           informed,  whereupon the  pipeline system
+                           behaviour 
+                           resumes in the new pipeline state; or
+\item \label{beh-def-1450} unit, to collect its
+                           monitorable attribute values for
+                           monitoring,  whereupon the  pipeline system
+                           behaviour 
+                           resumes in the further updated pipeline state; 
+\item \label{beh-def-1500} et cetera;
+\end{enumerate}
+\savei\end{enumerate}
+\mnewfoil
+
+%\RSLatex
+%value
+%&\ref{beh-def-1000}.&   pls(plsi)(uis)(pls_msta)(pls_mon)(pls_`omega) is&\ipbd{pls}{beh-def-1000}&
+%&\ref{beh-def-1100}.&     let (to_do,pls_`omega&$'$&) = calculate_next_move(plsi,pls_mer,pls_msta,pls_mon,pls_prgr) in
+%&\ref{beh-def-1200}.&     case to_do of
+%&\ref{beh-def-1300}&       mk_Pump(pi,`alpha) -> 
+%&\ref{beh-def-1300}&             ch[{plsi,pi}] ! `alpha &\sort{assert:}& `alpha isin {&\sort{stop\_pumping,pump}&};
+%&\ref{beh-def-1300}&             pls(plsi)(pls_mer)(pls_msta)(pls_mon)(pls_`omega&$'$&),
+%&\ref{beh-def-1400}&       mk_Valve(vi,`alpha) ->
+%&\ref{beh-def-1400}&             ch[{plsi,vi}] ! `alpha &\sort{assert:}& `alpha isin {&\sort{open\_valve,close\_valve}&};
+%&\ref{beh-def-1400}&             pls(plsi)(pls_mer)(pls_msta)(pls_mon)(pls_`omega&$'$&),
+%&\ref{beh-def-1450}&       mk_Unit(ui,&\sort{monitor}&) ->
+%&\ref{beh-def-1450}&             ch[{plsi,ui}] ! &\sort{monitor}&;
+%&\ref{beh-def-1450}&             pls(plsi)(pls_mer)(pls_msta)(pls_mon)(update_pls_`omega(ch[{plsi,ui}] ?,ui)(pls_`omega&$'$&)),
+%&\ref{beh-def-1500}&       ... end
+%&\ref{beh-def-1000}&       end
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{beh-def-1000}.\ \ \ pls(plsi)(uis)(pls\_msta)(pls\_mon)(pls\_$\omega$) {\IS}\ipbd{pls}{beh-def-1000}\\
+\ref{beh-def-1100}.\ \ \ \ \ \kw{let} (to\_do,pls\_$\omega$$'$) {\EQ} calculate\_next\_move(plsi,pls\_mer,pls\_msta,pls\_mon,pls\_prgr) \kw{in}\\
+\ref{beh-def-1200}.\ \ \ \ \ \kw{case} to\_do \kw{of}\\
+\ref{beh-def-1300}\ \ \ \ \ \ \ mk\_Pump(pi,$\alpha$) {\RIGHTARROW} \\
+\ref{beh-def-1300}\ \ \ \ \ \ \ \ \ \ \ \ \ ch{\LBRACKET}{\LBRACE}plsi,pi{\RBRACE}{\RBRACKET} ! $\alpha$ \sort{assert:} $\alpha$ {\ISIN} {\LBRACE}\sort{stop\_pumping,pump}{\RBRACE};\\
+\ref{beh-def-1300}\ \ \ \ \ \ \ \ \ \ \ \ \ pls(plsi)(pls\_mer)(pls\_msta)(pls\_mon)(pls\_$\omega$$'$),\\
+\ref{beh-def-1400}\ \ \ \ \ \ \ mk\_Valve(vi,$\alpha$) {\RIGHTARROW}\\
+\ref{beh-def-1400}\ \ \ \ \ \ \ \ \ \ \ \ \ ch{\LBRACKET}{\LBRACE}plsi,vi{\RBRACE}{\RBRACKET} ! $\alpha$ \sort{assert:} $\alpha$ {\ISIN} {\LBRACE}\sort{open\_valve,close\_valve}{\RBRACE};\\
+\ref{beh-def-1400}\ \ \ \ \ \ \ \ \ \ \ \ \ pls(plsi)(pls\_mer)(pls\_msta)(pls\_mon)(pls\_$\omega$$'$),\\
+\ref{beh-def-1450}\ \ \ \ \ \ \ mk\_Unit(ui,\sort{monitor}) {\RIGHTARROW}\\
+\ref{beh-def-1450}\ \ \ \ \ \ \ \ \ \ \ \ \ ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} ! \sort{monitor};\\
+\ref{beh-def-1450}\ \ \ \ \ \ \ \ \ \ \ \ \ pls(plsi)(pls\_mer)(pls\_msta)(pls\_mon)(update\_pls\_$\omega$(ch{\LBRACKET}{\LBRACE}plsi,ui{\RBRACE}{\RBRACKET} ?,ui)(pls\_$\omega$$'$)),\\
+\ref{beh-def-1500}\ \ \ \ \ \ \ {\DOTDOTDOT} \kw{end}\\
+\ref{beh-def-1000}\ \ \ \ \ \ \ \kw{end}
+\ep
+
+\noindent\LLLL
+\begynd
+\pind We leave it to the reader to define the
+      \textsf{calculate\_next\_move} function\,!
+\afslut
+
+\nbb{The Pump Behaviours}\HHHH
+
+\begin{enumerate}\setei
+\item \label{beh-def-2000} The [generic] pump behaviour internal
+                           non-deterministically alternates between 
+\item \label{beh-def-2100} doing own work (...),  or
+\item \label{beh-def-2200} accepting pump directives from the pipeline
+                           behaviour.
+\begin{enumerate} 
+\item \label{beh-def-2300} If the directive is either to start or stop
+  pumping, then that is what happens -- whereupon the pump behaviour
+  resumes in the new pumping state.
+\item \label{beh-def-2400} If the directive requests the values of all
+  monitorable attributes, then these are \sfsl{gathered}, communicated
+  to the pipeline system behaviour -- whereupon the pump behaviour
+  resumes in the ``old'' state. 
+\end{enumerate} 
+\savei\end{enumerate}
+\mnewfoil
+%\RSLatex
+%value
+%&\ref{beh-def-2000}.&   pump(`pi)(pump_mer)(pump_sta)(pump_mon)(pump_prgr) is&\ipbd{pump}{beh-def-2000}&   
+%&\ref{beh-def-2100}.&      ...
+%&\ref{beh-def-2200}.&     |^| let `alpha = ch[{plsi,`pi}] ? in
+%&\ref{beh-def-2200}.&         case `alpha of
+%&\ref{beh-def-2300}.&             &\sort{stop\_pumping}& \/ &\sort{pump}&
+%&\ref{beh-def-2300}.&                  -> pump(`pi)(pump_mer)(pump_sta)(pump_mon)(`alpha)&\footnotemark& end, 
+%&\ref{beh-def-2400}.&             &\sort{monitor}&  
+%&\ref{beh-def-2400}.&                  -> let mvs = gather_monitorable_values(`pi,pump_mon) in
+%&\ref{beh-def-2400}.&                     ch[{plsi,`pi}] ! mvs;
+%&\ref{beh-def-2400}.&                     pump(`pi)(pump_mer)(pump_sta)(pump_mon)(pump_prgr) end
+%&\ref{beh-def-2200}.&         end
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{beh-def-2000}.\ \ \ pump($\pi$)(pump\_mer)(pump\_sta)(pump\_mon)(pump\_prgr) {\IS}\ipbd{pump}{beh-def-2000}\ \ \ \\
+\ref{beh-def-2100}.\ \ \ \ \ \ {\DOTDOTDOT}\\
+\ref{beh-def-2200}.\ \ \ \ \ {\NONDETCHOICE} \kw{let} $\alpha$ {\EQ} ch{\LBRACKET}{\LBRACE}plsi,$\pi${\RBRACE}{\RBRACKET} ? \kw{in}\\
+\ref{beh-def-2200}.\ \ \ \ \ \ \ \ \ \kw{case} $\alpha$ \kw{of}\\
+\ref{beh-def-2300}.\ \ \ \ \ \ \ \ \ \ \ \ \ \sort{stop\_pumping} {\VEE} \sort{pump}\\
+\ref{beh-def-2300}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\RIGHTARROW} pump($\pi$)(pump\_mer)(pump\_sta)(pump\_mon)($\alpha$)\footnotemark \kw{end}, \\
+\ref{beh-def-2400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \sort{monitor}\ \ \\
+\ref{beh-def-2400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\RIGHTARROW} \kw{let} mvs {\EQ} gather\_monitorable\_values($\pi$,pump\_mon) \kw{in}\\
+\ref{beh-def-2400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ch{\LBRACKET}{\LBRACE}plsi,$\pi${\RBRACE}{\RBRACKET} ! mvs;\\
+\ref{beh-def-2400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pump($\pi$)(pump\_mer)(pump\_sta)(pump\_mon)(pump\_prgr) \kw{end}\\
+\ref{beh-def-2200}.\ \ \ \ \ \ \ \ \ \kw{end}
+\ep
+\footnotetext{\LLLL Updating the programmable pump state to either
+             \sort{stop\_pumping} or \sort{pump} shall here be
+             understood to mean that the pump is set to not pump,
+             respectively to pump.}
+
+\noindent
+\begynd
+\pind We leave it to the reader to define the
+      \textsf{gather\_monitorable\_values} function.
+\afslut
+
+\nbb{The Valve Behaviours}
+
+\begin{enumerate}\setei
+\item \label{beh-def-3000} The [generic] valve behaviour internal
+                           non-deterministically alternates between
+\item \label{beh-def-3100} doing own work (...), or
+\item \label{beh-def-3200} accepting valve directives from the
+                           pipeline system.
+\begin{enumerate} 
+\item \label{beh-def-3300} If the directive is either to open or close
+  the valve, then that is what happens -- whereupon the pump behaviour
+  resumes in the new valve state.
+\item \label{beh-def-3400} If the directive requests the values of all
+  monitorable attributes, then these are \sfsl{gathered}, communicated
+  to the pipeline system behaviour -- whereupon the valve behaviour
+  resumes in the ``old'' state. 
+\end{enumerate}
+\savei\end{enumerate}
+
+\mnewfoil
+%\RSLatex
+%value
+%&\ref{beh-def-3000}.&   valve(vi)(valv_mer)(valv_sta)(valv_mon)(valv_prgr) is &\ipbd{valve}{beh-def-3000}&  
+%&\ref{beh-def-3100}.&      ...
+%&\ref{beh-def-3200}.&     |^| let `alpha = ch[{plsi,`pi}] ? in
+%&\ref{beh-def-3200}.&         case `alpha of
+%&\ref{beh-def-3300}.&             &\sort{open\_valve}& \/ &\sort{close\_valve}&
+%&\ref{beh-def-3300}.&                  -> valve(vi)(val_mer)(val_sta)(val_mon)(`alpha)&\footnotemark& end, 
+%&\ref{beh-def-3400}.&             &\sort{monitor}&  
+%&\ref{beh-def-3400}.&                  -> let mvs = gather_monitorable_values(vi,val_mon) in
+%&\ref{beh-def-3400}.&                     ch[{plsi,`pi}] ! (vi,mvs);
+%&\ref{beh-def-3400}.&                     valve(vi)(val_mer)(val_sta)(val_mon)(val_prgr) end
+%&\ref{beh-def-3200}.&         end
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{beh-def-3000}.\ \ \ valve(vi)(valv\_mer)(valv\_sta)(valv\_mon)(valv\_prgr) {\IS} \ipbd{valve}{beh-def-3000}\ \ \\
+\ref{beh-def-3100}.\ \ \ \ \ \ {\DOTDOTDOT}\\
+\ref{beh-def-3200}.\ \ \ \ \ {\NONDETCHOICE} \kw{let} $\alpha$ {\EQ} ch{\LBRACKET}{\LBRACE}plsi,$\pi${\RBRACE}{\RBRACKET} ? \kw{in}\\
+\ref{beh-def-3200}.\ \ \ \ \ \ \ \ \ \kw{case} $\alpha$ \kw{of}\\
+\ref{beh-def-3300}.\ \ \ \ \ \ \ \ \ \ \ \ \ \sort{open\_valve} {\VEE} \sort{close\_valve}\\
+\ref{beh-def-3300}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\RIGHTARROW} valve(vi)(val\_mer)(val\_sta)(val\_mon)($\alpha$)\footnotemark \kw{end}, \\
+\ref{beh-def-3400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \sort{monitor}\ \ \\
+\ref{beh-def-3400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\RIGHTARROW} \kw{let} mvs {\EQ} gather\_monitorable\_values(vi,val\_mon) \kw{in}\\
+\ref{beh-def-3400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ch{\LBRACKET}{\LBRACE}plsi,$\pi${\RBRACE}{\RBRACKET} ! (vi,mvs);\\
+\ref{beh-def-3400}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valve(vi)(val\_mer)(val\_sta)(val\_mon)(val\_prgr) \kw{end}\\
+\ref{beh-def-3200}.\ \ \ \ \ \ \ \ \ \kw{end}
+\ep
+\footnotetext{\LLLL Updating the programmable valve state to either
+             \sort{open\_valve} or \sort{close\_valve} shall here be
+             understood to mean that the valve is set to open,
+             respectively to closed position.}
+
+\nbbb{Sampling Monitorable Attribute Values}
+
+\begynd
+\pind Static and programmable attributes are, as we have seen, \nyl
+      \sfsl{passed by value} to behaviours.
+\pind Monitorable attributes ``surreptitiously'' change their values \nyl
+      so, as a technical point, these are \sfsl{passed by reference} --
+\pind by \sfsl{passing attribute type names}. 
+\afslut
+
+\begin{enumerate}\setei
+\item \label{mon-0000} From the name, $\eta{A}$, of a monitorable attribute and
+  \nyl the unique identifier, $u_i$,  of the part having the named monitorable
+  attribute \nyl one can then, ``dynamically'', ``on-the-fly'', \nyl
+  as the part behaviour ``moves-on'', retrieve the value of the
+  monitorable attribute.  This can be illustrated as follows:
+\item \label{mon-0100} The unique identifier $u_i$ is used in order to
+  retrieve, from the global parts state, $\sigma$, that identified
+  part, $p$.  
+\item \label{mon-0200} Then \textsf{attr\_A} is applied to $p$.
+\savei\end{enumerate}
+\mnewfoil
+
+%\RSLatex
+%value 
+%&\ref{mon-0000}.&   retr_U: UI -> `Sigma -> U&\ipfu{retr\_U}{mon-0000}&
+%&\ref{mon-0000}.&   retr_U(ui)(`sigma) is let u:U :- u isin `sigma/\uid_U(u)=ui in u end
+%&\ref{mon-0100}.&   retr_AttrVal: UI >< `eta&A& -> `Sigma -> A&\ipfu{retr\_AttrVal}{mon-0100}&
+%&\ref{mon-0200}.&   retr_AttrVal(ui)(`eta&A&)(`sigma) is attr_A(retr_U(ui)(`sigma))   
+%\endRSLatex
+\bp
+\kw{value} \\
+\ref{mon-0000}.\ \ \ retr\_U: UI {\RIGHTARROW} $\Sigma$ {\RIGHTARROW} U\ipfu{retr\_U}{mon-0000}\\
+\ref{mon-0000}.\ \ \ retr\_U(ui)($\sigma$) {\IS} \kw{let} u:U {\RDOT} u {\ISIN} $\sigma${\WEDGE}uid\_U(u){\EQ}ui \kw{in} u \kw{end}\\
+\ref{mon-0100}.\ \ \ retr\_AttrVal: UI {\TIMES} $\eta$A {\RIGHTARROW} $\Sigma$ {\RIGHTARROW} A\ipfu{retr\_AttrVal}{mon-0100}\\
+\ref{mon-0200}.\ \ \ retr\_AttrVal(ui)($\eta$A)($\sigma$) {\IS} attr\_A(retr\_U(ui)($\sigma$))\ \ \ 
+\ep
+
+\noindent
+\begynd
+\pind \textsf{retr\_AttrVal(...)(...)(...)} can now be applied in the 
+      body of the behaviour definitions, for example in
+      \textsf{gather\_monitorable\_values}. 
+\afslut
+
+\nbbb{System Initialisation}\label{pipe:System Initialisation}
+
+\begynd
+\pind System initialisation means to ``morph'' all manifest parts
+\begynd
+\pind into their respective behaviours,
+\pind initialising them with their respective attribute values.
+\afslut
+\afslut
+
+\begin{multicols}{2}
+\begin{enumerate}\setei
+\item \label{pls-init-1000}  The \sfsl{pipeline system} behaviour is
+                             initialised and ``put'' in parallel with
+                             the parallel compositions of 
+\item \label{pls-init-1100}  all initialised \sfsl{well},
+\item \label{pls-init-1200}  all initialised \sfsl{pipe},
+\item \label{pls-init-1300}  all initialised \sfsl{pump},
+\item \label{pls-init-1400}  all initialised \sfsl{valve},
+\item \label{pls-init-1500}  all initialised \sfsl{fork},
+\item \label{pls-init-1600}  all initialised \sfsl{join} and
+\item \label{pls-init-1700}  all initialised \sfsl{sink}
+                             behaviours.\footnote{Plates are treated
+                             as are structures, i.e., not ``behaviourised''\,!}
+\savei\end{enumerate}
+\end{multicols}\footnotesize\mnewfoil\LLLL
+%\RSLatex
+%value
+%&\ref{pls-init-1000}.&   pls(uid_PLS(pls))(mereo_PLS(pls))((pls))((pls))((pls)) &\ipbi{initialisation}{pls-init-1000}{pls-init-1700}&
+%&\ref{pls-init-1100}.&  || || { well(uid_U(we))(mereo_U(we))(sta_A_We(we))(mon_A_We(we))(prg_A_We(we)) | we:Well :- w isin `sigma }
+%&\ref{pls-init-1200}.&  || || { pipe(uid_U(pi))(mereo_U(pi))(sta_A_Pi(pi))(mon_A_Pi(pi))(prg_A_Pi(pi)) | pi:Pi :- pi isin `sigma } 
+%&\ref{pls-init-1300}.&  || || { pump(uid_U(pu))(mereo_U(pu))(sta_A_Pu(pu))(mon_A_Pu(pu))(prg_A_Pu(pu)) | pu:Pump :- pu isin `sigma }  
+%&\ref{pls-init-1400}.&  || || { valv(uid_U(va))(mereo_U(va))(sta_A_Va(va))(mon_A_Va(va))(prg_A_Va(va)) | va:Well :- va isin `sigma }  
+%&\ref{pls-init-1500}.&  || || { fork(uid_U(fo))(mereo_U(fo))(sta_A_Fo(fo))(mon_A_Fo(fo))(prg_A_Fo(fo)) | fo:Fork :- fo isin `sigma }  
+%&\ref{pls-init-1600}.&  || || { join(uid_U(jo))(mereo_U(jo))(sta_A_Jo(jo))(mon_A_J(jo))(prg_A_J(jo)) | jo:Join :- jo isin `sigma }   
+%&\ref{pls-init-1700}.&  || || { sink(uid_U(si))(mereo_U(si))(sta_A_Si(si))(mon_A_Si(si))(prg_A_Si(si)) | si:Sink :- si isin `sigma }
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{pls-init-1000}.\ \ \ pls(uid\_PLS(pls))(mereo\_PLS(pls))((pls))((pls))((pls)) \ipbi{initialisation}{pls-init-1000}{pls-init-1700}\\
+\ref{pls-init-1100}.\ \ {\PARL} {\PARL} {\LBRACE} well(uid\_U(we))(mereo\_U(we))(sta\_A\_We(we))(mon\_A\_We(we))(prg\_A\_We(we)) {\BAR} we:Well {\RDOT} w {\ISIN} $\sigma$ {\RBRACE}\\
+\ref{pls-init-1200}.\ \ {\PARL} {\PARL} {\LBRACE} pipe(uid\_U(pi))(mereo\_U(pi))(sta\_A\_Pi(pi))(mon\_A\_Pi(pi))(prg\_A\_Pi(pi)) {\BAR} pi:Pi {\RDOT} pi {\ISIN} $\sigma$ {\RBRACE} \\
+\ref{pls-init-1300}.\ \ {\PARL} {\PARL} {\LBRACE} pump(uid\_U(pu))(mereo\_U(pu))(sta\_A\_Pu(pu))(mon\_A\_Pu(pu))(prg\_A\_Pu(pu)) {\BAR} pu:Pump {\RDOT} pu {\ISIN} $\sigma$ {\RBRACE}\ \ \\
+\ref{pls-init-1400}.\ \ {\PARL} {\PARL} {\LBRACE} valv(uid\_U(va))(mereo\_U(va))(sta\_A\_Va(va))(mon\_A\_Va(va))(prg\_A\_Va(va)) {\BAR} va:Well {\RDOT} va {\ISIN} $\sigma$ {\RBRACE}\ \ \\
+\ref{pls-init-1500}.\ \ {\PARL} {\PARL} {\LBRACE} fork(uid\_U(fo))(mereo\_U(fo))(sta\_A\_Fo(fo))(mon\_A\_Fo(fo))(prg\_A\_Fo(fo)) {\BAR} fo:Fork {\RDOT} fo {\ISIN} $\sigma$ {\RBRACE}\ \ \\
+\ref{pls-init-1600}.\ \ {\PARL} {\PARL} {\LBRACE} join(uid\_U(jo))(mereo\_U(jo))(sta\_A\_Jo(jo))(mon\_A\_J(jo))(prg\_A\_J(jo)) {\BAR} jo:Join {\RDOT} jo {\ISIN} $\sigma$ {\RBRACE}\ \ \ \\
+\ref{pls-init-1700}.\ \ {\PARL} {\PARL} {\LBRACE} sink(uid\_U(si))(mereo\_U(si))(sta\_A\_Si(si))(mon\_A\_Si(si))(prg\_A\_Si(si)) {\BAR} si:Sink {\RDOT} si {\ISIN} $\sigma$ {\RBRACE}
+\ep
+\normalsize\HHHH
+\noindent
+\begynd
+\pind The \textsf{sta\_..., mon\_...,} and \textsf{prg\_A...}
+      functions are defined in Items\,\vref{com-attr}.
+
+\noindent
+\pind Note: \textsf{{\PARL} {\LBRACE} f(u)(...)  {\BAR} u:U {\RDOT} u {\ISIN} {\LBRACE}{\RBRACE} {\RBRACE}} {\IS} \sort{()}.
+\afslut
+\label{tehran:Examplen}
+%%  LocalWords:  Perdurants tehran endurants Cartesians pls endurant
+%%  LocalWords:  syncharonisation PLSI UI fn behaviours Behaviour mer
+%%  LocalWords:  behaviour summarises SCADA mereology monitorable Mer
+%%  LocalWords:  neighbouring plso beh Prg plsi ui wid mon Prgr wi fi
+%%  LocalWords:  ipe FI ji JI si et cetera uis msta prgr mk sta mvs
+%%  LocalWords:  deterministically valv attr retr uid AttrVal mereo
+%%  LocalWords:  Initialisation initialisation initialising init prg
+%%  LocalWords:  initialised behaviourised pu va fo Fo jo horisontal
+%%  LocalWords:  anoipilisy

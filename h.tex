@@ -1,0 +1,1000 @@
+ 1321  cat NEWchapDomainsI.tex | more
+ 1322  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1323  emacs  
+ 1324  emacs NEWchapDomainsI.tex &
+ 1325  emacs chapDomainsIText.tex &
+ 1326  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1327  cp roads.tex roads-x.tex
+ 1328  cp roads.tex roads-u.tex
+ 1329  cp roads.tex roads-m.tex
+ 1330  cp roads.tex roads-a.tex
+ 1331  emacs roads-x.tex &
+ 1332  emacs roads-u.tex &
+ 1333  emacs roads-m.tex &
+ 1334  emacs roads-a.tex &
+ 1335  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1336  emacs chapSyntax.tex &
+ 1337  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1338  bibtex main
+ 1339  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1340  bibtex main
+ 1341  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1342  bibtex main
+ 1343  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1344  bibtex main
+ 1345  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1346  emacs SQL.tex &
+ 1347  emacs sql.tex &
+ 1348  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1349  bibtex main
+ 1350  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1351  grep undefined main.log
+ 1352  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1353  cp sql.tex reserve-sql.tex
+ 1354  emacs reserve-sql.tex &
+ 1355  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1356  latex main
+ 1357  emacs mccarthy.tex &
+ 1358  emacs landin.tex &
+ 1359  emacs scott.tex &
+ 1360  emacs plotkin.tex &
+ 1361  emacs reynolds.tex &
+ 1362  latex main
+ 1363  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1364  emacs reynolds.tex &
+ 1365  emacs plotkin.tex &
+ 1366  emacs landin.tex &
+ 1367  latex main
+ 1368  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1369  emacs scott.tex &
+ 1370  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1371  ls -l mc*
+ 1372  ls -l mc*.pdf
+ 1373  ls -l *.pdf
+ 1374  ls -l m*.pdf
+ 1375  ls -l m*.ps
+ 1376  ls ..pdf
+ 1377  ls *.pdf
+ 1378  emacs reynolds.tex &
+ 1379  emacs scott.tex &
+ 1380  emacs plotkin.tex &
+ 1381  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1382  emacs main.bbl &
+ 1383  emacs chapTypes.tex &
+ 1384  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1385  emacs main.bbl &
+ 1386  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1387  cp landin.tex temp-landin.tex
+ 1388  emacs temp-landin.tex &
+ 1389  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1390  cp landin.tex temp-landin.tex
+ 1391  emacs temp-landin.tex &
+ 1392  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1393  jobs
+ 1394  emacs landin.tex &
+ 1395  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1396  emacs mccarthy.tex &
+ 1397  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1398  emacs sql.tex &
+ 1399  latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1400  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1401  gv main.pdf &
+ 1402  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1403  gv main.pdf &
+ 1404  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1405  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1406  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1407  emacs blank.tex &
+ 1408  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1409  ls sql.tex 
+ 1410  jobs
+ 1411  emacs sql.tex &
+ 1412  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1413  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1414  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1415  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1416  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1417  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1418  emacs front.tex &
+ 1419  emacs new-preface.tex &
+ 1420  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1421  grep addcontentsline *.tex
+ 1422  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1423  grep "\\\tbw" *.sty
+ 1424  emacs informatics.sty &
+ 1425  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1426  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1427  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1428  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1429  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1430  emacs chapIntro.tex &
+ 1431  latex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1432  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/primary/.
+ 1433  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1434  emacs NEWchapDomainsI.tex &
+ 1435  emacs chapDomainsItext.tex &
+ 1436  emacs NEWchapDomainsI.tex &
+ 1437  emacs chapDomainsIText.tex &
+ 1438  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1439  jobs
+ 1440  emacs chapSets.tex &
+ 1441  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1442  ls -l set*.tex
+ 1443  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1444  emacs chapNumbers.tex &
+ 1445  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1446  emacs chapNamValChaTxt.tex &
+ 1447  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1448  emacs chapFctTyp.tex &
+ 1449  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1450  ls -l lambda.tex
+ 1451  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1452  jobs
+ 1453  emacs chapCartesians.tex &
+ 1454  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1455  emacs PlayCartesians.tex &
+ 1456  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1457  emacs chapSyntax.tex &
+ 1458  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1459  emacs chapGraphs.tex &
+ 1460  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1461  xfig g5.fig & xfig g6.fig & xfig g7.fig & xfig g8.fig &
+ 1462  xfig g9.fig & xfig g10.fig & xfig g11.fig & xfig g12.fig &
+ 1463  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1464  emacs eks-graph-2.tex &
+ 1465  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1466  emacs chapLists.tex &
+ 1467  emacs PlayLists.tex &
+ 1468  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1469  emacs PlayLists.tex &
+ 1470  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1471  history
+ 1472  jobs
+ 1473  emacs PlayMaps.tex &
+ 1474  emacs chapMaps.tex &
+ 1475  ls -l map*.tex
+ 1476  latex main;bibtex main;latex main; dvips main.dvi -o main.ps; ps2pdf main.ps main.pdf
+ 1477  gv main.pdf &
+ 1478  grep fotoii *.sty
+ 1479  cd
+ 1480  mkdir 2024
+ 1481  cd 2024
+ 1482  mkdir markers
+ 1483  cd markers
+ 1484  emacs markers.tex &
+ 1485  pdflatex markers
+ 1486  gv markers.pdf &
+ 1487  pdflatex markers
+ 1488  gv markers.pdf &
+ 1489  pdflatex markers
+ 1490  cd domsys
+ 1491  cd 2023
+ 1492  cd domsys
+ 1493  ls 
+ 1494  gv warszawa.pdf &
+ 1495  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1496  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1497  emacs warszawa.tex &
+ 1498  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1499  jobs
+ 1500  kill %2 %3 %4
+ 1501  jobs
+ 1502  kill %5
+ 1503  jobs
+ 1504  emacs warszawa.tex &
+ 1505  ls -l *.jg
+ 1506  ls -l *.jpg
+ 1507  pdflatex warszawa
+ 1508  convert jlb-ponia.jpg eps3:jlb.eps
+ 1509  pdflatex warszawa
+ 1510  convert gypsum.jpg eps3:gypsum.eps
+ 1511  ls -l *.jpg
+ 1512  convertGgypsum.jpg eps3:Gypsum.eps
+ 1513  convert Gypsum.jpg eps3:Gypsum.eps
+ 1514  convert Gipsum.jpg eps3:Gypsum.eps
+ 1515  pdflatex warszawa
+ 1516  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1517  RMx79Pber5zA
+ 1518  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1519  cd 2023
+ 1520  cd xmas23
+ 1521  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1522  cd ../domsys
+ 1523  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1524  cd ../xmas23
+ 1525  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1526  cd 2023
+ 1527  cd domsys
+ 1528  history
+ 1529  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1530  cd ..
+ 1531  cd xmas23
+ 1532  emacs xmas23.tex & emacs xmas23text.tex & 
+ 1533  pdflatex xmas23
+ 1534  gv xmas23 &
+ 1535  gv xmas23.pdf &
+ 1536  pdflatex xmas23
+ 1537  ls -l *.pdf
+ 1538  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1539  cd 2023
+ 1540  cd domsys
+ 1541  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1542  cd 2023
+ 1543  cd pepm
+ 1544  ls
+ 1545  cd mcpe
+ 1546  ls
+ 1547  emacs main.tex &
+ 1548  grep Annecdote main.tex
+ 1549  grep Anecdote main.tex
+ 1550  pdflatex main
+ 1551  gv main.pdf &
+ 1552  pdflatex main
+ 1553  latex main
+ 1554  s
+ 1555  latex main | more
+ 1556  latex main 
+ 1557  pdflatex main
+ 1558  pdflatex main|more
+ 1559  pdflatex main
+ 1560  latex main
+ 1561  latex main; dvips main.dvi -o main.ps
+ 1562  latex main; dvips main.dvi -o main.ps;ps2pdf main.ps
+ 1563  latex main
+ 1564  bibtex main
+ 1565  latex main
+ 1566  pdflatex main
+ 1567  latex main
+ 1568  pdflatex main
+ 1569  emacs acm.cls &
+ 1570  pdflatex main
+ 1571  emacs acm.cls &
+ 1572  pdflatex main
+ 1573  latex main
+ 1574  s
+ 1575  ls -l *.dvi
+ 1576  xdvi main.dvi &
+ 1577  latex main
+ 1578  pdflatex main
+ 1579  ls -l *.cls
+ 1580  pdflatex main
+ 1581  grep "\\\foto" main.tex
+ 1582  pdflatex main
+ 1583  emacs main.log &
+ 1584  emacs acmart.cls &
+ 1585  pdflatex main
+ 1586  clear;pdflatex main
+ 1587  emacs pepm.sty &
+ 1588  clear;pdflatex main
+ 1589  latex main
+ 1590  clear;pdflatex main
+ 1591  latex main
+ 1592  clear;pdflatex main
+ 1593  emacs pepm.sty &
+ 1594  emacs main.log &
+ 1595  clear;pdflatex main
+ 1596  emacs cacm.bst &
+ 1597  clear;pdflatex main
+ 1598  emacs mcpe.sty &
+ 1599  emacs pepm.sty &
+ 1600  clear;pdflatex main
+ 1601  clear;pdflatex mains
+ 1602  clear;pdflatex main
+ 1603  s
+ 1604  clear;pdflatex main
+ 1605  bibtex main
+ 1606  clear;pdflatex main
+ 1607  man zip
+ 1608  zip -r bjorner.zip bjorner.zip
+ 1609  zip -r *.* bjorner.zip
+ 1610  zip -r bjorner.zip *.*
+ 1611  ls -l *.zip
+ 1612  cd 2023
+ 1613  ls
+ 1614  cd cacm
+ 1615  ls
+ 1616  ls -l *.pdf
+ 1617  emacs main.tex &
+ 1618  pdflatex main
+ 1619  gv main.pdf &
+ 1620  ls -l *.pdf
+ 1621  gv DoMo.pdf &
+ 1622  grep documentclass *.tex
+ 1623  emacs DoMo.tex &
+ 1624  pdflatex DoMo
+ 1625  ls -l *.cls
+ 1626  cp acmart.cls /home/db/2023/cacm/.
+ 1627  cp acmart.cls /home/db/2023/pemc/.
+ 1628  cp acmart.cls /home/db/2023/mcpe/.
+ 1629  cd /home/db/2023/mcpe
+ 1630  ls -l *.pdf
+ 1631  emacs main.tex &
+ 1632  pdflatex main
+ 1633  gv main.pdf &
+ 1634  pdflatex main
+ 1635  zip *.* bjorner.zip
+ 1636  zip bjorner.zip *.*
+ 1637  pdflatex main
+ 1638  bibtex main
+ 1639  pdflatex main
+ 1640  zip bjorner.zip *.*
+ 1641  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1642  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/pepm/pepm24.pdf
+ 1643  scp main.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/pepm24/pepm24.pdf
+ 1644  ssh  dibj@thinlinc.compute.dtu.dk
+ 1645  cd 2023
+ 1646  cd sorlander
+ 1647  cp SorlanderWed26Apr2023.pdf pure.pdf
+ 1648  ls -l *.pdf
+ 1649  ls -l *.ps
+ 1650  ls -l *.dvi
+ 1651  jobs
+ 1652  cd 2023
+ 1653  cd xmas23
+ 1654  ls
+ 1655  ls -l *.pdf
+ 1656  emacs xmas23.tex &
+ 1657  emacs xmas23text.tex &
+ 1658  gv xmas23.pdf &
+ 1659  pdflatex xmas23
+ 1660  ls -l *.pdf
+ 1661  pdflatex xmas23
+ 1662  ls -l *.pdf
+ 1663  cp xmas23.tex old-xmas23.tex
+ 1664  pdflatex xmas23
+ 1665  ls -l *.pdf
+ 1666  pdflatex xmas23
+ 1667  ls -l *.jpg
+ 1668  pdflatex xmas23
+ 1669  ls -l *.tex
+ 1670  emacs old-xmas23.tex &
+ 1671  ls -l *.tex~
+ 1672  emacs xmas23text.tex~ &
+ 1673  pdflatex xmas23
+ 1674  ls -l *.pdf
+ 1675  pdflatex xmas23
+ 1676  scp warszawa.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/warszawa/.
+ 1677  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1678  pdflatex xmas23
+ 1679  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1680  pdflatex xmas23
+ 1681  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1682  pdflatex xmas23
+ 1683  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1684  pdflatex xmas23
+ 1685  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1686  pdflatex xmas23
+ 1687  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1688  pdflatex xmas23
+ 1689  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1690  pdflatex xmas23
+ 1691  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1692  pdflatex xmas23
+ 1693  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1694  ls -l *.tex
+ 1695  emacs xmas-emails.tex &
+ 1696  emacs e-post.tex &
+ 1697  cp xmas23text.tex ny.tex
+ 1698  emacs ny.tex &
+ 1699  grep www ny.tex
+ 1700  clear;grep www ny.tex
+ 1701  pdflatex xmas23
+ 1702  clear;grep dburl ny.tex
+ 1703  pdflatex xmas23
+ 1704  clear;grep dburl ny.tex
+ 1705  pdflatex xmas23
+ 1706  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1707  clear;grep dburl ny.tex
+ 1708  pdflatex xmas23
+ 1709  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1710  pdflatex xmas23
+ 1711  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1712  pdflatex xmas23
+ 1713  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1714  pdflatex xmas23
+ 1715  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1716  pdflatex xmas23
+ 1717  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1718  pdflatex xmas23
+ 1719  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1720  pdflatex xmas23
+ 1721  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1722  pdflatex xmas23
+ 1723  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1724  pdflatex xmas23
+ 1725  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1726  pdflatex xmas23
+ 1727  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1728  pdflatex xmas23
+ 1729  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1730  pdflatex xmas23
+ 1731  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1732  pdflatex xmas23
+ 1733  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1734  exit
+ 1735  cd 2022
+ 1736  ls
+ 1737  cd xmas2022
+ 1738  ls -l *.tex
+ 1739  cp xmas-emails.tex ../../2023/xmas23
+ 1740  jobs
+ 1741  cd 2023
+ 1742  cd pepm
+ 1743  ls
+ 1744  cd mcpe
+ 1745  ls -l *.pdf
+ 1746  gv main.pdf &
+ 1747  emacs main.bbl &
+ 1748  cd ..
+ 1749  cd xmas23
+ 1750  ls -l *.tex
+ 1751  emacs ny.tex &
+ 1752  ls -l *.pdf
+ 1753  emacs xmas23.tex &
+ 1754  jobs
+ 1755  cd 2010
+ 1756  ls
+ 1757  cd kiev
+ 1758  ls
+ 1759  ls -l *.p*
+ 1760  gv kiev-p1.pdf &
+ 1761  gv kiev-p2.pdf &
+ 1762  ssh  dibj@thinlinc.compute.dtu.dk
+ 1763  grep "le for Mereology in C" */*/*.tex
+ 1764  cd 2016
+ 1765  ls *.pdf
+ 1766  ls
+ 1767  cd
+ 1768  cd 2015
+ 1769  ls
+ 1770  history
+ 1771  cd
+ 1772  ls
+ 1773  cd
+ 1774  cd 2013
+ 1775  ls
+ 1776  cd
+ 1777  cd 2012
+ 1778  ls
+ 1779  cd urbino
+ 1780  ls
+ 1781  cd
+ 1782  cd 2011
+ 1783  ls
+ 1784  cd urbino
+ 1785  ls
+ 1786  ls -l *.p*
+ 1787  gv urbino-p.ps &
+ 1788  gv urbin0-p.pdf &
+ 1789  ls -l *.p*
+ 1790  ls -l *.pdf
+ 1791  gv bjorner-dtu-p.pdf &
+ 1792  gv bjorner-urbino.pdf &
+ 1793  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1794  scp bjorner-urbino.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2011/.
+ 1795  pwd
+ 1796  ls
+ 1797  ls -l *.pdf
+ 1798  jobs
+ 1799  kill %1
+ 1800  jobs
+ 1801  scp bjorner-urbino.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2011/urbino/.
+ 1802  jobs
+ 1803  cd bib
+ 1804  grep Kiev *.bib
+ 1805  emacs art-dines.bib &
+ 1806  grep BjornerMereology2013 *.bib
+ 1807  emacs book-dines.bib &
+ 1808  jobs
+ 1809  cd 2023
+ 1810  ls
+ 1811  cd cacm
+ 1812  ls
+ 1813  ls -l *.pdf
+ 1814  gv main.pdf &
+ 1815  emacs main.tex &
+ 1816  emacs main.bbl &
+ 1817  pdflatex main
+ 1818  ls -l *.tex
+ 1819  emacs DoMo.tex &
+ 1820  ls -l *.pdf
+ 1821  gv DoMo.pdf &
+ 1822  ls -l *.bbl
+ 1823  emacs DoMo.bbl &
+ 1824  pdflatex DoMo
+ 1825  scp xmas23.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/xmas23/.
+ 1826  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1827  pdflatex DoMo
+ 1828  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1829  pdflatex DoMo
+ 1830  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1831  pdflatex DoMo
+ 1832  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1833  pdflatex DoMo
+ 1834  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1835  pdflatex DoMo
+ 1836  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1837  pdflatex DoMo
+ 1838  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1839  pdflatex DoMo
+ 1840  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1841  pdflatex DoMo
+ 1842  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1843  pdflatex DoMo
+ 1844  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1845  cp DoMo.bbl oldDoMo.bbl
+ 1846  bitex DoMo
+ 1847  bibtex DoMo
+ 1848  pdflatex DoMo
+ 1849  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1850  emacs DoMo.bbl &
+ 1851  emacs oldDoMo.bbl &
+ 1852  pdflatex DoMo
+ 1853  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1854  pdflatex DoMo
+ 1855  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1856  pdflatex DoMo
+ 1857  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1858  pdflatex DoMo
+ 1859  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1860  pdflatex DoMo
+ 1861  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1862  pdflatex DoMo
+ 1863  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1864  cp DoMo.bbl NewDoMo.bbl
+ 1865  pdflatex DoMo
+ 1866  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1867  pdflatex DoMo
+ 1868  bibtex DoMo
+ 1869  pdflatex DoMo
+ 1870  bibtex DoMo
+ 1871  pdflatex DoMo
+ 1872  bibtex DoMo
+ 1873  pdflatex DoMo
+ 1874  bibtex DoMo
+ 1875  pdflatex DoMo
+ 1876  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1877  emacs DoMo.bbl &
+ 1878  pdflatex DoMo
+ 1879  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/.
+ 1880  pdflatex DoMo
+ 1881  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/DoMoChgBar.pdf
+ 1882  jobs
+ 1883  ssh  dibj@thinlinc.compute.dtu.dk
+ 1884  cd 2013
+ 1885  ls
+ 1886  cd
+ 1887  cd 2014
+ 1888  ls
+ 1889  cd 2013
+ 1890  ls
+ 1891  cd 
+ 1892  cd 2014
+ 1893  ls
+ 1894  cd
+ 1895  cd 2009
+ 1896  ls
+ 1897  cd hoare
+ 1898  ls
+ 1899  ls -l *.p*
+ 1900  gv hoare.pdf &
+ 1901  cd 2023
+ 1902  cd xmas23
+ 1903  emacs xmas23.tex &
+ 1904  jobs
+ 1905  cd 2023
+ 1906  cd dommod
+ 1907  ls
+ 1908  ls -l *.pdf
+ 1909  ls -l Do*.pdf
+ 1910  cd ../cacm
+ 1911  ls -l Do*.pdf
+ 1912  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/cacm/DoMoChgBar.pdf
+ 1913  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/dommod/DoMoChgBar.pdf
+ 1914  scp DoMoChgBar.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/dommod/DoMoChgBar.pdf
+ 1915  ls -l Do*.pdf
+ 1916  emacs DoMo.tex &
+ 1917  pdflatex DoMo
+ 1918  gv DoMo.pdf &
+ 1919  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/dommod/DoMoChgBar.pdf
+ 1920  cp DoMo.pdf DoMoChgBar.pdf
+ 1921  ls -l Do*.pdf
+ 1922  pdflatex DoMo
+ 1923  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/dommod/.
+ 1924  scp DoMo.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/DoMo/.
+ 1925  scp DoMoChgBar.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/DoMo/.
+ 1926  cd 2023
+ 1927  emacs year23.tex &
+ 1928  emacs year2023.tex &
+ 1929  ls
+ 1930  cd year2023
+ 1931  emacs year2023.tex &
+ 1932  emacs warsaw.tex &
+ 1933  latex2thml yeas2023
+ 1934  latex2hml yeas2023
+ 1935  latex2hml yea22023
+ 1936  latex2html yea22023
+ 1937  latex2html year2023
+ 1938  scp DoMoChgBar.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/DoMo/.
+ 1939  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1940  ls -l col*
+ 1941  ls -l 6*
+ 1942  latex2html year2023
+ 1943  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1944  latex2html year2023
+ 1945  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1946  latex2html year2023
+ 1947  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1948  latex2html year2023
+ 1949  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1950  latex2html year2023
+ 1951  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1952  latex2html year2023
+ 1953  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1954  latex2html year2023
+ 1955  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1956  latex2html year2023
+ 1957  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1958  latex2html year2023
+ 1959  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1960  latex2html year2023
+ 1961  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1962  latex2html year2023
+ 1963  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1964  latex2html year2023
+ 1965  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1966  latex2html year2023
+ 1967  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1968  latex2html year2023
+ 1969  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1970  latex2html year2023
+ 1971  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1972  latex2html year2023
+ 1973  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1974  latex2html year2023
+ 1975  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1976  grep Brz *.tex
+ 1977  latex2html year2023
+ 1978  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1979  latex2html year2023
+ 1980  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1981  latex2html year2023
+ 1982  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1983  latex2html year2023
+ 1984  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1985  cd 2023
+ 1986  cd years23
+ 1987  cd year23
+ 1988  ls
+ 1989  cd year2023
+ 1990  emacs warsaw.tex &
+ 1991  latex2html year2023
+ 1992  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1993  latex2html year2023
+ 1994  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1995  latex2html year2023
+ 1996  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 1997  cd 2023
+ 1998  cd xmas23
+ 1999  ls -l *.tex
+ 2000  emacs xmas23.tex & 
+ 2001  cd 2024
+ 2002  ls
+ 2003  cd markers
+ 2004  ls
+ 2005  gv markers.pdf &
+ 2006  cd ..
+ 2007  mkdir primer
+ 2008  cd primer
+ 2009  ls
+ 2010  ls -l *.eps
+ 2011  ls -l *.fig
+ 2012  ls -l *.jpg
+ 2013  ls -l pimer.tex
+ 2014  ls -l primer.tex
+ 2015  emacs primer.tex &
+ 2016  latex primer
+ 2017  ls -l *.cls
+ 2018  latex primer
+ 2019  ls -l k*
+ 2020  latex primer
+ 2021  latex dommod
+ 2022  bibtex dommod
+ 2023  mkdir bib
+ 2024  cd bib
+ 2025  ls
+ 2026  latex dommod
+ 2027  cd ..
+ 2028  latex dommod
+ 2029  ls *.tex
+ 2030  ls -l *chap2*.tex
+ 2031  rm *chap2*.tex
+ 2032  ls -l *chap2*.tex
+ 2033  ls *.tex
+ 2034  latex dommod
+ 2035  bibtex dommod
+ 2036  latex dommod
+ 2037  grep undefined dommod.log
+ 2038  bibtex dommod
+ 2039  latex dommod
+ 2040  grep undefined dommod.log
+ 2041  latex dommod
+ 2042  grep undefined dommod.log
+ 2043  bibtex dommod
+ 2044  latex dommod
+ 2045  grep undefined dommod.log
+ 2046  grep multiply dommod.log
+ 2047  latex dommod; dvips dommod.dvi -o primer.ps
+ 2048  gv primer.pdf &
+ 2049  gv primer.ps &
+ 2050  rm primer.tex
+ 2051  cp dommod.tex primer.tex
+ 2052  latex primer;dvips primer.dvi -o primer.ps
+ 2053  ls -l *.bbl
+ 2054  bibtex primer
+ 2055  latex primer;dvips primer.dvi -o primer.ps
+ 2056  emacs primer.tex &
+ 2057  ls -l *.idx
+ 2058  latex primer
+ 2059  makeindex cind;makeindex defind;makeindex eind;makeindex method;makeindex doan;makeindex doaf;makeindex perduind;makeindex dltind;makeindex sorts;makeindex attr;makeindex types;makeindex value;makeindex monoschema;makeindex funct;makeindex chann;makeindex behav;makeindex symbind;makeindex pipe
+ 2060  makeindex pconind
+ 2061  latex primer;dvips primer.dvi -o primer.ps
+ 2062  gv primer.ps &
+ 2063  emacs pcondind.ilg &
+ 2064  makeindex pconind
+ 2065  emacs pconind.ilg &
+ 2066  emacs pconind.idx &
+ 2067  emacs primer-filosofi.tex &
+ 2068  latex primer;dvips primer.dvi -o primer.ps
+ 2069  makeindex pconind
+ 2070  emacs pconind.idx &
+ 2071  latex primer;dvips primer.dvi -o primer.ps
+ 2072  makeindex pconind
+ 2073  emacs pconind.idx &
+ 2074  emacs pconind.ilg &
+ 2075  makeindex pconind
+ 2076  latex primer;dvips primer.dvi -o primer.ps
+ 2077  makeindex pconind
+ 2078  latex primer;dvips primer.dvi -o primer.ps
+ 2079  grep undefined primer.log
+ 2080  grep multiply primer.log
+ 2081  ps2pdf primer.ps
+ 2082  latex primer;dvips primer.dvi -o primer.ps; ps2pdf primer.ps primer.pdf
+ 2083  emacs primer-rsl.tex &
+ 2084  latex primer;dvips primer.dvi -o primer.ps; ps2pdf primer.ps primer.pdf
+ 2085  emacs primer-rsl.tex &
+ 2086  latex primer;dvips primer.dvi -o primer.ps; ps2pdf primer.ps primer.pdf
+ 2087  latex primer
+ 2088  latex primer;dvips primer.dvi -o primer.ps
+ 2089  ls -l *.idx
+ 2090  makeindex symbind
+ 2091  grep "{symind}" *.sty
+ 2092  grep "{symind}" *.tex
+ 2093  grep "\\\symind" *.tex
+ 2094  emacs symind.idx &
+ 2095  emacs psymind.idx &
+ 2096  emacs symbind.idx &
+ 2097  makeindex symind
+ 2098  latex primer;dvips primer.dvi -o primer.ps
+ 2099  zip *.* primer.zip
+ 2100  zip  primer.zip *.*
+ 2101  history > h.tex
+ 2102  grep zip h.tex
+ 2103  zip -r primer.zip *.*
+ 2104  ls -l primer.zip
+ 2105  scp year2023/*.*  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/year2023/.
+ 2106  scp primer.zip  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2107  scp primer.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2108  scp primer.ps  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2109  latex primer;dvips primer.dvi -o primer.ps
+ 2110  history > h.tex
+ 2111  grep makeindex h.tex
+ 2112  makeindex cind;makeindex defind;makeindex eind;makeindex method;makeindex doan;makeindex doaf;makeindex perduind;makeindex dltind;makeindex sorts;makeindex attr;makeindex types;makeindex value;makeindex monoschema;makeindex funct;makeindex chann;makeindex behav;makeindex symbind;makeindex pipe
+ 2113  makeindex symbind
+ 2114  makeindex symind
+ 2115  latex primer;dvips primer.dvi -o primer.ps
+ 2116  makeindex symind
+ 2117  makeindex symbind
+ 2118  latex primer;dvips primer.dvi -o primer.ps
+ 2119  ls -l *.zip
+ 2120  rm primer.zip
+ 2121  zip -r primer.zip *.*
+ 2122  scp primer.ps  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2123  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2124  ps2pdf primer.ps
+ 2125  gv primer.pdf &
+ 2126  scp primer.pdf  dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2127  latex primer;dvips primer.dvi -o primer.ps
+ 2128  cp primer.ps primer-changes.ps
+ 2129  scp prime*.ps dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2130  zip -r primer.zip *.*
+ 2131  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2132  grep "\\\ysfchg" *.tex > y.tex
+ 2133  cat y.tex
+ 2134  emacs y.tex &
+ 2135  jobs
+ 2136  kill %10
+ 2137  gv primer-changes.ps &
+ 2138  latex primer;dvips primer.dvi -o primer.ps
+ 2139  ls -l YSF*.pdf
+ 2140  gv YSF-4Jan24.pdf & gv YSF-Primer.pdf &
+ 2141  ls -l YSF*.pdf
+ 2142  gv YSF-Primer.pdf &
+ 2143  emacs primer-front.tex &
+ 2144  emacs primer.tex &
+ 2145  latex primer;dvips primer.dvi -o primer.ps
+ 2146  jobs
+ 2147  latex primer;dvips primer.dvi -o primer.ps
+ 2148  jobs
+ 2149  kill %4
+ 2150  jobs
+ 2151  kill %9
+ 2152  jobs
+ 2153  gv primer.ps &
+ 2154  gv primer-changes.ps &
+ 2155  jobs
+ 2156  gv YSF-Primer.pdf &
+ 2157  gv primer.ps &
+ 2158  emacs primer-intro.tex &
+ 2159  emacs primer-filosofi.tex &
+ 2160  latex primer;dvips primer.dvi -o primer.ps
+ 2161  bibtex primer
+ 2162  latex primer;dvips primer.dvi -o primer.ps
+ 2163  grep "\\\zzks" *.sty
+ 2164  emacs daad.sty &
+ 2165  latex primer;dvips primer.dvi -o primer.ps
+ 2166  emacs primer-domains.tex &
+ 2167  latex primer;dvips primer.dvi -o primer.ps
+ 2168  emacs primer-extq.tex &
+ 2169  latex primer;dvips primer.dvi -o primer.ps
+ 2170  emacs primer-intq.tex &
+ 2171  latex primer;dvips primer.dvi -o primer.ps
+ 2172  emacs primer-perd.tex &
+ 2173  latex primer;dvips primer.dvi -o primer.ps
+ 2174  emacs primer-closing.tex &
+ 2175  latex primer;dvips primer.dvi -o primer.ps
+ 2176  emacs primer-bib.tex &
+ 2177  latex primer;dvips primer.dvi -o primer.ps
+ 2178  bibtex prmer
+ 2179  bibtex primer
+ 2180  latex primer;dvips primer.dvi -o primer.ps
+ 2181  bibtex primer
+ 2182  latex primer;dvips primer.dvi -o primer.ps
+ 2183  bibtex primer
+ 2184  latex primer;dvips primer.dvi -o primer.ps
+ 2185  bibtex primer
+ 2186  cd bib
+ 2187* emacs art.bib &
+ 2188  bibtex primer
+ 2189  cd ..
+ 2190  latex primer;dvips primer.dvi -o primer.ps
+ 2191  bibtex primer
+ 2192  latex primer;dvips primer.dvi -o primer.ps
+ 2193  emacs primer-rsl.tex &
+ 2194  latex primer;dvips primer.dvi -o primer.ps
+ 2195  ls -l *.zip
+ 2196  rm primer.zip
+ 2197  latex primer;dvips primer.dvi -o primer.ps
+ 2198  ps2pdf primer.ps
+ 2199  ls -l *.pdf
+ 2200  gv primer.pdf &
+ 2201  latex primer;dvips primer.dvi -o 5Jan2024-changes-primer.ps
+ 2202  ls -l *.ps
+ 2203  ps2pdf 5Jan2024-changes-primer.ps
+ 2204  ls -l *.pdf
+ 2205  latex primer;dvips primer.dvi -o primer.ps
+ 2206  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps
+ 2207  ls -l *.p*
+ 2208  rm YSF-4Jan24.pdf
+ 2209  rm YSF-Primer.pdf
+ 2210  ls -l *.p*
+ 2211  rm primer-changes.ps
+ 2212  rm 5Jan2024-changes-primer.ps
+ 2213  ls -l *.p*
+ 2214  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2215  ls -l *.zip
+ 2216  zip -r primer.zip *.*
+ 2217  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2218  ls -l *.pdf
+ 2219  ls -l *primer.pdf
+ 2220  scp *primer.pdf dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2221  emacs primer-closing.tex &
+ 2222  emacs primer.tex &
+ 2223  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps
+ 2224  emacs primer-bib.tex &
+ 2225  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps
+ 2226  latex primer
+ 2227  ls -l *.idx
+ 2228  makeindex symbind
+ 2229  history > h.te
+ 2230  rm h.tex
+ 2231  history > h.tex
+ 2232  rm h.te
+ 2233  grep makeindex h.tex
+ 2234  makeindex cind;makeindex defind;makeindex eind;makeindex method;makeindex doan;makeindex doaf;makeindex perduind;makeindex dltind;makeindex sorts;makeindex attr;makeindex types;makeindex value;makeindex monoschema;makeindex funct;makeindex chann;makeindex behav;makeindex symbind;makeindex pipe
+ 2235  makeindex symbind
+ 2236  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2237  grep makeindex h.tex
+ 2238  makeindex symind
+ 2239  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps
+ 2240  ls -l *.ps
+ 2241  ls -l *.pdf
+ 2242  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 6Jan2024-changes-primer.pdf
+ 2243  gv 6Jan2024-changes-primer.pdf &
+ 2244  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps
+ 2245  latex primer;dvips primer.dvi -o primer.ps
+ 2246  ps2pdf primer.ps
+ 2247  ps2pdf primer.ps primer.pdf
+ 2248  latex primer;dvips primer.dvi -o primer.ps
+ 2249  ps2pdf primer.ps primer.pdf
+ 2250  gv primer.pdf &
+ 2251  latex primer;dvips primer.dvi -o primer.ps
+ 2252  ps2pdf primer.ps primer.pdf
+ 2253  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 6Jan2024-changes-primer.pdf
+ 2254  latex primer;dvips primer.dvi -o primer.ps
+ 2255  ps2pdf primer.ps primer.pdf
+ 2256  ls -l *.pdf
+ 2257  scp 6Jan2024-changes-primer.pdf dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2258  scp primer.pdf dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2259  ls -l *.zip
+ 2260  rm primer.zip
+ 2261  zip -r primer.zip *.*
+ 2262  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2024/primer/.
+ 2263  scp primer.pdf dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/final/.
+ 2264  ls -l *.pdf
+ 2265  gv YSF-Corr-7Jan.pdf &
+ 2266  ls -l *.pdf
+ 2267  gv YSF-Primer-67Jan24.pdf &
+ 2268  emacs primer-intro.tex &
+ 2269  ps2pdf primer.ps primer.pdf
+ 2270  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2271  gv 7Jan-Primer.pdf &
+ 2272  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2273  emacs primer-perd.tex &
+ 2274  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2275  emacs primer-closing.tex &
+ 2276  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2277  emacs primer-intro.tex &
+ 2278  emacs primer-filosofi.tex &
+ 2279  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2280  emacs primer-intq.tex &
+ 2281  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2282  emacs primer-closing.tex &
+ 2283  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps 7Jan-Primer.pdf
+ 2284  latex primer;dvips primer.dvi -o primer.ps;ps2pdf primer.ps primer.pdf
+ 2285  ls -l *.zip
+ 2286  rm primer.zip
+ 2287  zip -r primer.zip *.*
+ 2288  scp primer.pdf dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/final/.
+ 2289  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/final/.
+ 2290  ps2pdf primer.ps primer.pdf
+ 2291  rm primer.zip
+ 2292  zip -r primer.zip *.*
+ 2293  scp primer.zip dibj@thinlinc.compute.dtu.dk:/home/dibj/public_html/2023/final/.
+ 2294  ls -l *.pdf
+ 2295  jobs
+ 2296  kill %19 %30 %31 %32
+ 2297  jobs
+ 2298  ls -l 7Jan-Primer.pdf 
+ 2299  gv primer.pdf &
+ 2300  emacs primer.tex &
+ 2301  jobs
+ 2302  emacs README.tex &
+ 2303  rm *.toc
+ 2304  rm *.mtc
+ 2305  rm *.mtc*
+ 2306  xelatex primer;xelatex primer;bibtex primer;xelatex primer;xelatex primer
+ 2307  grep "But We have" *.tex
+ 2308  grep "But we have" *.tex
+ 2309  grep "But " *.tex
+ 2310  emacs primer-perd.tex &
+ 2311  emacs primer-bib.tex &
+ 2312  xelatex primer
+ 2313  latex primer
+ 2314  dvips primer.dvi -o primer.ps
+ 2315  gv primer.ps &
+ 2316  ps2pdf primer.ps primer.pdf
+ 2317  gv primer.pdf &
+ 2318  jobs
+ 2319  xelatex primer
+ 2320  history > h.tex

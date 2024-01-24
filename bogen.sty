@@ -1,0 +1,139 @@
+
+\renewcommand{\ddprompt}[3]{%
+\begin{svgraybox}
+\begin{center}
+\begin{dprompt}\delati{#1}
+\bbcolor{\texttt{#1}:}\label{ddp:#2}\label{#2}{#3}\rm
+\end{dprompt}
+\end{center}
+\end{svgraybox}
+}
+
+\renewcommand{\delati}[1]{\index{dltind}{#1}}
+\renewcommand{\dpindex}{\delati}
+
+\renewcommand{\daprompt}[3]{%
+\begin{svgraybox}
+\begin{center}
+\begin{aprompt} \bcolor{\texttt{#1:}}\label{dap:#2}\doanpr\apindex{#1}
+\noindent
+{#3}
+\end{aprompt}
+\end{center}
+\end{svgraybox}
+}
+
+\newcommand{\newdbsquare}{.}
+
+\renewcommand{\newestdaprompt}[6]{\label{#6}%
+\begin{center}
+\begin{svgraybox}
+\begin{aprompt} \bgcolor{\texttt{#1:}}\label{dap:#2}\doanpr\apindex{#1}
+\noindent
+\begynd
+\pind The domain analyser analyses ``things'' (#3) into #4.
+\pind The method can thus be said to provide the \dap:
+\begin{itemize}
+\item \bgcolor{\texttt{#1}} -- where 
+      \bgcolor{\texttt{#1(#3)}} holds if #3 is #5 \eoap
+\end{itemize}
+\afslut
+\end{aprompt}
+\end{svgraybox}
+\end{center} 
+}
+
+\renewcommand{\dafprompt}[3]{\label{#2}
+\begin{center}
+\begin{svgraybox}
+\begin{afprompt} \bgcolor{\texttt{#1:}} \label{dap:#2}
+{#3}\doafpr\afindex{#1}
+\end{afprompt}
+\end{svgraybox}
+\end{center} 
+}
+
+\renewcommand{\cdlti}{\arabic{dodeno}.}
+
+\renewcommand{\dpindex}[1]{\index{dltind}{#1}}
+
+\renewcommand{\primerdefn}[2]{
+\begin{primerdefinition}
+  \brcolor{#1}.\label{def:#1}
+  \pos{\index{pdefind}{\arabic{primerdefinition}. #1}}{} 
+{\rm #2}
+\vspace*{1.2mm}
+\end{primerdefinition}}
+
+
+\renewcommand{\newpdefn}[1]{
+\begin{primerdefinition} %CHANGE 10.4.23.
+  \pos{\index{pdefind}{#1}}{}  
+  \brcolor{#1}\label{def:#1}
+\end{primerdefinition}}
+\renewcommand{\newpdefn}{\primerdefn}
+
+\renewcommand{\newestpdefn}[2]{
+\begin{primerdefinition}
+  \pos{\index{pdefind}{#1}}{}  
+  \brcolor{#1}\label{def:#1}
+  #2
+\end{primerdefinition}}
+\renewcommand{\newestpdefn}{\primerdefn}
+
+\renewcommand{\bookdefn}[2]{
+\vspace*{1.2mm}%\begin{svgraybox}
+\begin{define}.
+  \pos{\index{pdefind}{#1}}{}%\arabic{primerdefinition}. 
+\noindent
+\brcolor{#1:}\label{def:#1} {\rm #2}
+\end{define}%\end{svgraybox}
+\vspace*{1.2mm}}
+\renewcommand{\bookdefn}{\primerdefn}
+ 
+\renewcommand{\chardefn}[2]{\HHHH
+\vspace*{1.2mm}%
+  \begin{svgraybox}
+\begin{charac}
+  \pos{\index{pdefind}{#1}}{}
+\noindent
+\brcolor{{#1}:}\label{def:#1}\pos{\index{defind}{#1}\index{pdefind}{#1}}{} {\rm #2}
+\end{charac}\end{svgraybox}
+\vspace*{1.2mm}}
+\renewcommand{\chardefn}{\primerdefn}
+ 
+\renewcommand{\bookdefnx}[2]{%
+  \begin{svgraybox}
+  \pos{\index{pdefind}{#1}}{}
+\begin{define}{{#1}:}\label{def:#1}
+{#2} 
+\end{define}\end{svgraybox}
+}
+\renewcommand{\bookdefnx}{\primerdefn}
+
+\renewcommand{\nbookdefn}[2]{
+\vspace*{1.2mm}%
+  \begin{svgraybox}
+\begin{define}
+\noindent
+\brcolor{#1:}\label{def:#1}\index{pdefind}{#1}
+  \pos{\index{pdefind}{#1}}{} {\rm #2}%\arabic{primerdefinition}. 
+\end{define}\end{svgraybox}
+\vspace*{1.2mm}}
+\renewcommand{\nbookdefn}{\primerdefn}
+ 
+%\renewcommand{\nbookdefn}{}
+
+\renewcommand{\nchardefn}[2]{
+\vspace*{1.2mm}%
+  \begin{svgraybox}
+\begin{charac}
+\noindent
+\brcolor{#1:}\label{def:#1}\index{pdefind}{#1}%\index{defind}{#1}
+\pos{\index{pdefind}{#1}}{}
+\pos{\index{pdefind}{#1}}{} 
+  {\rm #2}
+\end{charac}\end{svgraybox}
+\vspace*{1.2mm}}
+
+\renewcommand{\nchardefn}{\primerdefn}

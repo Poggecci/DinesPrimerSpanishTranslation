@@ -1,0 +1,1782 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Released for translation 1X April 2023  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbbbb{\HHHH Domains}\label{chapter:Domains}\label{chap2.tex.Preview}
+\pos{\minitoc}{}
+\pos{\label{lect1:label1}}{}
+
+\noindent
+\begynd
+\pind We now explain \sfsl{the domain description ontology} as
+\begynd
+\pind \sl a \sfsl{structured set of concepts for modelling domains}, a set 
+\pind that shows their properties and the relations between them\rm.
+\afslut
+\pind \sl In simple terms, ontology seeks the classification and
+      explanation of entities\rm.\footnote{\sfsl{Google's English Dictionary} as provided by \sfsl{Oxford Languages.}} 
+\afslut
+
+\mnewfoil
+
+{%%%%%%%%%%%%%%%%%%%%
+\begynd
+\pind Figure\,\vref{onto.fig\pot{}{2}} is a graphical rendition of a
+\begynd
+\pind \sfsl{structured set of concepts for modelling domains}.
+\afslut
+\afslut
+}%%%%%%%%%%%%%%%%%%%%
+
+%\paperortutorial{}{
+\mnewfoil
+\hDBfigure{onto}{\pos{10}{11}cm}{The Upper Ontology}{onto.fig}
+%}
+
+\nbbbbb{Universe of Discourse}\label{Universe of Discourse}
+
+\begynd
+\pind Domain descriptions start
+\begynd
+\pind with a terse sketch of the main facets of the domain
+\pind followed by the naming of the domain.
+\afslut
+\afslut
+ 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\dbeat{\brcolor{\arabic{dprompt}:}
+    }\small{\brcolor{\texttt{descr\_Universe\_of\_Discourse}}}}}
+\bff{Universe of Discourse: \texttt{calc\_UoD}}\newdf{descr\_Universe\_of\_Discourse}
+%\RSLatex
+%   &\sort{Narration:}& 
+%      Text
+%   &\sort{Formalisation:}& 
+%      type UoD
+%\endRSLatex 
+\bp
+\>\ \sort{Narration:} \\
+\>\>\>\kw{Text}\\
+\>\ \sort{Formalisation:} \\
+\>\>\>\kw{type} UoD
+\ep
+\eff
+
+\newexampl{Universe of Discourse}{exa-uod}{exa:nasod}
+  
+
+\nbbbbb{External and Internal Qualities}\label{External Qualities}
+
+\characterise{External qualities}{external-qualities}{External qualities
+      of endurants\footnote{We refer to predicate prompt \#\,2 below
+      for a definition of \sfsl{endurant}.} of a domain 
+\begynd
+\pind are, in a simplifying sense, those properties of endurants that we can
+\begynd
+\pind see,
+\pind touch and which 
+\pind have spatial extent.
+\afslut
+\pind They, so to speak, take form.
+\afslut}
+
+
+\characterise{Internal qualities}{internal-qualities}{Internal qualities of endurants of a domain
+\begynd
+\pind are, in a less simplifying sense, those which
+\begynd
+\pind we may not be able to see or ``feel'' when touching an endurant,
+\pind but they can, as we now `mandate' them,
+\begynd
+\pind be reasoned about, \nyl as for \brcolor{unique identifiers} \nyl
+and \brcolor{mereologies},\footnote{We refer to Sects.\,\ref{Unique Identification}--\ref{Mereology}.} 
+\afslut or
+\pind be measured by some \sort{physical/chemical} means,
+\pind or be ``spoken of'' by \sort{intentional deduction}, and
+\begynd
+\pind be reasoned about,
+\afslut
+\pind as we do when we \brcolor{attribute} and \brcolor{intentional pull} properties\footnote{We
+  refer to Sects.\,\ref{Attributes}--\ref{Intentional Pull}.}  to endurants. 
+\afslut
+\afslut
+}
+
+
+\bbbb{Predicate Analysis of External Qualities of Endurants}
+
+\characterise{Phenomenon}{phenomenon}{ By a
+     \sfsl{phenomenon} \sl  we shall understand a fact that is 
+     observed to exist or happen\ \dbsquare\ \ \rm Examples of phenomena
+     are: emotions of a human, the rivers, lakes, forests, mountains
+     and valleys of mother nature; the railway tracks, their units,
+     the locomotive of a railway system.}
+
+\bgcolor{Domain Analysis Predicates:}{ %dom-anal-predI}{
+     \rm We shall define a number of domain analysis predicates.
+     They are all referred to as prompts. Prompts are method tools. The
+     domain modeller applies these to ``real'', i.e.,
+     actual world phenomena, that is, not to formal values. In the
+     next 18 paragraphs we shall ``reveal'' a number of such
+     predicates. First with a \sl reasonable definition (in slanted font)\rm, then with
+     examples and some comments (in roman font).
+\prepro{is\_entity}{is-entity}\newap{is\_entity} \sl% 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_entity}}}}%
+\begynd
+\pind By an {entity} we shall understand  something
+\begynd
+\pind that can be {observe}d, i.e., be
+\begynd  
+\pind seen or touched by humans,
+\pind \sfsl{or} that can be {conceive}d 
+\pind as an {abstraction}  of an entity;
+\afslut 
+\pind alternatively,
+\begynd
+\pind a phenomenon is an entity, \sfsl{if it exists, it is
+      \pdindextermi{``being''}, 
+\pind it is that which makes a {``thing''} what it is: \nyl
+      essence, essential nature}\footnote{All of the analysis prompts
+      are necessary, but few new be explicitly applied\,!}\pos{ \cite[\sfsl{Vol.\,I, pg.\,665}]{OED}}{}
+     \dbsquare\ \
+\afslut
+\afslut \rm Some, but not necessarily
+  all aspects of a river can
+  be rationally described, hence can be still be considered
+  entities. Similarly, many aspects of a
+  road net can be rationally described, hence will be considered
+     entities. \sl
+\prepro{is\_endurant}{is-endurant}\newap{is\_endurant} \sl%
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_endurant}}}}%
+     Endurants are those quantities of domains that we can
+      observe (see and touch), in \sfsl{space}, as ``complete'' entities at no matter
+      which point in \sfsl{time} -- ``material'' entities that
+      persists, endures \cite[\sfsl{Vol.\,I, pg.\,656}]{OED} \dbsquare\ \ \rm
+      Street segments [links], street intersections [hubs],  
+      automobiles standing still in an automobile show room are
+      endurants.  Domain endurants, when eventually modelled in
+      software, typically 
+      become data. Hence the careful analysis of domain endurants is a
+      prerequisite for subsequent careful conception and analyses of
+      data structures for software, including data bases. \sl
+      \sl\rm
+     
+\prepro{is\_perdurant}{is-perdurant}\newap{is\_perdurant} \sl%  
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_perdurant}}}}%
+\begynd
+\pind By a \pdindextermi{perdurant} we shall understand an
+      entity   
+\begynd
+\pind for which only a fragment exists\pos{}{\\} if we look at or
+      touch them\pos{}{\\} at
+      any given snapshot in time.
+\pind Were we to freeze time we would only see or
+      touch \pos{}{\\} a fragment of the perdurant
+      \cite[\sfsl{Vol.\,II, pg.\,1552}]{OED} \eod \ \ 
+\afslut
+\afslut \rm Automobiles in action, container vessels sailing on the 7
+     seas and loading and unloading containers in harbours are
+     examples of perdurants. Domain perdurants, when eventually modelled in
+     software, typically 
+      become processes.} 
+    
+\begynd
+\pind \sfsl{Endurants} are
+\begynd
+\pind either \sfsl{solid} endurants, or are
+\pind \sfsl{fluid} endurants.
+\afslut
+
+\prepro{is\_solid}{is-solid}\newap{is\_solid} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_solid}}}}
+\begynd
+\pind By a \pdindextermii{solid}{endurant} we shall understand an endurant
+\pind which is 
+\begynd
+\pind  separate,  
+\pind individual or
+\pind  distinct in form or concept,
+\afslut
+\pind or, rephrasing:
+\begynd
+\pind  a body 
+\pind or magnitude
+\afslut
+  of three-dimensions, \nyl having length, breadth and thickness
+  \cite[\sfsl{Vol.\,II, pg.\,2046}]{OED} \eod\ \
+\afslut \rm 
+\begynd
+\pind Wells,
+\pind pipes, 
+\pind valves, 
+\pind pumps, 
+\pind forks,
+\pind joins,
+\pind regulator, and 
+\pind sinks
+\afslut of a pipeline are solids.
+      \sl
+\prepro{is\_fluid}{is-fluid}\newap{is\_fluid} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_fluid}}}}
+\begynd
+\pind By a \pdindextermii{fluid}{endurant} we shall understand \nyl   an endurant which is 
+\begynd
+\pind prolonged, without interruption, \nyl  in an unbroken series or pattern;
+\afslut or, rephrasing:
+\begynd
+\pind a substance (liquid, gas or plasma)  \nyl 
+      having the property of flowing,  \nyl  
+      consisting of particles \nyl  
+      that move  among themselves \cite[\sfsl{Vol.\,I, pg.\,774}]{OED} \eod \  \ \rm
+\afslut
+\afslut Fluids are otherwise
+\begynd
+\pind liquid, or
+\pind gaseous, or
+\pind plasmatic, or
+\pind granular\footnote{\label{fn.granular1}\LLLL This is a purely
+      pragmatic decision. \nyl ``Of course'' sand, gravel, soil, etc., are not
+      fluids, \nyl  but for our modelling purposes it is convenient \nyl  to
+      ``compartmentalise'' them as fluids\,!}, or
+\pind plant products\footnote{\LLLL i.e., chopped sugar cane, threshed, or
+      otherwise. See footnote \vref{fn.granular1}.},
+\pind et cetera.
+\pind Specific examples of fluids are:
+\begynd
+\pind water, oil, gas, compressed air, etc.
+\afslut
+\pind A container, which we consider a solid endurant,
+\begynd
+\pind may be \sfsl{conjoined} with another, a fluid, 
+\pind like a gas pipeline unit may ``contain'' gas.
+\afslut
+
+\rm
+\pind We  analyse endurants into either of two kinds:
+\begynd
+\pind \sfsl{parts} and
+\pind \sfsl{living species}.
+\afslut
+\pind The distinction between \sfsl{parts} and \sfsl{living species} \nyl
+      is motivated in \kaisorfil\
+      \cite{kaisorlander1994,kaisorlander1997,kaisorlander2002,kaisorlander2016,kaisorlander2022}. 
+\afslut
+      \sl
+\prepro{is\_part}{is-part}\newap{is\_part} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_part}}}} 
+\begynd
+\pind By a \sfsl{part} we shall understand
+\begynd
+\pind a solid endurant existing in time and space and
+\pind subject to laws of physics,
+\pind including the \sfsl{causality principle} and
+\pind \sfsl{gravitational pull}\,\footnotemark
+\afslut
+\afslut
+\footnotetext{\LLLL This characterisation
+  is the result of our study of relations between philosophy and
+  computing science, notably influenced by \kaisorfil\label{influencex}}\
+\ \dbsquare\ \
+
+\pind Natural and man-made parts are either
+\begynd
+\pind \sfsl{atomic} or
+\pind \sfsl{compound}.
+\afslut
+\afslut 
+      \sl
+\prepro{is\_atomic}{is-atomic}\newap{is\_atomic}  \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_atomic}}}}
+\begynd
+\pind By an \sfsl{atomic part} we shall understand a part
+\begynd
+\pind which the domain analyser considers to be indivisible
+\pind in the sense of not meaningfully,
+\pind for the purposes of the domain under consideration,
+\pind that is, to not meaningfully consist of sub-parts \dbsquare\ \ \rm
+\afslut
+\afslut The
+\begynd
+\pind wells,
+\pind pumps, 
+\pind valves, 
+\pind pipes, 
+\pind forks, 
+\pind joins and 
+\pind sinks
+\afslut of a pipeline can be considered atomic.
+      \sl
+\prepro{is\_compound}{is-compound}\newap{is\_compound} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_compound}}}}
+\begynd
+\pind \pdindextermii{Compound}{part}s are those which are
+\begynd
+\pind either Cartesian-product-
+\pind or are set-
+\afslut
+\pind oriented parts  \eod \ \rm
+\afslut
+      \sl
+\prepro{is\_Cartesian}{is-Cartesian}\newap{is\_Cartesian} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_Cartesian}}}}
+\begynd
+\pind \pdindextermii{Cartesian}{part}s are those (compound parts)
+\begynd
+\pind which consists of an ``indefinite number'' 
+\pind of two or more parts 
+\pind of distinctly named sorts \dbsquare\ \ \rm
+\afslut
+\afslut
+\begynd
+\pind Some clarification may be needed.
+\begynd
+\pind (i) In mathematics, as in \texttt{RSL} \citersl, 
+\begynd
+\pind a value is a Cartesian (``record'') value 
+\pind if it can be expressed, for example as $(a,b,...,c)$,
+\pind where $a, b, ..., c$ are mathematical (or, which is the same, \texttt{RSL}) values.
+\pind Let the sort names of these be $A, B, ..., C$ --
+\pind with these being required to be distinct.
+\pind We wrote ``indefinite number'':
+\begynd
+\pind the meaning being that the number is fixed, finite, but not specific.
+\afslut
+\afslut
+\afslut
+\pind (ii) The requirement: `distinctly named' is pragmatic.
+\begynd
+\pind If the domain modeller thinks 
+\pind that two or
+      more of the components of a  Cartesian part 
+\pind [really] are of the same sort, 
+\pind then that person is most likely confused
+\pind and must come up with suitably distinct sort names for these
+      ``same sort'' parts\,!
+\afslut
+\pind (iii) Why did we not write ``definite number''\,?
+\begynd
+\pind Well, at the time of first analysing a Cartesian part,
+\pind the  domain modeller
+\pind may not have thought of all the consequences, i.e., analysed,
+\pind the compound part.
+\pind Additional sub-parts, of the Cartesian compound, may be
+      ``discovered'', subsequently
+\pind and can then, 
+\pind with the approach we are taking wrt.\ the modelling of these,
+\pind be ``freely'' added subsequently\,!
+\afslut
+\afslut
+\begynd
+\pind We refer to the road transport
+  system example above.
+\pind We there viewed (hubs, links and) automobiles \nyl as atomic parts.
+\pind From another point of view \nyl we shall here understand automobiles \nyl
+      as Cartesian parts:
+\pos{}{\begin{multicols}{2}}
+\begynd
+\pind the engine train,
+\pind the chassis,
+\pind the car body,
+\pind four doors (left front, left rear, right front, right rear), and
+\pind the wheels.
+\afslut
+\pos{}{\end{multicols}}
+\pind These may again be considered Cartesian parts.
+\afslut
+      \sl
+\prepro{is\_part\_set}{is-part-set}\newap{is\_part\_set} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_part\_set}}}}
+\begynd
+\pind \pdindextermii{Part}{set}s are those which,
+\begynd
+\pind in a given context, 
+\pind are deemed to \textsl{meaningfully} consist of
+\begynd
+\pind an indefinite number of \sfsl{sub-part}s
+\pind of the same sort \dbsquare\ \ \rm
+\afslut
+\pind Examples of set parts are: the set of hubs of a road net hub
+aggregate, the set of links of a road net link aggregate, and the set
+of automobiles of an automobile aggregate -- all of the road net
+transport that we are exemplifying.
+\afslut
+
+      \sl
+\prepro{is\_living\_species}{is-living-species}\newap{is\_living\_species} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_living\_species}}}}
+\begynd
+\pind By a \sfsl{living species} we shall understand
+\begynd
+\pind a solid endurant,
+\pind subject to laws of physics, and
+\pind additionally subject to \sfsl{causality of
+      purpose}. 
+\pind Living species
+\begynd \LLLL
+\pind must have some \sfsl{form they can be developed to reach};
+\pind a form they must be \sfsl{causally  determined  to maintain}.
+\pind This \sfsl{development and maintenance} must further \nyl engage
+      in \sfsl{exchanges of matter with an environment} \rm\dbsquare\
+\afslut
+\afslut
+\afslut 
+\pind It must be possible that living species occur in two forms:
+\begynd
+\pind \brcolor{plants}, respectively \brcolor{animals}. 
+\pind Although we have not yet come across domains for which \nyl the need
+      to model the living species of plants were needed.
+\pind Hence:
+\afslut
+
+\prepro{is\_plant}{is-plant}\newap{is\_plant} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_plant}}}} 
+Plants are living species which are characterised by  \nyl
+\sfsl{development, form and exchange of matters with the environment} \dbsquare\ \ \sl 
+
+\prepro{is\_animal}{is-animal}\newap{is\_animal} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_animal}}}}  
+Animals are living species which are {additionally} characterised by
+the \sfsl{ability of purposeful movement} \dbsquare\ \ \rm 
+ 
+Within animals we then have humans. \sl
+
+\prepro{is\_human}{is-human}\newap{is\_human} \sl 
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_human}}}}
+\begynd
+\pind A \sfsl{human} (a \sfsl{person}) is an \sfsl{animal}, \nyl with the additional
+      properties of having 
+\begynd
+\pind \sfsl{language},
+\pind being \sfsl{conscious} of \sfsl{having knowledge} (of its own
+      situation), and
+\pind \sfsl{responsibility} \dbsquare\ \ \rm
+\afslut
+\afslut
+
+
+\characterise{Manifest Part}{manifest}{By a manifest part we shall
+  understand \label{summary-manifest}
+\begynd
+\pind a part which `manifests' itself 
+\begynd
+\pind either in a physical, visible
+      manner, ``occupying'' \nyl an $\mathbb{AREA}$ or \nyl a $\mathbb{VOLUME}$
+      and \nyl a $\mathbb{POSITION}$  \nyl in  $\mathbb{SPACE}$, 
+\pind or in a conceptual manner \nyl  forms an organisation in Your
+mind\,!\ \dbsquare \rm\ \ 
+\afslut 
+\pind As we have already revealed,   
+\pind endurant parts can be \nyl transcendentally
+      deduced into perdurant behaviours   
+\pind -- with manifest parts indeed being so.
+\afslut}
+
+\prepro{is\_manifest}{is-manifest}\newap{is\_manifest} \sl \texttt{is\_manifest($e$)}
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_manifest}}}}%
+      holds  if $e$ is manifest \dbsquare \sl
+
+\mnewfoil
+      
+\characterise{Structure}{structure}{By a structure we shall
+      understand
+\begynd
+\pind an endurant concept that allows \nyl  the domain modeller
+\begynd
+\pind to rationally decompose \nyl  a domain analysis and/or its description 
+\pind into manageable, logically relevant sections,  
+\pind but where these abstract endurants \nyl  are not further reflected
+      upon \nyl  in the domain analysis and description \dbsquare \rm\ \ 
+\afslut
+\pind Structures are therefore \nyl  not  transcendentally
+      deduced into perdurant behaviours.
+\afslut}
+
+\prepro{is\_structure}{is-structure}\newap{is\_structure} \sl  \texttt{is\_structure($e$)}
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_structure}}}}
+      holds if $e$  is a structure \dbsquare\sl
+
+Examples of structures arise as the result of our analysis of
+parts. Thus a road net could be modelled as the composite of two
+structures: a set of hubs and a set of links (the stretches between two
+adjacent hubs, i.e., road intersections), cf.\ Items\,\ref{final-0030}--\vref{final-0040}.
+      
+\prepro{is\_stationary}{is-stationary}\newap{is\_stationary}
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_stationary}}}}
+        \sl  An endurant part is
+      stationary if it never changes position in space \dbsquare\ \ 
+      
+      \sl
+\prepro{is\_mobile}{is-mobile}\newap{is\_mobile} \sl
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm}\arabic{predctr}. }\small{\bbcolor{\texttt{is\_mobile}}}}
+      An endurant part is
+      mobile if it may possibly change position in space  \dbsquare\ \
+      \rm
+
+      We may need, occasionally, the distinction as now outlined:
+
+
+%\dbeat{%%%%%%%%%%%%%%%%%%%
+\begynd
+\pind \sfsl{Endurants} are
+\begynd
+\pind either \sfsl{natural} endurants, or are
+\pind \sfsl{artefactual} endurants.
+\afslut
+
+      \sl
+\prepro{is\_natural}{is-natural} \sl  
+By a \sfsl{natural endurant} we shall understand one which has been
+created by nature.
+\rm
+
+      \sl
+\prepro{is\_artefactual}{is-artefactual} \sl  
+By an \sfsl{artefactual} endurant we shall understand one which has been
+created by humans.\rm
+
+\begynd
+\pind \bgcolor{Discrete Dynamic and Artefactual Domains:}
+\begynd
+\pind In our initial characterisation of domains, Page\,\pageref{What is a Domain},
+\pind an emphasis was put on their \sfsl{discrete dynamics and human assistedness}.
+\pind The analysis and description calculi and, hence, our domain modelling,
+\pind are therefore ``geared'' in that direction.
+\afslut
+
+\pind We are not offering to model time continuous domains.\label{noContinuity}
+\pind See Sect.\,\vref{Continuity}.
+\afslut
+%}%%%%%%%%%%%%%%%%%%%%%%%%
+
+      
+%\noindent
+We summarise\footnotemark:
+
+\bff{Analysis Predicates}\sf
+%%\characterise{Analysis Predicate Signatures}{anprsi}{%
+\begin{multicols}{3}\small
+%\RSLatex
+%value
+%&\cref{is-entity}&  is_entity: &$\Phi$& -> Bool 
+%&\cref{is-endurant}&  is_endurants: E -> Bool 
+%&\cref{is-perdurant}&  is_perdurant: E -> Bool 
+%&\cref{is-solid}&  is_solid: E -> Bool 
+%&\cref{is-fluid}&  is_fluid: E -> Bool 
+%&\cref{is-part}&  is_part: E -> Bool 
+%&\cref{is-living-species}&  is_living_species: E -> Bool 
+%&\cref{is-atomic}&  is_atomic: E -> Bool 
+%&\cref{is-compound}&  is_compound: E -> Bool 
+%&\cref{is-animal}&  is_animal: E -> Bool 
+%&\cref{is-animal}&  is_plant: E -> Bool 
+%&\cref{is-Cartesian}&  is_Cartesian: E -> Bool 
+%&\cref{is-part-set}&  is_part_set: E -> Bool 
+%&\cref{is-human}&  is_human: E -> Bool 
+%&\cref{is-manifest}&  is_manifest: E -> Bool 
+%&\cref{is-structure}&  is_structure: E -> Bool 
+%&\cref{is-stationary}&  is_structure: E -> Bool 
+%&\cref{is-mobile}&  is_structure: E -> Bool 
+%&\cref{is-natural}&  is_natural: E -> Bool 
+%&\cref{is-artefactual}&  is_artefactual: E -> Bool 
+%\endRSLatex 
+\bp
+\kw{value}\\
+\cref{is-entity}\ \ is\_entity: $\Phi$ {\RIGHTARROW} \kw{Bool} \\
+\cref{is-endurant}\ \ is\_endurants: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-perdurant}\ \ is\_perdurant: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-solid}\ \ is\_solid: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-fluid}\ \ is\_fluid: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-part}\ \ is\_part: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-living-species}\ \ is\_living\_species: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-atomic}\ \ is\_atomic: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-compound}\ \ is\_compound: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-animal}\ \ is\_animal: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-animal}\ \ is\_plant: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-Cartesian}\ \ is\_Cartesian: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-part-set}\ \ is\_part\_set: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-human}\ \ is\_human: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-manifest}\ \ is\_manifest: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-structure}\ \ is\_structure: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-stationary}\ \ is\_stationary: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-mobile}\ \ is\_mobile: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-natural}\ \ is\_natural: E {\RIGHTARROW} \kw{Bool} \\
+\cref{is-artefactual}\ \ is\_artefactual: E {\RIGHTARROW} \kw{Bool} 
+\ep
+\end{multicols}\normalsize 
+\eff\rm\footnotetext{Framed texts highlight \sfsl{domain analysis \&
+    description} prompts.}
+
+\begin{exam}
+\stepcounter{examctr}\bbcolor{Example.}  \brcolor{\textsf{Analysis Predicates:}} In the example of
+Appendix\,\vref{final-example}--\pageref{final-example.n} we do not [explicitly]  show the
+``application'' of analysis predicates. They are tacitly assumed.
+\end{exam}
+
+\dbeat{
+\nbbbb{On Interpreting the Analysis \& Description Ontology}
+
+                                %\begin{multicols}{2}
+\begin{minipage}{12cm}
+\begynd
+\pind We interpret the kind of analysis \& description methodology
+      ontology diagrams of which Fig.\,\vref{onto.fig\pot{}{2}} is an example.
+\pind The figure to the right illustrates a fragment of such diagrams.
+\begynd
+\pind At node \sort{A}, i.e., observing an endurant, \sort{a}, of sort \sort{A},
+\pind the downward diverging two lines express that \sort{a}
+\begynd
+\pind is either of sort \sort{B}
+\pind or of sort \sort{C};
+\afslut
+\pind that is:
+\xtut{%
+%\RSLatex
+%    pre: is_B(a), is_C(a): is_A(a)
+%    (is_B(a)=>~is_C(a)) /\ (is_C(a)=>~is_B(a))
+%    (is_B(a)is~is_C(a)) /\ (~is_B(a)is&i&s_C(a))
+%\endRSLatex
+\bp
+\>\>\kw{pre}: is\_B(a), is\_C(a): is\_A(a)\\
+\>\>(is\_B(a){\DBLRIGHTARROW}{\SIM}is\_C(a)) {\WEDGE} (is\_C(a){\DBLRIGHTARROW}{\SIM}is\_B(a))\\
+\>\>(is\_B(a){\IS}{\SIM}is\_C(a)) {\WEDGE} ({\SIM}is\_B(a){\IS}is\_C(a))
+\ep
+}
+\afslut
+\afslut
+\end{minipage}
+\begin{minipage}{4cm}
+\epsfig{file=ABC.eps,height=3cm}%
+\end{minipage}
+
+%\end{multicols}
+}
+
+\nbbbb{Functional Analysis of External Qualities of Endurants}
+
+\begynd
+\pind Given a compound endurant, that is,
+\begynd
+\pind either a Cartesian
+\pind or a part set,
+\afslut
+\pind we analyse that compound, 
+\pind at the two $\bullet$'s of Fig.\,\vref{onto.fig\pot{}{2}},
+\pind into its constituent endurants, respectively parts, 
+\pind and the name of the sort:
+\afslut
+
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\lilacolor{determine\_Cartesian\_parts}}}}
+\bff{determine\_Cartesian\_parts, determine\_part\_set}\newaf{determine\_Cartesian\_parts}\newaf{determine\_part\_set}
+%\RSLatex
+%value
+%   determine_Cartesian_parts: E -> (E1><`eta&\,&`Phi)><(E2><`eta&\,&`Phi)><...><(Ec><`eta&\,&`Phi)
+%   determine_Cartesian_parts(e) as (e1:`eta&E1&,e2:`eta&E2&,...,ec:`eta&Ec&)
+%
+%   determine_part_set: E -> P-set><`eta&\,&`Phi
+%   determine_part_set(e) as ({p1,p2,...,ps}:`eta&P&,)
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\ determine\_Cartesian\_parts: E {\RIGHTARROW} (E1{\TIMES}$\eta$\,$\Phi$){\TIMES}(E2{\TIMES}$\eta$\,$\Phi$){\TIMES}{\DOTDOTDOT}{\TIMES}(Ec{\TIMES}$\eta$\,$\Phi$)\\
+\>\ determine\_Cartesian\_parts(e) \kw{as} (e1:$\eta$E1,e2:$\eta$E2,{\DOTDOTDOT},ec:$\eta$Ec)\\
+\\
+\>\ determine\_part\_set: E {\RIGHTARROW} P\kw{-set}{\TIMES}$\eta$\,$\Phi$\\
+\>\ determine\_part\_set(e) \kw{as} ({\LBRACE}p1,p2,{\DOTDOTDOT},ps{\RBRACE}:$\eta$P,)
+\ep
+\eff
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\lilacolor{determine\_part\_set}}}}\newaf{determine\_part\_set}
+
+\noindent
+\begynd
+\pind The above \textsf{calc}ulation function signatures and
+      characterisations illustrate two extensions to \texttt{RSL}
+      \cite{RSL}:
+\begynd
+\pind \textsf{$\eta$P} expresses the name of a sort \textsf{P}, and
+\pind \textsf{$\eta$\,$\Phi$} expresses the  type of sort names.
+\afslut
+
+\pind Again we emphasize that these \textsf{calc}ulations 
+\pind are performed by the domain modeller.
+\pind They are used in subsequent schemas for describing external
+      qualities of endurants.
+\afslut
+
+\nbbbb{Descriptions of External Qualities of Endurants}
+
+\begynd
+\pind Similarly,
+\begynd
+\pind again at the two \dbsquare's of Fig.\,\vref{onto.fig\pot{}{2}},
+\pind we are now ready to describe respectively
+\begynd
+\pind Cartesian parts and
+\pind part set parts.
+\afslut
+\afslut
+\afslut
+
+\bbb{Describing Cartesian Parts}\label{Describing Cartesian Parts}
+
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\brcolor{descr\_Cartesian}}}}\newdf{descr\_Cartesian}
+\bff{descr\_Cartesian}
+%\RSLatex
+%value 
+%   descr_Cartesian: P -> &\rsltext&
+%   descr_Cartesian(p) is
+%      &\bq& &\sort{Narrative:}&
+%          [s] text on sorts
+%          [o] text on observers
+%          [a] text on axioms and/or proof obligations
+%       &\,\,\sort{Formalisation:}&
+%          [s] type 
+%                 E1, E2, ..., Ec
+%          [o] value 
+%                 obs_E1: E->E1, obs_E2: E->E2, ..., obs_Ec: E->Ec
+%          [a] &\sort{axiom} and/or \sort{proof obligation}&
+%                 &$\mathcal{A}$/$\mathcal{P}$&(...) &\eq&
+%\endRSLatex 
+\bp
+\kw{value} \\
+\>\ descr\_Cartesian: P {\RIGHTARROW} \rsltext\\
+\>\ descr\_Cartesian(p) {\IS}\\
+\>\>\>\bq \sort{Narrative:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} text on sorts\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} text on observers\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} text on axioms and/or proof obligations\\
+\>\>\>\ \,\,\sort{Formalisation:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} \kw{type} \\
+\>\>\>\>\>\>\>\>\ E1, E2, {\DOTDOTDOT}, Ec\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} \kw{value} \\
+\>\>\>\>\>\>\>\>\ obs\_E1: E{\RIGHTARROW}E1, obs\_E2: E{\RIGHTARROW}E2, {\DOTDOTDOT}, obs\_Ec: E{\RIGHTARROW}Ec\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} \sort{axiom} and/or \sort{proof obligation}\\
+\>\>\>\>\>\>\>\>\ $\mathcal{A}$/$\mathcal{P}$({\DOTDOTDOT}) \eq
+\ep
+\eff
+
+\newexampl{Cartesians}{exa-cart}{exa:Cartesian Examples}
+  
+\nbbb{Describing Part Sets}\label{Describing Part Sets}
+
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\brcolor{descr\_part\_set}}}}
+\bff{descr\_part\_set}\newdf{descr\_part\_set}
+%\RSLatex
+%value 
+%   descr_part-set: P -> &\rsltext&
+%   descr_part_set(p) is
+%      &\bq& &\sort{Narrative:}&
+%          [s] text on sorts
+%          [o] text on observers
+%          [a] text on axioms and/or proof obligations
+%       &\,\,\sort{Formalisation:}&
+%          [s] type 
+%                 P, Ps = P-set
+%          [o] value 
+%                 obs_Ps: E->Ps
+%          [a] &\sort{axiom} and/or \sort{proof obligation}&
+%                 &$\mathcal{A}$/$\mathcal{P}$&(...) &\eq&
+%\endRSLatex 
+\bp
+\kw{value} \\
+\>\ descr\_part\kw{-set}: P {\RIGHTARROW} \rsltext\\
+\>\ descr\_part\_set(p) {\IS}\\
+\>\>\>\bq \sort{Narrative:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} text on sorts\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} text on observers\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} text on axioms and/or proof obligations\\
+\>\>\>\ \,\,\sort{Formalisation:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} \kw{type} \\
+\>\>\>\>\>\>\>\>\ P, Ps {\EQ} P\kw{-set}\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} \kw{value} \\
+\>\>\>\>\>\>\>\>\ obs\_Ps: E{\RIGHTARROW}Ps\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} \sort{axiom} and/or \sort{proof obligation}\\
+\>\>\>\>\>\>\>\>\ $\mathcal{A}$/$\mathcal{P}$({\DOTDOTDOT}) \eq
+\ep
+\eff
+
+\newexampl{Part Sets}{exa-sets}{exa:Part Set Examples}
+  
+\nbbbb{Endurant States}\label{Endurant States}
+
+\characterise{Endurant State}{endurant-state}{%
+\begynd
+\pind By an \sfsl{endurant state} we shall understand
+\begynd
+\pind any collection of endurant parts \dbsquare
+\afslut
+\afslut}
+
+\bff{obs\_$\Sigma$}
+%\RSLatex
+%value
+%   `Sigma = P-set
+%value
+%   obs_`Sigma: E -> `Sigma
+%   obs_`Sigma(e) is
+%      if is_manifest(e) 
+%         then
+%            is_atom(e) -> {e},
+%            is_Cartesian(e) ->
+%               let (p1:`eta&E1&,p2:`eta&E2&,...,pc:`eta&Ec&) =  calc_cartesian_parts_and_sorts(e) in
+%               {p1,p2,...,pc} union obs_`Sigma(p1) union obs_`Sigma(p2) union ... union obs_`Sigma(pc) end
+%            is_part-set(e) -> 
+%               let ({p1,p2,...,ps}:`eta&P&) =  calc_part_sets_parts_and_sort(e) in
+%               {p1,p2,...,ps} union obs_`Sigma(p1) union obs_`Sigma(p2) union ... union obs_`Sigma(ps) end
+%         else {}
+%      end     
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\ $\Sigma$ {\EQ} P\kw{-set}\\
+\kw{value}\\
+\>\ obs\_$\Sigma$: E {\RIGHTARROW} $\Sigma$\\
+\>\ obs\_$\Sigma$(e) {\IS}\\
+\>\>\>\kw{if} is\_manifest(e) \\
+\>\>\>\>\ \kw{then}\\
+\>\>\>\>\>\>is\_atom(e) {\RIGHTARROW} {\LBRACE}e{\RBRACE},\\
+\>\>\>\>\>\>is\_Cartesian(e) {\RIGHTARROW}\\
+\>\>\>\>\>\>\>\ \kw{let} (p1:$\eta$E1,p2:$\eta$E2,{\DOTDOTDOT},pc:$\eta$Ec) {\EQ}\ \ calc\_cartesian\_parts\_and\_sorts(e) \kw{in}\\
+\>\>\>\>\>\>\>\ {\LBRACE}p1,p2,{\DOTDOTDOT},pc{\RBRACE} {\UNION} obs\_$\Sigma$(p1) {\UNION} obs\_$\Sigma$(p2) {\UNION} {\DOTDOTDOT} {\UNION} obs\_$\Sigma$(pc) \kw{end}\\
+\>\>\>\>\>\>is\_part\kw{-set}(e) {\RIGHTARROW} \\
+\>\>\>\>\>\>\>\ \kw{let} ({\LBRACE}p1,p2,{\DOTDOTDOT},ps{\RBRACE}:$\eta$P) {\EQ}\ \ calc\_part\_sets\_parts\_and\_sort(e) \kw{in}\\
+\>\>\>\>\>\>\>\ {\LBRACE}p1,p2,{\DOTDOTDOT},ps{\RBRACE} {\UNION} obs\_$\Sigma$(p1) {\UNION} obs\_$\Sigma$(p2) {\UNION} {\DOTDOTDOT} {\UNION} obs\_$\Sigma$(ps) \kw{end}\\
+\>\>\>\>\ \kw{else} {\LBRACE}{\RBRACE}\\
+\>\>\>\kw{end}\ \ \ \ \ 
+\ep
+\eff
+
+\newexampl{Endurant State Examples}{exa-sta-exa}{exa:Endurant States}
+
+\nbbbb{A Proof-theoretic Explication, I}\label{AProofTheoreticExplicationI}
+
+\begynd
+\pind The concept of \sfsl{analysis predicates} and \sfsl{part
+  observer functions} is due to McCarthy \cite[\sfsl{Sect.\.12-13}]{Mc62a}.
+
+\pind In \cite{Mc62a} McCarthy introduces a notion of \sfsl{abstract
+      syntax}, Sect.\,12, and \sfsl{semantics}, Sect.\,13.
+\pind So far we have dealt, in our domain analysis, with syntax.
+\pind There are three elements, according to McCarthy, to consider:
+\begynd
+\pind the \texttt{is\_...} predicates,
+\pind the \texttt{obs\_...} [``destructor''] functions, and, not shown, so far, in this
+      paper, 
+\pind the \texttt{mk\_...} constructor functions.
+\afslut
+\pind For compound abstract syntactic entities they are related as follows:
+%\RSLatex
+%      is_Cartesian(p) is
+%          let (p1:`eta&P1&,p2:`eta&P2&,...,pc:`eta&Pc&) = calc_Cartesian_parts_and_sorts(p) in
+%          p = mk_Cartesian(obs_P1(p),obs_P2(p),...,obs_Pc(p)) end
+%
+%      is_part_set(p) is
+%          let ({p1,p2,...,ps},`eta&P1&) = calc_part_sets_parts_and_sort(p) in
+%          p = mk_part_set({p1,p2,...,ps}) end
+%\endRSLatex 
+\bp
+\>\>\>is\_Cartesian(p) {\IS}\\
+\>\>\>\>\>\kw{let} (p1:$\eta$P1,p2:$\eta$P2,{\DOTDOTDOT},pc:$\eta$Pc) {\EQ} calc\_Cartesian\_parts\_and\_sorts(p) \kw{in}\\
+\>\>\>\>\>p {\EQ} mk\_Cartesian(obs\_P1(p),obs\_P2(p),{\DOTDOTDOT},obs\_Pc(p)) \kw{end}\\
+\\
+\>\>\>is\_part\_set(p) {\IS}\\
+\>\>\>\>\>\kw{let} ({\LBRACE}p1,p2,{\DOTDOTDOT},ps{\RBRACE},$\eta$P1) {\EQ} calc\_part\_sets\_parts\_and\_sort(p) \kw{in}\\
+\>\>\>\>\>p {\EQ} mk\_part\_set({\LBRACE}p1,p2,{\DOTDOTDOT},ps{\RBRACE}) \kw{end}
+\ep
+\noindent
+\pind The \texttt{mk\_...} constructors were not introduced above.
+\pind The reason is simple; a pragmatic decision:
+\begynd
+\pind As the domain modeller proceeds in their work
+\pind they may, when encountering Cartesian compounds,
+\pind be free to leave some components (of the Cartesian) out,
+\pind components that they may later introduce.
+\afslut
+\pind So really, the first of the identities above ought be expressed as
+\afslut
+%\RSLatex 
+%      is_Cartesian(p) is
+%          let (p1`eta:&P1&,p2:`eta&P2&,...,pc:`eta&Pc&,...) = calc_Cartesian_parts_and_sorts(p) in
+%          p = mk_Cartesian(obs_P1(p),obs_P2(p),...,obs_Pc(p),...) end 
+%\endRSLatex 
+\bp
+\>\>\>is\_Cartesian(p) {\IS}\\
+\>\>\>\>\>\kw{let} (p1$\eta$:P1,p2:$\eta$P2,{\DOTDOTDOT},pc:$\eta$Pc,{\DOTDOTDOT}) {\EQ} calc\_Cartesian\_parts\_and\_sorts(p) \kw{in}\\
+\>\>\>\>\>p {\EQ} mk\_Cartesian(obs\_P1(p),obs\_P2(p),{\DOTDOTDOT},obs\_Pc(p),{\DOTDOTDOT}) \kw{end} 
+\ep
+
+\noindent
+\begynd
+\pind We continue this explication in Sect.\,\vref{AProofTheoreticExplicationII}.
+\afslut
+
+%%  \input{/home/db/2023/final/space-time}
+\nbbbbb{Space and Time}\label{final:Space and Time}
+
+\begynd
+\pind The concepts of space and time can be \sfsl{transcendentally
+      deduced},
+\begynd
+\pind by rational reasoning, 
+\pind as has been shown in \cite[\sfsl{Kai
+      S{\o}rlander}]{kaisorlander1994,kaisorlander1997,kaisorlander2002,kaisorlander2016,kaisorlander2022}, 
+\pind from the facts of \sfsl{symmetry, asymmetry, transitivity} and \sfsl{intransitivity} relations.
+\afslut
+
+\pind \sfsl{They are therefore facts of every possible universe.}
+\afslut
+
+\nbbbb{Space}\label{final:Space}
+
+\begynd
+\pind There is one given space.
+\pind As a type we name it $\mathbb{SPACE}$.
+\pind We do not bother, here, about textual representation of spatial
+      locations, 
+\pind but here is an example that would work in or near this globe we
+      call our earth: 
+\pind \texttt{Latitude\,55.805600, Longitude\,12.448160,
+  Altitude\,35\,m}\footnote{The author's house location\,!}.
+\afslut
+
+\mnewfoil
+
+\begynd
+\pind Also, in this paper, we do not present models of $\mathbb{SPACE}$.
+\pind But we do introduce such notions as
+\begynd
+\pind (i)   $\mathbb{POINT}$: as $\mathbb{SPACE}$ being some dense and
+            infinite collection of points;
+\pind (ii)  $\mathbb{LOCATION}$: as the location in space of some point; 
+
+%\RSLatex
+%value  &\textsf{\sort{record\_$\mathbb{LOCATION}$}}:& E -> &$\mathbb{LOCATION}$\index{symbind}{zzzzzz@\protect{\sort{record\_$\mathbb{LOCATION}$}}}&
+%\endRSLatex 
+\bp
+\kw{value}\ \ \textsf{\sort{record\_$\mathbb{LOCATION}$}}: E {\RIGHTARROW} $\mathbb{LOCATION}$\index{symbind}{zzzzzz@\protect{\sort{record\_$\mathbb{LOCATION}$}}}
+\ep
+\newdf{\sort{record\_$\mathbb{LOCATION}$}}
+\pind (iii) $\mathbb{CURVE}$: as an infinite collection of points
+            forming a mathematical curve -- having a (finite or
+            infinite) \sfsl{length};
+\pind (iv)  $\mathbb{SURFACE}$: as an infinite collection of points
+            forming a mathematical surface -- having a (finite or
+            infinite) \sfsl{area}; and
+\pind (v)   $\mathbb{VOLUME}$: as an infinite collection of points
+            forming a mathematical volume -- having a (finite or
+            infinite) \sfsl{volume}.
+\afslut
+\pind We suggest it, as a domain science \& engineering research topic,
+\begynd
+\pind that somebody studies \sfsl{a calculus or calculi of spatial modelling}.
+\afslut
+\afslut
+
+\nbbbb{Time}\label{final:Time}
+
+\begynd
+\pind There is one given time.
+\pind As a type we name it $\mathbb{TIME}$.
+\begynd
+\pind We do not bother, here, about textual representation of time, 
+\pind but here is an example: \texttt{\todaytime}\footnote{The time
+      this text was last compiled\,!}.
+\afslut
+\pind But we do introduce such crucial notions as
+\begynd
+\pind \sfsl{time interval} $\mathbb{TI}$ and
+\pind operations on $\mathbb{TIME}$ and $\mathbb{TI}$:
+
+%\RSLatex
+%value
+%    -: &$\mathbb{TIME}$&><&$\mathbb{TIME}$&->&$\mathbb{TI}$& 
+%    +: &$\mathbb{TIME}$&><&$\mathbb{TI}$&->&$\mathbb{TIME}$& 
+%    *: Real><&$\mathbb{TI}$&->&$\mathbb{TI}$& 
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\>{\MINUS}: $\mathbb{TIME}${\TIMES}$\mathbb{TIME}${\RIGHTARROW}$\mathbb{TI}$ \\
+\>\>{\PLUS}: $\mathbb{TIME}${\TIMES}$\mathbb{TI}${\RIGHTARROW}$\mathbb{TIME}$ \\
+\>\>{\AST}: \kw{Real}{\TIMES}$\mathbb{TI}${\RIGHTARROW}$\mathbb{TI}$ 
+\ep
+\afslut
+\noindent
+\pind A crucial time-related operation is that of \textsf{\sort{record\_$\mathbb{TIME}$}}.
+\pind It applies to ``nothing'':
+      \textsf{\sort{record\_$\mathbb{TIME}$}()} and yields $\mathbb{TIME}$.
+\afslut
+
+%\RSLatex
+%value  &\textsf{\sort{record\_$\mathbb{TIME}$}}:& Unit -> &$\mathbb{TIME}$\index{symbind}{zzzzzz@\protect{\sort{record\_$\mathbb{TIME}$}}}&
+%\endRSLatex 
+\bp
+\kw{value}\ \ \textsf{\sort{record\_$\mathbb{TIME}$}}: \kw{Unit} {\RIGHTARROW} $\mathbb{TIME}$\index{symbind}{zzzzzz@\protect{\sort{record\_$\mathbb{TIME}$}}}
+\ep
+\newdf{\sort{record\_$\mathbb{TIME}$}}
+%\nbbbbb{Space and Time}\label{final:Space and Time}
+
+
+
+\nbbbbb{Internal Qualities}\label{Internal Qualities}
+
+\begynd
+\pind We refer to the \sfsl{Internal Qualities} characterisation on
+      Page\,\pageref{char:internal-qualities}.
+\pind We can justify the grouping of internal endurant qualities into
+three kinds:
+\begynd
+\pind \sfsl{unique identifiers}, cf.\,Sect.\,\ref{Unique Identification},
+\pind \sfsl{mereologies}, cf.\,Sect.\,\ref{Mereology}, and
+\pind \sfsl{attributes}, cf.\,Sect.\,\ref{Attributes}.
+\pind To this we add the concept of \sfsl{intentional pull},
+      cf.\,Sect.\,\ref{Intentional Pull}. 
+\afslut
+\afslut
+
+\nbbbb{Unique Identification}\label{Unique Identification}
+
+\begynd
+\pind On the basis of \sfsl{philosophical reasoning}, within \sfsl{metaphysics}, 
+\begynd
+\pind we [can] argue that parts are uniquely identifiable
+     \cite[\sfsl{Kai S{\o}rlander}]{kaisorlander1994,kaisorlander1997,kaisorlander2002,kaisorlander2016,kaisorlander2022} 
+\afslut
+\afslut
+
+\bbb{Calculate Unique Identifiers}\label{Calculate Unique Identifiers}
+
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\brcolor{descr\_unique\_identifier}}}}\newdf{descr\_unique\_identifier}
+\bff{descr\_unique\_identifier}\newdf{descr\_unique\_identifier}
+%\RSLatex
+%value 
+%   descr_unique_identifier: P -> &\rsltext&
+%   descr_unique_identifier(p) is
+%      &\bq& &\sort{Narrative:}&
+%          [s] text on unique identifier sort
+%          [o] text on unique identifier observer
+%          [a] text on axioms and/or proof obligations
+%       &\,\,\sort{Formalisation:}&
+%          [s] type 
+%                 PI
+%          [o] value 
+%                 uid_P: P -> PI
+%          [a] &\sort{axiom} and/or \sort{proof obligation}&
+%                 &$\mathcal{A}$/$\mathcal{P}$&(...) &\eq&
+%\endRSLatex 
+\bp
+\kw{value} \\
+\>\ descr\_unique\_identifier: P {\RIGHTARROW} \rsltext\\
+\>\ descr\_unique\_identifier(p) {\IS}\\
+\>\>\>\bq \sort{Narrative:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} text on unique identifier sort\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} text on unique identifier observer\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} text on axioms and/or proof obligations\\
+\>\>\>\ \,\,\sort{Formalisation:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} \kw{type} \\
+\>\>\>\>\>\>\>\>\ PI\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} \kw{value} \\
+\>\>\>\>\>\>\>\>\ uid\_P: P {\RIGHTARROW} PI\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} \sort{axiom} and/or \sort{proof obligation}\\
+\>\>\>\>\>\>\>\>\ $\mathcal{A}$/$\mathcal{P}$({\DOTDOTDOT}) \eq
+\ep
+\eff
+
+\newexampl{Unique Identifiers}{ui}{exa:Unique Identifiation}
+
+\nbbb{Endurant Identifier States}
+
+\begynd
+\pind Given the endurant state values, 
+\begynd
+\pind for the whole domain or 
+\pind for respective, manifest part sorts,
+\afslut
+\pind one can define corresponding unique identifier values.
+\afslut
+
+\newexampl{Unique Identifier State}{uis}{exa:Unique Identifier State}
+
+\nbbb{Axioms}
+
+\begynd
+\pind The number of manifest parts
+\pind is the sames as 
+\pind the number of manifest part unique identifiers.
+\afslut
+
+\newexampl{Unique Identifier Axiom}{uia}{exa:Unique Identifier Axiom}
+
+\nbbb{Endurant Retrieval}\label{intq-retr}
+
+\begynd
+\pind Given a unique identifier, $\pi$, 
+\pind of a manifest part, $p$, 
+\pind of an endurant state, $\sigma$, of a domain 
+\pind one can retrieve that part:
+\afslut
+
+%\RSLatex
+%    value
+%        `sigma:`Sigma = gen_`Sigma(uod)
+%        retr_P: `Pi -> `Sigma -> P
+%        retr_P(`pi)(`sigma) is let p:P :- p isin `sigma /\ uid_P(p)=`pi in p end
+%\endRSLatex 
+\bp
+\>\>\kw{value}\\
+\>\>\>\>$\sigma$:$\Sigma$ {\EQ} gen\_$\Sigma$(uod)\\
+\>\>\>\>retr\_P: $\Pi$ {\RIGHTARROW} $\Sigma$ {\RIGHTARROW} P\\
+\>\>\>\>retr\_P($\pi$)($\sigma$) {\IS} \kw{let} p:P {\RDOT} p {\ISIN} $\sigma$ {\WEDGE} uid\_P(p){\EQ}$\pi$ \kw{in} p \kw{end}
+\ep
+
+
+\nbbbb{Mereology}\label{Mereology}
+
+\begynd
+\pind Mereology is the study and knowledge of parts and part relations.
+\pind It was first put forward, around 1916, by the Polish logician
+\sfsl{Stanis{\l}aw Le{\'s}niewski} \cite{Lesniewski1920s,CasatiVarzi1999}. 
+\afslut
+
+\begynd
+\pind Which are the relations that can be relevant for ``endurant-hood''\,? 
+\pind There are basically two relations: (i) physical ones, and (ii) conceptual ones.
+\begynd
+\pind (i) Physically two or more endurants 
+\begynd
+\pind may be topologically either adjacent to one another,
+\begynd
+\pind like rails of a line, or within an endurant, 
+\pind like links and hubs of a road net, 
+\pind or an atomic part is conjoined to one or more fluids, 
+\pind or a fluid is conjoined to one or more parts.
+\afslut 
+\pind The latter two could also be considered conceptual ``adjacencies''.
+\afslut
+\pind (ii) Conceptually some parts, 
+\begynd
+\pind like automobiles, ``belong'' to an embedding endurant, 
+\pind like to an automobile club, 
+\pind or are registered in the local department of vehicles, 
+\pind or are ‘intended’
+to drive on roads.
+\afslut
+\afslut
+
+\nbbb{Calculate Mereologies}\label{Calculate Mereologies}
+
+\bff{descr\_mereology}\newdf{descr\_mereology}
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\lilacolor{descr\_mereology}}}}
+%\RSLatex
+%value 
+%   descr_mereology: P -> &\rsltext&
+%   descr_mereology(p) is
+%      &\bq& &\sort{Narrative:}&
+%          [s] text on mereology &type&
+%          [o] text on  mereology observer
+%          [a] text on axioms and/or proof obligations
+%       &\,\,\sort{Formalisation:}&
+%          [s] type 
+%                 MT = &$\mathcal{M}$&(p)
+%          [o] value 
+%                 mereo_P: P -> MT
+%          [a] &\sort{axiom} and/or \sort{proof obligation}&
+%                 &$\mathcal{A}$/$\mathcal{P}$&(...) &\eq&
+%\endRSLatex 
+\bp
+\kw{value} \\
+\>\ descr\_mereology: P {\RIGHTARROW} \rsltext\\
+\>\ descr\_mereology(p) {\IS}\\
+\>\>\>\bq \sort{Narrative:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} text on mereology type\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} text on\ \ mereology observer\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} text on axioms and/or proof obligations\\
+\>\>\>\ \,\,\sort{Formalisation:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} \kw{type} \\
+\>\>\>\>\>\>\>\>\ MT {\EQ} $\mathcal{M}$(p)\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} \kw{value} \\
+\>\>\>\>\>\>\>\>\ mereo\_P: P {\RIGHTARROW} MT\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} \sort{axiom} and/or \sort{proof obligation}\\
+\>\>\>\>\>\>\>\>\ $\mathcal{A}$/$\mathcal{P}$({\DOTDOTDOT}) \eq
+\ep
+\eff
+\noindent
+\begynd
+\pind \textsf{$\mathcal{M}$(p)} is usually a type expression over
+      unique identifiers of mereology-related parts.
+\afslut
+
+\newexampl{Mereology}{mer}{exa:Mereology}
+
+\noindent
+\begynd
+\pind Given the definition of
+\begynd
+\pind external qualities of a domain,
+\pind and its unique identifier and mereology internal qualities
+\pind one can analyse and describe many properties of that domain.
+\afslut
+\pind The \sfsl{routes} subsection (Page\,\pageref{exa:Routes}) of the mereology example,
+      Example\,\vref{exam:mer}, illustrates one such property.
+\afslut
+
+\nbbbb{Attributes}\label{Attributes}
+
+\begynd
+\pind Parts and fluids are typically recognised
+\begynd
+\pind because of their spatial form and are otherwise characterised by their intangible,
+\pind but measurable attributes.
+\afslut
+\pind That is, whereas endurants, 
+\begynd
+\pind whether solid (as are parts) or fluids,
+\pind are physical, tangible,
+\pind in the sense of being spatial 
+\pind [or being abstractions, i.e., concepts, of spatial endurants], 
+\pind attributes are intangible: 
+\begynd
+\pind cannot normally be touched, or seen,  
+\pind but can be objectively measured. 
+\afslut
+\pind Thus, in our quest for describing domains where humans play an
+      active r{\^{o}}le, 
+\begynd
+\pind we rule out subjective ``attributes'':
+\pind feelings, sentiments, moods. 
+\pind Thus we shall abstain, in our domain science 
+\pind also from matters of psychology and aesthetics.
+\afslut
+\afslut
+
+\bbb{Functional Analysis of Attributes}\label{Functional Analysis of Attributes}
+
+\begynd
+\pind Given a manifest part, \textsf{p}, that is,
+\begynd
+\pind either an atom,
+\pind or a Cartesian,
+\pind or a part set,
+\afslut
+\pind we calculate from that part, 
+\pind its constituent attributes values and types:
+\afslut
+
+\bff{determine\_attributes}
+%\RSLatex
+%    value
+%        determine_attributes: P -> (a1><`eta&A1&) ><  (a2><`eta&A2&) ><  ... >< (aa><`eta&Aa&) 
+%\endRSLatex 
+\bp
+\>\>\kw{value}\\
+\>\>\>\>determine\_attributes: P {\RIGHTARROW} (a1{\TIMES}$\eta$A1) {\TIMES}\ \ (a2{\TIMES}$\eta$A2) {\TIMES}\ \ {\DOTDOTDOT} {\TIMES} (aa{\TIMES}$\eta$Aa) 
+\ep
+\eff
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\brcolor{determine\_attributes}}}}\newaf{determine\_attributes}
+
+
+\bbb{Describe Attributes}\label{Calculate Attributes}
+
+\bff{descr\_attributes}\newdf{descr\_attributes}
+%\RSLatex
+%value 
+%   descr_attributes: P -> &\rsltext&
+%      let ((_,`eta&A1&),(_,`eta&A2&),...,(_,`eta&Aa&)) = determine_attributes(p:P) in
+%   descr_attributes(p) is
+%      &\bq& &\sort{Narrative:}&
+%          [s] text on attribute &types&
+%          [o] text on attribute observers
+%          [a] text on axioms and/or proof obligations
+%       &\,\,\sort{Formalisation:}&
+%          [s] type 
+%                 A1 [ = ... ], A2 [ = ... ], ..., Aa [ = ... ], 
+%          [o] value 
+%                 attr_A1: P -> A1, attr_A2: P -> A2, ..., attr_Aa: P -> Aa,
+%          [a] &\sort{axiom} and/or \sort{proof obligation}&
+%                 &$\mathcal{A}$/$\mathcal{P}$&(...) &\eq&
+%      end
+%\endRSLatex 
+\bp
+\kw{value} \\
+\>\ descr\_attributes: P {\RIGHTARROW} \rsltext\\
+\>\>\>\kw{let} (({\UNDERLINE},$\eta$A1),({\UNDERLINE},$\eta$A2),{\DOTDOTDOT},({\UNDERLINE},$\eta$Aa)) {\EQ} determine\_attributes(p:P) \kw{in}\\
+\>\ descr\_attributes(p) {\IS}\\
+\>\>\>\bq \sort{Narrative:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} text on attribute types\\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} text on attribute observers\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} text on axioms and/or proof obligations\\
+\>\>\>\ \,\,\sort{Formalisation:}\\
+\>\>\>\>\>{\LBRACKET}s{\RBRACKET} \kw{type} \\
+\>\>\>\>\>\>\>\>\ A1 {\LBRACKET} {\EQ} {\DOTDOTDOT} {\RBRACKET}, A2 {\LBRACKET} {\EQ} {\DOTDOTDOT} {\RBRACKET}, {\DOTDOTDOT}, Aa {\LBRACKET} {\EQ} {\DOTDOTDOT} {\RBRACKET}, \\
+\>\>\>\>\>{\LBRACKET}o{\RBRACKET} \kw{value} \\
+\>\>\>\>\>\>\>\>\ attr\_A1: P {\RIGHTARROW} A1, attr\_A2: P {\RIGHTARROW} A2, {\DOTDOTDOT}, attr\_Aa: P {\RIGHTARROW} Aa,\\
+\>\>\>\>\>{\LBRACKET}a{\RBRACKET} \sort{axiom} and/or \sort{proof obligation}\\
+\>\>\>\>\>\>\>\>\ $\mathcal{A}$/$\mathcal{P}$({\DOTDOTDOT}) \eq\\
+\>\>\>\kw{end}
+\ep
+\eff
+\noindent
+\begynd
+\pind The domain modeller has thus determined/decided 
+\begynd
+\pind that \textsf{A1, A2, ..., Aa} are the ``interesting'' attributes of
+\pind of parts of sort \textsf{P}.
+\afslut
+\pind Attributes are often given a ``concrete'' form, hence the \textsf{[ = ... ]} 
+\pind where the \textsf{...} is some type expression.
+\afslut
+
+\newexampl{Attributes}{attrs}{exa:Attributes}
+
+\nbbb{Attribute Categories}
+
+\begynd
+\pind Michael A.\ Jackson has proposed a structure of attributes \cite{lexicon}.
+\afslut
+
+\attrcat{Static}{static}
+\begynd
+\pind By a static attribute we shall understand an attribute whose values are constants, i.e., cannot change.
+\afslut
+
+\attrcat{Dynamic}{dynamic}
+\begynd
+\pind By a dynamic attribute we shall understand an attribute whose values are variable, i.e., can change. 
+\pind Dynamic attributes are either inert, reactive or active attributes.
+\afslut
+
+\attrcat{Inert}{inert}
+\begynd
+\pind By an inert attribute we shall understand a dynamic attribute
+      whose values only change as the result of external stimuli where 
+      these stimuli prescribe new values.   
+\afslut
+
+\attrcat{Reactive}{reactive}
+\begynd
+\pind By a reactive attribute we shall
+      understand a dynamic attribute whose values, if they vary, change in response to external
+      stimuli, where these stimuli either come from outside the domain of interest or from other
+      endurants.
+\afslut
+
+\attrcat{Active}{active}
+\begynd
+\pind By an active attribute we shall understand a dynamic attribute
+whose values change (also) of its own volition.  
+\pind Active attributes
+      are either autonomous, or  biddable or programmable attributes.
+\afslut
+
+\attrcat{Autonomous}{autonomous}
+\begynd
+\pind By an autonomous attribute we
+      shall understand a dynamic active attribute whose values change
+      only ``on their own volition''. 
+\pind The values of an autonomous attributes are a ``law onto
+      themselves and their surroundings''.
+\afslut
+
+\attrcat{Biddable}{biddable}
+\begynd
+\pind By a  biddable attribute we shall understand a dynamic active
+      attribute whose values are prescribed but may fail to be observed as such.
+\afslut
+
+\attrcat{Programmable}{programmable}
+\begynd
+\pind  By a  programmable attribute we shall understand a dynamic active attribute whose values can be prescribed.
+\afslut
+
+\begynd
+\pind We modify Jackson's categorisation.
+\pind This is done in preparation for our expos{\'e} of behaviour
+      signatures, cf.\,Sect.\,\vref{Behaviour Signatures}.
+\pind Figure\,\vref{attributes.fig} shows groupings of some  of M.\,A.\,Jackson's  basic categories.
+\afslut
+
+\noindent
+\hDBfigure{attributes}{4cm}{An Attribute Ontology}{attributes.fig}
+
+\begynd
+\pind Our motivation for modifying Jackson's attribute categories is
+      as follows:
+\begynd
+\pind when transcendentally deducing behaviours from parts
+\pind we find that there are basically a need for distinguishing 
+\pind between only three major attribute categories
+\begynd
+\pind the static,
+\pind the monitorable, and
+\pind the programmable attributes.
+\afslut
+\pind Static attributes have their values passed ``by value'',  as constants,
+\pind programmable attributes  have their values passed by ``by
+      reference'', as variables who value can be changed, and 
+\pind monitorable attributes  have their values passed by ``by
+      name'' --  as we shall see\,!
+\afslut
+\afslut
+
+\nbbbb{Intentional Pull}\label{Intentional Pull}
+\bbb{Characterisations}
+
+\begynd
+\pind \sort{Intentionality} as a philosophical concept 
+is defined by the Stanford Encyclopedia of
+Philosophy\footnote{Jacob, P. (Aug 31, 2010). Intentionality. Stanford 
+  Encyclopedia of Philosophy
+  (\texttt{\-seop.\-illc.\-uva.\-nl/\-en\-tries/\-in\-ten\-tion\-a\-li\-ty/} October 15, 2014,
+  retrieved April 3, 2018.} as \sfsl{``the power of minds to be about,
+  to represent, or to stand for, things, properties and states of 
+  affairs.''}
+
+\pind \sort{Intent} is then a usually clearly formulated or planned intention.
+\pind An example of \sfsl{intent} is that of roads made for automobiles
+      \sort{and} automobiles meant for roads.
+\afslut
+
+\mnewfoil
+
+\begynd
+\pind \sort{Intentional Pull\footnote{The term \sfsl{intentional pull}
+  is chosen so as to connote with the term \sfsl{gravitational
+    pull}.}:} Two or more artefactual parts of different sorts, but
+with overlapping sets of intents may 
+excert an intentional ``pull'' on one another. This intentional ``pull'' may take many forms. Let $p_x$$:X$ and
+$p_y$:$Y$ be two parts of different sorts ($X$,$Y$), and with common intent, $\iota$. Manifestations of these, their common
+intent, must somehow be subject to constraints, and these must be expressed predicatively.
+When a composite artefact
+has an intentionality then its constituents have individual
+intentionalities that relate to
+these. The composite road transport system has intentionality of the roads serving the automobiles, and
+the automobiles have the intent of being served by the roads.
+\afslut
+
+\newexampl{Intentional Pull: Road Transport}{intent-pull}{exa:Intentional Pull}
+
+\inlinenewexampl{Intentional Pull: Double-entry Bookkeeping}{debook}{
+\begynd
+\pind Double-entry bookkeeping, also known as double-entry accounting,
+is a method of bookkeeping that relies on a two-sided accounting entry
+to maintain financial information. Every entry to an account requires
+a corresponding and opposite entry to a different account. The
+double-entry system has two equal and corresponding sides known as
+debit and credit. A transaction in double-entry bookkeeping always
+affects at least two accounts, always includes at least one debit and
+one credit, and always has total debits and total credits that are
+equal.\footnote{https://en.wikipedia.org/wiki/Double-entry\_bookkeeping}
+\afslut}
+
+\nbbbb{A Proof-theoretic Explication, II}\label{AProofTheoreticExplicationII}
+
+\begynd
+\pind We remind You of Sect.\,\vref{AProofTheoreticExplicationI}.
+\afslut
+
+\begynd
+\pind With the introduction of \sfsl{analysis functions} and \sfsl{observers} 
+\begynd
+\pind for \sfsl{unique identifiers, mereology} and \sfsl{attributes} 
+\pind we can now augment the \texttt{is\_..., uid\_..., mereo\_..., attr\_A...} observers 
+\pind introduced since Page\,\pageref{AProofTheoreticExplicationI}.
+\afslut
+\afslut
+
+%\RSLatex
+%    is_manifest(p:P) is
+%        let ((_,`eta&A1&),(_,`eta&A2&),(_,`eta&Aa&)) = calc_attributes(p) in
+%        p = mk_P(uid_P(p),mereo_P(p),(attr_A1(p),attr_A2(p),...,attr_Aa(p))) end
+%\endRSLatex 
+\bp
+\>\>is\_manifest(p:P) {\IS}\\
+\>\>\>\>\kw{let} (({\UNDERLINE},$\eta$A1),({\UNDERLINE},$\eta$A2),({\UNDERLINE},$\eta$Aa)) {\EQ} calc\_attributes(p) \kw{in}\\
+\>\>\>\>p {\EQ} mk\_P(uid\_P(p),mereo\_P(p),(attr\_A1(p),attr\_A2(p),{\DOTDOTDOT},attr\_Aa(p))) \kw{end}
+\ep
+
+
+\nbbbbb{Perdurants}\label{Perdurants}
+
+\begynd
+\pind A key point of our domain science \& engineering approach is this:
+\begynd
+\pind to \bbcolor{every manifest part}
+\pind we \b{transcendentally deduce}
+\pind a \bbcolor{unique behaviour.}
+\afslut
+
+\begynd
+\pind By \bbcolor{transcendental}
+\begynd
+\pind \sl  we shall understand the philosophical notion: 
+\pind the a priori or intuitive basis of knowledge, \nyl independent
+      of experience.\rm
+\afslut
+\afslut
+  
+\begynd
+\pind  By a \bbcolor{transcendental deduction}  
+\begynd
+\pind \sl we shall understand the philosophical notion: 
+\pind a transcendental `conversion' of one kind of knowledge 
+\pind into a seemingly different kind of know\-ledge.\rm
+\afslut
+\afslut
+
+\nbbbb{Channels}\label{Channels}
+
+\begynd
+\pind Part behaviours may interact.
+\begynd
+\pind To express part behaviours and their interaction
+\pind we use \textsf{Hoare}'s \texttt{CSP} \cite{Hoa78a,Hoare85,Hoare85+2004}.
+\begynd
+\pind One may question this choice. 
+\pind In \cite[\sfsl{2009--2017}]{dines:hoare:2009,BjornerMereology2013,BjornerMereologyCSP2017}
+      we show \sfsl{``that to every mereology there is a
+      \texttt{CSP} expression''}.
+\pind On that background we maintain that \texttt{CSP} is a reasonable
+      choice ---
+\pind but invite the reader to suggest more appropriate mechanisms for
+      handling behaviours and their communication.\footnote{%%%%%%%%%%%%%%%
+\pind Please bear in mind that the use, here, of  \texttt{CSP}, is in the following context:
+\begynd
+\pind the \texttt{CSP} clauses are not to be ``interpreted'' on a computer
+\pind where this ``computerisation'' has to be ``shared''
+\pind with other computations;
+\pind hence \texttt{CSP} \sfsl{synchcronisation \& communication} is ``ideal''
+\pind and reflects reality.
+\afslut}
+\afslut
+
+\pind So, in general, we declare a \texttt{RSL/CSP} \sfsl{channel}:
+\afslut
+
+\bff{\kw{channel} declaration}
+%\RSLatex
+%    channel { ch[{ui,uj}] | ui,uj:UI :- {ui,uj}<<=&$uis$& } : M
+%\endRSLatex 
+\bp
+\>\>\kw{channel} {\LBRACE} ch{\LBRACKET}{\LBRACE}ui,uj{\RBRACE}{\RBRACKET} {\BAR} ui,uj:UI {\RDOT} {\LBRACE}ui,uj{\RBRACE}{\SUBSETEQ}$uis$ {\RBRACE} : M
+\ep
+\eff
+
+\noindent
+\begynd
+\pind Here \textsf{ch} is the name of the indexed array of channels
+      and the indexes are, in general, any two element sets of unique
+      part identifiers.
+\pind That is: For every pair of part behaviours -- 
+\pind identified but their unique part identifiers (\textsf{ui,uj}) --
+\pind there is a channel, say \textsf{ch[$\{$ui,uj$\}$]}.
+
+\pind \textsf{M} is the type of the messages communicate between
+behaviours of index \textsf{ui,uj}.
+
+\pind We shall develop, in Sect.\,\vref{final-perd:Events}, the specifics of the type, \textsf{M}, of channel messages.
+\afslut
+
+      
+\nbbbb{Actors}\label{final-perd:Actors}
+
+\begynd
+\pind By an \sfsl{actor} we shall understand
+\begynd
+\pind either an \sfsl{action},
+\pind \xtut{or an \sfsl{event},}
+\pind or a \sfsl{behaviour}.
+\afslut
+\afslut
+
+\nbbb{Actions}\label{final-perd:Actions}
+
+\begynd 
+\pind By an \sfsl{action of a behaviour} we shall understand 
+\begynd
+\pind something which is local to a behaviour,
+\pind and, which, when applied,
+\pind potentially changes the states.
+\afslut
+\pind Generally action clauses are expressed in \texttt{RSL} \citersl.
+\afslut
+
+\newexampl{Road Transport Actions}{road-trans-act}{exa:Domain Actions}
+
+\nbbb{Events}\label{final-perd:Events}
+
+\xtut{%%%%%%%%%%%%%%%%%%
+\begynd
+\pind By an \sfsl{event of a behaviour} we shall understand 
+\begynd
+\pind something that involves two behaviours,
+\pind and, which, when applied,  
+\pind potentially changes the states of both behaviours.
+\afslut
+\pind Event clauses are expressed using the  \texttt{CSP} elements of \texttt{RSL}.
+\pind That is, the \texttt{CSP} output ``\sfsl{!}'' and input events ``\sfsl{?}'': 
+\afslut
+
+%\RSLatex
+%   ch[{ui,uj}] ! expr
+%   let val = ch[{ui,uj}] ? ... end
+%\endRSLatex 
+\bp
+\>\ ch{\LBRACKET}{\LBRACE}ui,uj{\RBRACE}{\RBRACKET} ! expr\\
+\>\ \kw{let} val {\EQ} ch{\LBRACKET}{\LBRACE}ui,uj{\RBRACE}{\RBRACKET} ? {\DOTDOTDOT} \kw{end}
+\ep
+}%%%%%%%%%%%%%%%%%%%%%%%
+
+\newexampl{Road Transport Events}{road-trans-eve}{exa:Domain Events}
+
+\xtut{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nbbbb{State Access and Updates}\label{State Access and Updates}
+
+\begynd
+\pind We need define two functionals:
+\begynd
+\pind one for changing the mereology of a part and
+\pind another for changing the attribute value of a part.
+\afslut
+\pind We therefore informally define the following functionals:
+\afslut
+
+\nbbb{Update Mereologies}\label{Update Mereologies}
+
+\begin{itemize}
+\item \sort{part\_update\_mereology} is a functional: it takes the following
+      arguments: a part \textsf{p} of type \textsf{P} and a mereology value and yields a part of type \textsf{P}.
+\item The yielded result, \textsf{p$'$}, has the same unique identifier,
+      as the argument part \textsf{p},
+\item a new, the argument, mereology,
+      as the argument part \textsf{p}, 
+\item and the same attribute values for all attributes,
+      as the argument part \textsf{p}.
+\end{itemize}
+
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\lilacolor{part\_update\_mereology}}}}
+%\RSLatex
+%value
+%    &\sort{part\_update\_mereology}&: P -> M -> P
+%    &\sort{part\_update}&(p)(m) is
+%        let ((_,`eta&A1&),(_,`eta&A2&),...,(_,`eta&Aa&)) = determine_attributes(p) in
+%        let p&$'$&:P :- uid_P(p&$'$&)=uid_P(p)/\mereo_P(p&$'$&)=m/\
+%            all `eta&A&:`eta&$\Phi$&:-`eta&A&isin{`eta&A1&,`eta&A2&,...,`eta&Aa&}=>attr_A(p&$'$&)=attr_A(p) in
+%        p&$'$& end end
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\>\sort{part\_update\_mereology}: P {\RIGHTARROW} M {\RIGHTARROW} P\\
+\>\>\sort{part\_update}(p)(m) {\IS}\\
+\>\>\>\>\kw{let} (({\UNDERLINE},$\eta$A1),({\UNDERLINE},$\eta$A2),{\DOTDOTDOT},({\UNDERLINE},$\eta$Aa)) {\EQ} determine\_attributes(p) \kw{in}\\
+\>\>\>\>\kw{let} p$'$:P {\RDOT} uid\_P(p$'$){\EQ}uid\_P(p){\WEDGE}mereo\_P(p$'$){\EQ}m{\WEDGE}\\
+\>\>\>\>\>\>{\ALL} $\eta$A:$\eta$$\Phi${\RDOT}$\eta$A{\ISIN}{\LBRACE}$\eta$A1,$\eta$A2,{\DOTDOTDOT},$\eta$Aa{\RBRACE}{\DBLRIGHTARROW}attr\_A(p$'$){\EQ}attr\_A(p) \kw{in}\\
+\>\>\>\>p$'$ \kw{end} \kw{end}
+\ep
+
+
+\nbbb{Update Attributes}\label{Update Attributes}
+
+\begin{itemize}
+\item \sort{part\_update\_attribute} is a functional: it takes the following
+      arguments: a part \textsf{p} of type \textsf{P} and a pair of an attribute name
+      and value, and yields a part \textsf{p$'$} of type \textsf{P}.
+\item The argument attribute name must be that of an attribute of the part.
+\item The yielded result \textsf{p$'$} has the same unique identifier
+  and mereology as the argument part \textsf{p},
+\item and the same attribute values for all attributes,
+      as the argument part \textsf{p},
+\pind except for argument attribute (name) for which it now yields the
+      argument attribute value.
+\end{itemize}
+
+\addcontentsline{toc}{subparagraph}{{\hspace*{10mm} \small{\lilacolor{part\_update\_attribute}}}}
+%\RSLatex
+%value
+%    &\sort{part\_update\_attribute}&: P -> `Phi&A& >< A -> P
+%    &\sort{part\_update\_attribute}&(p)(`eta&A&,a) is
+%        let ((_,`eta&A1&),(_,`eta&A2&),...,(_,`eta&Aa&)) = determine_attributes(p) in
+%            &\sort{assert:}& `eta&A&isin{`eta&A1&,,`eta&A2&,...,,`eta&Aa&}
+%        let p&$'$&:P :- uid_P(p)=uid_P(p&$'$&)/\mereo_P(p)=mereo_P(p&$'$&)/\
+%            all `eta&A&:`eta&$\Phi$&:-`eta&A&isin{`eta&A1&,,`eta&A2&,...,,`eta&Aa&}\`eta&A&=>attr_A(p&$'$&)=attr_A(p) in
+%        p&$'$& end end
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\>\sort{part\_update\_attribute}: P {\RIGHTARROW} $\Phi$A {\TIMES} A {\RIGHTARROW} P\\
+\>\>\sort{part\_update\_attribute}(p)($\eta$A,a) {\IS}\\
+\>\>\>\>\kw{let} (({\UNDERLINE},$\eta$A1),({\UNDERLINE},$\eta$A2),{\DOTDOTDOT},({\UNDERLINE},$\eta$Aa)) {\EQ} determine\_attributes(p) \kw{in}\\
+\>\>\>\>\>\>\sort{assert:} $\eta$A{\ISIN}{\LBRACE}$\eta$A1,,$\eta$A2,{\DOTDOTDOT},,$\eta$Aa{\RBRACE}\\
+\>\>\>\>\kw{let} p$'$:P {\RDOT} uid\_P(p){\EQ}uid\_P(p$'$){\WEDGE}mereo\_P(p){\EQ}mereo\_P(p$'$){\WEDGE}\\
+\>\>\>\>\>\>{\ALL} $\eta$A:$\eta$$\Phi${\RDOT}$\eta$A{\ISIN}{\LBRACE}$\eta$A1,,$\eta$A2,{\DOTDOTDOT},,$\eta$Aa{\RBRACE}{\SETMINUS}$\eta$A{\DBLRIGHTARROW}attr\_A(p$'$){\EQ}attr\_A(p) \kw{in}\\
+\>\>\>\>p$'$ \kw{end} \kw{end}
+\ep
+
+\noindent
+\begynd
+\pind Monitorable attributes usually change their values surreptitiously. 
+\begynd
+\pind That is, ``behind the back'', so-to-speak, of the part behaviour.
+\afslut
+\afslut
+}%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{/home/db/2023/final/new-perd}
+
+\nbbbb{Domain Initialisation}\label{Domain Initialisation}
+
+\begynd
+\pind By \sfsl{domain initialisation} we mean the ``start-up'' of a
+      behaviour for all manifest parts.
+\afslut
+
+\newexampl{Road Transport Domain Initialisation}{hrtd-init}{exa:Domain Initialisation}
+
+\paperortutorial{%% Paper:
+\nbbbb{End of Domain Modelling Presentation}
+\begynd
+\pind This concludes the four sections, Sects.\,2, 3, 4 and 6, on
+domain modelling.
+\afslut
+}{%% Tutorial:
+\nbbbb{Summary of One Approach to Modelling Perdurants}
+\begynd
+\pind Section\,\ref{Perdurants} models one approach to modelling
+\begynd
+\pind the transcendental deduction of behaviours from manifest parts.
+\pind Chapter\,\ref{chapter:Perdurants} will illustrate another, less simple, approach.
+\afslut
+\afslut
+}
+
+
+
+%%  LocalWords:  Perdurants behaviour priori Endurant rtd ps Hoare ui
+%%  LocalWords:  behaviours CSP RSL uj UI uis expr mer Mer sta Attrs
+%%  LocalWords:  mon prg Prgr monitorable endurant vals args Attr lis
+%%  LocalWords:  ais als progr li ai hlis analysing uid mereo progrs
+%%  LocalWords:  attr pre upd le fhi thi deterministically tHub hst
+%%  LocalWords:  mk mereology ttl Initialisation Perdurant uod ereo
+%%  LocalWords:  computerisation synchcronisation hla exa elipsed Aa
+%%  LocalWords:  initialisation hrtd init functionals Mereologies
+%%  LocalWords:  Modelling modelling
+
+%%  LocalWords:  characterisation endurant mereologies Kai rlander hs
+%%  LocalWords:  calc Formalisation uid lis ais rtd RTD Mereology Mer
+%%  LocalWords:  Stanis niewski endurants adjacencies mereology mereo
+%%  LocalWords:  ris recognised characterised le Aa attr analyser li
+%%  LocalWords:  lj Pos APos apos fhi thi retr Formalised seop illc
+%%  LocalWords:  Intentionality uva nl tion ty artefactual excert dom
+%%  LocalWords:  artefact intentionality intentionalities rng inds ui
+%%  LocalWords:  Characterisations descr exa Identifiation uis uia aa
+%%  LocalWords:  uod mer analyse attrs categorisation behaviour pre
+%%  LocalWords:  monitorable AProofTheoreticExplicationI mk modeller
+%%  LocalWords:  behaviours debook
+
+%%  LocalWords:  endurants endurant mereologies dom predI analyser fn
+%%  LocalWords:  modelled perdurant harbours perdurants plasmatic et
+%%  LocalWords:  modelling compartmentalise cetera analyse RSL wrt ec
+%%  LocalWords:  characterisation artefactual characterised analysing
+%%  LocalWords:  analysed organisation behaviours anprsi Bool calc Ec
+%%  LocalWords:  ps ulations schemas ulation characterisations exa pc
+%%  LocalWords:  Formalisation Cartesians uod cartesian sta Kai UoD
+%%  LocalWords:  rlander intransitivity assistedness summarise nasod
+%%  LocalWords:  descr modeller pre destructor mk
+%%  LocalWords:  AProofTheoreticExplicationII

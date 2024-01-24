@@ -1,0 +1,23 @@
+\indexentry{${\sim }$, negation ("not")}{13}
+\indexentry{$\wedge $, conjunction ("and")}{13}
+\indexentry{$\vee $, disjunction ("or")}{13}
+\indexentry{$\Rightarrow $, implication ("if then")}{13}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$=$}}\color  {black}}} equality}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\neq $}}\color  {black}}} inequality}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\subset $}}\color  {black}}} proper subset}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\subseteq $}}\color  {black}}} subset}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\in $}}\color  {black}}} set membership}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\cap $}}\color  {black}}} set intersection}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\cup $}}\color  {black}}} set union}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\setminus $}}\color  {black}}} set subtraction}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {card}}\color  {black}}} set cardinality}{16}
+\indexentry{{{\color  {black}\textbf  {\textsf  {+}}\color  {black}}} addition}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$-$}}\color  {black}}} subtraction}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\ast $}}\color  {black}}} multiplication}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\div $}}\color  {black}}} division}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {=}}\color  {black}}} equality}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\neq $}}\color  {black}}} inequality}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$>$}}\color  {black}}}larger than}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\geq $}}\color  {black}}} larger than or equal}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$>$}}\color  {black}}}smaller than}{17}
+\indexentry{{{\color  {black}\textbf  {\textsf  {$\leq $}}\color  {black}}} smaller than or equal}{17}

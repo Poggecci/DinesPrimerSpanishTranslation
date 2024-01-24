@@ -1,0 +1,107 @@
+
+\newcommand{\avspace}[1]{}
+
+\newcommand{\paperoreks}[2]{#1}
+
+\newcommand{\iaiipartref}[2]{\partioii{Sect.~\ref{#1}}{Part II,
+    Sect.~#2 of this paper}}
+
+\newcommand{\partioii}[2]{#1}      % part i:  #1
+                                   % part ii: #2
+\newcommand{\secret}[2]{#2}        % secret:     #1 
+                                   % not secret: #2
+\newcommand{\fullpaperiaii}[3]{#1} % part i:     #1 
+                                   % part ii:    #2
+                                   % full paper: #3
+ 
+\newcommand{\research}[1]{}
+
+
+\newcounter{disc} 
+
+\newcommand{\subsektion}[1]{[\addtocounter{disc}{1}\arabic{disc}] \textbf{#1:}}
+ 
+\renewcommand{\subsektion}[1]{\subsection{#1}}
+
+%\newcommand{\prob}{{$_p$}}
+
+\newcommand{\ccss}{\hfill {\rule{1mm}{1mm}}}
+\newcommand{\exccss}{%\avspace{-1mm}
+
+\hfill {\rule{1mm}{1mm}}\,\,\textsf{End of Example
+  \arabic{example}}}
+ 
+\newcommand{\rslannotations}[1]{}
+
+\newcommand{\begyndgraabox}{}%{\begin{boxitpara}{setgray fill}\sf\small}{}
+\newcommand{\slutgraabox}{}%{\end{boxitpara}\rm\normalsize}{}%
+
+\renewcommand{\ramme}[1]%
+   {\vspace{1mm}\boiteepaisseavecuntitre{#1}\noindent} 
+
+\renewcommand{\ramme}[1]%
+   {\vspace{1mm}\noindent} 
+
+\newcommand{\cacmramme}[1]%
+   {\vspace{2mm}\boiteepaisseavecuntitre{\brcolor{#1}}\avspace{-2mm}\noindent} 
+
+\newcommand{\cacmrammen}[1]%
+   {\vspace{2mm}\boiteepaisseavecuntitre{#1, \sort{Narrative}}\avspace{-2mm}\noindent} 
+
+\newcommand{\cacmrammef}[1]%
+   {\vspace{2mm}\boiteepaisseavecuntitre{#1, \sort{Formalisation}}\avspace{-2mm}\noindent} 
+
+\newcommand{\bergramme}%
+   {\vspace{2mm}\boiteepaisseavecuntitre{Example}\avspace{-2mm}\noindent} 
+
+\newcommand{\cacmframef}%
+   {\vspace{2mm}\boiteepaisseavecuntitre{On
+   Formalisations}\avspace{-2mm}\noindent}   
+
+\newcommand{\cacmframe}%
+   {\vspace{2mm}\boiteepaisseavecuntitre{On 
+   Formalisations}\avspace{-2mm}\noindent}   
+
+\renewcommand{\cacmramme}%
+   {\vspace{3mm}\boiteepaisseavecuntitre{Formalisation}\noindent} 
+
+\renewcommand{\emmar}{\slutgraabox\endboiteepaisseavecuntitre\avspace{0.7mm}}
+
+\newcommand{\cacmemmar}{\avspace{-4mm}\endboiteepaisseavecuntitre\avspace{0.7mm}}  
+
+\renewcommand{\cacmemmar}{\endboiteepaisseavecuntitre\avspace{0.7mm}}
+
+%\renewcommand{\recacmemmar}{\avspace{0.7mm}}
+ 
+%\renewcommand{\labelenumi}{\theenumi.}
+%\renewcommand{\labelenumii}{\theenumii)} 
+%\renewcommand{\labelenumiii}{\theenumiii.}
+%\renewcommand{\labelenumiv}{\theenumiv.}
+
+\renewcommand\theenumiv{\@arabic\c@enumiv}
+
+%%%\newcommand{\fsz}{\normalsize}
+%%%\newcommand{\tsz}{\normalsize}
+
+%%%%%%%%% Article
+
+\newcommand{\ninlinei}[1]{\mnewfoil}
+
+\newcommand{\usninlinei}[1]{\mnewfoil}
+
+\newcommand{\ninlineii}[2]{\mnewfoil}
+
+\newcommand{\uninlineii}[2]{\newfoil}
+
+\newcommand{\ninlineiii}[3]{\mnewfoil}
+
+\newcommand{\ninlineiv}[4]{\mnewfoil}
+
+\newcommand{\ninlinev}[5]{\mnewfoil}
+
+\newcommand{\ninlinevi}[6]{\mnewfoil}
+
+
+% LocalWords:  mk obs dbhours dbmins setgray Formalisation Formalisations sei
+% LocalWords:  Harel
+ 

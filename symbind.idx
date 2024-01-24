@@ -1,0 +1,179 @@
+\indexentry{typeea@\protect{\underline{\textbf{Type Expressions}}}}{172}
+\indexentry{typeeb@{\bf  Bool}}{172}
+\indexentry{typeeb@{\bf  Int}}{172}
+\indexentry{typeeb@{\bf  Nat}}{172}
+\indexentry{typeeb@{\bf  Real}}{172}
+\indexentry{typeeb@{\bf  Char}}{172}
+\indexentry{typeeb@{\bf  Text}}{172}
+\indexentry{aaab@\kw{false}}{172}
+\indexentry{aaab@\kw{true}}{172}
+\indexentry{logic@\kw{false}}{172}
+\indexentry{logic@\kw{true}}{172}
+\indexentry{typeeb@T{\bf  -set}}{172}
+\indexentry{typeeb@T{\bf  -infset}}{172}
+\indexentry{typeeb@T$_1$ $\times $\ T$_2$\ $\times $\ ... $\times $\ T$_n$ }{172}
+\indexentry{typeeb@(T$_1$$\times $T$_2$$\times $... $\times $T$_n$) }{172}
+\indexentry{typeeb@T$^{\ast }$ }{172}
+\indexentry{typeeb@T$^{\omega }$ }{172}
+\indexentry{typeeb@T$_i$ \MARROW T$_j$ }{173}
+\indexentry{typeeb@T$_i$\RIGHTARROW {T$_j$} }{173}
+\indexentry{typeeb@T$_i$\PARRIGHTARROW {T$_j$} }{173}
+\indexentry{typeeb@T$_1\mid \ $T$_2\mid \ ...\mid \ $T$_1\mid \ $T$_n$ }{173}
+\indexentry{typeeb@mk\_ id(s$_1$:T$_1$,s$_2$:T$_2$,...,s$_n$:T$_n$) }{173}
+\indexentry{typeeb@s$_1$:T$_1$\ s$_2$:T$_2$\ ...\ s$_n$:T$_n$ }{173}
+\indexentry{typeea@\protect{\underline{\textbf{Type Expressions}}}}{173}
+\indexentry{utypeec@\protect{\underline{\textbf{Type Definitions}}}|(}{173}
+\indexentry{utypeed@T = Type\_ Expr}{173}
+\indexentry{utypeed@T==TE$_1$\tmspace  +\thinmuskip {.1667em}$\mid $ TE$_2$\tmspace  +\thinmuskip {.1667em}$\mid $ \tmspace  +\thinmuskip {.1667em}...\tmspace  +\thinmuskip {.1667em}$\mid $ \tmspace  +\thinmuskip {.1667em}TE$_n$ }{174}
+\indexentry{utypeed@T=$\{ \mid $ v:T$'\bullet $ P(v)$\mid \} $  }{174}
+\indexentry{utypeed@T=$\{ \mid $ v:T$'\bullet $ P(v)$\mid \} $  }{175}
+\indexentry{utypeec@\protect{\underline{\textbf{Type Definitions}}}|)}{175}
+\indexentry{loga@\protect{\underline{\textbf{Logic Constructs}}}|(}{175}
+\indexentry{logic@{\bf  false}}{175}
+\indexentry{aaab@{\bf  false}}{175}
+\indexentry{aaab@{\bf  true}}{175}
+\indexentry{logic@{\bf  true}}{175}
+\indexentry{logic@\SIM\ b }{175}
+\indexentry{logic@b$_i$ $\wedge $\ b$_j$ }{175}
+\indexentry{logic@$b_i$ $\vee $\ b$_j$ }{175}
+\indexentry{logic@b$_i$ $\Rightarrow $\ b$_j$ }{175}
+\indexentry{booleanop@\protect{{\SIM}}}{175}
+\indexentry{booleanop@\protect{{\WEDGE}}}{175}
+\indexentry{booleanop@\protect{{\VEE}}}{175}
+\indexentry{booleanop@\protect{{\DBLRIGHTARROW}}}{175}
+\indexentry{booleanop@\protect{{\EQ}}}{175}
+\indexentry{booleanop@\protect{{\NOTEQ}}}{175}
+\indexentry{booleanop@\protect{{\ALWAYS}}}{175}
+\indexentry{logic@\ALL\ a:A $\bullet $ P(a) }{177}
+\indexentry{logic@\EXISTS\ a:A $\bullet $ P(a) }{177}
+\indexentry{logic@\EXISTS"!\ a:A $\bullet $ P(a) }{177}
+\indexentry{loga@\protect{\underline{\textbf{Logic Constructs}}}|)}{177}
+\indexentry{baritha@\protect{\underline{\textbf{Arithmetic Constructs}}}|(}{177}
+\indexentry{barithb@\protect{a$_i$+a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i-$a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$*a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$/a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$\protect{\LT}a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$\protect{\LEQ}a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$\protect{\EQ}a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$\protect{\NOTEQ}a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$\protect{\GEQ}a$_j$}}{177}
+\indexentry{barithb@\protect{a$_i$\protect{\GT}a$_j$}}{177}
+\indexentry{baritha@\protect{\underline{\textbf{Arithmetic Constructs}}}|)}{177}
+\indexentry{sea@\protect{\underline{\textbf{Set Constructs}}}|(}{177}
+\indexentry{seta@$\{ \} $ }{178}
+\indexentry{setb@$\{ e_1,e_2,...,e_n\} $ }{178}
+\indexentry{setc@$\{ ${Q}(a){$\mid $}a:A{$\bullet $}a{$\in $}s{$\wedge $}{P}(a)$\} $ }{178}
+\indexentry{sea@\protect{\underline{\textbf{Set Constructs}}}|)}{178}
+\indexentry{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|(}{178}
+\indexentry{cartesian@(e$_1$,e$_2$,...,e$_n$) }{178}
+\indexentry{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|)}{178}
+\indexentry{klista@\protect{\underline{\textbf{List Constructs}}}|(}{179}
+\indexentry{klistb@e$_{1}<$e$_2$,e$_2$,...,e$_{n}>$ }{179}
+\indexentry{klistb@$<>$ }{179}
+\indexentry{klistb@$<$Q(l(i))$\mid $i {\bf  in}$<$1..{\bf  len}l$>\bullet $P(a)$>$ }{179}
+\indexentry{klista@\protect{\underline{\textbf{List Constructs}}}|)}{179}
+\indexentry{maa@\protect{\underline{\textbf{Map Constructs}}}|(}{179}
+\indexentry{mapa@[\tmspace  +\thinmuskip {.1667em}] }{179}
+\indexentry{mapb@[u$_1${\MAPSTO }v$_1$,u$_2${\MAPSTO }v$_2$,...,u$_n${\MAPSTO }v$_n$] }{179}
+\indexentry{mapc@[F(e)\MAPSTO G(m(e))$\mid $e:E$\bullet $e{$\in $}{\bf  dom}\tmspace  +\thinmuskip {.1667em}m{$\wedge $}P(e)] }{180}
+\indexentry{maa@\protect{\underline{\textbf{Map Constructs}}}|)}{180}
+\indexentry{sea@\protect{\underline{\textbf{Set Constructs}}}|(}{180}
+\indexentry{set@e$\in ${s} }{180}
+\indexentry{set@e$\not  \in ${s} }{180}
+\indexentry{set@s$_i$$\cup ${s$_j$} }{180}
+\indexentry{set@\UNION{$\{ $s$_1$,s$_2$,...,s$_{n}\} $} }{180}
+\indexentry{set@s$_i$$\cap ${s$_j$} }{180}
+\indexentry{set@\INTER{$\{ $s$_1$,s$_2$,...,s$_{n}\} $} }{180}
+\indexentry{set@s$_{i}${$ \setminus $}{s$_j$} }{180}
+\indexentry{set@s$_i$$\subset ${s$_j$} }{180}
+\indexentry{set@s$_i$$\subseteq ${s$_j$} }{180}
+\indexentry{set@s$_i$$=${s$_j$} }{180}
+\indexentry{set@s$_i$${\neq }${s$_j$} }{180}
+\indexentry{set@\kw{card}\tmspace  +\thinmuskip {.1667em}s }{180}
+\indexentry{aaaa@\underline{\textbf  {Literals}} |(}{182}
+\indexentry{aaab@{\bf  chaos}}{182}
+\indexentry{sea@\protect{\underline{\textbf{Set Constructs}}}|)}{182}
+\indexentry{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|(}{182}
+\indexentry{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|)}{182}
+\indexentry{klista@\protect{\underline{\textbf{List Constructs}}}|(}{182}
+\indexentry{klistb@\kw{hd}\tmspace  +\thinmuskip {.1667em}$\ell $ }{182}
+\indexentry{klistb@\kw{tl}\tmspace  +\thinmuskip {.1667em}$\ell $ }{182}
+\indexentry{klistb@\kw{len}\tmspace  +\thinmuskip {.1667em}$\ell $ }{182}
+\indexentry{klistb@\kw{inds}\tmspace  +\thinmuskip {.1667em}$\ell $ }{182}
+\indexentry{klistb@\kw{elems}\tmspace  +\thinmuskip {.1667em}$\ell $ }{182}
+\indexentry{klistb@$\ell $(i) }{182}
+\indexentry{klistb@${\ell }'\tmspace  +\thinmuskip {.1667em}\widehat{\tmspace  +\thickmuskip {.2777em}} \tmspace  +\thinmuskip {.1667em}{\ell }''$ }{182}
+\indexentry{klistb@$\ell '$\tmspace  +\thinmuskip {.1667em}$=$\tmspace  +\thinmuskip {.1667em}$\ell ''$ }{182}
+\indexentry{klistb@$\ell '$\tmspace  +\thinmuskip {.1667em}${\neq }$\tmspace  +\thinmuskip {.1667em}$\ell ''$ }{182}
+\indexentry{aaab@{\bf  chaos}}{183}
+\indexentry{aaab@{\bf  chaos}}{184}
+\indexentry{klista@\protect{\underline{\textbf{List Constructs}}}|)}{184}
+\indexentry{maa@\protect{\underline{\textbf{Map Constructs}}}|(}{184}
+\indexentry{map@m(e) }{184}
+\indexentry{map@\kw{dom}\tmspace  +\thinmuskip {.1667em}m }{184}
+\indexentry{map@\kw{rng}\tmspace  +\thinmuskip {.1667em}m }{184}
+\indexentry{map@m$_i$ \tmspace  +\thinmuskip {.1667em}$\dagger $ \tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@m$_i$\tmspace  +\thinmuskip {.1667em}$\cup $\tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@\,m$_i$ \tmspace  +\thinmuskip {.1667em}\SETMINUS \tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@\,m$_i$\tmspace  +\thinmuskip {.1667em}/\tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@m$_i$\tmspace  +\thinmuskip {.1667em}$=$\tmspace  +\thinmuskip {.1667em}m$j$ }{184}
+\indexentry{map@m$_i$\tmspace  +\thinmuskip {.1667em}$\neq $\tmspace  +\thinmuskip {.1667em}m$j$ }{184}
+\indexentry{map@\,m$_i$\tmspace  +\thinmuskip {.1667em}$\circ $ \tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@m(e) }{184}
+\indexentry{map@\kw{dom}\tmspace  +\thinmuskip {.1667em}m }{184}
+\indexentry{map@\kw{rng}\tmspace  +\thinmuskip {.1667em}m }{184}
+\indexentry{map@m$_i$ \tmspace  +\thinmuskip {.1667em}$\dagger $ \tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@m$_i$\tmspace  +\thinmuskip {.1667em}$\cup $\tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@\,m$_i$ \tmspace  +\thinmuskip {.1667em}\SETMINUS \tmspace  +\thinmuskip {.1667em}m$_j$ }{184}
+\indexentry{map@\,m$_i$\tmspace  +\thinmuskip {.1667em}/\tmspace  +\thinmuskip {.1667em}m$_j$ }{185}
+\indexentry{map@\,m$_i$\tmspace  +\thinmuskip {.1667em}$\circ $ \tmspace  +\thinmuskip {.1667em}m$_j$ }{185}
+\indexentry{maa@\protect{\underline{\textbf{Map Constructs}}}|)}{186}
+\indexentry{function@f(a)}{186}
+\indexentry{functioa@\protect{\underline{\textbf{Function Constructs}}}|(}{187}
+\indexentry{function@f(args)\ \protect\IS\ expr}{188}
+\indexentry{function@{\kw{pre}\ P(args)}}{188}
+\indexentry{function@{f(args)\ \kw{as}\ result}}{188}
+\indexentry{function@{\kw{post}\ P(args,result)}}{188}
+\indexentry{function@{\kw{pre}\ P(args)}}{188}
+\indexentry{function@{f(args)\ \kw{as}\ result}}{188}
+\indexentry{function@{\kw{post}\ P(args,result)}}{188}
+\indexentry{functioa@\protect{\underline{\textbf{Function Constructs}}}|)}{188}
+\indexentry{dcoma@\protect{\underline{\textbf{Combinators}}}|(}{188}
+\indexentry{dcomb@\kw{let} pa = e {\bf  in} c {\bf  end} }{188}
+\indexentry{dcomb@\kw{let} a:A $\bullet $ P(a) {\bf  in} c {\bf  end} }{189}
+\indexentry{dcomb@\kw{if} b$_e$ {\bf  then} c$_c$ {\bf  else} c$_a$ {\bf  end} }{189}
+\indexentry{dcomb@... {\bf  elsif} ... }{190}
+\indexentry{dcomb@\kw{case} b$_e$ {\bf  of} pa$_1$ {$\rightarrow $} c$_1$, ... pa$_n$ {$\rightarrow $} c$_n$ {\bf  end} }{190}
+\indexentry{typeeb@{\bf  Unit}}{191}
+\indexentry{functionb@f()}{191}
+\indexentry{dcomb@\kw{variable} v:Type := expression }{191}
+\indexentry{dcomb@v := expression }{191}
+\indexentry{dcomb@\kw{if} b$_e$ {\bf  then} c$_c$ {\bf  else} c$_a$ {\bf  end} }{191}
+\indexentry{dcomb@\kw{case} b$_e$ {\bf  of} pa$_1$ {$\rightarrow $} c$_1$, ... pa$_n$ {$\rightarrow $} c$_n$ {\bf  end} }{191}
+\indexentry{dcomb@\kw{while} b$e$ {\bf  do} stm {\bf  end} }{192}
+\indexentry{dcomb@\kw{do} stmt {\bf  until} b$e$ {\bf  end} }{192}
+\indexentry{dcomb@\kw{for} e {\bf  in} list$_{expr}$ {$\bullet $} P(b) {\bf  do} stm(e) {\bf  end} }{192}
+\indexentry{dcoma@\protect{\underline{\textbf{Combinators}}}|)}{192}
+\indexentry{processa@\protect{\underline{\textbf{Process Constructs}}}|(}{192}
+\indexentry{processb@\kw{channel} c:T }{192}
+\indexentry{processb@\kw{channel}\tmspace  +\thinmuskip {.1667em}$\{ $k[i]:T$\bullet $i:Idx$\} $ }{192}
+\indexentry{processb@p$_i$\PARL $p_j$ }{193}
+\indexentry{processb@p$_i$\DETCHOICE $p_j$ }{193}
+\indexentry{processb@p$_i$\NONDETCHOICE $p_j$ }{193}
+\indexentry{processb@p$_i$\TIE $p_j$ }{193}
+\indexentry{processb@c\tmspace  +\thinmuskip {.1667em}? }{193}
+\indexentry{processb@k[i]\tmspace  +\thinmuskip {.1667em}? }{193}
+\indexentry{processb@c\tmspace  +\thinmuskip {.1667em}"!\tmspace  +\thinmuskip {.1667em}e }{193}
+\indexentry{processb@k[i]\tmspace  +\thinmuskip {.1667em}"!\tmspace  +\thinmuskip {.1667em}e }{193}
+\indexentry{aaab@{\bf  Unit}}{193}
+\indexentry{processb@P:\tmspace  +\thinmuskip {.1667em}{\bf  Unit}\tmspace  +\thinmuskip {.1667em}{$\rightarrow $}\tmspace  +\thinmuskip {.1667em}{\bf  in}\tmspace  +\thinmuskip {.1667em}c\tmspace  +\thinmuskip {.1667em}{\bf  out}\tmspace  +\thinmuskip {.1667em}k[i]\tmspace  +\thinmuskip {.1667em}{\bf  Unit} }{193}
+\indexentry{aaaa@\underline{\textbf  {Literals}} |)}{193}
+\indexentry{processb@Q:\tmspace  +\thinmuskip {.1667em}i:KIdx \tmspace  +\thinmuskip {.1667em}{$\rightarrow $}\tmspace  +\thinmuskip {.1667em}{\bf  out}\tmspace  +\thinmuskip {.1667em}c\tmspace  +\thinmuskip {.1667em}{\bf  in}\tmspace  +\thinmuskip {.1667em}k[i]\tmspace  +\thinmuskip {.1667em}{\bf  Unit}}{193}
+\indexentry{processa@\protect{\underline{\textbf{Process Constructs}}}|)}{193}
+\indexentry{aaab@$\eta$}{194}
+\indexentry{utypeen@$\eta$T}{194}
+\indexentry{aaab@$\eta$}{195}
+\indexentry{aaab@\rsltxt}{195}
+\indexentry{aaab@{\EQ}}{195}
+\indexentry{aaab@{\CONCAT}}{195}

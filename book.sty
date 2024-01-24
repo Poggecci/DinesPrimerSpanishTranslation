@@ -1,0 +1,144 @@
+
+\newcommand{\txtbox}[1]{\begin{center} \fbox{#1} \end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% from Reqs.
+\newcommand{\pcindex}[1]{\textsl{{#1}}\cindextermi{#1}} 
+
+\newcommand{\ynbb}[1]% 
+  {\pos{\mpsno\paragraph{\lilacolor{#1}}}
+       {\sbox{\parname}{\lilacolor{\fsz #1}}%
+        \sbox{\subparname}{}%
+        \nxtpara\mnewfoil%
+        \centerline{\huge\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph} \lilacolor{#1}}}\aclp{#1}\Huge\rm}}
+ 
+%\renewcommand{\finput}[2]{\sf\input{/home/db/2015/faoc-req/#2}}
+
+\newcommand{\vienna}[1]{#1}
+
+\newcommand{\xsmall}{}
+
+\newcommand{\stdref}[3]{\noindent{\normalsize Applying \texttt{#1}, the domain
+   description prompt \vref{#2}, to #3 yields the following.}}
+
+\renewcommand{\AXIOM}{\kw{axiom}}
+\renewcommand{\CARD}{\kw{card}}
+
+\renewcommand{\sfsl}[1]{\textsl{\textsl{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\paplec}{chapter}
+
+\newcommand{\cedp}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+\renewcommand{\dbfootnotesize}[1]{\footnote{#1}}
+
+\renewcommand{\emmar}{}
+\newcommand{\notinfaoc}[1]{}
+\newcommand{\nnotinfaoc}[1]{#1}
+
+\renewcommand{\dbsmall}{\pos{\small}{\HHHH}}
+
+\newcommand{\refmarksnew}[3]{\hfill\footnotesize\textsl{Sect.\,\ref{#1}
+    Domain Description Prompt \vref{ddp:#2}: {#3}\normalsize}}
+\newcommand{\refmarksps}[3]{\hfill\footnotesize\textsl{Sect.\,\ref{#1}:
+     {#3}, Page \pageref{#2}\normalsize}}
+\newcommand{\refmarksch}[2]{\hfill\footnotesize\textsl{Sect.\,\ref{#1}:
+     {#2}, Page \pageref{#1}\normalsize}}
+
+\newcommand{\refmarks}[2]{\hfill\footnotesize\textsl{Chapter 1:
+    Domain Description Prompt \vref{ddp:#1}: {#2}\normalsize}}
+\newcommand{\refmarksi}[2]{\hfill\footnotesize\textsl{Chapter 1:
+    Domain Description Prompt \vref{ddp:#1}: {#2}\normalsize}}
+\newcommand{\refmarksii}[4]{\hfill\footnotesize\textsl{Chapter 1:
+    Domain Description Prompt \vref{ddp:#1}: #2}\normalsize}
+
+\newcommand{\nrefmarksi}[2]{\vspace*{1mm}\hfill\footnotesize\textsl{Sect.\,\vref{#1}: #2}\normalsize}
+\newcommand{\nrefmarksii}[4]{\vspace*{1mm}\hfill\footnotesize\textsl{Sect.\,\vref{#1}: #2} and
+  \textsl{Sect.\,\vref{#3}: #4}\normalsize}
+
+\renewcommand{\refmarksnew}[3]{}
+\renewcommand{\refmarksps}[3]{}
+\renewcommand{\refmarksch}[2]{}
+
+\renewcommand{\refmarks}[2]{}
+\renewcommand{\refmarksi}[2]{}
+\renewcommand{\refmarksii}[4]{}
+
+\renewcommand{\nrefmarksi}[2]{}
+\renewcommand{\nrefmarksii}[4]{}
+
+\newcommand{\remarks}[1]{
+\begin{quote}
+#1
+\end{quote}
+}
+
+\newcommand{\tbr}{
+\begin{center}
+\fbox{{\sc To be revised}}
+\end{center}}
+
+\newcommand{\tstbr}[1]{
+\begin{center}
+\fbox{{\sc All of section \ref{#1} to be revised}}
+\end{center}}
+
+\newcommand{\oldtxt}[1]{
+\begin{center}
+\fbox{{\sc Old section \ref{#1} text}}
+\end{center}}
+
+\newcommand{\newtxt}[1]{
+\begin{center}
+\fbox{{\sc New section \ref{#1} draft text}}
+\end{center}}
+
+\newcommand{\lpref}[1]{\label{L#1}\ref{#1}}
+
+\newcommand{\dbfnmrk}{\footnotemark}
+\newcommand{\dbfn}[2]{\footnotetext{The \texttt{#1} function will be explained in Sect.\,\ref{#2}.}}
+\newcommand{\dbfntxt}[2]{\footnotetext{We formalise \texttt{#1} in Sect.\,\vref{#2}.}}
+\newcommand{\dbfootnote}[2]{\footnote{We formalise \texttt{#1} in Sect.\,\vref{#2}.}}
+\newcommand{\dbafootnote}[2]{\footnote{We formalise \texttt{#1} in Sect.\,\vref{#2}.}}
+\newcommand{\dbanote}[2]{\footnotetext{See analysis prompt definition \vref{#1}}}
+ 
+%\renewcommand{\dbfnmrk}{}
+%\renewcommand{\dbfn}[2]{}
+%\renewcommand{\dbfntxt}[2]{}
+%\renewcommand{\dbfootnote}[2]{}
+%\renewcommand{\dbafootnote}[2]{}
+%\renewcommand{\dbanote}[2]{}
+ 
+\newcommand{\dbainote}[2]{See analysis prompt definition \vref{#1} and Formula Item\,\vref{#2}.}
+\newcommand{\dbdnote}[2]{See description prompt definition \vref{#1} and Formula Item\,\vref{#2}.}
+\newcommand{\dbdainote}[2]{See description prompt definition \vref{#1} and Formula Item\,\vref{#2}.}
+\newcommand{\dbdinote}[2]{See description prompt definition \vref{#1} and Formula Item\,\vref{#2}.}
+\newcommand{\dbdxnote}[2]{See description prompt definition \vref{#1}.}
+
+%\renewcommand{\dbainote}[2]{}
+%\renewcommand{\dbdnote}[2]{}
+%\renewcommand{\dbdainote}[2]{}
+%\renewcommand{\dbdinote}[2]{}
+%\renewcommand{\dbdxnote}[2]{}
+
+\newcommand{\xaddtocounter}[2]{\addtocounter{footnote}{#2}}
+\newcommand{\dbaddtocounteri}[2]{\addtocounter{footnote}{1}}
+\newcommand{\dbaddtocountermi}[2]{\addtocounter{footnote}{-1}}
+\newcommand{\dbaddtocountermii}[2]{\addtocounter{footnote}{-2}}
+\newcommand{\dbaddtocountermiii}[2]{\addtocounter{footnote}{-3}}
+
+\renewcommand{\xaddtocounter}[2]{}
+\renewcommand{\dbaddtocounteri}[2]{}
+\renewcommand{\dbaddtocountermi}[2]{}
+\renewcommand{\dbaddtocountermii}[2]{}
+\renewcommand{\dbaddtocountermiii}[2]{}
+
+\newcommand{\neditpoint}{\pos{\label{nrevpoint}\marginpar{\brcolor{\fbox{\bbcolor{$\Re$}}}}}{}}
+
+\renewcommand{\detchoice}{\mbox{$\lceil\!\rceil\!\!\!\!\!\!\!\lfloor\!\rfloor$}}
+\renewcommand{\detchoice}{\mbox{$\lceil\!\rceil\!\!\!\!\lfloor\!\rfloor$}}
+
+\newcommand{\pfeil}{\label{pfeil}\marginpar{\brcolor{$\bullet\bullet\bullet$}}}

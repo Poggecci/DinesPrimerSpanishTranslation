@@ -1,0 +1,1138 @@
+ 
+\newcounter{doafno}
+\newcommand{\doafpr}{\stepcounter{doafno}}
+\newcommand{\footsize}{}
+
+\newcommand{\psref}[1]{\pos{Pg}{Sli}.\,\pageref{#1}}
+
+\newcommand{\ipbegynd}{\begynd }
+\newcommand{\ippind}{\pind }
+\newcommand{\ipafslut}{\afslut }
+
+\newcommand{\itemtekst}{\renewcommand{\ipbegynd}{\begin{itemize}}
+              \renewcommand{\ippind}{\item }
+              \renewcommand{\ipafslut}{\end{itemize}}}
+          
+\newcommand{\punkttekst}{\renewcommand{\ipbegynd}{\begynd}
+              \renewcommand{\ippind}{\pind }
+              \renewcommand{\ipafslut}{\afslut}}
+
+\newcommand{\compile}[1]{{\bbcolor{\textsc{Translate}}{$_{#1}$}}}
+  
+\newcommand{\rsltxt}{\texttt{RSL$^+$}\textsf{Text}}
+\newcommand{\rslplus}{\texttt{RSL$^+$}}
+
+\newcommand{\lbrk}{$\ll$\!\!\!\!{$\mid$}}
+\newcommand{\rbrk}{$\gg$\!\!\!\!{$\mid$}}
+\newcommand{\lrtxt}[1]{\lbrk\ \, #1 \rbrk}
+\newcommand{\lrbrk}{\lbrk\rbrk}
+
+\newcommand{\category}[1]{\ \kw{category:} \texttt{#1}
+  [Defn.\,\ref{#1}\,Pg.\,\pageref{#1}]}
+ 
+\renewcommand{\category}[1]{{\ [\texttt{#1},
+  Df.\ref{d:#1}\,Pg.\pageref{d:#1}]}}
+
+\newcounter{attrdefn}
+
+\newtheorem{attributecat}{\bgcolor{Attribute Category}}
+
+\newcommand{\attribute}[2]{%
+  \begin{svgraybox}
+  \begin{attributecat}%\bbcolor{#1:}
+       \index{defind}{Attribute!#1}\label{d:#1} {\rm #2}
+  \end{attributecat}\end{svgraybox}
+}
+
+\newtheorem{define}{\sort{Definition}}
+
+\newcommand{\bookdefn}[2]{
+\vspace*{1.2mm}%\begin{svgraybox}
+\begin{define}.
+\noindent
+\brcolor{#1:}\label{def:#1}\pos{\index{defind}{#1}\index{pdefind}{#1}}{} {\rm #2}
+\end{define}%\end{svgraybox}
+\vspace*{1.2mm}}
+ 
+\newtheorem{charac}{\sort{Characterisation}}
+
+\newcommand{\chardefn}[2]{\HHHH
+\vspace*{1.2mm}%
+  \begin{svgraybox}
+\begin{charac}
+\noindent
+\brcolor{{#1}:}\label{def:#1}\pos{\index{defind}{#1}\index{pdefind}{#1}}{} {\rm #2}
+\end{charac}\end{svgraybox}
+\vspace*{1.2mm}}
+ 
+\newcommand{\bookdefnx}[2]{%
+  \begin{svgraybox}
+\begin{define}{{#1}:}\label{def:#1}\pos{\index{defind}{#1}\index{pdefind}{#1}}{}
+{#2} 
+\end{define}\end{svgraybox}
+}
+
+\newcommand{\nbookdefn}[2]{
+\vspace*{1.2mm}%
+  \begin{svgraybox}
+\begin{define}
+\noindent
+\brcolor{#1:}\label{def:#1}\index{defind}{#1}\index{pdefind}{#1} {\rm #2}
+\end{define}\end{svgraybox}
+\vspace*{1.2mm}}
+ 
+\newcommand{\nchardefn}[2]{
+\vspace*{1.2mm}%
+  \begin{svgraybox}
+\begin{charac}
+\noindent
+\brcolor{#1:}\label{def:#1}\index{defind}{#1}\index{pdefind}{#1} {\rm #2}
+\end{charac}\end{svgraybox}
+\vspace*{1.2mm}}
+
+\newcommand{\ost}[3]{\mbox{$#1_{#2}^{#3}$}}
+
+\newcommand{\ncitat}[3]{{\it ``#1.''}}
+\newcommand{\iiicitater}[3]{\,\footnote{\cite{kaisorlander1994},\,$^:$\,
+$^1$\,#1, $^2$\,#2, $^3$\,#3}\,$^{:1,2,3}$}
+
+\newcommand{\ivcitater}[4]{\,\footnote{\cite{kaisorlander1994},\,$^:$\,
+$^1$\,#1;
+$^2$\,#2;
+$^3$\,#3;
+$^4$\,#4%
+}\,$^{:1,2,3,4}$}
+
+\newcommand{\vcitater}[5]{\,\footnote{\cite{kaisorlander1994},\,$^:$\,
+$^1$\,#1;
+$^2$\,#2;
+$^3$\,#3;
+$^4$\,#4;
+$^5$\,#5%
+}\,$^{:1,2,3,4,5}$}
+
+\newcommand{\vicitater}[6]{\,\footnote{\cite{kaisorlander1994},\,$^:$\,
+$^1$\,#1;
+$^2$\,#2;
+$^3$\,#3;
+$^4$\,#4;
+$^5$\,#5;
+$^6$\,#6%
+}\,$^{:1,2,3,4,5,6}$}
+
+\newcommand{\viicitater}[7]{\,\footnote{\cite{kaisorlander1994},\,$^:$\,
+$^1$\,#1;
+$^2$\,#2;
+$^3$\,#3;
+$^4$\,#4;
+$^5$\,#5;
+$^6$\,#6;
+$^7$\,#7%
+}\,}
+\newcommand{\filonbb}[1]{\mnewfoil\bgcolor{#1}}
+\newcommand{\sorlanderphil}{{S{\o}rlander}'s Philosophy}
+\newcommand{\kaisorphil}{{Kai S{\o}rlander}'s Philosophy}
+\newcommand{\daadapsect}[3]{{{Sect.\,\sf\ref{#2}, pp.\,\pageref{#2}--\pageref{#3}:
+      \bbcolor{\texttt{#1:}}}}}
+
+\newcommand{\ind}{\bbcolor{\textsf{\textbf{The inescapable meaning assignment:}}}
+\begynd
+\pind \sfsl{`the meaning of designations and}
+\pind \sfsl{the consistency relations between
+    propositions'}\,\footnote{\cite{kaisorlander1994},\,pg.\,13-14,\,$\ell$13-$\ell$1}
+\afslut} 
+\newcommand{\citat}[3]{{\it ``#1.''}\,\footnote{\cite{kaisorlander1994},\,pg.#2,\,$\ell$#3}}
+\newcommand{\newcitat}[2]{{\it ``#1.''}\,\footnote{\cite{kaisorlander1994},\,#2}}
+\newcommand{\pl}[3]{pg.\,#1,\,$\ell$\,#2--#3}
+
+\newcommand{\daadap}[2]{{{Item\,\sf\ref{dap:#2},
+      pp.\,\pageref{dap:#2}: \bbcolor{\texttt{#1:}}}}} 
+
+\newcommand{\daadapm}[2]{{{Item\,\sf\ref{dap:#2},
+      pp.\,\pageref{dap:#2}: \bbcolor{\texttt{#1}}}}} 
+
+\newcommand{\dum}{\textsf{\textsl{the inescapable meaning
+      assignment}}}
+
+\newcommand{\qqks}[2]{\footnotesize\sf\cite[pp\,#1]{kaisorlander2016}\
+  \ \normalsize\it\
+  \ 
+  ``#2''\rm}
+
+\newcommand{\zzks}[2]{\footnotesize\sf\cite[pp\,#1]{kaisorlander1997}\
+  \ \normalsize\it\ 
+  \ 
+  ``#2''\rm}
+
+\newcommand{\qqjs}[2]{\footnotesize\sf\cite[pp\,#1]{sloek-Stoikerne}\normalsize\it\
+  \``#2''\rm}
+
+\newcommand{\QUOTATION}[2]{{%
+                          %\vspace*{0.5mm}
+                          \begin{flushright}
+                          {\tt {#1}}\\
+                          \vspace*{1mm}
+                          {\sl {#2}}
+                          \end{flushright}
+                          %\vspace*{2mm}
+                          }}
+
+\newcommand{\editbox}[1]%
+    {\vspace*{2mm}%
+     \noindent%
+     \boiteepaisseavecuntitre{\bbcolor{Editorial Remark}}%
+     \vspace*{0.3mm}\noindent%
+     #1
+     %\vspace*{0.1mm}
+     \endboiteepaisseavecuntitre\vspace*{0.1mm}}
+
+\newcommand{\filobox}[2]%
+    {\vspace*{2mm} \noindent 
+    \bgcolor{#1:} #2% \bgcolor{$\Phi$}
+} 
+
+\newcommand{\eofilo}{
+  \bbcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}$_{{\phi}}$} 
+
+\newcommand{\nummer}[1]{{\pos{}{#1}}}
+
+\newcommand{\atanidx}[1]{\index{attr}{\texttt{#1} {[\arabic{doanno}]}}} 
+\newcommand{\doanidx}[1]{\index{doan}{\texttt{#1} {[\arabic{doanno}]}}} 
+\newcommand{\dodeidx}[1]{\index{dode}{\texttt{#1} {[\arabic{dodeno}]}}}
+
+\newcommand{\eodp}{
+  \bgcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}\!\!\!.\;\;} 
+
+\renewcommand{\eodp}{
+  \bgcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}} 
+
+\newshadetheorem{regel}{\bgcolor{Rule}}
+
+\newcommand{\xreqrule}[2]{%
+\jaistbook{}{\begin{regel}}\bgcolor{{#1}:}\label{def:#1}
+\jaistbook{}{} {#2} 
+\jaistbook{}{\end{regel}}
+}
+
+%\newtheorem{example}{\textbf{Example}}
+
+\newcommand{\daadeks}[2]{%
+\noindent
+\begin{example}\rm \  \lilacolor{#1}:\label{#1}\label{ex:#1}%
+\eindex{#1 (\#\,\protect\ref{#1})|(}%
+\eindex{\protect\ref{#1} #1}%
+{#2}%
+\eindex{#1 (\#\,\protect\ref{#1})|)}%
+\end{example}
+}
+
+\newcommand{\daadekss}[2]{\vspace*{2mm}%
+\noindent
+\begin{example}
+\noindent
+\index{eind}{#1}\noindent{\sf #2}\normalsize\rm\stepcounter{primerexample}
+\end{example}
+\rm
+}
+
+\newcommand{\eksframe}[2]{%
+\begin{example}\rm \  \lilacolor{#1}:\label{#1}%
+\eindex{#1 (\#\,\protect\ref{#1})|(}%
+\eindex{\protect\ref{#1} #1}%
+{#2 \eox}%
+\eindex{#1 (\#\,\protect\ref{#1})|)}%
+\end{example}
+} 
+
+\newcommand{\eksframeu}[2]{%
+\begin{example}\rm \ {\lilacolor{\normalsize #1}:} \label{#1}
+\eindex{#1 (\#\,\protect\ref{#1})|(}%
+\eindex{\protect\ref{#1} #1}%
+{#2}%
+\eindex{#1 (\#\,\protect\ref{#1})|)}%
+%\vspace*{-2mm}
+\end{example}
+}
+
+\renewcommand{\eksframe}[2]{} 
+\renewcommand{\eksframeu}[2]{}
+
+%\newtheorem{definition}{\brcolor{Definition:}}
+
+\newshadetheorem{eksempel}{Example}
+%\newtheorem{unshadedeksempel}[eksempel]{Example}
+
+\newcommand{\jaistbook}[2]{#2} 
+
+\newcommand{\citeseall}%
+   {\cite{TheSEBook1,TheSEBook2,TheSEBook3}}
+\newcommand{\citeseiii}%
+   {\cite{TheSEBook3}}
+\newcommand{\citelscs}%
+   {\cite{Damm01,Harel03,Klose01}}
+\newcommand{\citesemantics}%
+   {\cite{deBakker-2,Semantics1,Reynolds99,Schm86,Tennent97,Semantics5}}
+\newcommand{\citeuml}%
+   {\cite{Booch98,Rumbaugh98,Jacobson99,OMG}}
+ 
+\newcommand{\mkvlarge}{}
+
+\newcommand{\dbbook}[1]{#1}
+\newcommand{\primer}[2]{#2}
+
+\newcommand{\weI}{\pt{we}{I}}
+\newcommand{\WeI}{\pt{We}{I}}
+
+
+\newcommand{\dogma}{\textsf{\textsl{Before software can be designed we
+  must know its requirements. Before 
+requirements can be expressed we must understand the domain. So it follows,
+from our dogma, that we must first establish precise descriptions of
+domains; then from such, ``derive'' at least domain requirements; and from
+those and other  (interface and machine) requirements design the software,
+or, more generally, the computing systems.}}
+The preceding was an engineering dogma. Now follows a science dogma:
+\textsf{\textsl{Just as physicists have studied this universe for centuries
+  (and more), and will continue to do so for centuries (or more), so
+it is about time that we also study such man-made universes as
+air traffic, the financial service industry, healthcare,
+  manufacturing, ``the market'', railways, indeed transportation in
+  general, and so forth. Just in-and-by-themselves. No need to excuse
+  such a study by stating only engineering concerns. To understand is
+  all. And helps engineering.}}}
+
+
+\newcommand{\dogmai}{\textsf{\textsl{Before software can be designed we
+  must know its requirements. 
+\item Before 
+requirements can be expressed we must understand the domain. 
+\item So it follows,
+from our dogma, that we must
+\begin{itemize}
+\item  first establish precise descriptions of
+domains;
+\item  then from such, ``derive'' at least domain requirements; 
+\item and from
+those and other  (interface and machine) requirements design the software,
+or, more generally, the computing systems.
+\end{itemize}}}}
+
+\newcommand{\nbbu}[1]{\mnewfoil}
+\newcommand{\nbbbu}[1]{\mnewfoil}
+\newcommand{\nbbbbu}[1]{\mnewfoil}
+\newcommand{\ptn}[2]{#1}
+\newcommand{\annotate}[1]{}
+\newcommand{\dbeat}[1]{}
+\newcommand{\ifaceat}[1]{}
+\newcommand{\begyndgraa}{}
+\newcommand{\slutgraa}{}
+\newcommand{\lors}[2]{#1}
+\newcommand{\ugovstra}[1]{}
+\newcommand{\notnancy}[1]{}
+ 
+%\newcommand{\dbcomment}{\mbox{--\,-- }}
+
+\newcommand{\bxa}{}%{\cbstart[4pt]} 
+\newcommand{\exa}{}%{\cbend}
+
+\newcommand{\bxi}{}%{\cbstart[2pt]}
+\newcommand{\exi}{}%{\cbend}
+\newcommand{\bxii}{}%{\cbstart[1pt]}
+\newcommand{\exii}{}%{\cbend}
+
+\newcommand{\aesub}[3]{\textbf{subst}$([$#1$/$#2$]$#3$)$}
+
+\newcommand{\book}[1]{#1}
+
+\newcommand{\bxiii}{}
+\newcommand{\exiii}{} 
+
+\newcounter{xc}
+\newcommand{\dxc}{\stepcounter{xc}[\arabic{xc}]}
+
+\newcommand{\wvref}[1]{\ref{#1} \pos{Page}{Slide}\,\pageref{f #1}}
+
+\newcommand{\fdt}{some \sfsl{formal description text} according to the
+followig \sfsl{schema}}
+
+\newcommand{\jnbbbb}[1]{\pos{\vspace*{-2mm}\nbb{#1}}{\nbbbb{#1}}}
+\newcommand{\jnbbb}[1]{\pos{\vspace*{-2mm}\nspb{#1}}{\nbbb{#1}}}
+
+\renewcommand{\jnbbbb}[1]{\pos{\vspace*{-2mm}\nbb{#1}}{\nbbbb{#1}}}
+\renewcommand{\jnbbb}[1]{\pos{\mnewfoil}{\nbbb{#1}}}
+
+\newcommand{\jbbbb}[1]{\pos{\vspace*{-2mm}\bb{#1}}{\bbbb{#1}}}
+\newcommand{\jbbb}[1]{\pos{\vspace*{-2mm}\spb{#1}}{\bbb{#1}}}
+
+\renewcommand{\jbbbb}[1]{\pos{}{\bbbb{#1}}}
+\renewcommand{\jbbb}[1]{\pos{}{\bbb{#1}}}
+
+\renewcommand{\jnbbbb}[1]{\nbbbb{#1}}
+\renewcommand{\jnbbb}[1]{\nbbb{#1}}
+
+\renewcommand{\jbbbb}[1]{\bbbb{#1}} 
+\renewcommand{\jbbb}[1]{\bbb{#1}}
+ 
+\newcounter{jaistex}
+\newcommand{\jaistno}{\stepcounter{jaistex}\arabic{jaistex}}
+
+\newcommand{\idbsquare}{\bmcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}}
+\newcommand{\dbsquare}{\bmcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}}
+\newcommand{\nofildbsquare}{%
+  \bmcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}}
+
+\newcommand{\lfoot}[1]{\footnote{\LLLL #1}}
+\newcommand{\jexa}{\eox}
+\newcommand{\jex}[2]{\bmcolor{\textsf{\textsl{Example \jaistno.}}}
+        \textsf{#1:}\label{#1} {#2}}
+\newcommand{\jexs}{\jex}
+
+\newcommand{\rmvmrk}[1]{}%{\bxi}...{\exi}}
+\newcommand{\rmvmrki}[1]{{\bxii}...{\exii}}
+
+\newcommand{\dap}{\sfsl{\bbcolor{domain analysis prompt}}}
+\newcommand{\ddp}{\sfsl{\bgcolor{domain de\-scrip\-tion prompt}}} 
+
+\renewcommand{\dap}{\sfsl{\bgcolor{domain analysis prompt}}}
+\renewcommand{\ddp}{\sfsl{\bgcolor{domain de\-scrip\-tion
+      prompt}}}
+
+\newcommand{\og}{\epsfig{file=/home/db/2013/da1/amper.eps,height=2.6mm}}
+
+\newcommand{\perdurants}[1]{#1}
+\newcommand{\minusmethod}[1]{}
+
+\newcommand{\keyw}[1]{\textbf{#1}}
+
+\renewcommand{\bxi}{}
+\renewcommand{\exi}{}
+\renewcommand{\bxii}{}
+\renewcommand{\exii}{}
+ 
+\newcommand{\rammeddl}[1]%
+    {\vspace*{1.5mm}%
+     \boiteepaisseavecuntitre{#1}%
+     \vspace*{0.2mm}}
+
+\newcommand{\lddemmar}%
+    {\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}} 
+
+\renewcommand{\rammeddl}[1]%
+    {\vspace*{1.5mm}%
+     \centerline{\sort{#1}}%
+     \vspace*{0.2mm}}
+
+\renewcommand{\lddemmar}{\vspace*{0,5mm}} 
+
+\newcommand{\rammefilo}[1]%
+    {\vspace*{1.5mm}%
+     \boiteepaisseavecuntitre{#1}%
+     \vspace*{0.2mm}}
+
+\newcommand{\filoemmar}%
+    {\vspace*{0.5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}} 
+
+\newcommand{\urammeddl}[1]%
+    {\vspace*{1.5mm}%
+     \boiteepaisseavecuntitre{#1}%
+     \vspace*{0.2mm}}
+
+\newcommand{\rammetbw}[1]%
+    {\vspace*{1.5mm}%
+     \boiteepaisseavecuntitre{\bbcolor{Chapter Status}}%
+     \vspace*{0.2mm}
+    \begin{center}\noindent #1\end{center}
+    \vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}} 
+
+\newcommand{\rammemsg}[1]%
+    {\vspace*{1.5mm}%
+     \boiteepaisseavecuntitre{\bbcolor{This Example has yet to be written}}%
+     \vspace*{0.2mm}
+    \begin{center}\noindent #1\end{center}
+    \vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}} 
+
+\newcounter{axno}
+\newcommand{\axiomindex}[2]{\label{#1}\index{axind}{#2}}
+\newcounter{pono}
+\newcommand{\poindex}[2]{\label{#1}\index{poind}{#2}}
+
+\newcommand{\aasref}[1]{\hfill [\Roman{#1}, \pos{Page}{Slide}\,\pageref{#1}]}
+
+\newcommand{\srefu}[1]{\hfill [\Alph{#1}, \pos{Page}{Slide}\,\pageref{#1}]}
+
+\newcommand{\daadds}[3]{\label{#1}%
+          \newcounter{#1}%
+          \setcounter{#1}{\value{#2}}}
+
+\newcommand{\dalbl}[1]{\label{#1}%
+          \newcounter{#1}%
+          \setcounter{#1}{\value{doanno}}}
+
+\newcommand{\ddlbl}[2]{\label{#1}%
+          \newcounter{#1}%
+          \setcounter{#1}{\value{dodeno}}}
+
+\newcommand{\dslbl}[2]{\label{#1}%
+          \newcounter{#1}%
+          \setcounter{#1}{\value{dodeno}}}
+
+\newcommand{\sat}[1]{\sfsl{\lowercase{#1}} \textbf{\lilacolor{some
+      analysis text:}}}
+
+\newcommand{\ddtuu}[1]{\sfsl{{\HHHH #1}}  domain
+      description text \pos{}{\\} according to the following schema}
+\newcommand{\ddtu}[1]{\sfsl{{\HHHH #1}}  domain
+      description text \pos{}{\\} according to the following schema:}
+
+\newcommand{\hypo}[1]{\index{hind}{\texttt{#1} {[\Roman{alfnu}]}}}
+\newcommand{\dela}[1]{\index{dlind}{\textsf{#1}}}% [\Alph{cdtfnu}]}}
+\newcommand{\ddtx}[1]{\index{ddind}{\textrm{#1}}}
+\newcommand{\atx}[1]{\index{adind}{\texttt{#1}}}
+\newcounter{kwno}
+\newcommand{\delaoi}[1]{\index{dloind}{#1}}
+\newcommand{\delaoii}[2]{\index{dloind}{\protect{#1}!#2}}
+
+\newcounter{doanno}
+\newcommand{\doanpr}{\stepcounter{doanno}}
+\newcommand{\udoanpr}{\stepcounter{doanno}}
+
+\newcounter{dloi}
+\newcommand{\cdloi}{\stepcounter{dloi}}
+
+\newcounter{alfnu}
+\newcommand{\dfnu}%
+            {\stepcounter{alfnu}%
+             \marginpar{\pos{\normalsize}{\HHHH}[\Roman{alfnu}]}} 
+
+\newcounter{dtfnu}
+\newcommand{\dtfnu}{\stepcounter{dtfnu}[\Alph{dtfnu}]}
+
+\newcounter{afnu}
+\newcommand{\atfnu}{\stepcounter{afnu}\arabic{afnu}}
+
+\newcommand{\sfsl}[1]{\textsl{\textsf{{#1}}}}
+\newcommand{\slsf}[1]{\textsf{\textsl{{#1}}}}
+
+\renewcommand{\sfsl}[1]{\textsl{\textsf{{#1}}}}
+\renewcommand{\slsf}[1]{\textsf{\textsl{{#1}}}}
+
+\newcommand{\seeex}[1]{\pind See Example\,\vref{#1}}
+
+\newcommand{\crefeksi}[2]{
+\eksframe{#1}{\begynd\seeex{#2}.\afslut}}
+
+\newcommand{\crefeksii}[3]{
+\eksframe{#1}{\begynd\seeex{#2}, \seeex{#3}.\afslut}}
+
+\newcommand{\crefeksiii}[4]{
+\eksframe{#1}{\begynd\seeex{#2}, \seeex{#3}, \seeex{#4}.\afslut}}
+
+\newcommand{\crefeksiv}[5]{
+\eksframe{#1}{\begynd\seeex{#2}, \seeex{#3}, \seeex{#4}, \seeex{#5}.\afslut}}
+
+\newcommand{\mainexample}{Example\,4}
+ 
+\newcommand{\nia}[1]{}
+
+\newcommand{\bmcs}{\pos{\begin{multicols}{2}}{}}
+\newcommand{\emcs}{\pos{\end{multicols}}{}}
+
+\newcommand{\bmcsii}{\pos{}{\begin{multicols}{2}}}
+\newcommand{\emcsii}{\pos{}{\end{multicols}}}
+
+\newcommand{\bmcsiii}{\pos{}{\begin{multicols}{3}}}
+\newcommand{\emcsiii}{\pos{}{\end{multicols}}}
+
+\newcommand{\pgpageref}[1]{pg.\,\pageref{#1}}
+\newcommand{\dfpgref}[3]{def.\,\ref{#1}, #2 pg.\,\pageref{#3}}
+
+\newcommand{\daadm}{\pdindextermiii{domain}{analysis \&}{description}}
+\newcommand{\mdaad}{\daadm}
+
+\newcommand{\smaLL}{\small\footnotesize\HHHH}
+\renewcommand{\smaLL}{\HHHH}
+
+\newcommand{\iswff}{\textsf{\textbf{{\protect{is{\_}wf{\_}}}}}}
+
+\newcommand{\ismo}{\textsf{\textbf{{\protect{is{\_}}}}}}
+
+\newcommand{\uidmo}{\textsf{\textbf{{\protect{uid{\_}}}}}}
+
+\newcommand{\mereomo}{\textsf{\textbf{{\protect{obs{\_}mereo{\_}}}}}}
+\newcommand{\obsmereo}{\textsf{\textbf{{\protect{obs{\_}mereo{\_}}}}}}
+
+\newcommand{\obsattrs}{\textsf{\textbf{{\protect{obs{\_}attribs{\_}}}}}}
+\newcommand{\obsattrvals}{\textsf{\textbf{{\protect{obs{\_}attrib{\_}values{\_}}}}}}
+\newcommand{\attrmo}{\textsf{\textbf{{\protect{attr{\_}}}}}}
+\newcommand{\attributes}{\textsf{\textbf{{\protect{attributes}}}}}
+\newcommand{\obsattribs}{\textsf{\textbf{{\protect{attributes}}}}}
+
+\newcommand{\obsmo}{\textsf{\textbf{{\protect{obs{\_}part{\_}}}}}}
+
+\newcommand{\obsmop}{\textsf{\textbf{{\protect{obs{\_}part{\_}}}}}}
+\newcommand{\obsmoe}{\textsf{\textbf{{\protect{obs{\_}endurant{\_}sorts{\_}}}}}}
+\newcommand{\obspt}{\textsf{\textbf{{\protect{obs{\_}part{\_}}}}}}
+
+\renewcommand{\obsmo}{\textsf{\textbf{obs{\_}part{\_}}}}
+
+\renewcommand{\obsmop}{\textsf{\textbf{obs{\_}part{\_}}}}
+\renewcommand{\obsmoe}{\textsf{\textbf{obs{\_}endurant{\_}sorts{\_}}}}
+\renewcommand{\obspt}{\textsf{\textbf{obs{\_}part{\_}}}}
+
+\newcommand{\obsco}{\textsf{\textbf{{\protect{obs{\_}comp{\_}}}}}}
+\newcommand{\components}{\protect{\textsf{\textbf{{\protect{obs{\_}components{\_}}}}}}}
+\newcommand{\obsma}{\protect{\textsf{\textbf{{\protect{obs{\_}mat{\_}sort{\_}}}}}}}
+\newcommand{\materials}{\protect{\textsf{\textbf{{\protect{obs{\_}materials{\_}}}}}}}
+
+\newcommand{\obsposmo}{\textsf{\textbf{{\protect{obs{\_}pos{\_}}}}}}
+\newcommand{\obslocmo}{\textsf{\textbf{{\protect{obs{\_}loc{\_}}}}}}
+
+\newcommand{\updmereomo}{\textsf{\textbf{{\protect{upd{\_}mereo{\_}}}}}}
+\newcommand{\updattrmo}{\textsf{\textbf{{\protect{upd{\_}attr{\_}}}}}}
+
+\newcommand{\aindex}[1]{\index{aind}{#1}}
+
+\newcommand{\dcmethod}{\texttt{DC: Duration
+    Calculus}\ttindex{\texttt{DC}!Duration Calculus} \citedc}
+
+\newcommand{\tlamethod}{\texttt{TLA+}\ttindex{\texttt{TLA+}!Temporal
+    Logic of Actions} \citetlap}
+
+\newcommand{\alloymethod}{\texttt{Alloy} \citealloy\ttindex{\texttt{Alloy}}}
+
+\newcommand{\bmethod}{\texttt{Event B} \citeb%
+    \ttindex{\texttt{B}!\texttt{B}ourbaki}
+    \ttindex{\texttt{Event B}}}
+
+\newcommand{\cspmethod}{\texttt{CSP}
+       \ttindex{\texttt{CSP}}%
+       \cite{Hoare85+2004}\aindex{hoare@C.A.R. Hoare}} 
+
+\newcommand{\vdmmethod}{\texttt{VDM} \citevdm\ttindex{\texttt{VDM}!Vienna
+    Development Method}}
+
+\newcommand{\raisemethod}{\texttt{RAISE} 
+  \citeraise\ttindex{\texttt{RAISE}!Rigorous Approach to
+  Industrial Software Engineering}\ttindex{\texttt{RSL}!the
+  \texttt{RAISE S}pecification \texttt{L}anguage}}  
+
+\newcommand{\raisersl}{\texttt{RSL} \citersl%
+  \ttindex{\texttt{RSL}!the
+  \texttt{RAISE S}pecification \texttt{L}anguage}}  
+
+\newcommand{\zmethod}{\texttt{Z} \citez\ttindex{\texttt{Z}!\texttt{Z}ermelo}}
+
+\newcommand{\cafeobjmethod}{\texttt{CafeOBJ}
+  \citecafeobj\ttindex{\texttt{CafeOBJ}}}  
+
+\newcommand{\caslmethod}{\texttt{CASL} \citecasl\ttindex{\texttt{CASL}!Common
+  Algebraic Specification Language}}
+
+\renewcommand\labelitemii%
+       {\pos{\small}{\LLLL}%
+       $\diamond\hspace*{-2.4mm}\diamond$%
+       \pos{\normalsize}{\HHHH}} 
+\renewcommand\labelitemiii%
+       {\pos{\small}{\LLLL}% 
+       $\circ$%$\circ\hspace*{-2.4mm}\circ$%
+       \pos{\normalsize}{\HHHH}}
+\renewcommand\labelitemiv{%
+       {\pos{\small}{\LLLL}%
+       $\ast$%
+       \pos{\normalsize}{\HHHH}}}
+
+\newcommand{\thebookpth}{/home/db/thebook}
+\newcommand{\dibookpth}{/home/db/di}
+
+\newcommand{\pt}{\pos}
+
+\newcommand{\sel}{sel{\_}}
+\newcommand{\nrslframebox}[2]{#2}%{\spb{#1:} #2}
+\renewcommand{\nrslframebox}[2]{\sort{#1:} #2}
+
+\newcommand{\schedule}[1]%
+{\newpage\addtocounter{page}{-1}\input{#1}} 
+
+\newcommand{\laore}[2]{#1}
+
+\newcommand{\streboeger}[1]{
+\newpage\addtocounter{page}{-1}
+\begin{center}
+\epsfig{file=/home/db/skrivebord/SE1.eps,width=7.8cm}\ \
+\epsfig{file=/home/db/skrivebord/SE2.eps,width=7.8cm}\ \
+\epsfig{file=/home/db/skrivebord/SE3.eps,width=7.8cm}\\[1.6cm]
+\bbcolor{\fbox{\brcolor{\HHHH #1}}}
+\end{center}
+}
+
+\newcommand{\qetreboeger}[1]{
+\newpage\addtocounter{page}{-1}
+\begin{center}
+\epsfig{file=/home/db/skrivebord/1cvr.eps,width=7.8cm}\ \
+\epsfig{file=/home/db/skrivebord/2cvr.eps,width=7.8cm}\ \
+\epsfig{file=/home/db/skrivebord/3cvr.eps,width=7.8cm}\\[1.6cm]
+\bbcolor{\fbox{\brcolor{\HHHH #1}}}
+\end{center}
+}
+
+\newcommand{\qctreboeger}[1]{
+\newpage\addtocounter{page}{-1}
+\begin{center}
+\epsfig{file=/home/db/skrivebord/china-vol1.eps,height=10.5cm}\ \
+\epsfig{file=/home/db/skrivebord/china-vol2.eps,height=10.5cm}\ \
+\epsfig{file=/home/db/skrivebord/china-vol3.eps,height=10.5cm}\\[1.6cm]
+\bbcolor{\fbox{\brcolor{\HHHH #1}}}
+\end{center}
+}
+
+\newcommand{\beginoflecture}[3]{%
+\pos{}{
+\vspace*{3cm}
+\nyddddd{\brcolor{Begin} \bbcolor{of Lecture} \brcolor{#1} --- \brcolor{#2}}
+\vspace*{3cm}
+\nydddd{\brcolor{#3}}
+\vspace*{3cm}
+\nyddd{\bbcolor{FM\,2012 Tutorial, Dines Bj{\o}rner, Paris, 28 August 2012}}
+\vspace*{3cm}
+}}
+
+\newcommand{\xendoflecture}[3]{%
+\pos{}{
+\vspace*{3cm}
+\nyddddd{\brcolor{End} \bbcolor{of Lecture} \brcolor{#1} --- \brcolor{#2}}
+\vspace*{3cm}
+\nydddd{\brcolor{#3}}
+\vspace*{3cm}
+\nyddd{\bbcolor{FM\,2012 Tutorial, Dines Bj{\o}rner, Paris, 28 August 2012}}
+\vspace*{3cm}
+}}
+
+\newcommand{\Material}{Material}
+\newcommand{\material}{material}
+
+\newcommand{\xref}[1]{\hfill Sect.\,\ref{#1}[\pageref{#1}]}
+\newcommand{\xrefi}[1]{\pos{We refer to Sect.~\vref{#1}.}{}}
+\newcommand{\xrefii}[2]{\pos{We refer to Sect.~\ref{#1}.#2
+                       (\pos{Page}{Slide}\,\pageref{#1}).}{}} 
+\newcommand{\xrefiis}[2]{\pos{We refer to Sect.~\ref{#1}.
+                        (\pos{Pages}{Slides}\,\pageref{#1}--\pageref{#2}).}{}} 
+\newcommand{\xrefiii}[3]{\pos{We refer to Sect.~\ref{#1}.#2
+                        (\pos{Pages}{Slides}\,\pageref{#1}--\pageref{#3}).}{}} 
+\newcommand{\xrefsiiiii}[5]{\pos{We refer to Sects.~\ref{#1}.#2--\ref{#3}.#4
+                        (\pos{Pages}{Slides}\,\pageref{#1}--\pageref{#5}).}{}} 
+\newcommand{\xrefsii}[2]{\pos{We refer to Sects.~\ref{#1} and \ref{#2}.}{}} 
+
+\newcommand{\nslidenewpage}{\pos{}{\mnewfoil\addtocounter{page}{-1}\LLLL}}
+
+\newcommand{\slidetoc}{}%\addtocontents{toc}{\protect\nslidenewpage}}
+
+\newcommand{\triptych}{\texttt{TripTych}\cindex{TripTych@\texttt{TripTych}}}
+
+\newcommand{\longpaper}[1]{#1}
+ 
+\newcommand{\pbi}{}
+\newcommand{\pei}{}
+\renewcommand{\pbi}{\renewcommand{\begynd}{\begin{itemize}}%
+                    \renewcommand{\pind}{\item}%
+                    \renewcommand{\afslut}{\end{itemize}}}
+\renewcommand{\pei}{\pos{\renewcommand{\begynd}{}%
+                    \renewcommand{\pind}{}%
+                    \renewcommand{\afslut}{}}{}}
+
+
+\newcommand{\dsaelong}[1]{#1}
+
+\newcommand{\draft}{this \pos{paper}{seminar}}
+\newcommand{\Draft}{This \pos{paper}{seminar}}
+\newcommand{\thisdraft}{this \pos{paper}{seminar}}
+\newcommand{\ThisDraft}{This \pos{paper}{seminar}}
+\newcommand{\Thisdraft}{This \pos{paper}{seminar}}
+
+\newcommand{\draftcopy}%
+    {\typeout{DRAFT Version}
+     \special{!userdict begin /bop-hook{gsave 100 750 translate
+     /Times-Roman findfont 30 scalefont setfont 0 0 moveto 1.0 setgray
+     (invisible) show grestore gsave 60 820 translate
+     0 rotate /Times-Roman findfont 25 scalefont setfont 0 0 moveto
+     0.85 setgray (Dines Bjorner - DRAFT - August 2012) show
+     grestore}def end 0 
+     100 moveto}} 
+ 
+\renewcommand{\draftcopy}%
+    {\typeout{DRAFT Version}
+     \special{!userdict begin /bop-hook{gsave 50 750 translate
+     /Times-Roman findfont 30 scalefont setfont 0 0 moveto 1.0 setgray
+     (invisible) show grestore gsave 115 780 translate
+     0 rotate /Times-Roman findfont 25 scalefont setfont 0 0 moveto
+     0.85 setgray (Bjorner- DRAFT - August 2012) show
+     grestore}def end 0 
+     100 moveto}} 
+ 
+\newcommand{\dbaddr}{{DTU Informatics, Techn.Univ.of Denmark}}
+\newcommand{\dbaddress}{{Fredsvej 11, DK--2840 Holte, Denmark}}
+
+\newcommand{\rammes}[1]%
+    {\vspace*{1.5mm}\boiteepaisseavecuntitre{#1}\vspace*{0.2mm}} 
+
+\renewcommand{\rammes}[1]{}
+
+\newcommand{\nyramme}[2]{\vspace*{1.5mm}\hfill \fbox{\sfsl{#1}} \marginpar{#2}}
+
+\renewcommand{\nyramme}[2]{}
+
+\newcommand{\ramme}[2]{\vspace*{1mm}\noindent%
+\addcontentsline{toc}{paragraph}{\lilacolor{#2}}
+\boiteepaisseavecuntitre{\bbcolor{#2}}\vspace*{0.4mm}}
+
+\newcommand{\uramme}{}%{\boiteepaisseavecuntitre{Note}}
+\newcommand{\cramme}[1]{}%{\cboiteepaisseavecuntitre{#1}}
+\newcommand{\framme}[1]{}%{\xboiteepaisseavecuntitre{#1}}
+\newcommand{\cframme}[1]{}%{\cxboiteepaisseavecuntitre{#1}}
+\newcommand{\emmar}{}%{\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}}
+
+\newcommand{\nemmar}{\vspace*{0,5mm}\endboiteepaisseavecuntitre\pos{\vspace*{0.4mm}}{}}
+
+\renewcommand{\emmar}{}
+
+\newcommand{\dsaedefinition}[2]{
+\begin{definition}{\bbcolor{#1:}}\label{#1}
+\textrm{\rm #2}
+\end{definition}}
+
+%% \newenvironment{example}[1]{\bgcolor{Example:}
+%%  \bbcolor{#1.}\label{#1}}{}%\hfill$\bullet$} 
+
+\newcommand{\ileksframe}[2]{%
+\begin{example}\hspace*{-2mm}. {\lilacolor{#1.}}\label{#1}%
+\addcontentsline{toc}{subparagraph}{\lilacolor{Example \ref{#1}: #1}}
+\eindex{#1 (\#\,\protect\ref{#1})|(}%
+\eindex{\protect\ref{#1} #1|(}%
+{\rm #2}%\vspace*{-2mm}
+\eindex{\protect\ref{#1} #1|)}%
+\eindex{#1 (\#\,\protect\ref{#1})|)}%
+\end{example}
+}
+
+\newcommand{\smalleksframe}[1]{%
+\begin{example}\hspace*{-2mm}.
+{\rm #1}\vspace*{-2mm}
+\end{example}
+}
+
+\newcommand{\eksframex}[2]{%
+\begin{example}\ \ {\lilacolor{#1.}} \label{#1}
+\addcontentsline{toc}{paragraph}{\lilacolor{Example \ref{#1}: #1}}
+\eindex{\ref{#1} #1}\end{example}
+{\rm #2}%%\vspace*{-2mm}
+}
+
+\newcommand{\eksframeb}[2]{%
+\begin{example}{\bgcolor{#1.}}\label{#1}
+\rm #2\end{example}
+}
+
+\newcommand{\starteks}[2]%
+{\begin{primerexample}\label{#1}\dbeat{\sort{Example
+      \arabic{primerexample}. }}\bbcolor{\textbf{#2:}}\sl\
+      \dbeat{\stepcounter{primerexample}}}  
+  
+\renewcommand{\starteks}[2]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\vspace*{-3mm}\index{eind}{#1}\stepcounter{primerexample}
+\noindent\footnotesize\sf{#2}
+\endboiteepaisseavecuntitre\normalsize\rm
+\vspace*{2mm}
+}
+\newcommand{\nyteks}[2]%
+{\begin{primerexample}\label{#1}\bbcolor{\textbf{#2:}}\sl\ }
+  
+\newcommand{\slutnyteks}[1]{\rm\hfill\eox\end{primerexample}}
+
+\newcommand{\slutnyteksu}[1]{\eox\rm\end{primerexample}}
+
+\newcommand{\sluteks}[1]{\hfill\eox\rm\end{primerexample}}
+
+\newcommand{\nyeksframe}[3]{%
+\begin{primerexample}\hspace*{-2mm}. {\lilacolor{#2.}}\label{#2}\label{#1}%
+\eindex{#1 (\#\,\protect\ref{#2})|(}%
+\eindex{\protect\ref{#1} #2|(}%
+{\rm #3 \hfill\dbsquare}%\vspace*{-2mm}
+\eindex{\protect\ref{#1} #2|)}%
+\eindex{#1 (\#\,\protect\ref{#2})|)}%
+\end{primerexample}
+}
+
+\newcommand{\nyeksframeu}[3]{%
+\begin{primerexample}\hspace*{-2mm}. {\lilacolor{#2.}}\label{#2}\label{#1}%
+\eindex{#1 (\#\,\protect\ref{#2})|(}%
+\eindex{\protect\ref{#1} #2|(}%
+{\rm #3}%\vspace*{-2mm}
+\eindex{\protect\ref{#1} #2|)}%
+\eindex{#1 (\#\,\protect\ref{#2})|)}%
+\end{primerexample}
+}
+
+%\renewcommand{\starteks}[3]{\nyeksframe{#1}{#2}{#3}}%
+%\newcommand{\starteksu}[3]{\nyeksframeu{#1}{#2}{#3}}%
+%\renewcommand{\nyteks}[3]{\nyeksframe{#1}{#2}{#3}}%
+%\newcommand{\nyteksu}[3]{\nyeksframeu{#1}{#2}{#3}}%
+
+\newcounter{sei}
+\newcommand{\savei}{\setcounter{sei}{\value{enumi}}}
+\newcommand{\setei}{\setcounter{enumi}{\value{sei}}}
+ 
+\newcounter{seii}
+\newcommand{\saveii}{\setcounter{seii}{\value{enumii}}}
+\newcommand{\seteii}{\setcounter{enumii}{\value{seii}}}
+ 
+\newcommand{\LLL}{\LLLL}
+\newcommand{\llll}{\pos{}{\large}}
+\newcommand{\LLll}{\pos{}{\Large}}
+\newcommand{\LLLL}{\pos{}{\LARGE}}
+\newcommand{\hhhh}{\pos{}{\huge}}
+\newcommand{\HHHH}{\pos{}{\HHHH}}
+
+\newcommand{\termi}[1]{$^{\iota}$\textsl{#1}\cindex{#1}}
+\newcommand{\termii}[2]{$^{\iota}$\textsl{#1 #2}
+    \cindex{#1!#2}%
+    \cindex{#2!#1}}
+\newcommand{\termiii}[3]{$^{\iota}$\textsl{#1 #2 #3}
+    \cindex{#1!#2!#3}%
+    \cindex{#1!#3!#2}%
+    \cindex{#2!#1!#3}%
+    \cindex{#2!#3!#1}%
+    \cindex{#3!#1!#2}%
+    \cindex{#3!#2!#1}}
+
+\newcommand{\dtermi}[1]{\textsl{{#1}}\dindex{#1}}
+\newcommand{\dtermii}[2]{\textsl{{#1 #2}}
+    \dindex{#1!#2}%
+    \dindex{#2!#1}}
+\newcommand{\dtermiii}[3]{\textsl{{#1 #2 #3}}
+    \dindex{#1!#2!#3}%
+    \dindex{#1!#3!#2}%
+    \dindex{#2!#1!#3}%
+    \dindex{#2!#3!#1}%
+    \dindex{#3!#1!#2}%
+    \dindex{#3!#2!#1}}
+
+\renewcommand{\termi}[1]{\textsl{#1}%
+    \cindex{#1}}
+\renewcommand{\termii}[2]{\textsl{#1 #2}%
+    \cindex{#1!#2}%
+    \cindex{#2!#1}}
+\renewcommand{\termiii}[3]{\textsl{#1 #2 #3}%
+    \cindex{#1!#2!#3}%
+    \cindex{#1!#3!#2}%
+    \cindex{#2!#1!#3}%
+    \cindex{#2!#3!#1}%
+    \cindex{#3!#2!#1}%
+    \cindex{#3!#1!#2}} 
+
+\newcommand{\ckmbib}[1]{}     
+
+\newcommand{\citesealle}{\cite{TheSEBook1,TheSEBook2,TheSEBook3eps,eQTheSEBook1,cQTheSEBook1,eQTheSEBook2,cQTheSEBook2,eQTheSEBook3,cQTheSEBook3}}
+\newcommand{\citesei}{\cite{TheSEBook1}\aindex{bjorner@Dines
+    Bj{\o}rner}}
+\newcommand{\citeseii}{\cite{TheSEBook2}\aindex{bjorner@Dines
+    Bj{\o}rner}}
+\newcommand{\citeifm}{\cite{ifmall}}
+\newcommand{\citealloy}{\cite{alloy}}
+\newcommand{\citeasm}{\cite{losl:2007:asm}}
+\newcommand{\citeb}{\cite{JRAbrial:TheBBooks}}
+\newcommand{\citetlap}{\cite{Lamport-TLA+02}}%
+\newcommand{\citecafeobj}{\cite{futatsugi2000a}}
+\newcommand{\citecasl}{\cite{CoFI:2004:CASL-RM}}
+\newcommand{\citevdm}%
+    {\cite{e:db:Bj78bwo,e:db:Bj82b,JohnFitzgerald+PeterGormLarsen}}
+\newcommand{\citez}{\cite{m:z:jd+jcppw96}}
+\newcommand{\citersl}{\cite{RSL}}
+\newcommand{\citeraise}{\cite{RaiseMethod}}
+\newcommand{\citepetrinets}{\cite{m:petri:wr09}}
+\newcommand{\citescs}{\cite{Harel87}}
+\newcommand{\citemscs}{\cite{MSCall}}
+\newcommand{\citedc}{\cite{zcc+mrh2002}}
+\newcommand{\citetls}{\cite{MannaPnueli12}}
+\newcommand{\citecsp}{\cite{Hoare85+2004}\aindex{hoare@C.A.R. Hoare}}
+
+\newcommand{\mpsno}%
+  {\marginpar{{\stepcounter{sno}\scriptsize\textsf{\arabic{sno}}}}}  
+
+\newcommand{\firstpsno}%
+  {\marginpar{{\stepcounter{sno}\scriptsize\textsf{\arabic{sno}\footnote{The
+  electronic basis for this 
+  document is the basis for two \LaTeX\ compilations: One for an A4
+  sized ``paper'' document (this document), and the other for a slide
+  format set of lecture/seminar notes. The margin numerals, as here
+  \textsf{1}, refer to the slide numbers of the latter document.}}}}}  
+
+\newcommand{\fpsno}%
+  {{{\stepcounter{sno}\hfill\scriptsize\textsf{\arabic{sno}}}}}  
+
+\newcommand{\nxtpgfpsno}%
+  {\pos{}{\newpage}{{\stepcounter{sno}\hfill\scriptsize\textsf{\arabic{sno}}}}}   
+
+\newcommand{\psno}%
+  { ~ ~ \hfil{{\stepcounter{sno}\scriptsize{{\textsf{\arabic{sno}}}}}}}
+
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\labelenumii}{\theenumii} 
+\renewcommand{\labelenumiii}{\theenumiii}
+\renewcommand{\labelenumiv}{\theenumiv}
+
+%\renewcommand(\theenumiv}{\@arabic\c@enumiv}
+
+\newcommand{\bbF}[1]{$\mathbb{F}_{#1}$}
+\newcommand{\bbL}[1]{$\mathbb{L}_{#1}$}
+\newcommand{\calF}[1]{$\mathcal{F}_{#1}$}
+\newcommand{\calL}[1]{$\mathcal{L}_{#1}$}
+ 
+%\newcommand{\is}{{\textsf{is{\_}}}}
+\newcommand{\mk}{{$\mu\alpha\kappa$}}
+\newcommand{\xtr}{{$\chi$tr}}
+%\newcommand{\attr}{{$\alpha\tau r$}}
+\newcommand{\get}{{$\gamma$et}}
+%\newcommand{\obs}{{$o\beta\varsigma$}}
+%\renewcommand{\obs}{{\textsf{obs{\_}}}}
+\newcommand{\obsi}{{\textsf{obs{\_}}\,$\iota$}}
+\newcommand{\mobs}{{$\mu$er}}
+\renewcommand{\mobs}{{\textsf{mer{\_}}}} 
+\newcommand{\mer}{{\textsf{mer{\_}}}}
+\newcommand{\ii}{{$\iota$}}
+
+\renewcommand{\obs}{{{obs\_}}}
+\renewcommand{\uid}{{{uid\_}}}
+\renewcommand{\mereo}{{{mereo\_}}}
+\renewcommand{\attr}{{{attr\_}}}
+\renewcommand{\is}{{{is\_}}}
+
+\newcommand{\ombb}[1]{{\LLll{\textsf{obs}{\_}}$\mathbb{#1}$}}
+\newcommand{\imbb}[1]{{\LLll{\textsf{is}{\_}}$\mathbb{#1}$}}
+\newcommand{\mbb}[1]{{\LLll$\mathbb{#1}$}}
+\newcommand{\mcal}[1]{{\LLll$\mathcal{#1}$}}
+\newcommand{\mcc}[1]{{\LLll$\mathcal{#1}$}}
+
+\newcommand{\dbcite}[1]{\pos{\cite{#1}}{[#1]}}
+\newcommand{\treprikker}{\begin{center}$\bullet\bullet\bullet$\end{center}}
+
+\newcommand{\inlinemtc}{\hfill\fbox{{\sc more to come}}}
+\newcommand{\inlinemtcnofill}{\fbox{{\sc more to come}}}
+%\newcommand{\mtc}{}%{\begin{center}\fbox{{\sc more to come}}\end{center}}
+%\newcommand{\tbw}{}%{\begin{center}\fbox{{\sc to be written}}\end{center}}
+\newcommand{\ptbw}{\begin{center}\fbox{{\sc a few words to be written:
+      1-2 lines\,!}}\end{center}}
+\newcommand{\pmtbw}{\begin{center}\fbox{{\sc perhaps a few more more words to be written:
+      1-2 lines\,!}}\end{center}}
+
+\newcommand{\dbrsl}{\texttt{RSL}}
+\newcommand{\dbraise}{\texttt{RAISE}}
+\newcommand{\dbell}{$\ell$}
+
+\newenvironment{shadedquote}
+               {\begin{shaded}%      2                       0
+                \list{}{\rightmargin=1\leftmargin\leftmargin=0pt\relax}%
+                \item\relax}
+               {\endlist\end{shaded}}
+ 
+\newcommand{\bframe}{\begin{framed}}
+\newcommand{\sframe}{\end{framed}}
+
+\newcommand{\nframe}[2]{\vspace*{2mm} 
+                               \boiteepaisseavecuntitre{#1}
+                               #2
+                               \endboiteepaisseavecuntitre}
+
+\newcommand{\xframe}[2]{\vspace*{3mm} 
+                               \boiteepaisseavecuntitre{Example \pex: #1}
+                               \vspace*{\pos{2}{4}mm} #2 \vspace*{1mm} 
+                               \endboiteepaisseavecuntitre}
+
+\newcommand{\xsframe}[2]{\vspace*{3mm} 
+                               \boiteepaisseavecuntitre{Examples \pex: #1}
+                               \vspace*{2mm} #2 \vspace*{1mm} 
+                               \endboiteepaisseavecuntitre}
+
+\newcommand{\papertalk}{\pos{paper}{seminar}}
+\newcommand{\sole}{s{\^{o}}le} 
+\newcommand{\role}{r{\^{o}}le}
+
+\newcounter{dbhours}\newcounter{dbmins}
+
+\newcommand{\dbcalctime}{%
+  \setcounter{dbhours}{\time/60}%
+  \setcounter{dbmins}{\time-\value{dbhours}*60}}
+
+\newcommand{\DBfigure}[4]{
+ \begin{figure}
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+    \caption{#3}\label{#4}
+  \end{center}
+ \end{figure}}
+
+\renewcommand{\DBfigure}[4]{ 
+ \begin{figure}%\sidecaption
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+    \caption{#3}\label{#4}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\hDBfigure}[4]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+    \caption{#3\label{#4}}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\vertDBfigure}[4]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2,angle=-90}
+  \end{center}
+    \caption{#3}\label{#4} 
+ \end{figure}}
+
+\newcommand{\slideDBfigure}[4]{\pos{}{%
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+  \end{center}
+    \caption{#3\label{#4}}
+ \end{figure}}}
+
+\newcommand{\vDBfigure}[4]{
+ \begin{figure}
+  \begin{center}
+    \epsfig{file=#1.eps,width=#2}
+  \end{center}
+    \caption{#3\label{#4}}
+ \end{figure}}
+
+\newcommand{\hhDBfigure}[4]{
+ \begin{figure}
+  \begin{center}
+    \epsfig{file=#1.eps,height=#2}
+  \end{center}
+    \caption{#3\label{#4}}
+ \end{figure}}
+
+\newcommand{\twoDBfigure}[5]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#3} \ \ \ \
+    \epsfig{file=#2.eps,height=#3}
+    \caption{#4}\label{#5}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\triDBfigure}[6]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#4} \ \ \ \
+    \epsfig{file=#2.eps,height=#4} \ \ \ \
+    \epsfig{file=#3.eps,height=#4}
+    \caption{#5}\label{#6}
+  \end{center}
+ \end{figure}}

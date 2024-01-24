@@ -1,0 +1,2463 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Chapter 6 released 27 April 2023 for translation %%%%%%%%%%%%%%
+%%%%%%%%% Chapter 6 re-released 23 June 2023 for translation %%%%%%%%%%%%
+%%%%%%%%% Chapter 6 re-released 04 Jauary 2024 for translation %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbbbb{Perdurants}\label{chap6.tex.1}\label{chapter:Perdurants}
+\pos{\minitoc}{}
+
+\noindent
+\begynd
+\pind Please consider Fig.\,\vref{onto.fig\pos{2}{xtra}}.
+\begynd
+\pind The previous \pos{two chapters}{lectures} covered the  left of Fig.\,\ref{\pos{onto.fig2}{onto.figxtra}}.
+\pind \pos{This chapter}{These next lectures} cover\pos{s}{} the right of Fig.\,\ref{\pos{onto.fig2}{onto.figxtra}}.
+\afslut
+\afslut
+
+\pos{}{\hDBfigure{onto}{\pos{10}{10}cm}{{An} Upper Ontology}{onto.figxtra}}
+
+\pos{\treprikker
+
+\noindent
+\begynd
+\pind This chapter  is a rather ``drastic'' reformulation and
+      simplification of \cite[\sfsl{Chapter 7, i.e., pages
+        159--196}]{BjornerMonograph2020}. 
+\begynd
+\pind Besides, Sect.\,\ref{Discrete Dynamic Domains} is new. 
+\afslut
+\afslut
+}{}
+
+\begynd
+\pind In this chapter we transcendentally ``morph'' manifest 
+\begynd
+\pind \sort{parts} into \sort{behaviours,} that is:
+\pind \sort{endurants} into \sort{perdurants}.
+\afslut
+\pind We analyse that notion, \sfsl{perdurants}, and its constituent notions of
+\begynd
+\pind \sort{actors}, \index{pconind}{actor}
+\pind \sort{channels} and \sort{communication},\index{pconind}{channel}
+\pind \sort{actions} and \index{pconind}{action}
+\pind \sort{events} and \index{pconind}{event}
+\pind \sort{behaviours}.  \index{pconind}{behaviour}
+\afslut 
+\afslut
+\mnewfoil
+\inthis{perdurants}{state and time-evolving domain phenomena.}{}
+
+\treprikker
+
+\noindent
+\mnewfoil
+\nysf{%
+\begynd
+\pind In this  chapter we shall analyse and describe \sfsl{perdurants}, that is, the \sfsl{entities}
+\begynd
+\pind of domains for which only a
+      fragment exists, in \sfsl{space}, if we look at or touch them at
+      any given snapshot in
+      \sfsl{time}.
+\afslut
+    
+\pind This modelling will focus on the \sort{actions, events} and \sort{behaviours}
+      of these perdurants and the means, here referred to as
+      \sort{channels}, by means of which the part behaviours interact.
+
+\pind On one hand there are the domain phenomena of perdurants.
+\pind On the other hand there are means for analysing and describing these.
+\pind The former are not formalized ``before'', or as, we analyse and
+      describe them.
+\pind The latter, `the means', are assumed formalized.
+\afslut
+
+\mnewfoil
+
+\treprikker\LLLL
+
+\noindent
+\begynd
+\pind The \sort{structure of this chapter} need be explained.
+\begynd
+\pind The chapter attempts to motivate and explain the ``morphing''
+      of endurant parts into perdurant behaviours.
+\pind The endurant parts were analyzed and described in terms
+      of \texttt{RSL} abstract types, i.e., sorts, and observers -- of both
+      external and internal qualities.
+\pind The perdurant behaviours will be analyzed and described in terms
+      of tail-recursive functions, their signatures and `body'
+      definitions -- and their [``output/input''] interaction by means
+      of \texttt{CSP} output/input clauses and channels.
+\pind To arrive at these analyses and descriptions we
+      ``move'' from general motivation and text on behaviours, their
+      actions and events and their reliance on channels, to
+      increasingly more specific such text.
+\pind Hence the seeming ``repetition'' of treatments of behaviours,
+      actions, events and channels.
+\afslut
+\afslut
+\mnewfoil
+
+\pmt{Primary Modelling Tool, II}
+\noindent
+\begynd
+\pind The tool with which we describe perdurants will be 
+\begynd
+\pind the  \sort{tail recursive function} and  
+\pind the \sort{channel} 
+\afslut concepts of the formal specification language \texttt{RSL} \cite{RSL}.
+\pind A special focus will be on the \sfsl{signature} of the 
+\begynd
+\pind action and behaviour
+function
+\afslut definitions.
+\afslut
+\tmp
+}
+
+\bookdefn{Description, III}{ %
+\begynd
+\pind By a \sort{description} \index{pdefind}{description!perdurants} of the perdurants of a domain
+\begynd
+\pind we shall mean pairs of informal, narrative, and formal text
+\pind which characterises the
+\begynd
+\pind behaviour interaction channels,
+\pind actors, actions, events and behaviours,
+\pind i.e., the
+\begynd
+\pind signatures, \index{pconind}{signature}
+\pind invocation and \index{pconind}{invocation}
+\pind Initialisation \index{pconind}{initialisation}
+\afslut
+\afslut
+\pind of manifest part behaviours \dbsquare
+\afslut
+\afslut
+}
+
+\noindent
+\begynd
+\pind This chapter explains what is meant by 
+\begynd
+\pind \sfsl{channel}, \index{pconind}{channel} 
+\pind \sfsl{actor}, \index{pconind}{actor}
+\pind \sfsl{behaviour},  \index{pconind}{behaviour}
+\pind \sfsl{action},  \index{pconind}{action}
+\pind \sfsl{event},  \index{pconind}{event}
+\pind \sfsl{signature},  \index{pconind}{signature}
+\pind \sfsl{invocation} and \index{pconind}{invocation}
+\pind \sfsl{initialisation}. \index{pconind}{initialisation}
+\afslut
+\afslut
+
+\nbbbbb{Parts and their Behaviours}\label{Parts and their Behaviours}
+
+\pos{%
+\begynd
+\pind By transcendental deduction we ``morph''\ysf{\footnote{Morph: change the form or
+      character of ...}} parts into behaviours.
+\pind We refer to Sect.\,\ref{Transcendental Deductions}'s
+      Example\,\vref{Transcendentality}.
+\afslut
+
+
+\nbbbb{General Notions}}{\bbbb{General Notions}}
+
+\begynd
+\pind Parts are manifest entities of domains.
+\pind Behaviours are likewise manifest entities of domains.
+\pind Behaviours are domain  notions. 
+\pind We shall express domain behaviours in terms of the
+      \texttt{RSL/CSP} notions of \sfsl{processes}.
+\pind And we shall explain domain behaviours in terms of
+\begynd
+\pind \sfsl{domain actions},
+\pind \sfsl{domain events}, and subsidiary, i.e., ``embedded'',
+\pind \sfsl{domain behaviours}.
+\afslut
+\afslut
+\mnewfoil
+
+\bookdefn{Behaviour}{
+\begynd
+\pind We define domain behaviours as
+\begynd
+\pind sets of sequences of 
+\pind \sfsl{domain actions}, 
+\pind \sfsl{domain events} and [subsidiary] 
+\pind \sfsl{domain behaviours} \dbsquare
+\afslut
+\afslut}
+
+\bookdefn{Actor}{
+\begynd
+\pind An actor
+\begynd
+\pind is anything that can invoke and sustain
+\pind a behaviour, an action or an event \dbsquare
+\afslut
+\afslut}
+
+\bookdefn{Action}{
+\begynd
+\pind Actions
+\begynd
+\pind are planned, purposeful state changes \dbsquare 
+\afslut
+\afslut}
+
+\bookdefn{Event}{
+\begynd
+\pind Events 
+\begynd
+\pind are surreptitious state changes \dbsquare
+\afslut
+\afslut}
+
+\noindent
+\begynd
+\pind \sfsl{Domain actions} are expressed in terms of the [\texttt{RSL}]
+      notion of language clauses which prescribe state changes.
+\pind \sfsl{Domain events} are expressed in terms of the \texttt{CSP}
+      notion of language clauses which prescribe interaction between
+      [\texttt{CSP}] processes.
+\pind \sfsl{Domain behaviours}, to repeat, are expressed in terns of
+      \texttt{CSP} processes, more specifically in terms of \sfsl{tail
+      recursive} function definitions.
+\afslut
+
+\mnewfoil
+
+\begynd
+\pind Thus there are two notions:
+\begynd
+\pind the domain notions of endurant parts and perdurant actions,
+      events and behaviours, and
+\pind the description language, here \texttt{RSL/CSP}, notions of
+      part descriptions and expressions and statements, i.e., possibly
+      state-changing processes.
+\afslut
+\afslut
+
+\nbbbb{An Aside: Behaviours versus Processes}\label{An Aside: Behaviours versus Processes}
+\index{pconind}{behaviour!versus process}
+\index{pconind}{process!versus behaviour}
+\begynd
+\pind In programming, in general, and in \texttt{CSP} in specific, we use the term \sfsl{process} 
+\begynd
+\pind to characterize the execution of 
+\pind a set of sequences of
+\pind {[program]} statements 
+\pind and processes\footnote{Yes, we do mean a recursive definition.}.
+\afslut
+\afslut
+
+
+\mnewfoil
+
+\bookdefn{Process}{
+\begynd
+\pind We define [computing] processes as
+\begynd
+\pind sets of sequences of 
+\pind \sfsl{state changes} 
+\pind (whether purposefully planned or accidental) \dbsquare
+\afslut
+\afslut}
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind In domains we use the term \sfsl{behaviour}, in contrast,
+\begynd
+\pind to characterize the \sfsl{conduct},
+\pind the [organization, as for endurants] 
+\pind and the \sfsl{carrying out}
+\pind of the \sfsl{intentions} of a part.
+\afslut
+\afslut
+
+\nbbbb{Multiple, Communicating Behaviours}\bnew
+
+\begynd
+\pind On the basis of Kai S{\o}lander's Philosophy
+      \cite{kaisorlander1994,kaisorlander1997,kaisorlander2002,kaisorlander2016,kaisorlander2022}
+      we can reason that there  
+\begynd
+\pind is an indefinite number of parts, 
+\pind that is, an indefinite number of [part] behaviours,
+\pind hence an indefinite number of \texttt{CSP} processes.
+\afslut
+
+\pind We shall further reason that these [part] behaviours interact.
+
+\begynd
+\pind There is the possibility that parts have dynamic attributes. 
+\pind For dynamic attribute values to change there must be an `agent of change'.
+\pind There is the possibility that two or more distinct parts
+      interact.
+\pind \sort{Examples:}
+\begynd
+\pind (i) \sfsl{automobile}s enter and leave \sfsl{hub}s and \sfsl{link}s;
+\pind (ii) \sfsl{retailer}s deposit funds in \sfsl{bank}s;
+\pind (iii) \sfsl{container vessel}s load and unload \sfsl{container}s\dbsquare\
+\afslut
+\pind The part pairs: 
+\begynd
+\pind \sfsl{(automobile,hub)},
+\pind \sfsl{(automobile,link)}, 
+\pind \sfsl{(retailer,bank)} and   
+\pind\sfsl{(container vessel,container)}, 
+\afslut are pairs of `agents of change'.
+\afslut
+
+\pind This reasoning, by transcendental deduction, leads us to conclude
+\begynd
+\pind that these mutual interactions 
+\pind can be seen as channel communications
+\pind in the sense of, for example, \texttt{CSP}.
+\afslut
+\afslut
+
+
+\nbbbb{Domain Behaviours and Domain Actions}
+
+\begynd
+\pind What do we mean by behaviours and actions.
+\begynd
+\pind First of all we must emphasize, as in Sect.\,\vref{An Aside: Behaviours versus Processes},
+\begynd
+\pind that we are not dealing with with domains, not with computing, 
+\pind with domain behaviours, not with computing processes.
+\pind Domain parts are not computers.\footnote{Yes, we exclude
+      from the domains, for which we put forward the calculi of this
+      paper, such parts which acts like general computing devices.}
+\afslut 
+\pind Then we focus of the conduct of domain actions of domain
+behaviours.
+
+\pind Generally speaking a \sort{domain action},  \index{pdefind}{action} of a part, is
+\begynd
+\pind either updating the state, 
+\pind i.e., the mereology or dynamic attributes 
+\pind of the part
+\pind of which the action is intended.
+\afslut
+\pind Part actions are seen as ``atomic'',
+\begynd
+\pind that is \textsl{``taking no time''} to ``occur'' ---
+\pind although they may be expressed in terms of \sfsl{sub-actions.}
+\pind We shall later elaborate on our notion of sub-actions.
+\afslut
+
+\pind \sort{Examples} of domain actions are those of an automobile deciding
+\begynd
+\pind (i-ii) to remain on a link or at a hub,
+\pind (iii) to leave a hub entering a link,
+\pind (iv) to leave a link entering a hub,
+\pind (v) to leave the road net, i.e., ``disappear'' altogether\dbsquare\
+\afslut
+
+\pind Correspondingly, a \sort{domain behaviour}, of a part, is
+\begynd
+\pind either a sequence of one or more \sfsl{domain actions} \index{pdefind}{behaviour}
+\pind or an \sfsl{``alternative'' set} of
+\begynd
+\pind either internally, non-deterministically chosen (\NONDETCHOICE) sequence of  one
+      or more \sfsl{domain actions},
+\pind or externally,  non-deterministically chosen (\DETCHOICE) sequence of one or
+      more \sfsl{domain actions}, 
+\pind or combinations thereof.
+\afslut
+\pind By \sfsl{``alternative'' set} we mean
+\begynd
+\pind that each element of the set is one of 
+\pind the  internally or externally, non-deterministically 
+\pind chosen sequences of domain actions.
+\afslut
+\afslut
+\afslut
+\afslut
+
+\pind \sort{Examples} of domain behaviours are those of
+\begynd
+\pind (a) an automobile which 
+\begynd
+\pind internally, non-deterministically (\NONDETCHOICE)
+\pind alternates between (i--v) above; or
+\afslut
+\pind (b) a link which 
+\begynd
+\pind externally, non-deterministically (\DETCHOICE) alternates between
+\begynd
+\pind (b.i) welcoming incoming automobiles,
+\pind (b.ii) accepting that automobiles remain on the link,
+\pind (b.iii) ``saying good bye'' to outgoing  automobiles; or
+\afslut
+\afslut
+\pind (c) a hub which 
+\begynd
+\pind externally, non-deterministically (\DETCHOICE) alternates between
+\begynd
+\pind (c.i) welcoming incoming automobiles,
+\pind (c.ii) accepting that automobiles remain at the hub,
+\pind (c.iii) ``saying good bye'' to outgoing  automobiles \dbsquare
+\afslut
+\afslut
+\afslut
+\enew
+
+\nbbbbb{Channel Description}\label{Channel Description}\label{Channel Analysis}
+
+\begynd
+\pind The \texttt{CSP} concept of \sfsl{channel} \nyl  is to be our way of
+      expressing the ``medium'' \nyl  in which behaviours interact.
+\begynd
+\pind \ysfchg{A c}hannel is thus an abstract concept. \index{pdefind}{channel}
+\pind Please do not think of it as a physical, \nyl an \texttt{IT}
+      (information technology) device.
+\pind As an abstract concept it is defined in terms of, \nyl
+      roughly, the laws, the semantics, of \texttt{CSP} \citecsp.
+\pind We write `roughly' since the \texttt{CSP} \nyl
+      we are speaking of, is ``embedded'' in \texttt{RSL}.
+\afslut
+\afslut
+\mnewfoil
+
+\bookdefn{Channels}{
+\begynd
+\pind A channel is an abstract notion, not a physical ``gadget''.
+\begynd
+\pind A channel is anything 
+\pind that allow\ysfchg{s } any two behaviours
+\pind to interact:
+\begynd
+\pind to synchronise and
+\pind communicate,
+\pind i.e., exchange information \dbsquare
+\afslut
+\afslut
+\afslut}
+
+\mnewfoil
+\noindent
+\begynd
+\pind We  simplify the general
+      treatment of channel declarations.
+\pind Basically all we can say, for any domain,
+\begynd
+\pind is that any two distinct part behaviours
+\pind may need to communicate.
+\afslut
+\pind Therefore we declare a vector of channels \nyl
+indexed by sets of two distinct part identifiers.
+\ddprompt{describe\_channels}{describe-channels}{
+%\RSLatex
+%value
+%   describe_channels: Unit -> &\rsltext&
+%   describer_channels() is &\bq\,&channel { ch[{ij,ik}] | ij,ik:UI :- {ij,ik}<<= uid&$_{\sigma}$& /\ ij~=ik } M&\,\eq&
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\ describe\_channels: \kw{Unit} {\RIGHTARROW} \rsltext\\
+\>\ describer\_channels() {\IS} \bq\,\kw{channel} {\LBRACE} ch{\LBRACKET}{\LBRACE}ij,ik{\RBRACE}{\RBRACKET} {\BAR} ij,ik:UI {\RDOT} {\LBRACE}ij,ik{\RBRACE}{\SUBSETEQ} uid$_{\sigma}$ {\WEDGE} ij{\NOTEQ}ik {\RBRACE} M\,\eq
+\ep
+}
+\noindent
+\pind Initially we shall leave the type, \textsf{M},  of messages over channels
+      further undefined.
+\pos{\pind As we, laboriously, work through the definition of behaviours,
+      \nyl we shall be able to make \textsf{M} precise.\ysfchg{}}{}
+\afslut
+
+\nysf{%
+\nbbbbb{Action and Event Description, I}\label{Action and Event Description.i}
+
+\begynd
+\pind For each [part] behaviour we identify the zero, one or more
+      actions and events which that [part] behaviour initiates,
+      respectively is subjected to.
+\begynd
+\pind Actions, to recall, are planned, purposeful state changes. \index{pdefind}{action}
+\pind Events are surreptitious state changes. \index{pdefind}{event}
+\pind The actor, \index{pdefind}{actor} i.e., the [part] behaviour plan actions and await events.
+\afslut
+\afslut
+}
+
+\mnewfoil
+
+\nysf{%%%%%%%%%%%%%%%%%%
+\monoexample{Road Transport -- Actions}{%%%%%%
+  %%\input{actions}
+\begin{multicols}{2}
+\begin{itemize}
+\item \sort{Automobile Actions:}
+\begin{enumerate}\setei
+\item \label{action010} \texttt{progress\_around\_hub},
+\item \label{action020} \texttt{leave\_hub\_enter\_link},
+\item \label{action030} \texttt{disappears\_from\_road\_net},
+\item \label{action040} \texttt{progress\_along\_link},
+\item \label{action050} \texttt{idle\_on\_link}\footnote{We do not
+    consider automobiles idling in hubs.} and
+\item \label{action060} \texttt{leave\_link\_enter\_hub}.
+\savei\end{enumerate}
+\item \sort{Hub Actions:} none\,!
+\item \sort{Link Actions:} none\,!
+\end{itemize}
+\end{multicols}
+\noindent
+\begynd
+\pind We omit a number of actions:
+      \texttt{accellerate\_auto, brake\_auto,} etc.
+\afslut
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+}%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+We continue our treatment of actions in Sect.\,\vref{Action and Event Description.ii}.
+
+\nbbbbb{Behaviour Signatures}\label{Behaviour Definition Description}\label{Behaviour Signatures}
+
+\begynd
+\pind Behaviours have to be described.
+\begynd
+\pind Behaviour definitions are in the form of \nysf{tail-recursive} function definitions and
+      are here expressed in \texttt{RSL} \nyl relying, very much,
+      on its \texttt{CSP} component.
+\pind \nysf{The tail-recursion expresses that the behaviour goes on,
+      potentially ``forever''\,!}
+\pind Behaviour definitions describe \nyl the type of the arguments
+      \nyl \ysf{that} the function, i.e., the behaviour, \ysf{accepts}.
+\afslut
+
+\mnewfoil
+
+\pind Thus there are two elements to a behaviour definition:
+\begynd
+\pind the behaviour \sfsl{signature}
+      \index{pconind}{signature!behaviour}\index{pconind}{behaviour!signature}%  
+      and
+\pind the behaviour \sfsl{body}
+      \index{pconind}{body!function definition}\index{pconind}{function!definition body}%%
+\afslut definitions.
+\afslut
+
+\begynd
+\pind \nysf{Behaviour signatures indicate that behaviours evolve
+      around 
+\begynd
+\pind the internal qualities of the part from which the
+      behaviour is transcendentally deduced, and
+\pind the interaction with other [part] behaviours. 
+\afslut
+\pind Thus there are basically two elements to behaviour signatures:
+\begynd
+\pind The unique identifier, mereology and attributes element, 
+\pind and the element of channel interface to potentially interacting
+      other behaviours.}
+\afslut
+\afslut
+
+\mnewfoil
+
+\bookdefn{Signature}{
+\begynd
+\pind A signature is something that is associated with any behaviour
+      and, hence, action.
+\begynd
+\pind A signature consists of two parts:
+\begynd
+\pind a name for the behaviour or action; and
+\pind a function type expression,
+\begynd
+\pind the latter is typically of the form \textsf{$A${\RIGHTARROW}$B$},
+\pind where $A$ is the type of the behaviour or action input [arguments],
+\pind and $B$ is the type of the behaviour or action output, i.e.,
+      result \dbsquare
+\afslut
+\afslut
+\afslut
+\afslut}
+
+\nbbbb{Domain Behaviour Signatures}\label{Domain Behaviour Signatures}
+
+\bnew
+\begynd
+\pind The next  \bbcolor{perdurant description functions} are those of
+      the description of the [part] behaviour and [part] action signatures.
+
+\pind We shall develop a variety of possible behaviour and action signatures.
+\begynd
+\pind From a very simple
+\pind to a full-fledged ``traditional''signatures.
+\afslut
+
+\pind In all cases the [part] behaviour (and [part] action)
+      definitions ---
+\begynd
+\pind such as we have chosen them ---
+\pind evolve around the part 
+\pind \sfsl{``from which they are transcendentally deduced''},
+\pind and the interaction with other [part] behaviours,
+\pind what else could there be\,?
+\afslut
+\afslut
+
+\mnewfoil
+
+\begynd
+\pind We shall illustrate two kinds of signatures:
+\begynd
+\pind simple part argument signatures
+\begynd
+\pind which imply that the behaviour 
+\pind so-to-speak ``carries'' the whole part ``with it'';
+\afslut
+\pind and internal quality argument signatures
+\begynd
+\pind which imply that the behaviour,
+\pind in the conventional manner of program procedure definitions
+\pind has a number of internal quality constant, or variable, or
+      reference arguments.
+\afslut
+\afslut
+\afslut
+
+\nbbb{Part Argument Behaviour Signatures}
+\begynd
+\pind The simplest behaviour signature expresses
+\begynd
+\pind that the behaviour, as a function definition, 
+\pind takes a part,
+\pind of the sort
+\pind for which the behaviour is defined.
+\afslut
+\pind For each manifest part sort one behaviour definition.
+\afslut
+
+\vspace{2mm}
+ 
+\ddprompt{describe\_behaviour\_signature, \sort{I}}{describe-behaviour-1}{
+%\RSLatex
+%value b: P -> channels  Unit   
+%\endRSLatex 
+\bp
+\kw{value} b: P {\RIGHTARROW} channels\ \ \kw{Unit}\ \ \ 
+\ep
+}
+
+\noindent
+\begynd
+\pind \textsf{b} is an arbitrarily chosen name for behaviours based on
+      parts of sort  \textsf{P}.
+\pind \textsf{channels} is an expression of channels based on the
+      mereology of \textsf{P}.
+\pind \sort{Unit} designates the value \textsf{()}, i.e., a
+      state-to-state function.
+\afslut
+
+\monoexample{Signature}{
+\noindent
+\begynd
+\pind A schematic example:
+\afslut
+%\RSLatex
+%value
+%   automobile: a:A -> out {ch[ai,ri]|ai:AI:-ai=&{\uid}&A(a)/\ri:(HI|LI):-ri isin &$his$&union&$lis$&}&\dbsquare&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\ automobile: a:A {\RIGHTARROW} \kw{out} {\LBRACE}ch{\LBRACKET}ai,ri{\RBRACKET}{\BAR}ai:AI{\RDOT}ai{\EQ}{\uid}A(a){\WEDGE}ri:(HI{\BAR}LI){\RDOT}ri {\ISIN} $his${\UNION}$lis${\RBRACE}\dbsquare
+\ep
+}
+
+
+\nbbb{Internal Quality Argument Behaviour Signatures}\label{Internal Quality Argument Behaviour Signatures}
+
+
+\begynd
+\pind The  internal quality argument behaviour signature \nyl ``unfolds'' the internal part
+      qualities \nyl into separate arguments:
+\begynd
+\pind together these arguments 
+\pind ``substitute'' for the simple behaviour
+      and 
+\pind action part argument.
+\afslut
+\afslut
+\afslut
+
+\begynd
+\pind The internal quality arguments are:
+\begynd
+\pind the unique part identifier,
+\pind the part mereology,
+\pind the static attributes argument,
+\pind the monitorable attribute names argument, and
+\pind the programmable attributes argument.
+\afslut
+\pind The signature furthermore 
+\begynd
+\pind names the behaviour,
+\pind the channels, and
+\pind the state-to-state function designator \sort{Unit}.
+\afslut
+\afslut
+\enew
+
+\begynd
+\pind A schematic form of part ($p$) behaviour signatures is:
+
+\ddprompt{describe\_behaviour\_signature, \sort{II}}{describe-behaviour-2}{
+%\RSLatex
+%value  b: bi:BI->me:Mer->svl:StaV-list->mvl:MonV-list->prgl:PrgV-list channels  Unit   
+%\endRSLatex 
+\bp
+\kw{value}\ \ b: bi:BI{\RIGHTARROW}me:Mer{\RIGHTARROW}svl:StaV$^{\ast}${\RIGHTARROW}mvl:MonV$^{\ast}${\RIGHTARROW}prgl:PrgV$^{\ast}$ channels\ \ \kw{Unit}\ \ \ 
+\ep
+}
+
+\noindent
+\pind  We shall motivate the general form of part behaviour,
+\textsf{B}, signatures, ``step-by-step'':
+\afslut
+
+\mnewfoil
+ 
+\noindent 
+\begin{tabular}{crl}
+$\alpha.$ & \ \  \textsf{\ysfchg{b}} & \ \ the [chosen] name of part $p$ behaviours.\\
+$\beta.$ & \ \ \textsf{U{\RIGHTARROW}V{\RIGHTARROW}...{\RIGHTARROW}W{\RIGHTARROW}Z}:
+  & \ \ The function signature is expressed in the 
+  \texttt{Sch{\"o}nfinkel/Curry}\footnotemark  \\ \ \ & & \ \ style --
+  corresponding to the invocation form \textsf{F(u)(v)...(w)} \\
+$\gamma.$ & \ \ \textsf{bi:BI}: & \ \ a  general value and the type of part $p$ unique
+  identifier\\
+$\delta.$ & \ \ \textsf{me:Mer}:  & \ \ a general value and the type of part $p$ mereology\\
+$\epsilon.$ & \ \ \textsf{svl:StaV$^{\ast}$}: &  \ \  a general (possibly empty) list of values and types of
+  part $p$'s \\ & & \ \ (possibly empty) list of static attributes\\
+$\zeta.$ & \ \ \textsf{mvl:MonV$^{\ast}$}: &  \ \   a general list of names of types of
+  part $p$'s\\ &  &  \ \ (possibly empty) list of monitorable attributes\\
+$\eta.$ & \ \ \textsf{prgl:PrgV$^{\ast }$}:  &  \ \ a general list of values and types of
+  part $p$'s \\  & & \ \ (possibly empty)  list of programmable attributes\\ 
+ $\theta.$& \ \ \textsf{channels}:  & \ \ are usually of the form:
+  \textsf{{\LBRACE}ch{\LBRACKET}{\LBRACE}i,j{\RBRACE}{\RBRACKET}{\BAR}(i,j){\ISIN}$I$(me){\RBRACE}} 
+  and express the subset \\ &  &  \ \ of channels over which behaviour  \textsf{B}s interact with other behaviors \\
+$\iota$. & \kw{Unit}: &  \ \ designates the single value, (), {\sort{Unit}}
+\end{tabular}
+\footnotetext{Moses Sch{\"o}nfinkel (1888--1942)  was a %Russian
+  logician and mathematician accredited with having
+  invented combinatory logic
+  [https://en.wikipedia.org/wiki/Moses\_Sch{\"o}nfinkel]. Haskell
+  B. Curry (1900--1982) was a %n American
+  mathematician and logician known for his
+  work in combinatory logic
+  [https://en.wikipedia.org/wiki/Haskell\_Curry]}
+
+\vspace{2mm}\normalsize
+\mnewfoil
+
+\noindent
+In detail:
+\begin{itemize}
+\item [$\alpha.$] \sort{Behaviour name:} In each domain description there are many sorts, \textsf{B},
+  of parts. For each sort there is a generic behaviour, whose name,
+  here \textsf{\ysfchg{b}}\ysfchgii{, } is
+  chosen to suitably reflect \textsf{B}.
+\item [$\beta.$] \sort{Currying} is here used in the pragmatic sense of grouping
+  ``same kind of arguments'', i.e., separating these from one-another,
+  by means of the {\RIGHTARROW}s.
+\item [$\gamma.$] The \sort{unique identifier} of part sort \textsf{B} is here chosen
+  to be \textsf{BI}. Its value is a constant.
+\item [$\delta.$] The \sort{mereology} is a usually constant. For same part sorts it
+  may be a variable.
+\end{itemize}\normalsize
+
+\mnewfoil
+
+%\pos{}{\sort{An Aside:}}
+\begin{quote}
+\monoexample{Variable Mereologies}{%%%
+\begynd
+\pind For a road transport system  where we focus on the transport the
+      mereology is a constant. 
+\pind For a road net where we focus on the development of the road
+      net: building new roads: inserting and removing hubs and links, the mereology is a variable.
+\pind Similar remarks apply to canal systems
+      \texttt{{www.imm.\-dtu.\-dk/\~{}dibj/\-2021/\-Graphs/\-Ri\-vers-and-Ca\-nals.pdf}}, 
+      pipeline systems \cite{2013pipe}, container terminals \cite{BjornerContainer2018},
+      assembly line systems \cite{BjornerTeslaSept2021}, etc. \dbsquare
+      \afslut}\pos{}{}
+\end{quote}
+  
+\mnewfoil
+
+\begin{itemize}
+\item [$\epsilon$.] \sort{Static attribute values} are constants. The use of static
+  attribute values in behaviour body definitions is expressed by an
+  identifier of the \textsf{svl} list of identifiers.
+\item [$\zeta$.] \sort{Monitorable  attribute values} are generally, 
+          ascertainable, i.e., readable, cf.\,Sect.\,\vref{Evaluation
+          of Monitorable Attributes}. 
+          Some are \sfsl{biddable}, can be changed by a, or the
+          behaviour, cf.\,Sect.\,\ref{Update of Biddable Attributes}
+          on Page\,\pageref{Update of Biddable Attributes},
+          but there is no guarantee, as for programmable 
+          attributes, that they remain fixed.
+          \pos{\vspace*{1mm}}{}
+\begynd
+\pind   The use of a[ny] monitorable
+  attribute value in behaviour body definitions is expressed by a \textsf{read\_A\_from\_P(mv,bi)}
+  where \textsf{mv} is an identifier of the \textsf{mvl} list of
+          identifiers and \textsf{bi} is the unique part identifier of
+          the behaviour definition in which the \textsf{read} occurs.
+\pind  The update of a biddable attribute value  in behaviour body
+          definitions is expressed by a
+          \textsf{update\_P\_with\_A(bi,mv,a)}.
+\afslut
+\mnewfoil
+\item [$\eta$.] \sort{Programmable attribute values} are just that. They
+  vary as specified, i.e., ``programmed'', by the behaviour body
+  definition. Tail-recursive invocations of behaviour \textsf{B$_i$}
+  ``replace'' relevant programmable attribute argument list elements
+  with ``new'' values.
+\item [$\theta$.] \sort{channels:} \textsf{$I$(me)} expresses a set of unique
+  part identifiers different from \textsf{bi}, hence of behaviours,
+  with which behaviour \textsf{b(i)} interacts.
+\item [$\iota$.] The \kw{Unit} of the behaviour signature is a short-hand
+  for the behaviour either \sort{read}ing the value of a monitorable 
+  attribute, hence global state $\sigma$, or performing a
+  \sort{write}, i.e., an \sfsl{update}, on $\sigma$. 
+\end{itemize}
+
+\nbbbbb{Action Signatures and General Form of Action Definitions}\label{Action and Event Description.ii}
+
+\nysf{%%%%%%%%%%%%%%
+\begynd
+\pind Actions come in basically one signature form, like for
+      behaviours, cf.\ Sect.\,\vref{Internal Quality Argument Behaviour Signatures}:
+\begin{enumerate}\setei
+\item \label{as010} likewise determine every action of that [part] behaviour.
+\savei\end{enumerate}
+\noindent
+And the action definition, i.e., the ``body'', is of the general form
+\begin{enumerate}\setei
+\item \label{as020} first a description, \textsf{act}, of the action proper, one in
+  which both the part mereology and the programmable attributes may be
+  changed, 
+\item \label{as030} then the tail-recursive invocation of the possibly
+  updated [part] behaviour.
+\savei\end{enumerate}
+\afslut
+
+\mnewfoil
+
+\ddprompt{describe\_action}{action-act}{\index{dltind}{describe\_act}%%%%%%%%%%%%%%%%%
+%\RSLatex
+%value
+%&\ref{as010}.&   action: bi:BI -> mer:Mer -> svl:StaV-list -> mvl:MonV-list -> prgl:PrgV-list  channels  Unit 
+%&\ref{as020}.&   act: bi:BI -> mer:Mer -> svl:StaV-list -> mvl:MonV-list -> prgl:PrgV-list  channels  Unit 
+%&\ref{as010}.&   action(bi)(mer)(svl)(mvl)(prgl) is
+%&\ref{as020}.&      let (mer&$'$&,prgl&$'$&) = act(bi)(mer)(svl)(mvl)(prgl) in
+%&\ref{as030}.&      behaviour(bi)(mer&$'$&)(svl)(mvl)(prgl&$'$&) end
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{as010}.\ \ \ action: bi:BI {\RIGHTARROW} mer:Mer {\RIGHTARROW} svl:StaV$^{\ast}$ {\RIGHTARROW} mvl:MonV$^{\ast}$ {\RIGHTARROW} prgl:PrgV$^{\ast}$\ \ channels\ \ \kw{Unit} \\
+\ref{as020}.\ \ \ act: bi:BI {\RIGHTARROW} mer:Mer {\RIGHTARROW} svl:StaV$^{\ast}$ {\RIGHTARROW} mvl:MonV$^{\ast}$ {\RIGHTARROW} prgl:PrgV$^{\ast}$\ \ channels\ \ \kw{Unit} \\
+\ref{as010}.\ \ \ action(bi)(mer)(svl)(mvl)(prgl) {\IS}\\
+\ref{as020}.\ \ \ \ \ \ \kw{let} (mer$'$,prgl$'$) {\EQ} act(bi)(mer)(svl)(mvl)(prgl) \kw{in}\\
+\ref{as030}.\ \ \ \ \ \ behaviour(bi)(mer$'$)(svl)(mvl)(prgl$'$) \kw{end}
+\ep
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{as040} The \textsf{act} is of basically three forms:
+\begin{enumerate}
+\item \label{as050} either it is an ``active'' form in which it initiates
+                    an interaction with another behavior, \textsf{bj},
+\item \label{as060} or it is \ysfchg{a } ``passive'' form in which it awaits
+                    an interaction with another behavior, \textsf{bj},
+\item \label{as070} or it is neither, ie., it is some simple \texttt{RSL} clause.
+\end{enumerate}
+\savei\end{enumerate}
+
+
+%\RSLatex
+%&\ref{as040}.&  act: ... ch[{bi,bj}] ! val ...
+%&\ref{as050}.&  act: ... let id = ch[{bi,bj}] ? in ... end ...
+%&\ref{as060}.&  act: ... 
+%\endRSLatex 
+\bp
+\ref{as040}.\ \ act: {\DOTDOTDOT} ch{\LBRACKET}{\LBRACE}bi,bj{\RBRACE}{\RBRACKET} ! val {\DOTDOTDOT}\\
+\ref{as050}.\ \ act: {\DOTDOTDOT} \kw{let} id {\EQ} ch{\LBRACKET}{\LBRACE}bi,bj{\RBRACE}{\RBRACKET} ? \kw{in} {\DOTDOTDOT} \kw{end} {\DOTDOTDOT}\\
+\ref{as060}.\ \ act: {\DOTDOTDOT} 
+\ep
+
+\mnewfoil
+
+
+\monoexample{Automobile, Hub and Link Signatures}{
+\begin{enumerate}\setei              
+\item \label{process-040} \textsf{automobile}:
+\begin{enumerate}
+\item \label{process-042} There is the usual ``triplet'' or arguments:
+                          unique identifier, mereology, static (...)
+                          and monitorable (...) attributes; 
+\item \label{process-044} programmable attributes: automobile location
+                          and automobile history; 
+\item \label{process-046} and channel references \nyl allowing communication between
+                          the automobile and the hub and link behaviours. 
+\end{enumerate}
+\item \label{process-047} Similar for hubs and link behaviours.
+\savei\end{enumerate}
+
+%\cacmboiteepaisseavecuntitre{Formalisation}
+%\RSLatex
+%value
+%&\ref{process-042}& automobile: ai:AI -> (_,uis):AM -> ... -> ... 
+%&\ref{process-044}&        -> (A_Loc >< A_Hist)
+%&\ref{process-046}&           out {ch[{ai,ui}]|ui:(HI|LI) :- ui isin &$his$&union&$lis$&} Unit
+%&\ref{process-047}a&    hub: hi:HI -> (lis,ais,rni):HM -> (H`Omega >< ...) -> ... 
+%&\ref{process-047}b&        -> (H`Sigma><H_Hist)
+%&\ref{process-047}c&           in {ch[{hi,ui}]|ui:(LI|HI|RNI)-set :- ui isin &lis&union&his&union&rni&} Unit 
+%&\ref{process-047}a&    link: li:LI -> (his,ais,rni):LM -> (LEN >< L`Omega >< ...)
+%&\ref{process-047}b&        -> (L`Sigma><L_Hist)
+%&\ref{process-047}c&           in {ch[{li,ui}]|ui:(LI|HI|RNI)-set :- li isin &lis&union&his&union&rni&} Unit
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{process-042} automobile: ai:AI {\RIGHTARROW} ({\UNDERLINE},uis):AM {\RIGHTARROW} {\DOTDOTDOT} {\RIGHTARROW} {\DOTDOTDOT} \\
+\ref{process-044}\ \ \ \ \ \ \ \ {\RIGHTARROW} (A\_Loc {\TIMES} A\_Hist)\\
+\ref{process-046}\ \ \ \ \ \ \ \ \ \ \ \kw{out} {\LBRACE}ch{\LBRACKET}{\LBRACE}ai,ui{\RBRACE}{\RBRACKET}{\BAR}ui:(HI{\BAR}LI) {\RDOT} ui {\ISIN} $his${\UNION}$lis${\RBRACE} \kw{Unit}\\
+\ref{process-047}a\ \ \ \ hub: hi:HI {\RIGHTARROW} (lis,ais,rni):HM {\RIGHTARROW} (H$\Omega$ {\TIMES} {\DOTDOTDOT}) {\RIGHTARROW} {\DOTDOTDOT} \\
+\ref{process-047}b\ \ \ \ \ \ \ \ {\RIGHTARROW} (H$\Sigma${\TIMES}H\_Hist)\\
+\ref{process-047}c\ \ \ \ \ \ \ \ \ \ \ \kw{in} {\LBRACE}ch{\LBRACKET}{\LBRACE}hi,ui{\RBRACE}{\RBRACKET}{\BAR}ui:(LI{\BAR}HI{\BAR}RNI)\kw{-set} {\RDOT} ui {\ISIN} lis{\UNION}his{\UNION}rni{\RBRACE} \kw{Unit} \\
+\ref{process-047}a\ \ \ \ link: li:LI {\RIGHTARROW} (his,ais,rni):LM {\RIGHTARROW} (LEN {\TIMES} L$\Omega$ {\TIMES} {\DOTDOTDOT})\\
+\ref{process-047}b\ \ \ \ \ \ \ \ {\RIGHTARROW} (L$\Sigma${\TIMES}L\_Hist)\\
+\ref{process-047}c\ \ \ \ \ \ \ \ \ \ \ \kw{in} {\LBRACE}ch{\LBRACKET}{\LBRACE}li,ui{\RBRACE}{\RBRACKET}{\BAR}ui:(LI{\BAR}HI{\BAR}RNI)\kw{-set} {\RDOT} li {\ISIN} lis{\UNION}his{\UNION}rni{\RBRACE} \kw{Unit}
+\ep
+}%\endboiteepaisseavecuntitre
+}%%%%%%%%%%%%%%%%%%%
+
+\label{before:Behaviour Invocation}
+
+\pos{}{\label{Behaviour Call}}
+
+\nbbbbb{Behaviour Invocation}\label{Behaviour Invocation}
+
+\bookdefn{Invocation}{
+\begynd
+\pind By action or behaviour, i.e., function, invocation
+\begynd
+\pind we shall understand 
+\pind the act of initiating, invoking, 
+\pind that which is prescribed by the action or behaviour definition \dbsquare
+\afslut
+\afslut}
+
+\begynd
+\pind The general form of behaviour invocation is shown below.
+\begynd
+\pind The invocation follows the ``Currying'' of the behaviour type signature.
+\pind {[Normally one would write all this on one line: \textsf{b(i)(m)(s)(m)(p)}.]}
+\afslut
+\afslut
+
+%\RSLatex
+%    behaviour
+%       (unique_identifier)
+%          (mereology)
+%             (static_values)
+%                (monitorable_attribute_names)
+%                   (programmable_variables)
+%\endRSLatex 
+\bp
+\>\>behaviour\\
+\>\>\>\ (unique\_identifier)\\
+\>\>\>\>\>(mereology)\\
+\>\>\>\>\>\>\ (static\_values)\\
+\>\>\>\>\>\>\>\>(monitorable\_attribute\_names)\\
+\>\>\>\>\>\>\>\>\>\ (programmable\_variables)
+\ep
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind When first ``invoked''\pos{, that is, transcendentally deduced, \nyl i.e.,
+      ``morphed'', from a manifest part, $p$, \nyl  the invocation looks like}{}:
+\afslut
+
+\LLLL
+\ddprompt{describe\_behaviour\_signature, \sort{II}}{describe-behaviour-signature}{%%%%%%%%%%%%%%%%
+\delati{describe\_behaviour\_invocation}
+%\RSLatex
+%   value
+%      describe_behaviour_signature: P -> &\rsltext&
+%      describe_behaviour_signature(p) is
+%      &\bq\,&behaviour:
+%              UId -> Mereo -> StaVL -> MonVL -> ProVL -> channels Unit
+%         behaviour
+%              (uid_B(p))
+%                 (mereo_B(p))
+%                    (types_to_values(static_attribute_types(p)))
+%                       (mon_attribute_types(p))
+%                          (types_to_values(programmable_attribute_types(p)))
+%          pre: is_manifest(p) &\eq&
+%
+%      describe_behaviour_signatures: Unit -> &\rsltext\label{DBSs}&
+%      describe_behaviour_signatures() is&\delati{describe\_behaviour\_signatures}&
+%          { describe_behaviour_signature(p) | p isin &$\sigma$& /\ is_manifest(p) }    
+%\endRSLatex 
+\bp
+\>\ \kw{value}\\
+\>\>\>describe\_behaviour\_signature: P {\RIGHTARROW} \rsltext\\
+\>\>\>describe\_behaviour\_signature(p) {\IS}\\
+\>\>\>\bq\,behaviour:\\
+\>\>\>\>\>\>\>UId {\RIGHTARROW} Mereo {\RIGHTARROW} StaVL {\RIGHTARROW} MonVL {\RIGHTARROW} ProVL {\RIGHTARROW} channels \kw{Unit}\\
+\>\>\>\>\ behaviour\\
+\>\>\>\>\>\>\>(uid\_B(p))\\
+\>\>\>\>\>\>\>\>\ (mereo\_B(p))\\
+\>\>\>\>\>\>\>\>\>\>(types\_to\_values(static\_attribute\_types(p)))\\
+\>\>\>\>\>\>\>\>\>\>\>\ (mon\_attribute\_types(p))\\
+\>\>\>\>\>\>\>\>\>\>\>\>\ \ (types\_to\_values(programmable\_attribute\_types(p)))\\
+\>\>\>\>\>\kw{pre}: is\_manifest(p) \eq\\
+\\
+\>\>\>describe\_behaviour\_signatures: \kw{Unit} {\RIGHTARROW} \rsltext\label{DBSs}\\
+\>\>\>describe\_behaviour\_signatures() {\IS}\delati{describe\_behaviour\_signatures}\\
+\>\>\>\>\>{\LBRACE} describe\_behaviour\_signature(p) {\BAR} p {\ISIN} $\sigma$ {\WEDGE} is\_manifest(p) {\RBRACE}\ \ \ \ 
+\ep
+}
+
+\nbbbbb{Behaviour Definition Bodies}\label{Behaviour Definition Bodies}
+
+\bookdefn{Behaviour Definition}{
+\begynd
+\pind By behaviour definition
+\begynd
+\pind we shall understand 
+\pind the prescription of that characterises the behaviour \dbsquare
+\afslut
+\afslut}
+
+\noindent
+\begynd
+\pind In general a \textsf{behaviour} alternates between
+\begynd
+\pind a number, \textsf{m}, of actions, \textsf{act\_action\_i}, that
+      either actively initiates 
+      interaction with other behaviours or do not engage in interactions, or
+\pind a number, \textsf{n}, of actions, \textsf{pas\_action\_j}, that
+      passively seek such interaction.
+\afslut
+\pind The alternation between the former is \sort{internal
+      non-deterministic}, {\NONDETCHOICE}, i.e., it is the
+      \textsf{behaviour} that determines in which alternative to engage.
+\pind The alternation between the latter is \sort{external
+      non-deterministic}, {\DETCHOICE}, i.e., it is the
+      \textsf{behaviour} that determines in which alternative to engage.
+\afslut
+\mnewfoil
+
+\nbbbb{Behaviour Definition Schema I}
+
+\begynd
+\pind In Schema I
+\begynd
+\pind some lines designate non-deterministic actions,
+\pind other deterministic actions.
+\afslut
+\afslut
+\afslut
+
+
+%\cacmboiteepaisseavecuntitre{Behaviour Definition Schema, I}
+%\RSLatex   
+%value
+%   b(bi)(me)(svl)(mvl)(prl) is
+%     &\,\,\,\,&non-deterministic_action_1(bi)(me)(svl)(mvl)(prl)
+%    |^| non-deterministic_action_2(bi)(me)(svl)(mvl)(prl)
+%       ...
+%    |^| non-deterministic_action_n(bi)(me)(svl)(mvl)(prl)
+%    |=| deterministic_action_1(bi)(me)(svl)(mvl)(prl)
+%    |=| deterministic_action_2(bi)(me)(svl)(mvl)(prl)
+%       ...
+%    |=| deterministic_action_d(bi)(me)(svl)(mvl)(prl)
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\ b(bi)(me)(svl)(mvl)(prl) {\IS}\\
+\>\>\ \,\,\,\,non{\MINUS}deterministic\_action\_1(bi)(me)(svl)(mvl)(prl)\\
+\>\>{\NONDETCHOICE} non{\MINUS}deterministic\_action\_2(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\ {\DOTDOTDOT}\\
+\>\>{\NONDETCHOICE} non{\MINUS}deterministic\_action\_n(bi)(me)(svl)(mvl)(prl)\\
+\>\>{\DETCHOICE} deterministic\_action\_1(bi)(me)(svl)(mvl)(prl)\\
+\>\>{\DETCHOICE} deterministic\_action\_2(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\ {\DOTDOTDOT}\\
+\>\>{\DETCHOICE} deterministic\_action\_d(bi)(me)(svl)(mvl)(prl)
+\ep
+%\endboiteepaisseavecuntitre
+
+\nbbbb{Behaviour Definition Schema II}
+
+\begynd
+\pind In Schema II
+\begynd
+\pind we have made use of \textsf{Domain Description Prompt} \ref{action-act}'s 
+\pind explication of action behaviours.
+\afslut
+\afslut
+\afslut
+
+
+%\cacmboiteepaisseavecuntitre{Behaviour Definition Schema, II}
+%\RSLatex   
+%value
+%   b(bi)(me)(svl)(mvl)(prl) is
+%      let (me&$'$&,prl&$'$&) = non-deterministic_act_1(bi)(me)(svl)(mvl)(prl)
+%              &\,&  |^| non-deterministic_act_2(bi)(me)(svl)(mvl)(prl)
+%              &\,&  ...
+%              &\,&  |^| non-deterministic_act_n(bi)(me)(svl)(mvl)(prl)
+%              &\,&  |=| deterministic_act_1(bi)(me)(svl)(mvl)(prl)
+%              &\,&  |=| deterministic_act_2(bi)(me)(svl)(mvl)(prl)
+%              &\,&  ...
+%              &\,&  |=| deterministic_act_d(bi)(me)(svl)(mvl)(prl) in
+%      b(bi)(me&$'$&)(svl)(mvl)(prl&$'$&) end   
+%\endRSLatex 
+\bp
+\kw{value}\\
+\>\ b(bi)(me)(svl)(mvl)(prl) {\IS}\\
+\>\>\>\kw{let} (me$'$,prl$'$) {\EQ} non{\MINUS}deterministic\_act\_1(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\>\>\>\>\,\ \ {\NONDETCHOICE} non{\MINUS}deterministic\_act\_2(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\>\>\>\>\,\ \ {\DOTDOTDOT}\\
+\>\>\>\>\>\>\>\,\ \ {\NONDETCHOICE} non{\MINUS}deterministic\_act\_n(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\>\>\>\>\,\ \ {\DETCHOICE} deterministic\_act\_1(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\>\>\>\>\,\ \ {\DETCHOICE} deterministic\_act\_2(bi)(me)(svl)(mvl)(prl)\\
+\>\>\>\>\>\>\>\,\ \ {\DOTDOTDOT}\\
+\>\>\>\>\>\>\>\,\ \ {\DETCHOICE} deterministic\_act\_d(bi)(me)(svl)(mvl)(prl) \kw{in}\\
+\>\>\>b(bi)(me$'$)(svl)(mvl)(prl$'$) \kw{end}\ \ \ 
+\ep
+%\endboiteepaisseavecuntitre
+
+
+
+\nbbbb{Describe Behaviour Definition Bodies}\HHHH\label{Describe Behaviour Definition Bodies}
+
+\begynd
+\pind In other words, 
+\begynd
+\pind for current lack of a more definitive methodology
+\pind for ``describing'' the bodies of behaviour definitions
+\pind we resort to ``\ldots''\,!
+\afslut
+\afslut
+
+\ddprompt{describe\_behaviour\_definition[s]}{ describe-behaviour-definitions}{%%%%%%%%%%%%%%%%%
+%\RSLatex
+%   value
+%      describe_behaviour_definition: P -> &\rsltext&
+%      describe_behaviour_definition(p) is &[Scheme I or Schema II]&
+%      
+%      describe_behaviour_definitions: Unit -> &\rsltext\label{DBDs}&
+%      describe_behaviour_definitions() is
+%         { describe_behaviour_definition(p) | p isin &$\sigma$& /\ is_manifest(p) }
+%\endRSLatex
+\bp
+\>\ \kw{value}\\
+\>\>\>describe\_behaviour\_definition: P {\RIGHTARROW} \rsltext\\
+\>\>\>describe\_behaviour\_definition(p) {\IS} [Scheme I or Schema II]\\
+\>\>\>\\
+\>\>\>describe\_behaviour\_definitions: \kw{Unit} {\RIGHTARROW} \rsltext\label{DBDs}\\
+\>\>\>describe\_behaviour\_definitions() {\IS}\\
+\>\>\>\>\ {\LBRACE} describe\_behaviour\_definition(p) {\BAR} p {\ISIN} $\sigma$ {\WEDGE} is\_manifest(p) {\RBRACE}
+\ep
+}
+
+\nbbbbb{Behaviour, Action and Event Examples}
+      
+\monoexample{Automobile Behaviour}{\pos{We remind the \pos{reader}{student}
+  of the main, running example  of this \primer, the
+   of \sfsl{the road transport system} Example\footnote{%
+  That is, examples \vref{Sketch of a Road Transport System UoD},
+  \vref{Cartesian Automobiles},
+  \vref{A Road Transport System Domain: Cartesians},
+  \vref{Road Transport System: Sets of Hubs, Links and Automobiles},
+  \vref{The Road Transport System Taxonomy},
+  \vref{Manifest Parts and Structures},
+  \vref{Unique Identifiers},
+  \vref{Uniqueness of Road Net Identifiers},
+  \vref{Rail Net Unique Identifiers},
+  \vref{Mereology of a Road Net},
+  \vref{Invariance of Road Nets},
+%%  \vref{Possible Consequences of a Road Net Mereology},
+  \vref{Road Net Attributes},
+  \vref{Invariance of Road Net Traffic States},
+  \vref{Road Transport -- Further Attributes}, and 
+  \vref{Intentional Pull -- Road Transport}.}.}{}
+
+\newcommand{\nasachg}[1]{#1}
+\newcommand{\vbnfm}{}
+\newcommand{\venfm}{}
+\newcommand{\vnfm}{}
+
+\mnewfoil
+
+\paragraph*{\bgcolor{\HHHH Definitions: Automobile at a Hub}}
+
+\begin{enumerate}\setei
+\item \label{habff1}    We abstract automobile  behaviour \textsf{at} a 
+                        \textsf{H}{ub} (\textsf{hi}).
+\item \label{habff1ind} Internally non-deterministically, an
+                        automobile \ysfchg{ } 
+\item \label{habff1bx}  either progresses around the hub
+\item \label{habff1bz}  or leaves the hub to enter a link.
+\savei\end{enumerate}
+
+%\mnewfoil\pos{\footnotesize\small\normalsize}{\HHHH}\sf
+%\RSLatex
+%&\ref{habff1}&  automobile(ai)(aai,uis)(...)(apos:atH(fli,hi,tli),ahist) is
+%&\ref{habff1bx},\ref{action010}&      automobile_progress_around_hub(ai)(aai,uis)(...)(apos:atH(fli,hi,tli),ahist)
+%&\ref{habff1ind}&          |^|
+%&\ref{habff1bz},\ref{action020}&      automobile_leave_hub_enter_link(ai)(aai,uis)(...)(apos:atH(fli,hi,tli),ahist)
+%\endRSLatex 
+\bp
+\ref{habff1}\ \ automobile(ai)(aai,uis)({\DOTDOTDOT})(apos:atH(fli,hi,tli),ahist) {\IS}\\
+\ref{habff1bx},\ref{action010}\ \ \ \ \ \ automobile\_progress\_around\_hub(ai)(aai,uis)({\DOTDOTDOT})(apos:atH(fli,hi,tli),ahist)\\
+\ref{habff1ind}\ \ \ \ \ \ \ \ \ \ {\NONDETCHOICE}\\
+\ref{habff1bz},\ref{action020}\ \ \ \ \ \ automobile\_leave\_hub\_enter\_link(ai)(aai,uis)({\DOTDOTDOT})(apos:atH(fli,hi,tli),ahist)
+\ep
+
+\mnewfoil
+\begin{enumerate}\setei
+\item \label{habff-10} {[\ref{action010}]} The automobile progresses around the hub:
+\begin{enumerate}
+\item \label{habff-20} the automobile  at that hub,  
+\item \label{habff-30} informing (``first'') the hub behaviour.
+\end{enumerate}
+\savei\end{enumerate}
+
+%\RSLatex
+%&\ref{habff-10},\ref{action010}&  automobile_progress_around_hub(ai)(aai,uis)(...)(atH(fli,hi,tli),ahist) is
+%&\ref{habff-10}&      let `tau = &\recordtime\ & in
+%&\ref{habff-30}&     ch[ai,hi] ! `tau ;
+%&\ref{habff-20}&     automobile(ai)(aai,uis)(...)(atH(fli,hi,tli),upd_hist(`tau,hi)(ahist))
+%&\ref{habff-10}&      end
+%
+%&\ref{habff-20}&   upd_hist: (&$\mathbb{TIME}$&><UI) -> (AHist->AHist)|(HHist->HHist)|(LHist->LHist)  
+%&\ref{habff-20}&   upd_hist(`tau,ui)(hist) is hist !! [ui +> <.`tau.>^hist(ui)]
+%\endRSLatex 
+\bp
+\ref{habff-10},\ref{action010}\ \ automobile\_progress\_around\_hub(ai)(aai,uis)({\DOTDOTDOT})(atH(fli,hi,tli),ahist) {\IS}\\
+\ref{habff-10}\ \ \ \ \ \ \kw{let} $\tau$ {\EQ} \recordtime\  \kw{in}\\
+\ref{habff-30}\ \ \ \ \ ch{\LBRACKET}ai,hi{\RBRACKET} ! $\tau$ ;\\
+\ref{habff-20}\ \ \ \ \ automobile(ai)(aai,uis)({\DOTDOTDOT})(atH(fli,hi,tli),upd\_hist($\tau$,hi)(ahist))\\
+\ref{habff-10}\ \ \ \ \ \ \kw{end}\\
+\\
+\ref{habff-20}\ \ \ upd\_hist: ($\mathbb{TIME}${\TIMES}UI) {\RIGHTARROW} (AHist{\RIGHTARROW}AHist){\BAR}(HHist{\RIGHTARROW}HHist){\BAR}(LHist{\RIGHTARROW}LHist)\ \ \\
+\ref{habff-20}\ \ \ upd\_hist($\tau$,ui)(hist) {\IS} hist {\DAGGER} {\LBRACKET}ui {\MAPSTO} {\LANGLE}$\tau${\RANGLE}{\CONCAT}hist(ui){\RBRACKET}
+\ep
+
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{habff49} The automobile leaves the hub entering a link:
+\begin{enumerate} 
+\item \label{habff5}  \textsf{tli}, whose ``next'' 
+                     hub, identified by \textsf{thi}, is obtained from
+                     the mereology of the link identified by \textsf{tli};  
+\item \label{habff6} informs the hub it is leaving and the link it is
+                     entering,
+\item \label{habff7} ``whereupon'' the vehicle resumes (i.e., ``while
+                     at the same time'' resuming) the vehicle
+                     behaviour positioned at the very beginning
+                     (\textsf{0}) of that link.
+\end{enumerate}
+\savei\end{enumerate}
+%\RSLatex
+%&\ref{habff49}&  automobile_leave_hub_enter_link(ai)(aai,uis)(...)(apos:atH(fli,hi,tli),ahist) is
+%&\ref{habff5}&     (let ({fhi,thi},ais) = mereo_L(retr_L(tli)(`sigma)) in &\kw{assert:}& fhi=hi
+%&\ref{habff6}&      ( ch[ai,hi] ! `tau || ch[ai,tli] ! `tau ) ;
+%&\ref{habff7}&      automobile(ai)(aai,uis)(...)(onL(tli,(hi,thi),0),upd_hist(`tau,tli)(upd_hist(`tau,hi)(ahist))) end)
+%\endRSLatex 
+\bp
+\ref{habff49}\ \ automobile\_leave\_hub\_enter\_link(ai)(aai,uis)({\DOTDOTDOT})(apos:atH(fli,hi,tli),ahist) {\IS}\\
+\ref{habff5}\ \ \ \ \ (\kw{let} ({\LBRACE}fhi,thi{\RBRACE},ais) {\EQ} mereo\_L(retr\_L(tli)($\sigma$)) \kw{in} \kw{assert:} fhi{\EQ}hi\\
+\ref{habff6}\ \ \ \ \ \ ( ch{\LBRACKET}ai,hi{\RBRACKET} ! $\tau$ {\PARL} ch{\LBRACKET}ai,tli{\RBRACKET} ! $\tau$ ) ;\\
+\ref{habff7}\ \ \ \ \ \ automobile(ai)(aai,uis)({\DOTDOTDOT})(onL(tli,(hi,thi),0),upd\_hist($\tau$,tli)(upd\_hist($\tau$,hi)(ahist))) \kw{end})
+\ep
+
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{xxxxx} {[\ref{action030}]}  Or the  automobile ``disappears --- off the radar''~!
+\savei\end{enumerate}
+
+%\RSLatex
+%&\ref{xxxxx},\ref{action030}&  automobile_stop(ai)(aai,uis),(...)(apos:atH(fli,hi,tli),ahist) is stop
+%\endRSLatex 
+\bp
+\ref{xxxxx},\ref{action030}\ \ automobile\_stop(ai)(aai,uis),({\DOTDOTDOT})(apos:atH(fli,hi,tli),ahist) {\IS} \kw{stop}
+\ep
+\rm\pos{\normalsize}{\HHHH}
+
+\noindent
+\begynd
+\pind Similar behaviour definitions can be given for \sfsl{automobiles
+  on a link}, for \sfsl{link}s and for \sfsl{hub}s.
+\pind Together they must reflect, amongst other things:
+\begynd
+\pind the time continuity of automobile flow,
+\pind that automobiles follow routes,
+\pind that automobiles, links and hubs together adhere to the
+      intentional pull expressed earlier,
+\pind et cetera. 
+\afslut
+\pind A specification of these aspects must be proved to adhere to
+      these properties. 
+\afslut
+}
+
+\nbbbbb{Domain [Behaviour] Initialisation}\label{Domain Behaviour Initialisation}\HHHH
+
+\bookdefn{Domain Initialisation}{
+\begynd
+\pind By behaviour initialisation
+\begynd
+\pind we shall understand 
+\pind the [initial] invocation
+\pind of all part behaviours \dbsquare
+\afslut
+\afslut}
+
+\noindent
+\begynd
+\pind For every manifest part sort
+\begynd
+\pind there is a single description: signature and definition \nyl (i.e., its syntax).
+\afslut
+\pind For every manifest part 
+\begynd
+\pind there is a behaviour \nyl (i.e., its semantics ``realization'').
+\afslut
+\pind For the total of all manifest domain parts there is their
+      initialization:
+\begynd
+\pind the parallel ``execution'' 
+\pind of the behaviour of each manifest part,
+\pind properly initialized.
+\afslut
+\afslut
+
+\ddprompt{describe\_domain\_initialisation}{describe-domain-initialisation}{%%%%
+%\RSLatex
+%  &\bq& || { b
+%      (uid_P(p))
+%         (mereo_P(p))
+%            &\sort{analyse\_}&static_attribute_type_names_Cartesian(p)
+%               &\sort{analyse\_}&monitorable_attribute_type_names_Cartesian(p)
+%                  &\sort{analyse\_}&programmable_attribute_type_names_Cartesian(p) 
+%                     | p:P :- p isin `sigma } &\eq&
+%\endRSLatex 
+\bp
+\>\bq {\PARL} {\LBRACE} b\\
+\>\>\>(uid\_P(p))\\
+\>\>\>\>\ (mereo\_P(p))\\
+\>\>\>\>\>\>\sort{analyse\_}static\_attribute\_type\_names\_Cartesian(p)\\
+\>\>\>\>\>\>\>\ \sort{analyse\_}monitorable\_attribute\_type\_names\_Cartesian(p)\\
+\>\>\>\>\>\>\>\>\>\sort{analyse\_}programmable\_attribute\_type\_names\_Cartesian(p) \\
+\>\>\>\>\>\>\>\>\>\>\ {\BAR} p:P {\RDOT} p {\ISIN} $\sigma$ {\RBRACE} \eq
+\ep
+}
+
+
+\mnewfoil
+
+
+\monoexample{The Road Transport System Initialisation}{We ``wrap up''
+             the main example of this \primer.
+\begynd
+\pind We omit treatment of monitorable attributes.
+\afslut
+\begin{enumerate}\setei
+\item \label{rtsi000} Let us refer to the system initialisation as a\ysf{
+  behaviour}.
+\item \label{rtsi010} All links are initialised,
+\item \label{rtsi020} all hubs are initialised,
+\item \label{rtsi030} all automobiles are initialised,
+\item \label{rtsi040} etc.
+\savei\end{enumerate}
+
+\mnewfoil\LLLL
+
+%\RSLatex
+%value
+%&\ref{rtsi000}.&  rts_initialisation: Unit -> Unit
+%&\ref{rtsi000}.&  rts_initialisation() is
+%&\ref{rtsi010}.&     || { link(uid_L(l))(mereo_L(l))(attr_LEN(l),attr_L`Omega(l))(attr_L_Traffic(l),attr_L`Sigma(l))| l:L :- l isin &$ls$& }   
+%&\ref{rtsi020}.&     || || { hub(uid_H(l))(mereo_H(l))(attr_H`Omega(l))(attr_H_Traffic(l),attr_H`Sigma(l))| h:H :- h isin &$hs$& }
+%&\ref{rtsi030}.&     || || { automobile(uid_A(a))(mereo_A(a))(attr_RegNo(a))(attr_APos(a)) | a:A :- a isin &$as$& }
+%&\ref{rtsi040}.&     || ...
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{rtsi000}.\ \ rts\_initialisation: \kw{Unit} {\RIGHTARROW} \kw{Unit}\\
+\ref{rtsi000}.\ \ rts\_initialisation() {\IS}\\
+\ref{rtsi010}.\ \ \ \ \ {\PARL} {\LBRACE} link(uid\_L(l))(mereo\_L(l))(attr\_LEN(l),attr\_L$\Omega$(l))(attr\_L\_Traffic(l),attr\_L$\Sigma$(l)){\BAR} l:L {\RDOT} l {\ISIN} $ls$ {\RBRACE}\ \ \ \\
+\ref{rtsi020}.\ \ \ \ \ {\PARL} {\PARL} {\LBRACE} hub(uid\_H(l))(mereo\_H(l))(attr\_H$\Omega$(l))(attr\_H\_Traffic(l),attr\_H$\Sigma$(l)){\BAR} h:H {\RDOT} h {\ISIN} $hs$ {\RBRACE}\\
+\ref{rtsi030}.\ \ \ \ \ {\PARL} {\PARL} {\LBRACE} automobile(uid\_A(a))(mereo\_A(a))(attr\_RegNo(a))(attr\_APos(a)) {\BAR} a:A {\RDOT} a {\ISIN} $as$ {\RBRACE}\\
+\ref{rtsi040}.\ \ \ \ \ {\PARL} {\DOTDOTDOT}
+\ep
+
+\noindent
+\begynd
+\pind We have here omitted possible monitorable attributes.
+\pind We refer to 
+\begynd
+\pind $ls$: Item\,\vref{srares-030},
+\pind $hs$: Item\,\vref{srares-040}, and
+\pind $as$: Item\,\vref{srares-080}\dbsquare
+\afslut
+\afslut}
+\label{before Discrete Dynamic Domains}
+
+\pos{}{
+\mnewfoil
+
+
+\label{lects6-7}
+\ \vfill
+\centerline{\lilacolor{Day \#{7}: Perdurants, II}}
+\vfill
+}
+
+\nbbbbb{Discrete Dynamic Domains}\label{Discrete Dynamic Domains}
+
+\begynd
+\pind Up till now our analysis \& description of a domain, 
+\begynd
+\pind has, in a sense, been \sfsl{static:}
+\pind in analysing a domain we considered its entities
+\pind to be of a definite number.
+\afslut
+\pind In this section we shall consider the case \nyl
+      where the number of entities change:
+\begynd
+\pind where new entities are \sfsl{created}
+\pind and existing entities are \sfsl{destroyed},
+\pind that is:
+\begynd
+\pind where new parts, and hence behaviours, arise, and
+\pind existing parts, and hence behaviours, cease to exist.
+\afslut
+\afslut
+\afslut
+
+\nbbbb{Create and Destroy Entities}\label{Create and Destroy Entities}
+
+\begynd
+\pind In the domain we can expect that its behaviours \nyl
+      create and destroy entities.
+\afslut
+
+\monoexample{Creation and Destruction of Entities}{%
+\begynd
+\pind In the \sfsl{road transport} domain 
+\begynd
+\pind new hubs, links and automobiles \nyl may be inserted into the road net, and
+\pind existing links, hubs and automobiles \nyl may be removed from the road net.
+\afslut
+\pind In a \sfsl{container terminal} domain \cite{db07:container,BjornerContainer2018}
+\begynd
+\pind new containers are introduced, old are discarded;
+\pind new container vessels  are introduced, old are discarded;
+\pind new ship-to-shore cranes   are introduced, old are discarded;
+\pind et cetera.
+\afslut
+\mnewfoil
+\pind In a \sfsl{retailer} domain \cite{BjornerRetailer2021}
+\begynd
+\pind new customers are introduced, old are discarded;
+\pind new retailers are introduced, old are discarded;
+\pind new merchandise is introduced, old is discarded;
+\pind et cetera.
+\afslut
+\pind In a \sfsl{financial system} domain
+\begynd
+\pind new customers are introduced, old are discarded;
+\pind new banks are introduced, old are discarded;
+\pind new brokers are introduced, old are discarded;
+\pind et cetera\dbsquare
+\afslut
+\afslut}
+
+\mnewfoil
+\noindent
+\begynd
+\pind \sort{The issue here is:}
+\begynd
+\pind When hubs and links are inserted or removed
+\begynd
+\pind the mereologies of ``neighbouring'' road elements change,
+\pind and so does the mereology of automobiles.
+\afslut
+\pind When automobiles are inserted or removed  
+\begynd
+\pind \ysf{t}he mereology of road elements 
+\pind have to be changed 
+\pind to take account of the insertions and removals,
+\pind and so does the mereology of automobiles.
+\afslut
+\pind And, some domain laws must be re-expressed:
+\begynd
+\pind The domain part state, $\sigma$, must be updated\footnote{\LLLL Cf.\ Sect.\,\vref{kap3.States.specific}},
+\pind and so must the unique identifier state, ${uid}_{\sigma}$\footnote{\LLLL Cf.\ Sect.\,\vref{all-uniq-ids}}.
+\afslut
+\afslut
+\afslut
+
+\nbbb{Create Entities}\label{Create Entities}
+
+\begynd
+\pind It is taken for granted here that there are behaviours, \nyl one or more, which
+      take the initiative to and carry out \nyl the creation of specific
+      entities. \nyl Let us refer to such a behaviour as the ``creator''.
+\pind To create an entity implies the following three major steps
+\begynd
+\pind {[A.--C.]} the step wise creation of the part \nyl and
+                 initialisation of the transduced behaviour, and
+\pind {[D.]} the adjustment of all such part behaviours that might
+             have their mereologies and attributes updated to accept
+             such requests from creators.
+\afslut
+\afslut
+\mnewfoil
+\begin{itemize}
+\item[A.] To decide on the part sort -- in order to create that part -- that is
+\begin{itemize}
+\item to obtain a unique identifier -- one hitherto not used;
+\item to obtain a mereology, one
+\begin{itemize}
+\item according to the general mereology for parts of that sort,
+\item and how the part specifically is to ``fit'' into its surroundings;
+\end{itemize}
+\item to obtain an appropriate set of attributes:
+\begin{itemize}
+\item again according to the attribute types for that part sort
+\item and, more specifically, choosing initial attribute
+      values.
+\end{itemize}
+\item This part is then ``joined'' to \pos{the global part state,}{}
+      $\sigma$\footnote{\LLLL \pos{}{(the global part state),} Cf.\ Sect.\,\vref{kap3.States.specific}}
+      and 
+\item its unique identifier ``joined'' to \pos{the global unique identifier
+      state,}{} ${uid}_{\sigma}$\footnote{\LLLL \pos{}{(the global unique identifier state),} Cf.\
+      Sect.\,\vref{all-uniq-ids}}. 
+\end{itemize}
+\mnewfoil
+\item[B.] Then to transcendentally deduce that part into a behaviour:
+\begin{itemize}
+\item initialised (according to Sect.\,\ref{Behaviour Signatures}) with
+\begin{itemize}
+\item the unique identifier,
+\item the mereology, and
+\item the attribute values
+\end{itemize} 
+\item This behaviour is then invoked and ``joined'' to the set of
+      current behaviours, cf.\,Sect.\,\vref{Domain Behaviour
+      Initialisation} -- i.e., just above\,!
+\end{itemize} 
+\item[C.] Then, finally, to ``adjust'' the mereologies of
+          topologically or conceptually related parts,
+\begin{itemize}
+\item that is, for  each of these parts to update:
+\item their mereology and possibly some
+\item state and state space
+\end{itemize} arguments of their corresponding behaviours.
+\end{itemize}
+\mnewfoil
+
+\begin{itemize}
+\item[D.] The update of the mereologies \nyl of already ``running'' behaviours
+      requires the following:
+\begin{itemize}
+\item that, potentially all, behaviours offers to accept  
+\item mereology update requests from the ``creator'' behaviour.
+\end{itemize}
+\end{itemize}
+
+\noindent
+\begynd
+\pind The latter means, practically speaking, 
+\begynd
+\pind that each part/behaviour 
+\pind which may be subject to mereology changes
+\pind externally non-deterministically 
+\pind expresses an offer to accept such a change.
+\afslut
+\afslut
+
+\monoexample{Road Net Administrator}{%
+\begynd
+\pind  We introduce the road net behaviour -- based
+      on the road net composite part, \textsf{RN}.
+\afslut
+\mnewfoil\LLLL
+\begin{enumerate}\setei
+\item \label{ddd:rna:510} The road net has a programmable attribute: a
+                          \rngraph.\footnote{\LLLL The presentation of the road
+                          net Behaviour, \textsf{rn}, is simplified.}
+\begynd
+\pind The road net graph consists of a quadruple:
+\begynd 
+\pind a map that for each hub identifier records ``all'' the
+                          information that the road net administrator
+                          deems necessary\footnote{\LLLL We presently \label{wpafwthi}
+                          abstract from what this information is.} for the maintenance and
+                          development of road net hubs;
+\pind a map that for each link identifier records ``all'' the
+                          information\footnote{\LLLL See
+                          footnote\,\vref{wpafwthi}.} that the road net
+                          administrator 
+                          deems necessary for the maintenance and
+                          development of road net links;
+\pind and a map from the hub identifiers to the set of identifiers
+      of the links it is connected to, and
+\pind the set of all automobile identifiers.  
+\afslut
+\afslut
+\mnewfoil 
+\item \label{ddd:rna:520} This graph is commensurate with the actual
+                          topology of the road net.
+\savei\end{enumerate}             
+%\RSLatex
+%type
+%&\ref{ddd:rna:510}.&   G = (HI-m->H_Info) >< (LI-m->L_Info) >< (HI-m->LI-set) >< AI-set
+%value
+%&\ref{ddd:rna:510}.&   attr_G: RN -> G
+%axiom
+%&\ref{ddd:rna:510}.&   all (hi_info,li_info,map,ais):G :- 
+%&\ref{ddd:rna:510}.&      dom map = dom hi_info = &$his$& /\ union rng map = dom li_info = &$lis$& /\
+%&\ref{ddd:rna:520}.&      all hi:HI :- hi isin dom hi_info =>
+%&\ref{ddd:rna:520}.&         let h:H :- h isin `sigma /\ uid_H(h)=hi in
+%&\ref{ddd:rna:520}.&         let (lis&$'$&,...) = mereo_H(h) in lis&$'$& = map(hi)  
+%&\ref{ddd:rna:520}.&         ais <<= &$a{_{ui}}s$\footnotemark& /\ ...
+%&\ref{ddd:rna:520}.&         end end
+%\endRSLatex
+\bp
+\kw{type}\\
+\ref{ddd:rna:510}.\ \ \ G {\EQ} (HI{\MARROW}H\_Info) {\TIMES} (LI{\MARROW}L\_Info) {\TIMES} (HI{\MARROW}LI\kw{-set}) {\TIMES} AI\kw{-set}\\
+\kw{value}\\
+\ref{ddd:rna:510}.\ \ \ attr\_G: RN {\RIGHTARROW} G\\
+\kw{axiom}\\
+\ref{ddd:rna:510}.\ \ \ {\ALL} (hi\_info,li\_info,map,ais):G {\RDOT} \\
+\ref{ddd:rna:510}.\ \ \ \ \ \ \kw{dom} map {\EQ} \kw{dom} hi\_info {\EQ} $his$ {\WEDGE} {\UNION} \kw{rng} map {\EQ} \kw{dom} li\_info {\EQ} $lis$ {\WEDGE}\\
+\ref{ddd:rna:520}.\ \ \ \ \ \ {\ALL} hi:HI {\RDOT} hi {\ISIN} \kw{dom} hi\_info {\DBLRIGHTARROW}\\
+\ref{ddd:rna:520}.\ \ \ \ \ \ \ \ \ \kw{let} h:H {\RDOT} h {\ISIN} $\sigma$ {\WEDGE} uid\_H(h){\EQ}hi \kw{in}\\
+\ref{ddd:rna:520}.\ \ \ \ \ \ \ \ \ \kw{let} (lis$'$,{\DOTDOTDOT}) {\EQ} mereo\_H(h) \kw{in} lis$'$ {\EQ} map(hi)\ \ \\
+\ref{ddd:rna:520}.\ \ \ \ \ \ \ \ \ ais {\SUBSETEQ} $a{_{ui}}s$\footnotemark {\WEDGE} {\DOTDOTDOT}\\
+\ref{ddd:rna:520}.\ \ \ \ \ \ \ \ \ \kw{end} \kw{end}
+\ep
+\ysfchg{\footnotetext{The $a{_{ui}}s$ was defined in
+    Sect.\,\ref{Sect.luis-auis}, Item\,\ref{uic-040} on Page\,\pageref{auis}.}}
+\mnewfoil 
+\noindent
+\begynd
+\pind Please note the fundamental difference between
+\begynd
+\pind the \rngraph\ and
+\pind the road net.
+\afslut
+\pind The latter pretends to be ``the real thing''.
+\pind The former is ``just'' an abstraction thereof\,!
+\afslut
+%\dbeat{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mnewfoil                       
+\begin{enumerate}\setei
+\item \label{ddd:rna:100} The road net mereology (``bypasses'') the
+                          hub and link aggregates, and comprises a set
+                          of hub identifiers and a set of link
+                          identifiers -- of the road
+                          net\footnote{\LLLL This is a repeat of the
+                          hub mereology given in Item\,\vref{mereo-000}.}.
+\savei\end{enumerate}            
+%\RSLatex 
+%type
+%&\ref{ddd:rna:100}.&   H_Mer = AI-set >< LI-set
+%&\ref{ddd:rna:100}.&   mereo_RN: RN -> RNMer
+%axiom
+%&\ref{ddd:rna:100}.&   all rts:RTS :- let (_,lis) = mereo_H(obs_RN(rts)) in lis <<= &$l_{ui}s$\footnotemark& end
+%\endRSLatex
+\bp
+\kw{type}\\
+\ref{ddd:rna:100}.\ \ \ H\_Mer {\EQ} AI\kw{-set} {\TIMES} LI\kw{-set}\\
+\ref{ddd:rna:100}.\ \ \ mereo\_RN: RN {\RIGHTARROW} RNMer\\
+\kw{axiom}\\
+\ref{ddd:rna:100}.\ \ \ {\ALL} rts:RTS {\RDOT} \kw{let} ({\UNDERLINE},lis) {\EQ} mereo\_H(obs\_RN(rts)) \kw{in} lis {\SUBSETEQ} $l_{ui}s$\footnotemark \kw{end}
+\ep
+\ysfchg{\footnotetext{The $l{_{ui}}s$ was defined in Sect.\,\ref{Sect.luis-auis}, Item\,\ref{uic-010} on Page\,\pageref{luis}.}}
+%}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{ddd:rna:110} The road net [administrator] behaviour,
+\item \label{ddd:rna:120} amongst other activities (\ldots)
+\item \label{ddd:rna:130} internal non-deterministically  decides upon 
+\begin{enumerate}
+\item \label{ddd:rna:140} either a hub insertion,
+\item \label{ddd:rna:150} or a link insertion,
+\item \label{ddd:rna:160} or a hub removal,
+\item \label{ddd:rna:170} or a link removal;
+\end{enumerate}         
+\savei\end{enumerate}
+\noindent
+\begynd
+\pind These four sub-behaviours each resume being the road net behaviour.
+\afslut
+\mnewfoil
+\pos{}{\vspace*{-10mm}}
+%\RSLatex
+%value
+%&\ref{ddd:rna:110}.&   rn: RNI -> RNMer -> G -> in,out{ch[{i,j}]|{i,j}<<=&${uid}_{\sigma}$&}
+%&\ref{ddd:rna:110}.&   rn(rni)(rnmer)(g) is
+%&\ref{ddd:rna:120}.&        ...
+%&\ref{ddd:rna:140}.&      |^| insert_hub(g)(rni)(rnmer)
+%&\ref{ddd:rna:150}.&      |^| insert_link(g)(rni)(rnmer)        
+%&\ref{ddd:rna:160}.&      |^| remove_hub(g)(rni)(rnmer)
+%&\ref{ddd:rna:170}.&      |^| remove_link(g)(rni)(rnmer)
+%\endRSLatex   
+\bp
+\kw{value}\\
+\ref{ddd:rna:110}.\ \ \ rn: RNI {\RIGHTARROW} RNMer {\RIGHTARROW} G {\RIGHTARROW} \kw{in},\kw{out}{\LBRACE}ch{\LBRACKET}{\LBRACE}i,j{\RBRACE}{\RBRACKET}{\BAR}{\LBRACE}i,j{\RBRACE}{\SUBSETEQ}${uid}_{\sigma}${\RBRACE}\\
+\ref{ddd:rna:110}.\ \ \ rn(rni)(rnmer)(g) {\IS}\\
+\ref{ddd:rna:120}.\ \ \ \ \ \ \ \ {\DOTDOTDOT}\\
+\ref{ddd:rna:140}.\ \ \ \ \ \ {\NONDETCHOICE} insert\_hub(g)(rni)(rnmer)\\
+\ref{ddd:rna:150}.\ \ \ \ \ \ {\NONDETCHOICE} insert\_link(g)(rni)(rnmer)\ \ \ \ \ \ \ \ \\
+\ref{ddd:rna:160}.\ \ \ \ \ \ {\NONDETCHOICE} remove\_hub(g)(rni)(rnmer)\\
+\ref{ddd:rna:170}.\ \ \ \ \ \ {\NONDETCHOICE} remove\_link(g)(rni)(rnmer)
+\ep
+                                                    
+\pos{%%%%%%%%%%%%%%%%%%%%
+\noindent 
+\begynd
+\pind Details on the \textsf{insert} and \textsf{remove} actions are given below.
+\afslut
+}{}%%%%%%%%%%%%%%%%%%%%%%
+
+\mnewfoil
+\begin{enumerate}\setei
+\item  \label{ddd:rna:900} These road net sub-behaviours require information about
+\begin{enumerate}
+\item  \label{ddd:rna:910} a hub to be inserted: its
+                           initial state, state space and [empty]
+                           traffic history, or 
+\item  \label{ddd:rna:920} a link to be inserted:
+                           its length, initial state, state space and
+                           [empty] traffic history, or
+\item  \label{ddd:rna:930} a hub to be removed: its
+                           unique identifier, or
+\item  \label{ddd:rna:940} a link to be removed: its
+                           unique identifier.
+\end{enumerate}
+\savei\end{enumerate}
+%\RSLatex
+%type
+%&\ref{ddd:rna:900}.&   Info == nHInfo | nLInfo | oHInfo | oLInfo
+%&\ref{ddd:rna:900}.&   nHInfo :: H`Sigma >< H`Omega >< H_Traffic
+%&\ref{ddd:rna:900}.&   nLInfo :: LEN >< L`Sigma >< L`Omega >< L_Traffic 
+%&\ref{ddd:rna:900}.&   oHInfo :: HI
+%&\ref{ddd:rna:900}.&   oLInfo :: LI &\dbsquare&
+%\endRSLatex
+\bp
+\kw{type}\\
+\ref{ddd:rna:900}.\ \ \ Info {\EQ}{\EQ} nHInfo {\BAR} nLInfo {\BAR} oHInfo {\BAR} oLInfo\\
+\ref{ddd:rna:900}.\ \ \ nHInfo :: H$\Sigma$ {\TIMES} H$\Omega$ {\TIMES} H\_Traffic\\
+\ref{ddd:rna:900}.\ \ \ nLInfo :: LEN {\TIMES} L$\Sigma$ {\TIMES} L$\Omega$ {\TIMES} L\_Traffic \\
+\ref{ddd:rna:900}.\ \ \ oHInfo :: HI\\
+\ref{ddd:rna:900}.\ \ \ oLInfo :: LI \dbsquare
+\ep
+}
+
+\mnewfoil
+
+\monoexample{Road Net Development: Hub Insertion}{%
+\begynd
+\pind Road net development alternates between design,
+\begynd
+\pind based on the \rngraph, and
+\afslut
+\pind actual, ``real life'', construction
+\begynd
+\pind taking place in the real surroundings of the road net.
+\afslut
+\afslut
+\mnewfoil
+\begin{enumerate}\setei    
+\item \label{ddd:hi:125} If a hub insertion then the  road net
+                          behaviour, \nyl based on the hub and link information and
+                          the road net layout \nyl  in the \rngraph\  selects
+\begin{enumerate}
+\item \label{ddd:hi:125a} an initial mereology for the hub, \textsf{h\_mer},
+\item \label{ddd:hi:125b} an initial hub state,  \textsf{h$\sigma$}, and
+\item \label{ddd:hi:125c} an initial hub state space, \textsf{h$\omega$}, and
+\item \label{ddd:hi:125d} an initial, i.e., empty hub traffic history;
+\end{enumerate}   
+\item \label{ddd:hi:125e} updates its \rngraph\ with information about the
+                         new hub, 
+\item \label{ddd:hi:125f} and results in a suitable grouping of these.
+\savei\end{enumerate}
+
+\mnewfoil
+
+%\RSLatex
+%value
+%&\ref{ddd:hi:125}.&   design_new_hub: G -> (nHInfo><G) 
+%&\ref{ddd:hi:125}.&   design_new_hub(g) is  
+%&\ref{ddd:hi:125a}.&      let h_mer:HMer = &$\mathcal{M}_{ih}$&(g),
+%&\ref{ddd:hi:125b}.&          h`sigma:H`Sigma = &$\mathcal{S}_{ih}$&(g),
+%&\ref{ddd:hi:125c}.&          h`omega:H`Omega = &$\mathcal{O}_{ih}$&(g),
+%&\ref{ddd:hi:125d}.&          h_traffic = [],
+%&\ref{ddd:hi:125e}.&            g&$'$& = &$\mathcal{MSO}_{ih}$&(g) in
+%&\ref{ddd:hi:125f}.&         ((h_mer,h`sigma,h`omega,h_traffic),g&$'$&) end
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{ddd:hi:125}.\ \ \ design\_new\_hub: G {\RIGHTARROW} (nHInfo{\TIMES}G) \\
+\ref{ddd:hi:125}.\ \ \ design\_new\_hub(g) {\IS}\ \ \\
+\ref{ddd:hi:125a}.\ \ \ \ \ \ \kw{let} h\_mer:HMer {\EQ} $\mathcal{M}_{ih}$(g),\\
+\ref{ddd:hi:125b}.\ \ \ \ \ \ \ \ \ \ h$\sigma$:H$\Sigma$ {\EQ} $\mathcal{S}_{ih}$(g),\\
+\ref{ddd:hi:125c}.\ \ \ \ \ \ \ \ \ \ h$\omega$:H$\Omega$ {\EQ} $\mathcal{O}_{ih}$(g),\\
+\ref{ddd:hi:125d}.\ \ \ \ \ \ \ \ \ \ h\_traffic {\EQ} {\emptymap},\\
+\ref{ddd:hi:125e}.\ \ \ \ \ \ \ \ \ \ \ \ g$'$ {\EQ} $\mathcal{MSO}_{ih}$(g) \kw{in}\\
+\ref{ddd:hi:125f}.\ \ \ \ \ \ \ \ \ ((h\_mer,h$\sigma$,h$\omega$,h\_traffic),g$'$) \kw{end}
+\ep
+\noindent
+\begynd
+\pind We leave open, in Items\,\ref{ddd:hi:125a}--\ref{ddd:hi:125c},
+      as to what \nyl the initial hub mereology, state and state space
+      should be initialised, i.e., the $\mathcal{M}_{ih}, \mathcal{S}_{ih},
+      \mathcal{O}_{ih}$ and $\mathcal{MSO}_{ih}$  functions. 
+\afslut
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{hi:1000}  To insert a new hub the road net administrator
+\begin{enumerate}
+\item \label{hi:1002}  first designs the new hub,
+\item \label{hi:1004}  then selects a hub part 
+\item \label{hi:1006}  which satisfies the design,
+\item[]                whereupon it updates the global stat\ysfchg{e }
+\item \label{hi:1010}  of parts $\sigma$,
+\item \label{hi:1020}  of unique identifiers, and
+\item \label{hi:1030}  of hub identifiers --
+\end{enumerate} in parallel, and in parallel with
+\item \label{hi:1040}  initiating a new hub behaviour
+\item \label{hi:1050}  and resuming being the road net behaviour.
+\savei\end{enumerate}
+
+\mnewfoil
+
+
+%\RSLatex
+%&\ref{hi:1000}.&  insert_hub: G><RNI><RNMer -> Unit
+%&\ref{hi:1000}.&  insert_hub(g,rni,rnmer) is
+%&\ref{hi:1002}.&      let ((h_mer,h`sigma,h`omega,h_traffic),g&$'$&) = design_new_hub(g) in 
+%&\ref{hi:1004}.&      let h:H :- h~isin`sigma :- 
+%&\ref{hi:1006}.&                 mereo_H(h)=h_mer /\ h`sigma=attr_H`Sigma(h) /\ 
+%&\ref{hi:1006}.&                 h`omega=attr_H`Omega(h) /\ h_traffic=attr_HTraffic(h) in
+%&\ref{hi:1010}.&      `sigma := `sigma union {h}
+%&\ref{hi:1020}.&   || uid&$_{\sigma}$& := uid&$_{\sigma}$& union {uid_H(h)}
+%&\ref{hi:1030}.&    || &$his$& := &$his$& union {uid_H(h)}
+%&\ref{hi:1040}.&     || hub(uid_H(h))(attr_H`Sigma(h),attr_H`Omega(h),attr_H`Omega(h))
+%&\ref{hi:1050}.&     || rn(rni)(rnmer)(g&$'$&)
+%&\ref{hi:1000}.&      end end  &\dbsquare&
+%\endRSLatex 
+\bp
+\ref{hi:1000}.\ \ insert\_hub: G{\TIMES}RNI{\TIMES}RNMer {\RIGHTARROW} \kw{Unit}\\
+\ref{hi:1000}.\ \ insert\_hub(g,rni,rnmer) {\IS}\\
+\ref{hi:1002}.\ \ \ \ \ \ \kw{let} ((h\_mer,h$\sigma$,h$\omega$,h\_traffic),g$'$) {\EQ} design\_new\_hub(g) \kw{in} \\
+\ref{hi:1004}.\ \ \ \ \ \ \kw{let} h:H {\RDOT} h{\NOTISIN}$\sigma$ {\RDOT} \\
+\ref{hi:1006}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mereo\_H(h){\EQ}h\_mer {\WEDGE} h$\sigma${\EQ}attr\_H$\Sigma$(h) {\WEDGE} \\
+\ref{hi:1006}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h$\omega${\EQ}attr\_H$\Omega$(h) {\WEDGE} h\_traffic{\EQ}attr\_HTraffic(h) \kw{in}\\
+\ref{hi:1010}.\ \ \ \ \ \ $\sigma$ :{\EQ} $\sigma$ {\UNION} {\LBRACE}h{\RBRACE}\\
+\ref{hi:1020}.\ \ \ {\PARL} uid$_{\sigma}$ :{\EQ} uid$_{\sigma}$ {\UNION} {\LBRACE}uid\_H(h){\RBRACE}\\
+\ref{hi:1030}.\ \ \ \ {\PARL} $his$ :{\EQ} $his$ {\UNION} {\LBRACE}uid\_H(h){\RBRACE}\\
+\ref{hi:1040}.\ \ \ \ \ {\PARL} hub(uid\_H(h))(attr\_H$\Sigma$(h),attr\_H$\Omega$(h),attr\_H$\Omega$(h))\\
+\ref{hi:1050}.\ \ \ \ \ {\PARL} rn(rni)(rnmer)(g$'$)\\
+\ref{hi:1000}.\ \ \ \ \ \ \kw{end} \kw{end}\ \ \dbsquare
+\ep
+}
+
+\mnewfoil\LLLL\HHHH
+
+\monoexample{Road Net Development: Link Insertion}{\LLLL\HHHH%
+\begin{enumerate}\setei
+\item \label{ddd:li:130} If a link insertion then the road net
+                         behaviour \nyl based on the hub and link
+                         information and 
+                         the road net layout \nyl  in the \rngraph\  selects 
+\begin{enumerate}
+\item \label{ddd:li:140} the  mereology  for the link,
+                         \textsf{h\_mer}\footnote{\LLLL that is, the
+                         two existing hub identifiers between whose
+                         hubs the new link is to be inserted},     
+\item \label{ddd:li:145} the (static) length (attribute),
+\item \label{ddd:li:150} an initial link state,   \textsf{l$\sigma$},
+\item \label{ddd:li:160} an initial link state space
+                         \textsf{l$\omega$}, and   
+\item \label{ddd:li:170} and initial, i.e., empty, link traffic history;
+\end{enumerate}
+\item \label{ddd:li:180} updates its \rngraph\ \nyl with information
+                         about the new link, 
+\item \label{ddd:li:190} and results in a suitable grouping of these.
+\savei\end{enumerate}
+\mnewfoil
+
+%\RSLatex
+%value
+%&\ref{ddd:li:130}.&   design_new_link: G -> (nLInfo><G)
+%&\ref{ddd:li:130}.&   design_new_link(g) is 
+%&\ref{ddd:li:140}.&      let l_mer:LMer = &$\mathcal{M}_{il}$&(g),
+%&\ref{ddd:li:145}.&            le:LEN = &$\mathcal{L}_{il}$&(g),
+%&\ref{ddd:li:150}.&            l`sigma:L`Sigma = &$\mathcal{S}_{il}$&(g),
+%&\ref{ddd:li:160}.&            l`omega:L`Omega = &$\mathcal{O}_{il}$&(g),
+%&\ref{ddd:li:170}.&            l_hist:L_Hist = []
+%&\ref{ddd:li:180}.&              g&$'$&:G = &$\mathcal{MLSO}_{il}$&(g) in
+%&\ref{ddd:li:190}.&        ((l_mer,le,l`sigma,l`omega,l_hist),g&$'$&) end
+%\endRSLatex
+\bp
+\kw{value}\\
+\ref{ddd:li:130}.\ \ \ design\_new\_link: G {\RIGHTARROW} (nLInfo{\TIMES}G)\\
+\ref{ddd:li:130}.\ \ \ design\_new\_link(g) {\IS} \\
+\ref{ddd:li:140}.\ \ \ \ \ \ \kw{let} l\_mer:LMer {\EQ} $\mathcal{M}_{il}$(g),\\
+\ref{ddd:li:145}.\ \ \ \ \ \ \ \ \ \ \ \ le:LEN {\EQ} $\mathcal{L}_{il}$(g),\\
+\ref{ddd:li:150}.\ \ \ \ \ \ \ \ \ \ \ \ l$\sigma$:L$\Sigma$ {\EQ} $\mathcal{S}_{il}$(g),\\
+\ref{ddd:li:160}.\ \ \ \ \ \ \ \ \ \ \ \ l$\omega$:L$\Omega$ {\EQ} $\mathcal{O}_{il}$(g),\\
+\ref{ddd:li:170}.\ \ \ \ \ \ \ \ \ \ \ \ l\_hist:L\_Hist {\EQ} {\emptymap}\\
+\ref{ddd:li:180}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ g$'$:G {\EQ} $\mathcal{MLSO}_{il}$(g) \kw{in}\\
+\ref{ddd:li:190}.\ \ \ \ \ \ \ \ ((l\_mer,le,l$\sigma$,l$\omega$,l\_hist),g$'$) \kw{end}
+\ep
+
+\noindent
+\begynd
+\pind We leave open, in Items\,\ref{ddd:li:140}--\ref{ddd:li:160},
+      as to what \nyl the initial link mereology, state and state space
+      should be initialised.
+\afslut
+      
+\mnewfoil
+\begin{enumerate}\setei
+\item \label{ddd:1i:2000} To insert a new link the road net
+  administrator 
+\begin{enumerate}
+\item \label{ddd:1i:2002}  first designs the new link,
+\item \label{ddd:1i:2004}  then selects a link part 
+\item \label{ddd:1i:2006}  which satisfies the design,
+\item[] whereupon it updates the global states
+\item \label{ddd:1i:2010} of parts, $\sigma$,
+\item \label{ddd:1i:2020} of unique part identifiers, and
+\item \label{ddd:1i:2030} of link identifiers --
+\end{enumerate} in parallel, and in parallel with
+\item \label{ddd:1i:2040} initiating a new link behaviour and
+\item \label{ddd:1i:2050} updating the mereologies and possibly the
+                          state and the state space attributes of the
+                          connected hubs.  
+\savei\end{enumerate}
+\mnewfoil
+%\RSLatex
+%value
+%&\ref{ddd:1i:2000}.&   insert_link: G -> Unit
+%&\ref{ddd:1i:2000}.&   insert_link(rni,l) is 
+%&\ref{ddd:1i:2002}.&       let ((l_mer,le,l`sigma,l`omega,l_traffic_hist),g&$'$&) = design_new_link(g) in 
+%&\ref{ddd:1i:2006}.&       let l:L :- l~isin`sigma :- mereo_L(l)=l_mer /\ 
+%&\ref{ddd:1i:2006}.&                    le=attr_LEN(l) /\ l`sigma=attr_L`Sigma(l) /\ 
+%&\ref{ddd:1i:2006}.&                    l`omega=attr_L`Omega(l) /\ l_traffic_hist=attr_HTraffic(l) in
+%&\ref{ddd:1i:2010}.&      `sigma := `sigma union {l} 
+%&\ref{ddd:1i:2020}.&   || uid&$_{\sigma}$& := uid&$_{\sigma}$& union {uid_L(l)}
+%&\ref{ddd:1i:2030}.&    || &$lis$& := &$list$& union {}
+%&\ref{ddd:1i:2040}.&     || link(uid_L(l))(l_mer)(le,l`omega)(l`sigma,l_traffic)
+%&\ref{ddd:1i:2050}.&     || ch[{rni,hi1}] ! updH(&$\mathcal{M}_{il}$&(g),&$\Sigma_{il}$&(g),&$\Omega_{il}$&(g))
+%&\ref{ddd:1i:2050}.&     || ch[{rni,hi2}] ! 
+%&\ref{ddd:1i:2000}.&       end end &\dbsquare&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{ddd:1i:2000}.\ \ \ insert\_link: G {\RIGHTARROW} \kw{Unit}\\
+\ref{ddd:1i:2000}.\ \ \ insert\_link(rni,l) {\IS} \\
+\ref{ddd:1i:2002}.\ \ \ \ \ \ \ \kw{let} ((l\_mer,le,l$\sigma$,l$\omega$,l\_traffic\_hist),g$'$) {\EQ} design\_new\_link(g) \kw{in} \\
+\ref{ddd:1i:2006}.\ \ \ \ \ \ \ \kw{let} l:L {\RDOT} l{\NOTISIN}$\sigma$ {\RDOT} mereo\_L(l){\EQ}l\_mer {\WEDGE} \\
+\ref{ddd:1i:2006}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ le{\EQ}attr\_LEN(l) {\WEDGE} l$\sigma${\EQ}attr\_L$\Sigma$(l) {\WEDGE} \\
+\ref{ddd:1i:2006}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ l$\omega${\EQ}attr\_L$\Omega$(l) {\WEDGE} l\_traffic\_hist{\EQ}attr\_HTraffic(l) \kw{in}\\
+\ref{ddd:1i:2010}.\ \ \ \ \ \ $\sigma$ :{\EQ} $\sigma$ {\UNION} {\LBRACE}l{\RBRACE} \\
+\ref{ddd:1i:2020}.\ \ \ {\PARL} uid$_{\sigma}$ :{\EQ} uid$_{\sigma}$ {\UNION} {\LBRACE}uid\_L(l){\RBRACE}\\
+\ref{ddd:1i:2030}.\ \ \ \ {\PARL} $lis$ :{\EQ} $list$ {\UNION} {\LBRACE}{\RBRACE}\\
+\ref{ddd:1i:2040}.\ \ \ \ \ {\PARL} link(uid\_L(l))(l\_mer)(le,l$\omega$)(l$\sigma$,l\_traffic)\\
+\ref{ddd:1i:2050}.\ \ \ \ \ {\PARL} ch{\LBRACKET}{\LBRACE}rni,hi1{\RBRACE}{\RBRACKET} ! updH($\mathcal{M}_{il}$(g),$\Sigma_{il}$(g),$\Omega_{il}$(g))\\
+\ref{ddd:1i:2050}.\ \ \ \ \ {\PARL} ch{\LBRACKET}{\LBRACE}rni,hi2{\RBRACE}{\RBRACKET} ! \\
+\ref{ddd:1i:2000}.\ \ \ \ \ \ \ \kw{end} \kw{end} \dbsquare
+\ep
+\noindent
+\begynd
+\pind We leave undefined the mereology and the state $\sigma$ and
+      state space $\omega$ \textsf{upd}ate functions.
+\afslut
+}
+
+\nbbb{Destroy Entities}\label{Destroy Entities}
+
+\begynd
+\pind The introduction to Sect.\,\vref{Create Entities} \nyl on the \sfsl{creation of entities}
+\begynd
+\pind outlined a number of creation issues ([A, B, C, D]).
+\afslut
+\pind For the \sfsl{destruction of entities}
+\begynd
+\pind description matters are a bit simpler.
+\afslut
+\pind It is, almost, simply a matter
+\begynd
+\pind of designating, by its unique identifier,
+\pind the entity: part and behaviour to be destroyed.
+\afslut
+\pind Almost\,!
+\begynd
+\pind The mereology of the destroyed entity
+\pind must be such that the destruction
+\pind does not leave ``dangling'' references\,!
+\afslut
+\afslut
+
+\mnewfoil
+
+\monoexample{Road Net Development: Hub Removal}{%
+\begin{enumerate}\setei
+\item \label{ddd:hr:100} If a hub removal  then the road net \textsf{design\_remove\_hub}
+                         behaviour, based on the \rngraph,  calculates the \sfsl{unique hub identifier}
+                         of the ``isolated'' hub to be removed --
+                         that is, is not connected to any links,
+\item \label{ddd:hr:110} updates the \rngraph, and
+\item \label{ddd:hr:120} results in a pair of these.
+\savei\end{enumerate}
+
+%\RSLatex
+%value
+%&\ref{ddd:hr:100}.&   design_remove_hub: G -> (HI><G)
+%&\ref{ddd:hr:100}.&   design_remove_hub(g) as (hi,g&$'$&)
+%&\ref{ddd:hr:100}.&      let hi:HI :- hi isin &$his$& /\ let (_,lis) = mereo_H(retr_part(hi)) in lis={} end in
+%&\ref{ddd:hr:110}.&      let g&$'$& = &$\mathcal{M}_{rh}$&(hi,g) in
+%&\ref{ddd:hr:120}.&      (hi,g&$'$&) end end
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{ddd:hr:100}.\ \ \ design\_remove\_hub: G {\RIGHTARROW} (HI{\TIMES}G)\\
+\ref{ddd:hr:100}.\ \ \ design\_remove\_hub(g) \kw{as} (hi,g$'$)\\
+\ref{ddd:hr:100}.\ \ \ \ \ \ \kw{let} hi:HI {\RDOT} hi {\ISIN} $his$ {\WEDGE} \kw{let} ({\UNDERLINE},lis) {\EQ} mereo\_H(retr\_part(hi)) \kw{in} lis{\EQ}{\LBRACE}{\RBRACE} \kw{end} \kw{in}\\
+\ref{ddd:hr:110}.\ \ \ \ \ \ \kw{let} g$'$ {\EQ} $\mathcal{M}_{rh}$(hi,g) \kw{in}\\
+\ref{ddd:hr:120}.\ \ \ \ \ \ (hi,g$'$) \kw{end} \kw{end}
+\ep
+}
+
+\mnewfoil
+
+\begin{enumerate}\setei
+\item \label{ddd:hr:200} To remove a hub  the road net administrator
+\begin{enumerate}
+\item \label{ddd:hr:205} first designs which old hub is to be removed
+\item \label{ddd:hr:210} then removes the designated hub, 
+\item[] whereupon it updates the global states
+\item \label{ddd:hr:215}  of parts $\sigma$,
+\item \label{ddd:hr:220}  of unique identifiers, and
+\item \label{ddd:hr:225}  of hub identifiers --
+\end{enumerate} in parallel, and in parallel with
+\item \label{ddd:hr:230}  stopping the old hub behaviour
+\item \label{ddd:hr:235}  and resuming being a road net behaviour.
+\savei\end{enumerate}
+\mnewfoil
+
+%\RSLatex
+%value
+%&\ref{ddd:hr:200}.&  remove_hub: G -> RNI -> RNMer -> Unit
+%&\ref{ddd:hr:200}.&  remove_hub(g)(rni)(rnmer) is 
+%&\ref{ddd:hr:205}.&      let (hi,g&$'$&) = design_remove_hub(g) in
+%&\ref{ddd:hr:210}.&      let h:H :- uid_H(h)=hi /\ ... in
+%&\ref{ddd:hr:215}.&      `sigma := `sigma \ {h} 
+%&\ref{ddd:hr:220}.&   || uid&$_{\sigma}$& := uid&$_{\sigma}$& \ {hi}
+%&\ref{ddd:hr:225}.&   || &$his$& := &$his$& \ {hi} 
+%&\ref{ddd:hr:230}.&     || ch[{rni,hi}] ! mkStop()
+%&\ref{ddd:hr:235}.&     || rn(rni)(rnmer)(g&$'$&)
+%&\ref{ddd:hr:200}.&        end end &\dbsquare&
+%\endRSLatex 
+\bp
+\kw{value}\\
+\ref{ddd:hr:200}.\ \ remove\_hub: G {\RIGHTARROW} RNI {\RIGHTARROW} RNMer {\RIGHTARROW} \kw{Unit}\\
+\ref{ddd:hr:200}.\ \ remove\_hub(g)(rni)(rnmer) {\IS} \\
+\ref{ddd:hr:205}.\ \ \ \ \ \ \kw{let} (hi,g$'$) {\EQ} design\_remove\_hub(g) \kw{in}\\
+\ref{ddd:hr:210}.\ \ \ \ \ \ \kw{let} h:H {\RDOT} uid\_H(h){\EQ}hi {\WEDGE} {\DOTDOTDOT} \kw{in}\\
+\ref{ddd:hr:215}.\ \ \ \ \ \ $\sigma$ :{\EQ} $\sigma$ {\SETMINUS} {\LBRACE}h{\RBRACE} \\
+\ref{ddd:hr:220}.\ \ \ {\PARL} uid$_{\sigma}$ :{\EQ} uid$_{\sigma}$ {\SETMINUS} {\LBRACE}hi{\RBRACE}\\
+\ref{ddd:hr:225}.\ \ \ {\PARL} $his$ :{\EQ} $his$ {\SETMINUS} {\LBRACE}hi{\RBRACE} \\
+\ref{ddd:hr:230}.\ \ \ \ \ {\PARL} ch{\LBRACKET}{\LBRACE}rni,hi{\RBRACE}{\RBRACKET} ! mkStop()\\
+\ref{ddd:hr:235}.\ \ \ \ \ {\PARL} rn(rni)(rnmer)(g$'$)\\
+\ref{ddd:hr:200}.\ \ \ \ \ \ \ \ \kw{end} \kw{end}  \dbsquare
+\ep
+
+\mnewfoil
+\dbeat{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\monoexample{Road Net Development: Link Removal}{%
+\begynd
+\pind
+\begin{enumerate}\setei
+\item \label{ddd:lr:150} If a link removal then the road net
+                         behaviour  calculates the \sfsl{unique identifier}
+                         of the link to be removed.
+\item \label{ddd:lr:200}
+\item \label{ddd:lr:210}
+\item \label{ddd:lr:220}
+\item \label{ddd:lr:230}
+\item \label{ddd:lr:240}
+\item \label{ddd:lr:250}
+\item \label{ddd:lr:260}
+\item \label{ddd:lr:270}
+\item \label{ddd:lr:280}
+\item \label{ddd:lr:290}
+  \savei\end{enumerate}
+
+%\RSLatex
+%&\ref{ddd:lr:150}.& 
+%&\ref{ddd:lr:150}.& 
+%&\ref{ddd:lr:200}.&  
+%&\ref{ddd:lr:210}.&  
+%&\ref{ddd:lr:220}.&  
+%&\ref{ddd:lr:230}.&  
+%&\ref{ddd:lr:240}.&
+%&\ref{ddd:lr:250}.&  
+%&\ref{ddd:lr:260}.&  
+%&\ref{ddd:lr:270}.&  
+%&\ref{ddd:lr:280}.&  
+%&\ref{ddd:lr:290}.&     
+%\endRSLatex 
+\bp
+\ref{ddd:lr:150}. \\
+\ref{ddd:lr:150}. \\
+\ref{ddd:lr:200}.\ \ \\
+\ref{ddd:lr:210}.\ \ \\
+\ref{ddd:lr:220}.\ \ \\
+\ref{ddd:lr:230}.\ \ \\
+\ref{ddd:lr:240}.\\
+\ref{ddd:lr:250}.\ \ \\
+\ref{ddd:lr:260}.\ \ \\
+\ref{ddd:lr:270}.\ \ \\
+\ref{ddd:lr:280}.\ \ \\
+\ref{ddd:lr:290}.\ \ \ \ \ 
+\ep
+
+\begynd
+\pind 
+\pind 
+\afslut
+\pind 
+\afslut
+}
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbb{Adjustment of Creatable and Destructable Behaviours}\label{Adjustment}
+
+\begynd
+\pind When an entity
+\begynd
+\pind is created or destroyed 
+\pind its creation, respectively destruction
+\pind affects the neurologically related parts
+      and their behaviours.
+\begynd
+\pind their mereology 
+\pind and possibly their programmable state attributes
+\pind need be adjusted.
+\afslut
+\pind And when entities are destroyed \nyl
+      their behaviours are \sort{stop}ped\,!
+\pind These entities are ``informed'' so by the creator/destructor
+      entity \nyl -- as was shown in Examples\,\ref{Road Net
+      Development: Hub Insertion}--\ref{Road Net Development: Hub
+      Removal}. 
+\afslut
+\pind The next example will illustrate how such `affected' entities
+      \nyl handle such  creator/destructor communication.
+\afslut
+
+\mnewfoil
+
+\monoexample{Hub Adjustments}{%
+\begynd
+\pind We have not yet illustrated hub (nor link) behaviours.
+\pind Now we have to\,!
+\afslut
+\begin{enumerate}\setei
+\item \label{hub-adj:0900} The mereology of a hub is a triple: \nyl the
+  identification of the set of automobiles that may enter the hub,  \nyl the
+  identification of the set of links that connect to the hub, \nyl and
+  the identification of the road net.
+\item \label{hub-adj:1000} The hub behaviour external
+                            non-deterministically ({\DETCHOICE})
+                            alternates between
+\item \label{hub-adj:1010}  doing ``own work'',
+\item \label{hub-adj:1020} or   accepting a stop ``command'' from the road
+                            net administrator, or
+\item \label{hub-adj:1030} or   accepting mereology \& state update
+                            information,
+\item \label{hub-adj:1040} or  other.
+\savei\end{enumerate}
+
+\mnewfoil
+
+%\RSLatex
+%type
+%&\ref{hub-adj:0900}.&   HMer = AI-set >< LI-set >< RNI
+%value
+%&\ref{hub-adj:0900}.&   mereo_H: H -> HMer
+%&\ref{hub-adj:1000}.&   hub: hi:HI -> (auis,lis,&$rni$&):HMer -> h`omega:H`Omega -> (h`sigma:H`Sigma><ht:HTraffic) ->
+%&\ref{hub-adj:1000}.&            {ch[hi,ui]|ui:(RNI|AI) :- ui=&$rni$&\/ui isin auis}  Unit
+%&\ref{hub-adj:1000}.&   hub(hi)(hm:(auis,lis,rni))(h`omega)(h`sigma,ht) is
+%&\ref{hub-adj:1010}.&           ...
+%&\ref{hub-adj:1020}.&       |=| let mkStop() = ch[hi,&$rni$&] ? in stop end
+%&\ref{hub-adj:1030}.&       |=| let mkUpdH(hm&$'$&,h`sigma&$'$&,h`sigma&$'$&) = ch[{&$rni$&,hi}] ? in
+%&\ref{hub-adj:1030}.&           hub(hi)(hm&$'$&)(h`omega&$'$&)(h`sigma&$'$&,ht) end     
+%&\ref{hub-adj:1040}.&           ... 
+%\endRSLatex 
+\bp
+\kw{type}\\
+\ref{hub-adj:0900}.\ \ \ HMer {\EQ} AI\kw{-set} {\TIMES} LI\kw{-set} {\TIMES} RNI\\
+\kw{value}\\
+\ref{hub-adj:0900}.\ \ \ mereo\_H: H {\RIGHTARROW} HMer\\
+\ref{hub-adj:1000}.\ \ \ hub: hi:HI {\RIGHTARROW} (auis,lis,$rni$):HMer {\RIGHTARROW} h$\omega$:H$\Omega$ {\RIGHTARROW} (h$\sigma$:H$\Sigma${\TIMES}ht:HTraffic) {\RIGHTARROW}\\
+\ref{hub-adj:1000}.\ \ \ \ \ \ \ \ \ \ \ \ {\LBRACE}ch{\LBRACKET}hi,ui{\RBRACKET}{\BAR}ui:(RNI{\BAR}AI) {\RDOT} ui{\EQ}$rni${\VEE}ui {\ISIN} auis{\RBRACE}\ \ \kw{Unit}\\
+\ref{hub-adj:1000}.\ \ \ hub(hi)(hm:(auis,lis,rni))(h$\omega$)(h$\sigma$,ht) {\IS}\\
+\ref{hub-adj:1010}.\ \ \ \ \ \ \ \ \ \ \ {\DOTDOTDOT}\\
+\ref{hub-adj:1020}.\ \ \ \ \ \ \ {\DETCHOICE} \kw{let} mkStop() {\EQ} ch{\LBRACKET}hi,$rni${\RBRACKET} ? \kw{in} \kw{stop} \kw{end}\\
+\ref{hub-adj:1030}.\ \ \ \ \ \ \ {\DETCHOICE} \kw{let} mkUpdH(hm$'$,h$\sigma$$'$,h$\sigma$$'$) {\EQ} ch{\LBRACKET}{\LBRACE}$rni$,hi{\RBRACE}{\RBRACKET} ? \kw{in}\\
+\ref{hub-adj:1030}.\ \ \ \ \ \ \ \ \ \ \ hub(hi)(hm$'$)(h$\omega$$'$)(h$\sigma$$'$,ht) \kw{end}\ \ \ \ \ \\
+\ref{hub-adj:1040}.\ \ \ \ \ \ \ \ \ \ \ {\DOTDOTDOT} 
+\ep
+\noindent
+\begynd
+\pind Observe from formula Item\,\ref{hub-adj:1020} that the hub
+      behaviour ends, 
+\pind whereas ``from'' Item\,\ref{hub-adj:1030} it tail recurses\,! \dbsquare
+\afslut
+}
+
+
+\nbbbb{Summary on Creatable \& Destructable Entities}
+
+\begynd
+\pind We have sketched how we may model \nyl
+      the dynamics of creating and destroying entities.
+\begynd
+\pind It is, but a sketch.
+\pind We should wish for a more methodological account.
+\pind So, that is what we are working on -- amongst other issues -- at the moment.
+\afslut
+\afslut
+
+\nbbbbb{Domain Engineering: Description and Construction}\label{Domain Engineering: Description and Construction}
+
+\begynd
+\pind There are two meanings to the term `Domain Engineering'.
+\begin{itemize}
+\item the construction of \sfsl{descriptions} of domains, and
+\item  the construction of \sfsl{domains}.
+\end{itemize}
+\noindent
+\begynd
+\pind Most sections of Chapters\,\ref{primer-extq.1}--\ref{chapter:Perdurants} \nyl are
+      ``devoted'' to the former;
+\pind the previous section, Sect.\,\ref{Discrete Dynamic Domains} to the latter.
+\afslut
+\afslut
+
+\nbbbbb{Domain Laws}\label{perd-Domain Laws}
+
+\begynd
+\pind The\footnote{This section is currently under consideration.}
+      issue of \sfsl{domain laws} seems to be crucial.
+\begynd
+\pind Inklings of \sfsl{domain laws} have been hinted at:
+\begynd
+\pind (i) intentional pulls, Sect.\,\ref{chap4.Intentional Pull} and
+\pind (ii) Galois connections, Sect.\,\ref{kap4-Galois Connections}.
+\afslut
+\afslut
+\afslut
+
+\nbbbbb{A Domain Discovery Procedure, III}\label{A Domain Discovery
+  Process, IIIa}\label{The Perdurant Analysis and Description
+  Procedure} 
+
+%\pos
+{The predecessors of this section are Sects.\,\vref{A Domain
+    Discovery Process, I} and \vref{A Domain Discovery Process, II}.}{} 
+
+\bbbb{Review of the Endurant Analysis and Description Process}%
+      \label{Review of The Endurant Analysis and Description Process}\LLLL
+
+\begynd
+\pind The \textsf{describe\_...} functions below were defined in Sects.\,\vref{A Domain
+    Discovery Process, I} and \vref{A Domain Discovery Process, II}.
+\afslut
+
+\label{endurantanalysisanddescription}
+%\RSLatex
+%value
+%   endurant_analysis_and_description: Unit -> Unit
+%   endurant_analysis_and_description() is 
+%      discover_sorts();  &\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [Page\,\pageref{discover-sorts}]&
+%      discover_internal_endurant_qualities() & \ \ [Page\,\pageref{discover-uids}]&
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\ endurant\_analysis\_and\_description: \kw{Unit} {\RIGHTARROW} \kw{Unit}\\
+\>\ endurant\_analysis\_and\_description() {\IS} \\
+\>\>\>discover\_sorts();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [Page\,\pageref{discover-sorts}]\\
+\>\>\>discover\_internal\_endurant\_qualities()  \ \ [Page\,\pageref{discover-uids}]
+\ep
+\noindent
+\begynd
+\pind We are now to define a
+      \textsf{perdurant\_analysis\_and\_description}
+      procedure -- 
+\pind to follow the above \textsf{endurant\_an\-a\-ly\-sis\_\-and\_\-des\-crip\-tion}
+      procedure.
+\afslut
+ 
+\nbbbb{A Domain Discovery Process, III}%
+      \label{A Domain Discovery Process, III}
+
+\begynd
+\pind We define the  \textsf{perdurant\_analysis\_and\_description}
+      procedure
+\begynd
+\pind in the reverse order of that of Sect.\,\vref{A Domain Discovery Process, II},
+\pind first the full procedure,
+\pind then its sub-procedures.
+\afslut
+\afslut\boiteepaisseavecuntitre{A Domain
+    Endurant Analysis and Description Process}
+\HHHH
+\label{DiscoverySchema4}
+%\RSLatex
+%value
+%   perdurant_analysis_and_description: Unit -> Unit
+%   perdurant_analysis_and_description() is &\label{PAaD}&
+%       describe_state(); &\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &axiom ... &\ \ \ [ Note (a) ]&
+%       describe_channels(); &\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &axiom ... &\ \ \ [ Note (b) ]&
+%       describe_behaviour_signatures(); axiom  ... &\ \ \ [ Note (c) ]&
+%       describe_behaviour_definitions(); axiom  ... &\ \ \ [ Note (d) ]&
+%       describe_initial_system()&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ & axiom  ... &\ \ \ [ Note (e) ]&
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\ perdurant\_analysis\_and\_description: \kw{Unit} {\RIGHTARROW} \kw{Unit}\\
+\>\ perdurant\_analysis\_and\_description() {\IS} \label{PAaD}\\
+\>\>\>\ describe\_state(); \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \kw{axiom} {\DOTDOTDOT} \ \ \ [ Note (a) ]\\
+\>\>\>\ describe\_channels(); \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \kw{axiom} {\DOTDOTDOT} \ \ \ [ Note (b) ]\\
+\>\>\>\ describe\_behaviour\_signatures(); \kw{axiom}\ \ {\DOTDOTDOT} \ \ \ [ Note (c) ]\\
+\>\>\>\ describe\_behaviour\_definitions(); \kw{axiom}\ \ {\DOTDOTDOT} \ \ \ [ Note (d) ]\\
+\>\>\>\ describe\_initial\_system()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \kw{axiom}\ \ {\DOTDOTDOT} \ \ \ [ Note (e) ]
+\ep
+\endboiteepaisseavecuntitre\pos{\normalsize}{\HHHH}\rm
+\noindent
+\pos{\psno}{\mnewfoil}\LLLL
+\iinded{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begynd
+\pind \sort{\sfsl{Notes}:} 
+\begin{itemize}
+\item (a) \bbcolor{The States: $\sigma$ and $ui_{\sigma}$}
+\begynd
+\pind We refer to Sect.\,\vref{kap3.States.specific} and Sect.\,\vref{kap4.The Unique Identifier State}.
+\pind The state calculation, as shown on
+      Page\,\pageref{kap3-gen-state}, must be replicated, i.e.,
+      re-described, in any separate 
+      domain analysis \& description.
+\pind The purpose of the state, i.e., $\sigma$, is to formulate
+      appropriate axiomatic constraints and domain laws.
+\afslut
+\item (b) \bbcolor{The Channels:}
+\begynd
+\pind We refer to Sect.\,\vref{Channel Analysis}.
+\pind Thus we indiscriminately declare a channel for each pair of \nyl
+      distinct unique part identifiers \nyl
+      whether the corresponding pair of part behaviours, \nyl
+      if at all invoked, communicate or not.
+\afslut
+\pos{\psno}{\mnewfoil}
+\item (c) \bbcolor{Behaviour Signatures:}
+\begynd
+\pind We refer to Sect.\,\vref{Domain Behaviour Signatures}.
+\pind We find it more productive to first settle on the signatures of
+      all behaviours -- careful thinking has to go into that -- 
+\pind before tackling the far more time-consuming work on defining the
+      behaviours:
+\afslut
+\item (d) \bbcolor{Behaviour Definitions:}
+\begynd
+\pind We refer to Sect.\,\vref{Behaviour Definition Bodies}.
+\afslut
+\item (e) \bbcolor{The Running System:}
+\begynd
+\pind We refer to Sect.\,\vref{Domain Behaviour Initialisation}.
+\afslut
+\afslut
+\end{itemize}
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\nbbbbb{Summary}\label{perd-Summary}\label{P:Summary}
+\LLLL
+\input{k7}
+
+\treprikker\HHHH
+
+\noindent
+\begynd
+\pind Please consider Fig.\,\vref{onto.fig2}.
+\begynd
+\pind This chapter has covered the right of Fig.\,\ref{onto.fig2}.
+\afslut
+\afslut
+
+\label{chapter:Perdurants.n}
+
+%%  LocalWords:  Perdurants behaviours endurants perdurants analyse
+%%  LocalWords:  Behaviour endurantly perdurantly perdure modelling
+%%  LocalWords:  artefacts artefactual synchronise deterministically
+%%  LocalWords:  args behaviour synchronisation bv cv zm yv zv CSP ij
+%%  LocalWords:  Etcetera RSL Monitorable Initialisation Perdurant ik
+%%  LocalWords:  UI uniq pconind Mer svl StaV mvl MonV prgl PrgV crl
+%%  LocalWords:  nfinkel combinatory mereology monitorable www imm dk
+%%  LocalWords:  Mereologies dtu dibj Ri vers nals pdf stvl ny mv uid
+%%  LocalWords:  plitind ing Et cetera UId Mereo StaVL MonVL ProVL ai
+%%  LocalWords:  mereo mon pre behaviuors Bxn Cartesians Invariance
+%%  LocalWords:  attr nasa uis apos APos ahist AHist ui ais li LM lis
+%%  LocalWords:  ub aai atH fli tli upd LHist HHist thi fhi retr onL
+%%  LocalWords:  amongst et initialised initialisation rts hs RegNo
+%%  LocalWords:  srares analysing mereologies neighbouring Endurant
+%%  LocalWords:  endurant perdurant ly des crip tion kap transduced
+%%  LocalWords:  wpafwthi dom rng RNMer devt nHMsg nLMsg oHMsg oLMsg
+%%  LocalWords:  rn RNI rni auis mer HMer attrs AttrVal sta prog LMer
+%%  LocalWords:  AttrVAL HSta rnmer nHInfo nLInfo oHInfo oLInfo ih il
+%%  LocalWords:  MSO HTraffic le MLSO Creatable Destructable UoD updH
+%%  LocalWords:  rh mkStop ped destructor hm mkUpdH recurses Hoare's
+%%  LocalWords:  Transcendentality modeller actn xtra figxtra bj isin
+%%  LocalWords:  pdefind characterises Kai lander's accellerate ri ie
+%%  LocalWords:  designator dltind Loc prl hannel

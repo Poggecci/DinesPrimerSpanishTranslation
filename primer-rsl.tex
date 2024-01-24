@@ -1,0 +1,2389 @@
+
+\nbbbbbb{A \texttt{RAISE} Specification Language Primer}\label{chap2.tex.RSL}
+\label{begin-of-rsl}\label{RSL-intro}
+\minitoc
+
+\renewcommand{\nrslframebox}[2]{\vspace*{2mm} 
+                               \boiteepaisseavecuntitre{#1}
+                               #2
+                               \endboiteepaisseavecuntitre
+}
+
+%\input{primer-chap2-rsl}
+
+We present an \texttt{RSL Primer}. Indented text, in slanted font, such as
+  this, presents informal material and examples. Non-indented text, in
+  {{\rm roman font}}, presents narrative and formal explanation of
+  \texttt{RSL} constructs.
+
+This  \texttt{RSL Primer} omits treatment of a number of language
+constructs, notably the \texttt{RSL} module concepts of
+\sfsl{schemes, classes} and \sfsl{objects}. Although we do cover the 
+imperative language construct of [declaration of] variables and,
+hence, assignment, we shall omit treatment of structured imperative 
+constructs like  \sort{for} ...,
+       \sort{do} $s$ \sort{while} $b$,
+       \sort{while} $b$ \sort{do} $s$ loops.
+
+Section\,\vref{chap2.tex.rsltext} introduces additional language constructs, thereby
+motivation the $^+$ in the \texttt{RSL$^+$} name.
+
+\lastchg{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bbbbb{Specification Units}
+
+An \texttt{RSL} specification consists of a set (textually ordered in
+any linear sequence) of \sfsl{specification units}.
+We shall only treat five kinds of such units:
+
+\begin{itemize}
+\item \sfsl{type:} Prefixed by the keyword (literal) \sort{type}, type
+  specification units introduce distinct type names. 
+  The general form of a type specification unit is:
+
+%\RSLatex
+%    type T = Type_Expression
+%\endRSLatex 
+\bp
+\>\>\kw{type} T {\EQ} Type\_Expression
+\ep
+
+\noindent
+where \textsf{T} is a distinct (type) identifier.
+Type specification units may introduce several (new, distinct) types:
+
+%\RSLatex
+%    type T1 = Type_Expression_1, T2 = Type_Exression_2, ..., Tn = Type_Expression_n
+%\endRSLatex 
+\bp
+\>\>\kw{type} T1 {\EQ} Type\_Expression\_1, T2 {\EQ} Type\_Exression\_2, {\DOTDOTDOT}, Tn {\EQ} Type\_Expression\_n
+\ep
+\noindent
+  For more on types, see Sect.\,\ref{tseb.rsl.Types}.
+
+\item \sfsl{value:} Prefixed by the keyword (literal) \sort{value} value
+  specification units  introduce  distinct value names.
+  The general form of a value specification unit is:
+
+%\RSLatex
+%    value a:A = &$\mathcal{E}$&(...)
+%\endRSLatex 
+\bp
+\>\>\kw{value} a:A {\EQ} $\mathcal{E}$({\DOTDOTDOT})
+\ep
+
+\noindent
+where \textsf{$\mathcal{E}$(...)} is a value expression.
+Value specification units may introduce several (new, distinctly named) values:
+
+%\RSLatex
+%    value a_1:A_1 = &$\mathcal{E}_1$&(...), a_2:A_2 = &$\mathcal{E}_2$&(...), ..., a_n:A_n = &$\mathcal{E}_n$&(...)
+%\endRSLatex 
+\bp
+\>\>\kw{value} a\_1:A\_1 {\EQ} $\mathcal{E}_1$({\DOTDOTDOT}), a\_2:A\_2 {\EQ} $\mathcal{E}_2$({\DOTDOTDOT}), {\DOTDOTDOT}, a\_n:A\_n {\EQ} $\mathcal{E}_n$({\DOTDOTDOT})
+\ep
+Quite often the value specification is of the form:
+
+%\RSLatex
+%    value f: A -> B, f(arg) is &$\mathcal{E}$&(...[f]...)
+%\endRSLatex 
+\bp
+\>\>\kw{value} f: A {\RIGHTARROW} B, f(arg) {\IS} $\mathcal{E}$({\DOTDOTDOT}{\LBRACKET}f{\RBRACKET}{\DOTDOTDOT})
+\ep
+
+\noindent
+that is: the value is a function, $f$, whose \sfsl{signature} gives
+the name, \textsf{f}, and the type of the functionality \textsf{A {\RIGHTARROW}
+  B} (or \textsf{A {\PARRIGHTARROW} B}).
+ Most of this
+  chapter will cover aspects of value expressions.
+  
+\item \sfsl{axiom:} Prefixed by the keyword (literal) \sort{axiom}, axiom
+  specification units  serve to limit values.
+  The general form of an axiom specification unit is:
+
+%\RSLatex
+%    axiom &$\mathcal{A}$&(...)
+%\endRSLatex 
+\bp
+\>\>\kw{axiom} $\mathcal{A}$({\DOTDOTDOT})
+\ep
+
+\noindent
+where \textsf{$\mathcal{A}$(...)} is some predicate expression over
+(specification unit) defined quantities.
+  For more on axiomatic expressions, see Sect.\,\ref{tseb.rsl.The RSL
+  Predicate Calculus}.
+  
+\item \sfsl{variable:} Prefixed by the keyword (literal) \sort{variable}, variable
+  specification units  introduce  distinct variable names.
+  The general form of a variable specification unit is:
+
+%\RSLatex
+%    variable v:T := expression
+%\endRSLatex 
+\bp
+\>\>\kw{variable} v:T :{\EQ} expression
+\ep
+
+\noindent
+where \textsf{v} is ..., \textsf{T} is ..., and \textsf{expression} is
+  a value expression.
+  For variables, see Sect.\,\ref{tseb.rsl.Variables and Assignment}.
+  
+\item \sfsl{channel:} Prefixed by the keyword (literal) \sort{channel}, channel
+  specification units introduce  distinct channel names. 
+
+  The general form of a channel specification unit is:
+
+%\RSLatex
+%    channel { ch[{i,j}] | i,j:UI :- ... } M
+%\endRSLatex 
+\bp
+\>\>\kw{channel} {\LBRACE} ch{\LBRACKET}{\LBRACE}i,j{\RBRACE}{\RBRACKET} {\BAR} i,j:UI {\RDOT} {\DOTDOTDOT} {\RBRACE} M
+\ep
+
+\noindent
+where \textsf{ch} is a distinct, here channel, name,we are declaring
+an array of channels.
+\textsf{ch[$\{i,j\}$]} expresses that ,
+$\{i,j\}$ ranges of so-called unique identifier indices of type
+\textsf{UI}, and \textsf{M} is a type expression.
+For more on
+  channels, see Sect.\,\ref{tseb.rsl.Process Channels}. 
+  
+\end{itemize}
+\noindent
+This chapter will otherwise be conventionally structured.
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bbbbb{Types and Values}\label{tseb.rsl.Types}%chap2.tex.rsltext
+
+\irsltxt{Types\pconindex{type} are, in general, set-like structures\footnote{We shall
+  not, in this primer, go into details as to the mathematics of
+  types.} of things, i.e., values\pconindex{value}, having common
+characteristics.
+
+A bunch of zero, one or more apples (type \sfsl{apples}) may thus form a [sub]set of type \sfsl{Belle de Boskoop} apples.
+A bunch of zero, one or more  pears (type \sfsl{pears}) may thus form a [sub]set of type \sfsl{Concorde} pears.
+A union of zero, one or more of these apples and pears then form a [sub]set of entities of type \sfsl{fruits}.}
+
+\bbbb{Sort and Type Expressions}\label{tseb.rsl.Type Expressions}
+\index{symbind}{typeea@\protect{\underline{\textbf{Type Expressions}}}}
+
+\begynd
+\pind Sort\pdefindex{sort!expression}\pconindex{expression!sort} and
+      type expressions\pdefindex{type!expression}\pconindex{expression!type}
+      are expressions whose values are types, that is, 
+\pind possibly infinite set-like structures of values (of ``that'' type).
+\afslut
+
+\bbb{Atomic Types: Identifier Expressions and Type Values}\pdefindex{atomic!type}\pconindex{type!atomic}
+
+\begynd
+\pind Atomic types have (atomic) values.
+\pind That is, values which we consider to have no proper constituent
+      (sub-)values, 
+\pind i.e., cannot, to us, be meaningfully ``taken apart''. 
+\afslut
+
+\pos{\texttt{RSL} has a number of [so-called] \emph{built-in} atomic
+  types. They are expressed in terms of literal identifiers.
+These are the \sort{Boolean}s\plitindex{\sort{Boolean}}, \sort{int}{eger}s\plitindex{\sort{Int}}, \sort{Nat}{ural
+number}s\plitindex{\sort{Nat}}, \sort{Real}s\plitindex{\sort{Real}}, \sort{Char}{acters\plitindex{\sort{Char}}, and \sort{Text}{s.}}\plitindex{\sort{Text}} 
+\sort{Text}s are free-form texts and are more general than just texts of \texttt{RSL-like}
+formulas. \rsltext's will be introduced in Sect.\,\vref{chap2.tex.rsltext}.}{}
+
+We shall not need the base types \sort{Char}acters, nor the general
+type \sort{Text}s
+for domain modelling in this primer.
+They will be listed below, but not mentioned further.
+
+The base types are:
+
+\nrslframebox{Basic Types}{\pdefindex{basic!type}\pconindex{type!basic}{\pdefindex{basic!type!expression}}\pconindex{type!basic!expression}
+%\RSLatex
+%type
+%  [1] Bool&\index{symbind}{typeeb@\kw{Bool}}&
+%  [2] Int&\index{symbind}{typeeb@\kw{Int}}& 
+%  [3] Nat&\index{symbind}{typeeb@\kw{Nat}}& 
+%  [4] Real&\index{symbind}{typeeb@\kw{Real}}& 
+%  [5] Char&\index{symbind}{typeeb@\kw{Char}}& 
+%  [6] Text&\index{symbind}{typeeb@\kw{Text}}&
+%\endRSLatex
+\bp
+\kw{type}\\
+\>{\LBRACKET}1{\RBRACKET} \kw{Bool}\index{symbind}{typeeb@\kw{Bool}}\\
+\>{\LBRACKET}2{\RBRACKET} \kw{Int}\index{symbind}{typeeb@\kw{Int}} \\
+\>{\LBRACKET}3{\RBRACKET} \kw{Nat}\index{symbind}{typeeb@\kw{Nat}} \\
+\>{\LBRACKET}4{\RBRACKET} \kw{Real}\index{symbind}{typeeb@\kw{Real}} \\
+\>{\LBRACKET}5{\RBRACKET} \kw{Char}\index{symbind}{typeeb@\kw{Char}} \\
+\>{\LBRACKET}6{\RBRACKET} \kw{Text}\index{symbind}{typeeb@\kw{Text}}
+\ep
+}
+
+\begin{enumerate}
+\item\label{tseb.rsl.1}
+      The Boolean type of truth values \kw{false} and \kw{true}.\index{symbind}{aaab@\kw{false}}\index{symbind}{aaab@\kw{true}}\index{symbind}{logic@\kw{false}}\index{symbind}{logic@\kw{true}}
+\item\label{tseb.rsl.2}
+      The integer type on integers ..., --2, --1, 0, 1, 2, ... .
+\item\label{tseb.rsl.3}
+      The natural number type of positive integer values 0, 1, 2, ...
+\item\label{tseb.rsl.4}
+      The real number type of real values, i.e., values whose numerals
+  can be written as an integer, followed by a period (``.''), followed
+  by a natural number (the fraction).
+\item\label{tseb.rsl.5}
+      The character type of character values
+  \textsf{{\PRIM}{\PRIM}a{\PRIM}{\PRIM},
+    {\PRIM}{\PRIM}bbb{\PRIM}{\PRIM}, ...} 
+\item\label{tseb.rsl.6}
+      The text type of character string values
+    \textsf{{\PRIM}{\PRIM}aa{\PRIM}{\PRIM},
+    {\PRIM}{\PRIM}aaa{\PRIM}{\PRIM}, ..., 
+    {\PRIM}{\PRIM}abc{\PRIM}{\PRIM}, ...}
+\savei\end{enumerate}
+
+\bbb{Composite Types: Expressions and Type Values}\label{Composite Types}
+\hhhh\pdefindex{composite!type}\pconindex{type!composite}\hhhh\pdefindex{composite!type!expression}\pconindex{type!composite!expression} 
+
+\begynd
+\pind Composite types have composite values.
+\pind That is, values which we consider to have proper constituent
+      (sub-)values, 
+\pind i.e., can, to us, be meaningfully ``taken apart''. 
+\afslut
+
+\pos{
+From these one can form type expressions: finite sets, infinite sets, 
+Cartesian products, lists, maps, etc. 
+
+Let \textsf{A}, \textsf{B} and \textsf{C} be any type names or type
+expressions, then these are the composite types, hence, type expressions:}{}
+
+\nrslframebox{Composite Type Expressions}{
+%\RSLatex
+%  [7] A-set&\index{symbind}{typeeb@T\kw{-set}}&
+%  [8] A-infset&\index{symbind}{typeeb@T\kw{-infset}}&
+%  [9] A >< B >< ... >< C&\index{symbind}{typeeb@\protect{T$_1$ \TIMES\ T$_2$\ \TIMES\ ... \TIMES\ T$_n$}}\label{rsl[9]}\index{symbind}{typeeb@\protect{(T$_1$\TIMES T$_2$\TIMES ... \TIMES T$_n$)}}&
+%  [10] A-list&\index{symbind}{typeeb@\protect{T$^{\ast}$}}\label{rsl[10]}& 
+%  [11] A-inflist&\index{symbind}{typeeb@\protect{T$^{\omega}$}}\label{rsl[11]}&
+%  [12] A -m-> B&\index{symbind}{typeeb@\protect{T$_i$}\protect{\MARROW}\protect{T$_j$}}&
+%  [13] A -> B&\index{symbind}{typeeb@\protect{T$_i$\protect{\RIGHTARROW}{T$_j$}}}& 
+%  [14] A -~-> B&\index{symbind}{typeeb@\protect{T$_i$\protect{\PARRIGHTARROW}{T$_j$}}}&
+%  [15] A | B | ... | C&\index{symbind}{typeeb@\protect{T$_1\mid\ $T$_2\mid\ ...\mid\ $T$_1\mid\ $T$_n$}}&
+%  [16] mk_id(sel_a:A,...,sel_b:B)&\index{symbind}{typeeb@\protect{mk\_id(s$_1$:T$_1$,s$_2$:T$_2$,...,s$_n$:T$_n$)}}&
+%  [17] sel_a:A ... sel_b:B&\index{symbind}{typeeb@\protect{s$_1$:T$_1$\ s$_2$:T$_2$\ ...\ s$_n$:T$_n$}}&
+%\endRSLatex
+\bp
+\>{\LBRACKET}7{\RBRACKET} A\kw{-set}\index{symbind}{typeeb@T\kw{-set}}\\
+\>{\LBRACKET}8{\RBRACKET} A\kw{-infset}\index{symbind}{typeeb@T\kw{-infset}}\\
+\>{\LBRACKET}9{\RBRACKET} A {\TIMES} B {\TIMES} {\DOTDOTDOT} {\TIMES} C\index{symbind}{typeeb@\protect{T$_1$ \TIMES\ T$_2$\ \TIMES\ ... \TIMES\ T$_n$}}\label{rsl[9]}\index{symbind}{typeeb@\protect{(T$_1$\TIMES T$_2$\TIMES ... \TIMES T$_n$)}}\\
+\>{\LBRACKET}10{\RBRACKET} A$^{\ast}$\index{symbind}{typeeb@\protect{T$^{\ast}$}}\label{rsl[10]} \\
+\>{\LBRACKET}11{\RBRACKET} A$^{\omega}$\index{symbind}{typeeb@\protect{T$^{\omega}$}}\label{rsl[11]}\\
+\>{\LBRACKET}12{\RBRACKET} A {\MARROW} B\index{symbind}{typeeb@\protect{T$_i$}\protect{\MARROW}\protect{T$_j$}}\\
+\>{\LBRACKET}13{\RBRACKET} A {\RIGHTARROW} B\index{symbind}{typeeb@\protect{T$_i$\protect{\RIGHTARROW}{T$_j$}}} \\
+\>{\LBRACKET}14{\RBRACKET} A {\PARRIGHTARROW} B\index{symbind}{typeeb@\protect{T$_i$\protect{\PARRIGHTARROW}{T$_j$}}}\\
+\>{\LBRACKET}15{\RBRACKET} A {\BAR} B {\BAR} {\DOTDOTDOT} {\BAR} C\index{symbind}{typeeb@\protect{T$_1\mid\ $T$_2\mid\ ...\mid\ $T$_1\mid\ $T$_n$}}\\
+\>{\LBRACKET}16{\RBRACKET} mk\_id(sel\_a:A,{\DOTDOTDOT},sel\_b:B)\index{symbind}{typeeb@\protect{mk\_id(s$_1$:T$_1$,s$_2$:T$_2$,...,s$_n$:T$_n$)}}\\
+\>{\LBRACKET}17{\RBRACKET} sel\_a:A {\DOTDOTDOT} sel\_b:B\index{symbind}{typeeb@\protect{s$_1$:T$_1$\ s$_2$:T$_2$\ ...\ s$_n$:T$_n$}}
+\ep
+}
+
+\pt{
+\noindent
+The following are generic type expressions:
+
+\begin{enumerate}\setei
+\item\label{tseb.rsl.7}
+      The set type of finite cardinality set values.
+\item\label{tseb.rsl.8}
+      The set type of infinite and finite cardinality set values.
+\item\label{tseb.rsl.9}
+      The Cartesian type of Cartesian values.
+\item\label{tseb.rsl.10}
+      The list type of finite length list values.
+\item\label{tseb.rsl.11}
+      The list type of infinite and finite length list values.
+\item\label{tseb.rsl.12}
+      The map type of finite definition set map values.
+\item\label{tseb.rsl.13}
+      The function type of total function values.
+\item\label{tseb.rsl.14}
+      The function type of partial function values.
+\dbeat{%%%%%%%%%%%%%%%%%%%%%%\item\label{tseb.rsl.15}
+      In \textsf{(A)} \textsf{A} is constrained to be:
+\begin{itemize}
+\item either a Cartesian \textsf{B {\TIMES} C {\TIMES} {\DOTDOTDOT}
+      {\TIMES} D}, in which case it is identical to type expression
+    kind 9,
+\item or not to be the name of a built-in type (cf., 1--6)
+      or of a type, in which case the parentheses serve as simple
+      delimiters, e.g.,  \textsf{(A {\MARROW} B),} or
+      \textsf{(A$^{\ast}$)\kw{-set},} or \textsf{(A\kw{-set})$^{\ast}$}, or
+      \textsf{(A{\BAR}B) {\MARROW} (C{\BAR}D{\BAR}(E{\MARROW}F))}, etc.
+\end{itemize}
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\item\label{tseb.rsl.16}
+      The postulated disjoint union of types \textsf{A,} \textsf{B,}
+  \ldots, and \textsf{C.} 
+\item\label{tseb.rsl.17}
+      The  record type of \textsf{mk\_id}-named record values
+  \textsf{mk\_id(av,{\DOTDOTDOT},bv),} where \textsf{av,} \ldots,
+  \textsf{bv,} are values of respective types. The distinct
+  identifiers \textsf{sel\_a,} etc., designate selector functions.
+\item\label{tseb.rsl.18}
+      The record type of unnamed record values
+  \textsf{(av,{\DOTDOTDOT},bv),} where \textsf{av,} \ldots,
+  \textsf{bv,} are values of respective types. The distinct
+  identifiers \textsf{sel\_a,} etc., designate selector functions.
+\savei\end{enumerate}
+}{}
+\index{symbind}{typeea@\protect{\underline{\textbf{Type Expressions}}}}
+
+\noindent
+Section\,\vref{chap2.tex.rsltext} introduces the extended \texttt{RSL}
+concepts of type name values and the type, $\mathbb{T}$, of type names.
+  
+\bbbb{Type Definitions}\label{tseb.rsl.Type Definitions}
+\bbb{Sorts --- Abstract Types}\label{tseb.rsl.Sorts}
+
+\begynd
+\pind Types can be (abstract) sorts 
+\pind in which case their structure is not specified:
+\afslut
+
+\nrslframebox{Sorts}{ 
+%\RSLatex
+%type
+%  A, B, ..., C
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A, B, {\DOTDOTDOT}, C
+\ep
+}
+ 
+\bbb{Concrete Types}\hhhh
+\index{symbind}{utypeec@\protect{\underline{\textbf{Type Definitions}}}|(}
+ 
+\begynd
+\pind Types can be concrete
+\pind in which case the structure of the type is specified by type
+      expressions:
+\afslut
+
+\nrslframebox{Type Definition}{\label{rsl.Type Definition}
+%\RSLatex
+%type
+%  A = Type_expr&\index{symbind}{utypeed@T = Type\_Expr}&
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A {\EQ} Type\_expr\index{symbind}{utypeed@T = Type\_Expr}
+\ep
+}
+\mnewfoil
+
+\noindent
+\xrsltxt{\sort{RSL Example:} \brcolor{Sets.}
+  \textsf{\textbf{Narrative:}}\index{pdefind}{sets} $H$ stand for the
+  domain type of 
+  street intersections -- we shall call then \textsf{hub}s, and let $L$ stand for the domain type of
+  segments of streets between immediately neighboring hubs -- we shall
+  call then \textsf{link}s.
+  Then $Hs$ and $Ls$ are to designate the types of finite sets of
+  zero, one or more hubs, respectively links. \textsf{\textbf{Formalisation:}}
+%\RSLatex
+%   type H, L, Hs=H-set, Ls=L-set &$\bullet$&
+%\endRSLatex   
+\bp
+\>\ \kw{type} H, L, Hs{\EQ}H\kw{-set}, Ls{\EQ}L\kw{-set} $\bullet$
+\ep
+}
+
+\noindent
+\xrsltxt{ \sort{RSL Example:} \brcolor{Cartesians.}
+  \textsf{\textbf{Narrative:}} \index{pdefind}{Cartesian} 
+  Let $RN$ stand for the
+  domain type of road nets consisting of hub aggregates, $HA$, and
+  link aggregates, $LA$. Hub and link aggregates can be observed from
+  road nets, and hub sets and link sets can be observed from hub,
+  respectively link aggregates. 
+\textsf{\textbf{Formalisation:}}
+%\RSLatex
+%   type RN = HA><LA, Hs, Ls
+%   value obs_HA: RN->HA, obs_LA: RN- LA, obs_Hs: HA->Hs, obs_Ls: LA->Ls 
+%\endRSLatex 
+\bp
+\>\ \kw{type} RN {\EQ} HA{\TIMES}LA, Hs, Ls\\
+\>\ \kw{value} obs\_HA: RN{\RIGHTARROW}HA, obs\_LA: RN{\MINUS} LA, obs\_Hs: HA{\RIGHTARROW}Hs, obs\_Ls: LA{\RIGHTARROW}Ls 
+\ep
+\noindent
+Observer functions, \textsf{obs\_...} are not further defined -- beyond their signatures.
+They will (subsequently) be defined through axioms over their results\,$\bullet$}
+
+\mnewfoil
+
+\noindent 
+\begynd
+\pind \pos{Some s}{S}chematic type definitions\pos{ are}{}:
+\afslut
+
+\nrslframebox{Variety of Type Definitions}{
+%\RSLatex
+%[18]  Type_name = Type_expr /* without |&\,&s or subtypes */
+%[19]  Type_name = Type_expr_1 | Type_expr_2 | ... | Type_expr_n
+%[20]  Type_name == &\index{symbind}{utypeed@\protect{T==TE$_1$\,\protect{$\mid$}TE$_2$\,\protect{$\mid$}\,...\,\protect{$\mid$}\,TE$_n$}}&
+%        mk_id_1(s_a1:Type_name_a1,...,s_ai:Type_name_ai) |  
+%        ... | 
+%        mk_id_n(s_z1:Type_name_z1,...,s_zk:Type_name_zk) 
+%[21]  Type_name :: sel_a:Type_name_a  ...  sel_z:Type_name_z
+%[22]  Type_name = {| v:Type_name' :- &$\mathcal{P}$&(v) |}&\index{symbind}{utypeed@\protect{T=\protect{$\{\mid$}v:T\protect{$'\bullet$}P(v)\protect{$\mid\}$}}}&
+%\endRSLatex
+\bp
+{\LBRACKET}18{\RBRACKET}\ \ Type\_name {\EQ} Type\_expr {\LCOMMENT} without {\BAR}\,s or subtypes {\RCOMMENT}\\
+{\LBRACKET}19{\RBRACKET}\ \ Type\_name {\EQ} Type\_expr\_1 {\BAR} Type\_expr\_2 {\BAR} {\DOTDOTDOT} {\BAR} Type\_expr\_n\\
+{\LBRACKET}20{\RBRACKET}\ \ Type\_name {\EQ}{\EQ} \index{symbind}{utypeed@\protect{T==TE$_1$\,\protect{$\mid$}TE$_2$\,\protect{$\mid$}\,...\,\protect{$\mid$}\,TE$_n$}}\\
+\>\>\>\>mk\_id\_1(s\_a1:Type\_name\_a1,{\DOTDOTDOT},s\_ai:Type\_name\_ai) {\BAR}\ \ \\
+\>\>\>\>{\DOTDOTDOT} {\BAR} \\
+\>\>\>\>mk\_id\_n(s\_z1:Type\_name\_z1,{\DOTDOTDOT},s\_zk:Type\_name\_zk) \\
+{\LBRACKET}21{\RBRACKET}\ \ Type\_name :: sel\_a:Type\_name\_a\ \ {\DOTDOTDOT}\ \ sel\_z:Type\_name\_z\\
+{\LBRACKET}22{\RBRACKET}\ \ Type\_name {\EQ} {\LBRACE}{\BAR} v:Type\_name{\PRIM} {\RDOT} $\mathcal{P}$(v) {\BAR}{\RBRACE}\index{symbind}{utypeed@\protect{T=\protect{$\{\mid$}v:T\protect{$'\bullet$}P(v)\protect{$\mid\}$}}}
+\ep
+}
+
+\mnewfoil
+\noindent 
+\begynd
+\pind where a form of [19--20] is provided by combining the types:
+\afslut
+
+\nrslframebox{Record Types}{\label{tseb.rsl.Record Types}
+%\RSLatex
+%[23]  Type_name = A | B | ... | Z
+%[24]  A == mk_id_1(s_a1:A_1,...,s_ai:A_i) 
+%[25]  B == mk_id_2(s_b1:B_1,...,s_bj:B_j) 
+%[26]  ...  
+%[27]  Z == mk_id_n(s_z1:Z_1,...,s_zk:Z_k)
+%\endRSLatex
+\bp
+{\LBRACKET}23{\RBRACKET}\ \ Type\_name {\EQ} A {\BAR} B {\BAR} {\DOTDOTDOT} {\BAR} Z\\
+{\LBRACKET}24{\RBRACKET}\ \ A {\EQ}{\EQ} mk\_id\_1(s\_a1:A\_1,{\DOTDOTDOT},s\_ai:A\_i) \\
+{\LBRACKET}25{\RBRACKET}\ \ B {\EQ}{\EQ} mk\_id\_2(s\_b1:B\_1,{\DOTDOTDOT},s\_bj:B\_j) \\
+{\LBRACKET}26{\RBRACKET}\ \ {\DOTDOTDOT}\ \ \\
+{\LBRACKET}27{\RBRACKET}\ \ Z {\EQ}{\EQ} mk\_id\_n(s\_z1:Z\_1,{\DOTDOTDOT},s\_zk:Z\_k)
+\ep
+\noindent
+Of these we shall almost exclusively make use of [23--27].
+\mnewfoil
+
+\xrsltxt{\sort{Disjoint Types.}
+  \textsf{\textbf{Narrative:}}\index{pdefind}{disjoint!types}
+A pipeline consists of a finite set of zero, one or more [interconnected]\footnote{\LLLL
+  Although interconnected we shall not model pipelines as lists.} pipe
+units. Pipe units are either wells, or are pumps, or are valves, or
+are joins, or are forks, or are sinks.
+\textsf{\textbf{Formalisation:}} 
+%\RSLatex
+%type PL = P-set, P == WU|PU|VA|JO|FO|SI, Wu,Pu,Vu,Ju,Fu,Su
+%   &\,\,\,&WU::mkWU(swu:Wu), PU::mkPU(spu:Pu), VA::mkVU(svu:Vu), 
+%   &\,\,\,&JO::mkJu(sju:Ju), FO::mkFu(sfu:Fu), SI::mkSi(ssu:Su)
+%\endRSLatex 
+\bp
+\kw{type} PL {\EQ} P\kw{-set}, P {\EQ}{\EQ} WU{\BAR}PU{\BAR}VA{\BAR}JO{\BAR}FO{\BAR}SI, Wu,Pu,Vu,Ju,Fu,Su\\
+\>\ \,\,\,WU::mkWU(swu:Wu), PU::mkPU(spu:Pu), VA::mkVU(svu:Vu), \\
+\>\ \,\,\,JO::mkJu(sju:Ju), FO::mkFu(sfu:Fu), SI::mkSi(ssu:Su)
+\ep
+\noindent
+where we leave types \textsf{Wu, Pu, Vu, Ju, Fu} and \textsf{Su} further undefined\,$\bullet$%
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mnewfoil
+
+\pos{
+\noindent
+Types \textsf{A, B, ..., Z} are disjoint, i.e., shares no values,
+provided all \textsf{mk\_id\_k} are distinct and due to the use of the
+disjoint record type constructor \textsf{{\EQ}{\EQ}}.}{}
+
+%\RSLatex
+%axiom
+%  all a1:A_1, a2:A_2, ..., ai:Ai :-
+%    s_a1(mk_id_1(a1,a2,...,ai))=a1 /\ s_a2(mk_id_1(a1,a2,...,ai))=a2 /\
+%    ... /\ s_ai(mk_id_1(a1,a2,...,ai))=ai /\ 
+%  all a:A :- let mk_id_1(a1',a2',...,ai') = a in 
+%    a1' = s_a1(a) /\ a2' = s_a2(a) /\ ... /\ ai' = s_ai(a) end 
+%\endRSLatex
+\bp
+\kw{axiom}\\
+\>{\ALL} a1:A\_1, a2:A\_2, {\DOTDOTDOT}, ai:Ai {\RDOT}\\
+\>\>s\_a1(mk\_id\_1(a1,a2,{\DOTDOTDOT},ai)){\EQ}a1 {\WEDGE} s\_a2(mk\_id\_1(a1,a2,{\DOTDOTDOT},ai)){\EQ}a2 {\WEDGE}\\
+\>\>{\DOTDOTDOT} {\WEDGE} s\_ai(mk\_id\_1(a1,a2,{\DOTDOTDOT},ai)){\EQ}ai {\WEDGE} \\
+\>{\ALL} a:A {\RDOT} \kw{let} mk\_id\_1(a1{\PRIM},a2{\PRIM},{\DOTDOTDOT},ai{\PRIM}) {\EQ} a \kw{in} \\
+\>\>a1{\PRIM} {\EQ} s\_a1(a) {\WEDGE} a2{\PRIM} {\EQ} s\_a2(a) {\WEDGE} {\DOTDOTDOT} {\WEDGE} ai{\PRIM} {\EQ} s\_ai(a) \kw{end} 
+\ep
+}
+
+\noindent
+\sort{Note:}\label{note-on-mk-type}
+\begynd
+\pind Values of type \textsf{A},
+\pind where that type is defined by \textsf{A::B{\TIMES}C{\TIMES}D},
+\pind can be expressed \textsf{A(b,c,d)} for \textsf{b:B, c:D, d:D}.
+\afslut
+
+\bbb{Subtypes}\label{tseb.rsl.Subtypes}%\hhhh
+
+\begynd
+\pind In {\dbrsl}, each type represents a set of values. Such a set can be
+      delimited by means of predicates.
+\pind The set of values \textsf{b} which have type \textsf{B} and which
+      satisfy the predicate $\mathcal{P}$, constitute the subtype A: 
+\afslut
+
+\nrslframebox{Subtypes}{
+%\RSLatex
+%type
+%  A = {| b:B :- &$\mathcal{P}$&(b) |}&\index{symbind}{utypeed@\protect{T=\protect{$\{\mid$}v:T\protect{$'\bullet$}P(v)\protect{$\mid\}$}}}&
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A {\EQ} {\LBRACE}{\BAR} b:B {\RDOT} $\mathcal{P}$(b) {\BAR}{\RBRACE}\index{symbind}{utypeed@\protect{T=\protect{$\{\mid$}v:T\protect{$'\bullet$}P(v)\protect{$\mid\}$}}}
+\ep
+}
+
+\noindent
+\xrsltxt{\sort{Subtype.} \textsf{\textbf{Narrative:}}\index{pdefind}{subtype} The subtype of even
+                                  natural numbers.
+
+\textsf{\textbf{Formalisation:}} \sf \kw{type} ENat {\EQ}
+{\LBRACE}{\BAR} en {\BAR} en:\kw{Nat} {\RDOT}
+is\_even\_natural\_number(en) {\BAR}{\RBRACE}\,\rm$\bullet$}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\label{tseb.rsl.Types.n} 
+
+\index{symbind}{utypeec@\protect{\underline{\textbf{Type Definitions}}}|)}
+\index{symbind}{loga@\protect{\underline{\textbf{Logic Constructs}}}|(}
+
+\nbbbbb{The Propositional and  Predicate Calculi}\label{tseb.rsl.The RSL
+  Predicate Calculus} 
+\bbbb{Propositions}\label{tseb.rsl.Propositional Expressions}
+
+\irsltxt{In logic, a proposition\pdefindex{proposition} is the meaning of a declarative
+  sentence. [A declarative sentence\pdefindex{declarative sentence} is a type of sentence that makes a statement]}
+
+\bbb{Propositional Expressions}
+
+\irsltxt{Propositional expressions\pdefindex{propositional!expression}, informally speaking, are
+  quantifier-free expressions having truth (or \sort{chaos})
+  values. {\ALL}, {\EXISTS} and {\EXISTS\,!} are quantifiers\pconindex{quantifier}, see below.
+  
+Below, we will first treat propositional expressions all of whose
+identifiers denote truth values. As we progress, in sections on
+\textsf{arithmetic, sets, list, maps}, etc., we shall extend the range of
+propositional expressions}
+
+\begynd
+\pind Let identifiers (or propositional expressions) \textsf{a, b, ..., c}
+      designate Boolean values (\kw{true} or \kw{false} [or \kw{chaos}]). 
+\pind Then: 
+\afslut
+
+\nrslframebox{Propositional Expressions}{
+%\RSLatex
+%  false, true&\index{symbind}{logic@\kw{false}}\index{symbind}{aaab@\kw{false}}\index{symbind}{aaab@\kw{true}}\index{symbind}{logic@\kw{true}}&
+%  a, b, ..., c ~a, a/\b, a\/b, a=>b, a=b, a~=b&\index{symbind}{logic@\protect{\SIM\ b}}\index{symbind}{logic@\protect{b$_i$ \WEDGE\ b$_j$}}\index{symbind}{logic@\protect{$b_i$ \VEE\ b$_j$}}\index{symbind}{logic@\protect{b$_i$ \DBLRIGHTARROW\ b$_j$}}&
+%\endRSLatex
+\bp
+\>\kw{false}, \kw{true}\index{symbind}{logic@\kw{false}}\index{symbind}{aaab@\kw{false}}\index{symbind}{aaab@\kw{true}}\index{symbind}{logic@\kw{true}}\\
+\>a, b, {\DOTDOTDOT}, c {\SIM}a, a{\WEDGE}b, a{\VEE}b, a{\DBLRIGHTARROW}b, a{\EQ}b, a{\NOTEQ}b\index{symbind}{logic@\protect{\SIM\ b}}\index{symbind}{logic@\protect{b$_i$ \WEDGE\ b$_j$}}\index{symbind}{logic@\protect{$b_i$ \VEE\ b$_j$}}\index{symbind}{logic@\protect{b$_i$ \DBLRIGHTARROW\ b$_j$}}
+\ep
+}
+
+\noindent 
+\begynd
+\pind are propositional expressions having Boolean values.
+\pind {\SIM}, \index{symbind}{booleanop@\protect{{\SIM}}}
+      {\WEDGE}, \index{symbind}{booleanop@\protect{{\WEDGE}}}
+      {\VEE}, \index{symbind}{booleanop@\protect{{\VEE}}}
+      {\DBLRIGHTARROW}, \index{symbind}{booleanop@\protect{{\DBLRIGHTARROW}}}
+      {\EQ}, \index{symbind}{booleanop@\protect{{\EQ}}}
+      {\NOTEQ} and \index{symbind}{booleanop@\protect{{\NOTEQ}}}
+      {\ALWAYS} \index{symbind}{booleanop@\protect{{\ALWAYS}}}
+      are Boolean connectives (i.e., operators). 
+\pind They can be read as: \sort{not}, \sort{and},
+      \sort{or, if then} (or \sort{implies}), \sort{equal,
+      not equal} and \sort{always}. 
+\afslut
+
+\nbbb{Propositional Calculus}
+
+\irsltxt{Propositional calculus\pdefindex{propositional!calculus} is a branch of logic. It is also
+  called propositional logic, statement logic, sentential calculus,
+  sentential logic, or sometimes zeroth-order logic. It deals with
+  propositions (which can be true or false) and relations between
+  propositions, including the construction of arguments based on
+  them. Compound propositions are formed by connecting propositions by
+  logical connectives. Propositions that contain no logical
+  connectives are called atomic propositions \wiki} 
+
+\noindent
+A simple two-value Boolean logic can be defined as follows:
+
+%\RSLatex
+%  type
+%    Bool
+%  value
+%    true, false
+%    ~: Bool -> Bool
+%    /\, \/, =>, =, ~=, is: Bool >< Bool -> Bool
+%  axiom &\label{ch2.logic.algebra.axioms}&
+%    all b,b':Bool :-
+%      ~b is if b then false else true end
+%      b /\ b' is if b then b' else false end
+%      b \/ b' is if b then true else b' end
+%      b => b' is if b then b' else true end
+%      b = b' is if (b/\b')\/(~b/\~b') then true else false end
+%      (b ~= b') is ~(b = b')
+%      (b is b') is (b = b')
+%\endRSLatex
+\bp
+\>\kw{type}\\
+\>\>\kw{Bool}\\
+\>\kw{value}\\
+\>\>\kw{true}, \kw{false}\\
+\>\>{\SIM}: \kw{Bool} {\RIGHTARROW} \kw{Bool}\\
+\>\>{\WEDGE}, {\VEE}, {\DBLRIGHTARROW}, {\EQ}, {\NOTEQ}, {\IS}: \kw{Bool} {\TIMES} \kw{Bool} {\RIGHTARROW} \kw{Bool}\\
+\>\kw{axiom} \label{ch2.logic.algebra.axioms}\\
+\>\>{\ALL} b,b{\PRIM}:\kw{Bool} {\RDOT}\\
+\>\>\>{\SIM}b {\IS} \kw{if} b \kw{then} \kw{false} \kw{else} \kw{true} \kw{end}\\
+\>\>\>b {\WEDGE} b{\PRIM} {\IS} \kw{if} b \kw{then} b{\PRIM} \kw{else} \kw{false} \kw{end}\\
+\>\>\>b {\VEE} b{\PRIM} {\IS} \kw{if} b \kw{then} \kw{true} \kw{else} b{\PRIM} \kw{end}\\
+\>\>\>b {\DBLRIGHTARROW} b{\PRIM} {\IS} \kw{if} b \kw{then} b{\PRIM} \kw{else} \kw{true} \kw{end}\\
+\>\>\>b {\EQ} b{\PRIM} {\IS} \kw{if} (b{\WEDGE}b{\PRIM}){\VEE}({\SIM}b{\WEDGE}{\SIM}b{\PRIM}) \kw{then} \kw{true} \kw{else} \kw{false} \kw{end}\\
+\>\>\>(b {\NOTEQ} b{\PRIM}) {\IS} {\SIM}(b {\EQ} b{\PRIM})\\
+\>\>\>(b {\IS} b{\PRIM}) {\IS} (b {\EQ} b{\PRIM})
+\ep
+
+\noindent
+\begynd
+\pind We shall, however, make use of a three-value Boolean logic.
+\pind The model-theory explanation of the meaning of propositional expressions 
+\begynd
+\pind is now given in terms of the \sfsl{truth tables} for the logic connectives:
+\afslut
+\afslut
+\begin{center}
+  \textbf{$\vee, \wedge,$ and \DBLRIGHTARROW\ Syntactic Truth Tables}
+  
+\vspace{2mm}
+\input{ch2or}\ \ \
+\input{ch2and}\ \ \ \label{rsl-truth tables}
+\input{ch2imply}
+\end{center}
+\noindent
+The two-value logic defined earlier `transpires' from the
+\kw{true,false} columns and rows of the above truth tables.
+ 
+\mnewfoil
+\bbbb{Predicates}\label{tseb.rsl.Simple Predicate
+  Expressions}\hhhh
+
+\irsltxt{Predicates are mathematical assertions that contains
+  variables, sometimes referred to as predicate variables, and may be
+  true or false depending on those variables' value or
+  values\footnote{\LLLL
+  https://calcworkshop.com/logic/predicate-logic/, and: predicate
+  logic, first-order logic or quantified logic is a formal language in
+  which propositions are expressed in terms of predicates, variables
+  and quantifiers. It is different from propositional logic which
+  lacks quantifiers https://brilliant.org/wiki/predicate-logic/.}}  
+
+\bbb{Predicate Expressions}
+
+\noindent
+\begynd
+\pind Let \textsf{x, y, ..., z} (or term expressions) designate non-Boolean
+      values,
+\pind and let $\mathcal{P}(x)$, $\mathcal{Q}(y)$ and $\mathcal{R}(z)$
+      be propositional or predicate expressions, then:
+\afslut
+
+\nrslframebox{Simple Predicate Expressions}{
+%\RSLatex
+%[28]  all&x&:X :- &$\mathcal{P}(x)$\index{symbind}{logic@\protect{\ALL\ a:A $\bullet$ P(a)}}& 
+%[29]  exists&y&:Y :- &$\mathcal{Q}(y)$\index{symbind}{logic@\protect{\EXISTS\ a:A $\bullet$ P(a)}}& 
+%[30]  exists!&z&:Z :- &$\mathcal{R}(z)$\index{symbind}{logic@\protect{\EXISTS "!\ a:A $\bullet$ P(a)}}&
+%\endRSLatex
+\bp
+{\LBRACKET}28{\RBRACKET}\ \ {\ALL}x:X {\RDOT} $\mathcal{P}(x)$\index{symbind}{logic@\protect{\ALL\ a:A $\bullet$ P(a)}} \\
+{\LBRACKET}29{\RBRACKET}\ \ {\EXISTS}y:Y {\RDOT} $\mathcal{Q}(y)$\index{symbind}{logic@\protect{\EXISTS\ a:A $\bullet$ P(a)}} \\
+{\LBRACKET}30{\RBRACKET}\ \ {\EXISTS}!z:Z {\RDOT} $\mathcal{R}(z)$\index{symbind}{logic@\protect{\EXISTS "!\ a:A $\bullet$ P(a)}}
+\ep
+}
+
+\noindent 
+\begynd
+\pind are quantified, i.e., predicate expressions. 
+\pind {\ALL}, {\EXISTS} and {\EXISTS\,!} are the quantifiers.
+\afslut
+
+\nbbb{Predicate Calculus}
+
+\pt{They are ``read'' as:
+  
+  [28] For all $x$ (values in type $X$) the predicate $\mathcal{P}(x)$ holds -- 
+       if that is not the case the expression yields truth value \sort{false}. 
+
+  [29] There exists (at least) one $y$ (value in type $Y$) such that
+       the predicate $\mathcal{Q}(y)$ holds -- 
+       if that is not the case the expression yields truth value \sort{false}.
+
+  [30] There exists a unique $z$ (value in type $Z$) such that the
+       predicate $\mathcal{R}(z)$ holds -- 
+       if that is not the case the expression yields truth value \sort{false}.}{}
+ 
+  [28--30]   The predicates $\mathcal{P}(x)$, $\mathcal{Q}(y)$ or
+     $\mathcal{R}(z)$ may yield \sort{chaos} in which case the whole
+     expression yields  \sort{chaos}.
+\index{symbind}{loga@\protect{\underline{\textbf{Logic Constructs}}}|)}
+
+%\nbbbbb{Concrete \dbrsl\ Types: Values and Operations}
+%\label{tseb.rsl.Concrete RSL Types}
+\bbbbb{Arithmetics}
+\irsltxt{\texttt{RSL} offers the usual set of arithmetic
+  operators. From these the usual kind of arithmetic expressions can
+  be formed.}
+\label{tseb.rsl.Artithmetic}
+\index{symbind}{baritha@\protect{\underline{\textbf{Arithmetic Constructs}}}|(}
+
+\nrslframebox{Arithmetic}{
+%\RSLatex
+%type
+%  Nat, Int, Real
+%value
+%  +,-,*: Nat><Nat->Nat | Int><Int->Int | Real><Real->Real
+%  /: Nat><Nat-~->Nat | Int><Int-~->Int | Real><Real-~->Real
+%  <,<=,=,~=,>=,> (Nat|Int|Real) -> (Nat|Int|Real)
+%\endRSLatex
+\bp
+\kw{type}\\
+\>\kw{Nat}, \kw{Int}, \kw{Real}\\
+\kw{value}\\
+\>{\PLUS},{\MINUS},{\AST}: \kw{Nat}{\TIMES}\kw{Nat}{\RIGHTARROW}\kw{Nat} {\BAR} \kw{Int}{\TIMES}\kw{Int}{\RIGHTARROW}\kw{Int} {\BAR} \kw{Real}{\TIMES}\kw{Real}{\RIGHTARROW}\kw{Real}\\
+\>/: \kw{Nat}{\TIMES}\kw{Nat}{\PARRIGHTARROW}\kw{Nat} {\BAR} \kw{Int}{\TIMES}\kw{Int}{\PARRIGHTARROW}\kw{Int} {\BAR} \kw{Real}{\TIMES}\kw{Real}{\PARRIGHTARROW}\kw{Real}\\
+\>{\LT},{\LEQ},{\EQ},{\NOTEQ},{\GEQ},{\GT} (\kw{Nat}{\BAR}\kw{Int}{\BAR}\kw{Real}) {\RIGHTARROW} (\kw{Nat}{\BAR}\kw{Int}{\BAR}\kw{Real})
+\ep
+}
+\index{symbind}{barithb@\protect{a$_i$+a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i-$a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$*a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$/a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$\protect{\LT}a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$\protect{\LEQ}a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$\protect{\EQ}a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$\protect{\NOTEQ}a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$\protect{\GEQ}a$_j$}}%
+\index{symbind}{barithb@\protect{a$_i$\protect{\GT}a$_j$}}%
+\index{symbind}{baritha@\protect{\underline{\textbf{Arithmetic Constructs}}}|)}
+
+\mnewfoil
+\bbbbb{Comprehensive Expressions}\label{mono-rsl.Set Expressions}
+\label{tseb.rsl.Set Enumerations}
+\index{symbind}{sea@\protect{\underline{\textbf{Set Constructs}}}|(}
+\irsltxt{Comprehensive expressions are common in mathematics
+  texts. They capture properties conveniently abstractly}
+
+\nbbbb{Set Enumeration and Comprehension}\hhhh
+
+\nbbb{Set Enumeration}\hhhh
+
+
+%\pt
+{Let the below $a$'s denote values of type $A$:}{} 
+
+\nrslframebox{Set Enumerations}{
+%\RSLatex
+%  {{}, {a}, {e&$_1$&,e&$_2$&,...,e&$_n$&}, ...} isin A-set&\index{symbind}{seta@\protect{$\{\}$}}\index{symbind}{setb@\protect{$\{e_1,e_2,...,e_n\}$}}&
+%  {{}, {a}, {e&$_1$&,e&$_2$&,...,e&$_n$&}, ..., {e&$_1$&,e&$_2$&,...}} isin A-infset
+%\endRSLatex
+\bp
+\>{\LBRACE}{\LBRACE}{\RBRACE}, {\LBRACE}a{\RBRACE}, {\LBRACE}e$_1$,e$_2$,{\DOTDOTDOT},e$_n${\RBRACE}, {\DOTDOTDOT}{\RBRACE} {\ISIN} A\kw{-set}\index{symbind}{seta@\protect{$\{\}$}}\index{symbind}{setb@\protect{$\{e_1,e_2,...,e_n\}$}}\\
+\>{\LBRACE}{\LBRACE}{\RBRACE}, {\LBRACE}a{\RBRACE}, {\LBRACE}e$_1$,e$_2$,{\DOTDOTDOT},e$_n${\RBRACE}, {\DOTDOTDOT}, {\LBRACE}e$_1$,e$_2$,{\DOTDOTDOT}{\RBRACE}{\RBRACE} {\ISIN} A\kw{-infset}
+\ep
+}
+
+\nbbb{Set Comprehension}\hhhh
+\noindent 
+\begynd
+\pind The expression, last line below, to the right of the \IS, expresses
+      set comprehension. 
+\pind The expression ``builds'' the set of values
+      satisfying the given predicate. 
+\pind It is abstract in the sense
+      that it does not do so by following a concrete algorithm.
+\afslut
+
+\nrslframebox{Set Comprehension}{\label{tseb.rsl.Set Comprehension}
+%\RSLatex
+%type
+%  A, B
+%  P = A -> Bool
+%  Q = A -~-> B
+%value
+%  comprehend: A-infset >< P >< Q -> B-infset
+%  comprehend(s,P,Q) is { Q(a) | a:A :- a isin s /\ P(a)}&\index{symbind}{setc@\protect{$\{${Q}(a){$\mid$}a:A{$\bullet$}a{$\in$}s{$\wedge$}{P}(a)$\}$}}&
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A, B\\
+\>P {\EQ} A {\RIGHTARROW} \kw{Bool}\\
+\>Q {\EQ} A {\PARRIGHTARROW} B\\
+\kw{value}\\
+\>comprehend: A\kw{-infset} {\TIMES} P {\TIMES} Q {\RIGHTARROW} B\kw{-infset}\\
+\>comprehend(s,P,Q) {\IS} {\LBRACE} Q(a) {\BAR} a:A {\RDOT} a {\ISIN} s {\WEDGE} P(a){\RBRACE}\index{symbind}{setc@\protect{$\{${Q}(a){$\mid$}a:A{$\bullet$}a{$\in$}s{$\wedge$}{P}(a)$\}$}}
+\ep
+}
+\index{symbind}{sea@\protect{\underline{\textbf{Set Constructs}}}|)}
+
+%\nbbbb{Cartesian Expressions}
+\bbb{Cartesian Enumeration}\label{rsl.Cartesian Enumerations}
+\label{tseb.rsl.Cartesian Enumerations}
+\index{symbind}{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|(}
+\begynd
+\pind Let $e$ range over values of Cartesian types involving $A$, $B$,
+      $\ldots$, $C$,
+\pind then the below expressions are simple Cartesian enumerations: 
+\afslut
+
+\nrslframebox{Cartesian Enumerations}{
+%\RSLatex
+%type
+%  A, B, ..., C
+%  A >< B >< ... >< C
+%value
+%  (e1,e2,...,en)&\index{symbind}{cartesian@\protect{(e$_1$,e$_2$,...,e$_n$)}}&
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A, B, {\DOTDOTDOT}, C\\
+\>A {\TIMES} B {\TIMES} {\DOTDOTDOT} {\TIMES} C\\
+\kw{value}\\
+\>(e1,e2,{\DOTDOTDOT},en)\index{symbind}{cartesian@\protect{(e$_1$,e$_2$,...,e$_n$)}}
+\ep
+}
+\index{symbind}{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|)}
+
+%\bbbb{List Expressions}\label{rsl.List Enumerations}\hhhh
+\bbbb{List Enumeration and Comprehension}\hhhh\label{rsl.List Enumerations}
+\label{tseb.rsl.List Enumerations}
+
+\bbb{List Enumeration}
+\index{symbind}{klista@\protect{\underline{\textbf{List Constructs}}}|(}
+
+\begynd
+\pind Let $a$ range over values of type $A$,
+\pind then the below expressions are simple list enumerations:
+\afslut
+
+\nrslframebox{List Enumerations}{
+%\RSLatex
+%  {<..>, <.e.>, ..., <.e1,e2,...,en.>, ...} isin A-list&\index{symbind}{klistb@\protect{e$_{1}<$e$_2$,e$_2$,...,e$_{n}>$}}\index{symbind}{klistb@\protect{$<>$}}&
+%  {<..>, <.e.>, ..., <.e1,e2,...,en.>, ..., <.e1,e2,...,en,... .>, ...} isin A-inflist
+%
+%  <. a$_i$ .. a$_j$ .>&\index{symbin}{klistb@\protect{{\LANGLE}ei{\DOTDOT}ej{\RANGLE}}}&
+%\endRSLatex
+\bp
+\>{\LBRACE}{\LANGLE}{\RANGLE}, {\LANGLE}e{\RANGLE}, {\DOTDOTDOT}, {\LANGLE}e1,e2,{\DOTDOTDOT},en{\RANGLE}, {\DOTDOTDOT}{\RBRACE} {\ISIN} A$^{\ast}$\index{symbind}{klistb@\protect{e$_{1}<$e$_2$,e$_2$,...,e$_{n}>$}}\index{symbind}{klistb@\protect{$<>$}}\\
+\>{\LBRACE}{\LANGLE}{\RANGLE}, {\LANGLE}e{\RANGLE}, {\DOTDOTDOT}, {\LANGLE}e1,e2,{\DOTDOTDOT},en{\RANGLE}, {\DOTDOTDOT}, {\LANGLE}e1,e2,{\DOTDOTDOT},en,{\DOTDOTDOT} {\RANGLE}, {\DOTDOTDOT}{\RBRACE} {\ISIN} A$^{\omega}$\\
+\\
+\>{\LANGLE} a$\_i$ {\DOTDOT} a$\_j$ {\RANGLE}\index{symbin}{klistb@\protect{{\LANGLE}ei{\DOTDOT}ej{\RANGLE}}}
+\ep
+}
+
+\noindent 
+\begynd
+\pind The last line above assumes $a_i$ and $a_j$ to be integer-valued
+      expressions. 
+\pind It then expresses the set of integers from the value of
+      $e_i$ to and including the value of $e_j$. 
+\pind If the latter is smaller than the former, then the list is empty.
+\afslut
+
+\nbbb{List Comprehension}\hhhh
+
+\begynd
+\pind The last line below expresses list comprehension.
+\afslut
+
+\nrslframebox{List Comprehension}{\label{tseb.rsl.List Comprehension}
+%\RSLatex
+%type
+%  A, B, P = A -> Bool, Q = A -~-> B
+%value
+%  comprehend: A-inflist >< P >< Q -~-> B-inflist
+%  comprehend(l,P,Q) is <. Q(l(i)) | i in <.1..len l.> :- P(l(i)).>&\index{symbind}{klistb@\protect{$<$Q(l(i))$\mid$i \kw{in}$<$1..\kw{len}l$>\bullet$P(a)$>$}}&
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A, B, P {\EQ} A {\RIGHTARROW} \kw{Bool}, Q {\EQ} A {\PARRIGHTARROW} B\\
+\kw{value}\\
+\>comprehend: A$^{\omega}$ {\TIMES} P {\TIMES} Q {\PARRIGHTARROW} B$^{\omega}$\\
+\>comprehend(l,P,Q) {\IS} {\LANGLE} Q(l(i)) {\BAR} i \kw{in} {\LANGLE}1{\DOTDOT}\kw{len} l{\RANGLE} {\RDOT} P(l(i)){\RANGLE}\index{symbind}{klistb@\protect{$<$Q(l(i))$\mid$i \kw{in}$<$1..\kw{len}l$>\bullet$P(a)$>$}}
+\ep
+}
+\index{symbind}{klista@\protect{\underline{\textbf{List Constructs}}}|)}
+
+\nbbbb{Map Enumeration and Comprehension}
+\label{tseb.rsl.Map Enumerations}
+\index{symbind}{maa@\protect{\underline{\textbf{Map Constructs}}}|(}
+\nbbb{Map Enumeration}
+
+\begynd
+\pind Let (possibly indexed) $u$ and $v$ range over values of type $T1$
+      and $T2$, respectively, 
+\pind then the below expressions are simple map enumerations: 
+\afslut
+
+
+\nrslframebox{Map Enumerations}{
+%\RSLatex
+%type 
+%  T1, T2
+%  M = T1 -m-> T2
+%value
+%  u,u1,u2,...,un:T1, v,v1,v2,...,vn:T2
+%  [],  [u+>v],  ...,  [u1+>v1,u2+>v2,...,un+>vn] all isin M&\index{symbind}{mapa@\protect{[\,]}}\index{symbind}{mapb@\protect{[u$_1${\protect\MAPSTO}v$_1$,u$_2${\protect\MAPSTO}v$_2$,...,u$_n${\protect\MAPSTO}v$_n$]}}&
+%\endRSLatex
+\bp
+\kw{type} \\
+\>T1, T2\\
+\>M {\EQ} T1 {\MARROW} T2\\
+\kw{value}\\
+\>u,u1,u2,{\DOTDOTDOT},un:T1, v,v1,v2,{\DOTDOTDOT},vn:T2\\
+\>{\emptymap},\ \ {\LBRACKET}u{\MAPSTO}v{\RBRACKET},\ \ {\DOTDOTDOT},\ \ {\LBRACKET}u1{\MAPSTO}v1,u2{\MAPSTO}v2,{\DOTDOTDOT},un{\MAPSTO}vn{\RBRACKET} {\ALL} {\ISIN} M\index{symbind}{mapa@\protect{[\,]}}\index{symbind}{mapb@\protect{[u$_1${\protect\MAPSTO}v$_1$,u$_2${\protect\MAPSTO}v$_2$,...,u$_n${\protect\MAPSTO}v$_n$]}}
+\ep
+}
+
+\nbbb{Map Comprehension}
+
+\noindent
+\begynd
+\pind The last line below expresses map comprehension:
+\afslut
+ 
+
+\nrslframebox{Map Comprehension}{\label{tseb.rsl.Map Comprehension}
+%\RSLatex
+%type
+%  U, V, X, Y
+%  M = U -m-> V
+%  F = U -~-> X
+%  G = V -~-> Y
+%  P = U -> Bool
+%value
+%  comprehend: M><F><G><P -> (X -m-> Y)
+%  comprehend(m,F,G,P) is [ F(u) +> G(m(u)) | u:U :- u isin dom m /\ P(u)]&\index{symbind}{mapc@\protect{[F(e)\protect{\MAPSTO}G(m(e))$\mid$e:E$\bullet$e{\ISIN}\kw{dom}\,m{\WEDGE}P(e)]}}& 
+%\endRSLatex
+\bp
+\kw{type}\\
+\>U, V, X, Y\\
+\>M {\EQ} U {\MARROW} V\\
+\>F {\EQ} U {\PARRIGHTARROW} X\\
+\>G {\EQ} V {\PARRIGHTARROW} Y\\
+\>P {\EQ} U {\RIGHTARROW} \kw{Bool}\\
+\kw{value}\\
+\>comprehend: M{\TIMES}F{\TIMES}G{\TIMES}P {\RIGHTARROW} (X {\MARROW} Y)\\
+\>comprehend(m,F,G,P) {\IS} {\LBRACKET} F(u) {\MAPSTO} G(m(u)) {\BAR} u:U {\RDOT} u {\ISIN} \kw{dom} m {\WEDGE} P(u){\RBRACKET}\index{symbind}{mapc@\protect{[F(e)\protect{\MAPSTO}G(m(e))$\mid$e:E$\bullet$e{\ISIN}\kw{dom}\,m{\WEDGE}P(e)]}} 
+\ep
+}
+\index{symbind}{maa@\protect{\underline{\textbf{Map Constructs}}}|)}
+
+\nbbbbb{Operations}
+
+\nbbbb{Set Operations}\label{mono-rsl.Set Operations}\LLL
+\bbb{Set Operator Signatures}\LLL
+\index{symbind}{sea@\protect{\underline{\textbf{Set Constructs}}}|(}
+\label{tseb.rsl.Set Operations}
+\wrtrt{\volchapsec{1}{13}{2}}
+
+\nrslframebox{Set Operator Signatures}{ %\begin{multicols}{2}
+%\RSLatex
+%value
+%  &\ref{tseb.rsl.so1}&  isin: A >< A-infset -> Bool&\index{symbind}{set@\protect{e\ISIN{s}}}&
+%  &\ref{tseb.rsl.so2}&  ~isin: A >< A-infset -> Bool&\index{symbind}{set@\protect{e\NOTISIN{s}}}&
+%  &\ref{tseb.rsl.so3}&  union: A-infset >< A-infset -> A-infset&\index{symbind}{set@\protect{s$_i$\UNION{s$_j$}}}&
+%  &\ref{tseb.rsl.so4}&  union: (A-infset)-infset -> A-infset&\index{symbind}{set@\protect{\UNION{$\{$s$_1$,s$_2$,...,s$_{n}\}$}}}&
+%  &\ref{tseb.rsl.so5}&  inter: A-infset >< A-infset -> A-infset&\index{symbind}{set@\protect{s$_i$\INTER{s$_j$}}}&
+%  &\ref{tseb.rsl.so6}&  inter: (A-infset)-infset -> A-infset&\index{symbind}{set@\protect{\INTER{$\{$s$_1$,s$_2$,...,s$_{n}\}$}}}&
+%  &\ref{tseb.rsl.so7}&  \: A-infset >< A-infset -> A-infset&\index{symbind}{set@\protect{s$_{i}${\protect$\setminus$}{s$_j$}}}&
+%  &\ref{tseb.rsl.so8}&  <<: A-infset >< A-infset -> Bool&\index{symbind}{set@\protect{s$_i$\SUBSET{s$_j$}}}&
+%  &\ref{tseb.rsl.so9}&  <<=: A-infset >< A-infset -> Bool&\index{symbind}{set@\protect{s$_i$\SUBSETEQ{s$_j$}}}&
+%  &\ref{tseb.rsl.so10}&  =: A-infset >< A-infset -> Bool&\index{symbind}{set@\protect{s$_i$\EQ{s$_j$}}}&
+%  &\ref{tseb.rsl.so11}&  ~=: A-infset >< A-infset -> Bool&\index{symbind}{set@\protect{s$_i$\NOTEQ{s$_j$}}}&
+%  &\ref{tseb.rsl.so12}&  card: A-infset -~-> Nat&\index{symbind}{set@\protect{\kw{card}\,s}}&
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\ref{tseb.rsl.so1}\ \ {\ISIN}: A {\TIMES} A\kw{-infset} {\RIGHTARROW} \kw{Bool}\index{symbind}{set@\protect{e\ISIN{s}}}\\
+\>\ref{tseb.rsl.so2}\ \ {\NOTISIN}: A {\TIMES} A\kw{-infset} {\RIGHTARROW} \kw{Bool}\index{symbind}{set@\protect{e\NOTISIN{s}}}\\
+\>\ref{tseb.rsl.so3}\ \ {\UNION}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} A\kw{-infset}\index{symbind}{set@\protect{s$_i$\UNION{s$_j$}}}\\
+\>\ref{tseb.rsl.so4}\ \ {\UNION}: (A\kw{-infset})\kw{-infset} {\RIGHTARROW} A\kw{-infset}\index{symbind}{set@\protect{\UNION{$\{$s$_1$,s$_2$,...,s$_{n}\}$}}}\\
+\>\ref{tseb.rsl.so5}\ \ {\INTER}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} A\kw{-infset}\index{symbind}{set@\protect{s$_i$\INTER{s$_j$}}}\\
+\>\ref{tseb.rsl.so6}\ \ {\INTER}: (A\kw{-infset})\kw{-infset} {\RIGHTARROW} A\kw{-infset}\index{symbind}{set@\protect{\INTER{$\{$s$_1$,s$_2$,...,s$_{n}\}$}}}\\
+\>\ref{tseb.rsl.so7}\ \ {\SETMINUS}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} A\kw{-infset}\index{symbind}{set@\protect{s$_{i}${\protect$\setminus$}{s$_j$}}}\\
+\>\ref{tseb.rsl.so8}\ \ {\SUBSET}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} \kw{Bool}\index{symbind}{set@\protect{s$_i$\SUBSET{s$_j$}}}\\
+\>\ref{tseb.rsl.so9}\ \ {\SUBSETEQ}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} \kw{Bool}\index{symbind}{set@\protect{s$_i$\SUBSETEQ{s$_j$}}}\\
+\>\ref{tseb.rsl.so10}\ \ {\EQ}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} \kw{Bool}\index{symbind}{set@\protect{s$_i$\EQ{s$_j$}}}\\
+\>\ref{tseb.rsl.so11}\ \ {\NOTEQ}: A\kw{-infset} {\TIMES} A\kw{-infset} {\RIGHTARROW} \kw{Bool}\index{symbind}{set@\protect{s$_i$\NOTEQ{s$_j$}}}\\
+\>\ref{tseb.rsl.so12}\ \ \kw{card}: A\kw{-infset} {\PARRIGHTARROW} \kw{Nat}\index{symbind}{set@\protect{\kw{card}\,s}}
+\ep
+}
+
+\nbbb{Set Operation Examples}\hhhh
+
+\nrslframebox{Set Operation Examples}{
+%\RSLatex
+%&\kw{examples}&
+%  a isin {a,b,c}
+%  a ~isin {}, a ~isin {b,c}
+%  {a,b,c} union {a,b,d,e} = {a,b,c,d,e}       
+%  union{{a},{a,b},{a,d}} = {a,b,d}
+%  {a,b,c} inter {c,d,e} = {c}
+%  inter{{a},{a,b},{a,d}} = {a}
+%  {a,b,c} \ {c,d} = {a,b}
+%  {a,b} << {a,b,c}
+%  {a,b,c} <<= {a,b,c}
+%  {a,b,c} = {a,b,c}
+%  {a,b,c} ~= {a,b}
+%  card {} = 0, card {a,b,c} = 3
+%\endRSLatex
+\bp
+\kw{examples}\\
+\>a {\ISIN} {\LBRACE}a,b,c{\RBRACE}\\
+\>a {\NOTISIN} {\LBRACE}{\RBRACE}, a {\NOTISIN} {\LBRACE}b,c{\RBRACE}\\
+\>{\LBRACE}a,b,c{\RBRACE} {\UNION} {\LBRACE}a,b,d,e{\RBRACE} {\EQ} {\LBRACE}a,b,c,d,e{\RBRACE}\ \ \ \ \ \ \ \\
+\>{\UNION}{\LBRACE}{\LBRACE}a{\RBRACE},{\LBRACE}a,b{\RBRACE},{\LBRACE}a,d{\RBRACE}{\RBRACE} {\EQ} {\LBRACE}a,b,d{\RBRACE}\\
+\>{\LBRACE}a,b,c{\RBRACE} {\INTER} {\LBRACE}c,d,e{\RBRACE} {\EQ} {\LBRACE}c{\RBRACE}\\
+\>{\INTER}{\LBRACE}{\LBRACE}a{\RBRACE},{\LBRACE}a,b{\RBRACE},{\LBRACE}a,d{\RBRACE}{\RBRACE} {\EQ} {\LBRACE}a{\RBRACE}\\
+\>{\LBRACE}a,b,c{\RBRACE} {\SETMINUS} {\LBRACE}c,d{\RBRACE} {\EQ} {\LBRACE}a,b{\RBRACE}\\
+\>{\LBRACE}a,b{\RBRACE} {\SUBSET} {\LBRACE}a,b,c{\RBRACE}\\
+\>{\LBRACE}a,b,c{\RBRACE} {\SUBSETEQ} {\LBRACE}a,b,c{\RBRACE}\\
+\>{\LBRACE}a,b,c{\RBRACE} {\EQ} {\LBRACE}a,b,c{\RBRACE}\\
+\>{\LBRACE}a,b,c{\RBRACE} {\NOTEQ} {\LBRACE}a,b{\RBRACE}\\
+\>\kw{card} {\LBRACE}{\RBRACE} {\EQ} 0, \kw{card} {\LBRACE}a,b,c{\RBRACE} {\EQ} 3
+\ep
+%\end{multicols}
+}
+
+\nbbb{Informal Set Operator Explication}\hhhh
+
+The following is \sort{not} a definition of \texttt{RSL} semantics.
+In  \texttt{RSL} formulas we present an explication of  \texttt{RSL}
+operators. Read, what appears as definitions, {\IS}, as [a kind of]
+identities. 
+
+\begin{enumerate}\setei
+\item{\ISIN:}\label{tseb.rsl.so1} The membership operator expresses that an
+  element is 
+  a member of a set. 
+\item \NOTISIN:\label{tseb.rsl.so2} The nonmembership operator expresses that an
+  element is not a member of a set. 
+\item{\UNION:}\label{tseb.rsl.so3} The infix union operator. When applied to
+        two sets, the operator gives 
+        the set whose members are in either or both of the two operand 
+        sets.
+\item{\UNION:}\label{tseb.rsl.so4} The distributed prefix union operator. When
+        applied to a set of sets, the 
+        operator gives 
+        the set whose members are in some of the operand sets.
+\item{\INTER:}\label{tseb.rsl.so5} The infix intersection operator. When applied to two
+  sets, the operator gives the set whose members are in both of the
+  two operand sets. 
+\item{\INTER:}\label{tseb.rsl.so6} The prefix distributed intersection
+  operator. When applied to a set of  
+  sets, the operator gives the set whose members are in some of the
+  operand sets. 
+                             
+\mnewfoil
+  
+\item{\SETMINUS:}\label{tseb.rsl.so7} The set complement (or set subtraction)
+  operator. When applied to two sets, the operator gives the set whose
+  members are those of the left operand set which are not in the right
+  operand set.  
+\item{\SUBSETEQ:}\label{tseb.rsl.so8} The proper subset operator expresses that
+  all members 
+  of the left operand set are also in the right operand set. 
+\item{\SUBSET:}\label{tseb.rsl.so9} The proper subset operator expresses that
+  all members 
+  of the left operand set are also in the right operand set, and that
+  the two sets are not identical. 
+\item{\EQ:}\label{tseb.rsl.so10} The equal operator expresses that the two
+  operand sets are identical.  
+\item{\NOTEQ:}\label{tseb.rsl.so11} The nonequal operator expresses that the two operand
+  sets are \emph{not} identical.  
+\item{\kw{card}:}\label{tseb.rsl.so12} The cardinality operator gives the number
+  of elements 
+  in a finite set. 
+\savei\end{enumerate}
+
+\nbbb{Set Operator Explications}\hhhh
+
+The set operations can be ``equated'' as follows:
+
+\nrslframebox{Set Operator Explications}{
+%\RSLatex
+%value
+%  s' union s'' is { a | a:A :- a isin s' \/ a isin s'' }
+%  s' inter s'' is { a | a:A :- a isin s' /\ a isin s'' }
+%  s' \ s'' is { a | a:A :- a isin s' /\ a ~isin s'' }
+%  s' <<= s'' is all a:A :- a isin s' => a isin s'' 
+%  s' << s'' is s' <<= s'' /\ exists a:A :- a isin s'' /\ a ~isin s' 
+%  s' = s'' is all a:A :- a isin s' is a isin s'' is s<<=s' /\ s'<<=s 
+%  s' ~= s'' is s' inter s'' ~= {}
+%  card s is
+%    if s = {} then 0 else
+%    let a:A :- a isin s in 1 + card (s \ {a}) end end
+%    pre s /* is a finite set */&\index{symbind}{aaaa@\protect{\underline{\textbf{Literals}}}|(}& 
+%  card s is chaos /* tests for infinity of s */&\index{symbind}{aaab@\kw{chaos}}&
+%\endRSLatex
+\bp
+\kw{value}\\
+\>s{\PRIM} {\UNION} s{\PRIM}{\PRIM} {\IS} {\LBRACE} a {\BAR} a:A {\RDOT} a {\ISIN} s{\PRIM} {\VEE} a {\ISIN} s{\PRIM}{\PRIM} {\RBRACE}\\
+\>s{\PRIM} {\INTER} s{\PRIM}{\PRIM} {\IS} {\LBRACE} a {\BAR} a:A {\RDOT} a {\ISIN} s{\PRIM} {\WEDGE} a {\ISIN} s{\PRIM}{\PRIM} {\RBRACE}\\
+\>s{\PRIM} {\SETMINUS} s{\PRIM}{\PRIM} {\IS} {\LBRACE} a {\BAR} a:A {\RDOT} a {\ISIN} s{\PRIM} {\WEDGE} a {\NOTISIN} s{\PRIM}{\PRIM} {\RBRACE}\\
+\>s{\PRIM} {\SUBSETEQ} s{\PRIM}{\PRIM} {\IS} {\ALL} a:A {\RDOT} a {\ISIN} s{\PRIM} {\DBLRIGHTARROW} a {\ISIN} s{\PRIM}{\PRIM} \\
+\>s{\PRIM} {\SUBSET} s{\PRIM}{\PRIM} {\IS} s{\PRIM} {\SUBSETEQ} s{\PRIM}{\PRIM} {\WEDGE} {\EXISTS} a:A {\RDOT} a {\ISIN} s{\PRIM}{\PRIM} {\WEDGE} a {\NOTISIN} s{\PRIM} \\
+\>s{\PRIM} {\EQ} s{\PRIM}{\PRIM} {\IS} {\ALL} a:A {\RDOT} a {\ISIN} s{\PRIM} {\IS} a {\ISIN} s{\PRIM}{\PRIM} {\IS} s{\SUBSETEQ}s{\PRIM} {\WEDGE} s{\PRIM}{\SUBSETEQ}s \\
+\>s{\PRIM} {\NOTEQ} s{\PRIM}{\PRIM} {\IS} s{\PRIM} {\INTER} s{\PRIM}{\PRIM} {\NOTEQ} {\LBRACE}{\RBRACE}\\
+\>\kw{card} s {\IS}\\
+\>\>\kw{if} s {\EQ} {\LBRACE}{\RBRACE} \kw{then} 0 \kw{else}\\
+\>\>\kw{let} a:A {\RDOT} a {\ISIN} s \kw{in} 1 {\PLUS} \kw{card} (s {\SETMINUS} {\LBRACE}a{\RBRACE}) \kw{end} \kw{end}\\
+\>\>\kw{pre} s {\LCOMMENT} is a finite set {\RCOMMENT}\index{symbind}{aaaa@\protect{\underline{\textbf{Literals}}}|(} \\
+\>\kw{card} s {\IS} \kw{chaos} {\LCOMMENT} tests for infinity of s {\RCOMMENT}\index{symbind}{aaab@\kw{chaos}}
+\ep
+}
+\index{symbind}{sea@\protect{\underline{\textbf{Set Constructs}}}|)}
+
+\nbbbb{Cartesian Operations}\label{rsl.Cartesian Operations}
+\label{tseb.rsl.Cartesian Operations}
+\index{symbind}{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|(}
+
+\nrslframebox{Cartesian Operations}{
+\begin{multicols}{2}
+%\RSLatex
+%type
+%  A, B, C
+%  g0: G0 = A >< B >< C
+%  g1: G1 = ( A >< B >< C )
+%  g2: G2 = ( A >< B ) >< C
+%  g3: G3 = A >< ( B >< C )
+%
+%value
+%  va:A, vb:B, vc:C, vd:D
+%  (va,vb,vc):G0, 
+%  (va,vb,vc):G1
+%  ((va,vb),vc):G2 
+%  (va3,(vb3,vc3)):G3
+%
+%&\kw{decomposition expressions}&
+%  let (a1,b1,c1) = g0, 
+%      (a1',b1',c1') = g1 in .. end
+%  let ((a2,b2),c2) = g2 in .. end
+%  let (a3,(b3,c3)) = g3 in .. end 
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A, B, C\\
+\>g0: G0 {\EQ} A {\TIMES} B {\TIMES} C\\
+\>g1: G1 {\EQ} ( A {\TIMES} B {\TIMES} C )\\
+\>g2: G2 {\EQ} ( A {\TIMES} B ) {\TIMES} C\\
+\>g3: G3 {\EQ} A {\TIMES} ( B {\TIMES} C )\\
+\\
+\kw{value}\\
+\>va:A, vb:B, vc:C, vd:D\\
+\>(va,vb,vc):G0, \\
+\>(va,vb,vc):G1\\
+\>((va,vb),vc):G2 \\
+\>(va3,(vb3,vc3)):G3\\
+\\
+\kw{decomposition expressions}\\
+\>\kw{let} (a1,b1,c1) {\EQ} g0, \\
+\>\>\>(a1{\PRIM},b1{\PRIM},c1{\PRIM}) {\EQ} g1 \kw{in} {\DOTDOT} \kw{end}\\
+\>\kw{let} ((a2,b2),c2) {\EQ} g2 \kw{in} {\DOTDOT} \kw{end}\\
+\>\kw{let} (a3,(b3,c3)) {\EQ} g3 \kw{in} {\DOTDOT} \kw{end} 
+\ep
+\end{multicols}
+}\LLL
+\index{symbind}{cartesiaa@\protect{\underline{\textbf{Cartesian Constructs}}}|)}
+
+\nbbbb{List Operations}\label{rsl.List Operations}
+\bbb{List Operator Signatures}
+\label{tseb.rsl.List Operations}
+\index{symbind}{klista@\protect{\underline{\textbf{List Constructs}}}|(}
+
+\nrslframebox{List Operator Signatures}{
+%\RSLatex    
+%value
+%  hd: A-inflist -~-> A&\index{symbind}{klistb@\protect{\kw{hd}\,$\ell$}}&
+%  tl: A-inflist -~-> A-inflist&\index{symbind}{klistb@\protect{\kw{tl}\,$\ell$}}&
+%  len: A-inflist -~-> Nat&\index{symbind}{klistb@\protect{\kw{len}\,$\ell$}}&
+%  inds: A-inflist -> Nat-infset&\index{symbind}{klistb@\protect{\kw{inds}\,$\ell$}}&
+%  elems: A-inflist -> A-infset&\index{symbind}{klistb@\protect{\kw{elems}\,$\ell$}}&
+%  .(.): A-inflist >< Nat -~-> A&\index{symbind}{klistb@\protect{$\ell$(i)}}&
+%  ^: A-list >< A-inflist -> A-inflist&\index{symbind}{klistb@\protect{${\ell}'\,\protect{\widehat{\;}}\,{\ell}''$}}&
+%  =: A-inflist >< A-inflist -> Bool&\index{symbind}{klistb@\protect{$\ell'$\,\EQ\,$\ell''$}}&
+%  ~=: A-inflist >< A-inflist -> Bool&\index{symbind}{klistb@\protect{$\ell'$\,\NOTEQ\,$\ell''$}}&
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\kw{hd}: A$^{\omega}$ {\PARRIGHTARROW} A\index{symbind}{klistb@\protect{\kw{hd}\,$\ell$}}\\
+\>\kw{tl}: A$^{\omega}$ {\PARRIGHTARROW} A$^{\omega}$\index{symbind}{klistb@\protect{\kw{tl}\,$\ell$}}\\
+\>\kw{len}: A$^{\omega}$ {\PARRIGHTARROW} \kw{Nat}\index{symbind}{klistb@\protect{\kw{len}\,$\ell$}}\\
+\>\kw{inds}: A$^{\omega}$ {\RIGHTARROW} \kw{Nat}\kw{-infset}\index{symbind}{klistb@\protect{\kw{inds}\,$\ell$}}\\
+\>\kw{elems}: A$^{\omega}$ {\RIGHTARROW} A\kw{-infset}\index{symbind}{klistb@\protect{\kw{elems}\,$\ell$}}\\
+\>.(.): A$^{\omega}$ {\TIMES} \kw{Nat} {\PARRIGHTARROW} A\index{symbind}{klistb@\protect{$\ell$(i)}}\\
+\>{\CONCAT}: A$^{\ast}$ {\TIMES} A$^{\omega}$ {\RIGHTARROW} A$^{\omega}$\index{symbind}{klistb@\protect{${\ell}'\,\protect{\widehat{\;}}\,{\ell}''$}}\\
+\>{\EQ}: A$^{\omega}$ {\TIMES} A$^{\omega}$ {\RIGHTARROW} \kw{Bool}\index{symbind}{klistb@\protect{$\ell'$\,\EQ\,$\ell''$}}\\
+\>{\NOTEQ}: A$^{\omega}$ {\TIMES} A$^{\omega}$ {\RIGHTARROW} \kw{Bool}\index{symbind}{klistb@\protect{$\ell'$\,\NOTEQ\,$\ell''$}}
+\ep
+}
+
+\nbbb{List Operation Examples}
+\nrslframebox{List Operation Examples}{
+%\RSLatex
+%&\kw{examples}&
+%  hd<.a1,a2,...,am.>=a1
+%  tl<.a1,a2,...,am.>=<.a2,...,am.> 
+%  len<.a1,a2,...,am.>=m
+%  inds<.a1,a2,...,am.>={1,2,...,m}
+%  elems<.a1,a2,...,am.>={a1,a2,...,am}
+%  <.a1,a2,...,am.>(i)=ai
+%  <.a,b,c.>^<.a,b,d.> = <.a,b,c,a,b,d.>
+%  <.a,b,c.>=<.a,b,c.>
+%  <.a,b,c.> ~= <.a,b,d.>
+%\endRSLatex
+\bp
+\kw{examples}\\
+\>\kw{hd}{\LANGLE}a1,a2,{\DOTDOTDOT},am{\RANGLE}{\EQ}a1\\
+\>\kw{tl}{\LANGLE}a1,a2,{\DOTDOTDOT},am{\RANGLE}{\EQ}{\LANGLE}a2,{\DOTDOTDOT},am{\RANGLE} \\
+\>\kw{len}{\LANGLE}a1,a2,{\DOTDOTDOT},am{\RANGLE}{\EQ}m\\
+\>\kw{inds}{\LANGLE}a1,a2,{\DOTDOTDOT},am{\RANGLE}{\EQ}{\LBRACE}1,2,{\DOTDOTDOT},m{\RBRACE}\\
+\>\kw{elems}{\LANGLE}a1,a2,{\DOTDOTDOT},am{\RANGLE}{\EQ}{\LBRACE}a1,a2,{\DOTDOTDOT},am{\RBRACE}\\
+\>{\LANGLE}a1,a2,{\DOTDOTDOT},am{\RANGLE}(i){\EQ}ai\\
+\>{\LANGLE}a,b,c{\RANGLE}{\CONCAT}{\LANGLE}a,b,d{\RANGLE} {\EQ} {\LANGLE}a,b,c,a,b,d{\RANGLE}\\
+\>{\LANGLE}a,b,c{\RANGLE}{\EQ}{\LANGLE}a,b,c{\RANGLE}\\
+\>{\LANGLE}a,b,c{\RANGLE} {\NOTEQ} {\LANGLE}a,b,d{\RANGLE}
+\ep
+}
+
+\nbbb{Informal List Operator Explication}
+
+The following is \sort{not} a definition of \texttt{RSL} semantics.
+In  \texttt{RSL} formulas we present an explication of  \texttt{RSL}
+operators. Read, what appears as definitions, {\IS}, as [a kind of]
+identities. 
+
+\begin{itemize}
+\item{\kw{hd}:} Head gives the first element in a nonempty list. 
+\item{\kw{tl}:} Tail gives the remaining list of a nonempty list
+  when Head is removed. 
+\item{\kw{len}:} Length gives the number of elements in a finite list.
+\item{\kw{inds}:} Indices give the set of indices from \textsf{1} to
+  the length of a nonempty list. For empty lists, this set is the
+  empty set as well. 
+\item{\kw{elems}:} Elements gives the possibly infinite set of all
+  distinct elements in a list. 
+\item{$\ell(i)$:} Indexing with a natural number, \textsl{i} larger
+  than 0, into a list $\ell$ having a number of elements larger than
+  or equal to \textsl{i}, gives the \textsl{i}th element of the
+  list. 
+\ninlineiii{Concrete \dbrsl\ Types: Values and Operations}{List
+  Operations}{Informal Explication} 
+\item{\CONCAT:} Concatenates two operand lists into one. The elements
+  of the left operand list are followed by the elements of the
+  right. The order with respect to each list is maintained.  
+\item{\EQ:} The equal operator  expresses that the two operand lists
+  are identical.  
+\item{\NOTEQ:} The nonequal operator expresses that the two operand
+  lists are \emph{not} identical.  
+\end{itemize}
+\noindent
+The operations can also be defined as follows:
+
+\nbbb{List Operator Explications}\hhhh
+
+The following is \sort{not} a definition of \texttt{RSL} semantics.
+In  \texttt{RSL} formulas we present an explication of  \texttt{RSL}
+operators. Read, what appears as definitions, {\IS}, as [a kind of]
+identities. 
+
+\nrslframebox{List Operator Explications}{
+%\RSLatex
+%value
+%  is_finite_list: A-inflist -> Bool
+%
+%  len q is 
+%    case is_finite_list(q) of
+%      true -> if q = <..> then 0 else 1 + len tl q end,
+%      false -> chaos end&\index{symbind}{aaab@\kw{chaos}}&
+%
+%  inds q is 
+%    case is_finite_list(q) of
+%      true -> { i | i:Nat :- 1 <= i <= len q },
+%      false -> { i | i:Nat :- i~=0 } end 
+%
+%  elems q is { q(i) | i:Nat :- i isin inds q }
+%
+%  q(i) is 
+%    if i=1 
+%      then 
+%        if q~=<..> 
+%          then let a:A,q':Q :- q=<.a.>^q' in a end 
+%          else chaos end&\index{symbind}{aaab@\kw{chaos}}&
+%      else q(i-1) end
+%
+%  fq ^ iq is 
+%      <. if 1 <= i <= len fq then fq(i) else iq(i - len fq) end
+%       | i:Nat :- if len iq~=chaos then i <= len fq+len end .>
+%    pre is_finite_list(fq)
+%
+%  iq' = iq'' is 
+%    inds iq' = inds iq'' /\ all i:Nat :- i isin inds iq' => iq'(i) = iq''(i)
+%
+%  iq' ~= iq'' is ~(iq' = iq'')
+%\endRSLatex
+\bp
+\kw{value}\\
+\>is\_finite\_list: A$^{\omega}$ {\RIGHTARROW} \kw{Bool}\\
+\\
+\>\kw{len} q {\IS} \\
+\>\>\kw{case} is\_finite\_list(q) \kw{of}\\
+\>\>\>\kw{true} {\RIGHTARROW} \kw{if} q {\EQ} {\LANGLE}{\RANGLE} \kw{then} 0 \kw{else} 1 {\PLUS} \kw{len} \kw{tl} q \kw{end},\\
+\>\>\>\kw{false} {\RIGHTARROW} \kw{chaos} \kw{end}\index{symbind}{aaab@\kw{chaos}}\\
+\\
+\>\kw{inds} q {\IS} \\
+\>\>\kw{case} is\_finite\_list(q) \kw{of}\\
+\>\>\>\kw{true} {\RIGHTARROW} {\LBRACE} i {\BAR} i:\kw{Nat} {\RDOT} 1 {\LEQ} i {\LEQ} \kw{len} q {\RBRACE},\\
+\>\>\>\kw{false} {\RIGHTARROW} {\LBRACE} i {\BAR} i:\kw{Nat} {\RDOT} i{\NOTEQ}0 {\RBRACE} \kw{end} \\
+\\
+\>\kw{elems} q {\IS} {\LBRACE} q(i) {\BAR} i:\kw{Nat} {\RDOT} i {\ISIN} \kw{inds} q {\RBRACE}\\
+\\
+\>q(i) {\IS} \\
+\>\>\kw{if} i{\EQ}1 \\
+\>\>\>\kw{then} \\
+\>\>\>\>\kw{if} q{\NOTEQ}{\LANGLE}{\RANGLE} \\
+\>\>\>\>\>\kw{then} \kw{let} a:A,q{\PRIM}:Q {\RDOT} q{\EQ}{\LANGLE}a{\RANGLE}{\CONCAT}q{\PRIM} \kw{in} a \kw{end} \\
+\>\>\>\>\>\kw{else} \kw{chaos} \kw{end}\index{symbind}{aaab@\kw{chaos}}\\
+\>\>\>\kw{else} q(i{\MINUS}1) \kw{end}\\
+\\
+\>fq {\CONCAT} iq {\IS} \\
+\>\>\>{\LANGLE} \kw{if} 1 {\LEQ} i {\LEQ} \kw{len} fq \kw{then} fq(i) \kw{else} iq(i {\MINUS} \kw{len} fq) \kw{end}\\
+\>\>\>\ {\BAR} i:\kw{Nat} {\RDOT} \kw{if} \kw{len} iq{\NOTEQ}\kw{chaos} \kw{then} i {\LEQ} \kw{len} fq{\PLUS}\kw{len} \kw{end} {\RANGLE}\\
+\>\>\kw{pre} is\_finite\_list(fq)\\
+\\
+\>iq{\PRIM} {\EQ} iq{\PRIM}{\PRIM} {\IS} \\
+\>\>\kw{inds} iq{\PRIM} {\EQ} \kw{inds} iq{\PRIM}{\PRIM} {\WEDGE} {\ALL} i:\kw{Nat} {\RDOT} i {\ISIN} \kw{inds} iq{\PRIM} {\DBLRIGHTARROW} iq{\PRIM}(i) {\EQ} iq{\PRIM}{\PRIM}(i)\\
+\\
+\>iq{\PRIM} {\NOTEQ} iq{\PRIM}{\PRIM} {\IS} {\SIM}(iq{\PRIM} {\EQ} iq{\PRIM}{\PRIM})
+\ep
+}
+
+
+\index{symbind}{klista@\protect{\underline{\textbf{List Constructs}}}|)}
+
+\ninlinei{Concrete \dbrsl\ Types: Values and Operations}
+\bbbb{Map Operations}
+\bbb{Map Operator Signatures}
+\label{tseb.rsl.Map Operations}
+\index{symbind}{maa@\protect{\underline{\textbf{Map Constructs}}}|(}
+
+\nrslframebox{Map Operator Signatures}{%%%%%%%%%%%
+%\RSLatex
+%value
+%[30]  &$\cdot$&(&$\cdot$&): M -> A -~-> B&\index{symbind}{map@\protect{m(e)}}&
+%[31]  dom: M -> A-infset [domain &of& map]&\index{symbind}{map@\protect{\kw{dom}\,m}}&
+%[32]  rng: M -> B-infset [range &of& map]&\index{symbind}{map@\protect{\kw{rng}\,m}}&
+%[33]  !!: M >< M -> M [override extension]&\index{symbind}{map@\protect{m$_i$}\,\protect{$\dagger$}\,\protect{m$_j$}}&
+%[34]  union: M >< M -> M [merge union]&\index{symbind}{map@\protect{m$_i$\,$\cup$\,m$_j$}}&
+%[35]  \: M >< A-infset -> M [restriction by]&\index{symbind}{map@\protect{\,m$_i$}\,\protect{\SETMINUS}\,\protect{m$_j$}}&
+%[36]  /: M >< A-infset -> M [restriction to]&\index{symbind}{map@\protect{\,m$_i$\,/\,m$_j$}}&
+%[37]  =,~=: M >< M -> Bool&\index{symbind}{map@\protect{m$_i$\,$=$\,m$j$}}\index{symbind}{map@\protect{m$_i$\,$\neq$\,m$j$}}&
+%[38]  #: (A -m-> B) >< (B -m-> C) -> (A -m-> C) [composition]&\index{symbind}{map@\protect{\,m$_i$\,\protect{$\circ$}\,m$_j$}}&
+%\endRSLatex
+\bp
+\kw{value}\\
+{\LBRACKET}30{\RBRACKET}\ \ $\cdot$($\cdot$): M {\RIGHTARROW} A {\PARRIGHTARROW} B\index{symbind}{map@\protect{m(e)}}\\
+{\LBRACKET}31{\RBRACKET}\ \ \kw{dom}: M {\RIGHTARROW} A\kw{-infset} {\LBRACKET}domain of map{\RBRACKET}\index{symbind}{map@\protect{\kw{dom}\,m}}\\
+{\LBRACKET}32{\RBRACKET}\ \ \kw{rng}: M {\RIGHTARROW} B\kw{-infset} {\LBRACKET}range of map{\RBRACKET}\index{symbind}{map@\protect{\kw{rng}\,m}}\\
+{\LBRACKET}33{\RBRACKET}\ \ {\DAGGER}: M {\TIMES} M {\RIGHTARROW} M {\LBRACKET}override extension{\RBRACKET}\index{symbind}{map@\protect{m$_i$}\,\protect{$\dagger$}\,\protect{m$_j$}}\\
+{\LBRACKET}34{\RBRACKET}\ \ {\UNION}: M {\TIMES} M {\RIGHTARROW} M {\LBRACKET}merge {\UNION}{\RBRACKET}\index{symbind}{map@\protect{m$_i$\,$\cup$\,m$_j$}}\\
+{\LBRACKET}35{\RBRACKET}\ \ {\SETMINUS}: M {\TIMES} A\kw{-infset} {\RIGHTARROW} M {\LBRACKET}restriction by{\RBRACKET}\index{symbind}{map@\protect{\,m$_i$}\,\protect{\SETMINUS}\,\protect{m$_j$}}\\
+{\LBRACKET}36{\RBRACKET}\ \ /: M {\TIMES} A\kw{-infset} {\RIGHTARROW} M {\LBRACKET}restriction to{\RBRACKET}\index{symbind}{map@\protect{\,m$_i$\,/\,m$_j$}}\\
+{\LBRACKET}37{\RBRACKET}\ \ {\EQ},{\NOTEQ}: M {\TIMES} M {\RIGHTARROW} \kw{Bool}\index{symbind}{map@\protect{m$_i$\,$=$\,m$j$}}\index{symbind}{map@\protect{m$_i$\,$\neq$\,m$j$}}\\
+{\LBRACKET}38{\RBRACKET}\ \ {\HASH}: (A {\MARROW} B) {\TIMES} (B {\MARROW} C) {\RIGHTARROW} (A {\MARROW} C) {\LBRACKET}composition{\RBRACKET}\index{symbind}{map@\protect{\,m$_i$\,\protect{$\circ$}\,m$_j$}}
+\ep
+}
+
+\bbb{Map Operation Examples}
+
+\nrslframebox{Map Operation Examples}{%%%%%%%%%%%
+%\RSLatex
+%value
+%[30]  m(a) = b&\index{symbind}{map@\protect{m(e)}}&
+%[31]  dom [a1+>b1,a2+>b2,...,an+>bn] = {a1,a2,...,an}&\index{symbind}{map@\protect{\kw{dom}\,m}}&
+%[32]  rng [a1+>b1,a2+>b2,...,an+>bn] = {b1,b2,...,bn}&\index{symbind}{map@\protect{\kw{rng}\,m}}&   
+%[33]  [a+>b,a'+>b',a''+>b''] !! [a'+>b'',a''+>b'] = [a+>b,a'+>b'',a''+>b']&\index{symbind}{map@\protect{m$_i$}\,\protect{$\dagger$}\,\protect{m$_j$}}&
+%[34]  [a+>b,a'+>b',a''+>b''] union [a'''+>b'''] = [a+>b,a'+>b',a''+>b'',a'''+>b''']&\index{symbind}{map@\protect{m$_i$\,$\cup$\,m$_j$}}&
+%[35]  [a+>b,a'+>b',a''+>b'']\{a} = [a'+>b',a''+>b'']&\index{symbind}{map@\protect{\,m$_i$}\,\protect{\SETMINUS}\,\protect{m$_j$}}&
+%[37]  [a+>b,a'+>b',a''+>b'']/{a',a''} = [a'+>b',a''+>b'']&\index{symbind}{map@\protect{\,m$_i$\,/\,m$_j$}}&
+%[38]  [a+>b,a'+>b'] # [b+>c,b'+>c',b''+>c''] = [a+>c,a'+>c']&\index{symbind}{map@\protect{\,m$_i$\,\protect{$\circ$}\,m$_j$}}&
+%\endRSLatex
+\bp
+\kw{value}\\
+{\LBRACKET}30{\RBRACKET}\ \ m(a) {\EQ} b\index{symbind}{map@\protect{m(e)}}\\
+{\LBRACKET}31{\RBRACKET}\ \ \kw{dom} {\LBRACKET}a1{\MAPSTO}b1,a2{\MAPSTO}b2,{\DOTDOTDOT},an{\MAPSTO}bn{\RBRACKET} {\EQ} {\LBRACE}a1,a2,{\DOTDOTDOT},an{\RBRACE}\index{symbind}{map@\protect{\kw{dom}\,m}}\\
+{\LBRACKET}32{\RBRACKET}\ \ \kw{rng} {\LBRACKET}a1{\MAPSTO}b1,a2{\MAPSTO}b2,{\DOTDOTDOT},an{\MAPSTO}bn{\RBRACKET} {\EQ} {\LBRACE}b1,b2,{\DOTDOTDOT},bn{\RBRACE}\index{symbind}{map@\protect{\kw{rng}\,m}}\ \ \ \\
+{\LBRACKET}33{\RBRACKET}\ \ {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\RBRACKET} {\DAGGER} {\LBRACKET}a{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\RBRACKET} {\EQ} {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\RBRACKET}\index{symbind}{map@\protect{m$_i$}\,\protect{$\dagger$}\,\protect{m$_j$}}\\
+{\LBRACKET}34{\RBRACKET}\ \ {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\RBRACKET} {\UNION} {\LBRACKET}a{\PRIM}{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\PRIM}{\RBRACKET} {\EQ} {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM},a{\PRIM}{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\PRIM}{\RBRACKET}\index{symbind}{map@\protect{m$_i$\,$\cup$\,m$_j$}}\\
+{\LBRACKET}35{\RBRACKET}\ \ {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\RBRACKET}{\SETMINUS}{\LBRACE}a{\RBRACE} {\EQ} {\LBRACKET}a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\RBRACKET}\index{symbind}{map@\protect{\,m$_i$}\,\protect{\SETMINUS}\,\protect{m$_j$}}\\
+{\LBRACKET}37{\RBRACKET}\ \ {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\RBRACKET}/{\LBRACE}a{\PRIM},a{\PRIM}{\PRIM}{\RBRACE} {\EQ} {\LBRACKET}a{\PRIM}{\MAPSTO}b{\PRIM},a{\PRIM}{\PRIM}{\MAPSTO}b{\PRIM}{\PRIM}{\RBRACKET}\index{symbind}{map@\protect{\,m$_i$\,/\,m$_j$}}\\
+{\LBRACKET}38{\RBRACKET}\ \ {\LBRACKET}a{\MAPSTO}b,a{\PRIM}{\MAPSTO}b{\PRIM}{\RBRACKET} {\HASH} {\LBRACKET}b{\MAPSTO}c,b{\PRIM}{\MAPSTO}c{\PRIM},b{\PRIM}{\PRIM}{\MAPSTO}c{\PRIM}{\PRIM}{\RBRACKET} {\EQ} {\LBRACKET}a{\MAPSTO}c,a{\PRIM}{\MAPSTO}c{\PRIM}{\RBRACKET}\index{symbind}{map@\protect{\,m$_i$\,\protect{$\circ$}\,m$_j$}}
+\ep
+}
+
+\nbbb{Informal Map Operation Explication}%\hhhh
+
+\begin{itemize}
+\item{$m$($a$):} Application gives the element that $a$ maps to in
+  the map $m$.
+\item{\kw{dom}:} Domain/Definition Set gives the set of values which
+  \emph{maps to} in a map. 
+\item{\kw{rng}:} Range/Image Set gives the set of values which
+  \emph{are mapped to} in a map.   
+\item{\DAGGER:} Override/Extend. When applied to two operand maps, it
+      gives the map which is like an 
+      override of the left operand map by all or some ``pairings'' of
+      the right operand map.
+\item{\UNION:} Merge. When applied to two operand maps, it
+  gives a merge of these maps. 
+\pos{\psno}{\ninlineiii{Concrete \dbrsl\ Types: Values and Operations}{Map
+  Operations}{Map Operation Explication}}\hhhh
+\item{$\backslash$:} Restriction. When applied to two operand maps, it
+      gives the map which is a restriction of the left operand map to
+      the  elements that are not in the right operand set. 
+\item{/:} Restriction. When applied to two operand maps, it gives the
+  map which is a restriction of the left operand map to the elements
+  of the right operand set. 
+\item{\EQ:} The equal operator expresses that the two operand maps are
+  identical. 
+\item{\NOTEQ:} The nonequal operator expresses that the two
+  operand maps are \emph{not} identical. 
+\item{\HASH:} Composition. When applied to two operand maps, it gives
+  the map from definition set elements of the left operand map, $m_1$,
+  to the range elements of the right operand map, $m_2$, such that if
+  $a$ is in the definition set of $m_1$ and maps into $b$, and if $b$ is
+  in the definition set of $m_2$ and maps into $c$, then $a$, in the
+  composition, maps into $c$.  
+\end{itemize} 
+
+\nbbb{Map Operator Explication}\LLll
+
+The following is \sort{not} a definition of \texttt{RSL} semantics.
+In  \texttt{RSL} formulas we present an explication of  \texttt{RSL}
+operators. Read, what appears as definitions, {\IS}, as [a kind of]
+identities. 
+
+\pos{
+\noindent
+The map operations can also be defined as follows:}{}
+
+\nrslframebox{Map Operator Explications}{
+%\RSLatex
+%value
+%  rng m is { m(a) | a:A :- a isin dom m }
+%
+%  m1 !! m2 is 
+%    [ a+>b | a:A,b:B :-  
+%      a isin dom m1 \ dom m2 /\ b=m1(a) \/ a isin dom m2 /\ b=m2(a) ]
+%
+%  m1 union m2 is [ a+>b | a:A,b:B :-
+%           a isin dom m1 /\ b=m1(a) \/ a isin dom m2 /\ b=m2(a) ]
+%
+%  m \ s is [ a+>m(a) | a:A :- a isin dom m \ s ]
+%  m / s is [ a+>m(a) | a:A :- a isin dom m inter s ]
+%
+%  m1 = m2 is 
+%    dom m1 = dom m2 /\ all a:A :- a isin dom m1 => m1(a) = m2(a)
+%  m1 ~= m2 is ~(m1 = m2)
+%
+%  m#n is 
+%    [ a+>c | a:A,c:C :- a isin dom m /\ c = n(m(a)) ]
+%    pre rng m <<= dom n 
+%\endRSLatex
+\bp
+\kw{value}\\
+\>\kw{rng} m {\IS} {\LBRACE} m(a) {\BAR} a:A {\RDOT} a {\ISIN} \kw{dom} m {\RBRACE}\\
+\\
+\>m1 {\DAGGER} m2 {\IS} \\
+\>\>{\LBRACKET} a{\MAPSTO}b {\BAR} a:A,b:B {\RDOT}\ \ \\
+\>\>\>a {\ISIN} \kw{dom} m1 {\SETMINUS} \kw{dom} m2 {\WEDGE} b{\EQ}m1(a) {\VEE} a {\ISIN} \kw{dom} m2 {\WEDGE} b{\EQ}m2(a) {\RBRACKET}\\
+\\
+\>m1 {\UNION} m2 {\IS} {\LBRACKET} a{\MAPSTO}b {\BAR} a:A,b:B {\RDOT}\\
+\>\>\>\>\>\ a {\ISIN} \kw{dom} m1 {\WEDGE} b{\EQ}m1(a) {\VEE} a {\ISIN} \kw{dom} m2 {\WEDGE} b{\EQ}m2(a) {\RBRACKET}\\
+\\
+\>m {\SETMINUS} s {\IS} {\LBRACKET} a{\MAPSTO}m(a) {\BAR} a:A {\RDOT} a {\ISIN} \kw{dom} m {\SETMINUS} s {\RBRACKET}\\
+\>m / s {\IS} {\LBRACKET} a{\MAPSTO}m(a) {\BAR} a:A {\RDOT} a {\ISIN} \kw{dom} m {\INTER} s {\RBRACKET}\\
+\\
+\>m1 {\EQ} m2 {\IS} \\
+\>\>\kw{dom} m1 {\EQ} \kw{dom} m2 {\WEDGE} {\ALL} a:A {\RDOT} a {\ISIN} \kw{dom} m1 {\DBLRIGHTARROW} m1(a) {\EQ} m2(a)\\
+\>m1 {\NOTEQ} m2 {\IS} {\SIM}(m1 {\EQ} m2)\\
+\\
+\>m{\HASH}n {\IS} \\
+\>\>{\LBRACKET} a{\MAPSTO}c {\BAR} a:A,c:C {\RDOT} a {\ISIN} \kw{dom} m {\WEDGE} c {\EQ} n(m(a)) {\RBRACKET}\\
+\>\>\kw{pre} \kw{rng} m {\SUBSETEQ} \kw{dom} n 
+\ep
+}{}
+\index{symbind}{maa@\protect{\underline{\textbf{Map Constructs}}}|)}
+
+\nbbbbb{$\lambda$\--Calculus + Functions}
+\label{tseb.rsl.Lambda Calculus + Functions}
+
+\irsltxt{The $\lambda$\--Calculus is a foundation for the abstract
+  specification language that \texttt{RSL} is}
+
+\bbbb{The $\lambda$-Calculus Syntax}\LLLL
+\label{tseb.rsl.The Lambda Calculus Syntax}
+
+\nrslframebox{$\lambda$-Calculus Syntax}{
+%\begin{multicols}{2}
+%\RSLatex
+%type /* A BNF Syntax: */
+%   <.L.> ::= <.V.> | <.F.> | <.A.> | ( <.A.> )            
+%   <.V.> ::= /* variables, i.e. identifiers */
+%   <.F.> ::= &\LAMBDA& <.V.> :- <.L.>
+%   <.A.> ::= ( <.L.><.L.> )
+%value /* Examples */
+%   <.L.>: e, f, a, ...
+%   <.V.>: x, ... 
+%   <.F.>: -\ x :- e, ...
+%   <.A.>: f a, (f a), f(a), (f)(a), ...&\index{symbind}{function@f(a)}& 
+%\endRSLatex
+\bp
+\kw{type} {\LCOMMENT} A BNF Syntax: {\RCOMMENT}\\
+\>\ {\LANGLE}L{\RANGLE} ::{\EQ} {\LANGLE}V{\RANGLE} {\BAR} {\LANGLE}F{\RANGLE} {\BAR} {\LANGLE}A{\RANGLE} {\BAR} ( {\LANGLE}A{\RANGLE} )\ \ \ \ \ \ \ \ \ \ \ \ \\
+\>\ {\LANGLE}V{\RANGLE} ::{\EQ} {\LCOMMENT} variables, i.e. identifiers {\RCOMMENT}\\
+\>\ {\LANGLE}F{\RANGLE} ::{\EQ} \LAMBDA {\LANGLE}V{\RANGLE} {\RDOT} {\LANGLE}L{\RANGLE}\\
+\>\ {\LANGLE}A{\RANGLE} ::{\EQ} ( {\LANGLE}L{\RANGLE}{\LANGLE}L{\RANGLE} )\\
+\kw{value} {\LCOMMENT} Examples {\RCOMMENT}\\
+\>\ {\LANGLE}L{\RANGLE}: e, f, a, {\DOTDOTDOT}\\
+\>\ {\LANGLE}V{\RANGLE}: x, {\DOTDOTDOT} \\
+\>\ {\LANGLE}F{\RANGLE}: {\LAMBDA} x {\RDOT} e, {\DOTDOTDOT}\\
+\>\ {\LANGLE}A{\RANGLE}: f a, (f a), f(a), (f)(a), {\DOTDOTDOT}\index{symbind}{function@f(a)} 
+\ep
+%\end{multicols}
+}
+
+\nbbbb{Free and Bound Variables}
+\label{tseb.rsl.Free and Bound Variables}
+
+\nrslframebox{Free and Bound Variables}{
+Let $x,y$ be variable names and $e,f$ be \LAMBDA-expressions.
+\begin{itemize}
+\item \LANGLE V\RANGLE: Variable $x$ is free in $x$.
+\item \LANGLE F\RANGLE: $x$ is free in \LAMBDA $y$ \RDOT $e$
+if $x\neq y$ and $x$ is free in $e$.
+\item \LANGLE A\RANGLE: $x$ is free in $f(e)$ if it is free in
+either $f$ or $e$ (i.e., also in both).
+\end{itemize}
+}
+
+\nbbbb{Substitution}
+\label{tseb.rsl.Substitution}
+\wrtrt{\volchapsec{1}{7}{4}}
+\pt{
+In {\dbrsl}, the following rules for substitution apply:}{}\LLL
+
+\nrslframebox{Substitution}{
+\begin{itemize}
+\item  \textsf{\aesubb{N}{x}{x}} \IS\ \textsf{N};
+\item  \textsf{\aesubb{N}{x}{a}} \IS\ \textsf{a},
+\begin{itemize}
+\item[] for all variables \textsf{a$\neq$ x};
+\end{itemize}
+\item \textsf{\aesubb{N}{x}{{(P Q)}}} \IS\
+   (\textsf{\aesubb{N}{x}{P} \aesubb{N}{x}{Q}});
+\item \textsf{\aesubb{N}{x}{{($\lambda x\RDOT P$)}}} \IS\  
+                     \textsf{$\lambda$ y\RDOT P};
+\item \textsf{\aesubb{N}{x}{{($\lambda$ y\RDOT P)}}} \IS\ 
+         \textsf{$\lambda y\RDOT$ \aesubb{N}{x}{P}}, 
+\begin{itemize}
+\item[] if \textsf{x$\neq$y} and \textsf{y}
+    is not free in \textsf{N}
+     or \textsf{x} is not free in \textsf{P};
+\end{itemize}
+\item \textsf{\aesubb{N}{x}{{($\lambda${y}\RDOT{P})}}} \IS\ 
+  \textsf{$\lambda$z\RDOT\aesubb{N}{z}{{\mbox{\aesubb{z}{y}{P}}}}},
+\begin{itemize}
+\item []if \textsf{y$\neq$x} and \textsf{y} is free in \textsf{N}
+     and \textsf{x} is free in \textsf{P} 
+\item[] (where \textsf{z} is not free in \textsf{(N P)}).
+\end{itemize}
+\end{itemize} 
+}
+
+\nbbbb{$\alpha$-Renaming and $\beta$-Reduction}
+\label{tseb.rsl.alpha-Renaming and beta-Reduction}
+
+\wrtrt{\volchapsec{1}{7}{4}}
+
+\nrslframebox{$\alpha$ and $\beta$ Conversions}{
+\begin{itemize}
+\item $\alpha$-renaming:
+\textsf{\LAMBDA x\RDOT M}
+
+   If \textsf{x}, \textsf{y} are distinct variables then replacing
+   \textsf{x} by \textsf{y} in
+   \textsf{\LAMBDA x\RDOT M} results in
+   \textsf{\LAMBDA y\RDOT \aesubb{y}{x}{M}}. We can rename
+   the formal parameter of
+   a \LAMBDA-function expression provided that no
+   free variables of its body \textsf{M} thereby become bound.
+
+\item $\beta$-reduction:
+\textsf{(\LAMBDA x\RDOT M)(N)}
+
+      All free occurrences of \textsf{x}
+      in \textsf{M} are replaced by  the expression \textsf{N}
+      provided that no free variables of \textsf{N} thereby
+      become bound in the result.
+    \textsf{(\LAMBDA x\RDOT M)(N) \IS\ \aesubb{N}{x}{M}}
+
+\end{itemize}
+}
+
+\nbbbb{Function Signatures}
+\label{tseb.rsl.Function Signatures}
+
+For sorts we may want to postulate some functions:
+
+\nrslframebox{Sorts and Function Signatures}{
+%\RSLatex
+%type
+%  A, B, C
+%value
+%  obs_B: A -> B,
+%  obs_C: A -> C,
+%  gen_A: B><C -> A
+%\endRSLatex
+\bp
+\kw{type}\\
+\>A, B, C\\
+\kw{value}\\
+\>obs\_B: A {\RIGHTARROW} B,\\
+\>obs\_C: A {\RIGHTARROW} C,\\
+\>gen\_A: B{\TIMES}C {\RIGHTARROW} A
+\ep
+}
+
+\nbbbb{Function Definitions}\label{tseb.rsl.Function Definitions}
+
+Functions can be defined explicitly:
+
+\index{symbind}{functioa@\protect{\underline{\textbf{Function Constructs}}}|(}
+\renewcommand{\dbeat}[1]{}
+
+\nrslframebox{Explicit Function Definitions}{{
+%\RSLatex
+%value
+%  f: Arguments -> Result
+%  f(args) is DValueExpr
+%
+%  g: Arguments -~-> Result
+%  g(args) is ValueAndStateChangeClause
+%  pre P(args)
+%\endRSLatex
+\bp
+\kw{value}\\
+\>f: Arguments {\RIGHTARROW} Result\\
+\>f(args) {\IS} DValueExpr\\
+\\
+\>g: Arguments {\PARRIGHTARROW} Result\\
+\>g(args) {\IS} ValueAndStateChangeClause\\
+\>\kw{pre} P(args)
+\ep
+}}
+\index{symbind}{function@f(args)\ \protect\IS\ expr}
+\index{symbind}{function@{\kw{pre}\ P(args)}}
+
+\mnewfoil
+
+\noindent
+Or functions can be defined implicitly:
+ 
+\index{symbind}{function@{f(args)\ \kw{as}\ result}}
+\index{symbind}{function@{\kw{post}\ P(args,result)}}
+\nrslframebox{Implicit Function Definitions}{
+%\RSLatex
+%value
+%  f: Arguments -> Result
+%  f(args) as result
+%  post P1(args,result)
+%  
+%  g: Arguments -~-> Result
+%  g(args) as result
+%  pre P2(args)
+%  post P3(args,result)
+%\endRSLatex
+\bp
+\kw{value}\\
+\>f: Arguments {\RIGHTARROW} Result\\
+\>f(args) \kw{as} result\\
+\>\kw{post} P1(args,result)\\
+\>\\
+\>g: Arguments {\PARRIGHTARROW} Result\\
+\>g(args) \kw{as} result\\
+\>\kw{pre} P2(args)\\
+\>\kw{post} P3(args,result)
+\ep
+}
+\index{symbind}{function@{\kw{pre}\ P(args)}}
+\index{symbind}{function@{f(args)\ \kw{as}\ result}}
+\index{symbind}{function@{\kw{post}\ P(args,result)}}
+
+\pt{
+\noindent
+The symbol {\PARRIGHTARROW} indicates that the function is partial and
+thus not defined for all arguments. Partial functions should be
+assisted by preconditions stating the criteria for arguments to be
+meaningful to the function.}{}
+\index{symbind}{functioa@\protect{\underline{\textbf{Function Constructs}}}|)}
+
+\nbbbbb{Other Applicative Expressions}
+\label{tseb.rsl.Other Applicative Expressions}
+
+\irsltxt{\texttt{RSL} offers the usual collection of applicative
+  constructs that
+functional programming languages (\texttt{Standard ML}
+\cite{MilnerTofte,MilnerTofte} or \texttt{F\#} \cite{Hansen+Rischel}) offer}
+
+\bbbb{Simple \kw{let} Expressions}
+\label{tseb.rsl.Let Expressions}
+
+Simple (i.e., nonrecursive) \textbf{let} expressions:
+
+\index{symbind}{dcoma@\protect{\underline{\textbf{Combinators}}}|(}
+\nrslframebox{Let Expressions}{
+%\RSLatex
+%  let a = &$\mathcal{E}_d$& in &$\mathcal{E}_b$&(a) end&\index{symbind}{dcomb@\protect{\kw{let} pa = e \kw{in} c \kw{end}}}&
+%\endRSLatex
+\bp
+\>\kw{let} a {\EQ} $\mathcal{E}_d$ \kw{in} $\mathcal{E}_b$(a) \kw{end}\index{symbind}{dcomb@\protect{\kw{let} pa = e \kw{in} c \kw{end}}}
+\ep
+
+\noindent is an ``expanded'' form of:
+
+%\RSLatex
+%  (-\a.&$\mathcal{E}_b$&(a))(&$\mathcal{E}_d$&)
+%\endRSLatex
+\bp
+\>({\LAMBDA}a.$\mathcal{E}_b$(a))($\mathcal{E}_d$)
+\ep
+}
+
+\nbbbb{Recursive \kw{let} Expressions}
+
+\noindent Recursive \textbf{let} expressions are written as:
+
+\nrslframebox{Recursive \textbf{let} Expressions}{
+%\RSLatex
+%  let f = -\a:A :- E(f) in B(f,a) end
+%
+%&is ``the same'' as&:
+% 
+%  let f = &\kw{Y}&F in B(f,a) end
+%
+%where:
+%
+%  F is -\g:--\a:-(E(g)) and YF = F(YF)
+%\endRSLatex
+\bp
+\>\kw{let} f {\EQ} {\LAMBDA}a:A {\RDOT} E(f) \kw{in} B(f,a) \kw{end}\\
+\\
+is ``the same'' as:\\
+ \\
+\>\kw{let} f {\EQ} \kw{Y}F \kw{in} B(f,a) \kw{end}\\
+\\
+where:\\
+\\
+\>F {\IS} {\LAMBDA}g{\RDOT}{\LAMBDA}a{\RDOT}(E(g)) and YF {\EQ} F(YF)
+\ep
+}
+
+\nbbbb{Predicative \kw{let} Expressions}
+
+\noindent Predicative \kw{let} expressions:
+
+\nrslframebox{Predicative \kw{let}
+  Expressions}{\label{tseb.rsl.Predicative Let Expressions} 
+%\RSLatex
+%  let a:A :- &$\mathcal{P}$&(a) in $\mathcal{B}$(a) end&\index{symbind}{dcomb@\protect{\kw{let} a:A $\bullet$ P(a) \kw{in} c \kw{end}}}&
+%\endRSLatex
+\bp
+\>\kw{let} a:A {\RDOT} $\mathcal{P}$(a) \kw{in} $\mathcal{B}$(a) \kw{end}\index{symbind}{dcomb@\protect{\kw{let} a:A $\bullet$ P(a) \kw{in} c \kw{end}}}
+\ep
+}
+\noindent express the selection of a value \textsf{a} of type \textsf{A}
+which satisfies a predicate \textsf{$\mathcal{P}$(a)} for evaluation in the body \textsf{$\mathcal{B}$(a).}
+
+\nbbbb{Pattern and ``Wild Card'' \kw{let} Expressions}
+
+\noindent \emph{Patterns} and \emph{wild cards} can be used:
+
+\nrslframebox{Patterns}{
+%\RSLatex
+%  let {a} union s = set in ... end
+%  let {a,_} union s = set in ... end
+%
+%  let (a,b,...,c) = cart in ... end
+%  let (a,_,...,c) = cart in ... end
+%
+%  let <.a.>^&$\ell$& = list in ... end
+%  let <.a,_,b.>^&$\ell$& = list in ... end
+%
+%  let [a+>b] union m = map in ... end
+%  let [a+>b,_] union m = map in ... end
+%\endRSLatex
+\bp
+\>\kw{let} {\LBRACE}a{\RBRACE} {\UNION} s {\EQ} set \kw{in} {\DOTDOTDOT} \kw{end}\\
+\>\kw{let} {\LBRACE}a,{\UNDERLINE}{\RBRACE} {\UNION} s {\EQ} set \kw{in} {\DOTDOTDOT} \kw{end}\\
+\\
+\>\kw{let} (a,b,{\DOTDOTDOT},c) {\EQ} cart \kw{in} {\DOTDOTDOT} \kw{end}\\
+\>\kw{let} (a,{\UNDERLINE},{\DOTDOTDOT},c) {\EQ} cart \kw{in} {\DOTDOTDOT} \kw{end}\\
+\\
+\>\kw{let} {\LANGLE}a{\RANGLE}{\CONCAT}$\ell$ {\EQ} list \kw{in} {\DOTDOTDOT} \kw{end}\\
+\>\kw{let} {\LANGLE}a,{\UNDERLINE},b{\RANGLE}{\CONCAT}$\ell$ {\EQ} list \kw{in} {\DOTDOTDOT} \kw{end}\\
+\\
+\>\kw{let} {\LBRACKET}a{\MAPSTO}b{\RBRACKET} {\UNION} m {\EQ} map \kw{in} {\DOTDOTDOT} \kw{end}\\
+\>\kw{let} {\LBRACKET}a{\MAPSTO}b,{\UNDERLINE}{\RBRACKET} {\UNION} m {\EQ} map \kw{in} {\DOTDOTDOT} \kw{end}
+\ep
+}
+
+\nbbb{Conditionals}\LLLL
+\label{tseb.rsl.Conditionals}
+
+\pt{
+Various kinds of conditional expressions are offered by {\dbrsl}:}{}
+
+\nrslframebox{Conditionals}{
+%\RSLatex
+%    if b_expr then c_expr else a_expr
+%    end&\index{symbind}{dcomb@\protect{\kw{if} b$_e$ \kw{then} c$_c$ \kw{else} c$_a$ \kw{end}}}&
+%
+%    if b_expr then c_expr end is /* same &as:& */
+%      if b_expr then c_expr else skip end
+%
+%    if b_expr_1 then c_expr_1
+%    elsif b_expr_2 then c_expr_2&\index{symbind}{dcomb@\protect{... \kw{elsif} ...}}&
+%    elsif b_expr_3 then c_expr_3
+%    ...
+%    elsif b_expr_n then c_expr_n end
+%
+%    case expr of&\index{symbind}{dcomb@\protect{\kw{case} b$_e$ \kw{of} pa$_1$ {\RIGHTARROW} c$_1$, ... pa$_n$ {\RIGHTARROW} c$_n$ \kw{end}}}&
+%      choice_pattern_1 -> expr_1,
+%      choice_pattern_2 -> expr_2,
+%      ...
+%      choice_pattern_n_or_wild_card -> expr_n
+%    end
+%\endRSLatex
+\bp
+\>\>\kw{if} b\_expr \kw{then} c\_expr \kw{else} a\_expr\\
+\>\>\kw{end}\index{symbind}{dcomb@\protect{\kw{if} b$_e$ \kw{then} c$_c$ \kw{else} c$_a$ \kw{end}}}\\
+\\
+\>\>\kw{if} b\_expr \kw{then} c\_expr \kw{end} {\IS} {\LCOMMENT} same as: {\RCOMMENT}\\
+\>\>\>\kw{if} b\_expr \kw{then} c\_expr \kw{else} \kw{skip} \kw{end}\\
+\\
+\>\>\kw{if} b\_expr\_1 \kw{then} c\_expr\_1\\
+\>\>\kw{elsif} b\_expr\_2 \kw{then} c\_expr\_2\index{symbind}{dcomb@\protect{... \kw{elsif} ...}}\\
+\>\>\kw{elsif} b\_expr\_3 \kw{then} c\_expr\_3\\
+\>\>{\DOTDOTDOT}\\
+\>\>\kw{elsif} b\_expr\_n \kw{then} c\_expr\_n \kw{end}\\
+\\
+\>\>\kw{case} expr \kw{of}\index{symbind}{dcomb@\protect{\kw{case} b$_e$ \kw{of} pa$_1$ {\RIGHTARROW} c$_1$, ... pa$_n$ {\RIGHTARROW} c$_n$ \kw{end}}}\\
+\>\>\>choice\_pattern\_1 {\RIGHTARROW} expr\_1,\\
+\>\>\>choice\_pattern\_2 {\RIGHTARROW} expr\_2,\\
+\>\>\>{\DOTDOTDOT}\\
+\>\>\>choice\_pattern\_n\_or\_wild\_card {\RIGHTARROW} expr\_n\\
+\>\>\kw{end}
+\ep
+}\LLL
+
+\nbbbb{Operator/Operand Expressions}\LLL
+\label{tseb.rsl.Operator/Operand Expressions}
+
+\nrslframebox{Operator/Operand Expressions}{
+%\RSLatex
+%  <.Expr.> ::= 
+%         <.Prefix_Op.> <.Expr.>
+%        | <.Expr.> <.Infix_Op.> <.Expr.>
+%        | <.Expr.> <.Suffix_Op.> 
+%        | ...
+%  <.Prefix_Op.> ::= 
+%        - | ~ | union | inter | card | len | inds | elems | hd | tl | dom | rng
+%  <.Infix_Op.> ::= 
+%         = | ~= | is | + | - | * | ** | / | < | <= | >= | > | /\ | \/ | => 
+%        | isin | ~isin | union | inter | \ | << | <<= | >>= | >> | ^ | !! | #                    
+%  <.Suffix_Op.> ::= ! 
+%\endRSLatex
+\bp
+\>{\LANGLE}Expr{\RANGLE} ::{\EQ} \\
+\>\>\>\>\ {\LANGLE}Prefix\_Op{\RANGLE} {\LANGLE}Expr{\RANGLE}\\
+\>\>\>\>{\BAR} {\LANGLE}Expr{\RANGLE} {\LANGLE}Infix\_Op{\RANGLE} {\LANGLE}Expr{\RANGLE}\\
+\>\>\>\>{\BAR} {\LANGLE}Expr{\RANGLE} {\LANGLE}Suffix\_Op{\RANGLE} \\
+\>\>\>\>{\BAR} {\DOTDOTDOT}\\
+\>{\LANGLE}Prefix\_Op{\RANGLE} ::{\EQ} \\
+\>\>\>\>{\MINUS} {\BAR} {\SIM} {\BAR} {\UNION} {\BAR} {\INTER} {\BAR} \kw{card} {\BAR} \kw{len} {\BAR} \kw{inds} {\BAR} \kw{elems} {\BAR} \kw{hd} {\BAR} \kw{tl} {\BAR} \kw{dom} {\BAR} \kw{rng}\\
+\>{\LANGLE}Infix\_Op{\RANGLE} ::{\EQ} \\
+\>\>\>\>\ {\EQ} {\BAR} {\NOTEQ} {\BAR} {\IS} {\BAR} {\PLUS} {\BAR} {\MINUS} {\BAR} {\AST} {\BAR} {\UPARROW} {\BAR} / {\BAR} {\LT} {\BAR} {\LEQ} {\BAR} {\GEQ} {\BAR} {\GT} {\BAR} {\WEDGE} {\BAR} {\VEE} {\BAR} {\DBLRIGHTARROW} \\
+\>\>\>\>{\BAR} {\ISIN} {\BAR} {\NOTISIN} {\BAR} {\UNION} {\BAR} {\INTER} {\BAR} {\SETMINUS} {\BAR} {\SUBSET} {\BAR} {\SUBSETEQ} {\BAR} {\SUPSETEQ} {\BAR} {\SUPSET} {\BAR} {\CONCAT} {\BAR} {\DAGGER} {\BAR} {\HASH}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \\
+\>{\LANGLE}Suffix\_Op{\RANGLE} ::{\EQ} ! 
+\ep
+}
+
+\nbbbbb{Imperative Constructs}
+
+
+\irsltxt{\texttt{RSL} offers the usual collection of imperative
+  constructs that imperative programming languages (\texttt{Java}
+  \cite{JavaLangSpec96,sestoft-Java} or \texttt{Oberon} (!) \cite{Wirth88b}) offer}
+
+
+\label{tseb.rsl.Imperative Constructs}
+\bbbb{Statements and State Changes}
+
+\pt{
+Often, following the RAISE method, software development starts with
+highly abstract-applicative constructs 
+which, through stages of refinements, are
+turned into concrete and imperative constructs. 
+Imperative constructs are thus inevitable in {\dbrsl}.}{}
+
+\nrslframebox{Statements and State Change}{
+%\RSLatex
+%  Unit&\index{symbind}{typeeb@\kw{Unit}}&
+%value
+%  stmt: Unit -> Unit
+%  stmt()&\index{symbind}{functionb@f()}& 
+%\endRSLatex
+\bp
+\>\kw{Unit}\index{symbind}{typeeb@\kw{Unit}}\\
+\kw{value}\\
+\>stmt: \kw{Unit} {\RIGHTARROW} \kw{Unit}\\
+\>stmt()\index{symbind}{functionb@f()} 
+\ep
+\begin{itemize}
+\item Statements accept no arguments.
+\item Statement execution changes the state (of declared variables).
+\item \kw{Unit} {\RIGHTARROW} \kw{Unit} designates a function from
+  states to states.
+\item Statements, \textsf{stmt}, denote state-to-state changing functions.
+\item Writing () as ``only'' arguments to a function ``means'' that ()
+  is an argument of type \kw{Unit}.
+\end{itemize}
+}
+
+\nbbbb{Variables and Assignment}
+\label{tseb.rsl.Variables and Assignment}
+
+\nrslframebox{Variables and Assignment}{
+%\RSLatex
+%   0. variable v:Type := expression&\index{symbind}{dcomb@\protect{\kw{variable} v:Type := expression}}&
+%   1. v := expr&\index{symbind}{dcomb@\protect{v := expression}}&
+%\endRSLatex
+\bp
+\>\ 0. \kw{variable} v:Type :{\EQ} expression\index{symbind}{dcomb@\protect{\kw{variable} v:Type := expression}}\\
+\>\ 1. v :{\EQ} expr\index{symbind}{dcomb@\protect{v := expression}}
+\ep
+}
+
+
+\nbbbb{Statement Sequences and \kw{skip}}
+\label{tseb.rsl.Statement Sequences and skip}
+
+\pt{
+Sequencing is expressed using the `;' operator. \kw{skip} is the empty
+statement having no value or side-effect.}{}
+
+\nrslframebox{Statement Sequences and \kw{skip}}{
+%\RSLatex
+%   2. skip&\index{symb}{dcomb@\protect{\kw{skip}}}&
+%   3. stm_1;stm_2;...;stm_n&\index{symb}{dcomb@\protect{stm$_1$;stm$_2$;...;stm$_n$;}}&
+%\endRSLatex
+\bp
+\>\ 2. \kw{skip}\index{symb}{dcomb@\protect{\kw{skip}}}\\
+\>\ 3. stm\_1;stm\_2;{\DOTDOTDOT};stm\_n\index{symb}{dcomb@\protect{stm$_1$;stm$_2$;...;stm$_n$;}}
+\ep
+}
+
+\nbbbb{Imperative Conditionals}
+\label{tseb.rsl.Imperative Conditionals}
+
+\nrslframebox{Imperative Conditionals}{
+%\RSLatex
+%   4. if expr then stm_c else stm_a end&\index{symbind}{dcomb@\protect{\kw{if} b$_e$ \kw{then} c$_c$ \kw{else} c$_a$ \kw{end}}}&
+%   5. case e of: p_1->S_1(p_1),...,p_n->S_n(p_n) end&\index{symbind}{dcomb@\protect{\kw{case} b$_e$ \kw{of} pa$_1$ {\RIGHTARROW} c$_1$, ... pa$_n$ {\RIGHTARROW} c$_n$ \kw{end}}}&
+%\endRSLatex
+\bp
+\>\ 4. \kw{if} expr \kw{then} stm\_c \kw{else} stm\_a \kw{end}\index{symbind}{dcomb@\protect{\kw{if} b$_e$ \kw{then} c$_c$ \kw{else} c$_a$ \kw{end}}}\\
+\>\ 5. \kw{case} e \kw{of}: p\_1{\RIGHTARROW}S\_1(p\_1),{\DOTDOTDOT},p\_n{\RIGHTARROW}S\_n(p\_n) \kw{end}\index{symbind}{dcomb@\protect{\kw{case} b$_e$ \kw{of} pa$_1$ {\RIGHTARROW} c$_1$, ... pa$_n$ {\RIGHTARROW} c$_n$ \kw{end}}}
+\ep
+}
+
+\nbbbb{Iterative Conditionals}
+\label{tseb.rsl.Iterative Conditionals}
+
+\nrslframebox{Iterative Conditionals}{
+%\RSLatex
+%   6. while expr do stm end&\index{symbind}{dcomb@\protect{\kw{while} b$e$ \kw{do} stm \kw{end}}}&
+%   7. do stmt until expr end&\index{symbind}{dcomb@\protect{\kw{do} stmt \kw{until} b$e$ \kw{end}}}&
+%\endRSLatex
+\bp
+\>\ 6. \kw{while} expr \kw{do} stm \kw{end}\index{symbind}{dcomb@\protect{\kw{while} b$e$ \kw{do} stm \kw{end}}}\\
+\>\ 7. \kw{do} stmt \kw{until} expr \kw{end}\index{symbind}{dcomb@\protect{\kw{do} stmt \kw{until} b$e$ \kw{end}}}
+\ep
+}
+
+\bbbb{Iterative Sequencing}
+\label{tseb.rsl.Iterative Sequencing}
+
+\nrslframebox{Iterative Sequencing}{
+%\RSLatex
+%   8. for e in list_expr :- P(b) do S(b) end&\index{symbind}{dcomb@\protect{\kw{for} e \kw{in} list$_{expr}$ {$\bullet$} P(b) \kw{do} stm(e) \kw{end}}}&
+%\endRSLatex
+\bp
+\>\ 8. \kw{for} e \kw{in} list\_expr {\RDOT} P(b) \kw{do} S(b) \kw{end}\index{symbind}{dcomb@\protect{\kw{for} e \kw{in} list$_{expr}$ {$\bullet$} P(b) \kw{do} stm(e) \kw{end}}}
+\ep
+}
+
+\index{symbind}{dcoma@\protect{\underline{\textbf{Combinators}}}|)}
+
+\nbbbbb{Process Constructs}
+\label{tseb.rsl.Process Constructs}
+
+\irsltxt{\texttt{RSL} offers several of the constructs that
+  \texttt{CS} \citecsp\ offers}
+
+\bbbb{Process Channels}
+\label{tseb.rsl.Process Channels}
+\index{symbind}{processa@\protect{\underline{\textbf{Process Constructs}}}|(}
+
+
+As for channels we deviate from common \texttt{RSL} \cite{RSL} in that
+we directly \sfsl{declare} channels -- and not via common \texttt{RSL}
+\sfsl{objects} etc.
+
+Let \textsf{A} and \textsf{B}  stand for two types of (channel)
+messages and \textsf{i:KIdx} for channel array indexes, then:
+\nrslframebox{Process Channels}{
+%\RSLatex
+%  channel c:A&\index{symbind}{processb@\protect{\kw{channel} c:T}}&
+%  channel { k[i]:B :- i:Idx }&\index{symbind}{processb@\protect{\kw{channel}\,$\{$k[i]:T$\bullet$i:Idx$\}$}}&
+%  channel { k[i,j,...,k]:B :- i:Idx,j:Jdx,...,k:Kdx }
+%\endRSLatex
+\bp
+\>\kw{channel} c:A\index{symbind}{processb@\protect{\kw{channel} c:T}}\\
+\>\kw{channel} {\LBRACE} k{\LBRACKET}i{\RBRACKET}:B {\RDOT} i:Idx {\RBRACE}\index{symbind}{processb@\protect{\kw{channel}\,$\{$k[i]:T$\bullet$i:Idx$\}$}}\\
+\>\kw{channel} {\LBRACE} k{\LBRACKET}i,j,{\DOTDOTDOT},k{\RBRACKET}:B {\RDOT} i:Idx,j:Jdx,{\DOTDOTDOT},k:Kdx {\RBRACE}
+\ep
+}
+
+\pt{
+\noindent declare a channel, c, and a set (an array)
+of channels, k[i], capable of 
+communicating values of the designated types (\textsf{A} and
+\textsf{B}).}{} 
+ 
+\nbbbb{Process Composition}
+\label{tseb.rsl.Process Composition}
+
+\begynd
+\pind Let \textsf{P} and \textsf{Q} stand for names of process functions,
+\pind i.e., of functions which express willingness to engage in input and/or
+      output events, 
+\pind thereby communicating over declared channels.
+\pind Let \textsf{P()} and \textsf{Q} stand for process expressions, then:
+\afslut
+
+\nrslframebox{Process Composition}{
+%\RSLatex
+%  P || Q    Parallel composition&\index{symbind}{processb@\protect{p$_i$\protect{\PARL}$p_j$}}&     
+%  P |=| Q    Nondeterministic external choice (either/or)&\index{symbind}{processb@\protect{p$_i$\protect{\DETCHOICE}$p_j$}}&    
+%  P |^| Q    Nondeterministic internal choice (either/or)&\index{symbind}{processb@\protect{p$_i$\protect{\NONDETCHOICE}$p_j$}}&  
+%  P ++ Q     Interlock parallel composition&\index{symbind}{processb@\protect{p$_i$\protect{\TIE}$p_j$}}&    
+%\endRSLatex
+\bp
+\>P {\PARL} Q\ \ \ \ Parallel composition\index{symbind}{processb@\protect{p$_i$\protect{\PARL}$p_j$}}\ \ \ \ \ \\
+\>P {\DETCHOICE} Q\ \ \ \ Nondeterministic external choice (either/or)\index{symbind}{processb@\protect{p$_i$\protect{\DETCHOICE}$p_j$}}\ \ \ \ \\
+\>P {\NONDETCHOICE} Q\ \ \ \ Nondeterministic internal choice (either/or)\index{symbind}{processb@\protect{p$_i$\protect{\NONDETCHOICE}$p_j$}}\ \ \\
+\>P {\TIE} Q\ \ \ \ \ Interlock parallel composition\index{symbind}{processb@\protect{p$_i$\protect{\TIE}$p_j$}}\ \ \ \ 
+\ep
+}
+
+\pt{
+\noindent express the parallel (\PARL) of two processes, or the
+nondeterministic choice between two processes: either external
+(\DETCHOICE) or internal (\NONDETCHOICE). The interlock (\TIE)
+composition expresses that the two processes  
+are forced to communicate only with one another,
+until one of them terminates.
+}{} 
+
+\nbbbb{Input/Output Events}
+\label{tseb.rsl.Input/Output Events}
+
+Let \textsf{c, k[i]} and \textsf{e} designate channels of type
+\textsf{A} and \textsf{B}, then:  
+
+\nrslframebox{Input/Output Events}{
+%\RSLatex
+%  c ?, k[i] ?      Input&\index{symbind}{processb@\protect{c\,?}}\index{symbind}{processb@\protect{k[i]\,?}}&
+%  c ! e, k[i] ! e  Output&\index{symbind}{processb@\protect{c\,"!\,e}}\index{symbind}{processb@\protect{k[i]\,"!\,e}}&
+%\endRSLatex
+\bp
+\>c ?, k{\LBRACKET}i{\RBRACKET} ?\ \ \ \ \ \ Input\index{symbind}{processb@\protect{c\,?}}\index{symbind}{processb@\protect{k[i]\,?}}\\
+\>c ! e, k{\LBRACKET}i{\RBRACKET} ! e\ \ Output\index{symbind}{processb@\protect{c\,"!\,e}}\index{symbind}{processb@\protect{k[i]\,"!\,e}}
+\ep
+}
+
+\noindent 
+\begynd
+\pind expresses the willingness of a process to engage in an event that 
+\begynd
+\pind ``reads'' an input, respectively
+\pind  ``writes'' an output.
+\afslut
+\afslut
+
+\nbbbb{Process Definitions}
+\label{tseb.rsl.Process Definitions}
+
+The below signatures are just examples. They emphasise that process
+functions must somehow express, in their signature, via which channels
+they wish to engage in input and output events. 
+
+
+\nrslframebox{Process Definitions}{
+%\RSLatex
+%value
+%  P: Unit -> in c out k[i]
+%  Unit&\index{symbind}{aaab@\kw{Unit}}\index{symbind}{processb@\protect{P:\,\kw{Unit}\,{\RIGHTARROW}\,\kw{in}\,c\,\kw{out}\,k[i]\,\kw{Unit}}}\index{symbind}{aaaa@\protect{\underline{\textbf{Literals}}}|)}&
+%  Q: i:KIdx ->  out c in k[i] Unit&\index{symbind}{processb@\protect{Q:\,i:KIdx}\,{\RIGHTARROW}\,\kw{out}\,c\,\kw{in}\,k[i]\,\kw{Unit}}&
+%
+%  P() is ... c ? ... k[i] ! e ...
+%  Q(i) is ... k[i] ? ... c ! e ...
+%\endRSLatex
+\bp
+\kw{value}\\
+\>P: \kw{Unit} {\RIGHTARROW} \kw{in} c \kw{out} k{\LBRACKET}i{\RBRACKET}\\
+\>\kw{Unit}\index{symbind}{aaab@\kw{Unit}}\index{symbind}{processb@\protect{P:\,\kw{Unit}\,{\RIGHTARROW}\,\kw{in}\,c\,\kw{out}\,k[i]\,\kw{Unit}}}\index{symbind}{aaaa@\protect{\underline{\textbf{Literals}}}|)}\\
+\>Q: i:KIdx {\RIGHTARROW}\ \ \kw{out} c \kw{in} k{\LBRACKET}i{\RBRACKET} \kw{Unit}\index{symbind}{processb@\protect{Q:\,i:KIdx}\,{\RIGHTARROW}\,\kw{out}\,c\,\kw{in}\,k[i]\,\kw{Unit}}\\
+\\
+\>P() {\IS} {\DOTDOTDOT} c ? {\DOTDOTDOT} k{\LBRACKET}i{\RBRACKET} ! e {\DOTDOTDOT}\\
+\>Q(i) {\IS} {\DOTDOTDOT} k{\LBRACKET}i{\RBRACKET} ? {\DOTDOTDOT} c ! e {\DOTDOTDOT}
+\ep
+}
+\index{symbind}{processa@\protect{\underline{\textbf{Process Constructs}}}|)}
+
+\noindent The process function definitions (i.e., their bodies)
+express possible events. 
+
+\nbbbbb{\dbrsl\ Module Specifications}
+
+\begynd
+\pind We shall not include coverage nor use of the
+      \texttt{RSL} module concepts of 
+\begynd
+\pind \sfsl{schemes, 
+\pind classes} and
+\pind \sfsl{objects}.
+\afslut
+\afslut
+
+\nbbbbb{Simple {\dbrsl} Specifications}
+\label{tseb.rsl.Simple RSL Specifications}
+
+\pt{
+Often, we do not want to encapsulate small specifications in schemas,
+classes, and objects, as is often done in {\dbrsl}. 
+An {\dbrsl} specification is simply a sequence of one or more types,
+values (including functions), variables, channels and axioms:}{}
+
+\nrslframebox{Simple {\dbrsl} Specifications}{
+%\RSLatex
+%  type
+%    ...
+%  variable
+%    ...
+%  channel
+%    ...
+%  value
+%    ...
+%  axiom
+%    ...
+%\endRSLatex
+\bp
+\>\kw{type}\\
+\>\>{\DOTDOTDOT}\\
+\>\kw{variable}\\
+\>\>{\DOTDOTDOT}\\
+\>\kw{channel}\\
+\>\>{\DOTDOTDOT}\\
+\>\kw{value}\\
+\>\>{\DOTDOTDOT}\\
+\>\kw{axiom}\\
+\>\>{\DOTDOTDOT}
+\ep
+
+}
+
+\nbbbbb{\rslplus: Extended \texttt{RSL}}\label{chap2.tex.rsltext}
+
+Section\,\vref{tseb.rsl.Types} covered standard \texttt{RSL} types. To them we now
+add two new types: Type names and \rsltxt.
+
+We refer  to  Sect.\,\ref{An RSL Extension}
+(the \sfsl{An RSL Extension} box) Page\,\pageref{An RSL Extension}  
+for a first introduction to extended \texttt{RSL}.
+
+\dbeat{%%%%%%%%%%%%%%%%
+For uses of type name type and type name values and for the
+``generation'' of \rsltxt\ to
+Sect.\,\ref{sec:Analyse Composite Parts} (the \texttt{de\-term\-ine\_\-Car\-te\-si\-an\_\-parts} function),
+Sect.\,\ref{calc-Cartesian-parts} (the \texttt{calc\_\-Car\-te\-si\-an\_\-parts} description prompt),  
+%Sect.\,\ref{sec:Analyse Same Sorts Part Sets} (the \texttt{de\-term\-ine\_\-same\_\-sort\_\-parts\_\-set} prompt),
+%Sect.\,\ref{sec:Analyse Alternative Sorts Part Sets} (the \texttt{de\-term\-ine\_\-al\-tern\-a\-tive\_\-sorts\_\-part\_\-set} function),
+Sect.\,\ref{descr.Calc-Sgl-Sort.Sets} (the \texttt{calc\_\-single\_\-sort\_\-parts\_\-sort} description prompt), and
+Sect.\,\ref{descr.Calc-Alt-Sort.Sets} (the \texttt{calc\_\-al\-tern\-a\-tive\_\-sort\_\-parts\_\-sort} prompt).
+}%%%%%%%%%%%%%%%%%%%%%
+
+
+\bbbb{Type Names and Type Name Values}
+
+\bbb{Type Names}
+
+\begin{itemize}
+\item Let \textsf{T} be a type name.
+\item Then \textsf{$\eta$T} is a type name
+  value.\index{symbind}{aaab@$\eta$}\index{symbind}{utypeen@$\eta$T}
+\item And \textsf{$\eta\mathbb{T}$} is the type of type names.
+\end{itemize}
+
+\bbb{Type Name Operations}
+
+\begin{itemize}
+\item $\eta$ can be considered an operator.
+\begin{itemize} 
+\item It (prefix) applies, then, to type (\textsf{T})
+      identifiers and yields the name of that type.
+\item Two type names, \textsf{nT$_i$, nT$_j$}, can be compared for
+      equality: \textsf{nT$_i$ = nT$_j$} iff $i=j$.
+\end{itemize}
+\item It, vice-versa, suffix  applies to type name (\textsf{nT})\index{symbind}{aaab@$\eta$}
+      identifiers and yields the name, \textsf{T}, of that type: \textsf{nT$\eta$ = T}.
+\end{itemize}
+
+\nbbbb{\rsltxt}
+\bbb{The \rsltxt\ Type and Values}
+
+\begin{itemize}
+\item \rsltxt\ is the type name for ordinary, non-extended \texttt{RSL} texts.\index{symbind}{aaab@\rsltxt}
+\end{itemize}
+
+\noindent
+\begynd
+\pind We shall not here give a syntax for ordinary, non-extended
+      \texttt{RSL} texts -- but refer to \cite{RSL}.
+\afslut
+
+\bbb{\rsltxt\ Operations}
+
+\begin{itemize}
+\item {\rsltxt}s can be compared and concatenated:
+\begin{itemize}
+\item \textsf{rsl-text$_a$}{\EQ}\textsf{rsl-text$_b$}\index{symbind}{aaab@{\EQ}}
+\item \textsf{rsl-text$_a$}{\CONCAT}\textsf{rsl-text$_b$}\index{symbind}{aaab@{\CONCAT}}
+\end{itemize}
+\end{itemize}
+
+\noindent
+The {\CONCAT} operator thus also applies, besides, lists (tuples), to
+\texttt{RSL} texts -- treating \texttt{RSL} texts as (if they were)
+lists of characters.
+
+
+\nbbbbb{Distributive Clauses}
+
+We clarify:
+
+\bbbb{Over Simple Values}
+
+%\RSLatex
+%   &$\oplus$& { a | a:A :- a isin {a_1,a_2,...,a_n} } =
+%      if n>0 then a_1&$\oplus$&a_1&$\oplus$&...&$\oplus$&a_n else
+%         case &$\oplus$& of
+%            + -> 0, - -> 0, * -> 1, / -> chaos, union -> {}, inter -> {}, ...
+%         end end 
+%\endRSLatex 
+\bp
+\>\ $\oplus$ {\LBRACE} a {\BAR} a:A {\RDOT} a {\ISIN} {\LBRACE}a\_1,a\_2,{\DOTDOTDOT},a\_n{\RBRACE} {\RBRACE} {\EQ}\\
+\>\>\>\kw{if} n{\GT}0 \kw{then} a\_1$\oplus$a\_1$\oplus${\DOTDOTDOT}$\oplus$a\_n \kw{else}\\
+\>\>\>\>\ \kw{case} $\oplus$ \kw{of}\\
+\>\>\>\>\>\>{\PLUS} {\RIGHTARROW} 0, {\MINUS} {\RIGHTARROW} 0, {\AST} {\RIGHTARROW} 1, / {\RIGHTARROW} \kw{chaos}, {\UNION} {\RIGHTARROW} {\LBRACE}{\RBRACE}, {\INTER} {\RIGHTARROW} {\LBRACE}{\RBRACE}, {\DOTDOTDOT}\\
+\>\>\>\>\ \kw{end} \kw{end} 
+\ep
+
+%\RSLatex
+%   (f_1,f_2,...,f_n)(a) is if n>0 then (f_1(a),f_2(a),...,f_n(a)) else chaos end
+%\endRSLatex 
+\bp
+\>\ (f\_1,f\_2,{\DOTDOTDOT},f\_n)(a) {\IS} \kw{if} n{\GT}0 \kw{then} (f\_1(a),f\_2(a),{\DOTDOTDOT},f\_n(a)) \kw{else} \kw{chaos} \kw{end}
+\ep
+
+\bbbb{Over Processes}
+
+%\RSLatex
+%   || { p(i) | i:I :- i isin {i_1,i_2,...,i_n} } is if n>0 then p(i_1)||p(i_2)||...||p(i_n) else () end
+%  |^| { p(i) | i:I :- i isin {i_1,i_2,...,i_n} } is if n>0 then p(i_1)|^|p(i_2)|^|...|^|p(i_n) else () end
+%  |=| { p(i) | i:I :- i isin {i_1,i_2,...,i_n} } is if n>0 then p(i_1)|=|p(i_2)|=|...|=|p(i_n) else () end
+%\endRSLatex 
+\bp
+\>\ {\PARL} {\LBRACE} p(i) {\BAR} i:I {\RDOT} i {\ISIN} {\LBRACE}i\_1,i\_2,{\DOTDOTDOT},i\_n{\RBRACE} {\RBRACE} {\IS} \kw{if} n{\GT}0 \kw{then} p(i\_1){\PARL}p(i\_2){\PARL}{\DOTDOTDOT}{\PARL}p(i\_n) \kw{else} () \kw{end}\\
+\>{\NONDETCHOICE} {\LBRACE} p(i) {\BAR} i:I {\RDOT} i {\ISIN} {\LBRACE}i\_1,i\_2,{\DOTDOTDOT},i\_n{\RBRACE} {\RBRACE} {\IS} \kw{if} n{\GT}0 \kw{then} p(i\_1){\NONDETCHOICE}p(i\_2){\NONDETCHOICE}{\DOTDOTDOT}{\NONDETCHOICE}p(i\_n) \kw{else} () \kw{end}\\
+\>{\DETCHOICE} {\LBRACE} p(i) {\BAR} i:I {\RDOT} i {\ISIN} {\LBRACE}i\_1,i\_2,{\DOTDOTDOT},i\_n{\RBRACE} {\RBRACE} {\IS} \kw{if} n{\GT}0 \kw{then} p(i\_1){\DETCHOICE}p(i\_2){\DETCHOICE}{\DOTDOTDOT}{\DETCHOICE}p(i\_n) \kw{else} () \kw{end}
+\ep
+
+% LocalWords:  rsl ch pecification anguage Asger Eir's Bool Int infset inflist
+% LocalWords:  mk sel aa aaa abc cf eg av bv expr ai zk bj isin ei ej lst len
+% LocalWords:  dom pre va vb vc vd decompostion hd tl inds elems fq iq bn rng
+% LocalWords:  BNF obs gen bs dm al YF elsif exprt Op stm stmt KIdx emphasise
+% LocalWords:  nonmembership nonequal nonrecursive Booleans reals symbind aaab
+
+% LocalWords:  typeea typeeb utypeec chematic utypeed loga barithb baritha seta
+% LocalWords:  setb setc cartesiaa cartesian klista klistb symbin maa un vn th
+% LocalWords:  mapa mapb mapc aaaa Indices indices functioa args DValueExpr
+% LocalWords:  ValueAndStateChangeClause dcoma Combinators dcomb symb processa
+% LocalWords:  processb Nondeterministic nondeterministic bb subtypes
+%%  LocalWords:  cardinality subtype Redefinitions Applicative Idx de
+%%  LocalWords:  applicative Jdx Kdx booleanop schemas nnnmodulea Hs
+%%  LocalWords:  nnnmoduleb Etcetera Boskoop eger ural acters FO Vu
+
+%%  \nbbbbb{Types and Values}\label{chap2.tex.Types and Values}
+
+%%  \nbbbbb{The Functional RSL$^+$}\label{chap2.tex.The Functional RSL-plus}
+
+%%  \nbbbbb{The Imperative RSL$^+$}\label{chap2.tex.The Imperative RSL}
+
+%%  \nbbbbb{The RSL/CSP}\label{chap2.tex.The RSL/CSP}
+%%  LocalWords:  modelling Formalisation Cartesians Ju Fu Su swu spu
+%%  LocalWords:  svu sju sfu ssu ENat bbb pdefind sentential nT iff
+%%  LocalWords:  Arithmetics ine te si calc tive arg UI

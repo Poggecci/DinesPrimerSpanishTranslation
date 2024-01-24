@@ -1,0 +1,23 @@
+
+\newcommand{\pbtabular}{\begin{center}\begin{tabular}{cll} \hline
+      \# & \ \ \ \textbf{Name} & \ \ \ \textbf{Introduced} \\ \hline}  % & \textbf{Referenced}}
+\newcommand{\petabular}{\end{tabular}\end{center}}
+
+\newcommand{\qbtabular}{\begin{center}\begin{tabular}{cll} \hline
+    \# & \ \ \ \textbf{Name} & \ \ \ \textbf{Introduced} \\ \hline}  % & \textbf{Referenced}}
+\newcommand{\qetabular}{\end{tabular}\end{center}}
+
+\newcommand{\pfr}[1]{\ref{#1}}
+
+\newcommand{\ppr}[1]{\pageref{#1}}
+
+\newcommand{\plineo}[3]{\pfr{#1} & \ \ \ \textsf{#2} & \ \ \ page\,\sort{\ppr{#3}}}
+
+\newcommand{\pline}[2]{ & \ \ \ \textsf{#1} & \ \ \ page\,\sort{\ppr{#2}}}
+\newcommand{\iline}[2]{ & \ \ \ \textsf{#1} & \ \ \ page\,\sort{\ppr{#2}}}
+
+\newcommand{\plinei}[4]{\pfr{#1} & \textsf{#2} & \sort{\ppr{#3}} & \textsl{\ppr{#4}}}
+\newcommand{\plineii}[5]{\pfr{#1} & \textsf{#2} & \sort{\ppr{#3}} & \textsl{\ppr{#4},\ppr{#5}}}
+
+\newcommand{\plineiii}[6]{\pfr{#1} & \textsf{#2} & \sort{\ppr{#3}} & \textsl{\ppr{#4},\ppr{#5},\ppr{#6}}}
+\newcommand{\plineiv}[7]{\pfr{#1} & \textsf{#2} & \sort{\ppr{#3}} & \textsl{\ppr{#4},\ppr{#5},\ppr{#6},\ppr#7}}

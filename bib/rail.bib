@@ -1,0 +1,762 @@
+
+
+@string{unuiist = "{\sf UNU/IIST}, the {\sf UN U}niversity's
+                        {\sf I}nternational {\sf I}nstitute
+                        for {\sf S}oftware {\sf T}echnology"}
+@string{address = "P.O.Box 3058, Macau; E-Mail: {\tt library@iist.unu.edu}"}
+@string{tr = "Technical Report"}
+@string{LNCS = "Lecture Notes in Computer Science"}
+
+@techreport{Bol94sss,
+AUTHOR       = "R.N. Bol and J.W.C. Koorn and L.H. Oei and S.F.M. van Vlijmen",
+TITLE        = "{S}yntax and {S}tatic {S}emantics of the {I}nterlocking 
+                {D}esign and {A}pplication {L}anguage",
+INSTITUTION  = "Programming 
+                Research Group, University of Amsterdam",
+TYPE         = tr,
+NUMBER       = "P9422",
+ADDRESS      = "Kruislaan 403, 
+                1098 SJ Amsterdam, The Netherlands",
+MONTH        = "November",
+YEAR         = "1994",
+NOTE         = "\\ An interlocking is a system used at railway yards for
+guaranteeing safety of train movements. This report opens
+a series of studies on tightly related specification
+languages for interlockings. These languages together are
+called ISL. Interlocking Specification Language. ISL is
+designed by P. Middelraad of the Dutch railway company,
+NS, de Nederlandse Spoorwegen. NS have developed a
+symbolic intermediate tool interface language, IDEAL, for
+ISL. IDEAL is the Interlingua for all men and machines
+using ISL. This report introduces interlockings, the
+long-term goals of the ISL project, and, as a first step,
+we present the syntax and static semantics of IDEAL in
+ASF+SDF, an algebraic specification formalism. Several
+improvements of IDEAL are suggested."}
+
+
+@techreport{Oei94pst,
+AUTHOR       = " L.H. Oei",
+TITLE        = "{P}runing the {S}earch {T}ree of {I}nterlocking {D}esign 
+                and {A}pplication {L}anguage {O}perational {S}emantics",
+INSTITUTION  = "University of Amsterdam, Programming 
+                Research Group",
+TYPE         = tr,
+NUMBER       = "P9418",
+ADDRESS      = "Kruislaan 403, 
+                1098 SJ Amsterdam, The Netherlands",
+MONTH        = "November",
+YEAR         = "1994",
+NOTE         = "\\ An interlocking is a system used at railyards for
+guaranteeing safety of train movements. This paper
+succeeds the study on the syntax and static semantics of
+tightly related graphical specification languages for
+interlockings. These languages together are known in NS
+documents as the Euris method. The Euris method has been
+designed by P.\ Middelraad of the Dutch railway company,
+NS, de Nederlandse Spoorwegen\footnote{The project we
+are involved in we sometimes refer to as ISL:
+Interlocking Specification Language.}. It concentrates on a
+graphical definition of Railway Interlocking by means of
+the so called Logic Sequence Charts, short LSCs, which is
+a derivation of the well known Flow Charts. NS have
+already developed a symbolic intermediate tool interface
+language, IDEAL to automate processing of LSC
+specifications. IDEAL, Interlocking Design and
+Application Language, is therefore effectively used as an
+Interlingua within the Euris-Simulation project. 
+A feasibility study of strategies of translations of IDEAL to
+the ExSpect simulation specification language is made.
+ExSpect, Executable Specification Tool---a formalism
+based upon Petri Nets---, would mean a first step toward
+proof theoretical correctness of the Euris method. As in
+the previous study, we have made use of the Algebraic
+Specification Formalism and the Syntax Definition
+Formalism which has been integrated in the ASF+SDF
+Meta-environment, for this purpose. The major question
+addressed is whether it is possible to apply full
+automated transformation of manageable complexity of IDEAL
+to ExSpect, without losing the LSC operatonal semantics,
+and at the same time gain the Petri Net invariants."}
+
+@techreport{Basten94sar,
+AUTHOR       = "T. Basten and R. Bol and M. Voorhoeve",
+TITLE        = "{S}imulating and {A}nalyzing {R}ailway 
+                {I}nterlocking in {E}x{S}pect",
+INSTITUTION  = "Department of Computing Science,
+                Eindhoven University of Technology",
+TYPE         = tr,
+NUMBER       = "94-37",
+ADDRESS      = "P.O. Box 513, 
+                5600 MB Eindhoven, The Netherlands",
+MONTH        = "September",
+YEAR         = "1994",
+NOTE         = "\\ 
+This paper describes a study on simulating and analyzing
+interlocking specifications in the Interlocking
+Specification Language (ISL), using the tool ExSpect.
+ExSpect is a toolkit based on the theory of coloured Petri
+nets. An approach to translating ISL to ExSpect is suggested.
+Experimental results of simulating and analyzing part of
+an ISL specification in ExSpect are discussed. ExSpect
+seems to be useful for simulating and analyzing ISL
+specifications. Furthermore, several interesting topics
+for future research are identified."}
+
+
+@techreport{Groote94tsg,
+AUTHOR       = "J.F. Groote and J.W.C. Koorn and S.F.M.van Vlijmen",
+TITLE        = "{T}he {S}afety {G}uaranteeing {S}ystem 
+                 at {S}tation {H}ooen-{K}ersenboogerd",
+INSTITUTION  = "Utrecht University",
+TYPE         = tr,
+NUMBER       = "121",
+ADDRESS      = "Utrecht University, Department of 
+                Philosophy, Heidelberglaan 8, Utrecht
+                The Netherlands",
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = "\\ 
+At the Dutch station Hoorn-Kersenboogerd, computer
+equipment is used for the safe and in time movement of
+trains. The computer equipment can be divided in two
+layers. A top layer offering an interface and means to
+help a human operator in scheduling train movement. And a
+bottom layer which checks whether commands issued by the
+top layer can safely be executed by the rail hardware and
+which acts appropriately on detection of a hazardous
+situation. The bottom layer is implemented with a
+programmable piece of equipment namely a Vital Processor
+Interlocking\footnote{VPI and Vital Processor
+Interlocking are registered trademarks of the General
+Railway Signal Company.}{\it (VPI)}. This paper introduces the
+most important features of the {\it VPI} at Hoorn-Kersenboogerd.
+This particular {\it VPI} is modelled in {\it uCRL}. Furthermore, the
+paper touches upon correctness criteria and tool support
+for {\it VPI}s, and suggests ways for verification of properties
+of {\it VPI}s. Experiments show that it is indeed possible to
+efficiently verify these correctness criteria."}
+
+
+@book{raise-RSL,
+AUTHOR       = "Chris W. George and Peter Haff and Klaus Havelund and
+Anne E. Haxthausen and Robert Milne and Claus Bendix Nielsen and
+S{\o}ren Prehn and Kim Ritter Wagner",
+TITLE        = "The {R}{A}{I}{S}{E} {S}{P}{E}{C}{I}{F}{I}{C}{A}{T}{I}{O}{N}
+{L}{A}{N}{G}{U}{A}{G}{E}",
+PUBLISHER    = "Prentice Hall, Ellis Horwood",
+SERIES       = "Prentice Hall BCS Practitioners Series",
+ADDRESS      = "Campus 400, Maylands Ave., 
+                Hemel Hampstead, Herts., HP2 7EZ, England",
+EDITION      = "2nd.",
+YEAR         = "1992",
+NOTE         = "\\ 409 pages; ISBN 0-13-752833-7; \$\,47.95"}
+
+@book{raise-Method,
+AUTHOR       = "Chris W. George  and
+Anne E. Haxthausen and Steven Hughes and Robert Milne  and
+S{\o}ren Prehn and Jan Storbank Pedersen",
+TITLE        = "The {R}{A}{I}{S}{E} {D}{E}{V}{E}{L}{O}{P}{M}{E}{N}{T}  
+                {M}{E}{T}{H}{O}{D}",
+PUBLISHER    = "Prentice Hall, Ellis Horwood",
+SERIES       = "Prentice Hall BCS Practitioners Series",
+ADDRESS      = "Campus 400, Maylands Ave., 
+                Hemel Hampstead, Herts., HP2 7EZ, England",
+YEAR         = "1995",
+NOTE         = "\\ 400 pages; ISBN 0-13-752700-4; \$\,44.95"}
+
+
+@phdthesis{montigel94mgae,
+AUTHOR       = "Markus Montigel",
+TITLE        = "{M}o\-del\-lier\-ung und {G}e\-w{\"a}hr\-leist\-ung von 
+                {A}b\-h{\"a}ng\-ig\-keit\-en in 
+                {E}isen\-bahn\-si\-cher\-ungs\-an\-la\-gen",
+SCHOOL       = "ETH: Swiss Federal Institute of Technology",
+ADDRESS      = "ETH Honggerberg, CH-8093 Z{\"u}rich, Swtizerland",
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{DinesDongPrehn94,
+AUTHOR       = "Dines Bj{\o}rner and Dong YuLin and S{\o}ren Prehn",
+TITLE        = "Domain {A}nalysis: {A} {C}ase {S}tudy
+                of {R}ailway {S}tation {M}nagement",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "db/03/01",
+ADDRESS      = address,
+MONTH        = "November 12",
+YEAR         = "1994",
+NOTE         = "\\ Presented at KICS'94: The Kunming
+                (Yuanna, PRC) Intl.\ CASE Symposium, Nov.\ 1994"}
+
+@techreport{Bjorner94apt,
+AUTHOR       = "Dines Bj{\o}rner and Jin Danhua",
+TITLE        = "A {P}{R}a{C}o{S}y to {P}{R}a{C}o{S}{H} 
+                {T}ransition {P}roposal",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "db/03/01",
+ADDRESS      = address,
+MONTH        = "February",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{Bjorner94aaf,
+AUTHOR       = "Dines Bj{\o}rner",
+TITLE        = "A {A}rchitecture for {R}unning {M}ap {S}ystems",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "db/arch/01",
+ADDRESS      = address,
+MONTH        = "February",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+%Soren Prehn
+
+@techreport{Prehn93pds,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{P}{R}a{C}o{S}y {D}ocument {S}tandard",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/4/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Prehn94afm,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "A {F}ormal {M}odel of the {R}ailway {A}pplication {D}omain {S}ystem",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/5/3",
+ADDRESS      = address,
+MONTH        = "January 7",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Prehn93fdmp,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{F}ormal {D}omain {M}odels {P}resentation",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/6/1",
+ADDRESS      = address,
+MONTH        = "December",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Prehn94fsvc,
+AUTHOR       = "S{\o}ren Prehn and Dong Yulin",
+TITLE        = "{F}ile {S}haring and {V}ersion {C}ontrol",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/11/1",
+ADDRESS      = address,
+MONTH        = "March",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Prehn94arr,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{A} {R}ailway {R}unning {M}ap {D}esign",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "SP/12/3",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Prehn94dtt,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{D}istributed {T}rain {T}ime-tables and {D}ispatching",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "SP/13/2",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+%Srinivasan Parthasarathy
+
+
+@techreport{Partha93pae,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y: {A}n {E}xecutive {O}verview",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/02/09",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha93pwd,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{P}{R}a{C}o{S}y:  {W}ork-package  {D}escription",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/03/03",
+ADDRESS      = address,
+MONTH        = "January",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha93aid,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "An {I}nformal {D}efiniton of the {S}cheduling {P}roblem
+ in {P}{R}a{C}o{S}Y",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/5/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Partha94pdc,
+AUTHOR       = "S. Parthasarathy and Dines Bj{\o}rner",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ocument {C}atalogue",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/catal/05",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{Partha94rst,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{R}ailway {S}ystem {T}erminology",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/terms/09",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha94drm,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{D}escriptors for {R}unning {M}aps",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/desc/06",
+ADDRESS      = address,
+MONTH        = "April",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha94rmd,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{R}unning {M}ap {D}isplay and {I}nteractivity",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/disply/03",
+ADDRESS      = address,
+MONTH        = "March",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha94pdr,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ocument {R}oadmap",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/roadmap/2",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha94ppp,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y {P}roject {P}hase I:
+                {R}evised {A}ctivity {P}lan",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/plan/01",
+ADDRESS      = address,
+MONTH        = "April",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Partha94psd,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y: {S}oftware {D}esign {D}escription",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/sdd/2",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+@article{Partha94ea,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "Episode {A}nalysis --- {A} {P}ractical
+                {A}pproach for {T}emporal {R}easoning 
+                in {A}utomated {P}rocesses",
+JOURNAL      = "Engineering Applications of AI",
+PUBLISHER    = "Elsevier/Pergamon",
+VOLUME       = "",
+NUMBER       = "",
+PAGES        = "",
+MONTH        = "",
+YEAR         = "1995",
+NOTE         = ""}
+
+@techreport{Dong93pdl,
+AUTHOR       = "Dong Yulin",
+TITLE        = "{P}{R}a{C}o{S}y {D}ocument {L}ist",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/0/2",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{LiDong93tzw,
+AUTHOR       = "Li Xiaoshan and Dong Yulin",
+TITLE        = "The {Z}hengzhou--{W}uhan {T}rain {D}ispatch {S}ystem",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/1/3",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = "\\ Translation from the chinese version which was authored by 
+staff of the Zhengzhou Railway Computer Center of the Ministry of Railways,
+ China"}
+
+
+@techreport{Bjorner93rsc,
+AUTHOR       = "Dines Bj{\o}rner and Dong Yulin",
+TITLE        = "{R}ailway {S}ystem {C}haracteristic",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/3/1",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Dong93e,
+AUTHOR       = "Dong Yulin and S{\o}ren Prehn",
+TITLE        = "Explanation",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/4/1",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Dong93mq,
+AUTHOR       = "Dong Yulin et al",
+TITLE        = "More {Q}uestions",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/6/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Dong93trm,
+AUTHOR       = "Dong Yulin",
+TITLE        = "Train {R}unning {M}ap",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/8/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Dong93ctc,
+AUTHOR       = "Dong Yulin",
+TITLE        = "Centralized {T}raffic {C}ontrol",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/10/1",
+ADDRESS      = address,
+MONTH        = "November",
+YEAR         = "1993",
+NOTE         = "\\ Extracted from Railway Technical English"}
+
+@techreport{dong94rb,
+AUTHOR       = "Dong Yulin and S. Parthasarathy",
+TITLE        = "Railway {B}ibliography",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/11/5",
+ADDRESS      = address,
+MONTH        = "March",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Dong94pdd,
+AUTHOR       = "Dong Yulin and Dines B{\o}rner",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ocument {D}eliverables",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/deliv/1",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+%Jin Danhua
+
+@techreport{Jin93psm,
+AUTHOR       = "Jin Danhua",
+TITLE        = "Proposed {S}henzhen {M}eeting {P}lan",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "jdh/2/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Jin94afm,
+AUTHOR       = "Jin Danhua",
+TITLE        = "{A} {F}irst {M}athematical {M}odel of {T}rain 
+                {T}ime {T}abling",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/math/03",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Jin94rmd,
+AUTHOR       = "Jin Danhua",
+TITLE        = "{R}unning {M}ap {D}isplay {T}ransformation",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/trans/02",
+ADDRESS      = address,
+MONTH        = "April",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Jin94pap,
+AUTHOR       = "Jin Danhua",
+TITLE        = "{P}{R}a{C}o{S}y: {A} {P}rogram {M}anual",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/manual/01",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Jin94asm,
+AUTHOR       = "Jin Danhua",
+TITLE        = "A {S}econd {M}ath. {M}odel of {T}rain {T}ime {T}abling",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/math/05",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{Jin94pdc,
+AUTHOR       = "Jin Danhua",
+TITLE        = "P{R}a{C}o{S}y {D}ocument {C}atalogue",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/catal/08",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+%Liu Xin
+
+@techreport{Liu93ppa,
+AUTHOR       = "Liu Xin and S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y-{P}hase 1 {A}ctivities and {M}ilestones",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "lx/1/0",
+ADDRESS      = address,
+MONTH        = "November",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{Liu94asr,
+AUTHOR       = "Liu Xin",
+TITLE        = "{A} {S}imple {R}unning {M}ap {D}isplay {T}ool",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "lx/tool/01",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Liu94pds,
+AUTHOR       = "Liu Xin",
+TITLE        = "{P}{R}a{C}o{S}y: {D}emo {S}cript {I}",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "lx/plan/01",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+%Sun Guoqing
+@techreport{Sun93gdf,
+AUTHOR       = "Sun Guoqing and Liu Xin and S. Parthasarathy",
+TITLE        = " {G}lobal {D}ata {F}low {D}iagrams for {T}rain {D}ispatch",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/1/6",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Sun94pds,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ata {S}tructures for {R}ailway {N}etworks",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/3/1",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{Sun94fmt,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "Formal {M}odels of {T}ime-table {I}nput {T}ool",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/11/3",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Sun94fmtt,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "{P}{R}a{C}o{S}y: {T}ime-{T}able {P}reparation {T}ool {S}criptor",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/12/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+@techreport{Sun94pdsf,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ata {S}tructures for {T}ime-table {P}rojections",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/4/1",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+
+
+@techreport{Ma93ido,
+AUTHOR       = "Ma Chao and S. Parthasarathy",
+TITLE        = "{I}nformal {D}escription of a {R}ailway {S}ystem",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "mc/narr2/2",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{Ma94pds,
+AUTHOR       = "Ma Chao",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ata {S}tructures for {T}rain {J}ourneys",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "mc/dstr1/1",
+ADDRESS      = address,
+MONTH        = "May",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+@techreport{Niver94tot,
+AUTHOR       = "J. Nievergelt",
+TITLE        = "Thoughts on {T}raffic {S}cheduling and {T}ime {T}able
+ {D}esign",
+INSTITUTION  = "Swiss Federal Technical University, Z{\"u}rich",
+TYPE         = tr,
+NUMBER       = "dyl/9/2",
+ADDRESS      = "Informatik, ETH, CH-8092 Zurich, Switzerland",
+MONTH        = "January",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+@techreport{CASCO90ctc,
+AUTHOR       = "CASCO",
+TITLE        = "Centralized {T}raffic {C}ontrol {S}ystem {P}roposal for 
+{Z}hengzhou-{W}uchang {S}outh {R}ailway {L}ine",
+INSTITUTION  = "Casco Signal LTD",
+TYPE         = tr,
+NUMBER       = "",
+ADDRESS      = "",
+MONTH        = "December",
+YEAR         = "1990",
+NOTE         = "proposal to fulfil contract with Minstry of Railway, China"}
+
+@techreport{CASCO92clc,
+AUTHOR       = "CASCO",
+TITLE        = "Casco {L}ower {C}ad {S}ystem",
+INSTITUTION  = "Casco Signal LTD",
+TYPE         = tr,
+NUMBER       = "",
+ADDRESS      = "",
+MONTH        = "June",
+YEAR         = "1992",
+NOTE         = ""}
+
+
+@techreport{cwg-rail-cri,
+AUTHOR       = "Chris George",
+TITLE        = "Specification and {D}evelopment 
+                of {A}n {A}utomatic {T}rain {S}ystem",
+INSTITUTION  = "CRI A/S",
+TYPE         = "Internal Research Note",
+NUMBER       = "LACOS/CRI/CWG/38",
+NOTE         = ""}
+  

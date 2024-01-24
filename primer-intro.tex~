@@ -1,0 +1,519 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Dear ShaoFa - this doc. is redady for Your translation ! %%%%%%%%%
+%%%% Dear ShaoFa - five typos corrected, 15 April 23 %%%%%%%%%%%%%%%%%%
+%%%% Dear ShaoFa - typos corrected,      26 December 23 %%%%%%%%%%%%%%%
+%%%% Dear ShaoFa - typos corrected,      04 January 24  %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbbbb{Introduction}\label{chap:Introduction}\label{chap:Introduction.1}
+\minitoc
+
+
+\begin{flushright}\label{intro:The Triptych Dogma}
+\sort{The Triptych Dogma}\\[4mm]
+\addcontentsline{toc}{subsection}{\bbcolor{The Triptych Dogma}}
+\sf In order to \textsl{specify} \bmcolor{{$\mathcal{S}$}oftware},\\
+\sf we must understand its requirements.\\[1mm]
+\sf In order to \textsl{prescribe} \bmcolor{{$\mathcal{R}$}equirements},\\
+\sf we must understand the \bmcolor{$\mathcal{D}$omain}.\\[1mm]
+\sf So we must \bbcolor{study, analyse} and \bbcolor{describe} domains.\\
+\end{flushright}\rm%
+\index{pdefind}{The Triptych Dogma}\index{pdefind}{Triptych Dogma, The}\index{pdefind}{Dogma, The Triptych}
+\mnewfoil
+
+\boiteepaisseavecuntitre{$\mathcal{D},\mathcal{S}\models\mathcal{R}$}
+\noindent
+\begynd
+\pind In proofs of correctness ($\models$)
+\begynd
+\pind of $\mathcal{S}$oftware
+\pind with respect to $\mathcal{R}$equirements
+\pind assumptions are often stated \ysfchg{with respect to } the $\mathcal{D}$omain.
+\afslut
+\pind So this, therefore, alone justifies our focus on domains.
+\afslut
+\endboiteepaisseavecuntitre
+
+\mnewfoil
+
+\noindent
+\begynd
+\pind \ysfchgii{This } \primer\ is 
+\begynd
+\pind both a significantly reduced version \nyl of the scientific monograph \cite{BjornerMonograph2020} 
+\pind and a revision and, notably, simplification, of some of its findings.  
+\afslut
+\afslut
+
+\nbbbbb{Why This Primer\,?}\label{sec:Why This Primer}
+
+\begynd
+\pind This \primer\ is intended as a \sort{textbook}.
+\pind The courses that \ysfchg{we } have in mind are, in the
+\sort{lectures}\ysfchg{, } \sort{to focus} on
+      Chapters\,\ref{chapter:Domains}--\ref{chapter:Perdurants},
+      i.e., Pages\,\pageref{chapter:Domains}--\pageref{chapter:Perdurants.n}.
+\pind The \sort{serious students}, whether just readers or actual,
+      physical course lecture attendants, are expected to study
+      Chapters\,\ref{chap:Introduction}--\ref{chapter:Philosophy} as
+      well as Chapter\,\ref{chapter:Closing} and the Bibliography
+      (Chapter\,\ref{primer.bib}) and the appendices on their own\,! 
+\afslut
+
+\begynd
+\pind  \ysfchgii{This } \primer\ is about how to \sfsl{analyse \& describe} man-made
+      domains (including their possible interaction with nature).
+      \pind We emphasize the ampersand: `\&'.\footnote{By not writing `and', but `\&', we shall emphasize that in
+      ${A\&B}$ we are dealing with \sort{one} concept which consists of
+      both $A$ and $B$ ``tightly interacting''.}
+\pind We justify competency in \sfsl{Domain Science \& Engineering}
+      for two reasons.
+\begynd
+\pind (i) For reasons of proper \sfsl{engineering} software
+      development --  as indicated by the above \sort{Triptych Dogma}. In 
+      possible proofs of software properties references are made, not
+      only to the software code itself and the requirements, but also
+      to the domain, the latter in the form of \sfsl{assumptions about
+      the domain}. In our mind no software development project ought
+      be undertaken unless it more-or-less starts with a proper domain
+      engineering phase. And
+\pind (ii) for reasons of \sfsl{scientifically} understanding our own
+      everyday practical world: financial institutions, the transport
+      industry (road, rail and air traffic, shipping), feeder systems
+      (such as oil, gas, water and other such pipeline systems), etc. 
+\afslut
+\afslut
+
+\nbbbbb{Structure}\label{sec:Structure}
+
+\begynd
+\pind The \primer, beyond the present chapter, has, syntactically
+speaking, three elements:
+\afslut
+
+\begin{enumerate}
+\item \sort{Chapter\,\ref{chap2.tex.Philosophy}} covers the \sfsl{philosophy} of
+      \texttt{Kai S{\o}rlander}
+      \cite{kaisorlander1994,kaisorlander1997,kaisorlander2002,kaisorlander2016,kaisorlander2022}.
+
+      Yes, a major contribution of \cite{BjornerMonograph2020} and
+      this \primer\ is to justify important domain concepts by
+      their sheer inevitability in any world description.
+      
+\item \sort{Chapters\,\ref{chapter:Domains}--\ref{chapter:Perdurants}} presents \sfsl{the methodology of
+    domain engineering.} It is split into four chapters for practical
+    and pragmatic
+    reasons. Chapter\,\ref{chapter:Domains} gives a ``capsule
+    introduction'' into Chapters\,\,\ref{primer-extq.1}--\ref{chapter:Perdurants}.
+  
+\item \sort{Chapters\,\ref{chapter:Closing}--\ref{primer.bib}}
+  and \sort{Appendices\,\ref{Chapter:Road Transport}--\ref{primer.indexes}} cover
+  such things as `closing remarks' (\sort{\ref{chapter:Closing}}), a `bibliography' (\sort{\ref{primer.bib}}), a `Road
+  Transport' example (\sort{\ref{Chapter:Road Transport}}), a `Pipeline System' example (\sort{\ref{appendix:Pipelines}}), an `\texttt{RSL}
+  formal specification language' primer (\sort{\ref{RSL-intro}}), and `Indexes' to definitions, concepts, etc. (\sort{\ref{primer.indexes}}).
+\end{enumerate}
+
+\nbbbbb{Prerequisite Skills}\label{Prerequisite Skills}
+
+\begynd
+\pind The \pos{reader}{course student} is expected to possess the
+      following skills:
+\afslut
+\begin{itemize}
+\item To be reasonably versed in \sort{discrete mathematics:} mathematical logic
+  and set theory.
+\item To have had, even if only a  fleeting, acquaintance with abstract
+  specifications in the style of
+  \texttt{VDM} \citevdm,
+  \texttt{Z} \citez,
+  \texttt{CafeObj} \citecafeobj, 
+  \texttt{Maude} \cite{maude-primer,maude-manual}, or the like -- and thus
+  to enjoy abstractions\footnote{Some say: \sfsl{``Mathematics is the
+  Science of Abstractions''}\,! Others say that both \sfsl{``Mathematics and
+  Physics are Abstractions of Reality''}.}.
+\item To have reasonable experience with \sort{functional programming} a
+      la \texttt{Standard ML} or \textsf{F}
+      \cite{MilnerTofte,Harper,MRHansen+HRischel} respectively
+      \cite{Hansen+Rischel} -- or similar such language.
+    \item To have  reasonable experience with \sort{\texttt{CSP}}
+      \cite{Hoa78,Hoare85,Hoare85+2004,Roscoe97,Schneider99}.
+\end{itemize}
+\noindent
+\begynd
+\pind The \pos{reader}{course student} is further expected to possess
+      the following mindset:
+\afslut
+\begin{itemize}
+\item To basically consider software as\ \sort{mathematical
+      objects}. That is: as quantities about which one can (and must) reason logically.
+  \item To \sort{think and ``act'' abstractly}. An essence of
+  abstraction is expressed in the next section.
+
+\item To \sort{act responsibly}\footnote{It is, today, \todaytime, 
+    very fashionable to propagate messages of `ethics' to programmers
+    -- without even touching upon issues such as \sfsl{``have You
+    understood Your application domain thoroughly\,?''}, or
+    \sfsl{``have You reasoned about adequacy of your requirements\,?''},
+    or \sfsl{``have You model-checked, proved and formally tested your
+    specifications (descriptions and prescriptions) and Your
+    code\,?''}, etc.}, that is to make sure that You have 
+    indeed understood Your domain, that You  have indeed reasoned
+    about adequacy of your requirements, and  You have indeed
+    model-checked, proved and formally tested Your  
+    specifications.
+\end{itemize}
+
+\nbbbbb{Abstraction}\label{primer:Abstraction}
+
+%\input{abstraction}
+
+\QUOTATION{Conception, my boy, fundamental brain-work, \\ 
+           is what makes the difference in all art\ysf{.}}%
+          {D.G.\ Rossetti\footnote{Dante Gabrielli Rosetti,
+          1828--1882, English poet, illustrator, painter and
+          translator.}: letter to T.\ H.\ Hall Caine\footnote{T.\ H.\ Hall Caine,
+          1853--1931, British novelist, dramatist, short story
+          writer, poet and critic.}}  
+
+\pos{\psno}{\mnewfoil}
+
+\noindent
+\pos{}{Quoting \sort{C.A.R.\,Hoare:}}
+
+\noindent
+\begynd
+\pind {\sl Abstraction is a tool,
+\begynd
+\pind used by the human mind, 
+\pind and to be applied in the process of describing \nyl 
+          (understanding) complex phenomena.
+\afslut
+}
+
+\pind {\sl Abstraction is the most powerful such tool  \nyl
+available to the human intellect.}
+
+\pind {\sl Science proceeds by simplifying reality. }
+\begynd
+\pind {\sl The first step in simplification is abstraction.}
+\pind {\sl Abstraction (in the context of science) \nyl  
+          means leaving out of account all those empirical \nyl
+          data which do not fit the particular, conceptual 
+          framework \nyl within which science at the moment
+          happens to be working.}
+\afslut
+\afslut
+
+\pos{\psno}{\mnewfoil}
+\begynd
+\pind {\sl Abstraction (in the process of specification)}
+\begynd
+\pind {\sl arises from a conscious
+          decision
+\pind  to advocate certain 
+          desired objects, situations and processes
+\pind  as being fundamental; 
+\pind by exposing, 
+          in a first, or higher, level of
+          description, their similarities 
+\pind  and \ysf{--} at that level -- ignoring
+          possible differences.}
+\afslut
+\afslut
+
+  \ \hfill     \pos{ [From the opening paragraphs of}{} 
+           \cite[C.A.R.\ Hoare\ysf{,} \textsl{Notes on Data
+           Structuring}]{Hoa72a}\pos{\ysf{.}]}{}
+       %}{}
+
+\nbbbbb{Software Engineering}\label{sec:Software Engineering}
+\bbbb{Domain Science \& Engineering}
+
+\begynd
+\pind This \primer\ covers only the \sfsl{application domain} of software development.
+\pind There are two things to say about that.
+\begynd
+\pind One is that facets of \sfsl{requirements},
+\begynd
+\pind essential ones, is covered in \cite[Chapter 8]{BjornerMonograph2020},
+\pind general ones in \cite[Software Engineering, III, Part V]{TheSEBook3};
+\afslut
+\pind the other is that the pursuit of developing domain models \nyl
+      is not just for the sake of software development, \nyl
+      but also for the sake of just understanding the man-made world
+      around us.
+\afslut
+\pind Domain science and engineering can thus be pursued in-and-by itself.
+\afslut
+
+\nbbbb{Software Engineering}
+
+\begynd
+\pind In 2006 \ysfchg{these books were } published: \cite{TheSEBook1,TheSEBook2,TheSEBook3}:
+\afslut
+
+\begin{center}
+\epsfig{file=SE1.eps,width=4cm}\ \
+\epsfig{file=SE2.eps,width=4cm}\ \
+\epsfig{file=SE3.eps,width=4cm}
+\end{center}
+
+\nbbb{Domain Engineering: 2016--2022}\label{Domain Engineering 2016 2022}
+
+\begynd
+\pind The first inklings of the domain science and engineering of
+      \cite{BjornerMonograph2020} appeared in \cite[2010]{Kiev:2010ptI,Kiev:2010ptII}.
+\pind More-or-less ``final'' ideas were published, first in \cite[2017]{BjornerFAoC2015MDAAD},
+      then in \cite[March 2019]{BjornerTOSEM2018}.
+\pind The book \cite{BjornerMonograph2020} with updates in this
+      \primer, then constitutes the most recent status of our work in domain
+      science \& engineering. 
+
+\pind \cite[Software Engineering, III, Part V]{TheSEBook3} does not
+      cover the \sfsl{Domain Engineering} material covered in
+      \cite[Chapter 8: Domain Facets]{BjornerMonograph2020}.
+\begynd
+\pind That latter was researched \cite{dines:facs:2008} and developed between the appearance
+      of \cite{TheSEBook3} and, obviously, \cite{BjornerMonograph2020}.
+\afslut
+\afslut
+
+\begynd
+\pind Part V of \cite{TheSEBook3}, except for Chapters\,17--18 is
+      still relevant.
+\pind Chapters\,17--18 of \cite{TheSEBook3} are now to be replaced in
+      any study by Chapters\,4--7 of \cite{BjornerMonograph2020} \sort{or}
+      this \primer\,!
+\afslut
+
+\nbbb{Requirements Engineering}
+
+\begynd
+\pind This \primer\ does not show You how to proceed into software
+      development according to the \sort{Triptych Dogma}.
+\begynd
+\pind This is strongly hinted at in \cite[Chapter 9]{BjornerMonograph2020}.
+\pind (That chapter is an adaptation of \cite[May 2008]{dines:ugo65:2008}.)
+\pind Our approach to \sfsl{requirements engineering} is rather
+      different from that of both \cite[A. van Laamswerde]{Lamsweerde}
+      and \cite[M.\ A.\ Jackson]{Jackson2010Facs} -- to cite 
+      two relevant works.
+\pind It is, \ysfchg{we } strongly think, commensurate with these works.
+\pind  \ysfchg{We } wish that someone could take up this line of research:
+\begynd
+\pind making more precise, perhaps more formal, the ideas of
+      \sfsl{projection, intialisation, determination, extension} and \sfsl{fitting};
+\pind and comparing, perhaps unifying our approach with that of
+      Lamsweerde and Jackson.
+\afslut
+\afslut
+\afslut
+
+\nbbb{Software Design}
+
+\begynd
+\pind For the software design phase, after requirements engineering,
+\pind we, of course, recommend \cite[\sfsl{Software Engineering}
+      vols.\,1--2]{TheSEBook1,TheSEBook2} 
+\afslut
+
+\nbbbbb{The Structuring of The Text}\label{The Structuring of The Text}
+
+\begynd
+\pind The \pos{reader}{student} will find that this text consists of
+      ``diverse'' kinds of usually small paragraphs of texts:
+\begynd
+\pind \bbcolor{definition}s -- properly numbered and labeled;
+\pind \bbcolor{example}s -- properly numbered and labeled;
+\pind \bbcolor{analysis predicate, function,} and
+      \bbcolor{description prompt} ``formalisations'';
+\pind \bbcolor{method} principle, procedure, technique and tool paragraphs;
+\pind -- all of these delineated by closing {\dbsquare}s;
+\pind -- with short, usually one or two small paragraphs of
+      introductory or otherwise explaining texts.
+\afslut
+\pind All of \ysfchg{these are } \textsf{``brought to You in living
+  colours''\,!}\footnote{\LLLL -- as the \textsf{NBC} Television
+  Network programmmes would ``proudly'' announce in \ysf{t}he 1960s\,!}
+\pind So be prepared:
+\begynd
+\pind Study such paragraphs: paragraph-by-paragraph.
+\pind Each form\ysfchg{s } a separate ``whole''.
+\afslut
+\afslut
+
+
+\nbbbbb{Self-Study}\label{sec:Used for Self-Study}
+
+\begynd
+\pind This \primer\ is primarily intended to support actual, physical lectures.
+\pind For self-study by B.Sc.\ and M.Sc.\ students and practicing
+      novice software engineers  we recommend to use this \primer\ in
+      connection with its ``origin'' \cite{BjornerMonograph2020}.
+\pind For  self-study by Ph.D.\ students and graduated computer
+      scientist we recommend going directly to the source:
+      \cite{BjornerMonograph2020}.   
+\afslut
+
+\nbbbbb{Two Examples}\label{primer:Two Examples}
+
+\begynd
+\pind There are around 80 examples, scattered all over the first 120 pages.
+\pind In addition we bring two larger examples:
+\afslut
+\begin{itemize}
+\item \textsf{Road Transport}, Appendix\,\ref{Chapter:Road
+        Transport}, pages\,\pageref{Chapter:Road Transport}--\pageref{p-ch:Road Transport.n}, 
+\item \textsf{Pipelines},
+      Appendix\,\ref{appendix:Pipelines}, pages\,\pageref{appendix:Pipelines}--\pageref{appendix:Pipelines.n}. 
+\end{itemize}
+
+\dbeat{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nbbbbb{Lectures}\label{sec:Use in Lectures}
+
+\begynd
+\pind This \primer\ was developed during the summer of 2022.
+\pind The author was to give a set of seven double lectures \nyl at the Technical
+      University of Vienna\footnote{The author ``woke up'' to what
+        software engineering and computer science is really about in
+        Vienna, in 1973--1975 -- at the \sort{IBM Vienna Labor}, with
+        colleagues like \sfsl{Hans Beki{\v{c}}, Cliff Jones, Peter Lucas} and \sfsl{Kurt Walk}. It
+        had to be Vienna, the city of the \sfsl{Wiener Kreis}
+        \texttt{en.\-wiki\-pedia.\-org/\-wi\-ki/\-Vienna\_\-Circle}, \sfsl{Ludwig
+          Wittgenstein}
+        \texttt{en.\-wiki\-pedia.\-org/\-wi\-ki/\-Lud\-wig\_\-Witt\-gen\-stein}
+        and \sfsl{Sir Karl
+          Popper}
+        \texttt{en.\-wiki\-pedia.\-org/\-wi\-ki/\-Karl\_\-Popper}.}
+      October
+        24 -- November 4, 2022.
+      \pind These lectures were: 
+\begin{itemize}
+\item Week 1:
+\begin{description}
+\item[Lecture Day 1:] Chapter\,\ref{chapter:Domains}:
+\begin{itemize}
+\item \sort{Domains} -- lecture ``doubles'' as a Faculty Seminar\,!
+\end{itemize} and Appendix\,A: 
+\begin{itemize}
+\item \sort{An Example, I}
+\end{itemize}
+\item[Lecture Day 2:] Chapter\,\,\ref{primer-extq.1}:
+\begin{itemize}
+\item \sort{Endurants: External Qualities}
+\end{itemize}
+  
+\item[Lecture Day 3:] Sections\,\,\ref{chap4.Internal
+    Qualities}--\ref{chap4.Mereology}:
+\begin{itemize}
+\item \sort{Unique Identifiers}
+\item \sort{Mereology}
+\end{itemize}
+
+\item[Lecture Day 4:] Sections\,\,\ref{chap4.Attributes}--\ref{A
+    Domain Discovery Process, II}:
+\begin{itemize}
+\item \sort{Attributes},
+\item \sort{Intentional Pull},
+\item \sort{A Domain Discovery Process}
+\end{itemize}
+\end{description}
+\item Week 2:
+\begin{description}
+\item[Lecture Day 5:]  Appendix\,A: 
+\begin{itemize}
+\item \sort{An Example, II}  Further on \sort{Road Transport}, and
+\end{itemize}
+ Chapter\,\,\ref{chapter:Perdurants}, Sect.\,\ref{A General Analysis of Part  Behaviours}:
+\begin{itemize}
+\item \sort{A General Analysis of Part Behaviours}
+\end{itemize}
+\item[Lecture Day 6:] Chapter\,\,\ref{chapter:Perdurants},
+  Sects.\,\ref{Domain Channel Description}--\ref{Behaviour Definition Bodies}: 
+\begin{itemize}
+\item \sort{Channels} and
+\item \sort{Behaviours Definitions: Signatures and Bodies}
+\end{itemize}
+\item[Lecture Day 7:] Chapter\,\,\ref{chapter:Perdurants},
+  Sects.\,\ref{Domain Behaviour Initialisation}--\ref{A Domain Discovery Process, III}:
+\begin{itemize}
+\item \sort{Domain Behaviour Initialisation}, 
+\item \sort{A Domain Discovery Process},
+\end{itemize}
+\end{description}
+\end{itemize}
+\afslut
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nbbbbb{Relation to \cite{BjornerMonograph2020}}
+
+\begynd
+\pind This \primer\ is based on \cite[Nov.\,2021]{BjornerMonograph2020}.
+\pind Chapter\,\ref{chapter:Philosophy} is a complete rewrite of
+      \cite[Chapter\,2]{BjornerMonograph2020}.  
+\pind Chapters\,\ref{primer-extq.1}--\ref{chapter:Perdurants} is a
+      ``condensation'' of \cite[Chapters\,4--7]{BjornerMonograph2020}:
+\begynd
+\pind \cite[Chapter\,6]{BjornerMonograph2020} has been shortened and
+      appears in this \primer\ as Sect.\,\ref{Transcendental Deductions}.
+\pind From \cite[Chapter\,4]{BjornerMonograph2020} we have, in
+      Chapter\,\ref{primer-extq.1}, omitted all 
+      material on -- what is there referred to as \sfsl{Conjoins}.
+\pind And we have further sharpened the notion of \sfsl{type names}.
+\afslut
+\pind We have sharpened the focus on methods: principle, procedures,
+      techniques and tools.
+\begynd
+\pind You will find, in the \sfsl{Indexes} section,
+      Sect.\,\vref{label.dadmethod}, a summary of references to these.
+\pind Work is still in progress on highlighting more of the method steps.
+\afslut
+\pind Section\,\ref{Discrete Dynamic Domains} is new. 
+\afslut
+
+\nbbbbb{The \texttt{RAISE} Specification Language, \texttt{RSL}, and \rslplus}\label{RSL-I}
+
+\begynd
+\pind The formal notation (to go with the informal text) of this
+      \primer\ is that of \texttt{RSL} \cite{RSL}, the \sort{R}AISE
+      \sort{S}pecification \sort{L}anguage, where \texttt{RAISE}
+      stand\ysfchg{s }
+      for \sort{R}igorous \sort{A}pproach to \sort{I}ndustrial
+      \sort{S}oftware \sort{E}ngineering \cite{RaiseMethod}. 
+\pind Other formal notations could be used instead.
+\pind Replacement examples could be \texttt{VDM} \citevdm , \texttt{Z}
+      \citez, or \texttt{Alloy} \citealloy.
+\pind We are more using the \texttt{RAISE} specification language,
+      \texttt{RSL} than using the method.
+\pind And we are using it in two ways:
+\begin{itemize}
+\item Informally, to present and explain the domain analysis \&
+      description methods of this \primer, and
+\item formally, to present domain descriptions. 
+\end{itemize}
+\pind The informal \texttt{RSL} is an extended version,
+\rslplus.\footnote{See Appendix Sect.\,\vref{chap2.tex.rsltext}.}
+\pind The two ways are otherwise not related.
+\pind One could use another specification language \ysfchg{either } for the
+      informal or \ysfchg{for } the formal aspects.
+\afslut
+
+\nbbbbb{Closing}
+
+\begynd
+\pind The purpose of this introduction is to place the present \primer\
+\pind in the context of \ysfchgv{Dines Bj{\o}rner's } other books
+      \cite{TheSEBook1,TheSEBook2,TheSEBook3} on software development 
+\pind and possible lectures and self\ysf{-}study.
+\afslut
+
+\label{chap:Introduction.n}
+
+%%  LocalWords:  analyse defind VDM CafeObj CSP Kai rlander RSL Ph wi
+%%  LocalWords:  summarises Laamswerde intialisation Lamsweerde Beki
+%%  LocalWords:  Kreis pedia ki Lud Endurants Mereology Behaviours
+%%  LocalWords:  Behaviour Initialisation formalisations colours AISE
+%%  LocalWords:  programmmes dadmethod pecification anguage igorous 
+%%  LocalWords:  pproach ndustrial oftware ngineering Gabrielli Caine
+%%  LocalWords:  Rosetti Hoare equirements omain pdefind wrt

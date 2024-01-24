@@ -1,0 +1,134 @@
+
+\renewcommand{\mnewfoil}{\pos{\psno}{\newpage\vspace*{-20mm}
+    \centerline{\small\normalsize\sf%
+\ifthenelse{\value{section}=0}{}{%
+%    \arabic{chapter}.%
+%            \arabic{section}. 
+            \usebox{\sektname}
+\ifthenelse{\value{subsection}=0}{}{%
+%    \arabic{chapter}.% 
+%            \arabic{section}.% 
+%            \arabic{subsection}. 
+            \usebox{\subsektname}
+\ifthenelse{\value{subsubsection}=0}{}{%
+%    \arabic{chapter}.%
+%            \arabic{section}.%
+%            \arabic{subsection}.%  
+%            \arabic{subsubsection}.  
+            \usebox{\subsubsektname}
+\ifthenelse{\value{paragraph}=0}{}{%
+%    \arabic{chapter}.%
+%            \arabic{section}.%
+%            \arabic{subsection}.% 
+%            \arabic{subsubsection}.%
+%            \arabic{paragraph}. 
+            \usebox{\parname}
+            \ifthenelse{\value{subparagraph}=0}{}{%
+%   \arabic{chapter}.%
+%   \arabic{section}.%
+%   \arabic{subsection}.% 
+%   \arabic{subsubsection}.%
+%   \arabic{paragraph}.% 
+%   \arabic{subparagraph}
+   \usebox{\subparname}}}}}}}%  
+   \vspace*{2mm}\hrule\vspace*{5mm}\HHHH}}
+
+     
+%%%%%%%%% CHAPTER
+
+\renewcommand{\nbbbbbb}[1]% 
+  {\sbox{\chapnamesavebox}{\sort{\fsz #1}}% 7 Maj 2015
+        \sbox{\chapname}{\sort{\fsz #1}}%
+        \sbox{\sektname}{}%
+        \sbox{\subsektname}{}%
+        \sbox{\subsubsektname}{}% 
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \mnewfoil\chapter{\HHHH\lilacolor{#1}}}
+         
+%%%%%%%%% SECTION
+
+\renewcommand{\nbbbbb}[1]%  from directory /home/db/2009
+  {\sbox{\sektnamesavebox}{\brcolor{\fsz #1}}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \sbox{\subsektname}{}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \mnewfoil%%
+        \HHHH\section{\HHHH\brcolor{#1}}}
+
+\renewcommand{\bbbbb}[1]%  from directory /home/db/2009
+  {\sbox{\sektnamesavebox}{\brcolor{\fsz #1}}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \HHHH\section{\HHHH\brcolor{#1}}}
+
+      
+%%%%%%%% SUBSECTION
+
+\renewcommand{\nbbbb}[1]%  from directory /home/db/2009
+  {\sbox{\subsektname}{\bbcolor{\fsz #1}}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \mnewfoil%
+        \HHHH\subsection{\HHHH\bbcolor{#1}}}
+
+\renewcommand{\bbbb}[1]%  from directory /home/db/2009
+  {\sbox{\subsektname}{\bbcolor{\fsz #1}}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \HHHH\subsection{\HHHH\bbcolor{#1}}}
+
+%%%%%%%% SUBSUBSECTION
+
+\renewcommand{\nbbb}[1]%  from directory /home/db/2009
+  {\sbox{\subsubsektname}{\lilacolor{\fsz #1}}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \mnewfoil%
+        \HHHH\subsubsection{\HHHH\lilacolor{#1}}}
+
+\renewcommand{\bbb}[1]%  from directory /home/db/2009
+  {\sbox{\subsubsektname}{\lilacolor{\fsz #1}}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \HHHH\subsubsection{\HHHH\lilacolor{#1}}}
+
+%%%%%%%% PARAGRAPH
+
+\renewcommand{\nbb}[1]% 
+  {\sbox{\parname}{\bmcolor{\fsz #1}}%
+        \sbox{\subparname}{}%
+        \nultaeller\nxtpara\mnewfoil%
+        \HHHH\paragraph{\HHHH\bmcolor{#1}}}
+ 
+\renewcommand{\bb}[1]% 
+  {\sbox{\parname}{\bgcolor{\fsz #1}}%
+        \sbox{\subparname}{}%
+        \HHHH\paragraph{\HHHH\bmcolor{#1}}}
+
+%%%%%%%% SUBPARAGRAPH
+
+\renewcommand{\nspb}[1]%  from directory /home/db/2009
+  {\sbox{\subparname}{{\bgcolor{\fsz #1}}}%
+        \mnewfoil\HHHH\subparagraph{\HHHH\bgcolor{#1}}}
+
+\renewcommand{\spb}[1]%  from directory /home/db/2009
+  {\sbox{\subparname}{{\bgcolor{\fsz #1}}}%
+    \HHHH\subparagraph{\HHHH\bgcolor{#1}}}
+
+\renewcommand{\nsspb}[1]%  from directory /home/db/2009
+  {\sbox{\subparname}{{\fsz #1}}\mnewfoil%
+         \centerline{\huge\HHHH\bf\shadowbox{%
+         $\star$ \textsl{#1}\ $\star$}}\Huge\rm}
+
+\renewcommand{\sspb}[1]%  from directory /home/db/2009
+  {\sbox{\subparname}{{\fsz #1}}%
+        \centerline{\huge\HHHH\bf\shadowbox{
+        $\star$ \textsl{#1}\ $\star$}}\Huge\rm}

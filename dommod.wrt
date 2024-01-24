@@ -1,0 +1,545 @@
+\@writefile{toc}{\contentsline {section}{{{\color {red}\textbf {\textsf {Preface}}\color {black}}}}{v}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {The Triptych Dogma}}\color {black}}}}{v}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {Domains -- What Are They\tmspace +\thinmuskip {.1667em}?}}\color {black}}}}{v}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {Aim and Objectives}}\color {black}}}}{v}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {Methodology}}\color {black}}}}{vi}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {An Emphasis}}\color {black}}}}{vi}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {A Caveat}}\color {black}}}}{vii}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {red}\textbf {\textsf {Table of Contents}}\color {black}}}}{vii}}
+\@writefile{@@@}{\chapterbegin }
+\@writefile{toc}{\contentsline {subsection}{{{\color {red}\textbf {\textsf {End of Table of Contents}}\color {black}}}}{xi}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 1}{{\color {nylilacolor}\textbf {\textsf {Introduction}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Introduction}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{1}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Introduction}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{1}}
+\@writefile{toc}{\contentsline {subsection}{{{\color {blue}\textbf {\textsf {The Triptych Dogma}}\color {black}}}}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.1}}{{\color {red}\textbf {\textsf {Why This Primer\tmspace +\thinmuskip {.1667em}?}}\color {black}}}}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.2}}{{\color {red}\textbf {\textsf {Structure}}\color {black}}}}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.3}}{{\color {red}\textbf {\textsf {Prerequisite Skills}}\color {black}}}}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.4}}{{\color {red}\textbf {\textsf {Abstraction}}\color {black}}}}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.5}}{{\color {red}\textbf {\textsf {Software Engineering}}\color {black}}}}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 1.5}.1}}{{\color {blue}\textbf {\textsf {Domain Science \& Engineering}}\color {black}}}}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 1.5}.2}}{{\color {blue}\textbf {\textsf {Software Engineering}}\color {black}}}}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 1.5}.2}.1}}{{\color {magenta}\textbf {\textsf {Domain Engineering: 2016--2022}}\color {black}}}}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 1.5}.2}.2}}{{\color {magenta}\textbf {\textsf {Requirements Engineering}}\color {black}}}}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 1.5}.2}.3}}{{\color {magenta}\textbf {\textsf {Software Design}}\color {black}}}}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.6}}{{\color {red}\textbf {\textsf {The Structuring of The Text}}\color {black}}}}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.7}}{{\color {red}\textbf {\textsf {Self-Study}}\color {black}}}}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.8}}{{\color {red}\textbf {\textsf {Two Examples}}\color {black}}}}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.9}}{{\color {red}\textbf {\textsf {Relation to \cite {BjornerMonograph2020}}}\color {black}}}}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.10}}{{\color {red}\textbf {\textsf {The \texttt {RAISE} Specification Language, \texttt {RSL}, and \texttt {RSL$^{+}$}}}\color {black}}}}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 1.11}}{{\color {red}\textbf {\textsf {Closing}}\color {black}}}}{5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 2}{{\color {nylilacolor}\textbf {\textsf {Kai S{\o }rlander's Philosophy}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Kai S{\o }rlander's Philosophy}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{7}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Kai S{\o }rlander's Philosophy}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 2.1}}{{\color {red}\textbf {\textsf {Introduction}}\color {black}}}}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.1}.1}}{{\color {blue}\textbf {\textsf {Metaphysics}}\color {black}}}}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.1}.2}}{{\color {blue}\textbf {\textsf {Transcendental Deductions}}\color {black}}}}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.1}.2}.1}}{{\color {magenta}\textbf {\textsf {Some Definitions}}\color {black}}}}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.1}.2}.2}}{{\color {magenta}\textbf {\textsf {Some Informal Examples}}\color {black}}}}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.1}.2}.3}}{{\color {magenta}\textbf {\textsf {Bibliographical Note}}\color {black}}}}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 2.2}}{{\color {red}\textbf {\textsf {The Philosophical Question}}\color {black}}}}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 2.3}}{{\color {red}\textbf {\textsf {Three Principles}}\color {black}}}}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.3}.1}}{{\color {blue}\textbf {\textsf {The Possibility of Truth}}\color {black}}}}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.3}.2}}{{\color {blue}\textbf {\textsf {The Principle of Contradiction}}\color {black}}}}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.3}.3}}{{\color {blue}\textbf {\textsf {The Implicit Meaning Theory}}\color {black}}}}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.3}.4}}{{\color {blue}\textbf {\textsf {A Domain Analysis \& Description Core}}\color {black}}}}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 2.4}}{{\color {red}\textbf {\textsf {The Deductions}}\color {black}}}}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.1}}{{\color {blue}\textbf {\textsf {Assertions}}\color {black}}}}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.2}}{{\color {blue}\textbf {\textsf {The Logical Connectives}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.2}.1}}{{\color {magenta}\textbf {\textsf {{${\sim }$}: Negation}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.2}.2}}{{\color {magenta}\textbf {\textsf {Simple Assertions}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.2}.3}}{{\color {magenta}\textbf {\textsf {{$\wedge $}: Conjunction}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.2}.4}}{{\color {magenta}\textbf {\textsf {{$\vee $}: Disjunction}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.2}.5}}{{\color {magenta}\textbf {\textsf {{$\Rightarrow $}: Implication}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.3}}{{\color {blue}\textbf {\textsf {Modalities}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.3}.1}}{{\color {magenta}\textbf {\textsf {Necessity}}\color {black}}}}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.3}.2}}{{\color {magenta}\textbf {\textsf {Possibility}}\color {black}}}}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.4}}{{\color {blue}\textbf {\textsf {Empirical Assertions}}\color {black}}}}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.5}}{{\color {blue}\textbf {\textsf {Identity and Difference}}\color {black}}}}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.5}.1}}{{\color {magenta}\textbf {\textsf {Identity}}\color {black}}}}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.5}.2}}{{\color {magenta}\textbf {\textsf {Difference}}\color {black}}}}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.6}}{{\color {blue}\textbf {\textsf {Relations}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.6}.1}}{{\color {magenta}\textbf {\textsf {Identity and Difference}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.6}.2}}{{\color {magenta}\textbf {\textsf {Symmetry}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.6}.3}}{{\color {magenta}\textbf {\textsf {Asymmetry}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.6}.4}}{{\color {magenta}\textbf {\textsf {Transitivity}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.6}.5}}{{\color {magenta}\textbf {\textsf {Intransitivity}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.7}}{{\color {blue}\textbf {\textsf {Sets, Quantifiers and Numbers}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.7}.1}}{{\color {magenta}\textbf {\textsf {Sets}}\color {black}}}}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.7}.2}}{{\color {magenta}\textbf {\textsf {Quantifiers}}\color {black}}}}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.7}.3}}{{\color {magenta}\textbf {\textsf {Numbers}}\color {black}}}}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.8}}{{\color {blue}\textbf {\textsf {Primary Entities}}\color {black}}}}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.9}}{{\color {blue}\textbf {\textsf {Space and Time}}\color {black}}}}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.9}.1}}{{\color {magenta}\textbf {\textsf {Space}}\color {black}}}}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.9}.2}}{{\color {magenta}\textbf {\textsf {Time}}\color {black}}}}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.10}}{{\color {blue}\textbf {\textsf {The Causality Principle}}\color {black}}}}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.11}}{{\color {blue}\textbf {\textsf {Newton's Laws}}\color {black}}}}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.11}.1}}{{\color {magenta}\textbf {\textsf {Kinematics}}\color {black}}}}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.11}.2}}{{\color {magenta}\textbf {\textsf {Dynamics}}\color {black}}}}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.11}.3}}{{\color {magenta}\textbf {\textsf {Newton's First Law}}\color {black}}}}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.11}.4}}{{\color {magenta}\textbf {\textsf {Newton's Second Law}}\color {black}}}}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.11}.5}}{{\color {magenta}\textbf {\textsf {Newton's Third Law}}\color {black}}}}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.12}}{{\color {blue}\textbf {\textsf {Universal Gravitation}}\color {black}}}}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 2.4}.13}}{{\color {blue}\textbf {\textsf {Purpose, Life and Evolution}}\color {black}}}}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.13}.1}}{{\color {magenta}\textbf {\textsf {Living Species}}\color {black}}}}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 2.4}.13}.2}}{{\color {magenta}\textbf {\textsf {Animals}}\color {black}}}}{21}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 2.4}.13}.2}.1}}{{\color {mygreen}\textbf {\textsf {Humans}}\color {black}}}}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 2.5}}{{\color {red}\textbf {\textsf {Philosophy, Science and the Arts}}\color {black}}}}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 2.6}}{{\color {red}\textbf {\textsf {A Word of Caution}}\color {black}}}}{23}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 3}{{\color {nylilacolor}\textbf {\textsf {Domains}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{25}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Domains}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{25}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Domains}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.1}}{{\color {red}\textbf {\textsf {Domain Definition}}\color {black}}}}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.2}}{{\color {red}\textbf {\textsf {Phenomena and Entities}}\color {black}}}}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.3}}{{\color {red}\textbf {\textsf {Endurants and Perdurants}}\color {black}}}}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.3}.1}}{{\color {blue}\textbf {\textsf {Endurants}}\color {black}}}}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.3}.2}}{{\color {blue}\textbf {\textsf {Perdurants}}\color {black}}}}{27}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.4}}{{\color {red}\textbf {\textsf {External and Internal Endurant Qualities}}\color {black}}}}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.4}.1}}{{\color {blue}\textbf {\textsf {External Qualities}}\color {black}}}}{27}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.4}.1}.1}}{{\color {magenta}\textbf {\textsf {Discrete or Solid Endurants}}\color {black}}}}{27}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.4}.1}.2}}{{\color {magenta}\textbf {\textsf {Fluids}}\color {black}}}}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.4}.1}.3}}{{\color {magenta}\textbf {\textsf {Parts}}\color {black}}}}{28}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 3.4}.1}.3}.1}}{{\color {mygreen}\textbf {\textsf {Atomic Parts}}\color {black}}}}{28}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 3.4}.1}.3}.2}}{{\color {mygreen}\textbf {\textsf {Compound Parts}}\color {black}}}}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.4}.2}}{{\color {blue}\textbf {\textsf {An Aside: An Upper Ontology}}\color {black}}}}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{3.1}}{\ignorespaces {An} Upper Ontology}}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.4}.3}}{{\color {blue}\textbf {\textsf {Internal Qualities}}\color {black}}}}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.4}.3}.1}}{{\color {magenta}\textbf {\textsf {Unique identity}}\color {black}}}}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.4}.3}.2}}{{\color {magenta}\textbf {\textsf {Mereology}}\color {black}}}}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.4}.3}.3}}{{\color {magenta}\textbf {\textsf {Attribute}}\color {black}}}}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.5}}{{\color {red}\textbf {\textsf {Prompts}}\color {black}}}}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.5}.1}}{{\color {blue}\textbf {\textsf {Analysis Prompts}}\color {black}}}}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.5}.1}.1}}{{\color {magenta}\textbf {\textsf {Analysis Predicate}}\color {black}}}}{31}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.5}.1}.2}}{{\color {magenta}\textbf {\textsf {Analysis Function}}\color {black}}}}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.5}.2}}{{\color {blue}\textbf {\textsf {Description Prompt}}\color {black}}}}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.6}}{{\color {red}\textbf {\textsf {Perdurant Concepts}}\color {black}}}}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.6}.1}}{{\color {blue}\textbf {\textsf {``Morphing'' Parts into Behaviours}}\color {black}}}}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.6}.2}}{{\color {blue}\textbf {\textsf {State}}\color {black}}}}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.6}.3}}{{\color {blue}\textbf {\textsf {Actors}}\color {black}}}}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.6}.3}.1}}{{\color {magenta}\textbf {\textsf {Action}}\color {black}}}}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.6}.3}.2}}{{\color {magenta}\textbf {\textsf {Event}}\color {black}}}}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 3.6}.3}.3}}{{\color {magenta}\textbf {\textsf {Behaviour}}\color {black}}}}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.6}.4}}{{\color {blue}\textbf {\textsf {Channel}}\color {black}}}}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.7}}{{\color {red}\textbf {\textsf {Domain Analysis \& Description}}\color {black}}}}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.7}.1}}{{\color {blue}\textbf {\textsf {Domain Analysis}}\color {black}}}}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 3.7}.2}}{{\color {blue}\textbf {\textsf {Domain Description}}\color {black}}}}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 3.8}}{{\color {red}\textbf {\textsf {Closing}}\color {black}}}}{33}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 4}{{\color {nylilacolor}\textbf {\textsf {Endurants: External Domain Qualities}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{35}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Endurants: External Domain Qualities}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{35}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Endurants: External Domain Qualities}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{35}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.1}}{{\color {red}\textbf {\textsf {Universe of Discourse}}\color {black}}}}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.1}.1}}{{\color {blue}\textbf {\textsf {Identification}}\color {black}}}}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.1}.2}}{{\color {blue}\textbf {\textsf {Naming}}\color {black}}}}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.1}.3}}{{\color {blue}\textbf {\textsf {Examples}}\color {black}}}}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.1}.4}}{{\color {blue}\textbf {\textsf {Sketching}}\color {black}}}}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.1}.5}}{{\color {blue}\textbf {\textsf {Universe of Discourse Description}}\color {black}}}}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.2}}{{\color {red}\textbf {\textsf {Entities}}\color {black}}}}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{4.1}}{\ignorespaces The Upper Ontology {-- same as Fig.\tmspace +\thinmuskip {.1667em}\vref {onto.fig0}}}}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.3}}{{\color {red}\textbf {\textsf {Endurants and Perdurants}}\color {black}}}}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.3}.1}}{{\color {blue}\textbf {\textsf {Endurants}}\color {black}}}}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.3}.2}}{{\color {blue}\textbf {\textsf {Perdurants}}\color {black}}}}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.4}}{{\color {red}\textbf {\textsf {Solids and Fluids}}\color {black}}}}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.4}.1}}{{\color {blue}\textbf {\textsf {Solids}}\color {black}}}}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.4}.2}}{{\color {blue}\textbf {\textsf {Fluids}}\color {black}}}}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.5}}{{\color {red}\textbf {\textsf {Parts and Living Species}}\color {black}}}}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.5}.1}}{{\color {blue}\textbf {\textsf {Parts}}\color {black}}}}{42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 4.5}.1}.1}}{{\color {magenta}\textbf {\textsf {Atomic Parts}}\color {black}}}}{42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}}{{\color {magenta}\textbf {\textsf {Compound Parts}}\color {black}}}}{42}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}.1}}{{\color {mygreen}\textbf {\textsf {Cartesian Parts}}\color {black}}}}{43}}
+\@writefile{toc}{\contentsline {subparagraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}.1}.1}}{{{\color {nylilacolor}\textbf {\textsf {Determine Cartesian Part Sorts}}\color {black}}}}}{43}}
+\@writefile{toc}{\contentsline {subparagraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}.1}.2}}{{{\color {nylilacolor}\textbf {\textsf {Describe Cartesian Part Sorts}}\color {black}}}}}{44}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}.2}}{{\color {mygreen}\textbf {\textsf {Part Sets}}\color {black}}}}{46}}
+\@writefile{toc}{\contentsline {subparagraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}.2}.1}}{{{\color {nylilacolor}\textbf {\textsf {Determine Part Set Sort}}\color {black}}}}}{46}}
+\@writefile{toc}{\contentsline {subparagraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.1}.2}.2}.2}}{{{\color {nylilacolor}\textbf {\textsf {Describe Part Set Sort}}\color {black}}}}}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{4.2}}{\ignorespaces {L}eft: Four net units (\textsf {LU, PU, SU, DU}); {R}ight: A railway net}}{48}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 4.5}.1}.3}}{{\color {magenta}\textbf {\textsf {Ontology and Taxonomy}}\color {black}}}}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{4.3}}{\ignorespaces A Road Transport System Taxonomy\tmspace +\thinmuskip {.1667em}{{\color {magenta}\textbf {\textsf {\rule {0.8mm}{0.8mm}}}\color {black}}}\ \ \rm }}{49}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 4.5}.1}.4}}{{\color {magenta}\textbf {\textsf {``Root'' and ``Sibling'' Parts}}\color {black}}}}{49}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.5}.2}}{{\color {blue}\textbf {\textsf {Living Species}}\color {black}}}}{49}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 4.5}.2}.1}}{{\color {magenta}\textbf {\textsf {Plants}}\color {black}}}}{50}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 4.5}.2}.2}}{{\color {magenta}\textbf {\textsf {Animals}}\color {black}}}}{50}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.2}.2}.1}}{{\color {mygreen}\textbf {\textsf {Humans}}\color {black}}}}{50}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf 4.5}.2}.2}.2}}{{\color {mygreen}\textbf {\textsf {Other}}\color {black}}}}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.6}}{{\color {red}\textbf {\textsf {Some Observations}}\color {black}}}}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.7}}{{\color {red}\textbf {\textsf {States}}\color {black}}}}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.7}.1}}{{\color {blue}\textbf {\textsf {State Calculation}}\color {black}}}}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.7}.2}}{{\color {blue}\textbf {\textsf {Updateable States}}\color {black}}}}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.8}}{{\color {red}\textbf {\textsf {An External Analysis and Description Procedure}}\color {black}}}}{53}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.8}.1}}{{\color {blue}\textbf {\textsf {An Analysis \& Description State}}\color {black}}}}{53}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 4.8}.2}}{{\color {blue}\textbf {\textsf {A Domain Discovery Procedure, I}}\color {black}}}}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 4.9}}{{\color {red}\textbf {\textsf {Summary}}\color {black}}}}{54}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 5}{{\color {nylilacolor}\textbf {\textsf {Endurants: Internal and Universal Domain Qualities}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{57}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Endurants: Internal and Universal Domain Qualities}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{57}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Endurants: Internal and Universal Domain Qualities}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{57}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.1}}{{\color {red}\textbf {\textsf {Internal Qualities}}\color {black}}}}{59}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.1}.1}}{{\color {blue}\textbf {\textsf {General Characterisation}}\color {black}}}}{59}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.1}.2}}{{\color {blue}\textbf {\textsf {Manifest Parts versus Structures}}\color {black}}}}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.1}.2}.1}}{{\color {magenta}\textbf {\textsf {Definitions}}\color {black}}}}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.1}.2}.2}}{{\color {magenta}\textbf {\textsf {Analysis Predicates}}\color {black}}}}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.1}.2}.3}}{{\color {magenta}\textbf {\textsf {Examples}}\color {black}}}}{60}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.1}.2}.4}}{{\color {magenta}\textbf {\textsf {Modelling Consequence}}\color {black}}}}{60}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.2}}{{\color {red}\textbf {\textsf {Unique Identification}}\color {black}}}}{60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.2}.1}}{{\color {blue}\textbf {\textsf {On Uniqueness of Endurants}}\color {black}}}}{60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.2}.2}}{{\color {blue}\textbf {\textsf {Uniqueness Modelling Tools}}\color {black}}}}{61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.2}.3}}{{\color {blue}\textbf {\textsf {The Unique Identifier State}}\color {black}}}}{62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.2}.4}}{{\color {blue}\textbf {\textsf {{{\color {black}\textbf {\textsf {A Domain Law:}}\color {black}}} Uniqueness of Endurant Identifiers}}\color {black}}}}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.2}.4}.1}}{{\color {magenta}\textbf {\textsf {Part Retrieval}}\color {black}}}}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.2}.4}.2}}{{\color {magenta}\textbf {\textsf {Unique Identification of Compounds}}\color {black}}}}{64}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.3}}{{\color {red}\textbf {\textsf {Mereology}}\color {black}}}}{64}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.3}.1}}{{\color {blue}\textbf {\textsf {Endurant Relations}}\color {black}}}}{64}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.3}.2}}{{\color {blue}\textbf {\textsf {Mereology Modelling Tools}}\color {black}}}}{65}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.3}.2}.1}}{{\color {magenta}\textbf {\textsf {Invariance of Mereologies}}\color {black}}}}{66}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.3}.2}.2}}{{\color {magenta}\textbf {\textsf {Deductions made from Mereologies}}\color {black}}}}{66}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.3}.3}}{{\color {blue}\textbf {\textsf {Formulation of Mereologies}}\color {black}}}}{67}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.3}.4}}{{\color {blue}\textbf {\textsf {Fixed and Varying Mereologies}}\color {black}}}}{67}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.3}.5}}{{\color {blue}\textbf {\textsf {No Fluids Mereology}}\color {black}}}}{67}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.3}.6}}{{\color {blue}\textbf {\textsf {Some Modelling Observations}}\color {black}}}}{67}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{5.1}}{\ignorespaces Four Symmetric Rail Unit Mereologies\ \ \ \tmspace +\thinmuskip {.1667em}{{\color {magenta}\textbf {\textsf {\rule {0.8mm}{0.8mm}}}\color {black}}}\ \ \rm }}{68}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.4}}{{\color {red}\textbf {\textsf {Attributes}}\color {black}}}}{68}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.4}.1}}{{\color {blue}\textbf {\textsf {Inseparability of Attributes from Parts and Fluids}}\color {black}}}}{69}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.4}.2}}{{\color {blue}\textbf {\textsf {Attribute Modelling Tools}}\color {black}}}}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.2}.1}}{{\color {magenta}\textbf {\textsf {Attribute Quality and Attribute Value}}\color {black}}}}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.2}.2}}{{\color {magenta}\textbf {\textsf {Concrete Attribute Types}}\color {black}}}}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.2}.3}}{{\color {magenta}\textbf {\textsf {Attribute Description}}\color {black}}}}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.2}.4}}{{\color {magenta}\textbf {\textsf {Attribute Categories}}\color {black}}}}{70}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{5.2}}{\ignorespaces Attribute Value Ontology}}{72}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.2}.5}}{{\color {magenta}\textbf {\textsf {Calculating Attribute Category Type Names}}\color {black}}}}{75}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.2}.6}}{{\color {magenta}\textbf {\textsf {Calculating Attribute Values}}\color {black}}}}{76}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.4}.3}}{{\color {blue}\textbf {\textsf {Operations on Monitorable Attributes of Parts}}\color {black}}}}{76}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.3}.1}}{{\color {magenta}\textbf {\textsf {Evaluation of Monitorable Attributes}}\color {black}}}}{77}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.3}.2}}{{\color {magenta}\textbf {\textsf {Update of Biddable Attributes}}\color {black}}}}{77}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.3}.3}}{{\color {magenta}\textbf {\textsf {Stationary and Mobile Attributes}}\color {black}}}}{77}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.4}.4}}{{\color {blue}\textbf {\textsf {Physics Attributes}}\color {black}}}}{78}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.4}.1}}{{\color {magenta}\textbf {\textsf {SI: The International System of Quantities}}\color {black}}}}{79}}
+\@writefile{lot}{\contentsline {table}{\numberline {{5.1}}{\ignorespaces Base SI Units}}{79}}
+\@writefile{lot}{\contentsline {table}{\numberline {{5.2}}{\ignorespaces Derived SI Units}}{79}}
+\@writefile{lot}{\contentsline {table}{\numberline {{5.3}}{\ignorespaces Further SI Units}}{79}}
+\@writefile{lot}{\contentsline {table}{\numberline {{5.4}}{\ignorespaces Standard Prefixes for SI Units of Measure}}{80}}
+\@writefile{lot}{\contentsline {table}{\numberline {{5.5}}{\ignorespaces SI Units of Measure and Fractions}}{80}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.4}.2}}{{\color {magenta}\textbf {\textsf {Units are Indivisible}}\color {black}}}}{80}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.4}.4}.3}}{{\color {magenta}\textbf {\textsf {Chemical Elements}}\color {black}}}}{80}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{5.3}}{\ignorespaces Periodic Table}}{81}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.5}}{{\color {red}\textbf {\textsf {$\mathbb {SPACE}$ and $\mathbb {TIME}$}}\color {black}}}}{81}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.5}.1}}{{\color {blue}\textbf {\textsf {$\mathbb {SPACE}$}}\color {black}}}}{81}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.5}.2}}{{\color {blue}\textbf {\textsf {$\mathbb {TIME}$}}\color {black}}}}{82}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.5}.2}.1}}{{\color {magenta}\textbf {\textsf {Time Motivated Philosophically}}\color {black}}}}{83}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.5}.2}.2}}{{\color {magenta}\textbf {\textsf {Time Values}}\color {black}}}}{83}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.5}.2}.3}}{{\color {magenta}\textbf {\textsf {Temporal Observers}}\color {black}}}}{84}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.6}}{{\color {red}\textbf {\textsf {Intentional Pull}}\color {black}}}}{84}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.6}.1}}{{\color {blue}\textbf {\textsf {Issues Leading Up to Intentionality}}\color {black}}}}{84}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.1}}{{\color {magenta}\textbf {\textsf {Causality of Purpose}}\color {black}}}}{84}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.2}}{{\color {magenta}\textbf {\textsf {Living Species}}\color {black}}}}{84}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.3}}{{\color {magenta}\textbf {\textsf {Animate Entities}}\color {black}}}}{84}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.4}}{{\color {magenta}\textbf {\textsf {Animals}}\color {black}}}}{85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.5}}{{\color {magenta}\textbf {\textsf {Humans -- Consciousness and Learning}}\color {black}}}}{85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.6}}{{\color {magenta}\textbf {\textsf {Knowledge}}\color {black}}}}{85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.1}.7}}{{\color {magenta}\textbf {\textsf {Responsibility}}\color {black}}}}{85}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.6}.2}}{{\color {blue}\textbf {\textsf {Intentionality}}\color {black}}}}{85}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.2}.1}}{{\color {magenta}\textbf {\textsf {Intentional Pull}}\color {black}}}}{86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.2}.2}}{{\color {magenta}\textbf {\textsf {The Type {{\color {black}\textbf {\textsf {Intent}}\color {black}}}}}\color {black}}}}{86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.2}.3}}{{\color {magenta}\textbf {\textsf {Intentionalities}}\color {black}}}}{86}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.2}.4}}{{\color {magenta}\textbf {\textsf {Wellformedness of Event Histories}}\color {black}}}}{87}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.2}.5}}{{\color {magenta}\textbf {\textsf {Formulation of {an} Intentional Pull}}\color {black}}}}{87}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.6}.3}}{{\color {blue}\textbf {\textsf {Artefacts}}\color {black}}}}{88}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.6}.4}}{{\color {blue}\textbf {\textsf {Assignment of Attributes}}\color {black}}}}{88}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.6}.5}}{{\color {blue}\textbf {\textsf {Galois Connections}}\color {black}}}}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.5}.1}}{{\color {magenta}\textbf {\textsf {Galois Theory: An Ultra-brief Characterisation}}\color {black}}}}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 5.6}.5}.2}}{{\color {magenta}\textbf {\textsf {Galois Connections and Intentionality -- A Possible Research Topic\tmspace +\thinmuskip {.1667em}?}}\color {black}}}}{90}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.6}.6}}{{\color {blue}\textbf {\textsf {Discovering Intentional Pulls}}\color {black}}}}{90}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.7}}{{\color {red}\textbf {\textsf {A Domain Discovery Procedure, II}}\color {black}}}}{90}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.7}.1}}{{\color {blue}\textbf {\textsf {The Process}}\color {black}}}}{90}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 5.7}.2}}{{\color {blue}\textbf {\textsf {A Suggested Analysis \& Description Approach, II}}\color {black}}}}{91}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 5.8}}{{\color {red}\textbf {\textsf {Summary}}\color {black}}}}{91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{5.4}}{\ignorespaces A Breadth-First, Top-Down Traversal}}{92}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 6}{{\color {nylilacolor}\textbf {\textsf {Perdurants}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{93}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Perdurants}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{93}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Perdurants}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{93}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.1}}{{\color {red}\textbf {\textsf {Parts and their Behaviours}}\color {black}}}}{94}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.1}.1}}{{\color {blue}\textbf {\textsf {General Notions}}\color {black}}}}{94}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.1}.2}}{{\color {blue}\textbf {\textsf {An Aside: Behaviours versus Processes}}\color {black}}}}{95}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.1}.3}}{{\color {blue}\textbf {\textsf {Multiple, Communicating Behaviours}}\color {black}}}}{95}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.1}.4}}{{\color {blue}\textbf {\textsf {Domain Behaviours and Domain Actions}}\color {black}}}}{96}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.2}}{{\color {red}\textbf {\textsf {Channel Description}}\color {black}}}}{96}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.3}}{{\color {red}\textbf {\textsf {Action and Event Description, I}}\color {black}}}}{97}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.4}}{{\color {red}\textbf {\textsf {Behaviour Signatures}}\color {black}}}}{97}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.4}.1}}{{\color {blue}\textbf {\textsf {Domain Behaviour Signatures}}\color {black}}}}{97}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 6.4}.1}.1}}{{\color {magenta}\textbf {\textsf {Part Argument Behaviour Signatures}}\color {black}}}}{98}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 6.4}.1}.2}}{{\color {magenta}\textbf {\textsf {Internal Quality Argument Behaviour Signatures}}\color {black}}}}{98}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.5}}{{\color {red}\textbf {\textsf {Action Signatures and General Form of Action Definitions}}\color {black}}}}{99}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.6}}{{\color {red}\textbf {\textsf {Behaviour Invocation}}\color {black}}}}{101}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.7}}{{\color {red}\textbf {\textsf {Behaviour Definition Bodies}}\color {black}}}}{101}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.7}.1}}{{\color {blue}\textbf {\textsf {Behaviour Definition Schema I}}\color {black}}}}{102}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.7}.2}}{{\color {blue}\textbf {\textsf {Behaviour Definition Schema II}}\color {black}}}}{102}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.7}.3}}{{\color {blue}\textbf {\textsf {Describe Behaviour Definition Bodies}}\color {black}}}}{102}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.8}}{{\color {red}\textbf {\textsf {Behaviour, Action and Event Examples}}\color {black}}}}{103}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.9}}{{\color {red}\textbf {\textsf {Domain [Behaviour] Initialisation}}\color {black}}}}{104}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.10}}{{\color {red}\textbf {\textsf {Discrete Dynamic Domains}}\color {black}}}}{104}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.10}.1}}{{\color {blue}\textbf {\textsf {Create and Destroy Entities}}\color {black}}}}{105}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 6.10}.1}.1}}{{\color {magenta}\textbf {\textsf {Create Entities}}\color {black}}}}{105}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf 6.10}.1}.2}}{{\color {magenta}\textbf {\textsf {Destroy Entities}}\color {black}}}}{109}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.10}.2}}{{\color {blue}\textbf {\textsf {Adjustment of Creatable and Destructable Behaviours}}\color {black}}}}{110}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.10}.3}}{{\color {blue}\textbf {\textsf {Summary on Creatable \& Destructable Entities}}\color {black}}}}{111}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.11}}{{\color {red}\textbf {\textsf {Domain Engineering: Description and Construction}}\color {black}}}}{111}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.12}}{{\color {red}\textbf {\textsf {Domain Laws}}\color {black}}}}{111}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.13}}{{\color {red}\textbf {\textsf {A Domain Discovery Procedure, III}}\color {black}}}}{112}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.13}.1}}{{\color {blue}\textbf {\textsf {Review of the Endurant Analysis and Description Process}}\color {black}}}}{112}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 6.13}.2}}{{\color {blue}\textbf {\textsf {A Domain Discovery Process, III}}\color {black}}}}{112}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 6.14}}{{\color {red}\textbf {\textsf {Summary}}\color {black}}}}{113}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 7}{{\color {nylilacolor}\textbf {\textsf {Closing}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{115}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Closing}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{115}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Closing}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{115}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 7.1}}{{\color {red}\textbf {\textsf {What has been Achieved and Not Achieved\tmspace +\thinmuskip {.1667em}?}}\color {black}}}}{115}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.1}.1}}{{\color {blue}\textbf {\textsf {What has been Achieved\tmspace +\thinmuskip {.1667em}?}}\color {black}}}}{115}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.1}.2}}{{\color {blue}\textbf {\textsf {What has Not been Achieved\tmspace +\thinmuskip {.1667em}?}}\color {black}}}}{115}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 7.2}}{{\color {red}\textbf {\textsf {Related Issues}}\color {black}}}}{115}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.1}}{{\color {blue}\textbf {\textsf {Axioms, Well-formedness and Proof Obligations}}\color {black}}}}{116}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.2}}{{\color {blue}\textbf {\textsf {From Programming Language Semantics to Domain Models}}\color {black}}}}{116}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.3}}{{\color {blue}\textbf {\textsf {Domain Specific Languages}}\color {black}}}}{116}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.4}}{{\color {blue}\textbf {\textsf {The \texttt {RAISE} Specification Language, \texttt {RSL}}}\color {black}}}}{117}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.5}}{{\color {blue}\textbf {\textsf {R{\^o}le of Algorithms}}\color {black}}}}{117}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.6}}{{\color {blue}\textbf {\textsf {CSP versus PDEs}}\color {black}}}}{117}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.7}}{{\color {blue}\textbf {\textsf {Domain Facets}}\color {black}}}}{117}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.8}}{{\color {blue}\textbf {\textsf {Requirements Engineering}}\color {black}}}}{118}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.2}.9}}{{\color {blue}\textbf {\textsf {Possible [PhD] Research Topics}}\color {black}}}}{119}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 7.3}}{{\color {red}\textbf {\textsf {Closing Remarks}}\color {black}}}}{120}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.3}.1}}{{\color {blue}\textbf {\textsf {Endurants versus Perdurants}}\color {black}}}}{120}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf 7.3}.2}}{{\color {blue}\textbf {\textsf {Domain Science \& Engineering}}\color {black}}}}{120}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 7.4}}{{\color {red}\textbf {\textsf {Acknowledgments}}\color {black}}}}{121}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf 8}{{\color {nylilacolor}\textbf {\textsf {Bibliography}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{123}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Bibliography}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{123}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Bibliography}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{123}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 8.1}}{{\color {red}\textbf {\textsf {Bibliographical Notes}}\color {black}}}}{123}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf 8.2}}{{\color {red}\textbf {\textsf {References}}\color {black}}}}{123}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}}{{\color {nylilacolor}\textbf {\textsf {Road Transport}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{131}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Road Transport}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{131}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Road Transport}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{131}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.1}}{{\color {red}\textbf {\textsf {The Road Transport Domain}}\color {black}}}}{132}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {A}}\color {black}}}.1}}{\ignorespaces Road System Components}}{132}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.1}.1}}{{\color {blue}\textbf {\textsf {Naming}}\color {black}}}}{132}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.1}.2}}{{\color {blue}\textbf {\textsf {Rough Sketch}}\color {black}}}}{132}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}}{{\color {red}\textbf {\textsf {External Qualities}}\color {black}}}}{133}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.1}}{{\color {blue}\textbf {\textsf {A Road Transport System, II -- Abstract External Qualities}}\color {black}}}}{133}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.2}}{{\color {blue}\textbf {\textsf {Transport System Structure}}\color {black}}}}{133}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.3}}{{\color {blue}\textbf {\textsf {Atomic Road Transport Parts}}\color {black}}}}{133}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.4}}{{\color {blue}\textbf {\textsf {Compound Road Transport Parts}}\color {black}}}}{133}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.4}.1}}{{\color {magenta}\textbf {\textsf {The Composites}}\color {black}}}}{133}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {A}}\color {black}}}.2}}{\ignorespaces A Road Transport System Compounds and Structures}}{134}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.4}.2}}{{\color {magenta}\textbf {\textsf {The Part Parts}}\color {black}}}}{134}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.2}.5}}{{\color {blue}\textbf {\textsf {The Transport System State}}\color {black}}}}{135}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}}{{\color {red}\textbf {\textsf {Internal Qualities}}\color {black}}}}{135}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.1}}{{\color {blue}\textbf {\textsf {Unique Identifiers}}\color {black}}}}{135}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.1}.1}}{{\color {magenta}\textbf {\textsf {Extract Parts from Their Unique Identifiers}}\color {black}}}}{135}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.1}.2}}{{\color {magenta}\textbf {\textsf {All Unique Identifiers of a Domain}}\color {black}}}}{136}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.1}.3}}{{\color {magenta}\textbf {\textsf {Uniqueness of Road Net Identifiers}}\color {black}}}}{136}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.2}}{{\color {blue}\textbf {\textsf {Mereology}}\color {black}}}}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.2}.1}}{{\color {magenta}\textbf {\textsf {Mereology Types and Observers}}\color {black}}}}{137}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.2}.2}}{{\color {magenta}\textbf {\textsf {Invariance of Mereologies}}\color {black}}}}{137}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.2}.2}.1}}{{\color {mygreen}\textbf {\textsf {Invariance of Road Nets}}\color {black}}}}{137}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.2}.2}.2}}{{\color {mygreen}\textbf {\textsf {Possible Consequences of a Road Net Mereology}}\color {black}}}}{138}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.2}.2}.3}}{{\color {mygreen}\textbf {\textsf {Fixed and Varying Mereology}}\color {black}}}}{138}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}}{{\color {blue}\textbf {\textsf {Attributes}}\color {black}}}}{138}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.1}}{{\color {magenta}\textbf {\textsf {Hub Attributes}}\color {black}}}}{138}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.2}}{{\color {magenta}\textbf {\textsf {Invariance of Traffic States}}\color {black}}}}{139}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.3}}{{\color {magenta}\textbf {\textsf {Link Attributes}}\color {black}}}}{139}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.4}}{{\color {magenta}\textbf {\textsf {Bus Company Attributes}}\color {black}}}}{140}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.5}}{{\color {magenta}\textbf {\textsf {Bus Attributes}}\color {black}}}}{140}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.6}}{{\color {magenta}\textbf {\textsf {Private Automobile Attributes}}\color {black}}}}{141}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.3}.3}.7}}{{\color {magenta}\textbf {\textsf {Intentionality}}\color {black}}}}{142}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}}{{\color {red}\textbf {\textsf {Perdurants}}\color {black}}}}{142}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.1}}{{\color {blue}\textbf {\textsf {Channels and Communication}}\color {black}}}}{143}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.1}.1}}{{\color {magenta}\textbf {\textsf {Channel Message Types}}\color {black}}}}{143}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.1}.2}}{{\color {magenta}\textbf {\textsf {Channel Declarations}}\color {black}}}}{143}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}}{{\color {blue}\textbf {\textsf {Behaviours}}\color {black}}}}{144}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.1}}{{\color {magenta}\textbf {\textsf {Road Transport Behaviour Signatures}}\color {black}}}}{144}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.1}.1}}{{\color {mygreen}\textbf {\textsf {Hub Behaviour Signature}}\color {black}}}}{144}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.1}.2}}{{\color {mygreen}\textbf {\textsf {Link Behaviour Signature}}\color {black}}}}{144}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.1}.3}}{{\color {mygreen}\textbf {\textsf {Bus Company Behaviour Signature}}\color {black}}}}{145}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.1}.4}}{{\color {mygreen}\textbf {\textsf {Bus Behaviour Signature}}\color {black}}}}{145}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.1}.5}}{{\color {mygreen}\textbf {\textsf {Automobile Behaviour Signature}}\color {black}}}}{145}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.2}}{{\color {magenta}\textbf {\textsf {Behaviour Definitions}}\color {black}}}}{146}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.2}.1}}{{\color {mygreen}\textbf {\textsf {Automobile Behaviour at a Hub}}\color {black}}}}{146}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.2}.2}}{{\color {mygreen}\textbf {\textsf {Automobile Behaviour On a Link}}\color {black}}}}{146}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.2}.3}}{{\color {mygreen}\textbf {\textsf {Hub Behaviour}}\color {black}}}}{147}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.4}.2}.2}.4}}{{\color {mygreen}\textbf {\textsf {Link Behaviour}}\color {black}}}}{148}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.5}}{{\color {red}\textbf {\textsf {System Initialisation}}\color {black}}}}{148}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.5}.1}}{{\color {blue}\textbf {\textsf {Initial States}}\color {black}}}}{148}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {A}}\color {black}}}.5}.2}}{{\color {blue}\textbf {\textsf {Initialisation}}\color {black}}}}{148}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}}{{\color {nylilacolor}\textbf {\textsf {{{\color {nylilacolor}\textbf {\textsf {Pipelines, A Draft, Incomplete Example}}\color {black}}}}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{151}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {{{\color {nylilacolor}\textbf {\textsf {Pipelines, A Draft, Incomplete Example}}\color {black}}}}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{151}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {{{\color {nylilacolor}\textbf {\textsf {Pipelines, A Draft, Incomplete Example}}\color {black}}}}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{151}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.1}}{\ignorespaces {{\color {red}\textbf {\textsf {The Planned Nabucco Pipeline:}}\color {black}}} http://en.wikipedia.org/wiki/Nabucco\_Pipeline}}{152}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.1}}{{\color {red}\textbf {\textsf {Illustrations of Pipeline Phenomena}}\color {black}}}}{152}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.2}}{\ignorespaces {{\color {red}\textbf {\textsf {Pipeline Construction}}\color {black}}}}}{152}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.1}.1}}{{\color {blue}\textbf {\textsf {Pipes}}\color {black}}}}{152}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.3}}{\ignorespaces {{\color {red}\textbf {\textsf {Pipe Segments}}\color {black}}}}}{152}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.1}.2}}{{\color {blue}\textbf {\textsf {Valves}}\color {black}}}}{153}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.4}}{\ignorespaces {{\color {red}\textbf {\textsf {Valves}}\color {black}}}}}{153}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.1}.3}}{{\color {blue}\textbf {\textsf {Pumps}}\color {black}}}}{153}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.5}}{\ignorespaces {{\color {red}\textbf {\textsf {Oil Pumps}}\color {black}}}}}{153}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.1}.4}}{{\color {blue}\textbf {\textsf {Compressors}}\color {black}}}}{153}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.1}.5}}{{\color {blue}\textbf {\textsf {Pigs}}\color {black}}}}{153}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.6}}{\ignorespaces {{\color {red}\textbf {\textsf {Gas Compressors}}\color {black}}}}}{154}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.7}}{\ignorespaces {{\color {red}\textbf {\textsf {New and Old Pigs}}\color {black}}}}}{154}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.8}}{\ignorespaces {{\color {red}\textbf {\textsf {Pig Launcher, Receiver}}\color {black}}}}}{154}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.2}}{{\color {red}\textbf {\textsf {Endurants: External Qualities}}\color {black}}}}{154}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.2}.1}}{{\color {blue}\textbf {\textsf {Parts}}\color {black}}}}{154}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.9}}{\ignorespaces {{\color {red}\textbf {\textsf {A Simple Pipeline}}\color {black}}}}}{155}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.10}}{\ignorespaces {{\color {red}\textbf {\textsf {A Pipeline Monitoring \& Control System Diagram}}\color {black}}}}}{155}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.11}}{\ignorespaces Upper Ontology}}{156}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{{{\color {black}\textbf {\textsf {B}}\color {black}}}.12}}{\ignorespaces An example pipeline system}}{156}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.2}.2}}{{\color {blue}\textbf {\textsf {An Endurant State}}\color {black}}}}{156}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}}{{\color {red}\textbf {\textsf {Endurants: Internal Qualities}}\color {black}}}}{157}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.1}}{{\color {blue}\textbf {\textsf {Unique Identification}}\color {black}}}}{157}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.2}}{{\color {blue}\textbf {\textsf {Mereology}}\color {black}}}}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.2}.1}}{{\color {magenta}\textbf {\textsf {PLS Mereology}}\color {black}}}}{158}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.2}.2}}{{\color {magenta}\textbf {\textsf {Unit Mereologies}}\color {black}}}}{158}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.3}}{{\color {blue}\textbf {\textsf {Pipeline Concepts, I}}\color {black}}}}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.3}.1}}{{\color {magenta}\textbf {\textsf {Pipe Routes}}\color {black}}}}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.3}.2}}{{\color {magenta}\textbf {\textsf {Well-formed Routes}}\color {black}}}}{159}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.3}.3}}{{\color {magenta}\textbf {\textsf {Embedded Routes}}\color {black}}}}{160}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.3}.4}}{{\color {magenta}\textbf {\textsf {A Theorem}}\color {black}}}}{160}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.3}.5}}{{\color {magenta}\textbf {\textsf {Fluids}}\color {black}}}}{161}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}}{{\color {blue}\textbf {\textsf {Attributes}}\color {black}}}}{161}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}.1}}{{\color {magenta}\textbf {\textsf {Unit Flow Attributes}}\color {black}}}}{161}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}.2}}{{\color {magenta}\textbf {\textsf {Unit Metrics}}\color {black}}}}{162}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}.3}}{{\color {magenta}\textbf {\textsf {Wellformed Unit Metrics}}\color {black}}}}{163}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}.4}}{{\color {magenta}\textbf {\textsf {Summary}}\color {black}}}}{163}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}.5}}{{\color {magenta}\textbf {\textsf {Fluid Attributes}}\color {black}}}}{164}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.4}.6}}{{\color {magenta}\textbf {\textsf {Pipeline System Attributes}}\color {black}}}}{165}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.3}.5}}{{\color {blue}\textbf {\textsf {Pipeline Concepts, II: Flow Laws}}\color {black}}}}{165}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}}{{\color {red}\textbf {\textsf {Perdurants}}\color {black}}}}{166}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.1}}{{\color {blue}\textbf {\textsf {State}}\color {black}}}}{166}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.2}}{{\color {blue}\textbf {\textsf {Channel}}\color {black}}}}{166}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.3}}{{\color {blue}\textbf {\textsf {Actions}}\color {black}}}}{166}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}}{{\color {blue}\textbf {\textsf {Behaviours}}\color {black}}}}{167}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.1}}{{\color {magenta}\textbf {\textsf {Behaviour Kinds}}\color {black}}}}{167}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.2}}{{\color {magenta}\textbf {\textsf {Behaviour Signatures}}\color {black}}}}{167}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.2}.1}}{{\color {mygreen}\textbf {\textsf {Behaviour Definitions}}\color {black}}}}{168}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.2}.2}}{{\color {mygreen}\textbf {\textsf {The Pipeline System Behaviour}}\color {black}}}}{168}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.2}.3}}{{\color {mygreen}\textbf {\textsf {The Pump Behaviours}}\color {black}}}}{169}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {{\sf \bf {\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.2}.4}}{{\color {mygreen}\textbf {\textsf {The Valve Behaviours}}\color {black}}}}{169}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.3}}{{\color {magenta}\textbf {\textsf {Sampling Monitorable Attribute Values}}\color {black}}}}{170}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.4}.4}.4}}{{\color {magenta}\textbf {\textsf {System Initialisation}}\color {black}}}}{170}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {B}}\color {black}}}.5}}{{\color {red}\textbf {\textsf {Index}}\color {black}}}}{170}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}}{{\color {nylilacolor}\textbf {\textsf {A Raise Specification Language Primer}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{173}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {A Raise Specification Language Primer}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{173}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {A Raise Specification Language Primer}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{173}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}}{{\color {red}\textbf {\textsf {Types and Values}}\color {black}}}}{174}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.1}}{{\color {blue}\textbf {\textsf {Sort and Type Expressions}}\color {black}}}}{175}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.1}.1}}{{\color {magenta}\textbf {\textsf {Atomic Types: Identifier Expressions and Type Values}}\color {black}}}}{175}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.1}.2}}{{\color {magenta}\textbf {\textsf {Composite Types: Expressions and Type Values}}\color {black}}}}{175}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.2}}{{\color {blue}\textbf {\textsf {Type Definitions}}\color {black}}}}{176}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.2}.1}}{{\color {magenta}\textbf {\textsf {Sorts --- Abstract Types}}\color {black}}}}{176}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.2}.2}}{{\color {magenta}\textbf {\textsf {Concrete Types}}\color {black}}}}{176}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.1}.2}.3}}{{\color {magenta}\textbf {\textsf {Subtypes}}\color {black}}}}{178}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}}{{\color {red}\textbf {\textsf {The Propositional and Predicate Calculi}}\color {black}}}}{178}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}.1}}{{\color {blue}\textbf {\textsf {Propositions}}\color {black}}}}{178}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}.1}.1}}{{\color {magenta}\textbf {\textsf {Propositional Expressions}}\color {black}}}}{178}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}.1}.2}}{{\color {magenta}\textbf {\textsf {Propositional Calculus}}\color {black}}}}{179}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}.2}}{{\color {blue}\textbf {\textsf {Predicates}}\color {black}}}}{179}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}.2}.1}}{{\color {magenta}\textbf {\textsf {Predicate Expressions}}\color {black}}}}{180}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.2}.2}.2}}{{\color {magenta}\textbf {\textsf {Predicate Calculus}}\color {black}}}}{180}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.3}}{{\color {red}\textbf {\textsf {Arithmetics}}\color {black}}}}{180}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}}{{\color {red}\textbf {\textsf {Comprehensive Expressions}}\color {black}}}}{180}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.1}}{{\color {blue}\textbf {\textsf {Set Enumeration and Comprehension}}\color {black}}}}{181}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.1}.1}}{{\color {magenta}\textbf {\textsf {Set Enumeration}}\color {black}}}}{181}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.1}.2}}{{\color {magenta}\textbf {\textsf {Set Comprehension}}\color {black}}}}{181}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.1}.3}}{{\color {magenta}\textbf {\textsf {Cartesian Enumeration}}\color {black}}}}{181}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.2}}{{\color {blue}\textbf {\textsf {List Enumeration and Comprehension}}\color {black}}}}{182}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.2}.1}}{{\color {magenta}\textbf {\textsf {List Enumeration}}\color {black}}}}{182}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.2}.2}}{{\color {magenta}\textbf {\textsf {List Comprehension}}\color {black}}}}{182}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.3}}{{\color {blue}\textbf {\textsf {Map Enumeration and Comprehension}}\color {black}}}}{182}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.3}.1}}{{\color {magenta}\textbf {\textsf {Map Enumeration}}\color {black}}}}{182}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.4}.3}.2}}{{\color {magenta}\textbf {\textsf {Map Comprehension}}\color {black}}}}{183}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}}{{\color {red}\textbf {\textsf {Operations}}\color {black}}}}{183}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.1}}{{\color {blue}\textbf {\textsf {Set Operations}}\color {black}}}}{183}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.1}.1}}{{\color {magenta}\textbf {\textsf {Set Operator Signatures}}\color {black}}}}{183}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.1}.2}}{{\color {magenta}\textbf {\textsf {Set Operation Examples}}\color {black}}}}{183}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.1}.3}}{{\color {magenta}\textbf {\textsf {Informal Set Operator Explication}}\color {black}}}}{184}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.1}.4}}{{\color {magenta}\textbf {\textsf {Set Operator Explications}}\color {black}}}}{184}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.2}}{{\color {blue}\textbf {\textsf {Cartesian Operations}}\color {black}}}}{185}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.3}}{{\color {blue}\textbf {\textsf {List Operations}}\color {black}}}}{185}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.3}.1}}{{\color {magenta}\textbf {\textsf {List Operator Signatures}}\color {black}}}}{185}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.3}.2}}{{\color {magenta}\textbf {\textsf {List Operation Examples}}\color {black}}}}{186}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.3}.3}}{{\color {magenta}\textbf {\textsf {Informal List Operator Explication}}\color {black}}}}{186}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.3}.4}}{{\color {magenta}\textbf {\textsf {List Operator Explications}}\color {black}}}}{186}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.4}}{{\color {blue}\textbf {\textsf {Map Operations}}\color {black}}}}{187}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.4}.1}}{{\color {magenta}\textbf {\textsf {Map Operator Signatures}}\color {black}}}}{187}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.4}.2}}{{\color {magenta}\textbf {\textsf {Map Operation Examples}}\color {black}}}}{187}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.4}.3}}{{\color {magenta}\textbf {\textsf {Informal Map Operation Explication}}\color {black}}}}{188}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.5}.4}.4}}{{\color {magenta}\textbf {\textsf {Map Operator Explication}}\color {black}}}}{188}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}}{{\color {red}\textbf {\textsf {$\lambda $\--Calculus + Functions}}\color {black}}}}{189}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}.1}}{{\color {blue}\textbf {\textsf {The $\lambda $-Calculus Syntax}}\color {black}}}}{189}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}.2}}{{\color {blue}\textbf {\textsf {Free and Bound Variables}}\color {black}}}}{189}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}.3}}{{\color {blue}\textbf {\textsf {Substitution}}\color {black}}}}{190}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}.4}}{{\color {blue}\textbf {\textsf {$\alpha $-Renaming and $\beta $-Reduction}}\color {black}}}}{190}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}.5}}{{\color {blue}\textbf {\textsf {Function Signatures}}\color {black}}}}{190}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.6}.6}}{{\color {blue}\textbf {\textsf {Function Definitions}}\color {black}}}}{191}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}}{{\color {red}\textbf {\textsf {Other Applicative Expressions}}\color {black}}}}{191}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}.1}}{{\color {blue}\textbf {\textsf {Simple {\bf let} Expressions}}\color {black}}}}{191}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}.2}}{{\color {blue}\textbf {\textsf {Recursive {\bf let} Expressions}}\color {black}}}}{192}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}.3}}{{\color {blue}\textbf {\textsf {Predicative {\bf let} Expressions}}\color {black}}}}{192}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}.4}}{{\color {blue}\textbf {\textsf {Pattern and ``Wild Card'' {\bf let} Expressions}}\color {black}}}}{192}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}.4}.1}}{{\color {magenta}\textbf {\textsf {Conditionals}}\color {black}}}}{193}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.7}.5}}{{\color {blue}\textbf {\textsf {Operator/Operand Expressions}}\color {black}}}}{193}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}}{{\color {red}\textbf {\textsf {Imperative Constructs}}\color {black}}}}{194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}.1}}{{\color {blue}\textbf {\textsf {Statements and State Changes}}\color {black}}}}{194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}.2}}{{\color {blue}\textbf {\textsf {Variables and Assignment}}\color {black}}}}{194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}.3}}{{\color {blue}\textbf {\textsf {Statement Sequences and {\bf skip}}}\color {black}}}}{194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}.4}}{{\color {blue}\textbf {\textsf {Imperative Conditionals}}\color {black}}}}{195}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}.5}}{{\color {blue}\textbf {\textsf {Iterative Conditionals}}\color {black}}}}{195}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.8}.6}}{{\color {blue}\textbf {\textsf {Iterative Sequencing}}\color {black}}}}{195}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.9}}{{\color {red}\textbf {\textsf {Process Constructs}}\color {black}}}}{195}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.9}.1}}{{\color {blue}\textbf {\textsf {Process Channels}}\color {black}}}}{195}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.9}.2}}{{\color {blue}\textbf {\textsf {Process Composition}}\color {black}}}}{196}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.9}.3}}{{\color {blue}\textbf {\textsf {Input/Output Events}}\color {black}}}}{196}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.9}.4}}{{\color {blue}\textbf {\textsf {Process Definitions}}\color {black}}}}{196}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.10}}{{\color {red}\textbf {\textsf {\texttt {RSL}\ Module Specifications}}\color {black}}}}{197}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.11}}{{\color {red}\textbf {\textsf {Simple {\texttt {RSL}} Specifications}}\color {black}}}}{197}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}}{{\color {red}\textbf {\textsf {\texttt {RSL$^{+}$}: Extended \texttt {RSL}}}\color {black}}}}{197}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}.1}}{{\color {blue}\textbf {\textsf {Type Names and Type Name Values}}\color {black}}}}{197}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}.1}.1}}{{\color {magenta}\textbf {\textsf {Type Names}}\color {black}}}}{197}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}.1}.2}}{{\color {magenta}\textbf {\textsf {Type Name Operations}}\color {black}}}}{197}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}.2}}{{\color {blue}\textbf {\textsf {\texttt {RSL}\textsf {-Text}}}\color {black}}}}{198}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}.2}.1}}{{\color {magenta}\textbf {\textsf {The \texttt {RSL}\textsf {-Text}\ Type and Values}}\color {black}}}}{198}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{\sf \bf {\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.12}.2}.2}}{{\color {magenta}\textbf {\textsf {\texttt {RSL}\textsf {-Text}\ Operations}}\color {black}}}}{198}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.13}}{{\color {red}\textbf {\textsf {Distributive Clauses}}\color {black}}}}{198}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.13}.1}}{{\color {blue}\textbf {\textsf {Over Simple Values}}\color {black}}}}{198}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{\sf \bf {\sf \bf {{\color {black}\textbf {\textsf {C}}\color {black}}}.13}.2}}{{\color {blue}\textbf {\textsf {Over Processes}}\color {black}}}}{198}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}}{{\color {nylilacolor}\textbf {\textsf {Indexes}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{199}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Indexes}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{199}}
+\@writefile{lot}{\contentsline {xchapter}{{{\color {nylilacolor}\textbf {\textsf {Indexes}}\color {black}}}\tmspace +\thinmuskip {.1667em} }{199}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.1}}{{\color {red}\textbf {\textsf {Definitions}}\color {black}}}}{199}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.2}}{{\color {red}\textbf {\textsf {Concepts}}\color {black}}}}{202}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.3}}{{\color {red}\textbf {\textsf {Examples}}\color {black}}}}{204}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.4}}{{\color {red}\textbf {\textsf {Method}}\color {black}}}}{205}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.5}}{{\color {red}\textbf {\textsf {Symbols}}\color {black}}}}{206}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.6}}{{\color {red}\textbf {\textsf {Analysis Predicate Prompts}}\color {black}}}}{206}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.7}}{{\color {red}\textbf {\textsf {Analysis Function Prompts}}\color {black}}}}{207}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.8}}{{\color {red}\textbf {\textsf {Description Prompts}}\color {black}}}}{207}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.9}}{{\color {red}\textbf {\textsf {Attribute Categories}}\color {black}}}}{207}}
+\@writefile{toc}{\contentsline {section}{\numberline {{\sf \bf {{\color {black}\textbf {\textsf {D}}\color {black}}}.10}}{{\color {red}\textbf {\textsf {RSL Symbols}}\color {black}}}}{207}}

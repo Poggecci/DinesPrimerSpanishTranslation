@@ -1,0 +1,1226 @@
+
+
+@article{jrail:atkinson91,
+AUTHOR       = "W. Atkinson and J.  Cunningham",
+TITLE        = "{Proving properties of a safety-critical system}",
+JOURNAL      = "Software Engineering Journal",
+VOLUME       = "6",
+NUMBER       = "2",
+PAGES        = "41--50",
+YEAR         = "March 1991",
+NOTE         = "\dbabstract{The paper describes the FOREST approach to
+		  formal requirements specification and particularly 
+               the role of an automated theorem prover in validating
+		  specifications written in MAL, the FOREST 
+               logic. The MAL prover uses a tableau method for
+		  constructing its proofs, with rules to handle the 
+               action modalities and quantification of MAL. The
+		  authors illustrate its use in validation by using 
+               the prover to establish that a safety-critical
+		  railway-signalling specification has some desirable 
+               safety properties.} \dbkey{formal specification;
+		  program verification; safety; software reliability;
+		  theorem proving}"} 
+
+
+@article{jrail:cullyer93,
+AUTHOR       = "J. Cullyer and Wai Wong",
+TITLE        = "{Application of formal methods to railway signalling-a
+		  case study}", 
+JOURNAL      = "Computing \& Control Engineering Journal",
+VOLUME       = "4",
+NUMBER       = "1",
+PAGES        = "15-22",
+YEAR         = "Feb. 1993",
+NOTE         = "\dbabstract{Describes techniques for applying formal
+		  mathematical methods to the specification and design
+		  of 
+               railway signalling and interlocking equipment which is
+		  implemented using microprocessors and 
+               real-time software. The results have been obtained by
+		  combining the specification language 
+               Higher-Order Logic (HOL) with the disciplined use of
+		  annotated subsets of the computer 
+               programming languages such as Ada. A global framework
+		  has been developed both for 
+               computer-aided design (CAD) tools for railway
+		  interlocking and for the future development of the 
+               operational software for practical signalling systems.}
+		  \dbkey{CAD; computerised control; formal languages;
+		  formal logic; formal specification; high level 
+               languages; railways; real-time systems; signalling;
+		  specification languages}"} 
+
+@inproceedings{jrail:guiho94,
+AUTHOR       = "G. Guiho and F.  Mejia",
+TITLE        = "{Operational safety critical software methods in railways}",
+BOOKTITLE    = "IFIP Transactions A (Computer Science and Technology), ",
+EDITOR       = "Anon",
+ORGANIZATION = "IFIP World Congress,  Hamburg, Germany",
+YEAR         = "1984",
+PAGES        = "262-9",
+NOTE         = "\dbabstract{Railway signalling manufacturers have been
+		  designing safety-critical software for around ten
+		  years 
+              (1984-94). This software is crucial for interlocking
+		  systems and speed control systems. The 
+              techniques used by the railways and the manufacturers
+		  were dissimilar in the past because of the 
+              heterogeneousness of signalling equipment and
+		  exploitation rules among different countries. 
+              Recently some efforts have been underway at the European
+		  level to harmonize the processes and 
+              methods for cross-acceptance of safety-critical software
+		  between nations. The work of the IRSE 
+              Technical committee and the CEN/CENELEC WG A1 are
+		  presented. Formal specifications and 
+              formal proofs seem to be considered as one of the best
+		  techniques to use in that field. Some of the 
+              systems that we have produced using them are presented.}
+		  \dbkey{formal specification; rail traffic; railways;
+		  safety; software reliability; traffic computer
+		  control}"} 
+
+@inproceedings{jrail:hartonas95,
+AUTHOR       = "V. Hartonas-Garmhausen and T.   Kurfess and E.M.
+		  Clarkeand D. Long", 
+TITLE        = "{Automatic verification of industrial designs}",
+BOOKTITLE    = "Workshop on Industrial-Strength Formal Specification
+		  Techniques (Cat. 
+              No.95TH8051); Boca Raton, FL, USA",
+EDITOR       = "",
+ORGANIZATION = "IEEE Comput. Soc. Press, Los Alamitos, CA, USA",
+YEAR         = "1995",
+NOTE         = "\dbabstract{This study presents new risk analysis tools and demonstrates the feasibility and applicability of
+              these tools in the design verification of railway interlocking control systems and deadlock
+              prevention in automated manufacturing systems. Our
+		  verification methodology consists of the 
+              following stages. First, we analyze the rules executed
+		  by the controller and extract a state machine 
+              model of the controller.  Second, we compose safety,
+		  reliability, and operability system 
+              specifications using a propositional temporal
+		  logic. Finally, we use the model checker to check
+		  the 
+              state machine model of the system against its
+		  requirements. The verification approach allows an 
+              exhaustive search of all possible behaviors and
+		  scenarios. We verified two real railway interlocking  
+              control applications with 125 and 452 constraints
+		  respectively. Checking two opposing signal 
+              protection specifications involving 3 signals ranged
+		  between 74 and 1223 seconds depending on the 
+              size and the complexity of the interlocking. Traditional
+		  verification methods typically require several 
+              person weeks.} \dbkey{CAD/CAM; computer integrated
+		  manufacturing; concurrency control; formal
+		  specification; formal 
+              verification; industrial control; risk management;
+		  temporal logic}"} 
+
+
+@inproceedings{jrail:ingleby95,
+AUTHOR       = "M. Ingleby and D.J.  Mee",
+TITLE        = "{A calculus of hazard for railway signalling}",
+BOOKTITLE    = "Workshop on Industrial-Strength Formal Specification
+		  Techniques (Cat. 
+              No.95TH8051); Boca Raton, FL, USA",
+EDITOR       = "",
+ORGANIZATION = "IEEE Comput. Soc. Press, Los Alamitos, CA, USA",
+YEAR         = "1995",
+PAGES      = "146-58",
+NOTE         = "\dbabstract{Interlockings-systems which control
+		  railway signals-are modeled as situated automata
+		  holding in 
+              memory an image of their trackside
+		  environment. Interlocking functionality is generic,
+		  but each 
+              interlocking consults a geographic database which
+		  specifies the topography of its environment. A 
+              'calculus o hazard' comprising a theory of trackside
+		  geography and generic state of trackside 
+              environments is set up using a predicate calculus based
+		  on incidence relations. The calculus is 
+              sufficiently expressive for the articulation hazard
+		  defence rules-which are obtained from a typical 
+              IEC fault modes and effects analysis (FMEA)-free of
+		  area-specific reference. Safety of an 
+              interlocking is formulated as an NP-complete proof
+		  problem expressing the invariance of a set of 
+              hazard defence predicates of the calculus. A scaleable
+		  approach to this proof problem is developed 
+              by representing a signalling area as a set of weakly
+		  interacting localities of low combinatorial 
+              complexity. The approach uses Galois connection tools
+		  borrowed from formal concept analysis.}
+		  \dbkey{algebraic specification; computational
+		  complexity; failure analysis; formal logic; formal
+		  specification; 
+              geographic information systems; rail traffic;
+		  signalling; traffic control}"} 
+
+@inproceedings{jrail:dehbonei94,
+AUTHOR       = "B. Dehbonei and  F. Mejia",
+TITLE        = "{Formal methods in the railways signalling industry}",
+BOOKTITLE    = "{FME '94: Industrial Benefit of Formal Methods. Second
+		  International Symposium of Formal 
+               Methods Europe. Proceedings; Barcelona, Spain}",
+EDITOR       = "M. Naftalin and T. Denvir and M. Bertran",
+PAGES      = "26-34",
+ORGANIZATION = "Springer-Verlag, Berlin, Germany; Lecture Notes in
+		  Computer Science LNCS",
+YEAR         = "1994",
+NOTE         = "\dbabstract{Software is becoming increasingly involved
+		  in safety-critical systems. Such systems are ideal 
+               fields of application of formal methods. A rigorous
+		  development accompanied by formal proofs is a 
+               guarantee of the correctness of the development. We
+		  summarize our experience of using the B 
+               formal method in the development of safety-critical
+		  railway signalling applications. Our 
+               applications range in size from 2000 lines to 22000
+		  lines. They are specified, refined and 
+               implemented in B. Issues (technical and non technical)
+		  related to the utilization of B are discussed 
+               and solutions presented.} \dbkey{formal specification;
+		  railways; safety-critical software; signalling;
+		  traffic control; traffic engineering 
+               computing}"}
+
+@inproceedings{jrail:hansen94,
+AUTHOR       = "K.M. Hansen", 
+TITLE        = "{Validation of a railway interlocking model}",
+BOOKTITLE    = "{FME '94: Industrial Benefit of Formal Methods. Second
+		  International Symposium of Formal 
+              Methods Europe. Proceedings; Barcelona, Spain}",
+EDITOR       = "M. Naftalin and T. Denvir and M. Bertran",
+PAGES      = "582-601",
+ORGANIZATION = "Springer-Verlag, Berlin, Germany; Lecture Notes in
+		  Computer Science LNCS",
+YEAR         = "1994",
+NOTE         = "\dbabstract{Presents a VDM model of a real-life
+		  railway interlocking system, and describes how this
+		  model is 
+              validated through simulation in ML. The model
+		  development illustrates how concepts may be 
+              captured for a non-trivial system. The steps from a
+		  predicative VDM model to an executable ML 
+              program are also outlined. The importance of validation
+		  by simulation is highlighted by giving two 
+              equally plausible safety requirements for the system and
+		  the end user's reaction to the simulation. 
+              For safety reasons, we find it important that the model
+		  also can form the basis for formal program 
+              development, where the correctness of the program with
+		  respect to the specification can be 
+              formally verified. Therefore, we advocate to make a
+		  model which can be used for simulation as well 
+              as formal program development.} \dbkey{digital
+		  simulation; formal verification; railways;
+		  safety-critical software; Vienna development 
+              method}"}
+
+@inproceedings{jrail:groote95,
+AUTHOR       = "J.F. Groote and S.F.  van Vlijmen and J.W.C.  Koorn",
+TITLE        = "{The safety guaranteeing system at station
+		  Hoorn-Kersenboogerd}", 
+BOOKTITLE    = "{COMPASS '95. Proceedings of the Tenth Annual Conference on Computer Assurance (Cat.
+              No.95CH35802); Gaithersburg, MD, USA}",
+EDITOR       = "",
+PAGES      = "57-68",
+ORGANIZATION = "IEEE, New York, N.Y., USA",
+YEAR         = "1995",
+NOTE         = "\dbabstract{At the Dutch station Hoorn-Kersenboogerd
+		  computerized control is used for the safe and in
+		  time 
+              movement of trains. It can be divided in three layers. A
+		  top layer assisting an operator in scheduling 
+              train movement. A bottom layer with hardware that can
+		  monitor and change the state of the 
+              railway. And an intermediate layer mainly checking
+		  whether commands issued by the top layer can 
+              safely be executed by the bottom layer. The intermediate
+		  layer is responsible for the safety of the 
+              railway. It is implemented with a programmable piece of
+		  equipment namely a Vital Processor 
+              Interlocking (VPI). This paper introduces the most
+		  important features of VPIs and models them 
+              using the process algebraic language mu CRL. The form of
+		  correctness criteria of VPIs is described 
+              and these criteria are classified in the categories
+		  STATIC, JUST and NEXT. We verify the 
+              correctness criteria by transforming both the program
+		  and the criteria to propositional logic. We 
+              describe our experiences with tool support, both for the
+		  transformation and for proving formulas. 
+              Experiments show that it is also rather straightforward
+		  to verify correctness criteria on larger 
+              railway yards.} \dbkey{formal logic; formal
+		  specification; formal verification; railways;
+		  safety-critical software; traffic 
+              information systems}"}
+
+@inproceedings{jrail:ogino95,
+AUTHOR       = "Y. Ogino and Y.  Hirao",
+TITLE        = "{Formal methods and their applications to
+		  safety-critical systems of railways}", 
+BOOKTITLE    = "Quarterly Report of RTRI",
+EDITOR       = "",
+PAGES      = "198-203",
+ORGANIZATION = "Railway Technical Research Institute of Japan, Tokyo",
+YEAR         = "1995",
+NOTE         = "vol.36, no.4; Dec. \dbabstract{This paper
+		  describes a formal approach to requirements
+		  specifications for railway safety critical 
+              software systems and their formal safety
+		  definitions. Considering the programs and the data
+		  in a 
+              software system as the axioms and the inference rules in
+		  a formal system, we can claim that the 
+              system is safe if and only if, within the formal system,
+		  we can prove theorems that are equivalent to 
+              the safety requirements. This approach has many
+		  advantages. First, a specification is rigorous so 
+              that any ambiguity may be excluded. Secondly,
+		  specifications can be compared easily so that 
+              differences between systems will be clearer than in a
+		  natural language. This would be very useful 
+              for confirming interoperability for two
+		  systems. Thirdly, there may be systems or methods to              mechanically convert a formal specification into an
+		  executable program. These are the reasons we 
+              started this investigative study. Part of an on-going
+		  study, this paper looks into the research 
+              carried out in various places abroad and seeks to
+		  clarify the underlying principle, and in particular
+		  its 
+              safety requirements. Some indications of our possible
+		  future studies are included.} \dbkey{formal
+		  specification; rail traffic; railways;
+		  safety-critical software; traffic control; traffic
+		  engineering 
+              computing}"}
+
+@inproceedings{jrail:peleska96,
+AUTHOR       = "J. Peleska and M.  Siegel",
+TITLE        = "{From testing theory to test driver implementation}",
+BOOKTITLE    = "{FME '96: Industrial Benefit and Advances in Formal Methods. Third International Symposium of
+              Formal Methods Europe. Proceedings; Oxford, UK}",
+EDITOR       = "M.-C. Gaudel and J. Woodcock",
+PAGES      = "538-56",
+ORGANIZATION = "Springer-Verlag; Berlin, Germany",
+YEAR         = "1996",
+NOTE         = "\dbabstract{We describe the theoretical foundations
+		  for the VVT-RT test system (Verification, Validation
+		  and 
+              Test for Reactive Real Time Systems) which supports
+		  automated test generation, test execution 
+              and test evaluation for reactive systems. VVT-RT
+		  constructs and evaluates tests based on formal 
+              CSP specifications (C.A.R. Hoare, 1985), making use of
+		  their representation as labelled transition 
+              systems generated by the CSP model checker FDR. The
+		  article provides a sound formal basis for 
+              the development and verification of high quality test
+		  tools; since, due to the high degree of 
+              automation offered by VVT-RT, human interaction becomes
+		  superfluous during critical phases of 
+              the test process, the trustworthiness of the test tool
+		  is an issue of great importance. The VVT-RT 
+              system will therefore be formally verified so that it
+		  can be certified for testing safety critical 
+              systems. The article represents the starting point of
+		  this verification suite, where the basic 
+              strategies for test generation and test evaluation used
+		  by the system are formally described and 
+              verified. VVT-RT has been designed to support automation
+		  of both untimed and real time tests. 
+              The article describes the underlying theory for the
+		  untimed case. Exploiting these results, the 
+              concepts and high level algorithms used for the
+		  automation of real time tests are described in a 
+              second report which is currently prepared (J. Pelaska,
+		  1995). At present, VVT-RT is applied for 
+              hardware in the loop tests of railway and tramway
+		  control computers.} \dbkey{formal specification;
+		  program testing; program verification; real-time
+		  systems; safety-critical 
+              software}"}
+
+@inproceedings{jrail:bechina96,
+AUTHOR       = "A. Bechina and J.   Hermle and M. Siormanolakis",
+TITLE        = "{Using Prolog for a railway control system}",
+BOOKTITLE    = "{Fourth International Conference on the Practical
+		  Application of Prolog; London, UK}",
+EDITOR       = "",
+PAGES      = "19-30",
+ORGANIZATION = "Practical Application Co., Blackpool, UK",
+YEAR         = "1996",
+NOTE         = "\dbabstract{During the last years there has been a
+		  rapidly growing interest in the transportation and
+		  logistics 
+              domain for systems based on artificial intelligence
+		  techniques. This paper proposes a practical 
+              approach to an actual planning problem of a railway
+		  interlocking. A railway interlocking is defined 
+              as a system that is used to guarantee safe train
+		  movements. Often railway interlockings are 
+              systems of relays controlled by computer equipment
+		  and/or human operators. In order to adapt to a 
+              dynamic environment without creating dangerous
+		  situations, a formalism for describing safety 
+              requirements and interlocking behaviour is needed. This
+		  study intends to show why a logic 
+              programming language is a strong candidate for handling
+		  such a formalism. This work exploits the 
+              advantage of using external procedures written in other
+		  languages which is supplied by many 
+              software manufacturers of Prolog systems. The openness
+		  of Prolog makes it a powerful language to 
+              describe the complex environment of a railway system.}
+		  \dbkey{formal specification; logic programming; planning; PROLOG; rail traffic; safety; traffic control;
+              transport control}"} 
+
+@inproceedings{jrail:shimazoe95,
+AUTHOR       = "T. Shimazoe and N.   Omokawa and O.  Yoshida",
+TITLE        = "{Development of a scheme design and verification tool
+		  based on software design diversity for solid 
+              state interlocking systems}",
+BOOKTITLE    = "Transactions of the Institute of Electrical Engineers
+		  of Japan, Part C; vol.115-C, no.5", 
+EDITOR       = "",
+PAGES      = "665-71",
+ORGANIZATION = "Kyosan Electric Manuf. Co., Japan",
+YEAR         = "May 1995",
+NOTE         = "In Japanese.
+  \dbabstract{In this paper development of a scheme for
+		  the newest solid-state interlocking system named 
+              PRIME, is introduced, Interlocking systems need
+		  different specifications on each station. The 
+              interlocking tables form most of that specification. By
+		  utilizing this tool, the railway signal engineer 
+              is able to manage a large number of data easily and
+		  efficiently, and compiles interlocking data from 
+              the interlocking tables for PRIME. Interlocking function
+		  which is required for fail-safe control, is 
+              dependent on interlocking data. Therefore fault
+		  avoidance of interlocking data is indispensable. It
+		  is 
+              for this reason that we utilized software design
+		  diversity for construction of this tool. We have
+		  four 
+              phases of the design diversity in the software life
+		  cycle: Phase-1 - diversity data input of 
+              interlocking table and geographical data; Phase-2 -
+		  decompile of interlocking database; Phase-3 - 
+              interlocking data compile and interlocking functional
+		  test; and Phase-4 - diversity compile for track 
+              remodeling support data.} \dbkey{rail traffic; railways;
+		  signalling; software engineering; traffic control}"}
+		  
+
+@article{jrail:basten95,
+AUTHOR       = "T. Basten and R. Bol and M.  Voorhoeve",
+TITLE        = "{Simulating and analyzing railway interlockings in ExSpect}",
+JOURNAL      = "EEE Parallel \& Distributed Technology: Systems \& Applications",
+VOLUME       = "3",
+NUMBER       = "3",
+PAGES        = "50-62",
+YEAR         = "Fall 1995",
+NOTE         = "\dbabstract{This paper evaluates the ability of
+		  ExSpect, a toolkit for simulating and analyzing
+		  complex 
+                    distributed systems using colored Petri nets, to
+		  analyze ISL specifications for railway 
+                    interlockings.} \dbkey{digital simulation; formal
+		  specification; Petri nets; railways}"} 
+
+@article{jrail:szten95,
+AUTHOR       = "L. Szten and R.  Ninard",
+TITLE        = "{Microcomputer Dispatcher System MSD-Busz}",
+JOURNAL      = "Techniki Komputerowe Biuletyn Informacyjny",
+VOLUME       = "30",
+NUMBER       = "1",
+PAGES        = "27-40",
+YEAR         = "1995",
+NOTE         = "In Polish. \dbabstract{Microcomputer Dispatcher System
+		  (MSD-Busz) provides a tool for graphical
+		  visualization of 
+                 the state of both railway and municipal transport
+		  services-traction networks as well as for 
+                 remote control of network elements. The paper
+		  presents specification of the system including its 
+                 block diagram, operation and software structure.}
+		  \dbkey{data visualisation; microcomputer
+		  applications; railways; traffic engineering
+		  computing; 
+                 transportation}"} 
+
+
+@inproceedings{jrail:fantechi96,
+AUTHOR       = "C. Bernardeschi and A. Fantechi and S.  Gnesi and G.
+		  Mongardi", 
+TITLE        = "{Proving safety properties for embedded control systems}",
+BOOKTITLE    = "{Dependable Computing - EDCC-2. Second European
+		  Dependable Computing Conference 
+              Proceedings; Taormina, Italy}",
+PAGES = "321-32",
+EDITOR       = "A. Hlawiczka and J.G. Silva and L.Simoncini",
+ORGANIZATION = "Springer-Verlag; Berlin, Germany",
+YEAR         = "1996",
+NOTE         = "\dbabstract{It is well known that a fundamental
+		  problem in embedded control systems is the
+		  verification of the 
+              safety requirements. Formal methods and related support
+		  tools can successfully be applied in the 
+              formal proof that a system is safe. However, the
+		  complexity of real systems is such that automated 
+              tools often fail to formally validate such systems. A
+		  typical case is when "state explosion" 
+              problems arise. We show some "abstraction techniques" to
+		  make the problem of safety 
+              requirements validation tractable by current
+		  tools. These abstraction techniques have been
+		  defined 
+              inside a verification methodology that has been tested
+		  on the specification of a railway computer 
+              based interlocking signalling control system. The
+		  conditions under which this methodology can be 
+              applied to systems in different application areas are
+		  finally discussed.} \dbkey{}"} 
+
+@string{unuiist = "{\sf UNU/IIST}, the {\sf UN U}niversity's
+                        {\sf I}nternational {\sf I}nstitute
+                        for {\sf S}oftware {\sf T}echnology"}
+@string{address = "P.O.Box 3058, Macau; E-Mail: {\tt library@iist.unu.edu}"}
+@string{tr = "Technical Report"}
+@string{LNCS = "Lecture Notes in Computer Science"}
+
+
+@techreport{jrail:Bol94sss,
+AUTHOR       = "R.N. Bol and J.W.C. Koorn and L.H. Oei and S.F.M. van Vlijmen",
+TITLE        = "{S}yntax and {S}tatic {S}emantics of the {I}nterlocking 
+                {D}esign and {A}pplication {L}anguage",
+INSTITUTION  = "Programming 
+                Research Group, University of Amsterdam",
+TYPE         = tr,
+NUMBER       = "P9422",
+ADDRESS      = "Kruislaan 403, 
+                1098 SJ Amsterdam, The Netherlands",
+MONTH        = "November",
+YEAR         = "1994",
+NOTE         = "\dbabstract{An interlocking is a system used at
+		  railway yards for 
+guaranteeing safety of train movements. This report opens
+a series of studies on tightly related specification
+languages for interlockings. These languages together are
+called ISL. Interlocking Specification Language. ISL is
+designed by P. Middelraad of the Dutch railway company,
+NS, de Nederlandse Spoorwegen. NS have developed a
+symbolic intermediate tool interface language, IDEAL, for
+ISL. IDEAL is the Interlingua for all men and machines
+using ISL. This report introduces interlockings, the
+long-term goals of the ISL project, and, as a first step,
+we present the syntax and static semantics of IDEAL in
+ASF+SDF, an algebraic specification formalism. Several
+improvements of IDEAL are suggested}"}
+
+
+@techreport{jrail:Oei94pst,
+AUTHOR       = " L.H. Oei",
+TITLE        = "{P}runing the {S}earch {T}ree of {I}nterlocking {D}esign 
+                and {A}pplication {L}anguage {O}perational {S}emantics",
+INSTITUTION  = "University of Amsterdam, Programming 
+                Research Group",
+TYPE         = tr,
+NUMBER       = "P9418",
+ADDRESS      = "Kruislaan 403, 
+                1098 SJ Amsterdam, The Netherlands",
+MONTH        = "November",
+YEAR         = "1994",
+NOTE         = "\dbabstract{An interlocking is a system used at railyards for
+guaranteeing safety of train movements. This paper
+succeeds the study on the syntax and static semantics of
+tightly related graphical specification languages for
+interlockings. These languages together are known in NS
+documents as the Euris method. The Euris method has been
+designed by P.\ Middelraad of the Dutch railway company,
+NS, de Nederlandse Spoorwegen\footnote{The project we
+are involved in we sometimes refer to as ISL:
+Interlocking Specification Language.}. It concentrates on a
+graphical definition of Railway Interlocking by means of
+the so called Logic Sequence Charts, short LSCs, which is
+a derivation of the well known Flow Charts. NS have
+already developed a symbolic intermediate tool interface
+language, IDEAL to automate processing of LSC
+specifications. IDEAL, Interlocking Design and
+Application Language, is therefore effectively used as an
+Interlingua within the Euris-Simulation project. 
+A feasibility study of strategies of translations of IDEAL to
+the ExSpect simulation specification language is made.
+ExSpect, Executable Specification Tool---a formalism
+based upon Petri Nets---, would mean a first step toward
+proof theoretical correctness of the Euris method. As in
+the previous study, we have made use of the Algebraic
+Specification Formalism and the Syntax Definition
+Formalism which has been integrated in the ASF+SDF
+Meta-environment, for this purpose. The major question
+addressed is whether it is possible to apply full
+automated transformation of manageable complexity of IDEAL
+to ExSpect, without losing the LSC operatonal semantics,
+and at the same time gain the Petri Net invariants}"}
+
+@techreport{jrail:Basten94sar,
+AUTHOR       = "T. Basten and R. Bol and M. Voorhoeve",
+TITLE        = "{S}imulating and {A}nalyzing {R}ailway 
+                {I}nterlocking in {E}x{S}pect",
+INSTITUTION  = "Department of Computing Science,
+                Eindhoven University of Technology",
+TYPE         = tr,
+NUMBER       = "94-37",
+ADDRESS      = "P.O. Box 513, 
+                5600 MB Eindhoven, The Netherlands",
+MONTH        = "September",
+YEAR         = "1994",
+NOTE         = "\dbabstract{This paper describes a study on simulating
+		  and analyzing 
+interlocking specifications in the Interlocking
+Specification Language (ISL), using the tool ExSpect.
+ExSpect is a toolkit based on the theory of coloured Petri
+nets. An approach to translating ISL to ExSpect is suggested.
+Experimental results of simulating and analyzing part of
+an ISL specification in ExSpect are discussed. ExSpect
+seems to be useful for simulating and analyzing ISL
+specifications. Furthermore, several interesting topics
+for future research are identified}"}
+
+
+@techreport{jrail:Groote94tsg,
+AUTHOR       = "J.F. Groote and J.W.C. Koorn and S.F.M.van Vlijmen",
+TITLE        = "{T}he {S}afety {G}uaranteeing {S}ystem 
+                 at {S}tation {H}ooen-{K}ersenboogerd",
+INSTITUTION  = "Utrecht University",
+TYPE         = tr,
+NUMBER       = "121",
+ADDRESS      = "Utrecht University, Department of 
+                Philosophy, Heidelberglaan 8, Utrecht
+                The Netherlands",
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = "\dbabstract{At the Dutch station Hoorn-Kersenboogerd, computer
+equipment is used for the safe and in time movement of
+trains. The computer equipment can be divided in two
+layers. A top layer offering an interface and means to
+help a human operator in scheduling train movement. And a
+bottom layer which checks whether commands issued by the
+top layer can safely be executed by the rail hardware and
+which acts appropriately on detection of a hazardous
+situation. The bottom layer is implemented with a
+programmable piece of equipment namely a Vital Processor
+Interlocking\footnote{VPI and Vital Processor
+Interlocking are registered trademarks of the General
+Railway Signal Company.}{\it (VPI)}. This paper introduces the
+most important features of the {\it VPI} at Hoorn-Kersenboogerd.
+This particular {\it VPI} is modelled in {\it uCRL}. Furthermore, the
+paper touches upon correctness criteria and tool support
+for {\it VPI}s, and suggests ways for verification of properties
+of {\it VPI}s. Experiments show that it is indeed possible to
+efficiently verify these correctness criteria}"}
+
+
+
+
+@phdthesis{jrail:montigel94mgae,
+AUTHOR       = "Markus Montigel",
+TITLE        = "{M}o\-del\-lier\-ung und {G}e\-w{\"a}hr\-leist\-ung von 
+                {A}b\-h{\"a}ng\-ig\-keit\-en in 
+                {E}isen\-bahn\-si\-cher\-ungs\-an\-la\-gen",
+SCHOOL       = "ETH: Swiss Federal Institute of Technology",
+ADDRESS      = "ETH Honggerberg, CH-8093 Z{\"u}rich, Swtizerland",
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:DinesDongPrehn94,
+AUTHOR       = "Dines Bj{\o}rner and Dong YuLin and S{\o}ren Prehn",
+TITLE        = "Domain {A}nalysis: {A} {C}ase {S}tudy
+                of {R}ailway {S}tation {M}nagement",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "db/03/01",
+ADDRESS      = address,
+MONTH        = "November 12",
+YEAR         = "1994",
+NOTE         = "\\ Presented at KICS'94: The Kunming
+                (Yunnan, PRC) Intl.\ CASE Symposium, Nov.\ 1994"}
+
+@techreport{jrail:Bjorner94apt,
+AUTHOR       = "Dines Bj{\o}rner and Jin Danhua",
+TITLE        = "A {P}{R}a{C}o{S}y to {P}{R}a{C}o{S}{H} 
+                {T}ransition {P}roposal",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "db/03/01",
+ADDRESS      = address,
+MONTH        = "February",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{jrail:Bjorner94aaf,
+AUTHOR       = "Dines Bj{\o}rner",
+TITLE        = "A {A}rchitecture for {R}unning {M}ap {S}ystems",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "db/arch/01",
+ADDRESS      = address,
+MONTH        = "February",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+%Soren Prehn
+
+@techreport{jrail:Prehn93pds,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{P}{R}a{C}o{S}y {D}ocument {S}tandard",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/4/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Prehn94afm,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "A {F}ormal {M}odel of the {R}ailway {A}pplication {D}omain {S}ystem",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/5/3",
+ADDRESS      = address,
+MONTH        = "January 7",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Prehn93fdmp,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{F}ormal {D}omain {M}odels {P}resentation",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/6/1",
+ADDRESS      = address,
+MONTH        = "December",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Prehn94fsvc,
+AUTHOR       = "S{\o}ren Prehn and Dong Yulin",
+TITLE        = "{F}ile {S}haring and {V}ersion {C}ontrol",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sp/11/1",
+ADDRESS      = address,
+MONTH        = "March",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Prehn94arr,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{A} {R}ailway {R}unning {M}ap {D}esign",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "SP/12/3",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Prehn94dtt,
+AUTHOR       = "S{\o}ren Prehn",
+TITLE        = "{D}istributed {T}rain {T}ime-tables and {D}ispatching",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "SP/13/2",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+%Srinivasan Parthasarathy
+
+
+@techreport{jrail:Partha93pae,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y: {A}n {E}xecutive {O}verview",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/02/09",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha93pwd,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{P}{R}a{C}o{S}y:  {W}ork-package  {D}escription",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/03/03",
+ADDRESS      = address,
+MONTH        = "January",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha93aid,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "An {I}nformal {D}efiniton of the {S}cheduling {P}roblem
+ in {P}{R}a{C}o{S}Y",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/5/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Partha94pdc,
+AUTHOR       = "S. Parthasarathy and Dines Bj{\o}rner",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ocument {C}atalogue",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/catal/05",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{jrail:Partha94rst,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{R}ailway {S}ystem {T}erminology",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/terms/09",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha94drm,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{D}escriptors for {R}unning {M}aps",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/desc/06",
+ADDRESS      = address,
+MONTH        = "April",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha94rmd,
+AUTHOR       = "S. Parthasarathy and S{\o}ren Prehn and Dines Bj{\o}rner",
+TITLE        = "{R}unning {M}ap {D}isplay and {I}nteractivity",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/disply/03",
+ADDRESS      = address,
+MONTH        = "March",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha94pdr,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ocument {R}oadmap",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/roadmap/2",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha94ppp,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y {P}roject {P}hase I:
+                {R}evised {A}ctivity {P}lan",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/plan/01",
+ADDRESS      = address,
+MONTH        = "April",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Partha94psd,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y: {S}oftware {D}esign {D}escription",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "par/sdd/2",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+@article{jPartha94ea,
+AUTHOR       = "S. Parthasarathy",
+TITLE        = "Episode {A}nalysis --- {A} {P}ractical
+                {A}pproach for {T}emporal {R}easoning 
+                in {A}utomated {P}rocesses",
+JOURNAL      = "Engineering Applications of AI",
+PUBLISHER    = "Elsevier/Pergamon",
+VOLUME       = "",
+NUMBER       = "",
+PAGES        = "",
+MONTH        = "",
+YEAR         = "1995",
+NOTE         = ""}
+
+@techreport{jrail:Dong93pdl,
+AUTHOR       = "Dong Yulin",
+TITLE        = "{P}{R}a{C}o{S}y {D}ocument {L}ist",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/0/2",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:LiDong93tzw,
+AUTHOR       = "Li Xiaoshan and Dong Yulin",
+TITLE        = "The {Z}hengzhou--{W}uhan {T}rain {D}ispatch {S}ystem",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/1/3",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = "\\ Translation from the chinese version which was authored by 
+staff of the Zhengzhou Railway Computer Center of the Ministry of Railways,
+ China"}
+
+
+@techreport{jrail:Bjorner93rsc,
+AUTHOR       = "Dines Bj{\o}rner and Dong Yulin",
+TITLE        = "{R}ailway {S}ystem {C}haracteristic",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/3/1",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Dong93e,
+AUTHOR       = "Dong Yulin and S{\o}ren Prehn",
+TITLE        = "Explanation",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/4/1",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Dong93mq,
+AUTHOR       = "Dong Yulin et al",
+TITLE        = "More {Q}uestions",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/6/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Dong93trm,
+AUTHOR       = "Dong Yulin",
+TITLE        = "Train {R}unning {M}ap",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/8/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Dong93ctc,
+AUTHOR       = "Dong Yulin",
+TITLE        = "Centralized {T}raffic {C}ontrol",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "dyl/10/1",
+ADDRESS      = address,
+MONTH        = "November",
+YEAR         = "1993",
+NOTE         = "\\ Extracted from Railway Technical English"}
+
+@techreport{jrail:dong94rb,
+AUTHOR       = "Dong Yulin and S. Parthasarathy",
+TITLE        = "Railway {B}ibliography",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/11/5",
+ADDRESS      = address,
+MONTH        = "March",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Dong94pdd,
+AUTHOR       = "Dong Yulin and Dines B{\o}rner",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ocument {D}eliverables",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "dyl/deliv/1",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+%Jin Danhua
+
+@techreport{jrail:Jin93psm,
+AUTHOR       = "Jin Danhua",
+TITLE        = "Proposed {S}henzhen {M}eeting {P}lan",
+INSTITUTION  = unuiist,
+TYPE         = "Technical Note",
+NUMBER       = "jdh/2/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Jin94afm,
+AUTHOR       = "Jin Danhua",
+TITLE        = "{A} {F}irst {M}athematical {M}odel of {T}rain 
+                {T}ime {T}abling",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/math/03",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Jin94rmd,
+AUTHOR       = "Jin Danhua",
+TITLE        = "{R}unning {M}ap {D}isplay {T}ransformation",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/trans/02",
+ADDRESS      = address,
+MONTH        = "April",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Jin94pap,
+AUTHOR       = "Jin Danhua",
+TITLE        = "{P}{R}a{C}o{S}y: {A} {P}rogram {M}anual",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/manual/01",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Jin94asm,
+AUTHOR       = "Jin Danhua",
+TITLE        = "A {S}econd {M}ath. {M}odel of {T}rain {T}ime {T}abling",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/math/05",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{jrail:Jin94pdc,
+AUTHOR       = "Jin Danhua",
+TITLE        = "P{R}a{C}o{S}y {D}ocument {C}atalogue",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "jdh/catal/08",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+%Liu Xin
+
+@techreport{jrail:Liu93ppa,
+AUTHOR       = "Liu Xin and S. Parthasarathy",
+TITLE        = "{P}{R}a{C}o{S}y-{P}hase 1 {A}ctivities and {M}ilestones",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "lx/1/0",
+ADDRESS      = address,
+MONTH        = "November",
+YEAR         = "1993",
+NOTE         = ""}
+
+@techreport{jrail:Liu94asr,
+AUTHOR       = "Liu Xin",
+TITLE        = "{A} {S}imple {R}unning {M}ap {D}isplay {T}ool",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "lx/tool/01",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Liu94pds,
+AUTHOR       = "Liu Xin",
+TITLE        = "{P}{R}a{C}o{S}y: {D}emo {S}cript {I}",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "lx/plan/01",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+%Sun Guoqing
+@techreport{jrail:Sun93gdf,
+AUTHOR       = "Sun Guoqing and Liu Xin and S. Parthasarathy",
+TITLE        = " {G}lobal {D}ata {F}low {D}iagrams for {T}rain {D}ispatch",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/1/6",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Sun94pds,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ata {S}tructures for {R}ailway {N}etworks",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/3/1",
+ADDRESS      = address,
+MONTH        = "June",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+@techreport{jrail:Sun94fmt,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "Formal {M}odels of {T}ime-table {I}nput {T}ool",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/11/3",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Sun94fmtt,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "{P}{R}a{C}o{S}y: {T}ime-{T}able {P}reparation {T}ool {S}criptor",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/12/1",
+ADDRESS      = address,
+MONTH        = "October",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+@techreport{jrail:Sun94pdsf,
+AUTHOR       = "Sun Guoqin",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ata {S}tructures for {T}ime-table {P}rojections",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "sgq/4/1",
+ADDRESS      = address,
+MONTH        = "July",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+
+
+@techreport{jrail:Ma93ido,
+AUTHOR       = "Ma Chao and S. Parthasarathy",
+TITLE        = "{I}nformal {D}escription of a {R}ailway {S}ystem",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "mc/narr2/2",
+ADDRESS      = address,
+MONTH        = "August",
+YEAR         = "1994",
+NOTE         = ""}
+
+@techreport{jrail:Ma94pds,
+AUTHOR       = "Ma Chao",
+TITLE        = "{P}{R}a{C}o{S}y: {D}ata {S}tructures for {T}rain {J}ourneys",
+INSTITUTION  = unuiist,
+TYPE         = tr,
+NUMBER       = "mc/dstr1/1",
+ADDRESS      = address,
+MONTH        = "May",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+@techreport{jrail:Niver94tot,
+AUTHOR       = "J. Nievergelt",
+TITLE        = "Thoughts on {T}raffic {S}cheduling and {T}ime {T}able
+ {D}esign",
+INSTITUTION  = "ETH, Z{\"u}rich, Switzerland",
+TYPE         = tr,
+NUMBER       = "dyl/9/2",
+ADDRESS      = "Informatik, ETH, CH-8092 Zurich, Switzerland",
+MONTH        = "January",
+YEAR         = "1994",
+NOTE         = ""}
+
+
+
+@techreport{jrail:CASCO90ctc,
+AUTHOR       = "CASCO",
+TITLE        = "Centralized {T}raffic {C}ontrol {S}ystem {P}roposal for 
+{Z}hengzhou-{W}uchang {S}outh {R}ailway {L}ine",
+INSTITUTION  = "Casco Signal LTD",
+TYPE         = tr,
+NUMBER       = "",
+ADDRESS      = "",
+MONTH        = "December",
+YEAR         = "1990",
+NOTE         = "proposal to fulfil contract with Minstry of Railway, China"}
+
+@techreport{jrail:CASCO92clc,
+AUTHOR       = "CASCO",
+TITLE        = "Casco {L}ower {C}ad {S}ystem",
+INSTITUTION  = "Casco Signal LTD",
+TYPE         = tr,
+NUMBER       = "",
+ADDRESS      = "",
+MONTH        = "June",
+YEAR         = "1992",
+NOTE         = ""}
+
+
+@techreport{jrail:cwg95,
+AUTHOR       = "Chris George",
+TITLE        = "Specification and {D}evelopment 
+                of {A}n {A}utomatic {T}rain {S}ystem",
+INSTITUTION  = "CRI A/S",
+TYPE         = "Internal Research Note",
+YEAR = "1995",
+NUMBER       = "LACOS/CRI/CWG/38",
+NOTE         = ""}
+  

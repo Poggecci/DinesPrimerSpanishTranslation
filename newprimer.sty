@@ -1,0 +1,485 @@
+\newcommand{\nulstilpsno}{\renewcommand{\psno}{}}
+\newcommand{\stilpsno}{\renewcommand{\psno}{ ~ ~
+    \hfil{{\stepcounter{sno}\scriptsize{{\textsf{\arabic{sno}}}}}}}}
+\newcommand{\nulstilmpsno}{\renewcommand{\mpsno}{}}
+\newcommand{\stilmpsno}{\renewcommand{\mpsno}{\marginpar{{\stepcounter{sno}\scriptsize\textsf{\arabic{sno}}}}}}
+
+\newcommand{\cf}[1]{\,\,\,\,\,\,\LLll[\ref{#1}]\HHHH}
+
+\newcommand{\recordtime}{\textbf{\textsf{record\_$\mathbb{TIME}$}}()}
+
+\newcommand{\tosemb}{}%{\cbstart[3pt]}
+\newcommand{\toseme}{}%{\cbend}
+
+\newcommand{\notintosem}[1]{}
+
+\newcommand{\version}{}%{\brcolor{{\sc version 1}}}
+
+\RequirePackage{etex}
+
+%\renewcommand{\bmcs}{\pos{\begin{multicols}{2}}{}}
+%\renewcommand{\emcs}{\pos{\end{multicols}}{}}
+
+%\renewcommand{\bmcsii}{\pos{}{\begin{multicols}{2}}}
+%\renewcommand{\emcsii}{\pos{}{\end{multicols}}}
+
+%\renewcommand{\bmcsiii}{\pos{}{\begin{multicols}{3}}}
+%\renewcommand{\emcsiii}{\pos{}{\end{multicols}}}
+
+%\renewcommand{\pgpageref}[1]{pg.\,\pageref{#1}}
+%\renewcommand{\dfpgref}[3]{dfn.\,\ref{#1}, #2 pg.\,\pageref{#3}}
+
+%\renewcommand{\daadm}{{{domain} {analysis \&} {description}}}
+%\renewcommand{\mdaad}{\daadm}
+
+\renewcommand{\ipbegynd}{\begynd }
+\renewcommand{\ippind}{\pind }
+\renewcommand{\ipafslut}{\afslut }
+
+\renewcommand{\punkttekst}{\renewcommand{\ipbegynd}{\begynd}
+              \renewcommand{\ippind}{\pind }
+              \renewcommand{\ipafslut}{\afslut}}
+
+\renewcommand{\itemtekst}{\renewcommand{\ipbegynd}{\begin{itemize}}
+              \renewcommand{\ippind}{\item }
+              \renewcommand{\ipafslut}{\end{itemize}}}
+          
+\renewcommand{\punkttekst}{\renewcommand{\ipbegynd}{\begynd}
+              \renewcommand{\ippind}{\pind }
+              \renewcommand{\ipafslut}{\afslut}}
+
+\renewcommand{\daad}{\sfsl{domain analyser \& describer}}
+%\newcommand{\daadl}{{\texttt{{Da\&dL}}}}
+%\newcommand{\daadlrsl}{{\texttt{{Da\&dL$_\mbox{\texttt{RSL}}$}}}}
+
+%\renewcommand{\daadl}{{\texttt{{DadL}}}}
+%\renewcommand{\daadlrsl}{{\texttt{{DadL$_{\mbox{\texttt{RSL}}$}}}}}
+
+\renewcommand{\notinfaoc}[1]{}
+\renewcommand{\nnotinfaoc}[1]{}
+
+%\newcommand{\lineboks}{\fbox{more to come}}
+
+\renewcommand{\pot}{\pos{paper}{talk}}
+\renewcommand{\Pot}{\pos{Paper}{Talk}}
+\renewcommand{\PoT}{\pos{Paper}{Talk}}
+
+\newcommand{\ifile}[1]{}
+
+\renewcommand{\toitemize}{\renewcommand{\begynd}{\begin{itemize}}
+                        \renewcommand{\pind}{\item}
+                        \renewcommand{\afslut}{\end{itemize}}}
+%\newcommand{\titem}{\toitemize}   
+%\renewcommand{\toitemize}{}
+%\renewcommand{\titem}{}   
+                    
+\renewcommand{\fromitemize}{\renewcommand{\begynd}{}
+                          \renewcommand{\pind}{}
+                          \renewcommand{\afslut}{}}
+\newcommand{\fitem}{\fromitemize}   
+\renewcommand{\fromitemize}{}
+\renewcommand{\fitem}{}          
+%\newcommand{\aref}[1]{\ref{#1}}
+
+%\newcommand{\dbtiny}{}
+
+\newcommand{\xnbbb}[1]{\nbbbb{#1}}
+\newcommand{\xbbb}[1]{\bbbb{#1}}
+\renewcommand{\xnbbb}[1]{\nbbb{#1}}
+\renewcommand{\xbbb}[1]{\bbb{#1}}
+\newcommand{\ynbbb}[1]{\mnewfoil\vspace*{1mm}\
+    \noindent\bgcolor{#1:\ }\addcontentsline{toc}{subsubsection}{\bmcolor{#1}}}
+
+
+\renewcommand{\kw}[1]{{\bf #1}}
+
+\renewcommand{\ifile}[1]{} 
+
+\newcommand{\btosem}{\cbstart[4pt]}
+\newcommand{\etosem}{\cbend}
+
+\newcommand{\bxac}{}%{\marginpar{{\sf I}}}%{\cbstart[3pt]}
+\newcommand{\exac}{}%{\marginpar{{\sf I}}}%{\cbend}
+
+\newcommand{\bnovchg}{}%{\cbstart[2pt]}         % for COMMENTED FILE
+\newcommand{\enovchg}{}%{\cbend}                % for COMMENTED FILE
+\newcommand{\mchgb}{}%{\cbstart[4pt]}         % for COMMENTED FILE
+\newcommand{\mchge}{}%{\cbend}                % for COMMENTED FILE
+
+%\newcounter{L}
+
+\newcommand{\bfc}{}
+\newcommand{\efc}{}
+\newcommand{\thispaper}{\pos{this primer}{these lectures}}
+\newcommand{\nyl}{\pos{}{
+
+  }}
+\newcommand{\paperlects}{\pos{primer}{lecture}}
+
+\newcommand{\bxacy}{}%{\marginpar{{\sf I}}}%{\cbstart[3pt]}
+\newcommand{\exacy}{}%{\marginpar{{\sf I}}}%{\cbend}
+
+\renewcommand{\bxac}{}%{\cbstart[3pt]}
+\renewcommand{\exac}{}%{\cbend}
+\renewcommand{\exa}{}%{\cbend}
+
+\newcommand{\faocb}{}%{\cbstart[3pt]}
+\newcommand{\faoce}{}%{\cbend}
+
+\renewcommand{\bxi}{}%{\cbstart[3pt]}
+\renewcommand{\exi}{}%{\cbend}
+
+\renewcommand{\bxii}{}%{\cbstart[1pt]}
+\renewcommand{\exii}{}%{\cbend}
+
+\renewcommand{\stil}{\sf}
+
+\renewcommand{\eod}{ \dbsquare}%{ \textbf{\brcolor{\HHHH$\odot$}}}
+\renewcommand{\eox}{ \dbsquare}%{ \textbf{\lilacolor{\HHHH$\Box$}}}
+\renewcommand{\eox}{}%{ \textbf{\lilacolor{\HHHH$\Box$}}}
+\newcommand{\eoxn}{ \dbsquare}%{ \textbf{\lilacolor{\HHHH$\Box$}}}
+\renewcommand{\eodfn}{ \dbsquare}%{ \textbf{\brcolor{\HHHH$\odot$}}}
+\renewcommand{\eoxfn}{ \dbsquare}%{ \textbf{\lilacolor{\HHHH$\Box$}}}
+\renewcommand{\eoap}{ \dbsquare}%{ \textbf{\bmcolor{\ \HHHH$\Diamond$}}}
+\renewcommand{\eodp}{ \dbsquare}%{ \textbf{\bgcolor{\HHHH$\triangle$}}}
+\renewcommand{\eog}{ \dbsquare}%{ \textbf{\bgcolor{\HHHH$\otimes$}}}
+
+\renewcommand{\sfsl}[1]{\textsf{\textsl{#1}}}
+
+\renewcommand{\smaLL}{\pos{\normalsize}{\HHHH}}
+
+\newcommand{\mmtc}{\begin{center}\fbox{{\sc Much more to come}}\end{center}}
+
+\renewcommand{\firstpsno}%
+  {\marginpar{{\stepcounter{sno}\scriptsize\textsf{\arabic{sno}\footnotemark}}}}  
+
+\newcommand{\appref}[1]{% 
+     \pos{\scriptsize\lilacolor{ -- Example Sect.\,\ref{#1}
+         Pg.\,\pageref{#1}}}{}\HHHH}
+   
+\renewcommand{\kaisor}{{Kai S{\o}rlander}}
+\renewcommand{\sorlan}{{S{\o}rlander}}
+\renewcommand{\sorlander}{{Kai S{\o}rlander}}
+\renewcommand{\kaisorfil}{{Kai S{\o}rlander}'s Philosophy}
+\renewcommand{\sorlanfil}{{S{\o}rlander}'s Philosophy}
+
+\newcommand{\ibegynd}{\pos{\begynd}{\begin{itemize}}}
+\newcommand{\ipind}{\pos{\pind}{\item}}
+\newcommand{\iafslut}{\pos{\afslut}{\end{itemize}}}
+
+\newcommand{\restoreitem}{\renewcommand{\ibegynd}{\begin{itemize}}
+                           \renewcommand{\ipind}{\item}
+                           \renewcommand{\iafslut}{\end{itemize}}}
+\newcommand{\restorepind}{\renewcommand{\ibegynd}{\begynd}
+                           \renewcommand{\ipind}{\pind}
+                           \renewcommand{\iafslut}{\afslut}}
+                  
+\newcommand{\ipsno}{}%{\psno}
+
+
+\newcommand{\btosemi}{}%{\cbstart[5pt]}
+\newcommand{\etosemi}{}%{\cbend}
+
+\renewcommand{\btosem}{}%{\cbstart[5pt]}
+\renewcommand{\etosem}{}%{\cbend}
+
+\newcommand{\textindex}[1]{\sfsl{#1}}
+\renewcommand{\textindex}[1]{\sfsl{#1}}
+\renewcommand{\txtindexiv}[2]{\sfsl{#1 #2}}
+
+\renewcommand{\firstpsno}%
+  {\marginpar{{\stepcounter{sno}\scriptsize\textsf{\arabic{sno}\footnotemark}}}}   
+
+\renewcommand{\xboiteepaisseavecuntitre}{\boiteepaisseavecuntitre}
+\newcommand{\xendboiteepaisseavecuntitre}{\endboiteepaisseavecuntitre}
+
+\renewcommand{\firstpsno}{}   
+         
+\newcounter{nyeks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tosemeks}[2]{\vspace*{2mm}\skriv{#2}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\index{eind}{#1}
+\noindent\footsize\sf\input{\lllll#2}\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+\vspace*{2mm}
+}
+\newcommand{\xtosemeks}[2]{\vspace*{2mm}%
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\label{#1}\index{eind}{#1}
+  \vspace*{1mm}\noindent\pos{\small}{\LLLL}\sf\skriv{#2}\input{\lllll#2}
+  \vspace*{1mm}
+  \end{primerexample}
+  \normalsize\rm
+}
+\newcommand{\tosemeksi}[2]{\vspace*{2mm}\skriv{#2}%
+  \begin{primerexamplei}{\brcolor{#1}}
+  \noindent\label{#1}\index{eind}{#1}
+  \vspace*{1mm}\noindent\pos{\small}{\LLLL}\sf\input{\lllll#2}
+  \vspace*{1mm}
+  \end{primerexamplei}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\daadeksm}[2]{\pos{\vspace*{2mm}}{}%
+\pos{\xboiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\noindent\LLLL\HHHH{\sf #2}\index{eind}{#1}
+\stepcounter{primerexample}
+\pos{\vspace*{-2mm}}{}\HHHH\rm 
+\pos{\xendboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\xdaadeksm}[2]{\pos{\vspace*{2mm}}{}%
+                                \pos{\boiteepaisseavecuntitre}{}{#1}
+%\begin{primerexample}{#1}
+\noindent\LLLL\HHHH{\sf #2}
+%\end{primerexample}
+                                \endboiteepaisseavecuntitre
+\normalsize\rm
+}
+
+\newcommand{\monoexample}[2]{\pos{\vspace*{2mm}}{}%
+\pos{\boiteepaisseavecuntitre}{}{\brcolor{#1}}
+\begin{primerexample}\index{eind}{#1}\label{#1}
+\noindent\LLLL\HHHH{#2}
+\end{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}
+\normalsize\rm
+}
+
+\renewcommand{\monoexample}[2]{\pos{\vspace*{2mm}}{}%
+\pos{\begin{svgraybox}\hfill}{}{\brcolor{#1}}
+\begin{primerexample}\index{eind}{#1}\label{#1}
+\noindent\HHHH{#2}
+\end{primerexample}
+\pos{\end{svgraybox}}{}
+\normalsize\rm
+}
+
+\newcommand{\monoexampleiii}[2]{\pos{\vspace*{2mm}}{}%
+  \pos{\begin{svgraybox}\hfill}{}
+    {\brcolor{#1}}\\
+\begin{primerexample}\label{#1}
+\noindent\LLLL\HHHH{#2}
+\end{primerexample}
+\pos{\end{svgraybox}}{}
+\normalsize\rm
+}
+
+\newcommand{\xmonoexampleiii}[2]{\pos{\vspace*{2mm}}{}%
+  \pos{\hfill}{}
+    {\brcolor{#1}}
+\begin{primerexample}\label{#1}
+\noindent\LLLL\HHHH{#2}
+\end{primerexample}
+\pos{}{}
+\normalsize\rm
+}
+
+\newcommand{\monoexampleinput}[2]{\pos{\vspace*{2mm}}{}%
+\pos{\boiteepaisseavecuntitre}{}{\brcolor{#1}}
+\begin{primerexample}\index{eind}{#1}\label{#1}
+\noindent\LLLL\HHHH{\sf \input{#2}}
+\end{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}
+\normalsize\rm
+}
+\newcommand{\imonoexampleinput}[2]{\pos{\vspace*{2mm}}{}%
+\pos{\boiteepaisseavecuntitre}{}{\brcolor{#1}}
+\begin{primerexample}\index{eind}{#1}\label{#1}
+\noindent\LLLL\HHHH{\sf {#2}}
+\end{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}
+\normalsize\rm
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nytosemeks}[2]{\vspace*{2mm}\skriv{#2}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\vspace*{-3mm}\index{eind}{#1}
+\noindent\footsize\sf\input{#2}\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+\vspace*{2mm}  
+}
+\renewcommand{\nytosemeks}[2]{\vspace*{2mm}%
+                                \pos{\boiteepaisseavecuntitre}{}{#1}
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\label{#1}
+  \vspace*{1mm}\noindent\pos{\small}{\LLLL}\sf\skriv{#2}\input{#2}
+  \end{primerexample}
+                                \endboiteepaisseavecuntitre
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\nytosemeksmixed}[2]{\vspace*{2mm}\skriv{#2}%
+\boiteepaisseavecuntitre{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\vspace*{-3mm}\index{eind}{#1}
+\noindent\footsize\small\sf\input{\lllll#2}\stepcounter{primerexample}
+\vspace*{-3mm}
+\endboiteepaisseavecuntitre\normalsize\rm
+\vspace*{2mm}
+}
+\newcommand{\xnytosemeksmixed}[2]{\vspace*{2mm}%
+                                %\pos{\boiteepaisseavecuntitre}{}{#1}
+\begin{primerexample}{\brcolor{#1}}
+                                %\stepcounter{primerexample}
+  \noindent\label{#1}
+  \vspace*{1mm}\noindent\pos{\small}{\LLLL}\sf\input{\lllll#2}
+  \end{primerexample}
+                                %\endboiteepaisseavecuntitre
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\tosemekss}[2]{\vspace*{2mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\vspace*{-2mm}\stepcounter{primerexample}\noindent\footsize\smallish\sf\skriv{#2}\input{\lllll#2}\vspace*{-2mm}%\lllll
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+\vspace*{2mm}\index{eind}{#1}
+}
+
+\newcommand{\xtosemekss}[2]{\vspace*{2mm}\skriv{#2}%
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\label{#1}
+  \vspace*{-2mmm}\noindent\pos{\small}{\LLLL}\sf\input{\lllll#2}
+  \end{primerexample}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\tosemekssmm}[2]{\vspace*{2mm}\skriv{#2}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\noindent\footsize\smallish\sf\index{eind}{#1}\input{#2}\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+\vspace*{2mm}
+}
+\newcommand{\xtosemekssmm}[2]{\vspace*{2mm}%
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\label{#1} 
+  \vspace*{-2mmm}\noindent\pos{\small}{\LLLL}\sf\skriv{#2}\input{#2}
+  \end{primerexample}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\tosemekss}[2]{\skriv{#2}%\vspace*{2mm}%
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\footsize\smallish\index{eind}{#1}\sf\input{#2}%\lllll
+  \end{primerexample}
+\normalsize\rm
+\vspace*{2mm}
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\newnytosemekss}[2]{\vspace*{2mm}\skriv{#2}\index{eind}{#1}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\vspace*{-2mm}\noindent\footsize\smallish\sf\input{#2}\vspace*{-2mm}\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+\vspace*{2mm}\index{eind}{#1}
+}%
+\newcommand{\xnewnytosemekss}[2]{\vspace*{2mm}\skriv{#2}%
+  \pos{\boiteepaisseavecuntitre{\brcolor{#1}}}{}
+  \begin{primerexample}\label{#1}\rm
+  \noindent\pos{\small}{\LLLL}\rm\input{#2}
+  \end{primerexample}
+  \pos{\endboiteepaisseavecuntitre}{}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{xvii}
+\newcounter{xviii}
+\newcounter{xxv}
+\newcounter{xxxiii}
+
+\renewcommand{\daadeks}[2]{\vspace*{1mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\index{eind}{#1}\vspace*{1mm}\begin{multicols}{2}
+\noindent\footsize\smallish{\sf #2}\stepcounter{primerexample}
+\end{multicols}\normalsize\rm
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm\vspace*{3mm}
+}
+\renewcommand{\tosemekssmm}[2]{\vspace*{2mm}\skriv{#2}%
+  \begin{primerexample}{\brcolor{#1}}
+  \index{eind}{#1}\noindent\label{#1} 
+  \vspace*{-2mmm}\noindent\pos{\small}{\LLLL}\sf\input{#2}
+  \end{primerexample}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\daadekss}[2]{\vspace*{2mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\index{eind}{#1}\noindent\footsize\smallish{\sf #2}\normalsize\rm\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+\newcommand{\xdaadekss}[2]{\vspace*{2mm}%
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\label{#1} 
+  \vspace*{-2mmm}\noindent\pos{\small}{\LLLL}\sf{#2}
+  \end{primerexample}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\daadekss}[2]{\vspace*{2mm}\dbbeginsvgraybox%
+{\sort{Example \arabic{primerexample}:} \brcolor{#1}}\label{#1}
+\index{eind}{#1}\noindent\footsize\smallish{\sf #2}\normalsize\rm\stepcounter{primerexample}
+\normalsize\rm\dbendsvgraybox
+}
+
+\renewcommand{\xdaadekss}[2]{\vspace*{2mm}%
+  \begin{primerexample}{\brcolor{#1}}
+  \noindent\label{#1} 
+  \vspace*{-2mmm}\noindent\pos{\small}{\LLLL}\sf{#2}
+  \end{primerexample}
+  \normalsize\rm
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\nytosemeks}{\monoexampleinput}
+\renewcommand{\nytosemeksmixed}{\monoexamplemixed}
+\renewcommand{\xnytosemeksmixed}{\monoexamplemixed}
+%\renewcommand{\xnytosemekss}{\monoexampleinput}
+\renewcommand{\xtosemekssmm}{\monoexampleinput}
+\renewcommand{\tosemekss}{\monoexampleinput}
+\renewcommand{\xnewnytosemekss}{\monoexampleinput}
+\renewcommand{\tosemekssmm}{\monoexampleinput}
+\renewcommand{\daadekss}{\monoexample}
+\renewcommand{\xdaadekss}{\monoexample}
+
+\renewcommand{\newdaprompt}[5]{%
+\dbbeginsvgraybox\begin{aprompt} \bgcolor{\texttt{#1:}}\label{dap:#2}
+\addcontentsline{toc}{subparagraph}{\bgcolor{\arabic{aprompt}:}
+  \bgcolor{Analysis Prompt: #2}}
+      \doanpr\apindex{\texttt{#1}}
+\begynd
+\pind The domain analyser analyses ``things'' (#3) into #4.
+\pind The method provides the \dap:
+\begin{itemize}
+\item \bgcolor{\texttt{#1}} -- where \bgcolor{\texttt{#1(#3)}} holds if #3 is #5 \eoap
+\end{itemize}
+\afslut
+\end{aprompt}\dbendsvgraybox\normalsize\rm 
+}
+
+%\newcommand{\xnbb}[1]{\vspace*{1mm}
+
+%\noindent\bmcolor{#1}}
+
+\newcommand{\referee}[1]{\tosemb\marginpar{$\Re$#1}\toseme}
+\newcommand{\dpref}[1]{}
+\newcommand{\newlecti}[1]{}
+\newcommand{\newlectii}[1]{}
+
+%\renewcommand{\nbbbbb}[1]{\section{\brcolor{#1}}}
+\renewcommand{\kw}[1]{\textbf{\textsf{#1}}}
+\renewcommand{\sfsl}[1]{\textsl{#1}}
+
+%\renewcommand{\mnewfoil}{}
+\newcommand{\minusspace}[1]{\vspace*{-#1 mm}}
+
+\renewcommand{\obs}{\textsf{\textbf{{\protect{obs{\_}}}}}}
+
+\newcommand{\smallish}{\footnotesize\sl}
+\newcommand{\footsize}{\footnotesize\sf}
+
+\newcommand{\begyndbar}{}%{\cbstart[3pt]}
+\newcommand{\afslutbar}{}%{\cbend}
+
+\renewcommand{\smallish}{\pos{\footnotesize\sl}{\LLLL\sl}}
+\renewcommand{\footsize}{\pos{\footnotesize\sf}{\LLLL\sf}}

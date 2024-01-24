@@ -1,0 +1,886 @@
+
+
+\newcounter{xamp}
+\newcommand{\xample}{\stepcounter{xamp}$\mathcal{E}$\arabic{xamp}:}
+\newcounter{pdef}
+\newcommand{\pdefn}{\stepcounter{pdef}$\mathcal{D}$\arabic{pdef}:}
+
+\newcommand{\pdefindex}[1]{\index{pdefind}{#1}\index{pconind}{#1}}
+\newcommand{\pdefindexi}[1]{\index{pdefind}{#1}\index{pconind}{#1}}
+\newcommand{\pdefindexii}[2]{\index{pdefind}{#1!#2}\index{pdefind}{#2!#1}
+                             \index{pconind}{#1!#2}\index{pconind}{#2!#1}}
+\newcommand{\pdefindexiii}[3]{\index{pdefind}{#1!#2!#3}\index{pdefind}{#2!#1!#3}\index{pdefind}{#3!#1!#2}
+                              \index{pconind}{#1!#2!#3}\index{pconind}{#2!#1!#3}\index{pconind}{#3!#1!#2}}
+
+\newcommand{\pconindex}[1]{\index{pconind}{#1}}
+\newcommand{\pconindexi}[1]{\index{pconind}{#1}}
+\newcommand{\pconindexii}[2]{\index{pconind}{#1!#2}\index{pconind}{#2!#1}}
+\newcommand{\pconindexiii}[3]{\index{pconind}{#1!#2!#3}\index{pconind}{#2!#1!#3}\index{pconind}{#3!#1!#2}}
+
+\newcommand{\pexaindex}[3]{\sort{#2}\index{pexaind}{#1: #2}}
+\newcommand{\plitindex}[1]{\index{plitind}{#1}}
+\newcommand{\psymindex}[1]{\index{symind}{#1}}
+
+\newcommand{\irsltxt}[1]{\noindent\sl\normalsize$\mathcal{I}$: #1\,\dbsquare}
+\newcommand{\xrsltxt}[1]{\noindent\sl\normalsize\xample\ #1}
+\newcommand{\irsltxtu}[1]{\noindent\sl\normalsize\xample\ #1}
+
+\newcommand{\ksref}[2]{\cite[$\pi$\,#1\,$\ell$\,#2]{kaisorlander2016}}
+
+
+            \newcommand{\slet}[1]{}
+
+            \newcommand{\dop}{\sfsl{\bbcolor{domain observer prompt}}}
+
+\usepackage{minitoc}
+%\newcommand{\setminitoc}{}%{\setcounter{minitocdepth}{3}\minitoc}
+
+\newcommand{\vertikal}[1]{\vspace*{#1}}
+
+\newcommand{\anemphasis}[2]{%
+\begynd
+\pind When we say \sfsl{domain analysis \& description} 
+\pind we mean that the result of such a domain analysis \& description
+\pind is to be a model that describes a usually infinite set of domain instances.
+\pind #1
+\pind #2
+\afslut
+}
+
+\newcommand{\areminder}[2]{%
+\begynd
+\pind 
+\pind 
+\pind 
+\afslut
+}
+
+\newcommand{\inthis}[3]{%
+\noindent%
+\begynd%
+\pind We shall investigate the, as we shall call them, #1 of domains.
+\pind That is #2
+\pind The outcome of this chapter is that the \pos{reader}{student}
+\begynd
+\pind will be able to model the #1 of domains.
+\pind Not just for a particular domain instance,
+\pind but a possibly infinite set of domain instances\footnote{By this
+we mean: You are not just analysing a specific domain, say the one
+manifested around the corner from where you are, but any instance,
+anywhere in the world, which satisfies what you have described.}.
+\afslut
+\afslut}
+
+\newcommand{\Discrete}{Solid}
+\newcommand{\Continuous}{Fluid}
+\newcommand{\discrete}{solid}
+\newcommand{\continuous}{fluid}
+
+\newcommand{\wstcof}{We suggest several classes of exercises, to wit:
+  two or more of \sfsl{research problems, student exercise} and \sfsl{term projects.}}
+
+\newcommand{\dsae}{domain science \& engineering}
+
+\newcommand{\udgave}{}
+
+\newcommand{\dbbeginsvgraybox}{\pos{\begin{svgraybox}}{}}
+\newcommand{\dbendsvgraybox}{\pos{\end{svgraybox}}{}}
+
+\newcommand{\newtext}[1]{#1}
+\newcommand{\bnewtxt}{}
+\newcommand{\enewtxt}{}
+
+\newcommand{\merriam}{\texttt{[Mer\-ri\-am Web\-ster]}}
+\newcommand{\seedefn}[1]{\pos{\footnote{Cf.\,Defn.\,\vref{def:#1}}}{}}
+\newcommand{\seesect}[1]{\pos{\footnote{See Sect.\,\vref{#1}}}{}}
+\newcommand{\mkdefn}[1]{\pos{\footnote{#1}}{}}
+
+\newcommand{\bq}{\brcolor{\ding{125}}\,}
+\newcommand{\eq}{\,\brcolor{\ding{126}}}
+
+\newcommand{\appornote}[2]{#1}
+\newcounter{slideno}
+
+\renewcommand{\twoDBfigure}[5]{
+ \begin{figure}[h]
+  \begin{center}
+    \epsfig{file=#1.eps,height=#3}  \hspace*{10mm}
+    \epsfig{file=#2.eps,height=#3} 
+    \caption{#4}\label{#5}
+  \end{center}
+ \end{figure}}
+
+\newcommand{\bimarrow}{\mbox{$\:\leftarrow \!\!\!\!\!\!\!\!\!\!\!{\mbox{ }_{m}}\; \!\!\!\!\!\!\!\!\!\!\!\rightarrow$}}
+
+
+\newcommand{\fpgref}[1]{pg.\,\pageref{#1}}
+
+\newcommand{\framedtext}[2]{\begin{center}{\fbox{\sc\pos{#1}{#2}}}\end{center}}
+
+\newcommand{\chapteropening}[1]{\chapter[\lilacolor{#1}]{\lilacolor{#1}\psno}}
+
+\newcommand{\monograph}{monograph}
+
+\renewcommand{\itshape}{}
+
+\newcommand{\bdbrule}{}
+\newcommand{\edbrule}{}
+
+\renewcommand{\xref}[1]{\ref{#1}}
+\newcommand{\pot}{\pos{monograph}{lecture}}
+\newcommand{\Pot}{\pos{Monograph}{Lecture}}
+\newcommand{\PoT}{\pos{Monograph}{Lecture}}
+
+\newcommand{\dbchg}[1]{\cbstart[4pt]#1\cbend}
+
+\newcommand{\ORDETCHOICE}     {$\ordetchoice$}
+\newcommand{\ordetchoice}{\mbox{$\lfloor\!\rfloor$}}
+
+\newcommand{\btypo}{\cbstart[4pt]}
+\newcommand{\etypo}{\cbend}
+\newcommand{\typo}[1]{#1}%{\btypo{#1}\etypo}
+\renewcommand{\typo}[1]{\btypo{#1}\etypo}
+            
+\newcommand{\fptp}[2]{, pp.\,\pageref{#1}--\pageref{#2}}
+\newcommand{\dinesvoci}[1]{ We refer to \dbir{#1}.}
+\newcommand{\dinesvocii}[2]{We refer to \dbir{#1}, \dbir{#2}.}
+\newcommand{\dinesvociii}[3]{We refer to \dbir{#1}, \dbir{#2}, \dbir{#3}.}
+
+\newcounter{vienna}
+\newcommand{\tuvexpense}[1]{\addtocounter{vienna}{#1}#1}
+
+\newcounter{uprm}
+\newcommand{\expense}[1]{\addtocounter{uprm}{#1}#1}
+
+%\smartqed % inserted Dec.5, 2020, 8:19am
+
+\newcommand{\skriv}[1]{}%\marginpar{\fbox{#1}}}
+
+\newtheorem{primerexample}{\sort{Example}}
+\newtheorem{unshadedprimerexample}[primerexample]{\sort{Example}}
+
+\newcommand{\primereks}[2]{
+
+\begin{primerexample}{\brcolor{#1}}\label{#1}
+\vspace*{1mm}
+\eindexi{#1}
+\noindent\pos{\small}{\LLLL}\sf #2
+\vspace*{1mm}
+\end{primerexample}
+\normalsize\rm\HHHH
+\vspace*{2mm}
+}
+
+\newcommand{\firkantmedtekst}[2]{\vspace*{1mm}\boiteepaisseavecuntitre{#1}#2\endboiteepaisseavecuntitre}
+
+\newcommand{\newprimereks}[2]{\vspace*{2mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:} \brcolor{#1}}
+\eindexi{#1}\index{eind}{#1}\label{#1}
+\noindent\footsize\smallish{\sf #2}\normalsize\rm\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\newprimereksi}[2]{\vspace*{2mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:}
+  \brcolor{#1}}\index{eind}{#1}\label{#1}%\eindexi{#1}
+\noindent\footsize\smallish{\sf #2}\normalsize\rm\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\newprimereksii}[3]{\vspace*{2mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:}
+  \brcolor{#1 #2}}\index{eind}{#1!#2}\label{#1 #2}%\eindexii{#1}{#2}
+\noindent\footsize\smallish{\sf #3}\normalsize\rm\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\primereksiii}[4]{\vspace*{2mm}%
+\pos{\boiteepaisseavecuntitre}{}{\sort{Example \arabic{primerexample}:}
+  \brcolor{#1 #2 #3}}\index{eind}{#1!#2!#3}
+\noindent\footsize\label{#1 #2 #3}\smallish{\sf #4}\normalsize\rm\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\newprimereksiii}[4]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\sort{Example \arabic{primerexample}:}
+  \brcolor{#1 #2 #3}}\eindexiii{#1}{#2}{#3}\index{eind}{#1!#2!#3}
+\noindent\footsize\label{#1 #2 #3}\smallish{\sf #4}\normalsize\rm\stepcounter{primerexample}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\renewcommand{\newprimereksiii}[4]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{
+  \brcolor{#1 #2 #3}}
+\begin{primerexample}
+\index{eind}{#1!#2!#3}
+\noindent\footsize\label{#1 #2 #3}\smallish{\sf #4}\normalsize\rm
+
+\end{primerexample}
+
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\primereksii}[3]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\brcolor{#1 #2}}
+\begin{primerexample}
+\index{eind}{#1!#2}
+\noindent\footsize\label{#1 #2}\smallish{\sf #3}\normalsize\rm
+
+\end{primerexample}
+
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\primereksi}[2]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\brcolor{#1}}
+\begin{primerexample}
+\index{eind}{#1}
+\noindent\footsize\label{#1}\smallish{\sf #2}\normalsize\rm
+
+\end{primerexample}
+
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+\newtheorem{monoschema}{\sort{Translation Schema}}
+   
+\newcommand{\monoscheme}[2]%
+{\vspace*{1.5mm}%
+ \pos{\boiteepaisseavecuntitre}{}{\brcolor{#1}}%
+  \begin{monoschema}
+\noindent{\sf #2}\normalsize\rm%\footsize\smallish
+     \vspace*{0.2mm}
+\end{monoschema}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newtheorem{monosuggestion}{\sort{A Suggested Behaviour Definition}}
+   
+\newcommand{\monoprogram}[2]%
+{\vspace*{1.5mm}%
+ \pos{\boiteepaisseavecuntitre}{}{\brcolor{#1}}%
+  \begin{monosuggestion}
+\noindent\footsize\smallish{\sf #2}\normalsize\rm
+     \vspace*{0.2mm}
+\end{monosuggestion}
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\monolddemmar}%
+    {\end{monoschema}\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}} 
+
+\newcommand{\xmonoschema}[2]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\brcolor{#1}}
+\begin{monoschema}
+\noindent\footsize\label{#1}\smallish{\sf #2}\normalsize\rm
+
+\end{monoschema}
+
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+
+\renewcommand{\primereksiii}[4]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\brcolor{#1 #2 #3}}
+\begin{primerexample}
+\eindexiii{#1}{#2}{#3}\index{eind}{#1!#2!#3}
+\noindent\footsize\label{#1 #2 #3}\smallish{\sf #4}\normalsize\rm
+
+\end{primerexample}
+
+\pos{\endboiteepaisseavecuntitre}{}\normalsize\rm
+}
+
+\newcommand{\xnewprimereks}[2]{
+\begin{primerexample} \label{#1}
+\vspace*{1mm}
+\noindent\pos{\small}{\LLLL}\sf #2
+\vspace*{1mm}
+\end{primerexample}
+\normalsize\rm\HHHH
+\vspace*{2mm}
+}
+
+\newcommand{\primereksuden}[2]{
+\begin{primerexampleuden}{\brcolor{#1}}\label{#1}
+\vspace*{1mm}
+\noindent\pos{\small}{\LLLL}\sf #2
+\vspace*{1mm}
+\end{primerexampleuden}
+\normalsize\rm\HHHH
+\vspace*{2mm}
+}
+
+%\newcounter{sno}
+\newcommand{\snonewpage}{\pos{\psno}{\mnewfoil}}
+
+\newcommand{\paperorslides}[2]{#1}
+\newcommand{\papernotslides}[1]{#1}
+
+%\newshadetheorem{primerdefinition}{\brcolor{Definition:}}
+\newtheorem{primerdefinition}{\brcolor{Definition:}}
+
+\newcounter{xample}
+
+\newcommand{\tbw}{\begin{center}\fbox{{\sc to be written}}\end{center}}
+
+\newcommand{\nbbs}[1]{\mnewfoil\noindent\bgcolor{#1}}
+\newcommand{\bbs}[1]{\noindent\bgcolor{#1}}
+\renewcommand{\psref}[1]{\HHHH\ref{#1} \pos{Pg.}{Slide}\,\pageref{#1}\HHHH}
+
+\newcommand{\bcacm}{}
+\newcommand{\ecacm}{}
+\newcommand{\bxxxi}{}
+\newcommand{\exxxi}{}
+\newcommand{\newpgitem}[1]{\mnewfoil
+
+\bmcolor{#1}}
+    
+\newcommand{\showfigure}[3]{\pos{}{\mnewfoil 
+\hDBfigure{#1}{\sdd{9.6}{5.5}{10.25}cm}{#2}{#3}}}
+
+\newcommand{\magentabox}{\magentacolor{\dbsquare}\ }
+\newcommand{\magentacolor}[1]{{\dbcolor{magenta}{#1}}}
+\newcommand{\noc}{4}
+\newcommand{\ceod}{\,\,\brcolor{\pos{\rule{1.4mm}{1.4mm}\
+    }{\rule{6mm}{6mm}\ }}{}\normalsize\HHHH}
+
+\newcommand{\ceox}{\bgcolor{\,\pos{\rule{1.4mm}{1.4mm}\
+    }{\rule{6mm}{6mm}\ }}{}\normalsize\HHHH}
+
+\newcommand{\domex}[2]{\mnewfoil\pos{}{\centerline{\bgcolor{... example ...}}}
+  \begynd\pind\pos{\small}%
+       {\LLLL}\bgcolor{$\mathbb{E}$\pos{\scriptsize$\mathbb{X}$}{\LLll$\mathbb{X}$}.\stepcounter{fx}\arabic{fx}.\pos{\normalsize}{\HHHH}
+  {#1}:} \pos{\normalsize}{\HHHH}
+{{#2}} \afslut\pos{\normalsize}{\HHHH}}
+
+\newcommand{\domexu}[2]{\pos{}{\centerline{\bgcolor{... example ...}}}
+\begynd\pind\pos{\small}{\LLLL}\bgcolor{$\mathbb{E}$x.\stepcounter{fx}\arabic{fx}.\pos{\normalsize}{\HHHH} {#1}:}
+{{#2}}\afslut\pos{\normalsize}{\HHHH}}
+
+\newcounter{defc}
+
+\newcommand{\acmdef}{%
+  \stepcounter{defc}%
+  \pos{{{\pos{\small}{\LLLL}\brcolor{$\mathbb{D}$\pos{\scriptsize$\mathbb{EF}$}{\LLll$\mathbb{EF}$}.\arabic{defc}:}}}}%
+      {\item[{\LLLL\brcolor{$\mathbb{D}$\arabic{defc}:}}]}\pos{\normalsize}{\HHHH}}
+
+    \newcounter{fx}
+    
+\newcommand{\sdd}[3]{#1}
+
+\newcommand{\drbog}[2]{#2}
+\newcommand{\onlyinthesis}[1]{}
+\newcommand{\thesis}{monograph}
+\newcommand{\wariota}{\textsf{\rotatebox[origin=c]{180}{$\iota$}}}
+
+\newcommand{\xthesisb}{\cbstart[4pt]}
+\newcommand{\xthesise}{\cbend}
+
+\newcommand{\editing}[3]{\footnote{Chapter\,\ref{#1} is primarily
+    based on \cite{#2}. #3}} 
+\newcommand{\drtechnabs}[1]{#1}
+
+\newcommand{\begyndthesisframe}[1]{\vspace*{2mm}\boiteepaisseavecuntitre{\brcolor{#1}}}
+
+\newcommand{\slutthesisframe}{\endboiteepaisseavecuntitre}
+\newcommand{\faocb}{}%{\cbstart[3pt]}
+\newcommand{\faoce}{}%{\cbstart[3pt]}
+\newcommand{\ifile}[1]{}
+
+\newcommand{\notintosem}[1]{}
+
+\newcommand{\inLM}[1]{}
+\newcommand{\notinLM}[1]{#1}
+\newcommand{\notinLMbutinTOSEM}[1]{#1}
+\newcommand{\inLMbutnotinTOSEM}[1]{}
+\newcommand{\xyref}[1]{\ref{#1}}
+\newcommand{\fifi}[2]{}
+
+\newcommand{\emcall}{\end{multicols}}
+\newcommand{\bmcii}{}%{\begin{multicols}{2}}
+\newcommand{\emcii}{}%{\end{multicols}}
+\newcommand{\bmciii}{}%{\begin{multicols}{3}}
+\newcommand{\emciii}{}%{\end{multicols}}
+
+\newcommand{\bmciiq}{\normalsize}%{\end{multicols}}
+\newcommand{\emciiq}{}%{\end{multicols}}
+\newcommand{\normalq}{\normalsize}
+
+\newcommand{\nylinje}{}
+\newcommand{\anmaerkning}[1]{}
+
+\newcommand{\paper}{compendium} 
+\newcommand{\magicfidxi}[2]{}
+
+\newcommand{\dbspis}[1]{}
+\newcommand{\dbsis}[1]{}
+
+\newsavebox{\intpull}
+
+\newcommand{\draftbox}{}%{\brcolor{\fbox{\bbcolor{DRAFT}}}}
+
+\newcommand{\pgpg}[2]{Pages\,\pageref{#1}--\pageref{#2}}
+
+\newcommand{\chapcite}[3]{\lilacolor{Chapter\,\ref{#1}, \textsl{#2}, \cite{#3}}}
+
+\newcommand{\chapciteii}[2]{\lilacolor{Chapter\,\ref{#1},  \cite{#2}}}
+
+\newcommand{\udbsquare}{\bmcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}}
+
+\renewcommand{\pos}[2]{#1}
+
+\newcommand{\lllll}{/home/db/2018/tosem-oh/}
+\renewcommand{\lllll}{}
+
+
+%%%%%%%%%%%%%%%%
+
+\newcommand{\begyndfiloframe}[1]{\boiteepaisseavecuntitre{\lilacolor{#1}}
+
+  \vspace*{1mm}
+}
+
+\newcommand{\slutfiloframe}{\endboiteepaisseavecuntitre}
+\newcommand{\rbrcolorsl}[1]{{\rbfdbcolorsl{red}{#1}}}
+\newcommand{\rbfdbcolorsl}[2]{{\color{#1}\textsl{\textsf{#2}}\color{black}}}
+\newcommand{\efil}{}%(\cbend}
+\newcommand{\bfil}{}%{\cbstart[5pt]}
+\newcommand{\specialmarker}{\brcolor{$\Box$\hspace*{-2mm}\raisebox{0.357mm}{${\bullet}$}}\ \ }
+
+\newcounter{nnn}
+\newcommand{\discussion}[1]%
+      {\vspace*{-0.5mm}%\begin{quote}
+        \stepcounter{nnn}{%\noindent{%\small
+          \brcolor{Note\,\arabic{nnn}:}}
+      %\small
+        #1\eod \vspace*{1mm}\normalsize}
+      
+\newcounter{ddd}
+\newcommand{\diskusion}[2]{\vspace*{1mm}%\begin{quote}
+  \stepcounter{ddd}\noindent{%\small
+    \bbcolor{Discussion\,\arabic{ddd}. \brcolor{#1}:}}\
+  %\small
+  #2\eod %\end{quote}
+  \normalsize}%\vspace*{1mm}}
+
+\newcommand{\filoeks}{\bbcolor{\textbf{\textsf{Examples:}}}}
+
+\newcommand{\begyndnusframe}[1]{\vspace*{2mm}\boiteepaisseavecuntitre{\lilacolor{#1}}
+%\vspace*{-2.8mm}
+}
+
+\newcommand{\slutnusframe}{
+
+  \vspace*{-4mm}\endboiteepaisseavecuntitre}
+
+\newcommand{\tosemekssd}[2]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\sort{Example \arabic{nyeks}:} \brcolor{#1}}
+\vspace*{-2mm}\stepcounter{nyeks}\noindent\pos{\small}{\LLll}\sf{#2}\vspace*{-2mm}
+\endboiteepaisseavecuntitre\normalsize\rm
+\vspace*{2mm}
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\tosemfootnote}[1]{{\texttt{#1}}}
+\newcommand{\llblan}[1]{\pos{\scriptsize}{}\brcolor{\fbox{\sort{#1}}}}
+\newcommand{\stepref}[2]{{\scriptsize[\llblan{#1} \bcolor{Item\,\pgref{#2}}]}}
+\newcommand{\edfn}[1]{{\footnote{\sort{Editorial:} #1}}}
+\newcommand{\pgref}{\vref}
+\newcommand{\ysbo}{}
+\newcommand{\yseo}{}
+\newcommand{\ysbiii}{}
+\newcommand{\yseiii}{}
+\newcommand{\nil}{"\texttt{nil}"}
+\newcommand{\blan}[1]{\brcolor{\fbox{\sort{#1}}}}
+\renewcommand{\blan}[1]{\brcolor{{\sort{#1}}}}
+\newcommand{\ysend}[1]{\bbcolor{#1}}
+\newcommand{\ysbeh}[1]{\brcolor{#1}}
+\newcommand{\move}{$\dashrightarrow$}
+\newcommand{\ysact}[1]{\bmcolor{#1}}
+\newcommand{\ipgref}[1]{Item\,\ref{#1}, pg.\,\pageref{#1}}
+\newcommand{\rectime}{\sort{record\_}$\mathbb{TIME}()$}
+\newshadetheorem{schema}{\bbcolor{\textbf{Transcendental Schema}}}%\vspace*{4mm}}}
+\newcommand{\dschema}[3]{%
+\begin{schema}\label{ds:#2} \ \ 
+%\addcontentsline{toc}{subparagraph}{\bbcolor{\alph{schema}:} \bbcolor{Transcendental Schema: #2}}
+\boiteepaisseavecuntitre{\brcolor{#1}}%\vspace*{0.0mm}%\brcolor{\texttt{#1:}}
+{#3}
+\vspace*{0,5mm}\endboiteepaisseavecuntitre\vspace*{0.4mm}\rm
+\end{schema} 
+}
+
+\renewcommand{\notintosem}[1]{}
+\newcommand{\xbogb}{}%{\cbstart[4pt]}
+\newcommand{\xboge}{}%{\cbend}
+\renewcommand{\faocb}{}%{\cbstart[4pt]}
+\renewcommand{\faoce}{}%{\cbend}
+\newcommand{\bmereo}{}
+\newcommand{\emereo}{}
+
+\renewcommand{\ifile}[1]{}
+ 
+\newcommand{\begynd}{}
+\newcommand{\pind}{}
+\newcommand{\afslut}{}
+\newcommand{\aref}[1]{\ref{#1}}
+
+\newcommand{\dbtiny}{}
+
+\newcommand{\todaytime}{\today: 
+       \ifthenelse{\value{dbhours}<10}{0}{}\thedbhours:%
+       \ifthenelse{\value{dbmins}<10}{0}{}\thedbmins\,\ifthenelse{\value{dbhours}<12}{am}{}}
+     
+\newcommand{\xnbbb}[1]{\nbbbb{#1}}
+\newcommand{\xbbb}[1]{\bbbb{#1}}
+\newcommand{\ynbbb}[1]{\mnewfoil\vspace*{1mm}\
+\noindent\bgcolor{#1:\ }\addcontentsline{toc}{subsubsection}{\bmcolor{#1}}}
+
+
+
+
+\renewcommand{\kw}[1]{{\bf #1}}
+
+\renewcommand{\ifile}[1]{} 
+
+\newcommand{\thispaper}{this primer}
+\newcommand{\nyl}{}
+\newcommand{\paperlects}{primer}
+
+\renewcommand{\stil}{\sf}
+
+\renewcommand{\sfsl}[1]{\textsl{#1}}
+
+\renewcommand{\smaLL}{\pos{\normalsize}{\HHHH}}
+
+\newcommand{\thischapter}[1]{\footnote{This chapter is based on \cite{#1}.}}
+
+\renewcommand{\detchoice}{\mbox{$\lceil\!\rceil\!\!\!\!\!\!\!\lfloor\!\rfloor$}}
+
+\newcommand{\btosem}{}
+\newcommand{\etosem}{}
+\newcommand{\bbe}{}
+\newcommand{\ebe}{}
+
+\renewcommand{\eod}{\,\brcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{6mm}{6mm}}}{}\normalsize\HHHH}
+\renewcommand{\eod}{\,\rule{1.4mm}{1.4mm}}
+\newcommand{\eodx}{\,\rule{1.4mm}{1.4mm}}
+\renewcommand{\eodfn}{\
+  \brcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{6mm}{6mm}}}\normalsize\HHHH}
+\renewcommand{\eog}{\
+  \bgcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{6mm}{6mm}}}{}\normalsize\HHHH}
+\renewcommand{\eox}{\
+     \bbcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{6mm}{6mm}}}{}\normalsize\HHHH}
+\renewcommand{\eoxfn}{\
+     \bbcolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{6mm}{6mm}}}\normalsize\HHHH}
+\renewcommand{\eoap}{\
+  \lilacolor{\pos{\rule{1.4mm}{1.4mm}}{\rule{6mm}{6mm}}}{}\HHHH}
+
+\renewcommand{\daadap}[2]{{{Item\,\sf\ref{dap:#2},
+      pp.\,\pageref{dap:#2}: \bbcolor{\texttt{#1:}}}}} 
+\renewcommand{\daadapm}[2]{{{Item\,\sf\ref{dap:#2},
+      pp.\,\pageref{dap:#2}: \bbcolor{\texttt{#1}}}}} 
+\newcommand{\daaddp}[2]{{{Item\,\sf\ref{ddp:#2},
+      pp.\,\pageref{ddp:#2}: \bbcolor{\texttt{#1:}}}}}  
+\newcommand{\daadbs}[2]{{{Item\,\sf\ref{#2}, pp.\,\pageref{#2}:
+      \bbcolor{\texttt{#1:}}}}}  
+
+\renewcommand{\spb}[1]{#1}
+
+\newcommand{\wrtrt}[1]{}
+
+\renewcommand{\aesub}[3]{\textbf{subst}$([$#1$/$#2$]$#3$)$}
+\newcommand{\aesubb}[3]{\textbf{subst}$([$#1$/$#2$]$#3$)$}
+
+\renewcommand{\qqks}[2]{\footnotesize\sf\cite[pp\,#1]{kaisorlander2016}\
+  \ \normalsize\it\ ``#2''\rm}
+
+\newcommand{\tretoen}[3]{#3}
+\newcommand{\tretoennul}[4]{#3}
+\newcommand{\onetwo}[2]{#1}
+\newcommand{\fest}[1]{}
+\newcommand{\ikkefest}[1]{#1}
+\newcommand{\main}{9.6}
+
+\renewcommand{\pos}[2]{#1}
+
+\newcommand{\conjecture}[2]{\vspace*{2mm}%
+\boiteepaisseavecuntitre{\sort{Conjecture:} \brcolor{#1}}
+\noindent\footsize\smallish\normalsize{\sf #2}\normalsize\rm
+\endboiteepaisseavecuntitre\normalsize\rm
+}
+
+\renewcommand{\chardefn}{\bookdefn}
+\renewcommand{\rslplus}{\texttt{RSL$^{+}$}}
+\renewcommand{\rsltxt}{\texttt{RSL-Text}}
+\newcommand{\rslptxt}{\texttt{RSL$^{+}$}\textsf{Text}}
+\renewcommand{\rslplustext}{\rslptxt}
+\newcounter{kapno}
+
+\renewcommand{\nbbbbbb}[1]{\chapter[\lilacolor{#1}]{\lilacolor{#1}\, \psno}}
+\renewcommand{\nbbbbb}[1]{\section[\brcolor{#1}]{\brcolor{#1}\, \psno}}
+\renewcommand{\nbbbb}[1]{\subsection[\bbcolor{#1}]{\bbcolor{#1}\, \psno}}
+\renewcommand{\nbbb}[1]{\subsubsection[\bmcolor{#1}]{\bmcolor{#1}\, \psno}}
+\renewcommand{\nbb}[1]{\paragraph[\bgcolor{#1}]{\bgcolor{#1}\, \psno}}
+\renewcommand{\bbbbb}[1]{\section[\brcolor{#1}]{\brcolor{#1}}}
+\renewcommand{\bbbb}[1]{\subsection[\bbcolor{#1}]{\bbcolor{#1}}}
+\renewcommand{\bbb}[1]{\subsubsection[\bmcolor{#1}]{\bmcolor{#1}}}
+\renewcommand{\bb}[1]{\paragraph[\bgcolor{#1}]{\bgcolor{#1}}}
+\renewcommand{\nspb}[1]{\subparagraph[\lilacolor{#1}]{\lilacolor{#1}}}%\, \psno
+\renewcommand{\spb}[1]{\subparagraph[\lilacolor{#1}]{\lilacolor{#1}}}
+
+\renewcommand{\pos}[2]{#1}
+
+\renewcommand{\mpsno}{\stepcounter{sno}\scriptsize\colorbox{pink}{\arabic{sno}}\ }
+\renewcommand{\psno}{\stepcounter{sno}\scriptsize\colorbox{pink}{\arabic{sno}}\ }
+\newcommand{\iipsno}{\stepcounter{sno}\scriptsize\colorbox{pink}{{\arabic{sno}\stepcounter{sno},\arabic{sno}}}}
+\renewcommand{\snonewpage}{\pos{\psno}{\mnewfoil}}
+
+\newcommand{\onsno}{\renewcommand{\psno}{\stepcounter{sno}{{\pos{\scriptsize}{}\colorbox{pink}{\arabic{sno}}}}}
+                    \renewcommand{\mpsno}{\psno}
+                    \renewcommand{\snonewpage}{\pos{\psno}{\mnewfoil}}}
+\newcommand{\offsno}{\renewcommand{\mpsno}{}\renewcommand{\psno}{}\renewcommand{\snonewpage}{}}
+
+\renewcommand{\mpsno}{}
+\renewcommand{\psno}{}
+\renewcommand{\iipsno}{}
+\renewcommand{\snonewpage}{}
+\renewcommand{\onsno}{}
+%\renewcommand{\offsno}{}
+
+\newcommand{\mscex}{An MSc Student Exercise.}
+\newcommand{\phdex}{A PhD Student Problem.}
+\newcommand{\postdocex}{A Research Challenge.}
+\newcommand{\resex}{A Research Challenge.}
+
+\newtheorem{opgave}{\bmcolor{Exercise}}
+
+\newcommand{\monoexercise}[3]{
+  \begin{exercise} \bmcolor{#2}\ \bbcolor{#1}: \label{#1} #3 \end{exercise}}
+
+\renewcommand{\monoexercise}[3]{\label{opgave:#1}\label{opgave#1}
+  \begin{opgave} \bmcolor{#2}\ \bbcolor{#1}: \label{#1} #3 \end{opgave}}
+
+\renewcommand{\bookdefn}{\primerdefn}
+\renewcommand{\nbookdefn}{\primerdefn}
+\renewcommand{\dsaedefinition}{\primerdefn}
+
+\renewcommand{\alph}{\arabic}
+
+\newcommand{\eomc}{
+  \sort{\pos{\rule{1.4mm}{1.4mm}}{\rule{4mm}{4mm}}}\!\!\!.\;\;} 
+
+\newtheorem{modchoi}{\sort{Modelling Choice}}
+
+\newcommand{\modelchoice}[3]{\rm
+\begin{modchoi}
+\noindent
+\bbcolor{\textsl{#1:}}\label{#2}
+  {#3}
+\end{modchoi}}
+
+\newcounter{metodetrin}
+\newcommand{\mtcount}{\stepcounter{metodetrin}}%dodeno
+\newcommand{\methstepindex}[1]{\index{method}{\texttt{#1}}}
+
+\newtheorem{methstep}{\sort{Method Step}}
+
+\newcounter{special}
+\newcommand{\sfnc}{\setcounter{special}{\value{footnote}}}
+\newcommand{\fnm}{\footnotemark}
+\newcommand{\sfnm}{\footnotemark[\value{special}]}
+\newcommand{\fnt}[1]{\footnotetext{#1}}
+
+\newcommand{\methodstep}[3]{
+\dbbeginsvgraybox  \begin{methstep}
+\noindent \mtcount\methstepindex{\arabic{methstep} #1}
+\brcolor{#1:}\label{#2}
+%%\begin{leftbar}
+\noindent
+\rm {#3}
+%%\end{leftbar}
+\end{methstep}\dbendsvgraybox}
+
+\renewcommand{\begyndgraabox}{}
+\renewcommand{\starteks}[3]{}%{2ch14-dc.ex0}
+\renewcommand{\sluteks}[1]{}%{2ch14-dc.ex0}
+\newcommand{\rdrstu}{\pos{reader}{student}}
+\newcommand{\durcaltime}{$\mathbb{T}$}
+\newcommand{\durcalinterval}{$\mathbb{TI}$}
+\newcommand{\durcalculi}{\texttt{The Duration Calculus, DC}}
+\newcommand{\durcal}{\texttt{Duration Calculus}}
+\newcommand{\dbsetfile}[1]{}
+
+\renewcommand{\rsltxt}{\texttt{RSL}\textsf{-Text}}
+\renewcommand{\compile}[1]{{\bbcolor{\textsc{Translate}}{$_{#1}$}}}
+
+\renewcommand{\obsmo}[1]{\textsf{obs{\_}#1}}
+\renewcommand{\uidmo}[1]{\textsf{uid{\_}#1}}
+\renewcommand{\mereomo}[1]{\textsf{mereo{\_}#1}}
+\renewcommand{\attrmo}[1]{\textsf{attr}{\_}#1}
+
+\renewcommand{\obsmo}{\textsf{obs{\_}}}
+\renewcommand{\uidmo}{\textsf{uid{\_}}}
+\renewcommand{\mereomo}{\textsf{mereo{\_}}}
+\renewcommand{\attrmo}{\textsf{attr}{\_}}
+
+\renewcommand{\nbbbbbb}[1]{\chapter{#1}}
+\renewcommand{\nbbbbb}[1]{\section{#1}}
+\renewcommand{\bbbbb}[1]{\section{#1}}
+\renewcommand{\nbbbb}[1]{\subsection{#1}}
+\renewcommand{\bbbb}[1]{\subsection{#1}}
+\renewcommand{\nbbb}[1]{\subsubsection{#1}}
+\renewcommand{\bbb}[1]{\subsubsection{#1}}
+\renewcommand{\nbb}[1]{\paragraph{#1}}
+\renewcommand{\bb}[1]{\paragraph{#1}}
+\renewcommand{\nspb}[1]{\subparagraph{#1}}
+\renewcommand{\spb}[1]{\subparagraph{#1}}
+
+
+\renewcommand{\mpsno}{}
+\renewcommand{\psno}{}
+\renewcommand{\iipsno}{}
+\renewcommand{\snonewpage}{}
+\renewcommand{\onsno}{}
+\renewcommand{\mnewfoil}{\monox{}{}}
+
+\newcommand{\switchoffpno}{
+\renewcommand{\mpsno}{}
+\renewcommand{\psno}{}
+\renewcommand{\iipsno}{}
+\renewcommand{\snonewpage}{}
+\renewcommand{\onsno}{}
+\renewcommand{\mnewfoil}{}}
+
+\newcommand{\monox}[2]{}
+\newcommand{\switchsno}[1]{\monox{}{}}
+
+\newcommand{\bwocx}{}
+\newcommand{\psnonewfoil}{\pos{\psno}{\mnewfoil}}
+
+
+\renewcommand{\nrslframebox}[2]{#2}
+
+\newcommand{\monoexerciseu}[3]{
+  \begin{exercise} \bmcolor{#2}\ \bbcolor{#1}: #3 \end{exercise}}
+
+\newcommand{\brxcolor}[1]{\brcolor{#1}}
+
+\newcommand{\finalchanges}[1]{#1}%{\bfinalchg #1\efinalchg}
+\newcommand{\finalchangesi}[1]{#1}%{\bfinalchgi #1\efinalchgi}
+\newcommand{\bfinalchg}{}%{\cbstart[1pt]}%(}
+\newcommand{\efinalchg}{}%{\cbend}%{}
+\newcommand{\bfinalchgi}{}%{\cbstart[5pt]}%(}
+\newcommand{\efinalchgi}{}%{\cbend}%{}
+
+\renewcommand{\eox}{\qed}
+
+
+
+
+
+%\renewcommand{\sort}[1]{\sfsl{#1}}
+%\renewcommand{\sort}[1]{\textsf{{#1}}}
+%\renewcommand{\brcolor}[1]{\textsf{{#1}}}
+%\renewcommand{\bbcolor}[1]{#1}
+%\renewcommand{\bbcolor}[1]{\textsf{{#1}}}
+%\renewcommand{\bmcolor}[1]{#1}
+%\renewcommand{\bgcolor}[1]{#1}
+%\renewcommand{\lilacolor}[1]{#1}
+%\renewcommand{\brcolor}[1]{#1}
+%\renewcommand{\brcolor}[1]{#1}
+
+\newcounter{savesection}
+\newcounter{apdxsection}
+\newcommand\xappendix{\par
+  \setcounter{savesection}{\value{section}}%
+  \setcounter{section}{\value{apdxsection}}%
+  \setcounter{subsection}{0}%
+  \gdef\thesection{\@Alph\c@section}}
+\newcommand\unappendix{\par
+  \setcounter{apdxsection}{\value{section}}%
+  \setcounter{section}{\value{savesection}}%
+  \setcounter{subsection}{0}%
+  \gdef\thesection{}}%{\c@section}}
+
+%\renewcommand{\nbbbbb}[1]{\section{\sort{#1}}}
+%\renewcommand{\bbbbb}[1]{\section{\sort{#1}}}
+%\renewcommand{\nbbbb}[1]{\subsection{\sort{#1}}}
+%\renewcommand{\bbbb}[1]{\subsection{\sort{#1}}}
+%\renewcommand{\nbbb}[1]{\subsubsection{\sort{#1}}}
+%\renewcommand{\bbb}[1]{\subsubsection{\sort{#1}}}
+%\renewcommand{\nbb}[1]{\paragraph{\sort{#1}}}
+%\renewcommand{\bb}[1]{\paragraph{\sort{#1}}}
+%\renewcommand{\nspb}[1]{\subparagraph{\sort{#1}}}
+%\renewcommand{\spb}[1]{\subparagraph{\sort{#1}}}
+
+%\renewcommand{\brcolor}[1]{\sort{#1}}
+%\renewcommand{\bbcolor}[1]{\sort{#1}}
+%\renewcommand{\bmcolor}[1]{\sort{#1}}
+%\renewcommand{\bgcolor}[1]{\sort{#1}}
+%\renewcommand{\lilacolor}[1]{\sort{#1}}
+
+
+\renewcommand{\spb}[1]{\subparagraph{{#1}}}
+\renewcommand{\nbb}[1]{\paragraph{{#1}}}
+\renewcommand{\bb}[1]{\paragraph{{#1}}}
+\renewcommand{\nspb}[1]{\subparagraph{{#1}}}
+\renewcommand{\spb}[1]{\subparagraph{{#1}}}
+\renewcommand{\nbbbbbb}[1]{\chapter{\lilacolor{#1}}}
+\renewcommand{\nbbbbb}[1]{\section{\brcolor{#1}}}
+\renewcommand{\bbbbb}[1]{\section{\brcolor{#1}}}
+\renewcommand{\nbbbb}[1]{\subsection{\bbcolor{#1}}}
+\renewcommand{\bbbb}[1]{\subsection{\bbcolor{#1}}}
+\renewcommand{\nbbb}[1]{\subsubsection{\bmcolor{#1}}}
+\renewcommand{\bbb}[1]{\subsubsection{\bmcolor{#1}}}
+\renewcommand{\nbb}[1]{\paragraph{\bgcolor{#1}}}%\textbf
+\renewcommand{\bb}[1]{\paragraph{\bgcolor{#1}}}%\textbf
+\renewcommand{\spb}[1]{\subparagraph{\sort{#1}}}%\textbf
+\renewcommand{\nspb}[1]{\subparagraph{\sort{#1}}}%\textbf
+
+
+\renewcommand{\nbb}[1]{
+
+  \vspace*{2mm}\noindent $\star$\ \sort{#1}
+
+  \vspace*{1.5mm}}
+
+\renewcommand{\bb}[1]{
+
+  \vspace*{2mm}\noindent $\star$\ \sort{#1}
+
+  \vspace*{1.5mm}}
+
+
+\renewcommand{\nspb}[1]{
+
+  \vspace*{2mm}\noindent $\diamond$\ \sort{#1}
+
+  \vspace*{1.5mm}}
+
+\renewcommand{\spb}[1]{
+
+  \vspace*{2mm}\noindent $\diamond$\ \sort{#1}
+
+  \vspace*{1.5mm}}
+
+
+%\setlength{\textwidth}{111mm}
+
+%\setlength{\textwidth}{111mm}%{117mm}
+%\setlength{\textheight}{181mm}%{191mm}
+
+%\setlength{\textwidth}{117mm}%{111mm}%
+%\setlength{\textheight}{191mm}%{181mm}%
+
+\setlength{\textwidth}{111.15mm}%
+\setlength{\textheight}{181,45mm}%
+
+\setlength{\textwidth}{142mm}%
+\setlength{\textheight}{220mm}%
+
+
+%\renewcommand{\brcolor}[1]{\textsf{\textbf{#1}}}
+%\renewcommand{\bbcolor}[1]{\textsf{#1}}
+%\renewcommand{\bmcolor}[1]{\sfsl{#1}}
+%\renewcommand{\bgcolor}[1]{\textsl{#1}}
+%\renewcommand{\lilacolor}[1]{{#1}}
+%\renewcommand{\bycolor}[1]{{#1}}

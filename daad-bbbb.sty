@@ -1,0 +1,393 @@
+
+\newcommand{\nddddd}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\section*[\brcolor{#1}]{\brcolor{#1}\psno}}%
+       {\nxtsect%
+        \mnewfoil%
+        \sbox{\sektnamesavebox}{\brcolor{\fsz #1}}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \sbox{\subsektname}{}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \centerline{\huge\bf\shadowbox{\arabic{section}. 
+        \brcolor{#1}}}\acls{#1}\HHHH\rm}}  
+
+\newcommand{\nyddddd}[1]%
+  {\nultaeller\pos{}{\centerline{\HHHH\bf\shadowbox{#1}}\HHHH\rm}}  
+
+\newcommand{\nydddd}[1]%
+  {\nultaeller\pos{}{\centerline{\huge\bf\shadowbox{#1}}\HHHH\rm}} 
+
+\newcommand{\nyddd}[1]%
+  {\pos{}{\centerline{\LARGE\bf\shadowbox{#1}}\HHHH\rm}} 
+
+\newcommand{\ddddd}[1]%  from directory /home/db/2009
+  {\pos{\section{\brcolor{#1}}}%
+   \nultaeller    {\centerline{\huge\bf\shadowbox{\brcolor{#1}}}\HHHH\rm}} 
+
+\newcommand{\dddd}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\section{\brcolor{#1}}}%
+       {\centerline{\LARGE\bf\shadowbox{\bbcolor{#1}}}\HHHH\rm}} 
+
+\newcommand{\ddd}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\section{\brcolor{#1}}}%
+       {\centerline{\Large\bf\shadowbox{\bgcolor{#1}}}\HHHH\rm}} 
+
+\newcounter{taeller}
+\newcommand{\steptaeller}{\stepcounter{taeller}}
+\newcommand{\nultaeller}{\setcounter{taeller}{0}}
+
+\newsavebox{\sektnamesavebox}
+\newsavebox{\chapname}
+\newsavebox{\sektname}
+\newsavebox{\subsektname}
+\newsavebox{\subsubsektname}
+\newsavebox{\parname}
+\newsavebox{\subparname}
+
+ \newcounter{para}\newcounter{subpar}
+ \newcommand{\setchap}{\setcounter{chapter}{1}%
+              \setsect\setssub\setsssu\setpara\setspar}
+ \newcommand{\setsect}{\setcounter{section}{0}%
+                      \setssub\setsssu\setpara\setspar}
+ \newcommand{\setssub}{\setcounter{subsection}{0}%
+                              \setsssu\setpara\setspar}
+ \newcommand{\setsssu}{\setcounter{subsubsection}{0}%
+                                      \setpara\setspar}
+ \newcommand{\setpara}{\setcounter{paragraph}{0}\setspar}
+ \newcommand{\setspar}{\setcounter{subparagraph}{0}}
+
+ \newcommand{\nxtchap}{\addtocounter{chapter}{1}\setsect}
+ \newcommand{\nxtsect}{\addtocounter{section}{1}\setssub}
+ \newcommand{\nxtssub}{\addtocounter{subsection}{1}\setsssu}
+ \newcommand{\nxtsssu}{\addtocounter{subsubsection}{1}\setpara}
+ \newcommand{\nxtpara}{\addtocounter{paragraph}{1}\setspar}
+ \newcommand{\nxtspar}{\addtocounter{subparagraph}{1}}
+
+\newcommand{\mnewfoil}{\pos{\mpsno}{\newpage\vspace*{-20mm}
+\centerline{\small\normalsize\sf% 
+ %  \normalsize
+\ifthenelse{\value{section}=0}{}{%
+            \arabic{section}. 
+            \usebox{\sektname}
+ %  \normalsize
+\ifthenelse{\value{subsection}=0}{}{%
+            \arabic{section}.% 
+            \arabic{subsection}. 
+            \usebox{\subsektname}
+ %  \normalsize 
+\ifthenelse{\value{subsubsection}=0}{}{%
+            \arabic{section}.%
+            \arabic{subsection}.%  
+            \arabic{subsubsection}. 
+            \usebox{\subsubsektname}
+ %  \normalsize
+\ifthenelse{\value{paragraph}=0}{}{%
+            \arabic{section}.%
+            \arabic{subsection}.% 
+            \arabic{subsubsection}.%
+            \arabic{paragraph}. 
+            \usebox{\parname}
+ %  \normalsize
+\ifthenelse{\value{subparagraph}=0}{}{%
+   \arabic{section}.%
+   \arabic{subsection}.% 
+   \arabic{subsubsection}.%
+   \arabic{paragraph}.% 
+   \arabic{subparagraph}
+   \usebox{\subparname}}}}}}}%  
+   \vspace*{2mm}\hrule\vspace*{6mm}\HHHH}}
+
+\newcommand{\slidenewpage}{\pos{\fpsno}{\newfoil%%%\vspace*{-20mm}%%%***
+\centerline{{\sc \scriptsize\sf{% 
+  {\normalsize\arabic{chapter}. \usebox{\chapname}
+   \normalsize\arabic{section}. \usebox{\sektname}
+   \normalsize\arabic{subsection}. \usebox{\subsektname} 
+   \normalsize\arabic{subsubsection}. \usebox{\subsubsektname}
+   \normalsize\arabic{paragraph}. \usebox{\parname}
+   \normalsize\arabic{subparagraph}
+      \usebox{\subparname}}}}\vspace*{6mm}}\HHHH}}
+
+\renewcommand{\slidenewpage}{\pos{\fpsno}{\newfoil}}
+
+\newcommand{\newfoil}{\pos{\psno}{\newpage\vspace*{-5mm}
+\centerline{{\sf{% \scriptsize
+  {\normalsize\ifthenelse{\value{chapter}=0}{}{\arabic{chapter}. 
+       \usebox{\chapname}
+   \normalsize\arabic{section}. \fsz \lilacolor{\usebox{\sektname}}
+   \ifthenelse{\value{subsection}=0}{}{
+   \normalsize\arabic{section}.\arabic{subsection}. \fsz \usebox{\subsektname}
+   \ifthenelse{\value{subsubsection}=0}{}{
+   \normalsize\arabic{section}.\arabic{subsection}.%
+           \arabic{subsubsection}. \fsz \usebox{\subsubsektname}  
+   \ifthenelse{\value{paragraph}=0}{}{
+   \normalsize\arabic{section}.\arabic{subsection}.%
+           \arabic{subsubsection}.\arabic{paragraph}. \fsz \usebox{\parname} 
+   \ifthenelse{\value{subparagraph}=0}{}{
+   \normalsize\arabic{section}.\arabic{subsection}.%
+           \arabic{subsubsection}.\arabic{paragraph}.\arabic{subparagraph}. 
+           \fsz\usebox{\subparname}}}}}}}}}}%
+  \vspace*{-5mm}\bmcolor{\hrule}\vspace*{2mm}\HHHH}}   
+
+%%%%%%%%% Article 
+
+\newcommand{\shadowbox}{}
+
+%%%%%%%%% TABLE OF CONTENTS
+
+\newcommand{\csssssspsp}{{\scriptsize%
+{\ifthenelse{\value{chapter}=0}{}{Chap.\,\arabic{chapter}%
+{\ifthenelse{\value{section}=0}{}{, Sect.\,\arabic{section}}}%
+{\ifthenelse{\value{subsection}=0}{}{, Subsect.\,\arabic{subsection}}}%
+{\ifthenelse{\value{subsubsection}=0}{}{, Subsubsect.\,\arabic{subsubsection}}}%
+{\ifthenelse{\value{paragraph}=0}{}{, \S\,\arabic{paragraph}}}%
+{\ifthenelse{\value{subparagraph}=0}{}{, \S\S\,\arabic{subparagraph}}}}}}}
+
+\renewcommand{\csssssspsp}{{\scriptsize%
+{\ifthenelse{\value{chapter}=0}{}{\arabic{chapter}.%
+{\ifthenelse{\value{section}=0}{}{\arabic{section}}}%
+{\ifthenelse{\value{subsection}=0}{}{.\arabic{subsection}}}%
+{\ifthenelse{\value{subsubsection}=0}{}{.\arabic{subsubsection}}}%
+{\ifthenelse{\value{paragraph}=0}{}{.\arabic{paragraph}}}%
+{\ifthenelse{\value{subparagraph}=0}{}{.\arabic{subparagraph}}}}}}}
+
+\newcommand{\aclc}[1]{\addcontentsline{toc}{chapter}%
+               {\arabic{chapter} #1}}
+\newcommand{\acls}[1]{\addcontentsline{toc}{section}%
+               {\arabic{chapter}.\arabic{section} #1}}
+\newcommand{\aclss}[1]{\addcontentsline{toc}{subsection}%
+               {\arabic{chapter}.\arabic{section}.\arabic{subsection} #1}}
+\newcommand{\aclsss}[1]{\addcontentsline{toc}{subsubsection}%
+               {\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection} #1}}
+\newcommand{\aclp}[1]{\addcontentsline{toc}{paragraph}%
+               {\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+                \arabic{paragraph} #1}}
+\newcommand{\aclsp}[1]{\addcontentsline{toc}{subparagraph}%
+               {\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+                \arabic{paragraph}.\arabic{subparagraph} #1}}
+
+\renewcommand{\aclc}[1]{\addcontentsline{toc}{chapter}{\brcolor{#1}}}
+\renewcommand{\acls}[1]{\addcontentsline{toc}{section}{\lilacolor{#1}}}
+\renewcommand{\aclss}[1]{\addcontentsline{toc}{subsection}{\bbcolor{#1}}}
+\renewcommand{\aclsss}[1]{\addcontentsline{toc}{subsubsection}{\bmcolor{#1}}}
+\renewcommand{\aclp}[1]{\addcontentsline{toc}{paragraph}{\bgcolor{#1}}}
+\renewcommand{\aclsp}[1]{\addcontentsline{toc}{subparagraph}{#1}}
+
+\newcommand{\fsz}{\pos{\normalsize}{\small}}
+\newcommand{\tsz}{\pos{\normalsize}{\small}}
+
+%%%%%%%%% CHAPTER
+
+\newcommand{\nbbbbbb}[1]% 
+  {\pos{\nultaeller\chapter[\lilacolor{#1}]{\lilacolor{#1}\psno}}
+       {\nxtchap
+        \mnewfoil%
+     %  \sbox{\sektnamesavebox}{\brcolor{\fsz #1}}%
+        \sbox{\chapname}{\brcolor{\fsz #1}}%
+        \sbox{\sektname}{}%
+        \sbox{\subsektname}{}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \centerline{\huge\bf\shadowbox{\arabic{chapter}. 
+        \brcolor{#1}}}\aclc{#1}\HHHH\rm}}
+
+%%%%%%%%% SECTION 
+
+\newcommand{\nbbbbb}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\section{\brcolor{#1}\psno}}%
+       {\nxtsect%
+        \sbox{\sektnamesavebox}{\brcolor{\fsz #1}}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \sbox{\subsektname}{}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \mnewfoil%
+        \centerline{\HHHH\bf\shadowbox{\arabic{section}.
+        \brcolor{#1}}}\acls{#1}\HHHH\rm}}
+
+\newcommand{\bbbbb}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\section{\brcolor{#1}}}%
+       {\nxtsect%
+        \sbox{\sektnamesavebox}{\brcolor{\fsz #1}}%
+        \sbox{\sektname}{\brcolor{\fsz #1}}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \centerline{\HHHH\bf\shadowbox{\arabic{section}. 
+        \brcolor{#1}}}\acls{#1}\HHHH\rm}} 
+
+%%%%%%%% SUBSECTION
+
+\newcommand{\nbbbb}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\subsection{\bbcolor{#1}\psno}}%
+       {\nxtssub%
+        \sbox{\subsektname}{\bmcolor{\fsz #1}}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \mnewfoil%
+\centerline{\HHHH\bf\shadowbox{\arabic{section}.%
+        \arabic{subsection}. \bbcolor{#1}}}\aclss{#1}\HHHH\rm}}
+
+\newcommand{\bbbb}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\subsection{\bbcolor{#1}}}%
+       {\nxtssub%
+        \sbox{\subsektname}{\bmcolor{\fsz #1}}%
+        \sbox{\subsubsektname}{}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \centerline{\HHHH\bf{\arabic{section}.%
+                 \arabic{subsection}. \bbcolor{#1}}}\aclss{#1}\HHHH\rm}}
+
+%%%%%%%% SUBSUBSECTION
+
+\newcommand{\nbbb}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\subsubsection{\bmcolor{#1}\psno}}%
+       {\nxtsssu%\bclsss{#1}%
+        \sbox{\subsubsektname}{\bmcolor{\fsz #1}}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \mnewfoil%
+        \centerline{\HHHH\bf{\arabic{section}.\arabic{subsection}.%
+        \arabic{subsubsection}. \bmcolor{#1}}}\aclsss{#1}\HHHH\rm}}
+ 
+\newcommand{\bbb}[1]%  from directory /home/db/2009
+  {\nultaeller\pos{\subsubsection{\bmcolor{#1}}}%
+        {%\bclsss{#1}%
+        \nultaeller\nxtsssu\sbox{\subsubsektname}{\bmcolor{\fsz #1}}%
+        \sbox{\parname}{}%
+        \sbox{\subparname}{}%
+        \centerline{\huge\HHHH\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}. 
+        \bmcolor{#1}}}\aclsss{#1}\HHHH\rm}}
+ 
+%%%%%%%% PARAGRAPH
+
+\newcounter{npara}
+
+\newcommand{\pnbb}[1]% 
+  {%
+   \pos{\vspace*{0mm}\mpsno\paragraph{\bgcolor{\arabic{npara}:
+         #1:}}}%\vspace*{1.5mm}} 
+       {\sbox{\parname}{\lilacolor{\fsz \bgcolor{#1}}}%
+        \sbox{\subparname}{}%
+        \nxtpara\mnewfoil%
+        \centerline{\huge\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph}
+        \lilacolor{#1}}}\aclp{\bgcolor{#1}\HHHH\rm}}\addtocounter{npara}{1}}
+ 
+\newcommand{\pbb}[1]% 
+  {%
+   \pos{\vspace*{0mm}\mpsno\paragraph{\bgcolor{\arabic{npara}:
+         #1:}}}%\vspace*{1.5mm}} 
+       {\sbox{\parname}{\lilacolor{\fsz \bgcolor{#1}}}%
+        \sbox{\subparname}{}%
+        \nxtpara%
+        \centerline{\huge\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph}
+        \lilacolor{#1}}}\aclp{\bgcolor{#1}\HHHH\rm}}\addtocounter{npara}{1}}
+ 
+\newcommand{\spnbb}[1]% 
+  {%
+   \pos{\vspace*{-3mm}\mpsno\paragraph{\bgcolor{[1]--[12]: #1}}\vspace*{1.5mm}} 
+       {\sbox{\parname}{\lilacolor{\bgcolor{[1]--[12]: #1:}}}%
+        \sbox{\subparname}{}%
+        \nxtpara\mnewfoil%
+        \centerline{\huge\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph}
+        \lilacolor{#1}}}\aclp{\bgcolor{#1}\HHHH\rm}}\addtocounter{npara}{1}}
+ 
+\newcommand{\nbb}[1]% 
+{\pos{%\psno
+
+    \paragraph{\bgcolor{#1}}}%\vspace*{-2.5mm}
+       {\sbox{\parname}{\bgcolor{\fsz #1}}%
+        \sbox{\subparname}{}%
+        \nxtpara\pos{}{\mnewfoil}%
+        \centerline{\huge\HHHH\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph} \bgcolor{#1}}}\aclp{#1}\HHHH\rm}}
+ 
+\newcommand{\bb}[1]% 
+  {\pos{\paragraph{\bgcolor{#1}}}%
+       {\sbox{\parname}{\bgcolor{\fsz #1}}%
+        \sbox{\subparname}{}%
+        \nxtpara%\mnewfoil%
+        \centerline{\huge\HHHH\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph} \bgcolor{#1}}}\aclp{#1}\HHHH\rm}}
+
+%%%%%%%% SUBPARAGRAPH
+
+\newcommand{\nspb}[1]%  from directory /home/db/2009
+  {\pos{\subparagraph[\textsf{\bmcolor{#1}}]%
+                     {{\textsf{\bmcolor{#1}}\mpsno}}}% 
+       {%\bclsp{#1}%
+        \sbox{\subparname}{{\fsz \lilacolor{#1}}}%
+        \nxtspar\mnewfoil%
+           \centerline{\huge\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph}.\arabic{subparagraph}. 
+        \textsl{{#1}}}}\aclsp{#1}\HHHH\rm}}
+
+\newcommand{\spb}[1]%  from directory /home/db/2009
+  {\pos{\subparagraph{\textsf{\bmcolor{#1:}}}}%
+       {\nxtspar\sbox{\subparname}{{\fsz \bmcolor{#1}}}%
+        \centerline{\huge\bf\shadowbox{%
+        \arabic{section}.\arabic{subsection}.\arabic{subsubsection}.%
+        \arabic{paragraph}.\arabic{subparagraph}.
+        \textsl{\lilacolor{#1}}}}\aclsp{\lilacolor{#1}}\HHHH\rm}}
+
+\newcommand{\nsspb}[1]%  from directory /home/db/2009
+  {\pos{\subparagraph[--- \textsl{#1}]{{--- \textsl{#1:}\mpsno}}}%
+       {\sbox{\subparname}{{\fsz #1}}%
+        \nxtspar\mnewfoil%
+           \centerline{\huge\bf\shadowbox{%
+         $\star$
+        \textsl{#1}\ $\star$}}\aclsp{#1}\HHHH\rm}}
+
+\newcommand{\newnsspb}[1]%  from directory /home/db/2009
+  {\pos{\subsubparagraph{{--- \textsl{#1:}\mpsno}}}%
+       {\sbox{\subsubparname}{{\fsz #1}}%
+        \nxtspar\mnewfoil%
+           \centerline{\huge\bf\shadowbox{%
+         $\star$
+        \textsl{#1}\ $\star$}}\aclsp{#1}\HHHH\rm}}
+
+\newcommand{\sspb}[1]%  from directory /home/db/2009
+  {\pos{\subparagraph{--- \textsl{#1:}}}%
+       {\nxtspar\sbox{\subparname}{{\fsz #1}}%
+        \centerline{\huge\bf\shadowbox{
+         $\star$
+        \textsl{#1}\ $\star$}}\aclsp{#1}\HHHH\rm}}
+
+\newcommand{\newsspb}[1]%  from directory /home/db/2009
+  {\pos{\subsubparagraph{--- \textsl{#1:}}}%
+       {\nxtspar\sbox{\subsubparname}{{\fsz #1}}%
+        \centerline{\huge\bf\shadowbox{
+         $\star$
+        \textsl{#1}\ $\star$}}\aclsp{#1}\HHHH\rm}}
+
+%%%%%%%% PSEUDO-DISPLAYS
+
+\newcommand{\pseudobb}[1]{%
+\begin{itemize}%
+\item[] \hfill \textbf{#1}
+\end{itemize}%
+\noindent%
+}
+
+\newcommand{\pseudob}[1]{%
+\begin{itemize}%
+\item[] \hfill \textsl{#1}
+\end{itemize}%
+\noindent%
+}

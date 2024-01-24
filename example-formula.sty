@@ -1,0 +1,54 @@
+
+\newcounter{kkk}
+\newcommand{\kindex}[2]{\addtocounter{kkk}{1}\index{#1}{#2}}
+      
+%%\newcommand{\kindex}[2]{\index{#1}{#2}}
+       
+\newcommand{\sidx}[2]{\kindex{sorts}{#1 \protect\ref{#2}}}
+\newcommand{\tidx}[2]{\kindex{types}{#1 \protect\ref{#2}}}
+\newcommand{\fidx}[2]{\kindex{funct}{#1 \protect\ref{#2}}}
+\newcommand{\bidx}[2]{\kindex{behav}{#1 \protect\ref{#2}}}
+\newcommand{\vidx}[2]{\kindex{value}{#1 \protect\ref{#2}}}
+\newcommand{\cidx}[2]{\kindex{chann}{#1 \protect\ref{#2}}}
+
+\newcommand{\sidxi}[2]{\kindex{sorts}{Sorts!#1\hfill\protect\ref{#2}}}
+\newcommand{\ptsidxi}[2]{\kindex{sorts}{Part Sorts!#1\hfill\protect\ref{#2}}}
+\newcommand{\tidxi}[2]{\kindex{types}{Types!#1\hfill\protect\ref{#2}}}
+\newcommand{\fidxi}[2]{\kindex{funct}{Observe Parts: #1\hfill\protect\ref{#2}}}
+\newcommand{\xfidxi}[2]{\kindex{funct}{Extract Functions!#1\hfill\protect\ref{#2}}}
+\newcommand{\bidxi}[2]{\kindex{behav}{Behaviours!#1\hfill\protect\ref{#2}}}
+\newcommand{\vidxi}[2]{\kindex{value}{Part Constants!#1\hfill\protect\ref{#2}}}
+\newcommand{\pvidxi}[2]{\kindex{value}{Part Constants!#1\hfill\protect\ref{#2}};}
+\newcommand{\uividxi}[2]{\kindex{value}{Unique Id.\,Constants!#1\hfill\protect\ref{#2}}}
+\newcommand{\cidxi}[2]{\kindex{chann}{Channels!#1\hfill\protect\ref{#2}}}
+
+\newcommand{\otidxi}[2]{\kindex{types}{Other Types!#1 \hfill\protect\ref{#2}}}
+\newcommand{\utidxi}[2]{\kindex{types}{Unique Identifier Types!#1 \hfill\protect\ref{#2}}}
+\newcommand{\mtidxi}[2]{\kindex{types}{Mereology Types!#1 \hfill\protect\ref{#2}}}
+\newcommand{\atidxi}[2]{\kindex{types}{Attribute Types!#1 \hfill\protect\ref{#2}}}
+\newcommand{\ptidxi}[2]{\kindex{types}{Part Types!#1 \hfill\protect\ref{#2}}}
+
+\newcommand{\ctidxi}[2]{\kindex{chann}{Channel Message Types!#1 \hfill\protect\ref{#2}}}
+
+\newcommand{\psidxi}[2]{\kindex{sorts}{Observe Parts!#1\hfill\protect\ref{#2}}}
+\newcommand{\usidxi}[2]{\kindex{sorts}{Unique Identifier Sorts!#1\hfill\protect\ref{#2}}}
+\newcommand{\msidxi}[2]{\kindex{sorts}{Mereology Sorts!#1\hfill\protect\ref{#2}}}
+\newcommand{\asidxi}[2]{\kindex{sorts}{Attribute Sorts!#1\hfill\protect\ref{#2}}}
+
+\newcommand{\ofidxi}[2]{\kindex{funct}{Other
+    Functions!#1\hfill\protect\ref{#2}}}
+
+\newcommand{\syfidxi}[2]{\kindex{funct}{System Initialisation
+    Function!#1\hfill\protect\ref{#2}}}
+
+\newcommand{\psfidxi}[2]{\kindex{funct}{Observe
+    Part Sorts!#1\hfill\protect\ref{#2}}}
+\newcommand{\ptfidxi}[2]{\kindex{funct}{Observe
+    Part Types!#1\hfill\protect\ref{#2}}}
+\newcommand{\ufidxi}[2]{\kindex{funct}{Observe
+    Unique Identifiers!#1\hfill\protect\ref{#2}}}
+\newcommand{\mfidxi}[2]{\kindex{funct}{Observe
+    Mereology!#1\hfill\protect\ref{#2}}}
+\newcommand{\afidxi}[2]{\kindex{funct}{Observe
+    Attributes!#1\hfill\protect\ref{#2}}}
+ 

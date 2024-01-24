@@ -1,0 +1,393 @@
+
+\renewcommand{\Leshniewski}{Le{\'s}niewski}
+\renewcommand{\SLeshniewski}{Stanis{\l}aw Le{\'s}niewski}
+
+\renewcommand{\opdef}{=_{\mbox{\pos{\footnotesize}{\large}{\sc def}}}}
+\renewcommand{\opdef}{\stackrel{\bigtriangleup}{=}}
+
+\renewcommand{\rr}[1]{{\ \ \ \ \ \ \ \mbox{\pos{Page}{Slide}~\pageref{#1}}}}
+
+\newcounter{leno}
+\setcounter{leno}{-1}
+\newcommand{\sleno}{\stepcounter{leno}\arabic{leno}}
+\newcommand{\aleno}{\arabic{leno}}
+
+\newcommand{\blecture}[1]%
+      {\pos{}{\newpage
+       \ \vspace*{5cm}
+       \bgcolor{\hrule}
+       \ \vspace*{5mm}
+
+       \centerline{\bbcolor{\HHHH Lecture \sleno:}
+       \brcolor{\HHHH #1}}
+       \ \vspace*{5mm}
+       \bgcolor{\hrule}
+       \newpage
+       \addtocounter{page}{-1}
+      }}
+
+\newcommand{\electure}[1]%
+      {\pos{}{\newpage
+       \addtocounter{page}{-1}
+       \ \vspace*{5cm}
+       \bgcolor{\hrule}
+       \ \vspace*{5mm}
+
+       \centerline{\bbcolor{\HHHH End Lecture \aleno:} \brcolor{\HHHH #1}}
+       \ \vspace*{5mm}
+       \bgcolor{\hrule}
+       \newpage
+      }}
+
+
+\newcommand{\uniqueid}{$\mathbb{UNIQUE}$\_$\mathbb{ID}$}
+\newcommand{\mereology}{$\mathbb{MEREOLOGY}$}
+
+\newcommand{\parttypes}[1]%
+     {$\mathbb{PART}$\_$\mathbb{SORTS}({#1})$}
+
+\newcommand{\parttypesn}%
+     {$\mathbb{PART}$\_$\mathbb{SORTS}$}
+
+\newcommand{\cparttypes}[1]%
+     {$\mathbb{PART}$\_$\mathbb{TYPES}({#1})$}
+
+\newcommand{\cparttypesn}%
+     {$\mathbb{PART}$\_$\mathbb{TYPES}$}
+
+\newcommand{\cparttypen}%
+     {$\mathbb{PART}$\_$\mathbb{TYPE}$}
+
+\newcommand{\thisreport}{\pos{this compendium}{these lectures}}
+\newcommand{\thesenotes}{\pos{these research notes}{these lectures}}
+\newcommand{\Report}{\pos{book}{Lectures}}
+%\newcommand{\triptych}{{{\sc Triptych}}}
+ 
+\renewcommand{\obsi}{{\textsf{obs\_}\,$\iota$}}
+\renewcommand{\mobs}{{$\mu$er}}
+\renewcommand{\mobs}{{\textsf{mer\_}}}
+\renewcommand{\mer}{{\textsf{mer\_}}}
+\renewcommand{\ii}{{$\iota$}}
+
+\renewcommand{\ombb}[1]{{\LLll{\textsf{obs}\_}$\mathbb{#1}$}}
+\renewcommand{\imbb}[1]{{\LLll{\textsf{is}\_}$\mathbb{#1}$}}
+\newcommand{\mbbis}[1]{\LLll{$\mathbb{#1}${\underline{\textsc{-infset}}}}}
+\newcommand{\ombbc}[1]{\LLll{\textsf{obs}\_}$\mathbb{#1\_CLASSES}$}
+\renewcommand{\mbb}[1]{{\LLll$\mathbb{#1}$}}
+\renewcommand{\mcal}[1]{{\LLll$\mathcal{#1}$}}
+\renewcommand{\mcc}[1]{{\LLll$\mathcal{#1}$}}
+
+%\newcommand{\dbcite}[1]{\pos{\cite{#1}}{[#1]}}
+\newcommand{\onylinje}{\pos{}{\\}}
+%\newcommand{\treprikker}{\begin{center}$\bullet\bullet\bullet$\end{center}}
+\newcommand{\prosol}{prosol}
+
+\newcommand{\textdb}[1]{}
+\newcommand{\account}{\textdb{{account}}}
+\newcommand{\Account}{\textdb{{Account}}}
+\newcommand{\accounts}{\textdb{{accounts}}}
+\newcommand{\Accounts}{\textdb{{Accounts}}}
+\newcommand{\annuity}{\textdb{{annuity}}}
+\newcommand{\annull}{\textdb{{annull}}}
+\newcommand{\aspect}{\contxtfont{aspect}}
+
+\newcommand{\baladd}{\texttt{{add}}}
+\newcommand{\balance}{\textdb{{balance}}}
+\newcommand{\baland}{\texttt{{and}}}
+\newcommand{\balbalof}{\textdb{{balance of}}}
+\newcommand{\balcall}{\texttt{{call}}}
+\newcommand{\baldefer}{\texttt{{defer}}}
+\newcommand{\baldo}{\texttt{{do}}}
+\newcommand{\balelse}{\texttt{{else}}}
+\newcommand{\balend}{\texttt{{end}}}
+\newcommand{\baleq}{\texttt{{eq}}}
+\newcommand{\balfact}{\texttt{{factorial}}}
+\newcommand{\balfeeof}{\textdb{{fee of}}}
+\newcommand{\balg}{\texttt{{large}}}
+\newcommand{\balgeq}{\texttt{{large.eq}}}
+\newcommand{\balif}{\texttt{{if}}}
+\newcommand{\balimp}{\texttt{{imply}}}
+\newcommand{\balimply}{\texttt{{imply}}}
+\newcommand{\balin}{\texttt{{in}}}
+\newcommand{\ballet}{\texttt{{let}}}
+\newcommand{\ballimof}{\textdb{{limit of}}}
+\newcommand{\balmod}{\texttt{{mod}}}
+\newcommand{\balmoraof}{\textdb{{mora of}}}
+\newcommand{\balmpy}{\texttt{{mpy}}}
+\newcommand{\balminus}{\texttt{{minus}}}
+\newcommand{\balneq}{\texttt{{neq}}}
+\newcommand{\balnot}{\texttt{{not}}}
+\newcommand{\balor}{\texttt{{or}}}
+\newcommand{\balrptof}{\textdb{{report of}}}
+\newcommand{\bals}{\texttt{{small}}}
+\newcommand{\balseq}{\texttt{{small.eq}}}
+\newcommand{\balsub}{\texttt{{sub}}}
+\newcommand{\balthen}{\texttt{{then}}}
+\newcommand{\baltill}{\texttt{{until}}}
+\newcommand{\baltypof}{\textdb{{type  of}}}
+\newcommand{\balwhile}{\texttt{{while}}}
+\newcommand{\balwith}{\texttt{{with}}}
+\newcommand{\balyieldof}{\textdb{{yield of}}}
+\newcommand{\Bank}{\textdb{{Bank}}}
+\newcommand{\bank}{\textdb{{bank}}}
+\newcommand{\borrow}{\textdb{{borrow}}}
+
+\newcommand{\calculation}{\textdb{{calculation}}}
+\newcommand{\calcinterest}{\textdb{{calculate interest}}}
+\newcommand{\calcmora}{\textdb{{calculate mora}}}
+\newcommand{\calcyield}{\textdb{{calculate yield}}}
+\newcommand{\change}{\textdb{{change}}}
+\newcommand{\changing}{\textdb{{changing}}}
+\newcommand{\Clients}{\textdb{{Clients}}}
+\newcommand{\Client}{\textdb{{Client}}}
+\newcommand{\clients}{\textdb{{clients}}}
+\newcommand{\client}{\textdb{{client}}}
+\newcommand{\close}{\textdb{{closure}}}
+\newcommand{\closing}{\textdb{{closing}}}
+\newcommand{\closure}{\textdb{{closure}}}
+\newcommand{\condition}{\textdb{{condition}}}
+\newcommand{\conditions}{\textdb{{conditions}}}
+\newcommand{\contract}{\textdb{{contract}}}
+\newcommand{\credit}{\textdb{{credit}}}
+
+\newcommand{\datum}{\textdb{{date}}}
+\newcommand{\dbmtc}{\begin{center} More to come \end{center}}
+\newcommand{\defer}{\textdb{{defer}}}
+\newcommand{\demanddeposit}{\textdb{{demand/deposit}}}
+\newcommand{\deposit}{\textdb{{deposit}}}
+\newcommand{\dividends}{\textdb{{dividends}}}
+\newcommand{\domain}{\contxtfont{domain}}
+\newcommand{\Domain}{\contxtfont{Domain}}
+\newcommand{\domainengineering}{\contxtfont{domain engineering}}
+\newcommand{\domeng}{\contxtfont{domain engineering}}
+
+\newcommand{\establish}{\textdb{{establish}}}
+\newcommand{\Establish}{\textdb{{Establish}}}
+\newcommand{\environment}{\contxtfont{environment}}
+\newcommand{\Environment}{\contxtfont{Environment}}
+\newcommand{\exceed}{\textdb{{exceed}}}
+
+\newcommand{\facet}{\contxtfont{facet}}
+\newcommand{\fee}{\textdb{{fee}}}
+\newcommand{\Fee}{\textdb{{Fee}}}
+\newcommand{\fees}{\textdb{{fees}}}
+\newcommand{\feeupdate}{\textdb{{update}}}
+\newcommand{\freeze}{\textdb{{freeze}}}
+
+\newcommand{\hour}{\textdb{{hour}}}
+
+\newcommand{\initialisation}{\contxtfont{initialisation}}
+\newcommand{\install}{\textdb{{install}}}
+\newcommand{\interest}{\textdb{{interest}}}
+\newcommand{\invocation}{{\textdb{in\-vo\-ca\-tion}}}
+\newcommand{\invoke}{\textdb{{invoke}}}
+\newcommand{\invoked}{\textdb{{invoke}d}}
+\newcommand{\irregular}{\textdb{{irregular}}}
+\newcommand{\issue}{\textdb{{issue}}}
+
+\newcommand{\limit}{\textdb{{limit}}}
+\newcommand{\loan}{\textdb{{loan}}}
+
+\newcommand{\machine}{\contxtfont{machine}}
+\newcommand{\Machine}{\contxtfont{Machine}}
+\newcommand{\mora}{\textdb{{mora}}}
+\newcommand{\mortgage}{\textdb{{mortgage}}}
+
+\newcommand{\notice}{\textdb{{notice}}}
+
+\newcommand{\overdraw}{\textdb{{overdraw}}}
+\newcommand{\overdue}{\textdb{{overdue}}}
+
+\newcommand{\payment}{\textdb{{payment}}}
+
+\newcommand{\RandR}{{\textdb{Rules \& Re\-gu\-la\-tions}}}
+\newcommand{\Randr}{{\textdb{Rules \& re\-gu\-la\-tions}}}
+\newcommand{\randr}{{\textdb{ru\-les \& re\-gu\-la\-tions}}}
+\newcommand{\regular}{\textdb{{regular}}}
+\newcommand{\reminder}{\textdb{{reminder}}}
+\newcommand{\repay}{\textdb{{repayment}}}
+\newcommand{\repayment}{\textdb{{repayment}}}
+\newcommand{\reptfrq}{\textdb{{report frequency}}}
+\newcommand{\rptfrq}{\textdb{{report frequency}}}
+\newcommand{\repository}{{\textdb{re\-po\-si\-to\-ry}}}
+\newcommand{\routine}{\textdb{{routine}}}
+\newcommand{\rptfreq}{\textdb{{report frequency}}}
+\newcommand{\rulesandregulations}
+           {\contxtfont{rules \& regulations}}
+
+\newcommand{\save}{\textdb{{save}}}
+\newcommand{\savingsloan}{\textdb{{savings \& loan}}}
+\newcommand{\statement}{\textdb{{statement}}}
+\newcommand{\statements}{\textdb{{statements}}}
+\newcommand{\status}{\textdb{{status}}}
+\newcommand{\suspend}{\textdb{{suspend}}}
+
+\newcommand{\transact}{\textdb{{transact}}}
+\newcommand{\transacted}{\textdb{{transact}ed}}
+\newcommand{\transaction}{\textdb{{transaction}}}
+\newcommand{\transactions}{{\textdb{trans\-actions}}}
+\newcommand{\Transactions}{{\textdb{Trans\-actions}}}
+\newcommand{\transfer}{\textdb{{transfer}}}
+\newcommand{\type}{\textdb{{type}}}
+\newcommand{\types}{\textdb{{types}}}
+
+\newcommand{\xferto}{\textdb{{transfer to}}}
+\newcommand{\xferfrom}{\textdb{{transfer from}}}
+
+\newcommand{\yield}{\textdb{{yield}}}
+
+\newcommand{\update}{\textdb{{update}}}
+\newcommand{\userbehaviour}{\contxtfont{user behaviour}}
+
+\newcommand{\warning}{\textdb{{warning}}}
+\newcommand{\withdraw}{\textdb{{withdraw}}}
+\newcommand{\withdrawal}{\textdb{{withdraw}al}}
+
+\newcommand{\sgcs}[1]{#1}
+
+\newcommand{\kwl}[1]{\textbf{#1}}
+\renewcommand{\framme}[1]{}
+\renewcommand{\dbbook}[1]{\pos{#1}{}}
+\newcommand{\dbtalk}[1]{\pos{}{#1}}
+\newcommand{\tseeat}[1]{}
+
+\newcommand{\veri}[1]{#1}
+\newcommand{\markii}{$\surd$}
+
+\newcommand{\bnote}{}%
+\newcommand{\enote}{}%
+
+\renewenvironment{shadedquote}
+               {\begin{shaded}%      2                       0
+                \list{}{\rightmargin=1\leftmargin\leftmargin=0pt\relax}%
+                \item\relax}
+               {\endlist\end{shaded}}
+ 
+\renewcommand{\begyndgraa}{\begin{shaded}}
+\renewcommand{\slutgraa}{\end{shaded}}
+
+\newcounter{dex}%\stepcounter{dex}
+\newcommand{\pex}{\stepcounter{dex}\arabic{dex}}
+
+\renewcommand{\bframe}{\begin{framed}}
+\renewcommand{\sframe}{\end{framed}}
+
+\renewcommand{\eksframe}[2]{%
+\begin{example}[\bbcolor{#1}]\label{#1}
+\index{eind}{\ref{#1} #1|(}
+\index{eind}{#1, Ex.~\ref{#1}|(} %\ifthenelse{\value{example}<10}{0}{}
+
+{{{\rm #2}}}
+
+\index{eind}{#1, Ex.~\ref{#1}|)} %\ifthenelse{\value{example}<10}{0}{}
+\index{eind}{\ref{#1} #1|)}
+\hfill$\bullet$\end{example}
+}
+
+\newcommand{\eksframebullet}[2]{%
+\begin{example}[\bbcolor{#1}]\label{#1}
+\index{eind}{\ref{#1} #1|(}
+\index{eind}{#1, Ex.~\ref{#1}|(} %\ifthenelse{\value{example}<10}{0}{}
+
+{{{\rm #2}}\hfill$\bullet$}
+
+\index{eind}{#1, Ex.~\ref{#1}|)} %\ifthenelse{\value{example}<10}{0}{}
+\index{eind}{\ref{#1} #1|)}
+\end{example}
+}
+
+\newcommand{\eksframeub}[2]{%
+\begin{example}[\bbcolor{#1}]\label{#1}
+\index{eind}{\ref{#1} #1|(}
+\index{eind}{#1, Ex.~\ref{#1}|(} %\ifthenelse{\value{example}<10}{0}{}
+
+{{{\rm #2}}}
+
+\index{eind}{#1, Ex.~\ref{#1}|)} %\ifthenelse{\value{example}<10}{0}{}
+\index{eind}{\ref{#1} #1|)}
+\end{example}
+}
+
+\renewcommand{\eksframeb}[2]{%
+\begin{example}[\bbcolor{#1}]\label{#1}
+\index{eind}{\ref{#1} #1|(}
+\index{eind}{#1, Ex.~\ref{#1}|(} %\ifthenelse{\value{example}<10}{0}{}
+
+{{{\rm #2}}\pos{\hfill$\bullet$}{}}
+
+\index{eind}{#1, Ex.~\ref{#1}|)} %\ifthenelse{\value{example}<10}{0}{}
+\index{eind}{\ref{#1} #1|)}
+\pos{}{\hfill$\bullet$}
+\end{example}
+}
+
+\newcommand{\eksframel}[3]{%
+\begin{example}[\bbcolor{#2 #1}]\label{#2}
+\index{eind}{\ref{#2} #2|(}
+\index{eind}{#2, Ex.\ref{#2}|(}
+
+{{{\rm #3}}}
+
+\index{eind}{#2, Ex.\ref{#2}|)}
+\index{eind}{\ref{#2} #2|)}
+\hfill$\bullet$\end{example}
+}
+
+\newcommand{\subentity}{subpart}
+\newcommand{\subentities}{subparts}
+\newcommand{\Subentity}{Subpart}
+\newcommand{\Subentities}{Subparts}
+
+\newcommand{\simpleentity}{part}
+\newcommand{\simpleentities}{parts}
+\newcommand{\Simpleentity}{Part}
+\newcommand{\Simpleentities}{Parts}
+
+\newcommand{\bai}{\newline\hspace*{5mm}}
+
+\newcommand{\mtc}{%\vspace{-5mm}
+\begin{center} \fbox{{\sc more to come}}\end{center}\vspace{-5mm}}
+
+\newcommand{\inquiry}[2]{\pos{\vspace*{2mm}
+\noindent
+\textbf{Inquiry: #1}\vspace{-1mm}\label{Inquiry.#1}
+\begin{quote}\iindex{#1}
+
+%\textsl{\textsf{
+#2 \hfill $\bullet$
+%}}
+\end{quote}
+}{}}
+
+\renewcommand{\citelscs}{\cite{Harel03}}
+
+\newcommand{\citemaude}{\cite{maude-primer,maude-manual}}
+\newcommand{\citeitl}{\cite{Moszkowski86,dutertre95first,Moszkowski00}}
+
+\newcommand{\eksframei}[2]{\eksframe{#1}{#2}}
+
+\renewcommand{\xframe}[2]{\vspace*{3mm} 
+                               \boiteepaisseavecuntitre{Example \pex: #1}
+                               \vspace*{\pos{2}{4}mm} #2 \vspace*{1mm} 
+                               \endboiteepaisseavecuntitre}
+ 
+\usepackage{html}
+\renewcommand{\xsframe}[2]{\vspace*{3mm} 
+                               \boiteepaisseavecuntitre{Examples \pex: #1}
+                               \vspace*{2mm} #2 \vspace*{1mm} 
+                               \endboiteepaisseavecuntitre}
+
+\renewcommand{\sole}{s{\^{o}}le}
+
+\newcommand{\wDBfigure}[4]{
+ \begin{figure}[ht]
+  \begin{center}
+    \epsfig{file=#1.eps,width=#2}
+  \end{center}
+    \caption{#3\label{#4}}
+ \end{figure}}
+ 
+% LocalWords:  niewski Stanis aw def PP UX leno tr obs er infset prosol annull
+% LocalWords:  eq mora mpy neq initialisation vo ca tion gu tions ru po si ry
+% LocalWords:  trans behaviour al RSL shadedquote pt dex eind le dbhours dbmins
+% LocalWords:  sei seii
