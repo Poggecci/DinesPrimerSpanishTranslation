@@ -1,37 +1,28 @@
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Dear ShaoFa - this doc. is redady for Your translation ! %%%%%%%%%
-%%%% Dear ShaoFa - five typos corrected, 15 April 23 %%%%%%%%%%%%%%%%%%
-%%%% Dear ShaoFa - typos corrected,      26 December 23 %%%%%%%%%%%%%%%
-%%%% Dear ShaoFa - typos corrected,      04 January 24  %%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\nbbbbbb{Introduction}\label{chap:Introduction}\label{chap:Introduction.1}
+\nbbbbbb{Introducción}\label{chap:Introduction}\label{chap:Introduction.1}
 \minitoc
 
-
 \begin{flushright}\label{intro:The Triptych Dogma}
-\sort{The Triptych Dogma}\\[4mm]
-\addcontentsline{toc}{subsection}{\bbcolor{The Triptych Dogma}}
-\sf In order to \textsl{specify} \bmcolor{{$\mathcal{S}$}oftware},\\
-\sf we must understand its requirements.\\[1mm]
-\sf In order to \textsl{prescribe} \bmcolor{{$\mathcal{R}$}equirements},\\
-\sf we must understand the \bmcolor{$\mathcal{D}$omain}.\\[1mm]
-\sf So we must \bbcolor{study, analyse} and \bbcolor{describe} domains.\\
+\sort{El Dogma del Tríptico}\\[4mm]
+\addcontentsline{toc}{subsection}{\bbcolor{El Dogma del Tríptico}}
+\sf Para \textsl{especificar} \bmcolor{{$\mathcal{S}$}oftware},\\
+\sf debemos entender sus requisitos.\\[1mm]
+\sf Para \textsl{prescribir} \bmcolor{{$\mathcal{R}$}equisitos},\\
+\sf debemos entender el \bmcolor{$\mathcal{D}$ominio}.\\[1mm]
+\sf Así que debemos \bbcolor{estudiar, analizar} y \bbcolor{describir} dominios.\\
 \end{flushright}\rm%
-\index{pdefind}{The Triptych Dogma}\index{pdefind}{Triptych Dogma, The}\index{pdefind}{Dogma, The Triptych}
+\index{pdefind}{El Dogma del Tríptico}\index{pdefind}{Dogma del Tríptico, El}\index{pdefind}{Dogma, El Tríptico}
 \mnewfoil
 
 \boiteepaisseavecuntitre{$\mathcal{D},\mathcal{S}\models\mathcal{R}$}
 \noindent
 \begynd
-\pind In proofs of correctness ($\models$)
+\pind En pruebas de corrección ($\models$) % "Corrección" needs revision %
 \begynd
-\pind of $\mathcal{S}$oftware
-\pind with respect to $\mathcal{R}$equirements
-\pind assumptions are often stated \ysfchg{with respect to } the $\mathcal{D}$omain.
+\pind de $\mathcal{S}$oftware
+\pind con respecto a $\mathcal{R}$equisitos,
+\pind las suposiciones a menudo se establecen \ysfchg{con respecto al } $\mathcal{D}$ominio.
 \afslut
-\pind So this, therefore, alone justifies our focus on domains.
+\pind Esto por sí solo justifica nuestro enfoque en los dominios.
 \afslut
 \endboiteepaisseavecuntitre
 
@@ -39,51 +30,48 @@
 
 \noindent
 \begynd
-\pind \ysfchgii{This } \primer\ is 
+\pind \ysfchgii{Este} \manual\ es
 \begynd
-\pind both a significantly reduced version \nyl of the scientific monograph \cite{BjornerMonograph2020} 
-\pind and a revision and, notably, simplification, of some of its findings.  
+\pind tanto una versión significativamente reducida \nyl de la monografía científica \cite{BjornerMonograph2020} 
+\pind como una revisión y, notablemente, simplificación, de algunos de sus hallazgos.
 \afslut
 \afslut
 
-\nbbbbb{Why This Primer\,?}\label{sec:Why This Primer}
+\nbbbbb{¿Porqué este manual?}\label{sec:Why This Primer}
 
 \begynd
-\pind This \primer\ is intended as a \sort{textbook}.
-\pind The courses that \ysfchg{we } have in mind are, in the
-\sort{lectures}\ysfchg{, } \sort{to focus} on
-      Chapters\,\ref{chapter:Domains}--\ref{chapter:Perdurants},
-      i.e., Pages\,\pageref{chapter:Domains}--\pageref{chapter:Perdurants.n}.
-\pind The \sort{serious students}, whether just readers or actual,
-      physical course lecture attendants, are expected to study
-      Chapters\,\ref{chap:Introduction}--\ref{chapter:Philosophy} as
-      well as Chapter\,\ref{chapter:Closing} and the Bibliography
-      (Chapter\,\ref{primer.bib}) and the appendices on their own\,! 
+\pind Este \manual\ está pensado como un \sort{libro de texto}.
+\pind Los cursos que \ysfchg{tenemos} en mente, durante sus \sort{conferencias}, se deben \sort{enfocar} en los
+      Capítulos\,\ref{chapter:Domains}--\ref{chapter:Perdurants},
+      es decir, Páginas\,\pageref{chapter:Domains}--\pageref{chapter:Perdurants.n}.
+\pind Se espera que los \sort{estudiantes aplicados}, ya sean solo lectores o matriculados del curso, estudien
+      los Capítulos\,\ref{chap:Introduction}--\ref{chapter:Philosophy} así
+      como el Capítulo\,\ref{chapter:Closing}, la Bibliografía
+      (Capítulo\,\ref{primer.bib}) y los apéndices por su propia cuenta\,!
 \afslut
 
 \begynd
-\pind  \ysfchgii{This } \primer\ is about how to \sfsl{analyse \& describe} man-made
-      domains (including their possible interaction with nature).
-      \pind We emphasize the ampersand: `\&'.\footnote{By not writing `and', but `\&', we shall emphasize that in
-      ${A\&B}$ we are dealing with \sort{one} concept which consists of
-      both $A$ and $B$ ``tightly interacting''.}
-\pind We justify competency in \sfsl{Domain Science \& Engineering}
-      for two reasons.
+\pind  \ysfchgii{Este} \manual\ trata sobre cómo \sfsl{analizar \& describir} dominios artificiales
+      (incluyendo su posible interacción con la naturaleza).
+      \pind Enfatizamos el ampersand: `\&'.\footnote{Al no escribir `y', sino `\&', enfatizamos que en
+      ${A\&B}$ estamos tratando con un \sort{único} concepto que consiste en
+      tanto $A$ como $B$ ``interactuando estrechamente''.}
+\pind Justificamos la competencia en \sfsl{Ciencia e Ingeniería de Dominios}
+      por dos razones.
 \begynd
-\pind (i) For reasons of proper \sfsl{engineering} software
-      development --  as indicated by the above \sort{Triptych Dogma}. In 
-      possible proofs of software properties references are made, not
-      only to the software code itself and the requirements, but also
-      to the domain, the latter in the form of \sfsl{assumptions about
-      the domain}. In our mind no software development project ought
-      be undertaken unless it more-or-less starts with a proper domain
-      engineering phase. And
-\pind (ii) for reasons of \sfsl{scientifically} understanding our own
-      everyday practical world: financial institutions, the transport
-      industry (road, rail and air traffic, shipping), feeder systems
-      (such as oil, gas, water and other such pipeline systems), etc. 
+\pind (i) Por motivos de un \sfsl{desarrollo de software siguiendo buenas prácticas de ingeniería} -- como se indica por el \sort{Dogma del Tríptico} mencionado anteriormente. En  %This sentence seriously needs revision. Unsure about original intention of the english sentence
+      posibles pruebas de propiedades del software se hacen referencias, no
+      solo al código del software en sí y a los requisitos, sino también
+      al dominio en forma de \sfsl{suposiciones sobre este mismo}. En nuestra opinión, ningún proyecto de desarrollo de software debería
+      emprenderse a menos que comience más o menos con una etapa adecuada de ingeniería
+      de dominio. Y
+\pind (ii) por motivos de \sfsl{comprender científicamente} nuestro propio
+      mundo práctico cotidiano: instituciones financieras, la industria del transporte
+      (tráfico por carretera, ferroviario y aéreo, envío), sistemas de alimentación
+      (como sistemas de tuberías de petróleo, gas, agua y otros), etc.
 \afslut
 \afslut
+
 
 \nbbbbb{Structure}\label{sec:Structure}
 
