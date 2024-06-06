@@ -35,13 +35,13 @@ jobs:
         with:
           root_file: primer.tex
           compiler: bibtex
-          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-
+         
       - name: 2nd Compilation
         uses: dante-ev/latex-action@2021-A
         with:
           root_file: primer.tex
-         
+          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+
 
       - name: Upload PDF artifact
         id: pdf_artifact
