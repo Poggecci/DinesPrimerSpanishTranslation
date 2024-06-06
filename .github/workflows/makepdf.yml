@@ -35,6 +35,7 @@ jobs:
         with:
           root_file: primer.tex
           compiler: bibtex
+          args:
          
       - name: 2nd Compilation
         uses: dante-ev/latex-action@2021-A
