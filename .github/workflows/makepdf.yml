@@ -33,7 +33,7 @@ jobs:
       - name: Bibtex
         uses: dante-ev/latex-action@2021-A
         with:
-          root_file: primer.tex
+          root_file: primer.aux
           compiler: bibtex
           args:
          
