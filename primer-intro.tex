@@ -90,7 +90,7 @@ hablando, tres elementos:
 \item \sort{Los capítulos\,\ref{chapter:Domains}--\ref{chapter:Perdurants}} presentan \sfsl{la metodología de
     la ingeniería de dominios.} Esta metodología se divide en cuatro capítulos por razones prácticas
     y pragmáticas. El capítulo\,\ref{chapter:Domains} ofrece una ``introducción
-    en cápsula'' a los capítulos\,\,\ref{primer-extq.1}--\ref{chapter:Perdurants}. % Unclear on what the phrase "Capsule Introduction" means, thus, a very direct translation is used for now
+    independiente'' a los capítulos\,\,\ref{primer-extq.1}--\ref{chapter:Perdurants}.
   
 \item \sort{Los capítulos\,\ref{chapter:Closing}--\ref{primer.bib}}
   y \sort{los apéndices\,\ref{Chapter:Road Transport}--\ref{primer.indexes}} cubren
@@ -147,10 +147,9 @@ hablando, tres elementos:
 \end{itemize}
 \nbbbbb{Abstracción}\label{primer:Abstraction}
 
-%\input{abstraction}
 
 \QUOTATION{La concepción, muchacho, el trabajo cerebral fundamental, \\
-           es lo que marca la diferencia en toda arte\ysf{.}}%
+           es lo que marca la diferencia en toda arte\ysf{.}}
           {D.G.\ Rossetti\footnote{Dante Gabrielli Rosetti,
           1828--1882, poeta, ilustrador, pintor y traductor inglés.}: carta a T.\ H.\ Hall Caine\footnote{T.\ H.\ Hall Caine,
           1853--1931, novelista, dramaturgo, cuentista, poeta y crítico británico.}}  
@@ -200,20 +199,20 @@ disponible al intelecto humano.}
 
   \ \hfill     \pos{ [De los párrafos iniciales de}{} 
            \cite[C.A.R.\ Hoare\ysf{,} \textsl{Notas sobre la Estructuración de Datos}]{Hoa72a}\pos{\ysf{.}]}{}
-       %}{}
 
 \nbbbbb{Ingeniería de Software}\label{sec:Software Engineering}
-\bbbb{Ciencia e Ingeniería de Dominios}
+\bbbb{Ciencia & Ingeniería de Dominios}
        
 \begynd
 \pind Este \manual\ cubre solo el \sfsl{dominio de aplicación} del desarrollo de software.
 \pind Hay dos cosas que decir al respecto.
 \begynd
 \pind Una es que los aspectos esenciales de \sfsl{requisitos},
+\begynd
 \pind se cubren en \cite[Capítulo 8]{BjornerMonograph2020} y
 \pind los generales en \cite[Ingeniería de Software, III, Parte V]{TheSEBook3};
 \afslut
-\pind la otra es que la búsqueda de desarrollar modelos de dominio \nyl % Not confident in translating pursuit as "busqueda" here
+\pind la otra es que la búsqueda de desarrollar modelos de dominio \nyl
         no es solo por el bien del desarrollo de software, \nyl
         sino también para entender el mundo creado por la humanidad
         que nos rodea.
@@ -241,7 +240,7 @@ disponible al intelecto humano.}
       luego en \cite[marzo de 2019]{BjornerTOSEM2018}.
 \pind El libro \cite{BjornerMonograph2020}, junto a actualizaciones en este
       manual, constituye entonces el estado más reciente de nuestro trabajo en ciencia
-      e ingeniería de dominios.
+      & ingeniería de dominios.
 
 \pind \cite[Ingeniería de Software, III, parte V]{TheSEBook3} no
       cubre el material de \sfsl{Ingeniería de Dominios} discutido en el
@@ -263,9 +262,9 @@ disponible al intelecto humano.}
 \nbbb{Ingeniería de Requisitos}
 
 \begynd
-\pind Este manual no muestra cómo proceder al desarrollo de software según el \sort{Dogma Triptych}.
+\pind Este manual no muestra cómo proceder al desarrollo de software según el \sort{Dogma del Tríptico}.
 \begynd
-\pind Esto se insinúa fuertemente en \cite[Capítulo 9]{BjornerMonograph2020}.
+\pind Esto se insinúa fuertemente en \cite[capítulo 9]{BjornerMonograph2020}.
 \pind (Ese capítulo es una adaptación de \cite[mayo de 2008]{dines:ugo65:2008}.)
 \pind Nuestro enfoque en la \sfsl{ingeniería de requisitos} es bastante
       diferente del de \cite[A. van Laamswerde]{Lamsweerde} y
@@ -360,8 +359,8 @@ disponible al intelecto humano.}
 \end{itemize}
 \item[Segundo día de conferencia:] capítulo\,\,\ref{primer-extq.1}:
 \begin{itemize} 
-\item \sort{Entes Resistentes: Cualidades Externas} % Unsure how to translate endurants to spanish
-\end{itemize}
+\item \sort{Entes Resistentes: Cualidades Externas}
+\end{itemize}   
   
 \item[Tercer día de conferencia:] secciones\,\,\ref{chap4.Internal
     Qualities}--\ref{chap4.Mereology}:
@@ -392,7 +391,7 @@ disponible al intelecto humano.}
   secciones\,\ref{Domain Channel Description}--\ref{Behaviour Definition Bodies}: 
 \begin{itemize}
 \item \sort{Canales} y
-\item \sort{definiciones de comportamientos: firmas y cuerpos} % signature -> firma? It's the direct translation, but unsure if it carries the same meaning in a software context.
+\item \sort{definiciones de comportamientos: firmas y cuerpos}
 \end{itemize}
 \item[Séptimo día de conferencia:] capítulo\,\,\ref{chapter:Perdurants},
   secciones\,\ref{Domain Behaviour Initialisation}--\ref{A Domain Discovery Process, III}:
@@ -434,7 +433,7 @@ disponible al intelecto humano.}
 
 \begynd
 \pind La notación formal (que acompaña al texto informal) de este
-     \manual\ es la de \texttt{RSL} \cite{RSL} ("\sort{RAISE} \sort{S}pecification \sort{L}anguage"), el \sort{L}enguaje de
+     \manual\ es la de \texttt{RSL} \cite{RSL} ("\sort{R}AISE \sort{S}pecification \sort{L}anguage"), el \sort{L}enguaje de
       \sort{E}specificación de \sort{RAISE}, donde \texttt{RAISE} ("\sort{R}igorous \sort{A}pproach to \sort{I}ndustrial \sort{S}oftware \sort{E}ngineering")
       significa \ysfchg{E}nfoque \ysfchg{R}iguroso para la
       \ysfchg{I}ngeniería de \ysfchg{S}oftware \ysfchg{I}ndustrial \cite{RaiseMethod}. 
@@ -445,8 +444,8 @@ disponible al intelecto humano.}
       \texttt{RSL} que el método.
 \pind Lo estamos usando de dos maneras:
 \begin{itemize}
-\item informalmente, para presentar y explicar los métodos de análisis y
-      descripción de dominios en este \manual
+\item informalmente, para presentar y explicar los métodos de análisis &
+      descripción de dominios en este \manual\ y
 \item formalmente, para presentar descripciones de dominios. 
 \end{itemize}
 \pind El \texttt{RSL} informal es una versión extendida,
