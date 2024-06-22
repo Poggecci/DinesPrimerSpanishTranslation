@@ -4,504 +4,496 @@
 %%%% Released for translation 20 April 2023  %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\nbbbbbb{\HHHH Domains}\label{chapter:Domains}\label{chap2.tex.Preview}
+\nbbbbbb{\HHHH Dominios}\label{chapter:Domains}\label{chap2.tex.Preview}
 \pos{\minitoc}{}
 \pos{\label{lect1:label1}}{}
 
 \pos{
 \noindent
 \begynd
-\pind This \pos{chapter}{section} is informal.
-\pind Here we introduce You to  important  concepts of domains.
-\pind Subsequent  \pos{chapter}{section}s will be more technical.
+\pind Est\pos{e}{a} \pos{capítulo}{sección} es informal.
+\pind Aquí introducimos conceptos importantes de dominios.
+\pind L\pos{o}{a}s siguientes \pos{capítulos}{secciones} serán más técnic\pos{o}{a}s.
 \begynd
-\pind They will define most of the domain concepts of this
-      \pos{chapter}{section} properly.
+\pind Ell\pos{o}{a}s definirán la mayoría de los conceptos de dominio cubiertos en est\pos{e}{a}
+      \pos{capítulo}{sección} adecuadamente.
 \afslut
 \afslut
 }{}
 
-\bbbbb{Domain Definition}\HHHH
+\bbbbb{Definición de Dominio}\HHHH
 
-\pos{We repeat the definition of the concept of domains as first given on
-Page\,\pageref{1stdd}.}{}
+\pos{Repetimos la definición del concepto de dominios dada por primera vez en la
+página\,\pageref{1stdd}.}{}
 
-\bookdefn{Domain}{ \domaindefinition}
+\bookdefn{Dominio}{ \domaindefinition}
 
 \pos{%
 \noindent
-\ysf{We exclude from our treatment of domains issues of biological and
-psychological matters.}}{}
+\ysf{Excluimos de nuestro tratamiento de dominios cuestiones de asuntos biológicos y % "tratamiento" feels off here
+psicológicos.}}{}
 
 \mnewfoil
 
-\monoexample{Domains}{A few, more-or-less self-explanatory examples:
+\monoexample{Dominios}{Algunos ejemplos, más o menos autoexplicativos:
 \begin{itemize}
-\item \bbcolor{Rivers --} with their natural sources, deltas, tributaries,
-  waterfalls, etc., and their man-made dams, harbours, locks, etc. --
-  and their conveyage of materials (ships etc.) \cite{BjornerRiversCanals2021};
-\item \bbcolor{Road nets --} with street segments and intersections, traffic
-  lights and automobiles -- and the flow of these;
-\item \bbcolor{Pipelines --} with their wells, pipes, valves, pumps, forks,
-  joins and wells and the flow of fluids \cite{2013pipe}; and
-\item \bbcolor{Container terminals --} with their container vessels, containers,
-  cranes, trucks, etc. -- and the movement of all of these \cite{BjornerContainer2018}\dbsquare
+\item \bbcolor{Ríos --} con sus fuentes naturales, deltas, afluentes,
+  cascadas, etc., y sus presas, puertos, esclusas, etc. construidos por el hombre --
+  y su transporte de materiales (barcos, etc.) \cite{BjornerRiversCanals2021};
+\item \bbcolor{Redes viales --} con segmentos de calles e intersecciones, semáforos
+  y automóviles -- y el flujo de estos;
+\item \bbcolor{Tuberías --} con sus pozos, tuberías, válvulas, bombas, bifurcaciones,
+  uniones y pozos y el flujo de fluidos \cite{2013pipe}; y
+\item \bbcolor{Terminales de contenedores --} con sus barcos portacontenedores,
+  contenedores, grúas, camiones, etc. -- y el movimiento de todos estos \cite{BjornerContainer2018}\dbsquare
 \end{itemize}}
 
 \noindent
 \mnewfoil%\LLLL
 \begynd
-\pind The definition relies on the understanding of the terms \nyl
+\pind La definición se basa en la comprensión de los términos \nyl
 \pos{}{\vspace*{-10mm}\begin{multicols}{2}}
-      \sfsl{`rationally describable'}, \nyl \sfsl{`discrete dynamics'}, \nyl \sfsl{`human
-      assisted'}, \nyl \sfsl{`solid'} and \nyl \sfsl{`fluid'}.
+      \sfsl{`racionalmente describible'}, \nyl \sfsl{`dinámica discreta'}, \nyl \sfsl{`asistido por humanos'}, \nyl \sfsl{`sólido'} y \nyl \sfsl{`fluido'}.
 \pos{}{\end{multicols}}
- The last two will be explained later.
-\pind By \bbcolor{\sfsl{rationally describable}} we mean that what is described \nyl
-      can be understood, including reasoned about, in a rational, \nyl  that is,
-      logical manner -- \ysf{in other words  \bbcolor{\sfsl{logically tractable}}.}
-\pind By \bbcolor{\sfsl{discrete dynamics}} we imply that we shall basically
-      rule out such domain phenomena which have
-      properties \ysfchg{that } are continuous with
-      respect to their time-wise\pos{, i.e., dynamic,}{} behaviour.
-\pind By \bbcolor{\sfsl{human-assisted}} we mean that the domains -- that we are
-      interested in modelling -- have, as an important property, that
-      they possess man-made entities.
+ Los dos últimos se explicarán más adelante.
+\pind Por \bbcolor{\sfsl{racionalmente describible}} queremos decir que lo que se describe \nyl
+      puede ser entendido, incluido razonado, de manera racional, \nyl es decir,
+      de manera lógica -- \ysf{en otras palabras  \bbcolor{\sfsl{lógicamente tratable}}.}
+\pind Por \bbcolor{\sfsl{dinámica discreta}} implicamos que básicamente descartamos
+      aquellos fenómenos de dominio que tienen
+      propiedades \ysfchg{que} son continuas con
+      respecto a su comportamiento \pos{dinámico,}{}
+      en el tiempo.
+\pind Por \bbcolor{\sfsl{asistido por humanos}} queremos decir que los dominios -- que estamos
+      interesados en modelar -- tienen, como propiedad importante, que
+      poseen entidades creadas por la humanidad.
 \afslut
 
 \pos{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begynd
-\pind This primer presents a \sfsl{method}\pconindex{method}, its
-      \sfsl{principles}\pconindex{principle}, 
-      \sfsl{procedures}\pconindex{procedure}, 
-      \sfsl{techniques}\pconindex{technique} 
-      and 
-      \sfsl{tools}\pconindex{tool}, 
-      for \sfsl{analysing} \&\footnote{We use here the ampersand, `\&',
-      as in $A\&B$, to emphasize that we are treating $A$ and $B$ as
-      one concept.} \sfsl{describing} domains.
+\pind Este manual presenta un \sfsl{método}\pconindex{method}, sus
+      \sfsl{principios}\pconindex{principle}, 
+      \sfsl{procedimientos}\pconindex{procedure}, 
+      \sfsl{técnicas}\pconindex{technique} 
+      y 
+      \sfsl{herramientas}\pconindex{tool}, 
+      para \sfsl{analizar} \&\footnote{Usamos aquí el ampersand, `\&',
+      como en $A\&B$, para enfatizar que estamos tratando $A$ y $B$ como
+      un solo concepto.} \sfsl{describir} dominios.
 \afslut
 }{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\nbbbbb{Phenomena and Entities}\HHHH
+\nbbbbb{Fenómenos y Entidades}\HHHH
 
 \begynd
-\pind \primerdefn{Phenomena}{ {\pdefindex{phenomenon} By a
-\sfsl{phenomenon} we shall understand a fact that is
-     observed to exist or happen\dbsquare}}
+\pind \primerdefn{Fenómenos}{ {\pdefindex{phenomenon} Por un
+\sfsl{fenómeno} entenderemos un hecho que se observa que existe o sucede\dbsquare}}
 
 \noindent
 \begynd
-\pind Some phenomena are rationally describable -- to a large or full
-degree -- others are not.
+\pind Algunos fenómenos son racionalmente describibles -- en gran medida o en su totalidad -- otros no.
 \afslut
 
 \noindent
-\pind \primerdefn{Entities}{ By an entity \pdefindex{entity} \ysfchg{}
-      we shall understand a more-or-less rationally describable phenomenon\dbsquare}
-
-\noindent
-\pind \newestxample{Phenomena and Entities}{Some, but not necessarily
-  all aspects of a river can
-  be rationally described, hence can be still be considered
-  entities. Similarly, many aspects of a
-  road net can be rationally described, hence will be considered entities\dbsquare}
+\begynd
+\pind Algunos fenómenos son racionalmente describibles -- en gran medida o en su totalidad -- otros no.
 \afslut
 
-\nbbbbb{Endurants and Perdurants}
+\noindent
+\pind \primerdefn{Entidades}{ Por una entidad \pdefindex{entity} \ysfchg{}
+      entenderemos un fenómeno más o menos racionalmente describible\dbsquare}
 
-\bbbb{Endurants}
+\noindent
+\pind \newestxample{Fenómenos y Entidades}{Algunos, pero no necesariamente
+  todos los aspectos de un río pueden ser racionalmente descritos, por lo tanto, pueden ser considerados
+  entidades. De manera similar, muchos aspectos de una
+  red vial pueden ser racionalmente descritos, por lo tanto, serán considerados entidades\dbsquare}
+\afslut
+
+\nbbbbb{Endurantes y Perdurantes}
+
+\bbbb{Endurantes}
 
 \begynd
 %%%%%%%
-\pind \bookdefn{Endurants}{ Endurants are \pdefindex{endurant}\ 
-      those quantities of domains that we can
-      observe (see and touch), in \sfsl{space}, as ``complete'' entities at no matter
-      which point in \sfsl{time} -- ``material'' entities that
-      persist\ysfchg{}, endure\ysfchg{}\dbsquare}%%%%
+\pind \bookdefn{Endurantes}{ Los endurantes son \pdefindex{endurant}\ 
+      aquellas cantidades en dominios que podemos
+      observar (ver y tocar), en \sfsl{espacio}, como entidades ``completas'' en cualquier punto en \sfsl{tiempo} -- entidades ``materiales'' que
+      persisten\ysfchg{}, perduran\ysfchg{}\dbsquare}%%%%
       
 \noindent
-\monoexample{Endurants}{ Examples of endurants are: a street segment [link], a street intersection [hub], an
-      automobile\dbsquare}
+\monoexample{Endurantes}{ Ejemplos de endurantes son: un segmento de calle [enlace], una intersección de calles [conexión], un
+      automóvil\dbsquare}
       
 \noindent
-\pind Domain endurants, when eventually modelled in software, typically
-      become data. Hence the careful analysis of domain endurants is a
-      prerequisite for subsequent careful conception and analyses of
-      data structures for software, including data bases.
+\pind Los endurantes de dominio, cuando eventualmente se modelan en software, típicamente
+      se convierten en datos. Por lo tanto, el análisis cuidadoso de los endurantes de dominio es un
+      requisito previo para la concepción y análisis cuidadosos de
+      estructuras de datos para software, incluidas las bases de datos.
 \afslut
 %%%%%%%
     
-\nbbbb{Perdurants}
+\nbbbb{Perdurantes}
 
 \begynd
-\pind \newestpdefn{Perdurants}{ Perdurants are \pdefindex{perdurant}\   
-      those quantities of domains for which only a
-      fragment exists, in \sfsl{space}, if we look at or touch them at
-      any given snapshot in
-      \sfsl{time}\dbsquare}%%%%
+\pind \newestpdefn{Perdurantes}{ Los perdurantes son \pdefindex{perdurant}\   
+      aquellas cantidades de dominios de las cuales solo existe un
+      fragmento, en \sfsl{espacio}, si los miramos o tocamos en
+      cualquier instantánea en
+      \sfsl{tiempo}\dbsquare}%%%%
       
 \noindent
-\newestxample{Perdurant}{ A moving automobile is an example of a perdurant\dbsquare}
+\newestxample{Perdurante}{ Un automóvil en movimiento es un ejemplo de un perdurante\dbsquare}
         
 \noindent
-\pind Domain perdurants, when eventually modelled in software, typically
-      become processes. Hence the careful analysis of domain perdurants is a
-      prerequisite for subsequent careful conception and analyses of
-      functions (procedures).
+\pind Los perdurantes de dominio, cuando eventualmente se modelan en software, típicamente
+      se convierten en procesos. Por lo tanto, el análisis cuidadoso de los perdurantes de dominio es un
+      requisito previo para la concepción y análisis cuidadosos de
+      funciones (procedimientos).
 \afslut
 %%%%%%%
     
-\nbbbbb{External and Internal Endurant Qualities}
+\nbbbbb{Cualidades Externas e Internas de Endurantes }
 
-\bbbb{External Qualities}
+\bbbb{Cualidades Externas}
 
-\newestpdefn{External Qualities}{ \pdefindex{external quality}\
-     External qualities of endurants of a manifest domain 
+\newestpdefn{Cualidades Externas}{ \pdefindex{external quality}\
+     Las cualidades externas de los endurantes de un dominio manifiesto 
 \begynd
-\pind are, in a simplifying sense, those we can
+\pind son, en un sentido simplificador, aquellas que podemos
 \begynd
-\pind \ysf{see,}
-\pind touch and
-\pind have spatial extent.
+\pind \ysf{ver,}
+\pind tocar y
+\pind tener extensión espacial.
 \afslut
-\pind They, so to speak, take form.
+\pind Ellas, por así decirlo, toman forma.
 \afslut}
 
 \mnewfoil
 
 \noindent
-\newestxample{External Qualities}{ An example of external qualities of
-  a domain\ysfchg{ } is:
+\newestxample{Cualidades Externas}{ Un ejemplo de cualidades externas de
+  un dominio\ysfchg{} es:
 \begynd
-\pind the Cartesian\footnote{\LLLL Cartesian
-      after the French philosopher, mathematician, scientist Ren{\'e}
+\pind el Cartesiano\footnote{\LLLL Cartesiano
+      según el filósofo, matemático y científico francés Ren{\'e}
       Descartes (1596--1650)} 
 \begynd
-\pind of sets of solid atomic street intersections, and
-\pind of sets  of solid atomic street segments, and 
-\pind of sets  of solid automobiles
-\afslut of a road transport system
-\pind  where the
+\pind de conjuntos de intersecciones de calles atómicas sólidas,
+\pind de conjuntos de segmentos de calles atómicos sólidos y 
+\pind de conjuntos de automóviles sólidos
+\afslut de un sistema de transporte por carretera
+\pind  donde el
 \pos{}{\begin{multicols}{4}}   
 \begynd
-\pind Cartesian, \pind sets, 
-      \pind atomic, and \pind solid
+\pind Cartesiano, \pind conjuntos, 
+      \pind atómico, y \pind sólido
 \afslut
-\pos{}{\end{multicols}} reflect external qualities\dbsquare
+\pos{}{\end{multicols}} reflejan cualidades externas\dbsquare
 \afslut}
 %%%%%%%
-    
-\nbbb{Discrete or Solid Endurants}
+\nbbb{Endurantes discretos o sólidos}
 
-\newestpdefn{Discrete or Solid
-      Endurants}{ \pdefindex{discrete!endurant}\pdefindex{endurant!discrete}%%%% 
-      \pdefindex{solid!endurant}\pdefindex{endurant!solid} By a
-      \sfsl{solid} \nyl [or \sfsl{discrete}] endurant we shall understand an endurant
+\newestpdefn{Endurantes discretos o sólidos}{ \pdefindex{discrete!endurant}\pdefindex{endurant!discrete}%%%% 
+      \pdefindex{solid!endurant}\pdefindex{endurant!solid} Por un endurante
+      \sfsl{sólido} \nyl [o \sfsl{discreto}]  entenderemos un endurante
 \begynd
-\pind which is  separate,  individual or distinct in form or concept,
-\pind or, rephrasing: have `body'  [or magnitude]
-      of three-dimensions: length, breadth and depth
-      \cite[Vol.\,II, pg.\,2046]{OED}\dbsquare
+\pind que es separado, individual o distinto en forma o concepto,
+\pind o, reformulando: tiene `cuerpo' [o magnitud]
+      de tres dimensiones: longitud, anchura y profundidad
+      \cite[vol.\,II, pág.\,2046]{OED}\dbsquare
 \afslut}
 
 \noindent
 %\mnewfoil
-\newestxample{Solid Endurants}{ Examples of sol\ysfchg{i}d endurants are
+\newestxample{Endurantes sólidos}{ Ejemplos de endurantes sólidos son
 \begynd
-\pind the
+\pind los
 \pos{}{\begin{multicols}{4}}
 \begynd
-\pind wells, 
-\pind pipes,
-\pind valves,
-\pind pumps, 
-\pind forks, 
-\pind joins and 
-\pind sinks
+\pind pozos, 
+\pind tuberías,
+\pind válvulas,
+\pind bombas, 
+\pind bifurcaciones, 
+\pind uniones y 
+\pind desagües
 \afslut
-\pos{}{\end{multicols}} of pipelines\ysfchg{}. 
-\pind{} [These
-  units may, however, and usually will, contain fluids, e.g., oil, gas
-  or water]\dbsquare
+\pos{}{\end{multicols}} de tuberías\ysfchg{}. 
+\pind{} [Estas unidades pueden, sin embargo, y generalmente lo harán, contener fluidos, por ejemplo, petróleo, gas
+  o agua]\dbsquare
 \afslut}
 \mnewfoil
 
 \noindent
 \begynd
-\pind We shall mostly be analysing and describing solid endurants.
+\pind Principalmente estaremos analizando y describiendo endurantes sólidos.
 
-\pind As we shall see, in the next \pos{chapter}{section},
+\pind Como veremos, en la siguiente \pos{capítulo}{sección},
 \begynd
-\pind we analyse and describe solid endurants as
-\pind  either parts 
-\pind or living species: animals and humans.
+\pind analizamos y describimos endurantes de sólidos como
+\pind  ya sea partes 
+\pind o especies vivas: animales y humanos.
 \afslut
-\pind We shall mostly be concerned with parts.
+\pind Principalmente nos ocuparemos de las partes.
 \begynd
-\pind That is, we shall just, as: ``in passing'', 
-\pind for \ysfchg{the } sake of completeness,
-\pind mention living species\,!
+\pind Es decir, solo, como: ``de paso'', 
+\pind por \ysfchg{el} motivo de completitud,
+\pind mencionaremos especies vivas\,!
 \afslut
 \afslut
 %%%%%%%
     
-\nbbb{Fluids}
+\nbbb{Fluidos}
 
 \begynd
-\pind \newestpdefn{Fluid
-  Endurants}{ \pdefindex{fluid!endurant}\pdefindex{endurant!fluid}\ 
+\pind \newestpdefn{Endurantes fluidos}{ \pdefindex{fluid!endurant}\pdefindex{endurant!fluid}\ 
 \begynd
-\pind By a \sfsl{fluid endurant} we shall understand  an endurant \nyl which is 
+\pind Por un \sfsl{endurante fluido} entenderemos un endurante \nyl que es 
 \begynd
-\pind prolonged, without interruption, \nyl in an unbroken series or pattern;
-\pind or, rephrasing:  a substance (liquid,
-  gas or plasma) having the property of flowing, consisting of
-  particles that move  among themselves \cite[Vol.\,I, pg.\,774]{OED} \dbsquare
+\pind prolongado, sin interrupción, \nyl en una serie o patrón ininterrumpido;
+\pind o, reformulando: una sustancia (líquido,
+  gas o plasma) que tiene la propiedad de fluir, consistiendo en
+  partículas que se mueven entre sí \cite[vol.\,I, pág.\,774]{OED} \dbsquare
 \afslut
 \afslut}
 %%%%%%%
 \afslut
 
 \noindent
-\newestxample{Fluid Endurants}{ Examples of fluid endurants are:
+\newestxample{Endurantes fluidos}{ Ejemplos de endurantes fluidos son: % Sh
   \pos{}{\begin{multicols}{3}}
 \begynd
-\pind water, \pind oil, \pind gas,
-  \pind compressed air, \pind smoke\dbsquare
+\pind agua, \pind petróleo, \pind gas,
+  \pind aire comprimido, \pind humo\dbsquare
   \afslut
 \pos{}{\end{multicols}}}
 
-
 \mnewfoil
 
 \noindent
 \begynd
-\pind Fluids are otherwise
+\pind Los fluidos son de otro modo
 \begynd
-\pind liquid, or
-\pind gaseous, or
-\pind plasmatic, or
-\pind granular\footnote{\label{fn.granular} This is a purely
-  pragmatic decision. ``Of course'' sand, gravel, soil, etc., are not
-  fluids, but for our modelling purposes it is convenient to
-  ``compartmentalise'' them as fluids\,!}, or
-\pind plant products, i.e., chopped sugar cane, threshed, or
-otherwise\footnote{See footnote \vref{fn.granular}.},
-\pind et cetera.
+\pind líquidos, o
+\pind gaseosos, o
+\pind plasmáticos, o
+\pind granulares\footnote{\label{fn.granular} Esta es una decisión puramente pragmática. ``Por supuesto'' la arena, la grava, el suelo, etc., no son
+  fluidos, pero para nuestros propósitos de modelado es conveniente
+  ``compartimentarlos'' como fluidos\,!}, o como
+\pind productos vegetales, por ejemplo, caña de azúcar picada, trillada o procesada de alguna otra manera\footnote{Ver nota al pie \vref{fn.granular}.},
+\pind etcétera.
 \afslut
-\pind Fluid endurants will be analysed and described \nyl in relation to
-      solid endurants, viz.\ their ``containers''.
+\pind Los endurantes fluidos serán analizados y descritos \nyl en relación con
+      los endurantes de sólidos, es decir, sus ``contenedores''.
 \afslut
-
-\nbbb{Parts}
+\nbbb{Partes}
   
 \begynd
-\pind \newestpdefn{Parts}{ \pdefindex{parts}\
+\pind \newestpdefn{Partes}{ \pdefindex{parts}\
 \begynd
-\pind The non-living species solids are what we shall call parts\dbsquare
+\pind Los sólidos no vivos son lo que llamaremos partes\dbsquare
 \afslut}
 
 \noindent
-\pind Parts are the ``work-horses'' of man-made domains.
-\pind That is, we shall mostly be concerned  \nyl with the analysis and
-      description of endurants into parts.
+\pind Las partes son los ``caballos de batalla'' de los dominios hechos por el hombre.  % Unsure how to translate workhorse idiom
+\pind Es decir, nos ocuparemos principalmente \nyl del análisis y
+      descripción de endurantes en partes.
 \afslut
 %%%%%%%
 
 \noindent
-\newestxample{Parts}{ The previous example of solids
-  was also an example of parts\dbsquare}
+\newestxample{Partes}{ El ejemplo anterior de sólidos
+  también era un ejemplo de partes\dbsquare}
 
 \noindent
 \begynd
-\pind We distinguish between atomic and compound parts.
+\pind Distinguimos entre partes atómicas y compuestas.
 \afslut
 
-\nbb{Atomic Parts}
+\nbb{Partes atómicas}
   
-\bookdefn{Atomic Part, I}{ \label{pd-atomic-parts}
+\bookdefn{Parte atómica, I}{ \label{pd-atomic-parts}
 \begynd
-\pind By an \sfsl{atomic part} we shall understand a part
+\pind Por una \sfsl{parte atómica} entenderemos una parte
 \begynd
-\pind which the domain analyser considers to be indivisible
-\pind in the sense of not meaningfully \ysfchg{divisible},
-\pind for the purposes of the domain under consideration,
-\pind that is, to not meaningfully consist of sub-parts\eod
+\pind que el analista de dominio considera indivisible
+\pind en el sentido de no ser \ysfchg{divisible} de manera significativa,
+\pind para los propósitos del dominio en consideración,
+\pind es decir, que no consiste significativamente en subpartes\eod
 \afslut
 \afslut
 }
 
-\monoexample{Atomic Parts}{ Examples of atomic parts are:
+\monoexample{Partes atómicas}{ Ejemplos de partes atómicas son:
 \begynd
-\pind a hub, i.e., a street intersection;
-\pind a link, i.e., the stretch of road between two neighbouring hubs; and
-\pind an automobile \dbsquare
+\pind un centro, es decir, una intersección de calles;
+\pind un enlace, es decir, el tramo de carretera entre dos centros vecinos; y
+\pind un automóvil \dbsquare
 \afslut}
 
-\nbb{Compound Parts}
+\nbb{Partes compuestas}
   
 \begynd
-\pind We, pragmatically, distinguish between
+\pind Nosotros, pragmáticamente, distinguimos entre
 \begynd
-\pind Cartesian-product-, and 
-\pind set-
-\afslut oriented parts.
-\pind If Cartesian-oriented, to consist of two or more
-      distinctly sort-named endurants (solids or fluids)\ysfchg{. }
-\pind If set-oriented, to consist of an indefinite number of  \nyl zero,
-      one or more parts.
+\pind partes orientadas al producto cartesiano, y 
+\pind partes orientadas a conjuntos.
+\afslut
+\pind Si están orientadas al producto cartesiano, consisten en dos o más
+      endurantes (sólidos o fluidos) claramente diferenciados \ysfchg{. }
+\pind Si están orientadas a conjuntos, consisten en un número indefinido de \nyl cero,
+      una o más partes.
 \afslut
 
-\bookdefn{Compound Part, I}{ %
+\bookdefn{Parte compuesta, I}{ %
 \begynd
-\pind \pdindextermii{Compound}{part}s are those which are
+\pind \pdindextermii{Partes}{compuestas} son aquellas que son
 \begynd
-\pind either \ysf{Cartesian-}
-\pind or are set-
+\pind ya sea \ysf{cartesiano-}
+\pind o son partes orientadas a conjuntos
 \afslut
-\pind oriented parts  \eod
+\pind  \eod
 \afslut
 }
 
-\monoexample{Compound Parts}{ An example of \ysfchg{} compound parts
-  is: 
+\monoexample{Partes compuestas}{ Un ejemplo de partes compuestas es:
 \begynd
-\pind \ysfchg{(i) } a road net consisting of a set of hubs,
-  i.e., street intersections or ``end-of-streets'',  and
-\pind  \ysfchg{(ii) } a set of
-  links, i.e., street segments (with no contained hubs),
+\pind \ysfchg{(i) } una red vial que consiste en un conjunto de centros,
+  es decir, intersecciones de calles o ``fin de calles'',  y
+\pind  \ysfchg{(ii) } un conjunto de
+  enlaces, es decir, segmentos de calles (sin centros contenidos),
 \afslut
- is a Cartesian compound\ysfchg{. }
+ es un compuesto cartesiano\ysfchg{. }
 \begynd
-\pind  \ysfchg{(iii) } \ysfchg{Each set } of hubs and \ysfchg{each set } of links
-\afslut are part set compounds\dbsquare}
+\pind  \ysfchg{(iii) } \ysfchg{Cada conjunto } de centros y \ysfchg{cada conjunto } de enlaces
+\afslut son compuestos de conjuntos\dbsquare}
 
-\nbbbb{An Aside: An Upper Ontology}\label{An Upper Ontology}
+\nbbbb{Un apunte: una ontología superior}\label{An Upper Ontology}
 
 \begynd
-\pind We have been reasonably careful
+\pind Hemos sido razonablemente cuidadosos
 \begynd  
-\pind to just introduce and state
-      informal definitions 
-\pind of phenomena and some classes thereof.
+\pind en solo introducir y establecer
+      definiciones informales 
+\pind de fenómenos y algunas clases de estos.
 \afslut
-\pind In the next chapter we shall, in a sense, ``repeat'' coverage of
-      these phenomena.
+\pind En el próximo capítulo, en cierto sentido, ``repetiremos'' la cobertura de
+      estos fenómenos.
 \begynd
-\pind But \ysf{then} in a more analytic manner.
-\pind Figure\,\vref{onto.fig0} is intended to indicate this.
+\pind Pero \ysf{entonces} de una manera más analítica.
+\pind La figura\,\vref{onto.fig0} tiene la intención de indicar esto.
 \afslut
 \afslut
 
 \mnewfoil
 
 \noindent
-\hDBfigure{onto}{\pos{10.5}{11.7}cm}{{An} Upper Ontology}{onto.fig0}
+\hDBfigure{onto}{\pos{10.5}{11.7}cm}{{Una} ontología superior}{onto.fig0}
 
 \mnewfoil
 
 \noindent
 \begynd
-\pind So far we have only touched upon 
+\pind Hasta ahora solo hemos tocado 
 \begynd
-\pind the `External Qualities' labeled, dotted-dashed box 
-\pind of the `Endurants'-labeled dashed box of Fig.\,\ref{onto.fig0}.
+\pind el cuadro de líneas discontinuas etiquetado como `cualidades externas' 
+\pind del cuadro de líneas discontinuas etiquetado como `Endurantes' de la fig.\,\ref{onto.fig0}.
 \afslut
-\pind In Chapter \ref{primer-extq.1} we shall treat external qualities
-      in more depth ---
+\pind En el capítulo \ref{primer-extq.1} trataremos las cualidades externas
+      con más profundidad ---
 \begynd
-\pind more systematically: analytically and descriptionally.
+\pind de manera más sistemática: analíticamente y descriptivamente.
 \afslut
 \afslut
 
 
-\nbbbb{Internal Qualities}
+\nbbbb{Cualidades Internas}
      
-\newestpdefn{Internal Qualities}{ Internal qualities are \pdefindex{internal quality}
+\newestpdefn{Cualidades internas}{ Las cualidades internas son \pdefindex{internal quality}
 \begynd
-\pind those properties [of endurants]
-\pind that do not occupy \sfsl{space}
-\pind but can be measured or spoken about\dbsquare
+\pind aquellas propiedades [de los endurantes]
+\pind que no ocupan \sfsl{espacio}
+\pind pero que pueden ser medidas o mencionadas\dbsquare
 \afslut}%%%%
       
-\newestxample{Internal qualities}{ Examples of internal qualities are %%%%
+\newestxample{Cualidades internas}{ Ejemplos de cualidades internas son %%%%
 \begynd
-\pind the unique identity of a part, 
-\pind the relation of \ysfchg{a } part to other
-      parts, and 
-\pind the endurant attributes such as temperature, length, colour\dbsquare
+\pind la identidad única de una parte, 
+\pind la relación de una parte con otras
+      partes, y 
+\pind los atributos de los endurantes como temperatura, longitud, color\dbsquare
 \afslut} 
 
   
-\nbbb{Unique identity}
+\nbbb{Identidad única}
     
 \begynd
-\pind \newestpdefn{Unique Identity}{ A unique identity is \pdefindexii{unique}{identity}\  
+\pind \newestpdefn{Identidad única}{ Una identidad única es \pdefindexii{unique}{identity}\  
 \begynd
-\pind an immaterial property
-\pind that distinguishes any two \sfsl{spatially}
-      distinct solids\dbsquare
+\pind una propiedad inmaterial
+\pind que distingue a dos sólidos \sfsl{espacialmente}
+      distintos\dbsquare
 \afslut}
 \afslut
 
-\newestxample{Unique Identities}{ Each 
+\newestxample{Identidades únicas}{ Cada 
 \begynd
-\pind hub in a road net is unique\ysf{ly} identified, 
-\pind so is each link  
-\pind and \ysfchg{each } automobile\dbsquare
+\pind centro en una red de carreteras es identificado de manera única,
+\pind así como cada enlace 
+\pind y cada automóvil\dbsquare
 \afslut}
 %%%%%%%
 
-\nbbb{Mereology}
+\nbbb{Mereología}
 \begynd 
-\pind \newestpdefn{Mereology, I}{ Mereology is \pdefindex{mereology}\  
-      a theory of [endurant] part-hood relations: 
+\pind \newestpdefn{Mereología, I}{ La mereología es \pdefindex{mereology}\  
+      una teoría de las relaciones de parte-idad [de endurantes]: % doubts about part-hood
 \begynd 
-\pind of the relations of an [endurant]
-      part\ysfchg{ } to a whole 
-\pind and the
-      relations of [endurant] parts to [endurant] parts within that
-      whole\dbsquare
+\pind de las relaciones de una parte [endurante] con un todo
+\pind y de las
+      relaciones de las partes [endurantes] con otras partes [endurantes] dentro de ese
+      todo\dbsquare
 \afslut}%%%%
 \afslut
       
-\newestxample{Mereology}{ Examples of mereologies are %%%%
+\newestxample{Mereología}{ Ejemplos de mereologías son %%%%
 \begynd 
-\pind that a link is topologically \sl connected \rm to \nyl
-      exactly two specific hubs, 
-\pind that \ysfchg{a hub is } \sl connected \rm to \nyl zero, one or
-      more specific links, 
-\pind and that links and hubs are   \sl  open  \rm to \nyl
-      specific subsets of automobiles\dbsquare
+\pind que un enlace está topológicamente \sl conectado \rm a \nyl
+      exactamente dos centros específicos,
+\pind que un centro está \sl conectado \rm a \nyl cero, uno o
+      más enlaces específicos,
+\pind y que enlaces y centros están \sl abiertos \rm a \nyl
+      subconjuntos específicos de automóviles\dbsquare
 \afslut}
 %%%%%%%
 
-\nbbb{Attribute}
-\newestpdefn{Attributes}{ Attributes are \pdefindex{attribute}\
-      properties of  endurants
+\nbbb{Atributos}
+\newestpdefn{Atributos}{ Los atributos son \pdefindex{attribute}\
+      propiedades de los endurantes
 \begynd 
-\pind that are not \sfsl{spatially} observable, 
-\pind but can be either
-      physically 
-\pind (electronically, chemically, or otherwise) 
-\pind measured or can
-      be objectively spoken about\dbsquare
+\pind que no son \sfsl{espacialmente} observables, 
+\pind pero que pueden ser
+      físicamente
+\pind (electrónicamente, químicamente u otros modos)
+\pind medidos o pueden
+      ser mencionados objetivamente\dbsquare
 \afslut}%%%%
       
-\newestxample{Attributes}{ Examples of attributes are: 
+\newestxample{Atributos}{ Ejemplos de atributos son:
 \begynd 
-\pind links \ysfchg{ } have lengths, and, 
-\pind that at any one time,
-\pind zero, one or more automobiles are occupying \ysfchg{each
-link}\ysf{\footnote{Oh yes, it is, of course, spatially observable
-    that a link has a length, but the measurement, say \sfsl{123
-      meters} is not; and the number of cars on the link is also not
-    spatially observable.}}\dbsquare
+\pind los enlaces \ysfchg{ } tienen longitudes, y,
+\pind que en cualquier momento,
+\pind cero, uno o más automóviles están ocupando \ysfchg{cada
+enlace}\ysf{\footnote{Oh sí, por supuesto, es espacialmente observable
+    que un enlace tiene una longitud, pero la medición, digamos \sfsl{123
+      metros} no lo es; y el número de automóviles en el enlace tampoco es
+    espacialmente observable.}}\dbsquare
 \afslut}
 %%%%%%%
 \label{pre-primer.Prompts}
-\nbbbbb{Prompts}\label{primer.Prompts}
+\nbbbbb{Indicaciones}\label{primer.Prompts} % still unsure about translating prompts
+
 
 \bbbb{Analysis Prompts}
 
