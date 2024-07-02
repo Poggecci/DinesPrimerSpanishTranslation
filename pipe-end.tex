@@ -1,60 +1,37 @@
 
-\nbbbbb{Endurants: External
-  Qualities}\label{pipe-ex1}\tehran{Endurants}{pipe:Edurants}\HHHH 
+\nbbbbb{Endurantes: Cualidades Externas}\label{pipe-ex1}\tehran{Endurants}{pipe:Edurants}\HHHH 
 
-We follow the ontology of Fig.\,\ref{anoipilisy}, the lefthand dashed box
-labelled \sfsl{External Qualities}.
+Seguimos la ontología de la Fig.\,\ref{anoipilisy}, el cuadro de líneas discontinuas de la izquierda
+etiquetado como \sfsl{Cualidades Externas}.
 
-\hDBfigure{onto}{\pos{10.8}{10}cm}{Upper Ontology}{anoipilisy}
+\hDBfigure{onto}{\pos{10.8}{10}cm}{Ontología Superior}{anoipilisy}
 
 \mnewfoil
 
-\nbbbb{Parts}\tehran{Parts}{pipe:Parts}\HHHH
+\nbbbb{Partes}\tehran{Parts}{pipe:Parts}\HHHH
 
-\DBfigure{opls-edin}{\pos{5}{10}cm}{An example pipeline system}{nabucco}
+\DBfigure{opls-edin}{\pos{5}{10}cm}{Ejemplo de un sistema de tuberías}{nabucco}
 
 \mnewfoil
 
 \tehrantutorial{\begin{multicols}{2}}{}\HHHH
 \begin{enumerate}\setei
-\item \label{p-e-00} A pipeline system contains a set of pipeline 
-  units and a pipeline system monitor.
-\item \label{p-e--1} The well-formedness of a pipeline system
-  depends on its mereology\pos{ (cf.\ Sect.\,\ref{PLS Mereology})}{}
-  and the routing of its pipes\pos{ (cf.\ Sect.\,\ref{Wellformed Pipes})}{}. 
-\item \label{p-e-01} A pipeline unit is either a well, a pipe, a pump,
-  a valve, a fork, a join, a plate\footnote{\LLLL A \sfsl{plate} unit is a
-  usually circular, flat steel plate used to ``begin'' or ``end'' a
-  pipe segment.}, or a sink unit.
-\item \label{p-e-02} We consider all these units to be
-  distinguishable, i.e., the set of wells, the set pipe, etc., the set
-  of sinks, to be disjoint.
+\item \label{p-e-00} Un sistema de tuberías contiene un conjunto de unidades de tuberías y un monitor del sistema de tuberías.
+\item \label{p-e--1} La buena formación de un sistema de tuberías
+  depende de su mereología\pos{ (cf.\ sec.\,\ref{PLS Mereology})}{}
+  y el enrutamiento de sus tuberías\pos{ (cf.\ sec.\,\ref{Wellformed Pipes})}{}. 
+\item \label{p-e-01} Una unidad de tubería puede ser un pozo, una tubería, una bomba,
+  una válvula, una bifurcación, una unión, una placa\footnote{\LLLL Una unidad de \sfsl{placa} es una
+  placa de acero generalmente circular y plana utilizada para ``comenzar'' o ``terminar'' un
+  segmento de tubería.}, o una unidad de desagüe.
+\item \label{p-e-02} Consideramos todas estas unidades como
+  distinguibles, es decir, el conjunto de pozos, el conjunto de tuberías, etc., el conjunto
+  de desagües son disjuntos.
 \savei\end{enumerate} 
 \tehrantutorial{\end{multicols}}{}
 
 \mnewfoil\LLLL
 \tehrantutorial{\begin{multicols}{2}\footnotesize}{\LLLL}
-%\RSLatex
-%type
-%&\ref{p-e-00}.&  PLS', U, M &\iptye{PLS$'$}{p-e-00}\iptye{U}{p-e-00}\iptye{M}{p-e-00}&
-%&\ref{p-e--1}.&  PLS = {| pls:PLS':-wf_PLS(pls) |} &\iptye{PLS}{p-e--1}& 
-%value
-%&\ref{p-e--1}.&  wf_PLS: PLS -> Bool &\ipwf{wf\_PLS}{p-e--1}&
-%&\ref{p-e--1}.&  wf_PLS(pls) is
-%&\ref{p-e--1}.&  wf_Mereology(pls)/\wf_Routes(pls)/\wf_Metrics(pls)&\footnotemark&
-%&\ref{p-e-00}.&  obs_Us: PLS -> U-set &\ipob{obs\_Us}{p-e-00}&
-%&\ref{p-e-00}.&  obs_M: PLS -> M &\ipob{obs\_M}{p-e-00}&
-%type
-%&\ref{p-e-01}.&  U = We | Pi | Pu | Va | Fo | Jo | Pl | Si&\iptye{U}{p-e-01}&
-%&\ref{p-e-02}.&  We :: Well&\iptye{We}{p-e-02}&
-%&\ref{p-e-02}.&  Pi :: Pipe&\iptye{Pi}{p-e-02}& 
-%&\ref{p-e-02}.&  Pu :: Pump&\iptye{Pu}{p-e-02}& 
-%&\ref{p-e-02}.&  Va :: Valv&\iptye{Va}{p-e-02}&
-%&\ref{p-e-02}.&  Fo :: Fork&\iptye{Fo}{p-e-02}&
-%&\ref{p-e-02}.&  Jo :: Join&\iptye{Jo}{p-e-02}&
-%&\ref{p-e-02}.&  Pl :: Plate&\iptye{Pl}{p-e-02}&
-%&\ref{p-e-02}.&  Si :: Sink&\iptye{Si}{p-e-02}&
-%\endRSLatex 
 \bp
 \kw{type}\\
 \ref{p-e-00}.\ \ PLS{\PRIM}, U, M \iptye{PLS$'$}{p-e-00}\iptye{U}{p-e-00}\iptye{M}{p-e-00}\\
@@ -79,31 +56,22 @@ labelled \sfsl{External Qualities}.
 \tehrantutorial{\end{multicols}}{}
 \footnotetext{\LLLL%
   \textsf{wf\_Mereology}, 
-  \textsf{wf\_Routes} and
-  \textsf{wf\_Metrics} will be explained in Sects.\,%
+  \textsf{wf\_Routes} y
+  \textsf{wf\_Metrics} se explicarán en las secciones\,%
   \vref{pipe:wfMereology},
-  \vref{pipe:wfRoutes}, and
+  \vref{pipe:wfRoutes} y
   \vref{pipe:Wellformed Unit Metrics}.}
 
 
-\nbbbb{An Endurant State}
+\nbbbb{Un Estado Endurante}
 
 \begin{enumerate}\setei
-\item \label{end-state-000} For a given pipeline system
-\item \label{end-state-010} we exemplify an endurant state $\sigma$
-\item \label{end-state-020} composed of the given  pipeline system and
-                            all its manifest units, i.e., without plates.
+\item \label{end-state-000} Para un sistema de tuberías dado % unsure how to make this flow well. The original english sentence is rather confusing.
+\item \label{end-state-010} ejemplificamos un estado endurante $\sigma$
+\item \label{end-state-020} compuesto del sistema de tuberías dado y
+                            todas sus unidades manifiestas, es decir, sin placas.
 \savei\end{enumerate}
 
-%\RSLatex
-%value
-%&\ref{end-state-000}.&   pls:PLS  &\ipva{pls}{end-state-000}&
-%variable
-%&\ref{end-state-010}.&   `sigma := collect_state(pls)  &\ipst{$\sigma$}{end-state-010}& 
-%value 
-%&\ref{end-state-020}.&   collect_state: PLS   &\ipfu{collect\_state}{end-state-020}&
-%&\ref{end-state-020}.&   collect_state(pls) is {pls}&\,&union&\,o&bs_Us(pls) \ Pl
-%\endRSLatex 
 \bp
 \kw{value}\\
 \ref{end-state-000}.\ \ \ pls:PLS\ \ \ipva{pls}{end-state-000}\\
@@ -114,23 +82,23 @@ labelled \sfsl{External Qualities}.
 \ref{end-state-020}.\ \ \ collect\_state(pls) {\IS} {\LBRACE}pls{\RBRACE}\,{\UNION}\,obs\_Us(pls) {\SETMINUS} Pl
 \ep
 
-\nbbbbb{Endurants: Internal Qualities}
+\nbbbbb{Endurantes: Cualidades Internas}
 
 \begynd
-\pind We follow the ontology of Fig.\,\vref{anoipilisy}, \nyl the
-lefthand vertical and horisontal lines.
+\pind Seguimos la ontología de la fig.\,\vref{anoipilisy}, \nyl las
+líneas verticales y horizontales de la izquierda.
 \afslut
 
 
-\bbbb{Unique Identification}
+\bbbb{Identificación Única}
 
 \begin{enumerate}\setei
-\item \label{p-e-03z} The pipeline system, as such,
-\item \label{p-e-03x} has a unique identifier, distinct (different) from its
-                      pipeline unit identifiers. 
-\item \label{p-e-03y} Each pipeline unit is uniquely distinguished by
-                      its unit identifier. 
-\item \label{p-e-03zz} There is a state of all unique identifiers.
+\item \label{p-e-03z} El sistema de tuberías, como tal,
+\item \label{p-e-03x} tiene un identificador único, distinto de sus
+                      identificadores de unidades de tuberías. 
+\item \label{p-e-03y} Cada unidad de tubería se distingue de manera única por
+                      su identificador de unidad. 
+\item \label{p-e-03zz} Existe un estado de todos los identificadores únicos.
 \savei\end{enumerate}
 \mnewfoil
 %\RSLatex
@@ -164,8 +132,8 @@ lefthand vertical and horisontal lines.
 
 \mnewfoil
 \begin{enumerate}\setei
-\item \label{p-e-03a} From a pipeline system one can observe the set
-  of all unique unit identifiers.
+\item \label{p-e-03a} De un sistema de tuberías uno puede observar 
+el conjunto de todos los identificadores únicos de unidades.
 \savei\end{enumerate}
 
 
@@ -181,9 +149,8 @@ lefthand vertical and horisontal lines.
 \ep
 
 \begin{enumerate}\setei
-\item \label{p-e-03b} We can prove that the number of unique unit
-                      identifiers of a pipeline system equals that
-                      of the units of that system.
+\item \label{p-e-03b} Podemos demostrar que el número de identificadores
+                      únicos de unidades es igual al número de unidades de ese sistema.
 \savei\end{enumerate}
 
 
@@ -192,17 +159,17 @@ lefthand vertical and horisontal lines.
 %&\ref{p-e-03b}.&     all pls:PLS:-card obs_Us(pl)=card xtr_UIs(pls)
 %\endRSLatex 
 \bp
-\>\ \kw{theorem:}\ipth{Unique Endurants}{p-e-03b}\\
+\>\ \kw{theorem:}\ipth{Endurantes Únicos}{p-e-03b}\\
 \ref{p-e-03b}.\ \ \ \ \ {\ALL} pls:PLS{\RDOT}\kw{card} obs\_Us(pl){\EQ}\kw{card} xtr\_UIs(pls)
 \ep
 
-\nbbbb{Mereology}\label{PLS Mereology}\LLLL\HHHH
+\nbbbb{Mereología}\label{PLS Mereology}\LLLL\HHHH
 
-\bbb{PLS Mereology}
+\bbb{Mereología PLS}
 
+\item \label{pls-mer-00}La mereología de un sistema de tuberías es el 
+  conjunto de identificadores únicos de todas las unidades del sistema.
 \begin{enumerate}\setei
-\item \label{pls-mer-00} The mereology of a pipeline system is the set
-  of unique identifiers of all the units of that system.
 \savei\end{enumerate}
 
 %\RSLatex
