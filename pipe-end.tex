@@ -167,7 +167,7 @@ el conjunto de todos los identificadores únicos de unidades.
 
 \bbb{Mereología PLS}
 
-\item \label{pls-mer-00}La mereología de un sistema de tuberías es el 
+\item \label{pls-mer-00} La mereología de un sistema de tuberías es el 
   conjunto de identificadores únicos de todas las unidades del sistema.
 \begin{enumerate}\setei
 \savei\end{enumerate}
@@ -185,59 +185,37 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{pls-mer-00}.\ \ \ PLS\_Mer {\EQ} UI\kw{-set}\ipty{PLS\_Mer}{pls-mer-00}\\
 \kw{value}\\
 \ref{pls-mer-00}.\ \ \ mereo\_PLS: PLS {\RIGHTARROW} PLS\_Mer\ipob{mereo\_PLS}{pls-mer-00}\\
-\kw{axiom}\ipty{Wellformed Mereologies}{pls-mer-00}\\
+\kw{axiom}\ipty{Mereologías Bien Formadas}{pls-mer-00}\\
 \ref{pls-mer-00}.\ \ \ {\ALL} uis:PLS\_Mer {\RDOT} uis {\EQ} \kw{card} xtr\_UIs(pls)
 \ep
 
-\nbbb{Unit Mereologies}\HHHH\LLLL
+\nbbb{Mereologías de Unidades}\HHHH\LLLL
 
 \begin{enumerate}\setei
-\item \label{p-e-11}   Each unit is connected to zero, one or two
-                       other existing input units and  zero, one or two
-                       other existing output units as follows:
+\item \label{p-e-11}   Cada unidad está conectada a cero, una o dos
+                       otras unidades de entrada existentes y a cero, una o dos
+                       otras unidades de salida existentes como sigue:
 \begin{enumerate}
-\item \label{p-e-04}   A well unit is connected to exactly one output
-                       unit (and, hence, has no ``input'').
-\item \label{p-e-05}   A pipe unit is connected to exactly one input unit
-                       and one output unit.
-\item \label{p-e-06}   A pump unit is connected to exactly one input unit
-                       and one output unit.
-\item \label{p-e-07}   A valve is connected to exactly one input unit
-                       and one output unit.
-\item \label{p-e-08}   A fork is connected to exactly one input unit
-                       and two distinct output units.
-\item \label{p-e-09}   A join is connected to exactly two distinct input units
-                       and one output unit.
-\item \label{p-e-85}   A plate is connected to exactly one unit.
-\item \label{p-e-10}   A sink is connected to exactly one input unit
-                       (and, hence, has no ``output''). 
+\item \label{p-e-04}   Una unidad de pozo está conectada a exactamente una unidad de salida
+                       (y, por lo tanto, no tiene ``entrada'').
+\item \label{p-e-05}   Una unidad de tubería está conectada a exactamente una unidad de entrada
+                       y una unidad de salida.
+\item \label{p-e-06}   Una unidad de bomba está conectada a exactamente una unidad de entrada
+                       y una unidad de salida.
+\item \label{p-e-07}   Una válvula está conectada a exactamente una unidad de entrada
+                       y una unidad de salida.
+\item \label{p-e-08}   Una bifurcación está conectada a exactamente una unidad de entrada
+                       y dos unidades de salida distintas.
+\item \label{p-e-09}   Una unión está conectada a exactamente dos unidades de entrada distintas
+                       y una unidad de salida.
+\item \label{p-e-85}   Una placa está conectada a exactamente una unidad.
+\item \label{p-e-10}   Un desagüe está conectado a exactamente una unidad de entrada
+                       (y, por lo tanto, no tiene ``salida''). 
 \end{enumerate}
 \savei\end{enumerate}
 
 \mnewfoil\LLLL
 
-%\RSLatex
-%   type
-%&\ref{p-e-11}.&      MER = UI-set >< UI-set&\iptym{MER}{p-e-11}&
-%   value
-%&\ref{p-e-11}.&      mereo_U: U -> MER &\ipob{mereo\_U}{p-e-11}&
-%   axiom
-%&\ref{p-e-11}.&       wf_Mereology: PLS -> Bool &\label{pipe:wfMereology}\ipwf{wf\_Mereology}{p-e-11}&
-%&\ref{p-e-11}.&       wf_Mereology(pls) is
-%&\ref{p-e-11}.&          all u:U:-u isin obs_Us(pls)=> 
-%&\ref{p-e-11}.&             let (iuis,ouis) = mereo_U(u) in iuis union ouis <<= xtr_UIs(pls) /\
-%&\ref{p-e-11}.&                 case (u,(card uius,card ouis)) of
-%&\ref{p-e-04}.&                     (mk_We(we),(0,1)) -> true,
-%&\ref{p-e-05}.&                     (mk_Pi(pi),(1,1)) -> true,
-%&\ref{p-e-06}.&                     (mk_Pu(pu),(1,1)) -> true,
-%&\ref{p-e-07}.&                     (mk_Va(va),(1,1)) -> true,
-%&\ref{p-e-08}.&                     (mk_Fo(fo),(1,1)) -> true,
-%&\ref{p-e-09}.&                     (mk_Jo(jo),(1,1)) -> true,
-%&\ref{p-e-09}.&                     (mk_Pl(pl),(0,1)) -> true, &``begin''&
-%&\ref{p-e-09}.&                     (mk_Pl(pl),(1,0)) -> true, &``end''&
-%&\ref{p-e-10}.&                     (mk_Si(si),(1,1)) -> true,
-%&\ref{p-e-11}.&                     _ -> false end end
-%\endRSLatex 
 \bp
 \>\ \kw{type}\\
 \ref{p-e-11}.\ \ \ \ \ \ MER {\EQ} UI\kw{-set} {\TIMES} UI\kw{-set}\iptym{MER}{p-e-11}\\
@@ -255,42 +233,31 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{p-e-07}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Va(va),(1,1)) {\RIGHTARROW} \kw{true},\\
 \ref{p-e-08}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Fo(fo),(1,1)) {\RIGHTARROW} \kw{true},\\
 \ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Jo(jo),(1,1)) {\RIGHTARROW} \kw{true},\\
-\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pl(pl),(0,1)) {\RIGHTARROW} \kw{true}, ``begin''\\
-\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pl(pl),(1,0)) {\RIGHTARROW} \kw{true}, ``end''\\
+\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pl(pl),(0,1)) {\RIGHTARROW} \kw{true}, ``inicio''\\
+\ref{p-e-09}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Pl(pl),(1,0)) {\RIGHTARROW} \kw{true}, ``fin''\\
 \ref{p-e-10}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mk\_Si(si),(1,1)) {\RIGHTARROW} \kw{true},\\
 \ref{p-e-11}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\UNDERLINE} {\RIGHTARROW} \kw{false} \kw{end} \kw{end}
 \ep
 
-\nbbbb{Pipeline Concepts, I}
+\nbbbb{Conceptos de Tuberías, I}
 
-\bbb{Pipe Routes}\label{primer-pipe}\HHHH
+\bbb{Rutas de Tuberías}\label{primer-pipe}\HHHH
 
 \begin{enumerate}\setei
-\item \label{p-e-12} A route (of a pipeline system) is a sequence of
-                     connected units (of the pipeline system). 
-\item \label{p-e-13} A route descriptor is a sequence of unit
-                     identifiers and the connected units of a route
-                     (of a pipeline system).
+\item \label{p-e-12} Una ruta (de un sistema de tuberías) es una secuencia de
+                     unidades conectadas (del sistema de tuberías).
+\item \label{p-e-13} Un descriptor de ruta es una secuencia de identificadores de unidades
+                     y las unidades conectadas de una ruta
+                     (de un sistema de tuberías).
 \savei\end{enumerate}
 
-%\RSLatex
-%   type
-%&\ref{p-e-12}.&      R' = U-inflist &\iptyo{R$'$}{p-e-12}&
-%&\ref{p-e-12}.&      R = {| r:Route':-wf_Route(r) |} &\iptyo{R}{p-e-12}&
-%&\ref{p-e-13}.&      RD = UI-inflist &\iptyo{RD}{p-e-13}&
-%   axiom
-%&\ref{p-e-13}.&      all rd:RD :- exists r:R:-rd=descriptor(r) &\ipax{Route Describability}{p-e-13}&
-%   value
-%&\ref{p-e-13}.&      descriptor: R -> RD &\ipfu{descriptor}{p-e-13}&
-%&\ref{p-e-13}.&      descriptor(r) is <.uid_UI(r[i])|i:Nat:-1<=i<=len r.>   
-%\endRSLatex 
 \bp
 \>\ \kw{type}\\
 \ref{p-e-12}.\ \ \ \ \ \ R{\PRIM} {\EQ} U$^{\omega}$ \iptyo{R$'$}{p-e-12}\\
 \ref{p-e-12}.\ \ \ \ \ \ R {\EQ} {\LBRACE}{\BAR} r:Route{\PRIM}{\RDOT}wf\_Route(r) {\BAR}{\RBRACE} \iptyo{R}{p-e-12}\\
 \ref{p-e-13}.\ \ \ \ \ \ RD {\EQ} UI$^{\omega}$ \iptyo{RD}{p-e-13}\\
 \>\ \kw{axiom}\\
-\ref{p-e-13}.\ \ \ \ \ \ {\ALL} rd:RD {\RDOT} {\EXISTS} r:R{\RDOT}rd{\EQ}descriptor(r) \ipax{Route Describability}{p-e-13}\\
+\ref{p-e-13}.\ \ \ \ \ \ {\ALL} rd:RD {\RDOT} {\EXISTS} r:R{\RDOT}rd{\EQ}descriptor(r) \ipax{Describibilidad de Rutas}{p-e-13}\\
 \>\ \kw{value}\\
 \ref{p-e-13}.\ \ \ \ \ \ descriptor: R {\RIGHTARROW} RD \ipfu{descriptor}{p-e-13}\\
 \ref{p-e-13}.\ \ \ \ \ \ descriptor(r) {\IS} {\LANGLE}uid\_UI(r{\LBRACKET}i{\RBRACKET}){\BAR}i:\kw{Nat}{\RDOT}1{\LEQ}i{\LEQ}\kw{len} r{\RANGLE}\ \ \ 
@@ -299,16 +266,11 @@ el conjunto de todos los identificadores únicos de unidades.
 \mnewfoil\LLLL\HHHH
 
 \begin{enumerate}\setei
-\item \label{p-e-20x}   Two units are adjacent if the output unit
-  identifiers of one shares a unique unit identifier with the input
-  identifiers of the other.
+\item \label{p-e-20x}   Dos unidades son adyacentes si los identificadores de unidades de salida
+  de una comparten un identificador de unidad único con los identificadores de entrada
+  de la otra.
 \savei\end{enumerate}
 
-%\RSLatex
-%   value 
-%&\ref{p-e-20x}.&      adjacent: U >< U -> Bool &\ipfu{adjacent}{p-e-20x}&
-%&\ref{p-e-20x}.&      adjacent(u,u') is let (,ouis)=mereo_U(u),(iuis,)=mereo_U(u') in ouis inter iuis ~= {} end
-%\endRSLatex 
 \bp
 \>\ \kw{value} \\
 \ref{p-e-20x}.\ \ \ \ \ \ adjacent: U {\TIMES} U {\RIGHTARROW} \kw{Bool} \ipfu{adjacent}{p-e-20x}\\
@@ -318,24 +280,24 @@ el conjunto de todos los identificadores únicos de unidades.
 \LLLL
 
 \begin{enumerate}\setei
-\item \label{p-e-20a}   Given a pipeline system, $pls$, one can identify the
-                  (possibly infinite) set of (possibly infinite) routes
-                  of that pipeline system.
+\item \label{p-e-20a}   Dado un sistema de tuberías, $pls$, se puede identificar el
+                  (posiblemente infinito) conjunto de rutas (posiblemente infinitas)
+                  de ese sistema de tuberías.
 \begin{enumerate}
-\item \label{p-e-20}  The empty sequence, {\LANGLE}{\RANGLE}, is a
-                      route of $pls$.  
-\item \label{p-e-21}  Let $u, u'$ be any units of $pls$, such that
-                      an output unit identifier of $u$ is the same as
-                      an input unit identifier of $u'$ then
-                      {\LANGLE}$u,u'${\RANGLE} is a route of $pls$.
-\item \label{p-e-22}  If $r$ and $r'$ are routes of $pls$ such that
-                      the last element of $r$ is the same as the first
-                      element of $r'$, then $r${\CONCAT}\kw{tl}$r'$ is
-                      a route of $pls$.  
-\item \label{p-e-23}  No sequence of units is a route unless it
-                      follows from a finite (or an infinite) number of
-                      applications of the basis and induction clauses
-                      of Items~\ref{p-e-20}--\ref{p-e-22}.
+\item \label{p-e-20}  La secuencia vacía, {\LANGLE}{\RANGLE}, es una
+                      ruta de $pls$.  
+\item \label{p-e-21}  Sea $u, u'$ cualquier unidad de $pls$, tal que
+                      un identificador de unidad de salida de $u$ sea el mismo que
+                      un identificador de unidad de entrada de $u'$, entonces
+                      {\LANGLE}$u,u'${\RANGLE} es una ruta de $pls$.
+\item \label{p-e-22}  Si $r$ y $r'$ son rutas de $pls$ tal que
+                      el último elemento de $r$ es el mismo que el primer
+                      elemento de $r'$, entonces $r${\CONCAT}\kw{tl}$r'$ es
+                      una ruta de $pls$.  
+\item \label{p-e-23}  Ninguna secuencia de unidades es una ruta a menos que
+                      se siga de un número finito (o infinito) de
+                      aplicaciones de las cláusulas base e inductivas
+                      de los artículos~\ref{p-e-20}--\ref{p-e-22}.
 \end{enumerate}
 \savei\end{enumerate}
 
