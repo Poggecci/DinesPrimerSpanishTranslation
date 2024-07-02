@@ -314,7 +314,7 @@ el conjunto de todos los identificadores únicos de unidades.
 %\endRSLatex 
 \bp
 \>\ \kw{value}\\
-\ref{p-e-20a}.\ \ \ \ \ \ Routes: PLS {\RIGHTARROW} RD\kw{-infset}\ipfu{Routes}{p-e-20a}\\
+\ref{p-e-20a}.\ \ \ \ \ \ Rutas: PLS {\RIGHTARROW} RD\kw{-infset}\ipfu{Routes}{p-e-20a}\\
 \ref{p-e-20a}.\ \ \ \ \ \ Routes(pls) {\IS} \\
 \ref{p-e-20}.\ \ \ \ \ \ \ \ \ \ \kw{let} rs {\EQ} {\LANGLE}{\RANGLE} {\UNION} \\
 \ref{p-e-21}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\LBRACE}{\LANGLE}uid\_UI(u),uid\_UI(u{\PRIM}){\RANGLE}{\BAR}u,u{\PRIM}:U{\RDOT}{\LBRACE}u,u{\PRIM}{\RBRACE}{\SUBSETEQ}obs\_Us(pls) {\WEDGE} adjacent(u,u{\PRIM}){\RBRACE}\\
@@ -322,17 +322,12 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{p-e-23}.\ \ \ \ \ \ \ \ \ \ \kw{in} rs \kw{end}
 \ep
 
-\bbb{Well-formed Routes}\label{Wellformed Pipes}
+\bbb{Rutas Bien Formadas}\label{Wellformed Pipes}
 
 \begin{enumerate}\setei
-\item \label{p-e-14a}  A route is acyclic if no two route positions
-  reveal the same unique unit identifier.
+\item \label{p-e-14a}  Una ruta es acíclica si ninguna de sus posiciones
+  revela el mismo identificador único de unidad.
 \savei\end{enumerate}
-%\RSLatex
-%   value
-%&\ref{p-e-14a}.&   is_acyclic_Route: R -> Bool&\ippr{is\_acyclic\_Route}{p-e-14a}&
-%&\ref{p-e-14a}.&   is_acyclic_Route(r) is ~exists i,j:Nat:-{i,j}<<=inds r /\ i~=j /\ r[i]=r[j]
-%\endRSLatex 
 \bp
 \>\ \kw{value}\\
 \ref{p-e-14a}.\ \ \ is\_acyclic\_Route: R {\RIGHTARROW} \kw{Bool}\ippr{is\_acyclic\_Route}{p-e-14a}\\
@@ -342,20 +337,10 @@ el conjunto de todos los identificadores únicos de unidades.
 \mnewfoil
 
 \begin{enumerate}\setei
-\item \label{p-e-14b}  A pipeline system is well-formed if none of its
-                      routes are circular (and all of its routes
-                      embedded in well-to-sink routes). 
+\item \label{p-e-14b}  Un sistema de tuberías está bien formado si ninguna de sus
+                      rutas es circular (y todas sus rutas
+                      están embebidas en rutas de pozo a desagüe). 
 \savei\end{enumerate}
-%\RSLatex
-%   value
-%&\ref{p-e-14b}.&   wf_Routes: PLS -> Bool&\ipwf{wf\_Routes}{p-e-14b}&
-%&\ref{p-e-14b}.&   wf_Routes(pls) is  &\label{pipe:wfRoutes}&
-%&\ref{p-e-14b}.&       non_circular(pls) /\ are_embedded_Routes(pls)
-%
-%&\ref{p-e-14b}.&   is_non_circular_PLS: PLS -> Bool&\ipwf{is\_non\_circular\_PLS}{p-e-14b}&
-%&\ref{p-e-14b}.&   is_non_circular_PLS(pls) is 
-%&\ref{p-e-14b}.&       all r:R:-r isin routes(p)/\acyclic_Route(r)
-%\endRSLatex 
 \bp
 \>\ \kw{value}\\
 \ref{p-e-14b}.\ \ \ wf\_Routes: PLS {\RIGHTARROW} \kw{Bool}\ipwf{wf\_Routes}{p-e-14b}\\
@@ -370,18 +355,11 @@ el conjunto de todos los identificadores únicos de unidades.
 \mnewfoil
 
 \begin{enumerate}\setei
-\item \label{p-e-19}  We define well-formedness in terms of
-  well-to-sink routes, i.e., routes which start with a well unit and
-  end with a sink unit.
+\item \label{p-e-19}  Definimos la buena formación en términos de
+  rutas de pozo a desagüe, es decir, rutas que comienzan con una unidad de pozo y
+  terminan con una unidad de desagüe.
 \savei\end{enumerate}
 
-%\RSLatex
-%   value   
-%&\ref{p-e-19}.&   well_to_sink_Routes: PLS -> R-set&\ipfu{well\_to\_sink\_Routes}{p-e-19}&
-%&\ref{p-e-19}.&   well_to_sink_Routes(pls) is
-%&\ref{p-e-19}.&      let rs = Routes(pls) in
-%&\ref{p-e-19}.&      {r|r:R:-r isin rs /\ is_We(r[1]) /\ is_Si(r[len r])} end
-%\endRSLatex 
 \bp
 \>\ \kw{value}\ \ \ \\
 \ref{p-e-19}.\ \ \ well\_to\_sink\_Routes: PLS {\RIGHTARROW} R\kw{-set}\ipfu{well\_to\_sink\_Routes}{p-e-19}\\
@@ -393,18 +371,10 @@ el conjunto de todos los identificadores únicos de unidades.
 \mnewfoil
 
 \begin{enumerate}\setei
-\item \label{p-e-18} A pipeline system is well-formed
-      if all of its routes are embedded in well-to-sink routes.
+\item \label{p-e-18} Un sistema de tuberías está bien formado
+      si todas sus rutas están embebidas en rutas de pozo a desagüe.
 \savei\end{enumerate}
 
-%\RSLatex
-%&\ref{p-e-18}.&   are_embedded_Routes: PLS -> Bool&\ippr{are\_embedded\_Routes}{p-e-18}&
-%&\ref{p-e-18}.&   are_embedded_Routes(pls) is   
-%&\ref{p-e-18}.&       let wsrs = well_to_sink_Routes(pls) in
-%&\ref{p-e-18}.&       all r:R :- r isin Routes(pls) =>
-%&\ref{p-e-18}.&           exists r':R,i,j:Nat :- 
-%&\ref{p-e-18}.&              r' isin wsrs /\ {i,j}<<=inds r'/\i<=j /\ r = <.r'[k]|k:Nat:-i<=k<=j.> end
-%\endRSLatex 
 \bp
 \ref{p-e-18}.\ \ \ are\_embedded\_Routes: PLS {\RIGHTARROW} \kw{Bool}\ippr{are\_embedded\_Routes}{p-e-18}\\
 \ref{p-e-18}.\ \ \ are\_embedded\_Routes(pls) {\IS}\ \ \ \\
@@ -414,48 +384,33 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{p-e-18}.\ \ \ \ \ \ \ \ \ \ \ \ \ \ r{\PRIM} {\ISIN} wsrs {\WEDGE} {\LBRACE}i,j{\RBRACE}{\SUBSETEQ}\kw{inds} r{\PRIM}{\WEDGE}i{\LEQ}j {\WEDGE} r {\EQ} {\LANGLE}r{\PRIM}{\LBRACKET}k{\RBRACKET}{\BAR}k:\kw{Nat}{\RDOT}i{\LEQ}k{\LEQ}j{\RANGLE} \kw{end}
 \ep
 
-\bbb{Embedded Routes}
+\bbb{Rutas Embebidas}
 
 \begin{enumerate}\setei
-\item \label{p-e-33a} For every route we can define the set of all its
-                      embedded routes. 
+\item \label{p-e-33a} Para cada ruta podemos definir el conjunto de todas sus
+                      rutas embebidas. 
 \savei\end{enumerate} 
 
-%\RSLatex
-%   value
-%&\ref{p-e-33a}.&  embedded_Routes: R -> R-set&\ipfu{embedded\_Routes}{p-e-33a}&
-%&\ref{p-e-33a}.&  embedded_Routes(r) is {<.r[k]|k:Nat:-i<=k<=j.> | i,j:Nat:- i {i,j}<<=inds(r) /\ i<=j}  
-%\endRSLatex 
 \bp
 \>\ \kw{value}\\
 \ref{p-e-33a}.\ \ embedded\_Routes: R {\RIGHTARROW} R\kw{-set}\ipfu{embedded\_Routes}{p-e-33a}\\
 \ref{p-e-33a}.\ \ embedded\_Routes(r) {\IS} {\LBRACE}{\LANGLE}r{\LBRACKET}k{\RBRACKET}{\BAR}k:\kw{Nat}{\RDOT}i{\LEQ}k{\LEQ}j{\RANGLE} {\BAR} i,j:\kw{Nat}{\RDOT} i {\LBRACE}i,j{\RBRACE}{\SUBSETEQ}\kw{inds}(r) {\WEDGE} i{\LEQ}j{\RBRACE}\ \ 
 \ep
 
-\nbbb{A Theorem}
+\nbbb{Un Teorema}
 
 \begin{enumerate}\setei
-\item \label{p-e-33b} The following theorem is conjectured:
+\item \label{p-e-33b} Se conjetura el siguiente teorema:
 \begin{enumerate}
-\item \label{p-e-30}  the set of all routes  (of the pipeline system)
-\item \label{p-e-31}  is the set of all well-to-sink routes (of a
-                      pipeline system) and 
-\item \label{p-e-32}  all their embedded routes
+\item \label{p-e-30}  el conjunto de todas las rutas (del sistema de tuberías)
+\item \label{p-e-31}  es el conjunto de todas las rutas de pozo a desagüe (de un
+                      sistema de tuberías) y 
+\item \label{p-e-32}  todas sus rutas embebidas
 \end{enumerate}
 \savei\end{enumerate}
 
-%\RSLatex
-%   &\kw{theorem:}\ipth{Routes of a PLS}{p-e-33b}&
-%&\ref{p-e-33b}.&   all pls:PLS :-
-%&\ref{p-e-33b}.&   let rs = Routes(pls),
-%&\ref{p-e-33b}.&       wsrs = well_to_sink_Routes(pls) in
-%&\ref{p-e-30}.&   rs = 
-%&\ref{p-e-31}.&        wsrs union
-%&\ref{p-e-32}.&        union {{r'|r':R :- r' isin is_embedded_Routes(r'')} | r'':R :- r'' isin wsrs}
-%&\ref{p-e-33a}.&   end
-%\endRSLatex 
 \bp
-\>\ \kw{theorem:}\ipth{Routes of a PLS}{p-e-33b}\\
+\>\ \kw{theorem:}\ipth{Rutas de un PLS}{p-e-33b}\\
 \ref{p-e-33b}.\ \ \ {\ALL} pls:PLS {\RDOT}\\
 \ref{p-e-33b}.\ \ \ \kw{let} rs {\EQ} Routes(pls),\\
 \ref{p-e-33b}.\ \ \ \ \ \ \ wsrs {\EQ} well\_to\_sink\_Routes(pls) \kw{in}\\
