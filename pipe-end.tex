@@ -419,24 +419,17 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{p-e-32}.\ \ \ \ \ \ \ \ {\UNION} {\LBRACE}{\LBRACE}r{\PRIM}{\BAR}r{\PRIM}:R {\RDOT} r{\PRIM} {\ISIN} is\_embedded\_Routes(r{\PRIM}{\PRIM}){\RBRACE} {\BAR} r{\PRIM}{\PRIM}:R {\RDOT} r{\PRIM}{\PRIM} {\ISIN} wsrs{\RBRACE}\\
 \ref{p-e-33a}.\ \ \ \kw{end}
 \ep
-
-\nbbb{Fluids}
+\nbbb{Fluidos}
 
 \begin{enumerate}\setei
-\item \label{p-e-34} The only fluid of concern to pipelines is the
-                     gas\footnote{\LLLL Gaseous materials include: air, gas,
-                     etc.} or liquid\footnote{\LLLL Liquid materials include
-                     water, oil, etc.} which the pipes
-                     transport\footnote{\LLLL The description of this
-                     document is relevant only to gas or oil pipelines.}.
+\item \label{p-e-34} El único fluido de interés para las tuberías es el
+                     gas\footnote{\LLLL Los materiales gaseosos incluyen: aire, gas,
+                     etc.} o líquido\footnote{\LLLL Los materiales líquidos incluyen
+                     agua, petróleo, etc.} que las tuberías
+                     transportan\footnote{\LLLL La descripción de este
+                     documento es relevante solo para tuberías de gas o petróleo.}.
 \savei\end{enumerate}
 
-%\RSLatex
-%   type
-%&\ref{p-e-34}.&      GoL [ = M ] &\iptye{GoL}{p-e-34}&
-%   value
-%&\ref{p-e-34}.&      obs_GoL: U -> GoL&\ipob{obs\_GoL}{p-e-34}&  
-%\endRSLatex 
 \bp
 \>\ \kw{type}\\
 \ref{p-e-34}.\ \ \ \ \ \ GoL {\LBRACKET} {\EQ} M {\RBRACKET} \iptye{GoL}{p-e-34}\\
@@ -444,33 +437,24 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{p-e-34}.\ \ \ \ \ \ obs\_GoL: U {\RIGHTARROW} GoL\ipob{obs\_GoL}{p-e-34}\ \ 
 \ep
 
-\nbbbb{Attributes}\LLLL
+\nbbbb{Atributos}\LLLL
 
-\bbb{Unit Flow Attributes}\HHHH
+\bbb{Atributos de Flujo de Unidades}\HHHH % Unsure about intention here
 
 
 \begin{enumerate}\setei
-\item A number of attribute types characterise units:
+\item Una serie de tipos de atributos caracterizan las unidades:
 \begin{enumerate}
-\item \label{pa01x} estimated current well capacity (barrels of oil, etc.),
-\item \label{pa03x} pump height (a static attribute), 
-\item \label{pa04x} current pump status (not pumping, pumping; a programmable attribute),
-\item \label{pa05x} current valve status (closed, open; a programmable attribute) and
-\item \label{pa06x} flow (barrels/second, a biddable attribute).
+\item \label{pa01x} capacidad estimada actual del pozo (barriles de petróleo, etc.),
+\item \label{pa03x} altura de la bomba (un atributo estático), 
+\item \label{pa04x} estado actual de la bomba (no bombeando, bombeando; un atributo programable),
+\item \label{pa05x} estado actual de la válvula (cerrada, abierta; un atributo programable) y
+\item \label{pa06x} flujo (barriles/segundo, un atributo negociable).
 \end{enumerate}
 \savei\end{enumerate}
 
 \mnewfoil\LLLL\HHHH%&$_{\mathcall{L}}$&
 
-%\begin{multicols}{2}
-%\RSLatex
-%   type
-%&\ref{pa01x}.&      WellCap &\iptya{WellCap}{pa01x}&
-%&\ref{pa03x}.&      Pump_Height &\iptya{Pump\_Height}{pa03x}&
-%&\ref{pa04x}.&      Pump_State == {|&\sort{not\_pumping}&,&\sort{pumping}&|} &\iptya{Pump\_State}{pa04x}&
-%&\ref{pa05x}.&      Valve_State == {|&\sort{closed}&,&\sort{open}&|} &\iptya{Valve\_State}{pa05x}&
-%&\ref{pa06x}.&      Flow &\iptya{Flow}{pa06x}&
-%\endRSLatex 
 \bp
 \>\ \kw{type}\\
 \ref{pa01x}.\ \ \ \ \ \ WellCap \iptya{WellCap}{pa01x}\\
@@ -480,17 +464,11 @@ el conjunto de todos los identificadores únicos de unidades.
 \ref{pa06x}.\ \ \ \ \ \ Flow \iptya{Flow}{pa06x}
 \ep
 \begin{enumerate}\setei
-\item \label{pa05y1} Flows can be added and subtracted,
-\item \label{pa05y2} added distributively  and
-\item \label{pa05z} flows can be compared.
+\item \label{pa05y1} Los flujos pueden sumarse y restarse,
+\item \label{pa05y2} sumarse distributivamente y
+\item \label{pa05z} los flujos pueden compararse.
 \savei\end{enumerate}
 
-%\RSLatex
-%   value
-%&\ref{pa05y1}.&      &$\oplus,\ominus$&: Flow><Flow -> Flow &\ipop{$\oplus$}{pa05y1}\ipop{$\ominus$}{pa05y1}&
-%&\ref{pa05y2}.&      &$\oplus$&: Flow-set -> Flow  &\ipop{$\oplus$}{pa05y2}&
-%&\ref{pa05z}.&      <,<=,=,~=,>=,>: Flow >< Flow -> Bool
-%\endRSLatex 
 \bp
 \>\ \kw{value}\\
 \ref{pa05y1}.\ \ \ \ \ \ $\oplus,\ominus$: Flow{\TIMES}Flow {\RIGHTARROW} Flow \ipop{$\oplus$}{pa05y1}\ipop{$\ominus$}{pa05y1}\\
@@ -505,64 +483,36 @@ el conjunto de todos los identificadores únicos de unidades.
 \ipop{\GT}{pa05z}
 \mnewfoil
 \begin{enumerate}\setei
-\item \label{pa00} Properties of pipeline units include
-%%%\begin{multicols}{2}
+\item \label{pa00} Las propiedades de las unidades de tuberías incluyen
 \begin{enumerate}
-\item \label{pa01} estimated current well capacity (barrels of oil,
-  etc.) [a biddable attribute], 
-\item \label{pa02} pipe length [a static attribute],
-\item \label{pa03} current pump height [a biddable attribute], 
-\item \label{pa04} current valve open/close status [a programmable attribute],
-\item \label{pa05} current [$\mathcal{L}$aminar] in-flow at unit input
-                   [a monitorable attribute],
-\item \label{pa06} current $\mathcal{L}$aminar] in-flow leak at unit input
-                   [a monitorable attribute],
-\item \label{pa07} maximum [$\mathcal{L}$aminar] guaranteed in-flow leak at unit input
-  [a static attribute],
+\item \label{pa01} capacidad estimada actual del pozo (barriles de petróleo,
+  etc.) [un atributo negociable], 
+\item \label{pa02} longitud de la tubería [un atributo estático],
+\item \label{pa03} altura actual de la bomba [un atributo negociable], 
+\item \label{pa04} estado actual de apertura/cierre de la válvula [un atributo programable],
+\item \label{pa05} flujo actual [$\mathcal{L}$aminar] de entrada en la unidad
+                   [un atributo monitoreable],
+\item \label{pa06} fuga actual [$\mathcal{L}$aminar] de entrada en la unidad
+                   [un atributo monitoreable],
+\item \label{pa07} fuga máxima garantizada [$\mathcal{L}$aminar] de entrada en la unidad
+  [un atributo estático],
 \mnewfoil
-\item \label{pa08} current [$\mathcal{L}$aminar] leak unit interior
-                   [a monitorable attribute],
-\item \label{pa09} current [$\mathcal{L}$aminar] flow in unit interior
-                   [a monitorable attribute],
-\item \label{pa10} maximum $\mathcal{L}$aminar] guaranteed flow in unit interior
-                   [a monitorable attribute],
-\item \label{pa11} current [$\mathcal{L}$aminar] out-flow at unit output
-                   [a monitorable attribute],
-\item \label{pa12} current [$\mathcal{L}$aminar] out-flow leak at unit output
-                   [a monitorable attribute] and
-\item \label{pa13} maximum guaranteed $\mathcal{L}$aminar out-flow leak at unit output
-                   [a static attribute.
+\item \label{pa08} fuga actual [$\mathcal{L}$aminar] en el interior de la unidad
+                   [un atributo monitoreable],
+\item \label{pa09} flujo actual [$\mathcal{L}$aminar] en el interior de la unidad
+                   [un atributo monitoreable],
+\item \label{pa10} flujo máximo garantizado [$\mathcal{L}$aminar] en el interior de la unidad
+                   [un atributo monitoreable],
+\item \label{pa11} flujo actual [$\mathcal{L}$aminar] de salida en la unidad
+                   [un atributo monitoreable],
+\item \label{pa12} fuga actual [$\mathcal{L}$aminar] de salida en la unidad
+                   [un atributo monitoreable] y
+\item \label{pa13} fuga máxima garantizada [$\mathcal{L}$aminar] de salida en la unidad
+                   [un atributo estático].
 \end{enumerate}
-%%%\end{multicols}
 \savei\end{enumerate}
 \mnewfoil
 \begin{multicols}{2}\LLLL
-%\RSLatex
-%type 
-%&\ref{pa05}&  In_Flow = Flow&\iptya{In\_Flow}{pa05}&
-%&\ref{pa06}&  In_Leak = Flow&\iptya{In\_Leak}{pa06}&
-%&\ref{pa07}&  Max_In_Leak = Flow&\iptya{Max\_In\_Leak}{pa07}&
-%&\ref{pa08}&  Body_Flow = Flow&\iptya{Body\_Flow}{pa08}&
-%&\ref{pa09}&   Body_Leak = Flow&\iptya{Body\_Leak}{pa09}&
-%&\ref{pa10}&   Max_Flow = Flow&\iptya{Max\_Flow}{pa10}&
-%&\ref{pa11}&  Out_Flow = Flow&\iptya{Out\_Flow}{pa11}&
-%&\ref{pa12}&   Out_Leak = Flow&\iptya{Out\_Leak}{pa12}& 
-%&\ref{pa13}&  Max_Out_Leak = Flow&\iptya{Max\_Out\_Leak}{pa13}&
-%value
-%&\ref{pa01}&  attr_WellCap: We -> WellCap    
-%&\ref{pa02}&  attr_LEN: Pi -> LEN   
-%&\ref{pa03}&  attr_Height: Pu -> Height
-%&\ref{pa04}&  attr_ValSta: Va -> VaSta
-%&\ref{pa05}&  attr_In_Flow: U -> UI -> Flow&\ipob{attr\_In\_Flow}{pa05}&
-%&\ref{pa06}&  attr_In_Leak: U -> UI -> Flow &\ipob{attr\_In\_Leak}{pa06}&  
-%&\ref{pa07}&  attr_Max_In_Leak: U -> UI -> Flow &\ipob{attr\_Max\_In\_Leak}{pa07}&  
-%&\ref{pa08}&  attr_Body_Flow: U -> Flow &\ipob{attr\_Body\_Flow}{pa08}&    
-%&\ref{pa09}&   attr_Body_Leak: U -> Flow  &\ipob{attr\_Body\_Leak}{pa09}&
-%&\ref{pa10}&   attr_Max_Flow: U -> Flow  &\ipob{attr\_Max\_Flow}{pa10}&
-%&\ref{pa11}&  attr_Out_Flow: U -> UI -> Flow  &\ipob{attr\_Out\_Flow}{pa11}&
-%&\ref{pa12}&   attr_Out_Leak: U -> UI -> Flow &\ipob{attr\_Out\_Leak}{pa12}& 
-%&\ref{pa13}&  attr_Max_Out_Leak: U -> UI -> Flow&\ipob{attr\_Max\_Out\_Leak}{pa13}&
-%\endRSLatex 
 \bp
 \kw{type} \\
 \ref{pa05}\ \ In\_Flow {\EQ} Flow\iptya{In\_Flow}{pa05}\\
