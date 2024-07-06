@@ -543,17 +543,12 @@ el conjunto de todos los identificadores únicos de unidades.
 
 \mnewfoil\HHHH
 \begin{enumerate}\setei
-\item \label{pa13xy} Summarising we can define a two notions of flow:
+\item \label{pa13xy} Resumiendo, podemos definir dos nociones de flujo:
 \begin{enumerate}
-\item \label{pa13x} static and
-\item \label{pa13xz} monitorable.
+\item \label{pa13x} estático y
+\item \label{pa13xz} monitoreable.
 \savei\end{enumerate}
 \savei\end{enumerate}\footnotesize\small\LLLL
-%\RSLatex   
-%type
-%&\ref{pa13x}&  Sta_Flows = Max_In_Leak><In_Max_Flow>Max_Out_Leak&\iptya{Sta\_Flows}{pa13x}&
-%&\ref{pa13xz}&  Mon_Flows = In_Flow><In_Leak><Body_Flow><Body_Leak><Out_Flow><Out_Leak&\iptya{Mon\_Flows}{pa13xz}&
-%\endRSLatex 
 \bp
 \kw{type}\\
 \ref{pa13x}\ \ Sta\_Flows {\EQ} Max\_In\_Leak{\TIMES}In\_Max\_Flow{\GT}Max\_Out\_Leak\iptya{Sta\_Flows}{pa13x}\\
@@ -562,45 +557,17 @@ el conjunto de todos los identificadores únicos de unidades.
 \normalsize
 \mnewfoil
 
-\nbbb{Unit Metrics}
+\nbbb{Métricas de Unidades}
 
 \input{metrics}
 
-\nbbb{Summary}
+\nbbb{Resumen}
 
 \noindent
 \begynd
-\pind We summarise the static, monitorable and programmable attributes
-      for each manifest part of the pipeline system:
+\pind Resumimos los atributos estáticos, monitoreables y programables
+      para cada parte manifiesta del sistema de tuberías:
 \afslut      
-%\begin{multicols}{2}
-%\RSLatex
-%type
-%   PLS_Sta = PLS_net><...
-%   PLS_Mon = ...
-%   PLS_Prg = PLS_`Sigma><...
-%   Well_Sta = Sta1_Metric><Sta_Flows><Orig_Cap><...
-%   Well_Mon = Mon_Flows><Well_Cap><...
-%   Well_Prg = ... 
-%   Pipe_Sta = Sta2_Metric><Sta_Flows><LEN><...
-%   Pipe_Mon = Mon_Flows><In_Temp><Out_Temp><...
-%   Pipe_Prg = ...  
-%   Pump_Sta = Sta2_Metric><Sta_Flows><Pump_Height><...
-%   Pump_Mon = Mon_Flows><...
-%   Pump_Prg = Pump_State><...
-%   Valve_Sta = Sta2_Metric><Sta_Flows><...
-%   Valve_Mon = Mon_Flows><In_Temp><Out_Temp><...
-%   Valve_Prg = Valve_State><...
-%   Fork_Sta = Sta12_Metric><Sta_Flows><...
-%   Fork_Mon = Mon_Flows><In_Temp><Out_Temp><...
-%   Fork_Prg = ... 
-%   Join_Sta = Sta21_Metric><Sta_Flows><...
-%   Join_Mon = Mon_Flows><In_Temp><Out_Temp><...
-%   Join_Prg = ...
-%   Sink_Sta = Sta1_Metric><Sta_Flows><Max_Vol><...
-%   Sink_Mon = Mon_Flows><Curr_Vol><In_Temp><Out_Temp><...
-%   Sink_Prg = ... 
-%\endRSLatex 
 \bp
 \kw{type}\\
 \>\ PLS\_Sta {\EQ} PLS\_net{\TIMES}{\DOTDOTDOT}\\
@@ -633,38 +600,10 @@ el conjunto de todos los identificadores únicos de unidades.
 \normalsize\HHHH
 \noindent
 \begin{enumerate}\setei
-\item \label{com-attr}Corresponding to the above three attribute categories
-      we can define ``collective'' attribute observers:
+\item \label{com-attr} Correspondiendo a las tres categorías de atributos mencionadas
+      podemos definir observadores de atributos ``colectivos'':
 \savei\end{enumerate}
 
-%\small\footnotesize
-%\begin{multicols}{2}
-%\RSLatex
-%value
-%&\ref{com-attr}.&  sta_A_We: We -> Sta1_Metric><Sta_Flows><Orig_Cap><...
-%&\ref{com-attr}.&  mon_A_We: We -> `eta&M&on_Flows><`eta&W&ell_Cap><`eta&I&n_Temp><`eta&O&ut_Temp><...
-%&\ref{com-attr}.&  prg_A_We: We -> ...
-%&\ref{com-attr}.&  sta_A_Pi: Pi -> Sta2_Metric><Sta_Flows><LEN><...
-%&\ref{com-attr}.&  mon_A_Pi: Pi -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><... 
-%&\ref{com-attr}.&  prg_A_Pi: Pi -> ... 
-%&\ref{com-attr}.&  sta_A_Pu: Pu -> Sta2_Metric><Sta_Flows><LEN><...
-%&\ref{com-attr}.&  mon_A_Pu: Pu -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
-%&\ref{com-attr}.&  prg_A_Pu: Pu -> Pump_State><... 
-%&\ref{com-attr}.&  sta_A_Va: Va -> Sta2_Metric><Sta_Flows><LEN><...
-%&\ref{com-attr}.&  mon_A_Va: Va -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
-%&\ref{com-attr}.&  prg_A_Va: Va -> Valve_State><... 
-%&\ref{com-attr}.&  sta_A_Fo: Fo -> Sta12_Metric><Sta_Flows><...
-%&\ref{com-attr}.&  mon_A_Fo: Fo -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><... 
-%&\ref{com-attr}.&  prg_A_Fo: Fo -> ... 
-%&\ref{com-attr}.&  sta_A_Jo: Jo -> Sta21_Metric><Sta_Flows><...
-%&\ref{com-attr}.&  mon_A_Jo: Jo -> Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
-%&\ref{com-attr}.&  prg_A_Jo: Jo -> ... 
-%&\ref{com-attr}.&  sta_A_Si: Si -> Sta1_Metric><Sta_Flows><Max_Vol><...
-%&\ref{com-attr}.&  mon_A_Si: Si -> &$\mathcal{N}$&Mon_Flows><`eta&I&n_Temp><`eta&O&ut_Temp><...
-%&\ref{com-attr}.&  prg_A_Si: Si -> ...
-%
-%&\ref{com-attr}.&  &$\mathcal{N}$&Mon_Flows is (`eta&I&n_Flow,`eta&I&n_Leak,`eta&B&ody_Flow,`eta&B&ody_Leak,`eta&O&ut_Flow,`eta&O&ut_Leak)
-%\endRSLatex 
 \bp
 \kw{value}\\
 \ref{com-attr}.\ \ sta\_A\_We: We {\RIGHTARROW} Sta1\_Metric{\TIMES}Sta\_Flows{\TIMES}Orig\_Cap{\TIMES}{\DOTDOTDOT}\\
@@ -691,47 +630,47 @@ el conjunto de todos los identificadores únicos de unidades.
 \\
 \ref{com-attr}.\ \ $\mathcal{N}$Mon\_Flows {\IS} ($\eta$In\_Flow,$\eta$In\_Leak,$\eta$Body\_Flow,$\eta$Body\_Leak,$\eta$Out\_Flow,$\eta$Out\_Leak)
 \ep
-%\end{multicols}\normalsize
 
 \noindent
 \begynd
-\pind Monitored flow attributes
+\pind Los atributos de flujo monitoreados
 \begynd
-\pind are [to be] passed as arguments to behaviours \sfsl{by reference}
-\pind so that their monitorable attribute values can be sampled.
+\pind se [deben] pasar como argumentos a los comportamientos \sfsl{por referencia}
+\pind para que sus valores de atributos monitoreables puedan ser muestreados.
 \afslut
 \afslut
 
-\nbbb{Fluid Attributes}
+\nbbb{Atributos de Fluidos}
 \begynd
-\pind Fluids, we here assume, oil, as it appears in the pipeline units
+\pind Los fluidos, aquí asumimos, el petróleo, tal como aparece en las unidades de la tubería
 \begynd
-\pind have no unique identity,
-\pind have not mereology, 
-\pind but does have attributes:  hydrocarbons consisting predominantly of
+\pind no tienen identidad única,
+\pind no tienen mereología, 
+\pind pero tienen atributos: hidrocarburos compuestos predominantemente de
 \begynd
-\pind aliphatic, 
-\pind alicyclic and 
-\pind aromatic hydrocarbons.
+\pind alifáticos, 
+\pind alicíclicos y 
+\pind hidrocarburos aromáticos.
 \afslut
-\pind It may also contain small amounts of 
+\pind También puede contener pequeñas cantidades de 
 \begynd
-\pind nitrogen, 
-\pind oxygen, and
-\pind sulfur
-\afslut compounds
+\pind nitrógeno, 
+\pind oxígeno y
+\pind compuestos de azufre.
+\afslut
 \afslut
 \afslut
 
 \begin{enumerate}\setei
-\item \label{fluid-0000} We shall simplify, just for illustration, crude oil fluid of
-      units to have these attributes:
+\item \label{fluid-0000} Simplificaremos, solo para ilustración, el fluido de petróleo crudo de
+      las unidades para que tengan estos atributos:
 \begin{enumerate}
-\item \label{fluid-0050} volume,
-\item \label{fluid-0100} viscosity,
-\item \label{fluid-0200} temperature, 
-\item \label{fluid-0300} paraffin content (\%age),
-\item \label{fluid-0400} naphtenes content (\%age), 
+\item \label{fluid-0050} volumen,
+\item \label{fluid-0100} viscosidad,
+\item \label{fluid-0200} temperatura, 
+\item \label{fluid-0300} contenido de parafina (\%edad),
+\item \label{fluid-0400} contenido de naftenos (\%edad),
+
 \end{enumerate}
 \savei\end{enumerate}
 \begin{multicols}{2}
@@ -769,66 +708,53 @@ el conjunto de todos los identificadores únicos de unidades.
 \ep
 \end{multicols} 
 
+\nbbb{Atributos del Sistema de Tuberías}
 
-\nbbb{Pipeline System Attributes}
-
 \begynd
-\pind The ``root'' pipeline system is a compound.
-\pind In its transcendentally deduced behavioral form
+\pind El sistema de tuberías "raíz" es un compuesto.
+\pind En su forma de comportamiento deducida trascendentalmente
 \begynd
-\pind it is, amongst other ``tasks'', entrusted with the monitoring
-      and control of all its units.
+\pind está, entre otras "tareas", encargado de la supervisión
+      y control de todas sus unidades.
 \begynd
-\pind To do so it must, as a basically static attribute
-\pind possess awareness, say in the form of a net diagram
+\pind Para hacerlo debe, como un atributo básicamente estático,
+\pind poseer conciencia, digamos en forma de un diagrama de red,
 \begynd
-\pind of how these units are interconnected,
-\pind together with all their internal qualities, 
-\pind by type and by value.
+\pind de cómo estas unidades están interconectadas,
+\pind junto con todas sus cualidades internas,
+\pind por tipo y por valor.
 \afslut
 \afslut
-\pind Next we shall give a very simplified account of the possible
-      pipeline system attribute.
+\pind A continuación, daremos una descripción muy simplificada de los posibles
+      atributos del sistema de tuberías.
 \afslut
       
 \mnewfoil
 \begin{enumerate}\setei
-\item \label{pls-attrs-0000} We shall make use, in this example, of
-  just a simple pipeline state, \textsf{pls\_$\omega$}.
+\item \label{pls-attrs-0000} Utilizaremos, en este ejemplo, 
+  solo un estado de tubería simple, \textsf{pls\_$\omega$}.
 \savei\end{enumerate}
 
 \noindent
 \begynd
-\pind The pipeline state, \textsf{pls\_$\omega$}, embodies all the
-      information that is relevant to the monitoring and control of an
-      entire pipeline system, whether static or dynamic.
+\pind El estado de la tubería, \textsf{pls\_$\omega$}, incorpora toda la
+      información que es relevante para la supervisión y el control de un
+      sistema de tuberías completo, ya sea estático o dinámico.
 \afslut
-%\RSLatex
-%type
-%&\ref{pls-attrs-0000}.&  PLS_`Omega 
-%\endRSLatex 
 \bp
 \kw{type}\\
 \ref{pls-attrs-0000}.\ \ PLS\_$\Omega$ 
 \ep
 
-\nbbbb{Pipeline Concepts, II: Flow Laws}
+\nbbbb{Conceptos de Tuberías, II: Leyes de Flujo}
 
 \begin{enumerate}\setei
-\item \label{pefl00} ``What flows in, flows out~!''. For $\mathcal{L}$aminar
-                     flows: for any non-well and non-sink  unit
-                     the sums of input leaks and in-flows equals the
-                     sums of unit and output leaks and out-flows.
+\item \label{pefl00} "¡Lo que entra, sale~!". Para flujos $\mathcal{L}$aminares: para cualquier unidad que no sea un pozo ni un sumidero,
+                     las sumas de las fugas de entrada y los flujos de entrada son iguales a
+                     las sumas de las fugas de la unidad y los flujos de salida.
 \savei\end{enumerate}
-%\RSLatex
-%   &\kw{Law:}&
-%&\ref{pefl00}.&      all u:U\We\Si :- &\ipla{In\_Flow{\IS}Out\_Flow}{pefl00}&
-%&\ref{pefl00}.&          sum_in_leaks(u) &$\oplus$& sum_in_flows(u) =
-%&\ref{pefl00}.&          attr_body_Leak&$_{\mathcal{L}}$&(u) &$\oplus$& 
-%&\ref{pefl00}.&          sum_out_leaks(u) &$\oplus$& sum_out_flows(u)
-%\endRSLatex 
 \bp
-\>\ \kw{Law:}\\
+\>\ \kw{Ley:}\\
 \ref{pefl00}.\ \ \ \ \ \ {\ALL} u:U{\SETMINUS}We{\SETMINUS}Si {\RDOT} \ipla{In\_Flow{\IS}Out\_Flow}{pefl00}\\
 \ref{pefl00}.\ \ \ \ \ \ \ \ \ \ sum\_in\_leaks(u) $\oplus$ sum\_in\_flows(u) {\EQ}\\
 \ref{pefl00}.\ \ \ \ \ \ \ \ \ \ attr\_body\_Leak$_{\mathcal{L}}$(u) $\oplus$ \\
@@ -837,17 +763,6 @@ el conjunto de todos los identificadores únicos de unidades.
 
 \mnewfoil\LLLL
 
-%\RSLatex
-%value
-%  sum_in_leaks: U -> Flow
-%  sum_in_leaks(u) is let (iuis,) = mereo_U(u) in &$\oplus$& {attr_In_Leak&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin iuis} end
-%  sum_in_flows: U -> Flow
-%  sum_in_flows(u) is let (iuis,) = mereo_U(u) in &$\oplus$& {attr_In_Flow&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin iuis} end
-%  sum_out_leaks: U -> Flow
-%  sum_out_leaks(u) is let (,ouis) = mereo_U(u) in &$\oplus$& {attr_Out_Leak&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin ouis} end
-%  sum_out_flows: U -> Flow
-%  sum_out_flows(u) is let (,ouis) = mereo_U(u) in &$\oplus$& {attr_Out_Leak&$_{\mathcal{L}}$&(u)(ui)|ui:UI:-ui isin ouis} end
-%\endRSLatex 
 \bp
 \kw{value}\\
 \>sum\_in\_leaks: U {\RIGHTARROW} Flow\\
@@ -863,23 +778,13 @@ el conjunto de todos los identificadores únicos de unidades.
 \mnewfoil
 
 \begin{enumerate}\setei
-\item \label{pefl01} ``What flows out, flows in~!''. For $\mathcal{L}$aminar
-                     flows: for any adjacent pairs of  units
-                     the output flow at one unit connection equals the
-                     sum of adjacent unit leak and in-flow at that connection.
+\item \label{pefl01} ``¡Lo que sale, entra~!'' Para flujos $\mathcal{L}$aminares: para cualquier par de unidades adyacentes,
+                     el flujo de salida en la conexión de una unidad es igual a
+                     la suma de la fuga adyacente de la unidad y el flujo de entrada en esa conexión.
 \savei\end{enumerate}
 
-
-%\RSLatex
-%   &\kw{Law:}&
-%&\ref{pefl01}.&  all u,u':U:-adjacent(u,u') =>&\ipla{Out\_Flow{\IS}In\_Flow}{pefl00}&
-%&\ref{pefl01}.&      let (,ouis)=mereo_U(u), (iuis',)=mereo_U(u') in
-%&\ref{pefl01}.&      &\kw{assert:}& uid_U(u') isin ouis /\ uid_U(u) isin iuis '
-%&\ref{pefl01}.&      attr_Out_Flow&$_{\mathcal{L}}$&(u)(uid_U(u')) = 
-%&\ref{pefl01}.&      attr_In_Leak&$_{\mathcal{L}}$&(u)(uid_U(u))&$\oplus$&attr_In_Flow&$_{\mathcal{L}}$&(u')(uid_U(u)) end
-%\endRSLatex 
 \bp
-\>\ \kw{Law:}\\
+\>\ \kw{Ley:}\\
 \ref{pefl01}.\ \ {\ALL} u,u{\PRIM}:U{\RDOT}adjacent(u,u{\PRIM}) {\DBLRIGHTARROW}\ipla{Out\_Flow{\IS}In\_Flow}{pefl00}\\
 \ref{pefl01}.\ \ \ \ \ \ \kw{let} (,ouis){\EQ}mereo\_U(u), (iuis{\PRIM},){\EQ}mereo\_U(u{\PRIM}) \kw{in}\\
 \ref{pefl01}.\ \ \ \ \ \ \kw{assert:} uid\_U(u{\PRIM}) {\ISIN} ouis {\WEDGE} uid\_U(u) {\ISIN} iuis {\PRIM}\\
@@ -888,7 +793,8 @@ el conjunto de todos los identificadores únicos de unidades.
 \ep
 
 \noindent
-\pind These ``laws'' should hold for a pipeline system without plates.
+\pind Estas "leyes" deberían cumplirse para un sistema de tuberías sin placas.
+
 \afslut
 
 % LocalWords:  Endurants formedness mereology cf PLS pls wf Bool obs Fo Valv UI
